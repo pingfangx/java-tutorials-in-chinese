@@ -126,6 +126,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(The Java™ Tutorials &gt; Learning the Java Language &gt; Object-Oriented Programming Concepts)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T060906Z" creationid="pingfangx" creationdate="20180518T060906Z">
+        <seg>(The Java™ Tutorials &gt; Learning the Java Language &gt; Object-Oriented Programming Concepts)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>* The HelloWorldApp class implements an application that</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035433Z" creationid="pingfangx" creationdate="20180518T035433Z">
@@ -196,6 +204,22 @@ class HelloWorldApp {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>../../../index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064632Z" creationid="pingfangx" creationdate="20180518T064632Z">
+        <seg>../../../index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../TOC.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064634Z" creationid="pingfangx" creationdate="20180518T064634Z">
+        <seg>../../TOC.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>../../figures/getStarted/check.gif</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034359Z" creationid="pingfangx" creationdate="20180518T034359Z">
@@ -260,10 +284,50 @@ class HelloWorldApp {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>../../figures/java/concepts-bicycleObject.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061724Z" creationid="pingfangx" creationdate="20180518T061724Z">
+        <seg>../../figures/java/concepts-bicycleObject.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../figures/java/concepts-bikeHierarchy.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063450Z" creationid="pingfangx" creationdate="20180518T063450Z">
+        <seg>../../figures/java/concepts-bikeHierarchy.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../figures/java/concepts-object.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061355Z" creationid="pingfangx" creationdate="20180518T061355Z">
+        <seg>../../figures/java/concepts-object.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>../../index.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032707Z" creationid="pingfangx" creationdate="20180518T032707Z">
         <seg>../../index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../nutsandbolts/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064634Z" creationid="pingfangx" creationdate="20180518T064634Z">
+        <seg>../../nutsandbolts/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../IandI/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064143Z" creationid="pingfangx" creationdate="20180518T064143Z">
+        <seg>../IandI/index.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -288,6 +352,14 @@ class HelloWorldApp {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034511Z" creationid="pingfangx" creationdate="20180518T034511Z">
         <seg>../application/examples/HelloWorldApp.java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../class.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064628Z" creationid="pingfangx" creationdate="20180518T064628Z">
+        <seg>../class.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -324,6 +396,14 @@ class HelloWorldApp {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>../images/javaIcon.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042131Z" creationid="pingfangx" creationdate="20180518T042131Z">
+        <seg>../images/javaIcon.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>../images/javaTrail.gif</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040612Z" creationid="pingfangx" creationdate="20180518T040612Z">
@@ -336,6 +416,22 @@ class HelloWorldApp {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032048Z" creationid="pingfangx" creationdate="20180518T032048Z">
         <seg>../index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../inheritance.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064629Z" creationid="pingfangx" creationdate="20180518T064629Z">
+        <seg>../inheritance.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../interface.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064630Z" creationid="pingfangx" creationdate="20180518T064630Z">
+        <seg>../interface.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -356,6 +452,30 @@ class HelloWorldApp {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>../javaOO/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064142Z" creationid="pingfangx" creationdate="20180518T064142Z">
+        <seg>../javaOO/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../object.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064625Z" creationid="pingfangx" creationdate="20180518T064625Z">
+        <seg>../object.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../package.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064631Z" creationid="pingfangx" creationdate="20180518T064631Z">
+        <seg>../package.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>../problems/index.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034133Z" creationid="pingfangx" creationdate="20180518T034133Z">
@@ -368,6 +488,14 @@ class HelloWorldApp {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032053Z" creationid="pingfangx" creationdate="20180518T032053Z">
         <seg>./TOC.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>./concepts/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042024Z" creationid="pingfangx" creationdate="20180518T042024Z">
+        <seg>./concepts/index.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -424,10 +552,102 @@ class HelloWorldApp {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>//  wheel revolutions per minute</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064220Z" creationid="pingfangx" creationdate="20180518T063855Z">
+        <seg>//每分钟车轮转数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>// &lt;e0&gt;text&lt;/e0&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035519Z" creationid="pingfangx" creationdate="20180518T035519Z">
         <seg>// &lt;e0&gt;text&lt;/e0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// Bicycle objects</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062705Z" creationid="pingfangx" creationdate="20180518T062705Z">
+        <seg>// Bicycle objects</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// Create two different</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062704Z" creationid="pingfangx" creationdate="20180518T062704Z">
+        <seg>// Create two different</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// Invoke methods on</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062706Z" creationid="pingfangx" creationdate="20180518T062706Z">
+        <seg>// Invoke methods on</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// The compiler will now require that methods</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063951Z" creationid="pingfangx" creationdate="20180518T063919Z">
+        <seg>//编译器现在需要这些方法</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// a mountain bike would go here
+
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063520Z" creationid="pingfangx" creationdate="20180518T063520Z">
+        <seg>// a mountain bike would go here
+
+}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// all be implemented.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063958Z" creationid="pingfangx" creationdate="20180518T063925Z">
+        <seg>//全部实现。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// changeCadence, changeGear, speedUp, and applyBrakes</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063922Z" creationid="pingfangx" creationdate="20180518T063922Z">
+        <seg>// changeCadence, changeGear, speedUp, and applyBrakes</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// methods are missing from this class.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064057Z" creationid="pingfangx" creationdate="20180518T063933Z">
+        <seg>//如果这个类中缺少方法，编译将会失败。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// new fields and methods defining</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063519Z" creationid="pingfangx" creationdate="20180518T063519Z">
+        <seg>// new fields and methods defining</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// those objects</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062707Z" creationid="pingfangx" creationdate="20180518T062707Z">
+        <seg>// those objects</seg>
       </tuv>
     </tu>
     <tu>
@@ -562,10 +782,74 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Annotations&lt;/b2&gt;&lt;/a0&gt; are a form of metadata and provide information for the compiler.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042315Z" creationid="pingfangx" creationdate="20180518T042315Z">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Annotations&lt;/b2&gt;&lt;/a0&gt; 是一种元数据形式，为编译器提供信息。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Classes and Objects&lt;/b2&gt;&lt;/a0&gt; describes how to write the classes from which objects are created, and how to create and use the objects.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042258Z" creationid="pingfangx" creationdate="20180518T042258Z">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Classes and Objects&lt;/b2&gt;&lt;/a0&gt; 描述了如何编写创建对象的类，以及如何创建和使用对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Common Problems (and Their Solutions)&lt;/b2&gt;&lt;/a0&gt; This is the place to go if you have trouble compiling or running the programs in this trail.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032544Z" creationid="pingfangx" creationdate="20180518T032544Z">
         <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Common Problems (and Their Solutions)&lt;/b2&gt;&lt;/a0&gt; 如果您在编译或运行此路径中的程序时遇到困难，则可以查看的页面。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Generics&lt;/b2&gt;&lt;/a0&gt; are a powerful feature of the Java programming language.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042605Z" creationid="pingfangx" creationdate="20180518T042605Z">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Generics&lt;/b2&gt;&lt;/a0&gt; 是 Java 编程语言的一个强大功能。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Interfaces and Inheritance&lt;/b2&gt;&lt;/a0&gt; describes interfaceswhat they are, why you would want to write one, and how to write one.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042345Z" creationid="pingfangx" creationdate="20180518T042345Z">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Interfaces and Inheritance&lt;/b2&gt;&lt;/a0&gt; 描述了接口，它们是什么，为什么要编写一个，以及如何编写一个接口。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Language Basics&lt;/b2&gt;&lt;/a0&gt; describes the traditional features of the language, including variables, arrays, data types, operators, and control flow.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042242Z" creationid="pingfangx" creationdate="20180518T042242Z">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Language Basics&lt;/b2&gt;&lt;/a0&gt; 描述了该语言的传统功能，包括变量，数组，数据类型，运算符和控制流。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Numbers and Strings&lt;/b2&gt;&lt;/a0&gt; This lesson describes how to use &lt;c3&gt;Number&lt;/c3&gt; and &lt;c4&gt;String&lt;/c4&gt; objects The lesson also shows you how to format data for output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042552Z" creationid="pingfangx" creationdate="20180518T042453Z">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Numbers and Strings&lt;/b2&gt;&lt;/a0&gt; 该课程描述如何使用 &lt;c3&gt;Number&lt;/c3&gt; 和 &lt;c4&gt;String&lt;/c4&gt; 对象，也为你显示如何格式化数据输出。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Object-Oriented Programming Concepts&lt;/b2&gt;&lt;/a0&gt; teaches you the core concepts behind object-oriented programming: objects, messages, classes, and inheritance.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042202Z" creationid="pingfangx" creationdate="20180518T042202Z">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Object-Oriented Programming Concepts&lt;/b2&gt;&lt;/a0&gt; 教你面向对象编程背后的核心概念：对象，消息，类和继承。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Packages&lt;/b2&gt;&lt;/a0&gt; are a feature of the Java programming language that help you to organize and structure your classes and their relationships to one another.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T065324Z" creationid="pingfangx" creationdate="20180518T042627Z">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Packages&lt;/b2&gt;&lt;/a0&gt; 是 Java 编程语言的一个功能，可帮助您组织和构建类和它们之间的关系。</seg>
       </tuv>
     </tu>
     <tu>
@@ -702,6 +986,22 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032818Z" creationid="pingfangx" creationdate="20180518T032818Z">
         <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Getting Started&lt;/a1&gt; &gt; &lt;a2&gt;The Java Technology Phenomenon&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Learning the Java Language&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042803Z" creationid="pingfangx" creationdate="20180518T042803Z">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Learning the Java Language&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Learning the Java Language&lt;/a1&gt; &gt; &lt;a2&gt;Object-Oriented Programming Concepts&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T060915Z" creationid="pingfangx" creationdate="20180518T060915Z">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Learning the Java Language&lt;/a1&gt; &gt; &lt;a2&gt;Object-Oriented Programming Concepts&lt;/a2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1042,6 +1342,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Object-Oriented Programming Concepts &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062059Z" creationid="pingfangx" creationdate="20180518T062059Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Object-Oriented Programming Concepts &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Previous Lesson &lt;br1/&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034139Z" creationid="pingfangx" creationdate="20180518T034139Z">
@@ -1054,6 +1362,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040353Z" creationid="pingfangx" creationdate="20180518T040353Z">
         <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Questions and Exercises: Getting Started</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Questions and Exercises: Object-Oriented Programming Concepts</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064943Z" creationid="pingfangx" creationdate="20180518T064943Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Questions and Exercises: Object-Oriented Programming Concepts</seg>
       </tuv>
     </tu>
     <tu>
@@ -1078,6 +1394,46 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033828Z" creationid="pingfangx" creationdate="20180518T033828Z">
         <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Can Java Technology Do?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Is Inheritance?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064203Z" creationid="pingfangx" creationdate="20180518T064203Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Is Inheritance?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Is a Class?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063632Z" creationid="pingfangx" creationdate="20180518T063632Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Is a Class?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Is a Package?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064826Z" creationid="pingfangx" creationdate="20180518T064826Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Is a Package?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Is an Interface?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064551Z" creationid="pingfangx" creationdate="20180518T064551Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Is an Interface?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Is an Object?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062731Z" creationid="pingfangx" creationdate="20180518T062731Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Is an Object?</seg>
       </tuv>
     </tu>
     <tu>
@@ -1146,6 +1502,22 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Trail:&lt;/b0&gt; Learning the Java Language</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042754Z" creationid="pingfangx" creationdate="20180518T042754Z">
+        <seg>&lt;b0&gt;Trail:&lt;/b0&gt; 学习 Java 语言</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Trail:&lt;/b0&gt; Learning the Java Language &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T060913Z" creationid="pingfangx" creationdate="20180518T060913Z">
+        <seg>&lt;b0&gt;Trail:&lt;/b0&gt; Learning the Java Language &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b0&gt;public static void main(String[] args) {&lt;/b0&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035627Z" creationid="pingfangx" creationdate="20180518T035627Z">
@@ -1160,6 +1532,14 @@ C:\myapplication&gt;</seg>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035628Z" creationid="pingfangx" creationdate="20180518T035628Z">
         <seg>&lt;b1&gt;}&lt;/b1&gt;
 }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Lesson:&lt;/b2&gt; Object-Oriented Programming Concepts</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T060914Z" creationid="pingfangx" creationdate="20180518T060914Z">
+        <seg>&lt;b2&gt;Lesson:&lt;/b2&gt; Object-Oriented Programming Concepts</seg>
       </tuv>
     </tu>
     <tu>
@@ -1228,10 +1608,34 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Language Basics</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064827Z" creationid="pingfangx" creationdate="20180518T064827Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Language Basics</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Object-Oriented Programming Concepts</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042628Z" creationid="pingfangx" creationdate="20180518T042628Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Object-Oriented Programming Concepts</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Questions and Exercises: Getting Started</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035816Z" creationid="pingfangx" creationdate="20180518T035816Z">
         <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Questions and Exercises: Getting Started</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Questions and Exercises: Object-Oriented Programming Concepts</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064552Z" creationid="pingfangx" creationdate="20180518T064552Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Questions and Exercises: Object-Oriented Programming Concepts</seg>
       </tuv>
     </tu>
     <tu>
@@ -1256,6 +1660,46 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033442Z" creationid="pingfangx" creationdate="20180518T033442Z">
         <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Can Java Technology Do?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Is Inheritance?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062733Z" creationid="pingfangx" creationdate="20180518T062733Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Is Inheritance?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Is a Class?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062059Z" creationid="pingfangx" creationdate="20180518T062059Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Is a Class?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Is a Package?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064204Z" creationid="pingfangx" creationdate="20180518T064204Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Is a Package?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Is an Interface?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063633Z" creationid="pingfangx" creationdate="20180518T063633Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Is an Interface?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Is an Object?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T043115Z" creationid="pingfangx" creationdate="20180518T043115Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Is an Object?</seg>
       </tuv>
     </tu>
     <tu>
@@ -1396,6 +1840,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; To actually compile the &lt;c1&gt;ACMEBicycle&lt;/c1&gt; class, you'll need to add the &lt;c2&gt;public&lt;/c2&gt; keyword to the beginning of the implemented interface methods.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064155Z" creationid="pingfangx" creationdate="20180518T064155Z">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; 要实际编译 &lt;c1&gt;ACMEBicycle&lt;/c1&gt; 类，您需要将 &lt;c2&gt;public&lt;/c2&gt; 关键字添加到实现的接口方法的开头。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; Type all code, commands, and file names exactly as shown.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034557Z" creationid="pingfangx" creationdate="20180518T034557Z">
@@ -1452,6 +1904,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A &lt;i2&gt;class&lt;/i2&gt; is the blueprint from which individual objects are created.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062446Z" creationid="pingfangx" creationdate="20180518T062446Z">
+        <seg>一个 &lt;i2&gt;class（类）&lt;/i2&gt; 是创建单个对象的蓝图。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A Checklist</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034342Z" creationid="pingfangx" creationdate="20180518T034342Z">
@@ -1468,6 +1928,38 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A bicycle modeled as a software object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061738Z" creationid="pingfangx" creationdate="20180518T061738Z">
+        <seg>一辆模仿为软件物体的自行车。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A bicycle's behavior, if specified as an interface, might appear as follows:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063854Z" creationid="pingfangx" creationdate="20180518T063854Z">
+        <seg>如果指定为接口，自行车的行为可能如下所示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A blueprint for a software object is called a &lt;s0&gt;class&lt;/s0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064918Z" creationid="pingfangx" creationdate="20180518T064918Z">
+        <seg>软件对象的蓝图称为 &lt;s0&gt;class&lt;/s0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A blueprint for a software object is called a ___.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064712Z" creationid="pingfangx" creationdate="20180518T064712Z">
+        <seg>软件对象的蓝图称为___。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A browser with JavaScript enabled is required for this page to operate properly.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030348Z" creationid="pingfangx" creationdate="20180518T030348Z">
@@ -1476,10 +1968,138 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A circle with an inner circle filled with items, surrounded by gray wedges representing methods that allow access to the inner circle.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061354Z" creationid="pingfangx" creationdate="20180518T061354Z">
+        <seg>一个内圈填充物品的圆圈，周围是灰色的楔子，代表允许访问内圈的方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A class is a blueprint or prototype from which objects are created.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042917Z" creationid="pingfangx" creationdate="20180518T042917Z">
+        <seg>类是创建对象的蓝图或原型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A collection of methods with no implementation is called an &lt;s0&gt;interface&lt;/s0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064926Z" creationid="pingfangx" creationdate="20180518T064926Z">
+        <seg>没有实现的方法集合称为 &lt;s0&gt;interface&lt;/s0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A collection of methods with no implementation is called an ___.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064734Z" creationid="pingfangx" creationdate="20180518T064734Z">
+        <seg>没有实现的方法集合称为___。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A diagram of classes in a hierarchy.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063449Z" creationid="pingfangx" creationdate="20180518T063449Z">
+        <seg>层次结构中的类的图表。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A hierarchy of bicycle classes.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063503Z" creationid="pingfangx" creationdate="20180518T063503Z">
+        <seg>自行车类的层次结构。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A namespace that organizes classes and interfaces by functionality is called a &lt;s0&gt;package&lt;/s0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064928Z" creationid="pingfangx" creationdate="20180518T064928Z">
+        <seg>按功能组织类和接口的名称空间称为 &lt;s0&gt;package&lt;/s0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A namespace that organizes classes and interfaces by functionality is called a ___.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064742Z" creationid="pingfangx" creationdate="20180518T064742Z">
+        <seg>按功能组织类和接口的名称空间称为___。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A package is a namespace for organizing classes and interfaces in a logical manner.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T043047Z" creationid="pingfangx" creationdate="20180518T043047Z">
+        <seg>包是一种以逻辑方式组织类和接口的名称空间。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A package is a namespace that organizes a set of related classes and interfaces.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064316Z" creationid="pingfangx" creationdate="20180518T064316Z">
+        <seg>包是一个命名空间，它组织一组相关的类和接口。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A picture of an object, with bibycle methods and instance variables.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061724Z" creationid="pingfangx" creationdate="20180518T061724Z">
+        <seg>一个物体的图片，带有自行车方法和实例变量。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A shell window.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034744Z" creationid="pingfangx" creationdate="20180518T034744Z">
         <seg>一个 shell 窗口。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A software object's behavior is exposed through &lt;s0&gt;methods&lt;/s0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064903Z" creationid="pingfangx" creationdate="20180518T064903Z">
+        <seg>软件对象的行为通过 &lt;s0&gt;methods&lt;/s0&gt; 公开。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A software object's behavior is exposed through ___.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064657Z" creationid="pingfangx" creationdate="20180518T064657Z">
+        <seg>软件对象的行为通过___公开。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A software object's state is stored in &lt;s0&gt;fields&lt;/s0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064901Z" creationid="pingfangx" creationdate="20180518T064901Z">
+        <seg>软件对象的状态存储在 &lt;s0&gt;fields&lt;/s0&gt; 中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A software object's state is stored in ___.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064649Z" creationid="pingfangx" creationdate="20180518T064649Z">
+        <seg>软件对象的状态存储在___中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A software object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061358Z" creationid="pingfangx" creationdate="20180518T061358Z">
+        <seg>一个软件对象。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1532,10 +2152,50 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>An interface is a contract between a class and the outside world.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T043022Z" creationid="pingfangx" creationdate="20180518T043022Z">
+        <seg>接口是类与外部世界的契约。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>An object is a software bundle of related state and behavior.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042843Z" creationid="pingfangx" creationdate="20180518T042843Z">
+        <seg>一个对象是一个相关状态和行为的软件包。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>An object stores its state in &lt;i0&gt;fields&lt;/i0&gt; (variables in some programming languages) and exposes its behavior through &lt;i1&gt;methods&lt;/i1&gt; (functions in some programming languages).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061531Z" creationid="pingfangx" creationdate="20180518T061531Z">
+        <seg>对象将其状态存储在 &lt;i0&gt;fields（字段）&lt;/i0&gt;(某些编程语言中称为变量)中，并通过 &lt;i1&gt;methods（方法）&lt;/i1&gt;(某些编程语言中称为函数)公开其行为。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>An overview of the software development process.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033211Z" creationid="pingfangx" creationdate="20180518T033211Z">
         <seg>软件开发过程的概述。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Answers to Exercises</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064932Z" creationid="pingfangx" creationdate="20180518T064932Z">
+        <seg>练习的答案</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Answers to Questions</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064845Z" creationid="pingfangx" creationdate="20180518T064845Z">
+        <seg>问题的答案</seg>
       </tuv>
     </tu>
     <tu>
@@ -1552,6 +2212,22 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040211Z" creationid="pingfangx" creationdate="20180518T040211Z">
         <seg>Answers to Questions and Exercises: Getting Started (The Java™ Tutorials &gt; Getting Started &gt; )</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Answers to Questions and Exercises: Object-Oriented Programming Concepts</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064844Z" creationid="pingfangx" creationdate="20180518T064844Z">
+        <seg>问题和练习的答案：面向对象的编程概念</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Answers to Questions and Exercises: Object-Oriented Programming Concepts (The Java™ Tutorials &gt; Learning the Java Language &gt; Object-Oriented Programming Concepts)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064831Z" creationid="pingfangx" creationdate="20180518T064831Z">
+        <seg>Answers to Questions and Exercises: Object-Oriented Programming Concepts (The Java™ Tutorials &gt; Learning the Java Language &gt; Object-Oriented Programming Concepts)</seg>
       </tuv>
     </tu>
     <tu>
@@ -1580,10 +2256,42 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>As a programmer, it will become your single most important piece of reference documentation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064550Z" creationid="pingfangx" creationdate="20180518T064550Z">
+        <seg>作为程序员，它将成为您最重要的参考文档。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>As shown above, the most basic form of a class definition is:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035558Z" creationid="pingfangx" creationdate="20180518T035553Z">
         <seg>如上所示，类定义的最基本形式是：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As you do, you'll notice that real-world objects vary in complexity; your desktop lamp may have only two possible states (on and off) and two possible behaviors (turn on, turn off), but your desktop radio might have additional states (on, off, current volume, current station) and behavior (turn on, turn off, increase volume, decrease volume, seek, scan, and tune).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061258Z" creationid="pingfangx" creationdate="20180518T061258Z">
+        <seg>和你一样，你会注意到真实世界的对象在复杂性上有所不同。您的桌面灯可能只有两种可能的状态(开和关)以及两种可能的行为(打开，关闭)，但您的桌面收音机可能会有其他状态(开，关，当前音量，当前电台)和行为(打开，关闭，增加音量，减小音量，搜寻，扫描和调谐)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As you've already learned, objects define their interaction with the outside world through the methods that they expose.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063743Z" creationid="pingfangx" creationdate="20180518T063743Z">
+        <seg>正如你已经知道的那样，对象通过它们公开的方法来定义它们与外界的交互。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>At the beginning of your class declaration, use the &lt;c0&gt;extends&lt;/c0&gt; keyword, followed by the name of the class to inherit from:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063518Z" creationid="pingfangx" creationdate="20180518T063518Z">
+        <seg>在类声明的开始处，使用 &lt;c0&gt;extends&lt;/c0&gt; 关键字，后面跟着要继承的类的名称：</seg>
       </tuv>
     </tu>
     <tu>
@@ -1604,10 +2312,42 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Because software written in the Java programming language can be composed of hundreds or &lt;i0&gt;thousands&lt;/i0&gt; of individual classes, it makes sense to keep things organized by placing related classes and interfaces into packages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064414Z" creationid="pingfangx" creationdate="20180518T064414Z">
+        <seg>因为用 Java 编程语言编写的软件可以由数百或数千个单独的类组成，所以通过将相关的类和接口放入包中来组织事物是很有意义的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Because the Java VM is available on many different operating systems, the same &lt;c0&gt;.class&lt;/c0&gt; files are capable of running on Microsoft Windows, the Solaris™ Operating System (Solaris OS), Linux, or Mac OS.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033220Z" creationid="pingfangx" creationdate="20180518T033220Z">
         <seg>由于 Java VM 在许多不同的操作系统上都可用，因此相同的 &lt;c0&gt;.class&lt;/c0&gt; 文件能够在 Microsoft Windows，Solaris™操作系统(Solaris OS)，Linux 或 Mac OS 上运行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Bicycle bike1 = new Bicycle();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062705Z" creationid="pingfangx" creationdate="20180518T062705Z">
+        <seg>Bicycle bike1 = new Bicycle();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Bicycle bike2 = new Bicycle();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062706Z" creationid="pingfangx" creationdate="20180518T062706Z">
+        <seg>Bicycle bike2 = new Bicycle();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Bicycles also have state (current gear, current pedal cadence, current speed) and behavior (changing gear, changing pedal cadence, applying brakes).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061145Z" creationid="pingfangx" creationdate="20180518T061145Z">
+        <seg>自行车也具有状态(当前档位，当前踏板节奏，当前速度)和行为(变换档位，改变踏板节奏，应用刹车)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1624,6 +2364,22 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034727Z" creationid="pingfangx" creationdate="20180518T034727Z">
         <seg>调出一个 shell 或 "命令" 窗口。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Bundling code into individual software objects provides a number of benefits, including:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061914Z" creationid="pingfangx" creationdate="20180518T061914Z">
+        <seg>将代码捆绑到单个软件对象中提供了许多好处，其中包括：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>By attributing state (current speed, current pedal cadence, and current gear) and providing methods for changing that state, the object remains in control of how the outside world is allowed to use it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061844Z" creationid="pingfangx" creationdate="20180518T061844Z">
+        <seg>通过赋予状态(当前速度，当前踏板节奏和当前档位)并提供改变该状态的方法，该对象仍然控制着外界如何使用它。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1700,6 +2456,14 @@ C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Code re-use: If an object already exists (perhaps written by another software developer), you can use that object in your program.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061958Z" creationid="pingfangx" creationdate="20180518T061958Z">
+        <seg>代码重用：如果某个对象已经存在(可能由另一个软件开发人员编写)，则可以在程序中使用该对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Command-line arguments let users affect the operation of the application without recompiling it.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035742Z" creationid="pingfangx" creationdate="20180518T035742Z">
@@ -1720,6 +2484,30 @@ C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040725Z" creationid="pingfangx" creationdate="20180518T040720Z">
         <seg>常见问题(及其解决方案)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Common behavior can be defined in a &lt;s0&gt;superclass&lt;/s0&gt; and inherited into a &lt;s1&gt;subclass&lt;/s1&gt; using the &lt;s2&gt;extends&lt;/s2&gt; keyword.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064923Z" creationid="pingfangx" creationdate="20180518T064923Z">
+        <seg>常见行为可以在 &lt;s0&gt;superclass&lt;/s0&gt; 中定义，并使用 &lt;s2&gt;extends&lt;/s2&gt; 关键字继承到 &lt;s1&gt;subclass&lt;/s1&gt; 中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Common behavior can be defined in a ___ and inherited into a ___ using the ___ keyword.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064728Z" creationid="pingfangx" creationdate="20180518T064728Z">
+        <seg>常见行为可以在___中定义，并使用___关键字继承到___中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Compilation will fail if those</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064042Z" creationid="pingfangx" creationdate="20180518T063926Z">
+        <seg></seg>
       </tuv>
     </tu>
     <tu>
@@ -1748,10 +2536,26 @@ C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Conceptually you can think of packages as being similar to different folders on your computer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064331Z" creationid="pingfangx" creationdate="20180518T064331Z">
+        <seg>从概念上讲，您可以将包视为与计算机上的不同文件夹类似。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Congratulations!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034947Z" creationid="pingfangx" creationdate="20180518T034947Z">
         <seg>恭喜！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Consider a bicycle, for example:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061703Z" creationid="pingfangx" creationdate="20180518T061703Z">
+        <seg>考虑一下自行车，例如：</seg>
       </tuv>
     </tu>
     <tu>
@@ -1788,6 +2592,14 @@ C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Create new classes for each real-world object that you observed at the beginning of this trail.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064802Z" creationid="pingfangx" creationdate="20180518T064802Z">
+        <seg>为在此路径开头处观察到的每个真实世界对象创建新类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Creating Graphical User Interfaces</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031343Z" creationid="pingfangx" creationdate="20180518T031343Z">
@@ -1800,6 +2612,14 @@ C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034345Z" creationid="pingfangx" creationdate="20180518T034345Z">
         <seg>创建你的第一个应用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Different kinds of objects often have a certain amount in common with each other.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062837Z" creationid="pingfangx" creationdate="20180518T062837Z">
+        <seg>不同种类的物体通常具有一定的共同点。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1844,6 +2664,14 @@ C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Dogs have state (name, color, breed, hungry) and behavior (barking, fetching, wagging tail).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061037Z" creationid="pingfangx" creationdate="20180518T061037Z">
+        <seg>狗有状态(名字，颜色，品种，饥饿)和行为(吠叫，取食，摇尾巴)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Duke thinking about what to study</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030454Z" creationid="pingfangx" creationdate="20180518T030454Z">
@@ -1856,6 +2684,22 @@ C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032951Z" creationid="pingfangx" creationdate="20180518T032951Z">
         <seg>Dynamic（动态）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Each bicycle was built from the same set of blueprints and therefore contains the same components.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062238Z" creationid="pingfangx" creationdate="20180518T062238Z">
+        <seg>每辆自行车都由同一套蓝图构成，因此包含相同的部件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Each discussion focuses on how these concepts relate to the real world, while simultaneously providing an introduction to the syntax of the Java programming language.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042830Z" creationid="pingfangx" creationdate="20180518T042830Z">
+        <seg>每个讨论的重点是如何将这些概念与现实世界联系起来，同时介绍 Java 编程语言的语法。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1910,6 +2754,14 @@ HelloWorldApp.java.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Feel free to skip this lesson if you are already familiar with object-oriented programming.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042215Z" creationid="pingfangx" creationdate="20180518T042215Z">
+        <seg>如果您已经熟悉面向对象编程，请随意跳过本节。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Figure showing MyProgram.java, API, Java Virtual Machine, and Hardware-Based Platform</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033415Z" creationid="pingfangx" creationdate="20180518T033415Z">
@@ -1958,10 +2810,42 @@ HelloWorldApp.java.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For each new class that you've created above, create an interface that defines its behavior, then require your class to implement it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064815Z" creationid="pingfangx" creationdate="20180518T064815Z">
+        <seg>对于上面创建的每个新类，创建一个定义其行为的接口，然后要求您的类实现它。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For each object that you see, ask yourself two questions: "What possible states can this object be in?" and "What possible behavior can this object perform?".</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061216Z" creationid="pingfangx" creationdate="20180518T061216Z">
+        <seg>对于你看到的每个物体，问自己两个问题："这个物体可能有哪些状态？" 和 "这个对象有什么可能的行为？"。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, a &lt;c0&gt;String&lt;/c0&gt; object contains state and behavior for character strings; a &lt;c1&gt;File&lt;/c1&gt; object allows a programmer to easily create, delete, inspect, compare, or modify a file on the filesystem; a &lt;c2&gt;Socket&lt;/c2&gt; object allows for the creation and use of network sockets; various GUI objects control buttons and checkboxes and anything else related to graphical user interfaces.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064518Z" creationid="pingfangx" creationdate="20180518T064518Z">
+        <seg>例如，一个 &lt;c0&gt;String&lt;/c0&gt; 对象包含字符串的状态和行为;一个 &lt;c1&gt;File&lt;/c1&gt; 对象允许程序员轻松地创建，删除，检查，比较或修改文件系统上的文件;一个 &lt;c2&gt;Socket&lt;/c2&gt; 对象允许创建和使用网络套接字;各种 GUI 对象控制按钮和复选框以及与图形用户界面相关的任何其他内容。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example, a sorting program might allow the user to specify that the data be sorted in descending order with this command-line argument:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035749Z" creationid="pingfangx" creationdate="20180518T035749Z">
         <seg>例如，排序程序可能允许用户使用此命令行参数指定数据按降序排序：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, if the bicycle only has 6 gears, a method to change gears could reject any value that is less than 1 or greater than 6.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061903Z" creationid="pingfangx" creationdate="20180518T061903Z">
+        <seg>例如，如果自行车只有 6 个档位，则更换档位的方法可以拒绝任何小于 1 或大于 6 的值。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2088,10 +2972,42 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Here's a &lt;a0&gt;&lt;c1&gt;BicycleDemo&lt;/c1&gt;&lt;/a0&gt; class that creates two separate &lt;c2&gt;Bicycle&lt;/c2&gt; objects and invokes their methods:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062702Z" creationid="pingfangx" creationdate="20180518T062702Z">
+        <seg>这是一个 &lt;a0&gt;&lt;c1&gt;BicycleDemo&lt;/c1&gt;&lt;/a0&gt; 类，它创建两个独立的 &lt;c2&gt;Bicycle&lt;/c2&gt; 对象并调用它们的方法：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Hide TOC</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032652Z" creationid="pingfangx" creationdate="20180518T032652Z">
         <seg>隐藏目录</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Hiding internal data from the outside world, and accessing it only through publicly exposed methods is known as data &lt;s0&gt;encapsulation&lt;/s0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064915Z" creationid="pingfangx" creationdate="20180518T064915Z">
+        <seg>隐藏来自外部世界的内部数据，并仅通过公开暴露的方法访问内部数据称为数据 &lt;s0&gt;encapsulation&lt;/s0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Hiding internal data from the outside world, and accessing it only through publicly exposed methods is known as data ___.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064705Z" creationid="pingfangx" creationdate="20180518T064705Z">
+        <seg>隐藏来自外部世界的内部数据并仅通过公开暴露的方法访问它，这就是数据___。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Hiding internal state and requiring all interaction to be performed through an object's methods is known as &lt;i2&gt;data encapsulation&lt;/i2&gt;  a fundamental principle of object-oriented programming.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061659Z" creationid="pingfangx" creationdate="20180518T061659Z">
+        <seg>隐藏内部状态并且要求通过对象的方法执行所有交互被称为 &lt;i2&gt;data encapsulation（数据封装）&lt;/i2&gt; 一个面向对象编程的基本原理。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2136,10 +3052,42 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>However, you must take care to properly document the state and behavior that each superclass defines, since that code will not appear in the source file of each subclass.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063631Z" creationid="pingfangx" creationdate="20180518T063631Z">
+        <seg>但是，必须注意正确记录每个超类定义的状态和行为，因为该代码不会出现在每个子类的源文件中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>IE=edge</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030233Z" creationid="pingfangx" creationdate="20180518T030233Z">
         <seg>IE=edge</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>IandI/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042320Z" creationid="pingfangx" creationdate="20180518T042320Z">
+        <seg>IandI/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Identifying the state and behavior for real-world objects is a great way to begin thinking in terms of object-oriented programming.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061159Z" creationid="pingfangx" creationdate="20180518T061159Z">
+        <seg>识别真实世界对象的状态和行为是从面向对象编程开始思考的好方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If a bolt breaks, you replace &lt;i0&gt;it&lt;/i0&gt;, not the entire machine.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062058Z" creationid="pingfangx" creationdate="20180518T062058Z">
+        <seg>如果螺栓损坏，请更换 &lt;i0&gt;它&lt;/i0&gt;，而不是整个机器。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2192,6 +3140,30 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If you've never used an object-oriented programming language before, you'll need to learn a few basic concepts before you can begin writing any code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042815Z" creationid="pingfangx" creationdate="20180518T042815Z">
+        <seg>如果你以前从未使用过面向对象的编程语言，那么在你开始编写任何代码之前，你需要学习一些基本概念。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If your class claims to implement an interface, all methods defined by that interface must appear in its source code before the class will successfully compile.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064141Z" creationid="pingfangx" creationdate="20180518T064141Z">
+        <seg>如果您的类声明实现了一个接口，那么在该类成功编译之前，该接口定义的所有方法都必须出现在其源代码中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Implementing an interface allows a class to become more formal about the behavior it promises to provide.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064111Z" creationid="pingfangx" creationdate="20180518T064111Z">
+        <seg>实现一个接口允许一个类对它承诺提供的行为变得更加正式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In Book Form</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030631Z" creationid="pingfangx" creationdate="20180518T030631Z">
@@ -2204,6 +3176,22 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034533Z" creationid="pingfangx" creationdate="20180518T034533Z">
         <seg>在新文档中，输入以下代码：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In its most common form, an interface is a group of related methods with empty bodies.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063847Z" creationid="pingfangx" creationdate="20180518T063847Z">
+        <seg>在其最常见的形式中，接口是一组具有空体的相关方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In object-oriented terms, we say that your bicycle is an &lt;i0&gt;instance&lt;/i0&gt; of the &lt;i1&gt;class of objects&lt;/i1&gt; known as bicycles.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062434Z" creationid="pingfangx" creationdate="20180518T062434Z">
+        <seg>在面向对象的术语中，我们说你的自行车是称为自行车的 &lt;i1&gt;class of objects（对象的类）&lt;/i1&gt;的 &lt;i0&gt;instance（实例）&lt;/i0&gt; 。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2232,6 +3220,14 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In the Java programming language, each class is allowed to have one direct superclass, and each superclass has the potential for an unlimited number of &lt;i6&gt;subclasses&lt;/i6&gt;:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063446Z" creationid="pingfangx" creationdate="20180518T063446Z">
+        <seg>在 Java 编程语言中，每个类都被允许拥有一个直接的超类，每个超类都有可能拥有无限数量的 &lt;i6&gt;subclasses（子类）&lt;/i6&gt;：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In the Java programming language, every application must contain a &lt;c0&gt;main&lt;/c0&gt; method whose signature is:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035634Z" creationid="pingfangx" creationdate="20180518T035634Z">
@@ -2240,10 +3236,26 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In the real world, you'll often find many individual objects all of the same kind.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062205Z" creationid="pingfangx" creationdate="20180518T062205Z">
+        <seg>在现实世界中，你会经常发现很多单独的物体都是同一种物体。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In the same directory, enter the following command at the prompt:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034934Z" creationid="pingfangx" creationdate="20180518T034934Z">
         <seg>在相同的目录中，在提示符处输入以下命令：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this example, &lt;c1&gt;Bicycle&lt;/c1&gt; now becomes the &lt;i2&gt;superclass&lt;/i2&gt; of &lt;c3&gt;MountainBike&lt;/c3&gt;, &lt;c4&gt;RoadBike&lt;/c4&gt;, and &lt;c5&gt;TandemBike&lt;/c5&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063409Z" creationid="pingfangx" creationdate="20180518T063409Z">
+        <seg>在这个例子中，&lt;c1&gt;Bicycle&lt;/c1&gt; 现在成为 &lt;c3&gt;MountainBike&lt;/c3&gt;，&lt;c4&gt;RoadBike&lt;/c4&gt; 和 &lt;c5&gt;TandemBike&lt;/c5&gt; 的 &lt;i2&gt;superclass（超类）&lt;/i2&gt; &gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2264,10 +3276,34 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Information-hiding: By interacting only with an object's methods, the details of its internal implementation remain hidden from the outside world.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061948Z" creationid="pingfangx" creationdate="20180518T061948Z">
+        <seg>信息隐藏：通过仅与对象的方法交互，其内部实现的细节对外界保持隐藏。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Inheritance provides a powerful and natural mechanism for organizing and structuring your software.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042945Z" creationid="pingfangx" creationdate="20180518T042945Z">
+        <seg>继承为组织和构建软件提供了强大而自然的机制。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Instructions for other platforms are in &lt;a0&gt;"Hello World!" for Solaris OS and Linux&lt;/a0&gt; and &lt;a1&gt;"Hello World!" for the NetBeans IDE&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034305Z" creationid="pingfangx" creationdate="20180518T034305Z">
         <seg>其他平台的说明位于 &lt;a0&gt;"Hello World!" for Solaris OS and Linux&lt;/a0&gt; 和 &lt;a1&gt;"Hello World!" for the NetBeans IDE&lt;/a1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Interfaces form a contract between the class and the outside world, and this contract is enforced at build time by the compiler.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064122Z" creationid="pingfangx" creationdate="20180518T064122Z">
+        <seg>接口形成了类和外部世界之间的契约，并且这个契约在编译器的编译时执行。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2284,6 +3320,14 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032220Z" creationid="pingfangx" creationdate="20180518T032220Z">
         <seg>它讨论了 Java 编程语言和平台，全面概述了这项技术可以做什么以及它如何让你的生活更轻松。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It intentionally focuses on the basics, showing how even a simple class can cleanly model state and behavior.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042934Z" creationid="pingfangx" creationdate="20180518T042934Z">
+        <seg>它故意专注于基础知识，展示一个简单的类甚至可以干净地为状态和行为建模。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2332,6 +3376,14 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033808Z" creationid="pingfangx" creationdate="20180518T033808Z">
         <seg>它的面向对象，JavaBeans™组件体系结构以及范围广泛且易于扩展的 API 使您可以重复使用现有的经过测试的代码并引入更少的错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Its packages represent the tasks most commonly associated with general-purpose programming.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064442Z" creationid="pingfangx" creationdate="20180518T064442Z">
+        <seg>它的软件包代表了通常与通用编程相关的任务。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2400,6 +3452,22 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Lesson: Object-Oriented Programming Concepts</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042808Z" creationid="pingfangx" creationdate="20180518T042808Z">
+        <seg>课程：面向对象的编程概念</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lesson: Object-Oriented Programming Concepts (The Java™ Tutorials &gt; Learning the Java Language)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042713Z" creationid="pingfangx" creationdate="20180518T042713Z">
+        <seg>Lesson: Object-Oriented Programming Concepts (The Java™ Tutorials &gt; Learning the Java Language)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Lesson: The "Hello World!" Application</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034035Z" creationid="pingfangx" creationdate="20180518T034035Z">
@@ -2432,10 +3500,66 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Load the page in your browser and bookmark it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064545Z" creationid="pingfangx" creationdate="20180518T064545Z">
+        <seg>在浏览器中加载页面并为其添加书签。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Look around right now and you'll find many examples of real-world objects: your dog, your desk, your television set, your bicycle.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T060934Z" creationid="pingfangx" creationdate="20180518T060934Z">
+        <seg>现在环顾四周，你会发现许多真实世界物体的例子：你的狗，你的桌子，你的电视机，你的自行车。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Make sure to write down your observations.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061219Z" creationid="pingfangx" creationdate="20180518T061219Z">
+        <seg>确保写下你的观察结果。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Methods form the object's &lt;i0&gt;interface&lt;/i0&gt; with the outside world; the buttons on the front of your television set, for example, are the interface between you and the electrical wiring on the other side of its plastic casing.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063831Z" creationid="pingfangx" creationdate="20180518T063831Z">
+        <seg>方法与外界形成对象的 &lt;i0&gt;interface&lt;/i0&gt;;例如，电视机前面的按钮就是您和塑料外壳另一侧电视之间的接口。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Methods operate on an object's internal state and serve as the primary mechanism for object-to-object communication.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061603Z" creationid="pingfangx" creationdate="20180518T061603Z">
+        <seg>方法对对象的内部状态进行操作，并作为对象到对象通信的主要机制。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Modularity: The source code for an object can be written and maintained independently of the source code for other objects.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061926Z" creationid="pingfangx" creationdate="20180518T061926Z">
+        <seg>模块化：可以独立于其他对象的源代码编写和维护对象的源代码。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Most platforms can be described as a combination of the operating system and underlying hardware.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033300Z" creationid="pingfangx" creationdate="20180518T033300Z">
         <seg>大多数平台可以被描述为操作系统和底层硬件的组合。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Mountain bikes, road bikes, and tandem bikes, for example, all share the characteristics of bicycles (current speed, current pedal cadence, current gear).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062852Z" creationid="pingfangx" creationdate="20180518T062852Z">
+        <seg>例如，山地自行车，公路自行车和双人自行车都具有自行车的特征(当前速度，当前踏板节奏，当前档位)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2512,6 +3636,46 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Object-Oriented Programming Concepts</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042722Z" creationid="pingfangx" creationdate="20180518T042722Z">
+        <seg>面向对象的编程概念</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Object-oriented programming allows classes to &lt;i0&gt;inherit&lt;/i0&gt; commonly used state and behavior from other classes.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063357Z" creationid="pingfangx" creationdate="20180518T063357Z">
+        <seg>面向对象编程允许从其他类 &lt;i0&gt;inherit（继承）&lt;/i0&gt; 常用的状态和行为。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Objects are key to understanding &lt;i0&gt;object-oriented&lt;/i0&gt; technology.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T060923Z" creationid="pingfangx" creationdate="20180518T060923Z">
+        <seg>对象是理解 &lt;i0&gt;object-oriented&lt;/i0&gt; 技术的关键。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Omit one or two methods and try compiling.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064819Z" creationid="pingfangx" creationdate="20180518T064819Z">
+        <seg>省略一个或两个方法并尝试编译。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Once created, an object can be easily passed around inside the system.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061932Z" creationid="pingfangx" creationdate="20180518T061932Z">
+        <seg>一旦创建，一个对象可以很容易地在系统内传递。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Or, you can use the following (longer) instructions.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034524Z" creationid="pingfangx" creationdate="20180518T034524Z">
@@ -2540,6 +3704,22 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030642Z" creationid="pingfangx" creationdate="20180518T030642Z">
         <seg>其他资源</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Placing your code into packages makes large software projects easier to manage.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T043054Z" creationid="pingfangx" creationdate="20180518T043054Z">
+        <seg>将您的代码放入软件包中可以使大型软件项目更易于管理。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Pluggability and debugging ease: If a particular object turns out to be problematic, you can simply remove it from your application and plug in a different object as its replacement.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062039Z" creationid="pingfangx" creationdate="20180518T062039Z">
+        <seg>可插拔性和调试简便性：如果某个特定对象变得有问题，您可以简单地将它从应用程序中删除，并插入其他对象作为替换对象。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2576,6 +3756,14 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Questions and Exercises</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042750Z" creationid="pingfangx" creationdate="20180518T042750Z">
+        <seg>问题和练习</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Questions and Exercises: Getting Started</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035951Z" creationid="pingfangx" creationdate="20180518T035951Z">
@@ -2588,6 +3776,54 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035947Z" creationid="pingfangx" creationdate="20180518T035947Z">
         <seg>Questions and Exercises: Getting Started (The Java™ Tutorials &gt; Getting Started)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Questions and Exercises: Object-Oriented Programming Concepts</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T043105Z" creationid="pingfangx" creationdate="20180518T043105Z">
+        <seg>问题和练习：面向对象的编程概念</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Questions and Exercises: Object-Oriented Programming Concepts (The Java™ Tutorials &gt; Learning the Java Language &gt; Object-Oriented Programming Concepts)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064624Z" creationid="pingfangx" creationdate="20180518T064624Z">
+        <seg>Questions and Exercises: Object-Oriented Programming Concepts (The Java™ Tutorials &gt; Learning the Java Language &gt; Object-Oriented Programming Concepts)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Real-world objects contain &lt;s0&gt;state&lt;/s0&gt; and &lt;s1&gt;behavior&lt;/s1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064859Z" creationid="pingfangx" creationdate="20180518T064859Z">
+        <seg>真实世界对象包含 &lt;s0&gt;state&lt;/s0&gt; 和 &lt;s1&gt;behavior&lt;/s1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Real-world objects contain ___ and ___.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064644Z" creationid="pingfangx" creationdate="20180518T064644Z">
+        <seg>真实世界的对象包含___和___。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Real-world objects share two characteristics: They all have &lt;i0&gt;state&lt;/i0&gt; and &lt;i1&gt;behavior&lt;/i1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T060945Z" creationid="pingfangx" creationdate="20180518T060945Z">
+        <seg>真实世界的对象有两个特征：它们都具有 &lt;i0&gt;state&lt;/i0&gt; 和 &lt;i1&gt;behavior&lt;/i1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Refer to the Bicycle class if you forget the required syntax.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064807Z" creationid="pingfangx" creationdate="20180518T064807Z">
+        <seg>如果您忘记了所需的语法，请参阅 Bicycle 类。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2652,6 +3888,22 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030702Z" creationid="pingfangx" creationdate="20180518T030702Z">
         <seg>软件</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Software objects are conceptually similar to real-world objects: they too consist of state and related behavior.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061413Z" creationid="pingfangx" creationdate="20180518T061413Z">
+        <seg>软件对象在概念上与真实世界的对象相似：它们也包含状态和相关行为。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Software objects are often used to model the real-world objects that you find in everyday life.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042856Z" creationid="pingfangx" creationdate="20180518T042856Z">
+        <seg>软件对象通常用于模拟您在日常生活中发现的真实世界对象。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2736,6 +3988,14 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>System.out.println("cadence:" +</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062544Z" creationid="pingfangx" creationdate="20180518T062544Z">
+        <seg>System.out.println("cadence:" +</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>TEXT The Save As dialog, as described in the text.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034709Z" creationid="pingfangx" creationdate="20180518T034709Z">
@@ -2744,10 +4004,34 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Take a minute right now to observe the real-world objects that are in your immediate area.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061205Z" creationid="pingfangx" creationdate="20180518T061205Z">
+        <seg>现在花一点时间观察您附近区域的真实世界物体。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Talk about Java technology seems to be everywhere, but what exactly is it?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032721Z" creationid="pingfangx" creationdate="20180518T032721Z">
         <seg>谈论 Java 技术似乎无处不在，但究竟是什么呢？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>That is, how a &lt;i3&gt;subclass&lt;/i3&gt; can inherit fields and methods from a &lt;i4&gt;superclass&lt;/i4&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042356Z" creationid="pingfangx" creationdate="20180518T042356Z">
+        <seg>也就是说，&lt;i3&gt;subclass&lt;/i3&gt; 如何继承 &lt;i4&gt;superclass&lt;/i4&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>That's because it's not a complete application; it's just the blueprint for bicycles that might be &lt;i2&gt;used&lt;/i2&gt; in an application.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062640Z" creationid="pingfangx" creationdate="20180518T062640Z">
+        <seg>那是因为它不是一个完整的应用程序;这只是在应用程序中可能被 &lt;i2&gt;使用&lt;/i2&gt; 的自行车蓝图。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2780,6 +4064,14 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030710Z" creationid="pingfangx" creationdate="20180518T030710Z">
         <seg>The &lt;a0&gt; Java Development Kit&lt;/a0&gt; (JDK)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;a0&gt;Java Platform API Specification&lt;/a0&gt; contains the complete listing for all packages, interfaces, classes, fields, and methods supplied by the Java SE platform.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064542Z" creationid="pingfangx" creationdate="20180518T064542Z">
+        <seg>&lt;a0&gt;Java Platform API Specification&lt;/a0&gt; 包含 Java SE 平台提供的所有包，接口，类，字段和方法的完整列表。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2944,6 +4236,14 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The Java platform provides an enormous class library (a set of packages) suitable for use in your own applications.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064427Z" creationid="pingfangx" creationdate="20180518T064427Z">
+        <seg>Java 平台提供了适用于您自己的应用程序的庞大的类库(一组包)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The Java programming language &lt;i0&gt;compiler&lt;/i0&gt; (&lt;c1&gt;javac&lt;/c1&gt;) takes your source file and translates its text into instructions that the Java virtual machine can understand.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034500Z" creationid="pingfangx" creationdate="20180518T034500Z">
@@ -3040,10 +4340,26 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The fields &lt;c0&gt;cadence&lt;/c0&gt;, &lt;c1&gt;speed&lt;/c1&gt;, and &lt;c2&gt;gear&lt;/c2&gt; represent the object's state, and the methods (&lt;c3&gt;changeCadence&lt;/c3&gt;, &lt;c4&gt;changeGear&lt;/c4&gt;, &lt;c5&gt;speedUp&lt;/c5&gt; etc.) define its interaction with the outside world.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062615Z" creationid="pingfangx" creationdate="20180518T062615Z">
+        <seg>&lt;c0&gt;cadence&lt;/c0&gt;，&lt;c1&gt;speed&lt;/c1&gt; 和 &lt;c2&gt;gear&lt;/c2&gt; 代表对象的状态，方法(&lt;c3&gt;changeCadence&lt;/c3&gt;，&lt;c4&gt;changeGear&lt;/c4&gt;，&lt;c5&gt;speedUp&lt;/c5&gt; 等)定义其与外界的交互。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The first section provides information on getting started with the NetBeans IDE, an integrated development environment that greatly simplifies the software development process.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034101Z" creationid="pingfangx" creationdate="20180518T034101Z">
         <seg>第一部分提供了有关 NetBeans IDE 入门的信息，NetBeans IDE 是一个大大简化了软件开发过程的集成开发环境。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following &lt;a0&gt;&lt;c1&gt;Bicycle&lt;/c1&gt;&lt;/a0&gt; class is one possible implementation of a bicycle:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062511Z" creationid="pingfangx" creationdate="20180518T062511Z">
+        <seg>下面的 &lt;a0&gt;&lt;c1&gt;Bicycle&lt;/c1&gt;&lt;/a0&gt; 类是自行车的一种可能的实现方式：</seg>
       </tuv>
     </tu>
     <tu>
@@ -3136,6 +4452,14 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The output of this test prints the ending pedal cadence, speed, and gear for the two bicycles:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062728Z" creationid="pingfangx" creationdate="20180518T062728Z">
+        <seg>该测试的输出结果为两辆自行车打印结束踏板节奏，速度和齿轮：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The program has an error.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040155Z" creationid="pingfangx" creationdate="20180518T040155Z">
@@ -3160,6 +4484,14 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The responsibility of creating and using new &lt;c3&gt;Bicycle&lt;/c3&gt; objects belongs to some other class in your application.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062653Z" creationid="pingfangx" creationdate="20180518T062653Z">
+        <seg>创建和使用新的 &lt;c3&gt;Bicycle&lt;/c3&gt; 对象的责任属于您应用程序中的某个其他类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The sections listed below provide detailed instructions for compiling and running a simple "Hello World!" application.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034054Z" creationid="pingfangx" creationdate="20180518T034054Z">
@@ -3172,6 +4504,38 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034735Z" creationid="pingfangx" creationdate="20180518T034735Z">
         <seg>shell 窗口应该类似于 &lt;s3&gt;the following figure&lt;/s3&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The syntax for creating a subclass is simple.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063508Z" creationid="pingfangx" creationdate="20180518T063508Z">
+        <seg>创建子类的语法很简单。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The syntax of the Java programming language will look new to you, but the design of this class is based on the previous discussion of bicycle objects.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062558Z" creationid="pingfangx" creationdate="20180518T062558Z">
+        <seg>Java 编程语言的语法对你来说看起来很新，但这个类的设计是基于前面对自行车对象的讨论。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The term API stands for &lt;s0&gt;Application Programming Interface&lt;/s0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064930Z" creationid="pingfangx" creationdate="20180518T064930Z">
+        <seg>术语 API 代表 &lt;s0&gt;Application Programming Interface&lt;/s0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The term API stands for ___?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064748Z" creationid="pingfangx" creationdate="20180518T064748Z">
+        <seg>术语 API 代表___？</seg>
       </tuv>
     </tu>
     <tu>
@@ -3200,10 +4564,34 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>There are literally thousands of classes to choose from.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064523Z" creationid="pingfangx" creationdate="20180518T064523Z">
+        <seg>有几千个类可供选择。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There may be thousands of other bicycles in existence, all of the same make and model.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062227Z" creationid="pingfangx" creationdate="20180518T062227Z">
+        <seg>可能有成千上万的其他自行车存在，但有所有相同的品牌和型号。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>These operating systems include Microsoft Windows, Solaris OS, Linux, and Mac OS X. We recommend using the NetBeans IDE instead of the command line whenever possible.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034128Z" creationid="pingfangx" creationdate="20180518T034128Z">
         <seg>这些操作系统包括 Microsoft Windows，Solaris OS，Linux 和 Mac OS X.我们建议尽可能使用 NetBeans IDE 而不是命令行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These real-world observations all translate into the world of object-oriented programming.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061318Z" creationid="pingfangx" creationdate="20180518T061318Z">
+        <seg>这些真实世界的观察都转化为面向对象编程的世界。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3232,10 +4620,34 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>They improve the type safety of your code, making more of your bugs detectable at compile time.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042611Z" creationid="pingfangx" creationdate="20180518T042611Z">
+        <seg>它们提高了代码的类型安全性，在编译时可以检测到更多的错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>They include hundreds of complete, working examples, and dozens of lessons.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030835Z" creationid="pingfangx" creationdate="20180518T030835Z">
         <seg>它们包括数百个完整的工作示例和数十个课程。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This allows specialists to implement/test/debug complex, task-specific objects, which you can then trust to run in your own code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062021Z" creationid="pingfangx" creationdate="20180518T062021Z">
+        <seg>这允许专家实现/测试/调试复杂的，特定于任务的对象，然后您可以信任它们在自己的代码中运行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This allows you, the programmer, to focus on the design of your particular application, rather than the infrastructure required to make it work.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064531Z" creationid="pingfangx" creationdate="20180518T064531Z">
+        <seg>这使得程序员可以专注于特定应用程序的设计，而不是使其工作所需的基础架构。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3248,10 +4660,26 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This beginner Java tutorial describes fundamentals of programming in the Java programming language</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042019Z" creationid="pingfangx" creationdate="20180518T042019Z">
+        <seg>This beginner Java tutorial describes fundamentals of programming in the Java programming language</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This beginner Java tutorial describes getting started with Java and setting up your Netbeans IDE</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032040Z" creationid="pingfangx" creationdate="20180518T032025Z">
         <seg>This beginner Java tutorial describes getting started with Java and setting up your Netbeans IDE</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This gives &lt;c0&gt;MountainBike&lt;/c0&gt; all the same fields and methods as &lt;c1&gt;Bicycle&lt;/c1&gt;, yet allows its code to focus exclusively on the features that make it unique.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063613Z" creationid="pingfangx" creationdate="20180518T063520Z">
+        <seg>这给了 &lt;c0&gt;MountainBike&lt;/c0&gt; 与 &lt;c1&gt;Bicycle&lt;/c1&gt; 所有相同的字段和方法，但允许其代码专注于使其独特的功能。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3268,6 +4696,110 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035506Z" creationid="pingfangx" creationdate="20180518T035506Z">
         <seg>这表示文档注释(简称 &lt;e0&gt;doc comment&lt;/e0&gt;)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is analogous to fixing mechanical problems in the real world.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062046Z" creationid="pingfangx" creationdate="20180518T062046Z">
+        <seg>这类似于解决现实世界中的机械问题。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This lesson describes where and how to use annotations in a program effectively.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042319Z" creationid="pingfangx" creationdate="20180518T042319Z">
+        <seg>本课将介绍如何在程序中有效地使用注释。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This lesson ends by showing you how these concepts translate into code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042209Z" creationid="pingfangx" creationdate="20180518T042209Z">
+        <seg>本课结束时向您展示了这些概念如何转化为代码。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This lesson explains how state and behavior are represented within an object, introduces the concept of data encapsulation, and explains the benefits of designing your software in this manner.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042909Z" creationid="pingfangx" creationdate="20180518T042909Z">
+        <seg>本课介绍了状态和行为在对象中的表现方式，介绍了数据封装的概念，并解释了以这种方式设计软件的好处。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This lesson will introduce you to objects, classes, inheritance, interfaces, and packages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042820Z" creationid="pingfangx" creationdate="20180518T042820Z">
+        <seg>本课将向您介绍对象，类，继承，接口和包。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This library is known as the "Application Programming Interface", or "API" for short.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064432Z" creationid="pingfangx" creationdate="20180518T064432Z">
+        <seg>该库被称为 "应用程序编程接口"，简称 "API"。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This makes code for your subclasses easy to read.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063616Z" creationid="pingfangx" creationdate="20180518T063616Z">
+        <seg>这使得您的子类的代码易于阅读。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This section also describes the way in which you can derive one class from another.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042351Z" creationid="pingfangx" creationdate="20180518T042351Z">
+        <seg>本节还介绍了如何从另一个类派生一个类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This section defines a class that models the state and behavior of a real-world object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042926Z" creationid="pingfangx" creationdate="20180518T042926Z">
+        <seg>本节定义了一个模拟真实世界对象的状态和行为的类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This section defines a simple interface and explains the necessary changes for any class that implements it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T043042Z" creationid="pingfangx" creationdate="20180518T043042Z">
+        <seg>本节定义了一个简单的接口，并解释了实现它的任何类的必要更改。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This section explains how classes inherit state and behavior from their superclasses, and explains how to derive one class from another using the simple syntax provided by the Java programming language.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T043000Z" creationid="pingfangx" creationdate="20180518T043000Z">
+        <seg>本节介绍了类如何继承其超类的状态和行为，并解释了如何使用 Java 编程语言提供的简单语法从另一个类派生另一个类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This section explains why this is useful, and introduces you to the Application Programming Interface (API) provided by the Java platform.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T043101Z" creationid="pingfangx" creationdate="20180518T043101Z">
+        <seg>本节解释了为什么这很有用，并向您介绍了 Java 平台提供的应用程序编程接口(API)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This trail covers the fundamentals of programming in the Java programming language.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042128Z" creationid="pingfangx" creationdate="20180518T042128Z">
+        <seg>此路径涵盖了 Java 编程语言编程的基础。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3352,6 +4884,14 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>To implement this interface, the name of your class would change (to a particular brand of bicycle, for example, such as &lt;c0&gt;ACMEBicycle&lt;/c0&gt;), and you'd use the &lt;c1&gt;implements&lt;/c1&gt; keyword in the class declaration:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063915Z" creationid="pingfangx" creationdate="20180518T063915Z">
+        <seg>为了实现这个接口，你的类的名字会改变(例如，一个特定品牌的自行车，例如，&lt;c0&gt;ACMEBicycle&lt;/c0&gt;)，并且你会使用 &lt;c1&gt;implements&lt;/c1&gt; 关键字在类声明中：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To write your first program, you'll need:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034404Z" creationid="pingfangx" creationdate="20180518T034404Z">
@@ -3400,6 +4940,22 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Trail: Learning the Java Language</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042112Z" creationid="pingfangx" creationdate="20180518T042112Z">
+        <seg>路径：学习 Java 语言</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Trail: Learning the Java Language (The Java™ Tutorials)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042016Z" creationid="pingfangx" creationdate="20180518T042016Z">
+        <seg>Trail: Learning the Java Language (The Java™ Tutorials)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Trails Covering the Basics</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030920Z" creationid="pingfangx" creationdate="20180518T030920Z">
@@ -3428,6 +4984,14 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030232Z" creationid="pingfangx" creationdate="20180518T030232Z">
         <seg>Java 编程语言的教程和参考指南</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Use the questions and exercises presented in this section to test your understanding of objects, classes, inheritance, interfaces, and packages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T043114Z" creationid="pingfangx" creationdate="20180518T043114Z">
+        <seg>使用本节介绍的问题和练习来测试你对对象，类，继承，接口和包的理解。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3488,6 +5052,54 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>What Is Inheritance?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042732Z" creationid="pingfangx" creationdate="20180518T042732Z">
+        <seg>什么是继承？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What Is a Class?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042727Z" creationid="pingfangx" creationdate="20180518T042727Z">
+        <seg>什么是类？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What Is a Package?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042747Z" creationid="pingfangx" creationdate="20180518T042747Z">
+        <seg>什么是包？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What Is an Interface?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042736Z" creationid="pingfangx" creationdate="20180518T042734Z">
+        <seg>什么是接口？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What Is an Object?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042725Z" creationid="pingfangx" creationdate="20180518T042725Z">
+        <seg>什么是对象？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What does the error look like?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064824Z" creationid="pingfangx" creationdate="20180518T064824Z">
+        <seg>这个错误是什么样的？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>What is this platform-independent code called?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040007Z" creationid="pingfangx" creationdate="20180518T040007Z">
@@ -3504,6 +5116,14 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>When a class implements an interface, it promises to provide the behavior published by that interface.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T043030Z" creationid="pingfangx" creationdate="20180518T043030Z">
+        <seg>当一个类实现一个接口时，它承诺提供该接口发布的行为。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>When you bring up the prompt, your current directory is usually your home directory for Windows XP (as shown in the preceding figure.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034749Z" creationid="pingfangx" creationdate="20180518T034749Z">
@@ -3516,6 +5136,14 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034705Z" creationid="pingfangx" creationdate="20180518T034705Z">
         <seg>完成后，对话框应该看起来像 &lt;s0&gt;this&lt;/s0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Yet each also defines additional features that make them different: tandem bicycles have two seats and two sets of handlebars; road bikes have drop handlebars; some mountain bikes have an additional chain ring, giving them a lower gear ratio.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063010Z" creationid="pingfangx" creationdate="20180518T063010Z">
+        <seg>然而每一个也定义了使它们不同的附加特征：双人自行车有两个座位和两组把手;公路自行车有 drop 把手;一些山地自行车有一个额外的链环，给他们一个较低的传动比。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3584,6 +5212,38 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>You may also notice that some objects, in turn, will also contain other objects.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061304Z" creationid="pingfangx" creationdate="20180518T061304Z">
+        <seg>您可能还会注意到，某些对象反过来也会包含其他对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You may have noticed that the &lt;c0&gt;Bicycle&lt;/c0&gt; class does not contain a &lt;c1&gt;main&lt;/c1&gt; method.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062622Z" creationid="pingfangx" creationdate="20180518T062622Z">
+        <seg>您可能已经注意到 &lt;c0&gt;Bicycle&lt;/c0&gt; 类不包含 &lt;c1&gt;main&lt;/c1&gt; 方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You might keep HTML pages in one folder, images in another, and scripts or applications in yet another.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064340Z" creationid="pingfangx" creationdate="20180518T064340Z">
+        <seg>您可以将 HTML 页面保存在一个文件夹中，另一个文件中包含图像，另一个文件夹中包含脚本或应用程序。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You press the "power" button to turn the television on and off.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063837Z" creationid="pingfangx" creationdate="20180518T063837Z">
+        <seg>您按下 "电源" 按钮打开和关闭电视机。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>You should see the following on your screen:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034942Z" creationid="pingfangx" creationdate="20180518T034942Z">
@@ -3592,10 +5252,42 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>You will learn that all classes are derived from the &lt;c5&gt;Object&lt;/c5&gt; class, and how to modify the methods that a subclass inherits from superclasses.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042402Z" creationid="pingfangx" creationdate="20180518T042402Z">
+        <seg>您将了解到所有类都来自 &lt;c5&gt;Object&lt;/c5&gt; 类，以及如何修改子类从超类继承的方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You'll learn the reasons for this later in the lessons on &lt;a3&gt;Classes and Objects&lt;/a3&gt; and &lt;a4&gt;Interfaces and Inheritance&lt;/a4&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064202Z" creationid="pingfangx" creationdate="20180518T064202Z">
+        <seg>稍后您将在 &lt;a3&gt;Classes and Objects&lt;/a3&gt; 和 &lt;a4&gt;Interfaces and Inheritance&lt;/a4&gt; 的课程中了解原因。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>You've already been introduced to the Java Virtual Machine; it's the base for the Java platform and is ported onto various hardware-based platforms.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033348Z" creationid="pingfangx" creationdate="20180518T033348Z">
         <seg>您已经被介绍了 Java 虚拟机;它是 Java 平台的基础，并被移植到各种基于硬件的平台上。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Your answers will vary depending on the real-world objects that you are modeling.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064936Z" creationid="pingfangx" creationdate="20180518T064936Z">
+        <seg>您的答案将根据您正在建模的实际对象而有所不同。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Your answers will vary here as well, but the error message will specifically list the required methods that have not been implemented.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064941Z" creationid="pingfangx" creationdate="20180518T064941Z">
+        <seg>您的答案也将有所不同，但错误消息将具体列出尚未实现的所需方法。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3676,6 +5368,14 @@ HelloWorldApp2.java:7: ')' expected</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>annotations/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042259Z" creationid="pingfangx" creationdate="20180518T042259Z">
+        <seg>annotations/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>answers.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040201Z" creationid="pingfangx" creationdate="20180518T040201Z">
@@ -3700,10 +5400,116 @@ HelloWorldApp2.java:7: ')' expected</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>bike1.changeCadence(50);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062707Z" creationid="pingfangx" creationdate="20180518T062707Z">
+        <seg>bike1.changeCadence(50);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>bike1.changeGear(2);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062708Z" creationid="pingfangx" creationdate="20180518T062708Z">
+        <seg>bike1.changeGear(2);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>bike1.printStates();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062709Z" creationid="pingfangx" creationdate="20180518T062709Z">
+        <seg>bike1.printStates();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>bike1.speedUp(10);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062708Z" creationid="pingfangx" creationdate="20180518T062708Z">
+        <seg>bike1.speedUp(10);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>bike2.changeCadence(40);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062711Z" creationid="pingfangx" creationdate="20180518T062711Z">
+        <seg>bike2.changeCadence(40);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>bike2.changeCadence(50);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062709Z" creationid="pingfangx" creationdate="20180518T062709Z">
+        <seg>bike2.changeCadence(50);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>bike2.changeGear(2);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062710Z" creationid="pingfangx" creationdate="20180518T062710Z">
+        <seg>bike2.changeGear(2);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>bike2.changeGear(3);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062712Z" creationid="pingfangx" creationdate="20180518T062712Z">
+        <seg>bike2.changeGear(3);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>bike2.printStates();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062713Z" creationid="pingfangx" creationdate="20180518T062713Z">
+        <seg>bike2.printStates();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>bike2.speedUp(10);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062710Z" creationid="pingfangx" creationdate="20180518T062710Z">
+        <seg>bike2.speedUp(10);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>c.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040040Z" creationid="pingfangx" creationdate="20180518T040040Z">
         <seg>c.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>cadence + " speed:" +</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062544Z" creationid="pingfangx" creationdate="20180518T062544Z">
+        <seg>cadence + " speed:" +</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>cadence = newValue;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062536Z" creationid="pingfangx" creationdate="20180518T062536Z">
+        <seg>cadence = newValue;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>cadence:50 speed:10 gear:2
+cadence:40 speed:20 gear:3</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062729Z" creationid="pingfangx" creationdate="20180518T062729Z">
+        <seg>cadence:50 speed:10 gear:2
+cadence:40 speed:20 gear:3</seg>
       </tuv>
     </tu>
     <tu>
@@ -3740,6 +5546,30 @@ HelloWorldApp2.java:7: ')' expected</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>class ACMEBicycle &lt;s0&gt;implements&lt;/s0&gt; Bicycle {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063916Z" creationid="pingfangx" creationdate="20180518T063916Z">
+        <seg>class ACMEBicycle &lt;s0&gt;implements&lt;/s0&gt; Bicycle {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>class Bicycle {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062534Z" creationid="pingfangx" creationdate="20180518T062534Z">
+        <seg>class Bicycle {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>class BicycleDemo {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062702Z" creationid="pingfangx" creationdate="20180518T062702Z">
+        <seg>class BicycleDemo {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>class HelloWorldApp {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035247Z" creationid="pingfangx" creationdate="20180518T035247Z">
@@ -3748,10 +5578,34 @@ HelloWorldApp2.java:7: ')' expected</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>class MountainBike &lt;s0&gt;extends&lt;/s0&gt; Bicycle {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063519Z" creationid="pingfangx" creationdate="20180518T063519Z">
+        <seg>class MountainBike &lt;s0&gt;extends&lt;/s0&gt; Bicycle {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>class.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042726Z" creationid="pingfangx" creationdate="20180518T042726Z">
+        <seg>class.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>collections/index.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031226Z" creationid="pingfangx" creationdate="20180518T031226Z">
         <seg>collections/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>concepts/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042128Z" creationid="pingfangx" creationdate="20180518T042128Z">
+        <seg>concepts/index.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -3796,6 +5650,14 @@ HelloWorldApp2.java:7: ')' expected</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>data/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042403Z" creationid="pingfangx" creationdate="20180518T042403Z">
+        <seg>data/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>datetime/index.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031252Z" creationid="pingfangx" creationdate="20180518T031252Z">
@@ -3836,6 +5698,22 @@ HelloWorldApp2.java:7: ')' expected</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>examples/Bicycle.java</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062446Z" creationid="pingfangx" creationdate="20180518T062446Z">
+        <seg>examples/Bicycle.java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>examples/BicycleDemo.java</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062654Z" creationid="pingfangx" creationdate="20180518T062654Z">
+        <seg>examples/BicycleDemo.java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>ext/index.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031507Z" creationid="pingfangx" creationdate="20180518T031507Z">
@@ -3864,6 +5742,22 @@ HelloWorldApp2.java:7: ')' expected</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031534Z" creationid="pingfangx" creationdate="20180518T031534Z">
         <seg>extra/generics/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>gear = newValue;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062538Z" creationid="pingfangx" creationdate="20180518T062538Z">
+        <seg>gear = newValue;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generics/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042553Z" creationid="pingfangx" creationdate="20180518T042553Z">
+        <seg>generics/index.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -4012,6 +5906,14 @@ HelloWorldApp2.java:7: ')' expected</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064532Z" creationid="pingfangx" creationdate="20180518T064532Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>https://docs.oracle.com/javase/8/docs/index.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033626Z" creationid="pingfangx" creationdate="20180518T033626Z">
@@ -4084,6 +5986,54 @@ HelloWorldApp2.java:7: ')' expected</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>inheritance.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042728Z" creationid="pingfangx" creationdate="20180518T042728Z">
+        <seg>inheritance.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>int cadence = 0;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062534Z" creationid="pingfangx" creationdate="20180518T062534Z">
+        <seg>int cadence = 0;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>int gear = 1;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062535Z" creationid="pingfangx" creationdate="20180518T062535Z">
+        <seg>int gear = 1;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>int speed = 0;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062535Z" creationid="pingfangx" creationdate="20180518T062535Z">
+        <seg>int speed = 0;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>interface Bicycle {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063854Z" creationid="pingfangx" creationdate="20180518T063854Z">
+        <seg>interface Bicycle {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>interface.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042733Z" creationid="pingfangx" creationdate="20180518T042733Z">
+        <seg>interface.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>intro/cando.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040716Z" creationid="pingfangx" creationdate="20180518T040716Z">
@@ -4140,6 +6090,14 @@ HelloWorldApp2.java:7: ')' expected</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>java programming, learn java, java sample code, java objects, java classes, java inheritance, interfaces, variables, arrays, data types, operators, control flow, number, string</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042022Z" creationid="pingfangx" creationdate="20180518T042022Z">
+        <seg>java programming, learn java, java sample code, java objects, java classes, java inheritance, interfaces, variables, arrays, data types, operators, control flow, number, string</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>java/generics/index.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031536Z" creationid="pingfangx" creationdate="20180518T031536Z">
@@ -4152,6 +6110,14 @@ HelloWorldApp2.java:7: ')' expected</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031131Z" creationid="pingfangx" creationdate="20180518T031131Z">
         <seg>java/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>javaOO/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042243Z" creationid="pingfangx" creationdate="20180518T042243Z">
+        <seg>javaOO/index.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -4244,6 +6210,38 @@ HelloWorldApp2.java:7: ')' expected</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>nutsandbolts/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042215Z" creationid="pingfangx" creationdate="20180518T042215Z">
+        <seg>nutsandbolts/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>object.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042723Z" creationid="pingfangx" creationdate="20180518T042723Z">
+        <seg>object.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>package.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042737Z" creationid="pingfangx" creationdate="20180518T042737Z">
+        <seg>package.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>package/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042611Z" creationid="pingfangx" creationdate="20180518T042611Z">
+        <seg>package/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>problems/index.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032506Z" creationid="pingfangx" creationdate="20180518T032506Z">
@@ -4332,6 +6330,38 @@ HelloWorldApp2.java:7: ')' expected</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>speed + " gear:" + gear);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062545Z" creationid="pingfangx" creationdate="20180518T062545Z">
+        <seg>speed + " gear:" + gear);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>speed = speed + increment;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062540Z" creationid="pingfangx" creationdate="20180518T062540Z">
+        <seg>speed = speed + increment;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>speed = speed - decrement;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062543Z" creationid="pingfangx" creationdate="20180518T062543Z">
+        <seg>speed = speed - decrement;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>trail icon</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042130Z" creationid="pingfangx" creationdate="20180518T042130Z">
+        <seg>trail icon</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tutorialLearningPaths.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030458Z" creationid="pingfangx" creationdate="20180518T030458Z">
@@ -4368,6 +6398,80 @@ HelloWorldApp2.java:7: ')' expected</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035812Z" creationid="pingfangx" creationdate="20180518T035812Z">
         <seg>使用核心库中的 &lt;c0&gt;System&lt;/c0&gt; 类来打印 "Hello World!" 消息发送到标准输出。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void applyBrakes(int decrement) {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062542Z" creationid="pingfangx" creationdate="20180518T062542Z">
+        <seg>void applyBrakes(int decrement) {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void applyBrakes(int decrement);
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063857Z" creationid="pingfangx" creationdate="20180518T063857Z">
+        <seg>void applyBrakes(int decrement);
+}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void changeCadence(int newValue) {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062536Z" creationid="pingfangx" creationdate="20180518T062536Z">
+        <seg>void changeCadence(int newValue) {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void changeCadence(int newValue);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063855Z" creationid="pingfangx" creationdate="20180518T063855Z">
+        <seg>void changeCadence(int newValue);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void changeGear(int newValue) {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062538Z" creationid="pingfangx" creationdate="20180518T062538Z">
+        <seg>void changeGear(int newValue) {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void changeGear(int newValue);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063856Z" creationid="pingfangx" creationdate="20180518T063856Z">
+        <seg>void changeGear(int newValue);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void printStates() {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062543Z" creationid="pingfangx" creationdate="20180518T062543Z">
+        <seg>void printStates() {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void speedUp(int increment) {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062539Z" creationid="pingfangx" creationdate="20180518T062539Z">
+        <seg>void speedUp(int increment) {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void speedUp(int increment);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063856Z" creationid="pingfangx" creationdate="20180518T063856Z">
+        <seg>void speedUp(int increment);</seg>
       </tuv>
     </tu>
     <tu>
