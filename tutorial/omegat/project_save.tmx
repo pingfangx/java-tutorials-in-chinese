@@ -1,0 +1,4443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="OmegaT-4.1.2" segtype="sentence" srclang="EN-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv lang="EN-US">
+        <seg>"Hello World!" for Microsoft Windows</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034016Z" creationid="pingfangx" creationdate="20180518T034016Z">
+        <seg>"Hello World!" for Microsoft Windows</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>"Hello World!" for Microsoft Windows (The Java™ Tutorials &gt; Getting Started &gt; The "Hello World!" Application)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034242Z" creationid="pingfangx" creationdate="20180518T034242Z">
+        <seg>"Hello World!" for Microsoft Windows (The Java™ Tutorials &gt; Getting Started &gt; The "Hello World!" Application)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>"Hello World!" for Solaris OS and Linux</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034018Z" creationid="pingfangx" creationdate="20180518T034018Z">
+        <seg>"Hello World!" for Solaris OS and Linux</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>"Hello World!" for the NetBeans IDE</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034014Z" creationid="pingfangx" creationdate="20180518T034007Z">
+        <seg>"Hello World!" for the NetBeans IDE</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#CLASS_DEF</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035300Z" creationid="pingfangx" creationdate="20180518T035300Z">
+        <seg>#CLASS_DEF</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#COMMENTS</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035249Z" creationid="pingfangx" creationdate="20180518T035249Z">
+        <seg>#COMMENTS</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#FOOT</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033103Z" creationid="pingfangx" creationdate="20180518T033103Z">
+        <seg>#FOOT</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#MAIN</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035301Z" creationid="pingfangx" creationdate="20180518T035301Z">
+        <seg>#MAIN</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#win32-1</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034325Z" creationid="pingfangx" creationdate="20180518T034325Z">
+        <seg>#win32-1</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#win32-2</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034343Z" creationid="pingfangx" creationdate="20180518T034343Z">
+        <seg>#win32-2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#win32-2a</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034345Z" creationid="pingfangx" creationdate="20180518T034345Z">
+        <seg>#win32-2a</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#win32-2b</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034348Z" creationid="pingfangx" creationdate="20180518T034348Z">
+        <seg>#win32-2b</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#win32-2c</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034351Z" creationid="pingfangx" creationdate="20180518T034351Z">
+        <seg>#win32-2c</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>(Make sure you download the &lt;b1&gt;JDK&lt;/b1&gt;, &lt;i2&gt;not&lt;/i2&gt; the JRE.) Consult the &lt;a3&gt;installation instructions&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034431Z" creationid="pingfangx" creationdate="20180518T034431Z">
+        <seg>(请确保您下载 &lt;b1&gt;JDK&lt;/b1&gt;，&lt;i2&gt;不是&lt;/i2&gt; JRE。)请参阅 &lt;a3&gt;installation instructions&lt;/a3&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>(The Java™ Tutorials &gt; Getting Started &gt; The Java Technology Phenomenon)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033558Z" creationid="pingfangx" creationdate="20180518T033558Z">
+        <seg>(The Java™ Tutorials &gt; Getting Started &gt; The Java Technology Phenomenon)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* The HelloWorldApp class implements an application that</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035433Z" creationid="pingfangx" creationdate="20180518T035433Z">
+        <seg>* The HelloWorldApp class implements an application that</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* simply displays "Hello World!" to the standard output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035550Z" creationid="pingfangx" creationdate="20180518T035550Z">
+        <seg>* simply displays "Hello World!" to the standard output.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* simply prints "Hello World!" to standard output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035433Z" creationid="pingfangx" creationdate="20180518T035433Z">
+        <seg>* simply prints "Hello World!" to standard output.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>*/
+&lt;b0&gt;class HelloWorldApp {&lt;/b0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035551Z" creationid="pingfangx" creationdate="20180518T035551Z">
+        <seg>*/
+&lt;b0&gt;class HelloWorldApp {&lt;/b0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>*/
+class HelloWorldApp {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035626Z" creationid="pingfangx" creationdate="20180518T035626Z">
+        <seg>*/
+class HelloWorldApp {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>*/&lt;/b0&gt;
+class HelloWorldApp {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035434Z" creationid="pingfangx" creationdate="20180518T035434Z">
+        <seg>*/&lt;/b0&gt;
+class HelloWorldApp {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>-descending</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035749Z" creationid="pingfangx" creationdate="20180518T035749Z">
+        <seg>-descending</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035559Z" creationid="pingfangx" creationdate="20180518T035559Z">
+        <seg>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../figures/getStarted/check.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034359Z" creationid="pingfangx" creationdate="20180518T034359Z">
+        <seg>../../figures/getStarted/check.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../figures/getStarted/dos.png</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034737Z" creationid="pingfangx" creationdate="20180518T034737Z">
+        <seg>../../figures/getStarted/dos.png</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../figures/getStarted/getStarted-compiler.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033205Z" creationid="pingfangx" creationdate="20180518T033205Z">
+        <seg>../../figures/getStarted/getStarted-compiler.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../figures/getStarted/getStarted-jvm.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033415Z" creationid="pingfangx" creationdate="20180518T033415Z">
+        <seg>../../figures/getStarted/getStarted-jvm.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../figures/getStarted/helloWorld.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033240Z" creationid="pingfangx" creationdate="20180518T033240Z">
+        <seg>../../figures/getStarted/helloWorld.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../figures/getStarted/saveas.png</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034710Z" creationid="pingfangx" creationdate="20180518T034710Z">
+        <seg>../../figures/getStarted/saveas.png</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../figures/getStarted/typeA.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034548Z" creationid="pingfangx" creationdate="20180518T034548Z">
+        <seg>../../figures/getStarted/typeA.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../figures/getStarted/typea2.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034549Z" creationid="pingfangx" creationdate="20180518T034549Z">
+        <seg>../../figures/getStarted/typea2.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032707Z" creationid="pingfangx" creationdate="20180518T032707Z">
+        <seg>../../index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../QandE/questions.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035234Z" creationid="pingfangx" creationdate="20180518T035234Z">
+        <seg>../QandE/questions.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../TOC.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032711Z" creationid="pingfangx" creationdate="20180518T032711Z">
+        <seg>../TOC.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../application/examples/HelloWorldApp.java</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034511Z" creationid="pingfangx" creationdate="20180518T034511Z">
+        <seg>../application/examples/HelloWorldApp.java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../cupojava/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033740Z" creationid="pingfangx" creationdate="20180518T033740Z">
+        <seg>../cupojava/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../essential/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040635Z" creationid="pingfangx" creationdate="20180518T040635Z">
+        <seg>../essential/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../images/coreTrail.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040635Z" creationid="pingfangx" creationdate="20180518T040635Z">
+        <seg>../images/coreTrail.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../images/getStartedIcon.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032143Z" creationid="pingfangx" creationdate="20180518T032143Z">
+        <seg>../images/getStartedIcon.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../images/javaTrail.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040612Z" creationid="pingfangx" creationdate="20180518T040612Z">
+        <seg>../images/javaTrail.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032048Z" creationid="pingfangx" creationdate="20180518T032048Z">
+        <seg>../index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../intro/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034020Z" creationid="pingfangx" creationdate="20180518T034020Z">
+        <seg>../intro/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../java/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040614Z" creationid="pingfangx" creationdate="20180518T040614Z">
+        <seg>../java/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../problems/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034133Z" creationid="pingfangx" creationdate="20180518T034133Z">
+        <seg>../problems/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>./TOC.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032053Z" creationid="pingfangx" creationdate="20180518T032053Z">
+        <seg>./TOC.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>./index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040703Z" creationid="pingfangx" creationdate="20180518T040703Z">
+        <seg>./index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>./intro/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032053Z" creationid="pingfangx" creationdate="20180518T032053Z">
+        <seg>./intro/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>/* &lt;e0&gt;text&lt;/e0&gt; */</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035448Z" creationid="pingfangx" creationdate="20180518T035448Z">
+        <seg>/* &lt;e0&gt;text&lt;/e0&gt; */</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>/**</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035548Z" creationid="pingfangx" creationdate="20180518T035548Z">
+        <seg>/**</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>/**
+ * The HelloWorldApp class implements an application that
+ * simply prints "Hello World!" to standard output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034534Z" creationid="pingfangx" creationdate="20180518T034534Z">
+        <seg>/**
+ * The HelloWorldApp class implements an application that
+ * simply prints "Hello World!" to standard output.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>/** &lt;e0&gt;documentation&lt;/e0&gt; */</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035453Z" creationid="pingfangx" creationdate="20180518T035453Z">
+        <seg>/** &lt;e0&gt;documentation&lt;/e0&gt; */</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// &lt;e0&gt;text&lt;/e0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035519Z" creationid="pingfangx" creationdate="20180518T035519Z">
+        <seg>// &lt;e0&gt;text&lt;/e0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>1 File(s)            267 bytes</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034854Z" creationid="pingfangx" creationdate="20180518T034854Z">
+        <seg>1 File(s)            267 bytes</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>2 Dir(s)  93,297,991,680 bytes free
+
+C:\myapplication&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034855Z" creationid="pingfangx" creationdate="20180518T034855Z">
+        <seg>2 Dir(s)  93,297,991,680 bytes free
+
+C:\myapplication&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>2 Dir(s)  93,298,032,640 bytes free
+
+C:\myapplication&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034922Z" creationid="pingfangx" creationdate="20180518T034922Z">
+        <seg>2 Dir(s)  93,298,032,640 bytes free
+
+C:\myapplication&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>2 File(s)            699 bytes</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034921Z" creationid="pingfangx" creationdate="20180518T034921Z">
+        <seg>2 File(s)            699 bytes</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>2014-04-24  01:34 PM               267 HelloWorldApp.java</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034854Z" creationid="pingfangx" creationdate="20180518T034854Z">
+        <seg>2014-04-24  01:34 PM               267 HelloWorldApp.java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>2014-04-24  01:34 PM    &lt;DIR&gt;          ..</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034853Z" creationid="pingfangx" creationdate="20180518T034853Z">
+        <seg>2014-04-24  01:34 PM    &lt;DIR&gt;          ..</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>2014-04-24  02:07 PM               432 HelloWorldApp.class
+2014-04-24  01:34 PM               267 HelloWorldApp.java</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034920Z" creationid="pingfangx" creationdate="20180518T034920Z">
+        <seg>2014-04-24  02:07 PM               432 HelloWorldApp.class
+2014-04-24  01:34 PM               267 HelloWorldApp.java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>2014-04-24  02:07 PM    &lt;DIR&gt;          ..</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034919Z" creationid="pingfangx" creationdate="20180518T034919Z">
+        <seg>2014-04-24  02:07 PM    &lt;DIR&gt;          ..</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>2d/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031829Z" creationid="pingfangx" creationdate="20180518T031829Z">
+        <seg>2d/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt; Download the latest Java Tutorials bundle&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030628Z" creationid="pingfangx" creationdate="20180518T030628Z">
+        <seg>&lt;a0&gt;下载最新的 Java 教程包&lt;/a0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;"Hello World!" for Microsoft Windows&lt;/a0&gt; These command-line instructions are for users of Windows XP Professional, Windows XP Home, Windows Server 2003, Windows 2000 Professional, and Windows Vista.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034132Z" creationid="pingfangx" creationdate="20180518T034132Z">
+        <seg>&lt;a0&gt;"Hello World!" for Microsoft Windows&lt;/a0&gt; 这些命令行说明适用于 Windows XP Professional，Windows XP Home，Windows Server 2003，Windows 2000 Professional 和 Windows Vista 的用户。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;"Hello World!" for Solaris OS and Linux&lt;/a0&gt; These command-line instructions are for users of Solaris OS and Linux.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034135Z" creationid="pingfangx" creationdate="20180518T034135Z">
+        <seg>&lt;a0&gt;"Hello World!" for Solaris OS and Linux&lt;/a0&gt; 这些命令行指令适用于 Solaris OS 和 Linux 用户。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;"Hello World!" for the NetBeans IDE&lt;/a0&gt; These instructions are for users of the NetBeans IDE.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034118Z" creationid="pingfangx" creationdate="20180518T034118Z">
+        <seg>&lt;a0&gt;"Hello World!" for the NetBeans IDE&lt;/a0&gt; 这些说明适用于 NetBeans IDE 的用户。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;2D Graphics&lt;/a0&gt; — How to display and print 2D graphics in applications.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031832Z" creationid="pingfangx" creationdate="20180518T031832Z">
+        <seg>&lt;a0&gt;2D Graphics&lt;/a0&gt;  - 如何在应用程序中显示和打印 2D 图形。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;A Closer Look at "Hello World!"&lt;/b2&gt;&lt;/a0&gt; Discusses the "Hello World!" application, describing each section of code in detail.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032455Z" creationid="pingfangx" creationdate="20180518T032455Z">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;A Closer Look at "Hello World!"&lt;/b2&gt;&lt;/a0&gt; 讨论 "Hello World!" 应用程序，详细描述每个代码段。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Common Problems (and Their Solutions)&lt;/b2&gt;&lt;/a0&gt; This is the place to go if you have trouble compiling or running the programs in this trail.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032544Z" creationid="pingfangx" creationdate="20180518T032544Z">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;Common Problems (and Their Solutions)&lt;/b2&gt;&lt;/a0&gt; 如果您在编译或运行此路径中的程序时遇到困难，则可以查看的页面。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;The "Hello World!" Application&lt;/b2&gt;&lt;/a0&gt; This hands-on approach describes what to download, what to install, and what to type, for creating a simple "Hello World!" application.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032418Z" creationid="pingfangx" creationdate="20180518T032418Z">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;The "Hello World!" Application&lt;/b2&gt;&lt;/a0&gt; 这种动手方式描述了要创建一个简单的 "Hello World!" 应用要下载什么内容，要安装什么以及要输入什么。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;The Java Technology Phenomenon&lt;/b2&gt;&lt;/a0&gt; Provides an overview of Java technology as a whole.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032213Z" creationid="pingfangx" creationdate="20180518T032150Z">
+        <seg>&lt;a0&gt;&lt;i1/&gt; &lt;b2&gt;The Java Technology Phenomenon&lt;/b2&gt;&lt;/a0&gt; 提供 Java 技术整体概述。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;About Oracle&lt;/a0&gt; | &lt;a1&gt;Contact Us&lt;/a1&gt; | &lt;a2&gt;Legal Notices&lt;/a2&gt; | &lt;a3&gt;Terms of Use&lt;/a3&gt; | &lt;a4&gt;Your Privacy Rights&lt;/a4&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031850Z" creationid="pingfangx" creationdate="20180518T031850Z">
+        <seg>&lt;a0&gt;About Oracle&lt;/a0&gt; | &lt;a1&gt;Contact Us&lt;/a1&gt; | &lt;a2&gt;Legal Notices&lt;/a2&gt; | &lt;a3&gt;Terms of Use&lt;/a3&gt; | &lt;a4&gt;Your Privacy Rights&lt;/a4&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Collections&lt;/a0&gt; — Lessons on using and extending the Java Collections Framework.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031251Z" creationid="pingfangx" creationdate="20180518T031251Z">
+        <seg>&lt;a0&gt;Collections&lt;/a0&gt;  - 使用和扩展 Java 集合框架的课程。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Creating a GUI with Swing&lt;/a0&gt; — A comprehensive introduction to GUI creation on the Java platform.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031350Z" creationid="pingfangx" creationdate="20180518T031350Z">
+        <seg>&lt;a0&gt;Creating a GUI with Swing&lt;/a0&gt;  - 全面介绍 Java 平台上的 GUI 创建。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Creating a JavaFX GUI&lt;/a0&gt; — A collection of JavaFX tutorials.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031359Z" creationid="pingfangx" creationdate="20180518T031359Z">
+        <seg>&lt;a0&gt;Creating a JavaFX GUI&lt;/a0&gt;  - 一组 JavaFX 教程。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Custom Networking&lt;/a0&gt; — An introduction to the Java platform's powerful networking features.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031506Z" creationid="pingfangx" creationdate="20180518T031506Z">
+        <seg>&lt;a0&gt;Custom Networking&lt;/a0&gt;  - 介绍 Java 平台强大的网络功能。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Date-Time APIs&lt;/a0&gt; — How to use the &lt;t1&gt;java.time&lt;/t1&gt; pages to write date and time code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031306Z" creationid="pingfangx" creationdate="20180518T031306Z">
+        <seg>&lt;a0&gt;Date-Time APIs&lt;/a0&gt;  - 如何使用 &lt;t1&gt;java.time&lt;/t1&gt; 页编写日期和时间代码。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Deployment&lt;/a0&gt; — How to package applications and applets using JAR files, and deploy them using Java Web Start and Java Plug-in.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031320Z" creationid="pingfangx" creationdate="20180518T031320Z">
+        <seg>&lt;a0&gt;Deployment&lt;/a0&gt;  - 如何使用 JAR 文件打包应用程序和 applet，并使用 Java Web Start 和 Java 插件部署它们。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Essential Classes&lt;/a0&gt;: By taking this trail, you can find out about strings, exceptions, threads, and other Java features that are used in all kinds of Java programs.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040650Z" creationid="pingfangx" creationdate="20180518T040650Z">
+        <seg>&lt;a0&gt;Essential Classes&lt;/a0&gt;：通过这一步，您可以了解用于各种 Java 程序的字符串，异常，线程和其他 Java 功能。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Essential Java Classes&lt;/a0&gt; — Lessons on exceptions, basic input/output, concurrency, regular expressions, and the platform environment.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031225Z" creationid="pingfangx" creationdate="20180518T031225Z">
+        <seg>&lt;a0&gt;Essential Java Classes&lt;/a0&gt;  - 关于异常，基本输入/输出，并发，正则表达式和平台环境的课程。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Full-Screen Exclusive Mode API&lt;/a0&gt; — How to write applications that more fully utilize the user's graphics hardware.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031533Z" creationid="pingfangx" creationdate="20180518T031533Z">
+        <seg>&lt;a0&gt;Full-Screen Exclusive Mode API&lt;/a0&gt;  - 如何编写更充分利用用户图形硬件的应用程序。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Generics&lt;/a0&gt; — An enhancement to the type system that supports operations on objects of various types while providing compile-time type safety.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031554Z" creationid="pingfangx" creationdate="20180518T031554Z">
+        <seg>&lt;a0&gt;Generics&lt;/a0&gt;  - 对类型系统的增强，支持对各种类型对象的操作，同时提供编译时类型安全性。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Getting Started&lt;/a0&gt; — An introduction to Java technology and lessons on installing Java development software and using it to create a simple program.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031129Z" creationid="pingfangx" creationdate="20180518T031129Z">
+        <seg>&lt;a0&gt;Getting Started&lt;/a0&gt;  - Java 技术的介绍以入安装 Java 开发软件并使用它创建简单程序的课程。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Getting Started&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032709Z" creationid="pingfangx" creationdate="20180518T032709Z">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Getting Started&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Getting Started&lt;/a1&gt; &gt; &lt;a2&gt;The "Hello World!" Application&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034245Z" creationid="pingfangx" creationdate="20180518T034245Z">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Getting Started&lt;/a1&gt; &gt; &lt;a2&gt;The "Hello World!" Application&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Getting Started&lt;/a1&gt; &gt; &lt;a2&gt;The Java Technology Phenomenon&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032818Z" creationid="pingfangx" creationdate="20180518T032818Z">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Getting Started&lt;/a1&gt; &gt; &lt;a2&gt;The Java Technology Phenomenon&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Internationalization&lt;/a0&gt; — An introduction to designing software so that it can be easily adapted (localized) to various languages and regions.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031632Z" creationid="pingfangx" creationdate="20180518T031632Z">
+        <seg>&lt;a0&gt;Internationalization&lt;/a0&gt;  - 介绍设计软件的方法，使其可以轻松适应(本地化)到各种语言和地区。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;JAXB&lt;/a0&gt; — Introduces the Java architecture for XML Binding (JAXB) technology.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031728Z" creationid="pingfangx" creationdate="20180518T031728Z">
+        <seg>&lt;a0&gt;JAXB&lt;/a0&gt;  - 介绍用于 XML 绑定(JAXB)技术的 Java 体系结构。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;JAXP&lt;/a0&gt; — Introduces the Java API for XML Processing (JAXP) technology.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031719Z" creationid="pingfangx" creationdate="20180518T031719Z">
+        <seg>&lt;a0&gt;JAXP&lt;/a0&gt;  - 介绍用于 XML 处理的 Java API(JAXP)技术。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;JDBC Database Access&lt;/a0&gt; — Introduces an API for connectivity between the Java applications and a wide range of databases and data sources.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031645Z" creationid="pingfangx" creationdate="20180518T031645Z">
+        <seg>&lt;a0&gt;JDBC Database Access&lt;/a0&gt;  - 介绍用于 Java 应用程序和各种数据库和数据源之间连接的 API。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;JMX&lt;/a0&gt;— Java Management Extensions provides a standard way of managing resources such as applications, devices, and services.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031657Z" creationid="pingfangx" creationdate="20180518T031657Z">
+        <seg>&lt;a0&gt;JMX&lt;/a0&gt;  -  Java Management Extensions 提供了管理资源（如应用程序，设备和服务）的标准方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;JNDI&lt;/a0&gt;— Java Naming and Directory Interface enables accessing the Naming and Directory Service such as DNS and LDAP.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031709Z" creationid="pingfangx" creationdate="20180518T031709Z">
+        <seg>&lt;a0&gt;JNDI&lt;/a0&gt;  -  Java 命名和目录接口允许访问命名和目录服务，例如 DNS 和 LDAP。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;JavaBeans&lt;/a0&gt; — The Java platform's component technology.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031636Z" creationid="pingfangx" creationdate="20180518T031636Z">
+        <seg>&lt;a0&gt;JavaBeans&lt;/a0&gt;  -  Java 平台的组件技术。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Learning the Java Language&lt;/a0&gt; — Lessons describing the essential concepts and features of the Java Programming Language.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031206Z" creationid="pingfangx" creationdate="20180518T031206Z">
+        <seg>&lt;a0&gt;Learning the Java Language&lt;/a0&gt;  - 描述 Java 编程语言基本概念和功能的课程。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Learning the Java Language&lt;/a0&gt;: This trail is a gentle introduction to object-oriented concepts and how the Java language implements them.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040628Z" creationid="pingfangx" creationdate="20180518T040628Z">
+        <seg>&lt;a0&gt;Learning the Java Language&lt;/a0&gt;：这个路径是对面向对象概念的一种温和的介绍，以及 Java 语言如何实现它们。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Preparation for Java Programming Language Certification&lt;/a0&gt; — List of available training and tutorial resources.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031332Z" creationid="pingfangx" creationdate="20180518T031332Z">
+        <seg>&lt;a0&gt;Preparation for Java Programming Language Certification&lt;/a0&gt;  - 可用的培训和教程资源列表。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;RMI&lt;/a0&gt; — The Remote Method Invocation API allows an object to invoke methods of an object running on another Java Virtual Machine.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031743Z" creationid="pingfangx" creationdate="20180518T031743Z">
+        <seg>&lt;a0&gt;RMI&lt;/a0&gt;  - 远程方法调用 API 允许对象调用在另一个 Java 虚拟机上运行的对象的方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Reflection&lt;/a0&gt; — An API that represents ("reflects") the classes, interfaces, and objects in the current Java Virtual Machine.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031816Z" creationid="pingfangx" creationdate="20180518T031816Z">
+        <seg>&lt;a0&gt;Reflection&lt;/a0&gt;  - 表示("反射")当前 Java 虚拟机中的类，接口和对象的 API。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Security&lt;/a0&gt; — Java platform features that help protect applications from malicious software.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031824Z" creationid="pingfangx" creationdate="20180518T031824Z">
+        <seg>&lt;a0&gt;Security&lt;/a0&gt;  - 有助于保护应用程序免受恶意软件攻击的 Java 平台功能。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Sockets Direct Protocol&lt;/a0&gt; — How to enable the Sockets Direct Protocol to take advantage of InfiniBand.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031842Z" creationid="pingfangx" creationdate="20180518T031842Z">
+        <seg>&lt;a0&gt;Sockets Direct Protocol&lt;/a0&gt;  - 如何启用套接字直接协议以利用 InfiniBand。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Sound&lt;/a0&gt; — An API for playing sound data from applications.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031828Z" creationid="pingfangx" creationdate="20180518T031828Z">
+        <seg>&lt;a0&gt;Sound&lt;/a0&gt;  - 用于播放应用程序声音数据的 API。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;The Extension Mechanism&lt;/a0&gt; — How to make custom APIs available to all applications running on the Java platform.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031525Z" creationid="pingfangx" creationdate="20180518T031525Z">
+        <seg>&lt;a0&gt;The Extension Mechanism&lt;/a0&gt;  - 如何使自定义 API 可用于在 Java 平台上运行的所有应用程序。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;The Java Tutorials' Blog&lt;/a0&gt; has news and updates about the Java SE tutorials.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030548Z" creationid="pingfangx" creationdate="20180518T030548Z">
+        <seg>&lt;a0&gt;The Java Tutorials' Blog&lt;/a0&gt; 有关于 Java SE 教程的新闻和更新。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040353Z" creationid="pingfangx" creationdate="20180518T040353Z">
+        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt; • &lt;a2&gt;Next »&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032546Z" creationid="pingfangx" creationdate="20180518T032546Z">
+        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt; • &lt;a2&gt;Next »&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;Trail&lt;/a1&gt; • &lt;a2&gt;Next »&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032124Z" creationid="pingfangx" creationdate="20180518T032124Z">
+        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;Trail&lt;/a1&gt; • &lt;a2&gt;Next »&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040212Z" creationid="pingfangx" creationdate="20180518T040212Z">
+        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;Trail&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040532Z" creationid="pingfangx" creationdate="20180518T040532Z">
+        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;Trail&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;Trail&lt;/a1&gt; • &lt;a2&gt;Next »&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032712Z" creationid="pingfangx" creationdate="20180518T032712Z">
+        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;Trail&lt;/a1&gt; • &lt;a2&gt;Next »&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a1&gt;Common Problems (and Their Solutions)&lt;/a1&gt; Consult this page if you have problems compiling or running your application.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034138Z" creationid="pingfangx" creationdate="20180518T034138Z">
+        <seg>&lt;a1&gt;Common Problems (and Their Solutions)&lt;/a1&gt; 如果您在编译或运行应用程序时遇到问题，请参阅此页面。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;/**</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035432Z" creationid="pingfangx" creationdate="20180518T035432Z">
+        <seg>&lt;b0&gt;/**</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Answer 1&lt;/b0&gt;: Bytecode.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040231Z" creationid="pingfangx" creationdate="20180518T040231Z">
+        <seg>&lt;b0&gt;Answer 1&lt;/b0&gt;：字节码。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Answer 1&lt;/b0&gt;: This is the only line of code that must change:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040326Z" creationid="pingfangx" creationdate="20180518T040326Z">
+        <seg>&lt;b0&gt;Answer 1&lt;/b0&gt;：这是唯一必须更改的代码行：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Answer 2&lt;/b0&gt;: Here's the error you get when you try to compile the program:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040333Z" creationid="pingfangx" creationdate="20180518T040333Z">
+        <seg>&lt;b0&gt;Answer 2&lt;/b0&gt;：这是您尝试编译程序时遇到的错误：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Answer 2&lt;/b0&gt;: c is an invalid comment.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040244Z" creationid="pingfangx" creationdate="20180518T040244Z">
+        <seg>&lt;b0&gt;Answer 2&lt;/b0&gt;：c 是无效注释。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Answer 3&lt;/b0&gt;: Check your classpath.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040248Z" creationid="pingfangx" creationdate="20180518T040248Z">
+        <seg>&lt;b0&gt;Answer 3&lt;/b0&gt;：检查你的类路径。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Answer 4&lt;/b0&gt;: The correct signature is &lt;c1&gt;public static void main(String[] args)&lt;/c1&gt; or &lt;c2&gt;public static void main(String... args)&lt;/c2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040259Z" creationid="pingfangx" creationdate="20180518T040259Z">
+        <seg>&lt;b0&gt;Answer 4&lt;/b0&gt;：正确的签名是 &lt;c1&gt;public static void main(String[] args)&lt;/c1&gt; 或 &lt;c2&gt;public static void main(String... args)&lt;/c2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Answer 5&lt;/b0&gt;: They can be in either order, but the convention is &lt;c1&gt;public static&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040315Z" creationid="pingfangx" creationdate="20180518T040315Z">
+        <seg>&lt;b0&gt;Answer 5&lt;/b0&gt;：它们可以按任意顺序排列，但约定是 &lt;c1&gt;public static&lt;/c1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Answer 6&lt;/b0&gt;: The &lt;c1&gt;main&lt;/c1&gt; method defines a single parameter, usually named &lt;c2&gt;args&lt;/c2&gt;, whose type is an array of &lt;c3&gt;String&lt;/c3&gt; objects.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040320Z" creationid="pingfangx" creationdate="20180518T040320Z">
+        <seg>&lt;c1&gt;main&lt;/c1&gt; 方法定义了一个单独的参数，通常名为 &lt;c2&gt;args&lt;/c2&gt;，其类型是 &lt;c3&gt;String&lt;/c3&gt; 对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Be Careful When You Type&lt;/b0&gt; &lt;i1/&gt;   &lt;i2/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034552Z" creationid="pingfangx" creationdate="20180518T034552Z">
+        <seg>&lt;b0&gt;Be Careful When You Type&lt;/b0&gt; &lt;i1/&gt;   &lt;i2/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Exercise 1&lt;/b0&gt;: Change the &lt;a1&gt;&lt;c2&gt;HelloWorldApp.java&lt;/c2&gt;&lt;/a1&gt; program so that it displays &lt;c3&gt;Hola Mundo!&lt;/c3&gt; instead of &lt;c4&gt;Hello World!&lt;/c4&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040144Z" creationid="pingfangx" creationdate="20180518T040144Z">
+        <seg>&lt;b0&gt;Exercise 1&lt;/b0&gt;：更改 &lt;a1&gt;&lt;c2&gt;HelloWorldApp.java&lt;/c2&gt;&lt;/a1&gt; 程序，使其显示 &lt;c3&gt;Hola Mundo!&lt;/c3&gt; 而不是 &lt;c4&gt;Hello World!&lt;/c4&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Exercise 2&lt;/b0&gt;: You can find a slightly modified version of &lt;c1&gt;HelloWorldApp&lt;/c1&gt; here: &lt;a2&gt;&lt;c3&gt;HelloWorldApp2.java&lt;/c3&gt;&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040153Z" creationid="pingfangx" creationdate="20180518T040153Z">
+        <seg>&lt;b0&gt;Exercise 2&lt;/b0&gt;：您可以在这里找到 &lt;c1&gt;HelloWorldApp&lt;/c1&gt; 的稍微修改版本：&lt;a2&gt;&lt;c3&gt;HelloWorldApp2.java&lt;/c3&gt;&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; "Hello World!" for the NetBeans IDE &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034952Z" creationid="pingfangx" creationdate="20180518T034952Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; "Hello World!" for the NetBeans IDE &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040728Z" creationid="pingfangx" creationdate="20180518T040728Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; A Closer Look at the "Hello World!" Application &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040205Z" creationid="pingfangx" creationdate="20180518T040205Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; A Closer Look at the "Hello World!" Application &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; About the Java Technology &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033721Z" creationid="pingfangx" creationdate="20180518T033721Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; About the Java Technology &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Beginning of Tutorial &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032550Z" creationid="pingfangx" creationdate="20180518T032550Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Beginning of Tutorial &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Common Problems (and Their Solutions)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040651Z" creationid="pingfangx" creationdate="20180518T040651Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Common Problems (and Their Solutions)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Previous Lesson &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034139Z" creationid="pingfangx" creationdate="20180518T034139Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Previous Lesson &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Questions and Exercises: Getting Started</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040353Z" creationid="pingfangx" creationdate="20180518T040353Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Questions and Exercises: Getting Started</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Table of Contents &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032729Z" creationid="pingfangx" creationdate="20180518T032729Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Table of Contents &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; The Java Technology Phenomenon &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033441Z" creationid="pingfangx" creationdate="20180518T033441Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; The Java Technology Phenomenon &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Can Java Technology Do?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033828Z" creationid="pingfangx" creationdate="20180518T033828Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; What Can Java Technology Do?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Question 1&lt;/b0&gt;: When you compile a program written in the Java programming language, the compiler converts the human-readable source file into platform-independent code that a Java Virtual Machine can understand.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040002Z" creationid="pingfangx" creationdate="20180518T040002Z">
+        <seg>&lt;b0&gt;Question 1&lt;/b0&gt;：编译用 Java 编程语言编写的程序时，编译器将可读的源文件转换为 Java 虚拟机可以理解的与平台无关的代码。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Question 2&lt;/b0&gt;: Which of the following is &lt;i1&gt;not&lt;/i1&gt; a valid comment:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040035Z" creationid="pingfangx" creationdate="20180518T040035Z">
+        <seg>&lt;b0&gt;Question 2&lt;/b0&gt;：以下哪项 &lt;i1&gt;不&lt;/i1&gt; 是有效注释：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Question 3&lt;/b0&gt;: What is the first thing you should check if you see the following error at runtime:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040050Z" creationid="pingfangx" creationdate="20180518T040050Z">
+        <seg>&lt;b0&gt;Question 3&lt;/b0&gt;：如果在运行时看到以下错误，应该检查的第一件事是：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Question 4&lt;/b0&gt;: What is the correct signature of the &lt;c1&gt;main&lt;/c1&gt; method?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040107Z" creationid="pingfangx" creationdate="20180518T040107Z">
+        <seg>&lt;b0&gt;Question 4&lt;/b0&gt;：&lt;c1&gt;main&lt;/c1&gt; 方法的正确签名是什么？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Question 5&lt;/b0&gt;: When declaring the &lt;c1&gt;main&lt;/c1&gt; method, which modifier must come first, &lt;c2&gt;public&lt;/c2&gt; or &lt;c3&gt;static&lt;/c3&gt;?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040115Z" creationid="pingfangx" creationdate="20180518T040115Z">
+        <seg>&lt;b0&gt;Question 5&lt;/b0&gt;：在声明 &lt;c1&gt;main&lt;/c1&gt; 方法时，哪个修饰符必须先放置，&lt;c2&gt;public&lt;/c2&gt; 或 &lt;c3&gt;static&lt;/c3&gt;？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Question 6&lt;/b0&gt;: What parameters does the &lt;c1&gt;main&lt;/c1&gt; method define?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040124Z" creationid="pingfangx" creationdate="20180518T040124Z">
+        <seg>&lt;b0&gt;Question 6&lt;/b0&gt;：&lt;c1&gt;main&lt;/c1&gt; 方法定义了哪些参数？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Trail:&lt;/b0&gt; Getting Started</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032706Z" creationid="pingfangx" creationdate="20180518T032706Z">
+        <seg>&lt;b0&gt;Trail:&lt;/b0&gt; Getting Started</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Trail:&lt;/b0&gt; Getting Started &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032816Z" creationid="pingfangx" creationdate="20180518T032816Z">
+        <seg>&lt;b0&gt;Trail:&lt;/b0&gt; Getting Started &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;public static void main(String[] args) {&lt;/b0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035627Z" creationid="pingfangx" creationdate="20180518T035627Z">
+        <seg>&lt;b0&gt;public static void main(String[] args) {&lt;/b0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b1&gt;}&lt;/b1&gt;
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035628Z" creationid="pingfangx" creationdate="20180518T035628Z">
+        <seg>&lt;b1&gt;}&lt;/b1&gt;
+}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Lesson:&lt;/b2&gt; The "Hello World!" Application</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034244Z" creationid="pingfangx" creationdate="20180518T034244Z">
+        <seg>&lt;b2&gt;Lesson:&lt;/b2&gt; The "Hello World!" Application</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Lesson:&lt;/b2&gt; The Java Technology Phenomenon</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032817Z" creationid="pingfangx" creationdate="20180518T032817Z">
+        <seg>&lt;b2&gt;Lesson:&lt;/b2&gt; The Java Technology Phenomenon</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040728Z" creationid="pingfangx" creationdate="20180518T040728Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; "Hello World!" for Solaris OS and Linux</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034953Z" creationid="pingfangx" creationdate="20180518T034953Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; "Hello World!" for Solaris OS and Linux</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; "Hello World!" for the NetBeans IDE</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034140Z" creationid="pingfangx" creationdate="20180518T034140Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; "Hello World!" for the NetBeans IDE</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; About the Java Technology</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032732Z" creationid="pingfangx" creationdate="20180518T032732Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; About the Java Technology</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Common Problems (and Their Solutions)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040206Z" creationid="pingfangx" creationdate="20180518T040206Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Common Problems (and Their Solutions)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; How Will Java Technology Change My Life?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033723Z" creationid="pingfangx" creationdate="20180518T033723Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; How Will Java Technology Change My Life?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Questions and Exercises: Getting Started</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035816Z" creationid="pingfangx" creationdate="20180518T035816Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Questions and Exercises: Getting Started</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; The "Hello World!" Application</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033829Z" creationid="pingfangx" creationdate="20180518T033829Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; The "Hello World!" Application</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; The Java Technology Phenomenon</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032551Z" creationid="pingfangx" creationdate="20180518T032551Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; The Java Technology Phenomenon</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Can Java Technology Do?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033442Z" creationid="pingfangx" creationdate="20180518T033442Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; What Can Java Technology Do?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033828Z" creationid="pingfangx" creationdate="20180518T033828Z">
+        <seg>&lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;br5/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034610Z" creationid="pingfangx" creationdate="20180518T034610Z">
+        <seg>&lt;br5/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;/** comment */&lt;/c0&gt;&lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040038Z" creationid="pingfangx" creationdate="20180518T040038Z">
+        <seg>&lt;c0&gt;/** comment */&lt;/c0&gt;&lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c2&gt;/* comment */&lt;/c2&gt;&lt;br3/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040039Z" creationid="pingfangx" creationdate="20180518T040039Z">
+        <seg>&lt;c2&gt;/* comment */&lt;/c2&gt;&lt;br3/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c4&gt;/* comment&lt;/c4&gt;&lt;br5/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040041Z" creationid="pingfangx" creationdate="20180518T040041Z">
+        <seg>&lt;c4&gt;/* comment&lt;/c4&gt;&lt;br5/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c6&gt;// comment&lt;/c6&gt;&lt;br7/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040043Z" creationid="pingfangx" creationdate="20180518T040043Z">
+        <seg>&lt;c6&gt;// comment&lt;/c6&gt;&lt;br7/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c6&gt;HelloWorldApp&lt;/c6&gt; is &lt;e7&gt;not&lt;/e7&gt; the same as &lt;c8&gt;helloworldapp&lt;/c8&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034630Z" creationid="pingfangx" creationdate="20180518T034613Z">
+        <seg>&lt;c6&gt;HelloWorldApp&lt;/c6&gt; 与 &lt;c8&gt;helloworldapp&lt;/c8&gt; &lt;e7&gt;不&lt;/e7&gt;相同。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;i0&gt;The Java Tutorial, Sixth Edition.&lt;/i0&gt; &lt;a1&gt;Amazon.com&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030640Z" creationid="pingfangx" creationdate="20180518T030640Z">
+        <seg>&lt;i0&gt;The Java Tutorial, Sixth Edition.&lt;/i0&gt; &lt;a1&gt;Amazon.com&lt;/a1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Application Programming Interface (API)&lt;/s0&gt;: The API provides the core functionality of the Java programming language.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033630Z" creationid="pingfangx" creationdate="20180518T033630Z">
+        <seg>&lt;s0&gt;Application Programming Interface (API)&lt;/s0&gt;：API 提供了 Java 编程语言的核心功能。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Avoid platform dependencies&lt;/s0&gt;: You can keep your program portable by avoiding the use of libraries written in other languages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033816Z" creationid="pingfangx" creationdate="20180518T033816Z">
+        <seg>&lt;s0&gt;Avoid platform dependencies&lt;/s0&gt;：您可以通过避免使用其他语言编写的库来保持程序的可移植性。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Deployment Technologies&lt;/s0&gt;: The JDK software provides standard mechanisms such as the Java Web Start software and Java Plug-In software for deploying your applications to end users.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033655Z" creationid="pingfangx" creationdate="20180518T033655Z">
+        <seg>&lt;s0&gt;Deployment Technologies&lt;/s0&gt;：JDK 软件提供标准机制，例如用于将应用程序部署到最终用户的 Java Web Start 软件和 Java Plug-In 软件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Develop programs more quickly&lt;/s0&gt;: The Java programming language is simpler than C++, and as such, your development time could be up to twice as fast when writing in it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033811Z" creationid="pingfangx" creationdate="20180518T033811Z">
+        <seg>&lt;s0&gt;Develop programs more quickly&lt;/s0&gt;：Java 编程语言比 C ++更简单，因此编写它时，开发时间可能会快两倍。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Development Tools&lt;/s0&gt;: The development tools provide everything you'll need for compiling, running, monitoring, debugging, and documenting your applications.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033619Z" creationid="pingfangx" creationdate="20180518T033619Z">
+        <seg>&lt;s0&gt;Development Tools&lt;/s0&gt;：开发工具提供编译，运行，监控，调试和记录应用程序所需的一切。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Distribute software more easily&lt;/s0&gt;: With Java Web Start software, users will be able to launch your applications with a single click of the mouse.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033820Z" creationid="pingfangx" creationdate="20180518T033820Z">
+        <seg>&lt;s0&gt;Distribute software more easily&lt;/s0&gt;：使用 Java Web Start 软件，用户只需单击一下鼠标即可启动您的应用程序。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Get started quickly&lt;/s0&gt;: Although the Java programming language is a powerful object-oriented language, it's easy to learn, especially for programmers already familiar with C or C++.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033759Z" creationid="pingfangx" creationdate="20180518T033759Z">
+        <seg>&lt;s0&gt;Get started quickly&lt;/s0&gt;：尽管 Java 编程语言是一种功能强大的面向对象语言，但它很容易学习，特别是对于已经熟悉 C 或 C ++的程序员而言。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Integration Libraries&lt;/s0&gt;: Integration libraries such as the Java IDL API, JDBC API, Java Naming and Directory Interface (JNDI) API, Java RMI, and Java Remote Method Invocation over Internet Inter-ORB Protocol Technology (Java RMI-IIOP Technology) enable database access and manipulation of remote objects.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033721Z" creationid="pingfangx" creationdate="20180518T033721Z">
+        <seg>&lt;s0&gt;Integration Libraries&lt;/s0&gt;：集成库，如 Java IDL API，JDBC API，Java 命名和目录接口(JNDI)API，Java RMI 和通过 Internet Inter-ORB 协议技术的 Java 远程方法调用(Java RMI -IIOP 技术)支持数据库访问和操作远程对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034803Z" creationid="pingfangx" creationdate="20180518T034803Z">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; Type all code, commands, and file names exactly as shown.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034557Z" creationid="pingfangx" creationdate="20180518T034557Z">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; 完全按照所示键入所有代码，命令和文件名。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;User Interface Toolkits&lt;/s0&gt;: The JavaFX, Swing, and Java 2D toolkits make it possible to create sophisticated Graphical User Interfaces (GUIs).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033659Z" creationid="pingfangx" creationdate="20180518T033659Z">
+        <seg>&lt;s0&gt;User Interface Toolkits&lt;/s0&gt;：JavaFX，Swing 和 Java 2D 工具包可以创建复杂的图形用户界面(GUI)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Write better code&lt;/s0&gt;: The Java programming language encourages good coding practices, and automatic garbage collection helps you avoid memory leaks.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033804Z" creationid="pingfangx" creationdate="20180518T033804Z">
+        <seg>&lt;s0&gt;Write better code&lt;/s0&gt;：Java 编程语言鼓励良好的编码实践，并且自动垃圾收集可帮助您避免内存泄漏。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Write less code&lt;/s0&gt;: Comparisons of program metrics (class counts, method counts, and so on) suggest that a program written in the Java programming language can be four times smaller than the same program written in C++.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033801Z" creationid="pingfangx" creationdate="20180518T033801Z">
+        <seg>&lt;s0&gt;Write less code&lt;/s0&gt;：项目指标比较(类计数法计数，等等)表明，一个用 java 编程语言编写的程序可以小于相同的程序，用 C++写的四倍。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Write once, run anywhere&lt;/s0&gt;: Because applications written in the Java programming language are compiled into machine-independent bytecodes, they run consistently on any Java platform.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033818Z" creationid="pingfangx" creationdate="20180518T033818Z">
+        <seg>&lt;s0&gt;Write once, run anywhere&lt;/s0&gt;：因为用 java 编程语言编写的应用程序编译成字节码运行独立于机器，他们始终在任何 java 平台。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A &lt;c3&gt;.class&lt;/c3&gt; file does not contain code that is native to your processor; it instead contains &lt;e4&gt;bytecodes&lt;/e4&gt; — the machine language of the Java Virtual Machine&lt;s5&gt;&lt;a6&gt;1&lt;/a6&gt;&lt;/s5&gt; (Java VM).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033143Z" creationid="pingfangx" creationdate="20180518T033143Z">
+        <seg>&lt;c3&gt;.class&lt;/c3&gt; 文件不包含处理器本机的代码;它包含 &lt;e4&gt;bytecodes&lt;/e4&gt;  -  Java 虚拟机 &lt;s5&gt;&lt;a6&gt;1&lt;/a6&gt;&lt;/s5&gt;(Java VM)的机器语言。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A &lt;e0&gt;platform&lt;/e0&gt; is the hardware or software environment in which a program runs.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033251Z" creationid="pingfangx" creationdate="20180518T033251Z">
+        <seg>一个 &lt;e0&gt;platform&lt;/e0&gt; 是程序运行的硬件或软件环境。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A Checklist</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034342Z" creationid="pingfangx" creationdate="20180518T034342Z">
+        <seg>检查清单</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A Closer Look at the "Hello World!" Application</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035233Z" creationid="pingfangx" creationdate="20180518T035233Z">
+        <seg>仔细看看 "Hello World！" 应用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A browser with JavaScript enabled is required for this page to operate properly.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030348Z" creationid="pingfangx" creationdate="20180518T030348Z">
+        <seg>这个页面需要一个启用 JavaScript 的浏览器才能正常运行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A shell window.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034744Z" creationid="pingfangx" creationdate="20180518T034744Z">
+        <seg>一个 shell 窗口。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A source file contains code, written in the Java programming language, that you and other programmers can understand.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034452Z" creationid="pingfangx" creationdate="20180518T034452Z">
+        <seg>源文件包含用 Java 编程语言编写的代码，您和其他程序员都可以理解。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A text editor</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034432Z" creationid="pingfangx" creationdate="20180518T034432Z">
+        <seg>一个文本编辑器</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>About the Java Technology</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032659Z" creationid="pingfangx" creationdate="20180518T032659Z">
+        <seg>关于 Java 技术</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>About the Java Technology (The Java™ Tutorials &gt; Getting Started &gt; The Java Technology Phenomenon)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032814Z" creationid="pingfangx" creationdate="20180518T032814Z">
+        <seg>About the Java Technology (The Java™ Tutorials &gt; Getting Started &gt; The Java Technology Phenomenon)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>All rights reserved.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031858Z" creationid="pingfangx" creationdate="20180518T031858Z">
+        <seg>All rights reserved.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>An automatic version check at startup ensures that users are always up to date with the latest version of your software.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033824Z" creationid="pingfangx" creationdate="20180518T033824Z">
+        <seg>启动时的自动版本检查可确保用户随时了解最新版本的软件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>An overview of the software development process.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033211Z" creationid="pingfangx" creationdate="20180518T033211Z">
+        <seg>软件开发过程的概述。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Answers to Questions and Exercises: Getting Started</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040223Z" creationid="pingfangx" creationdate="20180518T040223Z">
+        <seg>问题和练习的答案：入门</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Answers to Questions and Exercises: Getting Started (The Java™ Tutorials &gt; Getting Started &gt; )</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040211Z" creationid="pingfangx" creationdate="20180518T040211Z">
+        <seg>Answers to Questions and Exercises: Getting Started (The Java™ Tutorials &gt; Getting Started &gt; )</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Architecture neutral</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033001Z" creationid="pingfangx" creationdate="20180518T033001Z">
+        <seg>Architecture neutral（建筑中立）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As a new developer, the main tools you'll be using are the &lt;c1&gt;javac&lt;/c1&gt; compiler, the &lt;c2&gt;java&lt;/c2&gt; launcher, and the &lt;c3&gt;javadoc&lt;/c3&gt; documentation tool.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033625Z" creationid="pingfangx" creationdate="20180518T033625Z">
+        <seg>作为一名新开发人员，您将使用的主要工具是 &lt;c1&gt;javac&lt;/c1&gt; 编译器，&lt;c2&gt;java&lt;/c2&gt; 启动器和 &lt;c3&gt;javadoc&lt;/c3&gt; 文档工具。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As a platform-independent environment, the Java platform can be a bit slower than native code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033427Z" creationid="pingfangx" creationdate="20180518T033427Z">
+        <seg>作为一个独立于平台的环境，Java 平台可能比本地代码慢一点。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As shown above, the most basic form of a class definition is:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035558Z" creationid="pingfangx" creationdate="20180518T035553Z">
+        <seg>如上所示，类定义的最基本形式是：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>At the prompt, type &lt;c1&gt;dir&lt;/c1&gt; to see the new file that was generated as follows:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034906Z" creationid="pingfangx" creationdate="20180518T034904Z">
+        <seg>在提示符处键入 &lt;c1&gt;dir&lt;/c1&gt; 以查看生成的新文件，如下所示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>At the prompt, type the following command and press &lt;b0&gt; Enter&lt;/b0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034859Z" creationid="pingfangx" creationdate="20180518T034859Z">
+        <seg>在提示符处，输入以下命令并按 &lt;b0&gt; Enter&lt;/b0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Because the Java VM is available on many different operating systems, the same &lt;c0&gt;.class&lt;/c0&gt; files are capable of running on Microsoft Windows, the Solaris™ Operating System (Solaris OS), Linux, or Mac OS.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033220Z" creationid="pingfangx" creationdate="20180518T033220Z">
+        <seg>由于 Java VM 在许多不同的操作系统上都可用，因此相同的 &lt;c0&gt;.class&lt;/c0&gt; 文件能够在 Microsoft Windows，Solaris™操作系统(Solaris OS)，Linux 或 Mac OS 上运行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Both the compiler (&lt;c1&gt;javac&lt;/c1&gt;) and launcher (&lt;c2&gt;java&lt;/c2&gt;) are &lt;e3&gt;case-sensitive&lt;/e3&gt;, so you must capitalize consistently.&lt;br4/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034609Z" creationid="pingfangx" creationdate="20180518T034609Z">
+        <seg>编译器(&lt;c1&gt;javac&lt;/c1&gt;)和启动器(&lt;c2&gt;java&lt;/c2&gt;)都是 &lt;e3&gt;case-sensitive&lt;/e3&gt;，因此您必须一致地大写。&lt;br4/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Bring up a shell, or "command," window.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034727Z" creationid="pingfangx" creationdate="20180518T034727Z">
+        <seg>调出一个 shell 或 "命令" 窗口。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>C:\&gt;&lt;s0&gt;D:&lt;/s0&gt;
+
+D:\&gt;&lt;s1&gt;cd myapplication&lt;/s1&gt;
+
+D:\myapplication&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034817Z" creationid="pingfangx" creationdate="20180518T034817Z">
+        <seg>C:\&gt;&lt;s0&gt;D:&lt;/s0&gt;
+
+D:\&gt;&lt;s1&gt;cd myapplication&lt;/s1&gt;
+
+D:\myapplication&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>C:\&gt;&lt;s0&gt;cd myapplication&lt;/s0&gt;
+
+C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034823Z" creationid="pingfangx" creationdate="20180518T034823Z">
+        <seg>C:\&gt;&lt;s0&gt;cd myapplication&lt;/s0&gt;
+
+C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>C:\myapplication&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034944Z" creationid="pingfangx" creationdate="20180518T034944Z">
+        <seg>C:\myapplication&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>C:\myapplication&gt;&lt;s0&gt;java -cp .</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034942Z" creationid="pingfangx" creationdate="20180518T034942Z">
+        <seg>C:\myapplication&gt;&lt;s0&gt;java -cp .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>C:\myapplication&gt;&lt;s0&gt;javac HelloWorldApp.java&lt;/s0&gt;
+
+C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034907Z" creationid="pingfangx" creationdate="20180518T034907Z">
+        <seg>C:\myapplication&gt;&lt;s0&gt;javac HelloWorldApp.java&lt;/s0&gt;
+
+C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Chapter 2 provides an overview of classes in general, and Chapter 4 discusses classes in detail.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035616Z" creationid="pingfangx" creationdate="20180518T035616Z">
+        <seg>第 2 章总体介绍了类，第 4 章详细讨论了类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Check your answers.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040204Z" creationid="pingfangx" creationdate="20180518T040204Z">
+        <seg>检查一下你的答案。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Command-line arguments let users affect the operation of the application without recompiling it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035742Z" creationid="pingfangx" creationdate="20180518T035742Z">
+        <seg>命令行参数允许用户在不重新编译的情况下影响应用程序的操作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Comments are ignored by the compiler but are useful to other programmers.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035441Z" creationid="pingfangx" creationdate="20180518T035441Z">
+        <seg>注释被编译器忽略，但对其他程序员很有用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Common Problems (and Their Solutions)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040725Z" creationid="pingfangx" creationdate="20180518T040720Z">
+        <seg>常见问题(及其解决方案)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Compile the Source File into a .class File</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034721Z" creationid="pingfangx" creationdate="20180518T034721Z">
+        <seg>将源文件编译为.class 文件</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Compile the Source File into a &lt;c0&gt;.class&lt;/c0&gt; File</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034351Z" creationid="pingfangx" creationdate="20180518T034351Z">
+        <seg>将源文件编译为 &lt;c0&gt;.class&lt;/c0&gt; 文件</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Compile the source file into a .class file</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034456Z" creationid="pingfangx" creationdate="20180518T034456Z">
+        <seg>将源文件编译成.class 文件</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Congratulations!</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034947Z" creationid="pingfangx" creationdate="20180518T034947Z">
+        <seg>恭喜！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Copyright © 1995, 2017 Oracle and/or its affiliates.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031857Z" creationid="pingfangx" creationdate="20180518T031857Z">
+        <seg>Copyright © 1995, 2017 Oracle and/or its affiliates.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Core trail</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040634Z" creationid="pingfangx" creationdate="20180518T040634Z">
+        <seg>核心路径</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Create a Source File</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034347Z" creationid="pingfangx" creationdate="20180518T034347Z">
+        <seg>创建一个源文件</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Create a source file</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034448Z" creationid="pingfangx" creationdate="20180518T034448Z">
+        <seg>创建一个源文件</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creating Graphical User Interfaces</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031343Z" creationid="pingfangx" creationdate="20180518T031343Z">
+        <seg>创建图形用户界面</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creating Your First Application</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034345Z" creationid="pingfangx" creationdate="20180518T034345Z">
+        <seg>创建你的第一个应用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Directory of C:\myapplication
+
+2014-04-24  01:34 PM    &lt;DIR&gt;          .</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034852Z" creationid="pingfangx" creationdate="20180518T034852Z">
+        <seg>Directory of C:\myapplication
+
+2014-04-24  01:34 PM    &lt;DIR&gt;          .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Directory of C:\myapplication
+
+2014-04-24  02:07 PM    &lt;DIR&gt;          .</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034918Z" creationid="pingfangx" creationdate="20180518T034918Z">
+        <seg>Directory of C:\myapplication
+
+2014-04-24  02:07 PM    &lt;DIR&gt;          .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Distributed</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032938Z" creationid="pingfangx" creationdate="20180518T032938Z">
+        <seg>Distributed（分布式）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Documentation</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030352Z" creationid="pingfangx" creationdate="20180518T030352Z">
+        <seg>文档</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Duke thinking about what to study</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030454Z" creationid="pingfangx" creationdate="20180518T030454Z">
+        <seg>Duke 考虑要学什么</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Dynamic</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032951Z" creationid="pingfangx" creationdate="20180518T032951Z">
+        <seg>Dynamic（动态）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Each of the preceding buzzwords is explained in &lt;a0&gt;&lt;e1&gt;The Java Language Environment&lt;/e1&gt;&lt;/a0&gt; , a white paper written by James Gosling and Henry McGilton.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033102Z" creationid="pingfangx" creationdate="20180518T033102Z">
+        <seg>前面的每个流行语都在 James Gosling 和 Henry McGilton 写的白皮书 &lt;a0&gt;&lt;e1&gt;The Java Language Environment&lt;/e1&gt;&lt;/a0&gt; 中解释。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Each string in the array is called a &lt;e0&gt;command-line argument&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035736Z" creationid="pingfangx" creationdate="20180518T035736Z">
+        <seg>数组中的每个字符串都称为 &lt;e0&gt;command-line argument&lt;/e0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Every full implementation of the Java platform gives you the following features:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033611Z" creationid="pingfangx" creationdate="20180518T033611Z">
+        <seg>Java 平台的每个完整实现都会为您提供以下功能：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Examples and practices described in this page don't take advantage of improvements introduced in later releases.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030731Z" creationid="pingfangx" creationdate="20180518T030731Z">
+        <seg>本页中描述的示例和实践不利用在后续版本中引入的改进。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Exception in thread "main" java.lang.NoClassDefFoundError:
+HelloWorldApp.java.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040053Z" creationid="pingfangx" creationdate="20180518T040053Z">
+        <seg>Exception in thread "main" java.lang.NoClassDefFoundError:
+HelloWorldApp.java.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Exercises</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040137Z" creationid="pingfangx" creationdate="20180518T040137Z">
+        <seg>练习</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Figure showing MyProgram.java, API, Java Virtual Machine, and Hardware-Based Platform</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033415Z" creationid="pingfangx" creationdate="20180518T033415Z">
+        <seg>该图显示了 MyProgram.java，API，Java 虚拟机和基于硬件的平台</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Figure showing MyProgram.java, compiler, MyProgram.class, Java VM, and My Program running on a computer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033204Z" creationid="pingfangx" creationdate="20180518T033204Z">
+        <seg>该图显示了在计算机上运行的 MyProgram.java，编译器，MyProgram.class，Java VM 和 My Program。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Figure showing source code, compiler, and Java VM's for Win32, Solaris OS/Linux, and Mac OS</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033240Z" creationid="pingfangx" creationdate="20180518T033240Z">
+        <seg>该图显示了 Win32，Solaris OS / Linux 和 Mac OS 的源代码，编译器和 Java VM</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Finally, the line:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035757Z" creationid="pingfangx" creationdate="20180518T035757Z">
+        <seg>最后，该行：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>First, start your editor.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034527Z" creationid="pingfangx" creationdate="20180518T034527Z">
+        <seg>首先，启动你的编辑器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Fix the error so that the program successfully compiles and runs.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040158Z" creationid="pingfangx" creationdate="20180518T040158Z">
+        <seg>修复错误，以便程序成功编译并运行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, a sorting program might allow the user to specify that the data be sorted in descending order with this command-line argument:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035749Z" creationid="pingfangx" creationdate="20180518T035749Z">
+        <seg>例如，排序程序可能允许用户使用此命令行参数指定数据按降序排序：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, if your source directory is &lt;c0&gt;myapplication&lt;/c0&gt; on the &lt;c1&gt;C&lt;/c1&gt; drive, type the following command at the prompt and press &lt;b2&gt; Enter&lt;/b2&gt;:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034756Z" creationid="pingfangx" creationdate="20180518T034756Z">
+        <seg>例如，如果您的源目录是 &lt;c1&gt;C&lt;/c1&gt; 驱动器上的 &lt;c0&gt;myapplication&lt;/c0&gt;，请在提示符下键入以下命令并按 &lt;b2&gt; Enter&lt;/b2&gt;：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, to change to the &lt;c0&gt;myapplication&lt;/c0&gt; directory on the &lt;c1&gt;D&lt;/c1&gt; drive, you must enter &lt;c2&gt;D:&lt;/c2&gt;, as follows:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034816Z" creationid="pingfangx" creationdate="20180518T034816Z">
+        <seg>例如，要切换到 &lt;c1&gt;D&lt;/c1&gt; 驱动器上的 &lt;c0&gt;myapplication&lt;/c0&gt; 目录，必须输入 &lt;c2&gt;D:&lt;/c2&gt;，如下所示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035730Z" creationid="pingfangx" creationdate="20180518T035730Z">
+        <seg>例如：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For more information on &lt;c4&gt;javadoc&lt;/c4&gt;, see the &lt;a5&gt;Javadoc™ tool documentation&lt;/a5&gt; .</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035519Z" creationid="pingfangx" creationdate="20180518T035519Z">
+        <seg>有关 &lt;c4&gt;javadoc&lt;/c4&gt; 的更多信息，请参阅 &lt;a5&gt;Javadoc™ tool documentation&lt;/a5&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For now it is enough to know that every application begins with a class definition.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035620Z" creationid="pingfangx" creationdate="20180518T035620Z">
+        <seg>现在知道每个应用程序都以类定义开始就足够了。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>From the &lt;b0&gt; Save as type&lt;/b0&gt; combo box, choose &lt;b1&gt; Text Documents (*.txt)&lt;/b1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034700Z" creationid="pingfangx" creationdate="20180518T034700Z">
+        <seg>从 &lt;b0&gt; Save as type&lt;/b0&gt; 组合框中，选择 &lt;b1&gt; Text Documents (*.txt)&lt;/b1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Getting Started: End of Trail</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040538Z" creationid="pingfangx" creationdate="20180518T040538Z">
+        <seg>Getting Started: End of Trail</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Getting Started: End of Trail (The Java™ Tutorials)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040523Z" creationid="pingfangx" creationdate="20180518T040523Z">
+        <seg>Getting Started: End of Trail (The Java™ Tutorials)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Groups of related lessons are organized into "trails".</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030929Z" creationid="pingfangx" creationdate="20180518T030848Z">
+        <seg>相关课程组被组织成 "trails"（路径）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>HelloWorldApp</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034939Z" creationid="pingfangx" creationdate="20180518T034939Z">
+        <seg>HelloWorldApp</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>HelloWorldApp2.java</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040145Z" creationid="pingfangx" creationdate="20180518T040145Z">
+        <seg>HelloWorldApp2.java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>HelloWorldApp2.java:7: unclosed string literal</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040338Z" creationid="pingfangx" creationdate="20180518T040338Z">
+        <seg>HelloWorldApp2.java:7: unclosed string literal</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>HelloWorldApp&lt;/s0&gt;
+Hello World!</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034943Z" creationid="pingfangx" creationdate="20180518T034943Z">
+        <seg>HelloWorldApp&lt;/s0&gt;
+Hello World!</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Here again is its code:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035246Z" creationid="pingfangx" creationdate="20180518T035246Z">
+        <seg>这里又是它的代码：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Here is the correct line of code:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040351Z" creationid="pingfangx" creationdate="20180518T040351Z">
+        <seg>这是正确的代码行：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Hide TOC</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032652Z" creationid="pingfangx" creationdate="20180518T032652Z">
+        <seg>隐藏目录</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>High performance</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033017Z" creationid="pingfangx" creationdate="20180518T033017Z">
+        <seg>High performance（高性能）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Home</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040530Z" creationid="pingfangx" creationdate="20180518T040530Z">
+        <seg>主页</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Home Page</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032052Z" creationid="pingfangx" creationdate="20180518T032052Z">
+        <seg>主页</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>How Will Java Technology Change My Life?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032705Z" creationid="pingfangx" creationdate="20180518T032705Z">
+        <seg>Java 技术将如何改变我的生活？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>However, advances in compiler and virtual machine technologies are bringing performance close to that of native code without threatening portability.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033433Z" creationid="pingfangx" creationdate="20180518T033433Z">
+        <seg>然而，编译器和虚拟机技术的进步使性能接近本地代码的性能，而不会威胁到可移植性。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>IE=edge</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030233Z" creationid="pingfangx" creationdate="20180518T030233Z">
+        <seg>IE=edge</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If an update is available, the Java Web Start software will automatically update their installation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033825Z" creationid="pingfangx" creationdate="20180518T033825Z">
+        <seg>如果有更新可用，Java Web Start 软件将自动更新其安装。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you encounter problems with the instructions in this step, consult the &lt;a0&gt;Common Problems (and Their Solutions)&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034931Z" creationid="pingfangx" creationdate="20180518T034931Z">
+        <seg>如果您在此步骤中遇到问题，请参阅 &lt;a0&gt;Common Problems (and Their Solutions)&lt;/a0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you encounter problems with the instructions on this page, consult the &lt;a0&gt;Common Problems (and Their Solutions)&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034310Z" creationid="pingfangx" creationdate="20180518T034310Z">
+        <seg>如果您在本页面上遇到问题，请参阅 &lt;a0&gt;Common Problems (and Their Solutions)&lt;/a0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you enter &lt;c0&gt;dir&lt;/c0&gt; at the prompt, you should see your source file, as follows:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034822Z" creationid="pingfangx" creationdate="20180518T034818Z">
+        <seg>如果在提示中输入 &lt;c0&gt;dir&lt;/c0&gt;，则应该看到您的源文件，如下所示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you have comments or suggestions about this trail, use our &lt;a0&gt;feedback page&lt;/a0&gt; to tell us about it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040553Z" creationid="pingfangx" creationdate="20180518T040553Z">
+        <seg>如果您对这条线索有任何意见或建议，请使用我们的 &lt;a0&gt;feedback page&lt;/a0&gt; 向我们介绍。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you run into problems, be sure to consult the common problems section; it provides solutions for many issues encountered by new users.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034115Z" creationid="pingfangx" creationdate="20180518T034115Z">
+        <seg>如果遇到问题，请务必查阅常见问题部分;它为新用户遇到的许多问题提供了解决方案。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In Book Form</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030631Z" creationid="pingfangx" creationdate="20180518T030631Z">
+        <seg>书形式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In a new document, type in the following code:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034533Z" creationid="pingfangx" creationdate="20180518T034533Z">
+        <seg>在新文档中，输入以下代码：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the &lt;b0&gt; Encoding&lt;/b0&gt; combo box, leave the encoding as ANSI.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034703Z" creationid="pingfangx" creationdate="20180518T034703Z">
+        <seg>在 &lt;b0&gt; Encoding&lt;/b0&gt; 组合框中，将编码保留为 ANSI。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the &lt;b0&gt; File name&lt;/b0&gt; text field, type &lt;c1&gt;"HelloWorldApp.java"&lt;/c1&gt;, including the quotation marks.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034653Z" creationid="pingfangx" creationdate="20180518T034653Z">
+        <seg>在 &lt;b0&gt; File name&lt;/b0&gt; 文本字段中，键入 &lt;c1&gt;"HelloWorldApp.java"&lt;/c1&gt;，包括引号。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the Java programming language, all source code is first written in plain text files ending with the &lt;c0&gt;.java&lt;/c0&gt; extension.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033114Z" creationid="pingfangx" creationdate="20180518T033114Z">
+        <seg>在 Java 编程语言中，所有源代码首先以纯文本文件写成，后缀为 &lt;c0&gt;.java&lt;/c0&gt; 扩展名。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the Java programming language, every application must contain a &lt;c0&gt;main&lt;/c0&gt; method whose signature is:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035634Z" creationid="pingfangx" creationdate="20180518T035634Z">
+        <seg>在 Java 编程语言中，每个应用程序都必须包含一个 &lt;c0&gt;main&lt;/c0&gt; 方法，其签名为：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the same directory, enter the following command at the prompt:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034934Z" creationid="pingfangx" creationdate="20180518T034934Z">
+        <seg>在相同的目录中，在提示符处输入以下命令：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this example, the directory is &lt;c1&gt;myapplication&lt;/c1&gt; on the &lt;c2&gt;C&lt;/c2&gt; drive.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034647Z" creationid="pingfangx" creationdate="20180518T034647Z">
+        <seg>在此示例中，目录是 &lt;c2&gt;C&lt;/c2&gt; 驱动器上的 &lt;c1&gt;myapplication&lt;/c1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this example, we'll use Notepad, a simple editor included with the Windows platforms.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034435Z" creationid="pingfangx" creationdate="20180518T034435Z">
+        <seg>在这个例子中，我们将使用记事本，这是 Windows 平台附带的一个简单的编辑器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Instructions for other platforms are in &lt;a0&gt;"Hello World!" for Solaris OS and Linux&lt;/a0&gt; and &lt;a1&gt;"Hello World!" for the NetBeans IDE&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034305Z" creationid="pingfangx" creationdate="20180518T034305Z">
+        <seg>其他平台的说明位于 &lt;a0&gt;"Hello World!" for Solaris OS and Linux&lt;/a0&gt; 和 &lt;a1&gt;"Hello World!" for the NetBeans IDE&lt;/a1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It covers source code comments, the &lt;c3&gt;HelloWorldApp&lt;/c3&gt; class definition block, and the &lt;c4&gt;main&lt;/c4&gt; method.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032505Z" creationid="pingfangx" creationdate="20180518T032505Z">
+        <seg>它涵盖了源代码注释，&lt;c3&gt;HelloWorldApp&lt;/c3&gt; 类定义块和 &lt;c4&gt;main&lt;/c4&gt; 方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It discusses both the Java programming language and platform, providing a broad overview of what this technology can do and how it will make your life easier.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032220Z" creationid="pingfangx" creationdate="20180518T032220Z">
+        <seg>它讨论了 Java 编程语言和平台，全面概述了这项技术可以做什么以及它如何让你的生活更轻松。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is grouped into libraries of related classes and interfaces; these libraries are known as &lt;e0&gt;packages&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033405Z" creationid="pingfangx" creationdate="20180518T033405Z">
+        <seg>它被分组到相关类和接口的库中;这些库被称为 &lt;e0&gt;packages&lt;/e0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It offers a wide array of useful classes ready for use in your own applications.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033637Z" creationid="pingfangx" creationdate="20180518T033637Z">
+        <seg>它提供了大量有用的类，可以在您自己的应用程序中使用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It provides separate instructions for the NetBeans™ integrated development environment (NetBeans IDE), Microsoft Windows, Solaris™ Operating System (Solaris OS), Linux, and Mac users.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032428Z" creationid="pingfangx" creationdate="20180518T032428Z">
+        <seg>它为 NetBeans™集成开发环境(NetBeans IDE)，Microsoft Windows，Solaris™操作系统(Solaris OS)，Linux 和 Mac 用户提供了单独的说明。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It spans everything from basic objects, to networking and security, to XML generation and database access, and more.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033644Z" creationid="pingfangx" creationdate="20180518T033644Z">
+        <seg>它涵盖了从基本对象到网络和安全，到 XML 生成和数据库访问等等的所有内容。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It's time to write your first application!</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034259Z" creationid="pingfangx" creationdate="20180518T034259Z">
+        <seg>现在是编写第一个应用程序的时候了！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Its object orientation, its JavaBeans™ component architecture, and its wide-ranging, easily extendible API let you reuse existing, tested code and introduce fewer bugs.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033808Z" creationid="pingfangx" creationdate="20180518T033808Z">
+        <seg>它的面向对象，JavaBeans™组件体系结构以及范围广泛且易于扩展的 API 使您可以重复使用现有的经过测试的代码并引入更少的错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>JDK 8 API Documentation</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030650Z" creationid="pingfangx" creationdate="20180518T030650Z">
+        <seg>JDK 8 API 文档</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Java Certification and Training</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030657Z" creationid="pingfangx" creationdate="20180518T030657Z">
+        <seg>Java 认证和培训</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Java SE 8 Developer Guides</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030647Z" creationid="pingfangx" creationdate="20180518T030647Z">
+        <seg>Java SE 8 开发人员指南</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Java technology is both a programming language and a platform.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032823Z" creationid="pingfangx" creationdate="20180518T032823Z">
+        <seg>Java 技术既是一种编程语言，也是一个平台。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Java trail</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040611Z" creationid="pingfangx" creationdate="20180518T040611Z">
+        <seg>Java 路径</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Last Updated &lt;a0&gt;7/19/2016&lt;/a0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030538Z" creationid="pingfangx" creationdate="20180518T030538Z">
+        <seg>最近更新 &lt;a0&gt;7/19/2016&lt;/a0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lesson: A Closer Look at the "Hello World!" Application</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035237Z" creationid="pingfangx" creationdate="20180518T035237Z">
+        <seg>课程：仔细观察 "Hello World！" 应用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lesson: A Closer Look at the "Hello World!" Application (The Java™ Tutorials &gt; Getting Started)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035229Z" creationid="pingfangx" creationdate="20180518T035229Z">
+        <seg>Lesson: A Closer Look at the "Hello World!" Application (The Java™ Tutorials &gt; Getting Started)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lesson: The "Hello World!" Application</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034035Z" creationid="pingfangx" creationdate="20180518T034035Z">
+        <seg>课程："Hello World！" 应用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lesson: The "Hello World!" Application (The Java™ Tutorials &gt; Getting Started)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033950Z" creationid="pingfangx" creationdate="20180518T033950Z">
+        <seg>Lesson: The "Hello World!" Application (The Java™ Tutorials &gt; Getting Started)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lesson: The Java Technology Phenomenon</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032716Z" creationid="pingfangx" creationdate="20180518T032716Z">
+        <seg>课程：Java 技术现象</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lesson: The Java Technology Phenomenon (The Java™ Tutorials &gt; Getting Started)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032633Z" creationid="pingfangx" creationdate="20180518T032633Z">
+        <seg>Lesson: The Java Technology Phenomenon (The Java™ Tutorials &gt; Getting Started)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Most platforms can be described as a combination of the operating system and underlying hardware.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033300Z" creationid="pingfangx" creationdate="20180518T033300Z">
+        <seg>大多数平台可以被描述为操作系统和底层硬件的组合。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Multithreaded</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032946Z" creationid="pingfangx" creationdate="20180518T032946Z">
+        <seg>Multithreaded（多线程）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Not sure where to start?&lt;br0/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030503Z" creationid="pingfangx" creationdate="20180518T030503Z">
+        <seg>不确定从哪里开始？&lt;br0/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that this lesson is for advanced users.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031600Z" creationid="pingfangx" creationdate="20180518T031600Z">
+        <seg>请注意，本课为高级用户提供。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now click &lt;b0&gt; Save&lt;/b0&gt;, and exit Notepad.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034718Z" creationid="pingfangx" creationdate="20180518T034718Z">
+        <seg>现在点击 &lt;b0&gt; Save&lt;/b0&gt;，然后退出记事本。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now that you have a &lt;c0&gt;.class&lt;/c0&gt; file, you can run your program.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034926Z" creationid="pingfangx" creationdate="20180518T034926Z">
+        <seg>既然你有一个 &lt;c0&gt;.class&lt;/c0&gt; 文件，你可以运行你的程序。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now that you've seen the "Hello World!" application (and perhaps even compiled and run it), you might be wondering how it works.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035242Z" creationid="pingfangx" creationdate="20180518T035242Z">
+        <seg>现在你已经看到了 "Hello World！" 应用程序(甚至可能编译并运行它)，你可能想知道它是如何工作的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now the prompt should change to &lt;c0&gt;C:\myapplication&gt;&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034802Z" creationid="pingfangx" creationdate="20180518T034802Z">
+        <seg>现在提示符应该改为 &lt;c0&gt;C:\myapplication&gt;&lt;/c0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now you are ready to compile.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035033Z" creationid="pingfangx" creationdate="20180518T034855Z">
+        <seg>现在你已经准备好编译。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Object oriented</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032927Z" creationid="pingfangx" creationdate="20180518T032927Z">
+        <seg>Object oriented（面向对象）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Or, you can use the following (longer) instructions.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034524Z" creationid="pingfangx" creationdate="20180518T034524Z">
+        <seg>或者，您可以使用以下(较长)的说明。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Oracle Training and Professional Certification</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030654Z" creationid="pingfangx" creationdate="20180518T030654Z">
+        <seg>Oracle 培训和专业认证</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Oracle University</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030700Z" creationid="pingfangx" creationdate="20180518T030700Z">
+        <seg>Oracle 大学</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Other Resources</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030642Z" creationid="pingfangx" creationdate="20180518T030642Z">
+        <seg>其他资源</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Portable</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033012Z" creationid="pingfangx" creationdate="20180518T033012Z">
+        <seg>Portable（便携式）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Portions of this library (also known as the "Application Programming Interface", or "API") will be discussed throughout the remainder of the tutorial.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035815Z" creationid="pingfangx" creationdate="20180518T035815Z">
+        <seg>这个库的一部分(也称为 "应用程序编程接口" 或 "API")将在本教程的剩余部分中讨论。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>QandE/questions.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040531Z" creationid="pingfangx" creationdate="20180518T040531Z">
+        <seg>QandE/questions.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Questions</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035952Z" creationid="pingfangx" creationdate="20180518T035952Z">
+        <seg>问题</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Questions and Exercises: Getting Started</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035951Z" creationid="pingfangx" creationdate="20180518T035951Z">
+        <seg>问题和练习：入门</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Questions and Exercises: Getting Started (The Java™ Tutorials &gt; Getting Started)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035947Z" creationid="pingfangx" creationdate="20180518T035947Z">
+        <seg>Questions and Exercises: Getting Started (The Java™ Tutorials &gt; Getting Started)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Robust</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033046Z" creationid="pingfangx" creationdate="20180518T033042Z">
+        <seg>Robust（健壮）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Run the Program</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034353Z" creationid="pingfangx" creationdate="20180518T034353Z">
+        <seg>运行程序</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Run the program</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034504Z" creationid="pingfangx" creationdate="20180518T034504Z">
+        <seg>运行该程序</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Save the code in a file with the name &lt;c0&gt;HelloWorldApp.java&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034633Z" creationid="pingfangx" creationdate="20180518T034633Z">
+        <seg>将代码保存在名为 &lt;c0&gt;HelloWorldApp.java&lt;/c0&gt; 的文件中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Secure</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033052Z" creationid="pingfangx" creationdate="20180518T033052Z">
+        <seg>Secure（安全）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See &lt;a1&gt;Learning Paths&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030508Z" creationid="pingfangx" creationdate="20180518T030508Z">
+        <seg>请参阅 &lt;a1&gt;Learning Paths&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Simple</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032915Z" creationid="pingfangx" creationdate="20180518T032915Z">
+        <seg>Simple（简单）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Software</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030702Z" creationid="pingfangx" creationdate="20180518T030702Z">
+        <seg>软件</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Some virtual machines, such as the &lt;a1&gt;Java SE HotSpot at a Glance&lt;/a1&gt;, perform additional steps at runtime to give your application a performance boost.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033226Z" creationid="pingfangx" creationdate="20180518T033226Z">
+        <seg>一些虚拟机（例如 &lt;a1&gt;Java SE HotSpot at a Glance&lt;/a1&gt;）在运行时执行其他步骤，以提高应用程序的性能。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Source Code Comments</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035408Z" creationid="pingfangx" creationdate="20180518T035408Z">
+        <seg>源码注释</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Specialized Trails and Lessons</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031446Z" creationid="pingfangx" creationdate="20180518T031446Z">
+        <seg>专业的路径与课程</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Still, it is likely to make your programs better and requires less effort than other languages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033754Z" creationid="pingfangx" creationdate="20180518T033754Z">
+        <seg>尽管如此，它可能会使您的程序更好，并且比其他语言花费更少的工作量。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>System.out.println("Hello World!");</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035758Z" creationid="pingfangx" creationdate="20180518T035758Z">
+        <seg>System.out.println("Hello World!");</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>System.out.println("Hello World!"); // Display the string.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035248Z" creationid="pingfangx" creationdate="20180518T035248Z">
+        <seg>System.out.println("Hello World!"); // Display the string.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>System.out.println("Hello World!"); //Display the string.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035628Z" creationid="pingfangx" creationdate="20180518T035628Z">
+        <seg>System.out.println("Hello World!"); //Display the string.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>System.out.println("Hello World!"); &lt;b1&gt;// Display the string.&lt;/b1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035436Z" creationid="pingfangx" creationdate="20180518T035436Z">
+        <seg>System.out.println("Hello World!"); &lt;b1&gt;// Display the string.&lt;/b1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>System.out.println("Hello World!); //Display the string.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040339Z" creationid="pingfangx" creationdate="20180518T040339Z">
+        <seg>System.out.println("Hello World!); //Display the string.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>System.out.println("Hola Mundo!"); //Display the string.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040328Z" creationid="pingfangx" creationdate="20180518T040328Z">
+        <seg>System.out.println("Hola Mundo!"); //Display the string.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>TEXT The Save As dialog, as described in the text.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034709Z" creationid="pingfangx" creationdate="20180518T034709Z">
+        <seg>TEXT 另存为对话框，如文中所述。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Talk about Java technology seems to be everywhere, but what exactly is it?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032721Z" creationid="pingfangx" creationdate="20180518T032721Z">
+        <seg>谈论 Java 技术似乎无处不在，但究竟是什么呢？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The "Hello World!" Application</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033955Z" creationid="pingfangx" creationdate="20180518T033955Z">
+        <seg>"Hello World！" 应用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The "Hello World!" application consists of three primary components: &lt;a0&gt;source code comments&lt;/a0&gt;, &lt;a1&gt;the &lt;c2&gt;HelloWorldApp&lt;/c2&gt; class definition&lt;/a1&gt;, and &lt;a3&gt;the &lt;c4&gt;main&lt;/c4&gt; method&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035351Z" creationid="pingfangx" creationdate="20180518T035314Z">
+        <seg>"Hello World！" 应用程序由三个主要部分组成：&lt;a0&gt;源码注释&lt;/a0&gt;，&lt;a1&gt;&lt;c2&gt;HelloWorldApp&lt;/c2&gt; 类定义&lt;/a1&gt; 和 &lt;a3&gt;&lt;c4&gt;main&lt;/c4&gt; 方法&lt;/a3&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The "Hello World!" application ignores its command-line arguments, but you should be aware of the fact that such arguments do exist.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035754Z" creationid="pingfangx" creationdate="20180518T035754Z">
+        <seg>"Hello World！" 应用程序会忽略它的命令行参数，但您应该意识到这样的参数确实存在的事实。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;a0&gt; Java Development Kit&lt;/a0&gt; (JDK)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030710Z" creationid="pingfangx" creationdate="20180518T030710Z">
+        <seg>The &lt;a0&gt; Java Development Kit&lt;/a0&gt; (JDK)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;a1&gt;Java Language&lt;/a1&gt; trail contains a &lt;a2&gt;Generics&lt;/a2&gt; lesson that is suitable for beginners.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031619Z" creationid="pingfangx" creationdate="20180518T031619Z">
+        <seg>&lt;a1&gt;Java Language&lt;/a1&gt; 路径包含适合初学者的 &lt;a2&gt;Generics&lt;/a2&gt; 课程。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;HelloWorldApp&lt;/c0&gt; Class Definition</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035525Z" creationid="pingfangx" creationdate="20180518T035525Z">
+        <seg>&lt;c0&gt;HelloWorldApp&lt;/c0&gt; 类定义</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;main&lt;/c0&gt; Method</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035621Z" creationid="pingfangx" creationdate="20180518T035621Z">
+        <seg>&lt;c0&gt;main&lt;/c0&gt; 方法</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;main&lt;/c0&gt; method accepts a single argument: an array of elements of type &lt;c1&gt;String&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035721Z" creationid="pingfangx" creationdate="20180518T035721Z">
+        <seg>&lt;c0&gt;main&lt;/c0&gt; 方法接受一个参数：&lt;c1&gt;String&lt;/c1&gt; 类型元素的数组。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;main&lt;/c0&gt; method is similar to the &lt;c1&gt;main&lt;/c1&gt; function in C and C++; it's the entry point for your application and will subsequently invoke all the other methods required by your program.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035700Z" creationid="pingfangx" creationdate="20180518T035700Z">
+        <seg>&lt;c0&gt;main&lt;/c0&gt; 方法类似于 C 和 C ++中的 &lt;c1&gt;main&lt;/c1&gt; 函数;它是您的应用程序的入口点，随后将调用您的程序所需的所有其他方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c3&gt;javadoc&lt;/c3&gt; tool uses doc comments when preparing automatically generated documentation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035516Z" creationid="pingfangx" creationdate="20180518T035516Z">
+        <seg>准备自动生成的文档时，&lt;c3&gt;javadoc&lt;/c3&gt; 工具使用文档注释。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c7&gt;java&lt;/c7&gt; launcher tool then runs your application with an instance of the Java Virtual Machine.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033152Z" creationid="pingfangx" creationdate="20180518T033152Z">
+        <seg>然后，&lt;c7&gt;java&lt;/c7&gt; 启动程序工具使用 Java 虚拟机的一个实例运行您的应用程序。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;e0&gt;Java Application Programming Interface&lt;/e0&gt; (API)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033314Z" creationid="pingfangx" creationdate="20180518T033314Z">
+        <seg>&lt;e0&gt;Java Application Programming Interface&lt;/e0&gt;(API)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;e0&gt;Java Virtual Machine&lt;/e0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033309Z" creationid="pingfangx" creationdate="20180518T033309Z">
+        <seg>&lt;e0&gt;Java Virtual Machine&lt;/e0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The API and Java Virtual Machine insulate the program from the underlying hardware.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033422Z" creationid="pingfangx" creationdate="20180518T033422Z">
+        <seg>API 和 Java 虚拟机将程序与底层硬件隔离开来。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The API is a large collection of ready-made software components that provide many useful capabilities.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033356Z" creationid="pingfangx" creationdate="20180518T033356Z">
+        <seg>API 是大量现成的软件组件，提供许多有用的功能。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java Platform</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033245Z" creationid="pingfangx" creationdate="20180518T033245Z">
+        <seg>Java 平台</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java Programming Language</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032825Z" creationid="pingfangx" creationdate="20180518T032825Z">
+        <seg>Java 编程语言</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java SE Development Kit 8 (JDK 8)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034405Z" creationid="pingfangx" creationdate="20180518T034405Z">
+        <seg>The Java SE Development Kit 8 (JDK 8)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java Technology Phenomenon</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032656Z" creationid="pingfangx" creationdate="20180518T032656Z">
+        <seg>Java 技术现象</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java Tutorials are practical guides for programmers who want to use the Java programming language to create applications.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030827Z" creationid="pingfangx" creationdate="20180518T030827Z">
+        <seg>Java 教程是希望使用 Java 编程语言创建应用程序的程序员的实用指南。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java Tutorials have been written for JDK 8.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030715Z" creationid="pingfangx" creationdate="20180518T030715Z">
+        <seg>Java 教程是为 JDK 8 编写的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java application &lt;i0&gt;launcher tool&lt;/i0&gt; (&lt;c1&gt;java&lt;/c1&gt;) uses the Java virtual machine to run your application.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034509Z" creationid="pingfangx" creationdate="20180518T034509Z">
+        <seg>Java 应用程序 &lt;i0&gt;launcher tool&lt;/i0&gt;(&lt;c1&gt;java&lt;/c1&gt;)使用 Java 虚拟机来运行您的应用程序。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java platform differs from most other platforms in that it's a software-only platform that runs on top of other hardware-based platforms.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033305Z" creationid="pingfangx" creationdate="20180518T033305Z">
+        <seg>Java 平台不同于大多数其他平台，因为它是一个运行在其他基于硬件的平台之上的纯软件平台。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java platform has two components:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033307Z" creationid="pingfangx" creationdate="20180518T033307Z">
+        <seg>Java 平台有两个组件：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java programming language &lt;i0&gt;compiler&lt;/i0&gt; (&lt;c1&gt;javac&lt;/c1&gt;) takes your source file and translates its text into instructions that the Java virtual machine can understand.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034500Z" creationid="pingfangx" creationdate="20180518T034500Z">
+        <seg>Java 编程语言 &lt;i0&gt;compiler&lt;/i0&gt;(&lt;c1&gt;javac&lt;/c1&gt;)会将您的源文件转换为 Java 虚拟机可以理解的指令。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java programming language is a high-level language that can be characterized by all of the following buzzwords:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032831Z" creationid="pingfangx" creationdate="20180518T032831Z">
+        <seg>Java 编程语言是一种高级语言，可以用以下所有流行语来表征：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java programming language supports three kinds of comments:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035448Z" creationid="pingfangx" creationdate="20180518T035448Z">
+        <seg>Java 编程语言支持三种注释：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java™ Tutorials</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030223Z" creationid="pingfangx" creationdate="20180518T030223Z">
+        <seg>Java™ 教程</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The NetBeans IDE runs on all of the platforms listed below.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034104Z" creationid="pingfangx" creationdate="20180518T034104Z">
+        <seg>NetBeans IDE 可在以下列出的所有平台上运行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The NetBeans IDE runs on the Java platform, which means that you can use it with any operating system for which there is a JDK 7 available.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034123Z" creationid="pingfangx" creationdate="20180518T034123Z">
+        <seg>NetBeans IDE 在 Java 平台上运行，这意味着您可以将其用于任何可用 JDK 7 的操作系统。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Save As dialog just before you click &lt;b0&gt; Save&lt;/b0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034716Z" creationid="pingfangx" creationdate="20180518T034716Z">
+        <seg>单击 &lt;b0&gt; Save&lt;/b0&gt; 之前的另存为对话框。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The compiler has generated a bytecode file, &lt;c0&gt;HelloWorldApp.class&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034903Z" creationid="pingfangx" creationdate="20180518T034903Z">
+        <seg>编译器生成了一个字节码文件 &lt;c0&gt;HelloWorldApp.class&lt;/c0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The compiler ignores everything from &lt;c0&gt;/*&lt;/c0&gt; to &lt;c1&gt;*/&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035453Z" creationid="pingfangx" creationdate="20180518T035453Z">
+        <seg>编译器忽略从 &lt;c0&gt;/*&lt;/c0&gt; 到 &lt;c1&gt;*/&lt;/c1&gt; 的所有内容。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The compiler ignores everything from &lt;c0&gt;//&lt;/c0&gt; to the end of the line.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035523Z" creationid="pingfangx" creationdate="20180518T035523Z">
+        <seg>编译器会忽略 &lt;c0&gt;//&lt;/c0&gt; 到行尾的所有内容。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The compiler ignores this kind of comment, just like it ignores comments that use &lt;c1&gt;/*&lt;/c1&gt; and &lt;c2&gt;*/&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035511Z" creationid="pingfangx" creationdate="20180518T035511Z">
+        <seg>编译器会忽略这种注释，就像忽略使用 &lt;c1&gt;/*&lt;/c1&gt; 和 &lt;c2&gt;*/&lt;/c2&gt; 的注释一样。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The core API is very large; to get an overview of what it contains, consult the &lt;a1&gt;Java Platform Standard Edition 8 Documentation&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033650Z" creationid="pingfangx" creationdate="20180518T033650Z">
+        <seg>核心 API 非常大;了解它包含的内容，请参阅 &lt;a1&gt;Java Platform Standard Edition 8 Documentation&lt;/a1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The first section provides information on getting started with the NetBeans IDE, an integrated development environment that greatly simplifies the software development process.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034101Z" creationid="pingfangx" creationdate="20180518T034101Z">
+        <seg>第一部分提供了有关 NetBeans IDE 入门的信息，NetBeans IDE 是一个大大简化了软件开发过程的集成开发环境。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following bold text begins the class definition block for the "Hello World!" application:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035548Z" creationid="pingfangx" creationdate="20180518T035548Z">
+        <seg>以下粗体文本开始 "Hello World！" 应用的类定义块：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following bold text begins the definition of the &lt;c0&gt;main&lt;/c0&gt; method:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035625Z" creationid="pingfangx" creationdate="20180518T035625Z">
+        <seg>以下粗体文本开始定义 &lt;c0&gt;main&lt;/c0&gt; 方法：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following bold text defines the &lt;i0&gt;comments&lt;/i0&gt; of the "Hello World!" application:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035431Z" creationid="pingfangx" creationdate="20180518T035431Z">
+        <seg>以下粗体文本定义了 "Hello World！" 应用的 &lt;i0&gt;注释&lt;/i0&gt;：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following explanation will provide you with a basic understanding of the code, but the deeper implications will only become apparent after you've finished reading the rest of the tutorial.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035358Z" creationid="pingfangx" creationdate="20180518T035358Z">
+        <seg>以下说明将为您提供对代码的基本理解，但深层含义只有在完成本教程的其余部分的阅读后才会显现出来。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following instructions are for users of Windows Vista, Windows 7, and Windows 8.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034301Z" creationid="pingfangx" creationdate="20180518T034301Z">
+        <seg>以下说明适用于 Windows Vista，Windows 7 和 Windows 8 的用户。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following sections explain how Java technology is both a programming language and a platform, and provide an overview of what this technology can do for you.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032727Z" creationid="pingfangx" creationdate="20180518T032727Z">
+        <seg>以下各节介绍了 Java 技术既是一种编程语言又是一种平台，并概述了该技术可为您做些什么。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The general-purpose, high-level Java programming language is a powerful software platform.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033607Z" creationid="pingfangx" creationdate="20180518T033607Z">
+        <seg>通用的高级 Java 编程语言是一个功能强大的软件平台。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The instructions contained within this file are known as &lt;i2&gt;bytecodes&lt;/i2&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034503Z" creationid="pingfangx" creationdate="20180518T034503Z">
+        <seg>该文件中包含的指令称为 &lt;i2&gt;bytecodes&lt;/i2&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The keyword &lt;c0&gt;class&lt;/c0&gt; begins the class definition for a class named &lt;c1&gt;name&lt;/c1&gt;, and the code for each class appears between the opening and closing curly braces marked in bold above.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035608Z" creationid="pingfangx" creationdate="20180518T035608Z">
+        <seg>关键字 &lt;c0&gt;class&lt;/c0&gt; 开始名为 &lt;c1&gt;name&lt;/c1&gt; 的类的类定义，并且每个类的代码出现在上面用粗体标记的开头和结尾大括号之间。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The modifiers &lt;c0&gt;public&lt;/c0&gt; and &lt;c1&gt;static&lt;/c1&gt; can be written in either order (&lt;c2&gt;public static&lt;/c2&gt; or &lt;c3&gt;static public&lt;/c3&gt;), but the convention is to use &lt;c4&gt;public static&lt;/c4&gt; as shown above.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035645Z" creationid="pingfangx" creationdate="20180518T035645Z">
+        <seg>可以按任意顺序(&lt;c2&gt;public static&lt;/c2&gt; 或 &lt;c3&gt;static public&lt;/c3&gt;)编写修饰符 &lt;c0&gt;public&lt;/c0&gt; 和 &lt;c1&gt;static&lt;/c1&gt;，但约定就是使用 &lt;c4&gt;public static&lt;/c4&gt;，如上所示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The next section, &lt;a1&gt;What Can Java Technology Do?&lt;/a1&gt; highlights some of the functionality provided by the API.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033411Z" creationid="pingfangx" creationdate="20180518T033411Z">
+        <seg>下一节 &lt;a1&gt;What Can Java Technology Do?&lt;/a1&gt; 强调了 API 提供的一些功能。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The program has an error.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040155Z" creationid="pingfangx" creationdate="20180518T040155Z">
+        <seg>该程序有错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The prompt shows your &lt;i0&gt;current directory&lt;/i0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034747Z" creationid="pingfangx" creationdate="20180518T034747Z">
+        <seg>提示符显示您的 &lt;i0&gt;current directory&lt;/i0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The remaining sections provide platform-specific instructions for getting started without an integrated development environment.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034109Z" creationid="pingfangx" creationdate="20180518T034109Z">
+        <seg>其余部分提供特定于平台的说明，以便在没有集成开发环境的情况下入门。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The sections listed below provide detailed instructions for compiling and running a simple "Hello World!" application.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034054Z" creationid="pingfangx" creationdate="20180518T034054Z">
+        <seg>下面列出的部分提供了编译和运行一个简单的 "Hello World！" 应用的详细说明。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The shell window should look similar to &lt;s3&gt;the following figure&lt;/s3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034735Z" creationid="pingfangx" creationdate="20180518T034735Z">
+        <seg>shell 窗口应该类似于 &lt;s3&gt;the following figure&lt;/s3&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The terms"Java Virtual Machine" and "JVM" mean a Virtual Machine for the Java platform.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033439Z" creationid="pingfangx" creationdate="20180518T033439Z">
+        <seg>术语 "Java虚拟机" 和 "JVM" 是指用于 Java 平台的虚拟机。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Then, in the &lt;b2&gt; Save As&lt;/b2&gt; dialog box:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034637Z" creationid="pingfangx" creationdate="20180518T034637Z">
+        <seg>然后，在 &lt;b2&gt; Save As&lt;/b2&gt; 对话框中：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Then, you can go straight to &lt;a3&gt;Compile the Source File into a &lt;c4&gt;.class&lt;/c4&gt; File&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034521Z" creationid="pingfangx" creationdate="20180518T034521Z">
+        <seg>然后，您可以直接转到 &lt;a3&gt;Compile the Source File into a &lt;c4&gt;.class&lt;/c4&gt; File&lt;/a3&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These operating systems include Microsoft Windows, Solaris OS, Linux, and Mac OS X. We recommend using the NetBeans IDE instead of the command line whenever possible.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034128Z" creationid="pingfangx" creationdate="20180518T034128Z">
+        <seg>这些操作系统包括 Microsoft Windows，Solaris OS，Linux 和 Mac OS X.我们建议尽可能使用 NetBeans IDE 而不是命令行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These trails and lessons are only available as web pages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031459Z" creationid="pingfangx" creationdate="20180518T031459Z">
+        <seg>这些路径和课程仅作为网页提供。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These trails are available in book form as &lt;i0&gt;The Java Tutorial, Sixth Edition&lt;/i0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030942Z" creationid="pingfangx" creationdate="20180518T030942Z">
+        <seg>这些路径可以作为 &lt;i0&gt;The Java Tutorial, Sixth Edition&lt;/i0&gt; 的书籍形式提供。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These two items are all you'll need to write your first application.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034442Z" creationid="pingfangx" creationdate="20180518T034442Z">
+        <seg>这两项是您编写第一个应用程序所需的全部内容。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>They include hundreds of complete, working examples, and dozens of lessons.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030835Z" creationid="pingfangx" creationdate="20180518T030835Z">
+        <seg>它们包括数百个完整的工作示例和数十个课程。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This array is the mechanism through which the runtime system passes information to your application.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035729Z" creationid="pingfangx" creationdate="20180518T035729Z">
+        <seg>该数组是运行时系统将信息传递给应用程序的机制。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This beginner Java tutorial describes getting started with Java and setting up your Netbeans IDE</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032040Z" creationid="pingfangx" creationdate="20180518T032025Z">
+        <seg>This beginner Java tutorial describes getting started with Java and setting up your Netbeans IDE</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This includes various tasks such as finding performance bottlenecks and recompiling (to native code) frequently used sections of code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033234Z" creationid="pingfangx" creationdate="20180518T033234Z">
+        <seg>这包括各种任务，如查找性能瓶颈和重新编译(本地代码)经常使用的代码部分。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This indicates a documentation comment (&lt;e0&gt;doc comment&lt;/e0&gt;, for short).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035506Z" creationid="pingfangx" creationdate="20180518T035506Z">
+        <seg>这表示文档注释(简称 &lt;e0&gt;doc comment&lt;/e0&gt;)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This trail provides everything you'll need to know about getting started with the Java programming language.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032140Z" creationid="pingfangx" creationdate="20180518T032140Z">
+        <seg>该路径提供了有关 Java 编程语言入门所需的一切。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Those source files are then compiled into &lt;c1&gt;.class&lt;/c1&gt; files by the &lt;c2&gt;javac&lt;/c2&gt; compiler.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033121Z" creationid="pingfangx" creationdate="20180518T033121Z">
+        <seg>然后这些源文件被 &lt;c2&gt;javac&lt;/c2&gt; 编译器编译到 &lt;c1&gt;.class&lt;/c1&gt; 文件中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Through the Java VM, the same application is capable of running on multiple platforms.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033244Z" creationid="pingfangx" creationdate="20180518T033244Z">
+        <seg>通过 Java VM，相同的应用程序能够在多个平台上运行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To buy this book, refer to the box to the right.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030947Z" creationid="pingfangx" creationdate="20180518T030947Z">
+        <seg>要购买此书，请参阅右侧的框。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To change to a directory on a different drive, you must type an extra command: the name of the drive.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034810Z" creationid="pingfangx" creationdate="20180518T034810Z">
+        <seg>要切换到其他驱动器上的目录，必须输入一个额外的命令：驱动器的名称。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To compile your source file, change your current directory to the directory where your file is located.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034751Z" creationid="pingfangx" creationdate="20180518T034751Z">
+        <seg>要编译源文件，请将当前目录更改为文件所在的目录。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To create a source file, you have two options:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034510Z" creationid="pingfangx" creationdate="20180518T034510Z">
+        <seg>要创建源文件，您有两个选择：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To create this program, you will:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034446Z" creationid="pingfangx" creationdate="20180518T034446Z">
+        <seg>要创建此程序，您将：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To do this in Notepad, first choose the &lt;b1&gt; File &gt; Save As&lt;/b1&gt; menu item.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034635Z" creationid="pingfangx" creationdate="20180518T034635Z">
+        <seg>要在记事本中执行此操作，请先选择 &lt;b1&gt; File &gt; Save As&lt;/b1&gt; 菜单项。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To fix this mistake, you need to close the quotation marks around the string.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040349Z" creationid="pingfangx" creationdate="20180518T040349Z">
+        <seg>为了解决这个错误，你需要关闭字符串周围的引号。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To write your first program, you'll need:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034404Z" creationid="pingfangx" creationdate="20180518T034404Z">
+        <seg>要编写第一个程序，您需要：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Trail icon</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032142Z" creationid="pingfangx" creationdate="20180518T032142Z">
+        <seg>Trail icon</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Trail: Getting Started</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032127Z" creationid="pingfangx" creationdate="20180518T032127Z">
+        <seg>Trail: Getting Started</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Trail: Getting Started (The Java™ Tutorials)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032013Z" creationid="pingfangx" creationdate="20180518T032013Z">
+        <seg>Trail: Getting Started (The Java™ Tutorials)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Trail: Getting Started: Table of Contents</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040714Z" creationid="pingfangx" creationdate="20180518T040714Z">
+        <seg>Trail: Getting Started: Table of Contents</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Trail: Getting Started: Table of Contents (The Java™ Tutorials)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040702Z" creationid="pingfangx" creationdate="20180518T040702Z">
+        <seg>Trail: Getting Started: Table of Contents (The Java™ Tutorials)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Trails Covering the Basics</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030920Z" creationid="pingfangx" creationdate="20180518T030920Z">
+        <seg>涵盖基础的路径</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Tutorial Contents</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030510Z" creationid="pingfangx" creationdate="20180518T030510Z">
+        <seg>教程内容</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Tutorial Resources</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030534Z" creationid="pingfangx" creationdate="20180518T030534Z">
+        <seg>教程资源</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Tutorials and reference guides for the Java Programming Language</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030232Z" creationid="pingfangx" creationdate="20180518T030232Z">
+        <seg>Java 编程语言的教程和参考指南</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Using the &lt;b0&gt; Save in&lt;/b0&gt; combo box, specify the folder (directory) where you'll save your file.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034641Z" creationid="pingfangx" creationdate="20180518T034641Z">
+        <seg>使用 &lt;b0&gt; Save in&lt;/b0&gt; 组合框中，指定要保存文件的文件夹(目录)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Volume Serial Number is F2E8-C8CC</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034852Z" creationid="pingfangx" creationdate="20180518T034832Z">
+        <seg>Volume Serial Number is F2E8-C8CC</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Volume in drive C is System</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034852Z" creationid="pingfangx" creationdate="20180518T034830Z">
+        <seg>Volume in drive C is System</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We believe that Java technology will help you do the following:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033755Z" creationid="pingfangx" creationdate="20180518T033755Z">
+        <seg>我们相信，java 技术将帮助你做到以下几点：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We can't promise you fame, fortune, or even a job if you learn the Java programming language.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033748Z" creationid="pingfangx" creationdate="20180518T033748Z">
+        <seg>如果你学习 Java 编程语言，我们不能保证你的名声，财富，甚至是工作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We've already mentioned some of the most popular platforms like Microsoft Windows, Linux, Solaris OS, and Mac OS.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033255Z" creationid="pingfangx" creationdate="20180518T033255Z">
+        <seg>我们已经提到了一些最流行的平台，如 Microsoft Windows，Linux，Solaris OS 和 Mac OS。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What Can Java Technology Do?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032702Z" creationid="pingfangx" creationdate="20180518T032702Z">
+        <seg>Java 技术可以做什么？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What is this platform-independent code called?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040007Z" creationid="pingfangx" creationdate="20180518T040007Z">
+        <seg>这个独立于平台的代码是什么？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What was the error?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040159Z" creationid="pingfangx" creationdate="20180518T040159Z">
+        <seg>错误是什么？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When you bring up the prompt, your current directory is usually your home directory for Windows XP (as shown in the preceding figure.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034749Z" creationid="pingfangx" creationdate="20180518T034749Z">
+        <seg>当出现提示时，当前目录通常是 Windows XP 的主目录（如上图所示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When you're finished, the dialog box should look like &lt;s0&gt;this&lt;/s0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034705Z" creationid="pingfangx" creationdate="20180518T034705Z">
+        <seg>完成后，对话框应该看起来像 &lt;s0&gt;this&lt;/s0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can &lt;a0&gt;download the Windows version now&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034415Z" creationid="pingfangx" creationdate="20180518T034415Z">
+        <seg>您现在可以 &lt;a0&gt;download the Windows version now&lt;/a0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can do this from the &lt;b0&gt; Start&lt;/b0&gt; menu by choosing &lt;b1&gt; Run...&lt;/b1&gt; and then entering &lt;c2&gt;cmd&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034731Z" creationid="pingfangx" creationdate="20180518T034731Z">
+        <seg>您可以从 &lt;b0&gt; Start&lt;/b0&gt; 菜单中选择 &lt;b1&gt; Run...&lt;/b1&gt;，然后输入 &lt;c2&gt;cmd&lt;/c2&gt; 来完成此操作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can easily adapt these instructions if you use a different text editor.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034438Z" creationid="pingfangx" creationdate="20180518T034438Z">
+        <seg>如果您使用不同的文本编辑器，则可以轻松地修改这些说明。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can launch the Notepad editor from the &lt;b0&gt; Start&lt;/b0&gt; menu by selecting &lt;b1&gt; Programs &gt; Accessories &gt; Notepad&lt;/b1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034530Z" creationid="pingfangx" creationdate="20180518T034530Z">
+        <seg>您可以通过选择 &lt;b1&gt; Programs &gt; Accessories &gt; Notepad&lt;/b1&gt; 从 &lt;b0&gt; Start&lt;/b0&gt; 菜单启动记事本编辑器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can name the argument anything you want, but most programmers choose "args" or "argv".</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035652Z" creationid="pingfangx" creationdate="20180518T035652Z">
+        <seg>你可以根据需要命名参数，但大多数程序员选择 "args" 或 "argv"。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can save the file &lt;c0&gt; &lt;a1&gt;&lt;c2&gt;HelloWorldApp.java&lt;/c2&gt;&lt;/a1&gt;&lt;/c0&gt; on your computer and avoid a lot of typing.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034516Z" creationid="pingfangx" creationdate="20180518T034516Z">
+        <seg>您可以在计算机上保存文件 &lt;c0&gt; &lt;a1&gt;&lt;c2&gt;HelloWorldApp.java&lt;/c2&gt;&lt;/a1&gt;&lt;/c0&gt;，并避免大量输入。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can use any text editor to create and edit source files.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034454Z" creationid="pingfangx" creationdate="20180518T034454Z">
+        <seg>您可以使用任何文本编辑器来创建和编辑源文件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You have reached the end of the "Getting Started" trail.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040546Z" creationid="pingfangx" creationdate="20180518T040546Z">
+        <seg>您已到达 "开始使用" 路径的末尾。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You should see the following on your screen:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034942Z" creationid="pingfangx" creationdate="20180518T034942Z">
+        <seg>您应该在屏幕上看到以下内容：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You've already been introduced to the Java Virtual Machine; it's the base for the Java platform and is ported onto various hardware-based platforms.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033348Z" creationid="pingfangx" creationdate="20180518T033348Z">
+        <seg>您已经被介绍了 Java 虚拟机;它是 Java 平台的基础，并被移植到各种基于硬件的平台上。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Your class cannot be found.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040252Z" creationid="pingfangx" creationdate="20180518T040252Z">
+        <seg>你的类无法找到。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Your first application, &lt;c0&gt;HelloWorldApp&lt;/c0&gt;, will simply display the greeting "Hello world!".</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034445Z" creationid="pingfangx" creationdate="20180518T034445Z">
+        <seg>您的第一个应用程序 &lt;c0&gt;HelloWorldApp&lt;/c0&gt; 将只显示问候语 "Hello world！"。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Your program works!</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034952Z" creationid="pingfangx" creationdate="20180518T034952Z">
+        <seg>你的程序有效！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Your programs will also require fewer lines of code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033813Z" creationid="pingfangx" creationdate="20180518T033813Z">
+        <seg>你的程序也需要更少的代码。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>^
+2 errors</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040344Z" creationid="pingfangx" creationdate="20180518T040344Z">
+        <seg>^
+2 errors</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>^
+HelloWorldApp2.java:7: ')' expected</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040341Z" creationid="pingfangx" creationdate="20180518T040341Z">
+        <seg>^
+HelloWorldApp2.java:7: ')' expected</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>a checkmark</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034353Z" creationid="pingfangx" creationdate="20180518T034353Z">
+        <seg>a checkmark</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>a window where you can enter DOS commands</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034737Z" creationid="pingfangx" creationdate="20180518T034737Z">
+        <seg>一个可以输入 DOS 命令的窗口</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>a.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040036Z" creationid="pingfangx" creationdate="20180518T040036Z">
+        <seg>a.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>answers.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040201Z" creationid="pingfangx" creationdate="20180518T040201Z">
+        <seg>answers.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>application/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032429Z" creationid="pingfangx" creationdate="20180518T032429Z">
+        <seg>application/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>b.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040038Z" creationid="pingfangx" creationdate="20180518T040038Z">
+        <seg>b.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>c.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040040Z" creationid="pingfangx" creationdate="20180518T040040Z">
+        <seg>c.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>cando.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032700Z" creationid="pingfangx" creationdate="20180518T032700Z">
+        <seg>cando.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>cd C:\myapplication</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034757Z" creationid="pingfangx" creationdate="20180518T034757Z">
+        <seg>cd C:\myapplication</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>changemylife.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032702Z" creationid="pingfangx" creationdate="20180518T032702Z">
+        <seg>changemylife.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>class &lt;e0&gt;name&lt;/e0&gt; {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035558Z" creationid="pingfangx" creationdate="20180518T035558Z">
+        <seg>class &lt;e0&gt;name&lt;/e0&gt; {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>class HelloWorldApp {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035247Z" creationid="pingfangx" creationdate="20180518T035247Z">
+        <seg>class HelloWorldApp {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>collections/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031226Z" creationid="pingfangx" creationdate="20180518T031226Z">
+        <seg>collections/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>cupojava/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032220Z" creationid="pingfangx" creationdate="20180518T032220Z">
+        <seg>cupojava/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>cupojava/netbeans.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040718Z" creationid="pingfangx" creationdate="20180518T040718Z">
+        <seg>cupojava/netbeans.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>cupojava/unix.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040719Z" creationid="pingfangx" creationdate="20180518T040719Z">
+        <seg>cupojava/unix.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>cupojava/win32.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040718Z" creationid="pingfangx" creationdate="20180518T040718Z">
+        <seg>cupojava/win32.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>d.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040042Z" creationid="pingfangx" creationdate="20180518T040042Z">
+        <seg>d.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>datetime/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031252Z" creationid="pingfangx" creationdate="20180518T031252Z">
+        <seg>datetime/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>definition.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032657Z" creationid="pingfangx" creationdate="20180518T032657Z">
+        <seg>definition.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>deployment/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031307Z" creationid="pingfangx" creationdate="20180518T031307Z">
+        <seg>deployment/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>en-US</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030211Z" creationid="pingfangx" creationdate="20180518T030211Z">
+        <seg>en-US</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>essential/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031207Z" creationid="pingfangx" creationdate="20180518T031207Z">
+        <seg>essential/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ext/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031507Z" creationid="pingfangx" creationdate="20180518T031507Z">
+        <seg>ext/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>extra/certification/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031320Z" creationid="pingfangx" creationdate="20180518T031320Z">
+        <seg>extra/certification/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>extra/fullscreen/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031526Z" creationid="pingfangx" creationdate="20180518T031526Z">
+        <seg>extra/fullscreen/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>extra/generics/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031534Z" creationid="pingfangx" creationdate="20180518T031534Z">
+        <seg>extra/generics/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>getStarted/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030947Z" creationid="pingfangx" creationdate="20180518T030947Z">
+        <seg>getStarted/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=3</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030658Z" creationid="pingfangx" creationdate="20180518T030658Z">
+        <seg>http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=3</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://education.oracle.com/pls/web_prod-plq-dad/ou_product_category.getFamilyPage?p_family_id=48</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030655Z" creationid="pingfangx" creationdate="20180518T030655Z">
+        <seg>http://education.oracle.com/pls/web_prod-plq-dad/ou_product_category.getFamilyPage?p_family_id=48</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://www.amazon.com/The-Java-Tutorial-Course-Edition/dp/0134034082</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030632Z" creationid="pingfangx" creationdate="20180518T030632Z">
+        <seg>http://www.amazon.com/The-Java-Tutorial-Course-Edition/dp/0134034082</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://www.oracle.com/corporate/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031843Z" creationid="pingfangx" creationdate="20180518T031843Z">
+        <seg>http://www.oracle.com/corporate/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://www.oracle.com/pls/topic/lookup?ctx=cpyr&amp;id=en-US</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031853Z" creationid="pingfangx" creationdate="20180518T031853Z">
+        <seg>http://www.oracle.com/pls/topic/lookup?ctx=cpyr&amp;id=en-US</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://www.oracle.com/technetwork/java/javase/downloads/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030702Z" creationid="pingfangx" creationdate="20180518T030702Z">
+        <seg>http://www.oracle.com/technetwork/java/javase/downloads/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://www.oracle.com/technetwork/java/javase/java-tutorial-downloads-2005894.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030549Z" creationid="pingfangx" creationdate="20180518T030549Z">
+        <seg>http://www.oracle.com/technetwork/java/javase/java-tutorial-downloads-2005894.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136373.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033212Z" creationid="pingfangx" creationdate="20180518T033212Z">
+        <seg>http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136373.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://www.oracle.com/technetwork/java/langenv-140151.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033053Z" creationid="pingfangx" creationdate="20180518T033053Z">
+        <seg>http://www.oracle.com/technetwork/java/langenv-140151.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://www.oracle.com/us/corporate/contact/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031843Z" creationid="pingfangx" creationdate="20180518T031843Z">
+        <seg>http://www.oracle.com/us/corporate/contact/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://www.oracle.com/us/legal/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031844Z" creationid="pingfangx" creationdate="20180518T031844Z">
+        <seg>http://www.oracle.com/us/legal/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://www.oracle.com/us/legal/privacy/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031845Z" creationid="pingfangx" creationdate="20180518T031845Z">
+        <seg>http://www.oracle.com/us/legal/privacy/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://www.oracle.com/us/legal/terms/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031844Z" creationid="pingfangx" creationdate="20180518T031844Z">
+        <seg>http://www.oracle.com/us/legal/terms/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://blogs.oracle.com/thejavatutorials/</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030539Z" creationid="pingfangx" creationdate="20180518T030539Z">
+        <seg>https://blogs.oracle.com/thejavatutorials/</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javafx/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031351Z" creationid="pingfangx" creationdate="20180518T031351Z">
+        <seg>https://docs.oracle.com/javafx/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030643Z" creationid="pingfangx" creationdate="20180518T030643Z">
+        <seg>https://docs.oracle.com/javase/8/docs/</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030648Z" creationid="pingfangx" creationdate="20180518T030648Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033626Z" creationid="pingfangx" creationdate="20180518T033626Z">
+        <seg>https://docs.oracle.com/javase/8/docs/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034412Z" creationid="pingfangx" creationdate="20180518T034412Z">
+        <seg>https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/technotes/guides/javadoc/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035455Z" creationid="pingfangx" creationdate="20180518T035455Z">
+        <seg>https://docs.oracle.com/javase/8/docs/technotes/guides/javadoc/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/feedback.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040547Z" creationid="pingfangx" creationdate="20180518T040547Z">
+        <seg>https://docs.oracle.com/javase/feedback.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>i18n/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031620Z" creationid="pingfangx" creationdate="20180518T031620Z">
+        <seg>i18n/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>images/ThinkingDuke.png</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030455Z" creationid="pingfangx" creationdate="20180518T030455Z">
+        <seg>images/ThinkingDuke.png</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>images/really_big_index_button.gif</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030531Z" creationid="pingfangx" creationdate="20180518T030531Z">
+        <seg>images/really_big_index_button.gif</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032815Z" creationid="pingfangx" creationdate="20180518T032815Z">
+        <seg>index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>information/history.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030534Z" creationid="pingfangx" creationdate="20180518T030534Z">
+        <seg>information/history.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>intro/cando.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040716Z" creationid="pingfangx" creationdate="20180518T040716Z">
+        <seg>intro/cando.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>intro/changemylife.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040717Z" creationid="pingfangx" creationdate="20180518T040717Z">
+        <seg>intro/changemylife.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>intro/definition.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040715Z" creationid="pingfangx" creationdate="20180518T040715Z">
+        <seg>intro/definition.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>intro/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032141Z" creationid="pingfangx" creationdate="20180518T032141Z">
+        <seg>intro/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>java -cp .</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034935Z" creationid="pingfangx" creationdate="20180518T034935Z">
+        <seg>java -cp .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>java &lt;e0&gt;MyApp&lt;/e0&gt; &lt;e1&gt;arg1&lt;/e1&gt; &lt;e2&gt;arg2&lt;/e2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035731Z" creationid="pingfangx" creationdate="20180518T035731Z">
+        <seg>java &lt;e0&gt;MyApp&lt;/e0&gt; &lt;e1&gt;arg1&lt;/e1&gt; &lt;e2&gt;arg2&lt;/e2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>java programming, learn java, java sample code, getting started with java, development environment setup</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032041Z" creationid="pingfangx" creationdate="20180518T032041Z">
+        <seg>java programming, learn java, java sample code, getting started with java, development environment setup</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>java/generics/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031536Z" creationid="pingfangx" creationdate="20180518T031536Z">
+        <seg>java/generics/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>java/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031131Z" creationid="pingfangx" creationdate="20180518T031131Z">
+        <seg>java/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>javabeans/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031633Z" creationid="pingfangx" creationdate="20180518T031633Z">
+        <seg>javabeans/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>javac HelloWorldApp.java</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034900Z" creationid="pingfangx" creationdate="20180518T034900Z">
+        <seg>javac HelloWorldApp.java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>javascript:toggleLeft()</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032644Z" creationid="pingfangx" creationdate="20180518T032644Z">
+        <seg>javascript:toggleLeft()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jaxb/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031719Z" creationid="pingfangx" creationdate="20180518T031719Z">
+        <seg>jaxb/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jaxp/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031710Z" creationid="pingfangx" creationdate="20180518T031710Z">
+        <seg>jaxp/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jdbc/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031637Z" creationid="pingfangx" creationdate="20180518T031637Z">
+        <seg>jdbc/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jmx/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031645Z" creationid="pingfangx" creationdate="20180518T031645Z">
+        <seg>jmx/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jndi/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031657Z" creationid="pingfangx" creationdate="20180518T031657Z">
+        <seg>jndi/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>lowercase letter A</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034548Z" creationid="pingfangx" creationdate="20180518T034548Z">
+        <seg>lowercase letter A</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>netbeans.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033956Z" creationid="pingfangx" creationdate="20180518T033956Z">
+        <seg>netbeans.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>networking/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031500Z" creationid="pingfangx" creationdate="20180518T031500Z">
+        <seg>networking/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>problems/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032506Z" creationid="pingfangx" creationdate="20180518T032506Z">
+        <seg>problems/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public static void main(&lt;b0&gt;String[] args&lt;/b0&gt;)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035723Z" creationid="pingfangx" creationdate="20180518T035723Z">
+        <seg>public static void main(&lt;b0&gt;String[] args&lt;/b0&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public static void main(String[] args)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035635Z" creationid="pingfangx" creationdate="20180518T035635Z">
+        <seg>public static void main(String[] args)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public static void main(String[] args) {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035247Z" creationid="pingfangx" creationdate="20180518T035247Z">
+        <seg>public static void main(String[] args) {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>really big index button</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030525Z" creationid="pingfangx" creationdate="20180518T030525Z">
+        <seg>真的很大的 index 按钮</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>reallybigindex.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030511Z" creationid="pingfangx" creationdate="20180518T030511Z">
+        <seg>reallybigindex.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>reflect/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031744Z" creationid="pingfangx" creationdate="20180518T031744Z">
+        <seg>reflect/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>rmi/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031728Z" creationid="pingfangx" creationdate="20180518T031728Z">
+        <seg>rmi/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>sdp/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031833Z" creationid="pingfangx" creationdate="20180518T031833Z">
+        <seg>sdp/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>security/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031816Z" creationid="pingfangx" creationdate="20180518T031816Z">
+        <seg>security/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>sound/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031824Z" creationid="pingfangx" creationdate="20180518T031824Z">
+        <seg>sound/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tutorialLearningPaths.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030458Z" creationid="pingfangx" creationdate="20180518T030458Z">
+        <seg>tutorialLearningPaths.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>uiswing/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031343Z" creationid="pingfangx" creationdate="20180518T031343Z">
+        <seg>uiswing/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>unix.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034017Z" creationid="pingfangx" creationdate="20180518T034017Z">
+        <seg>unix.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>uppercase letter A</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034547Z" creationid="pingfangx" creationdate="20180518T034547Z">
+        <seg>uppercase letter A</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>uses the &lt;c0&gt;System&lt;/c0&gt; class from the core library to print the "Hello World!" message to standard output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035812Z" creationid="pingfangx" creationdate="20180518T035812Z">
+        <seg>使用核心库中的 &lt;c0&gt;System&lt;/c0&gt; 类来打印 "Hello World!" 消息发送到标准输出。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>win32.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034016Z" creationid="pingfangx" creationdate="20180518T034016Z">
+        <seg>win32.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035602Z" creationid="pingfangx" creationdate="20180518T035602Z">
+        <seg>}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>}
+&lt;b1&gt;}&lt;/b1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035553Z" creationid="pingfangx" creationdate="20180518T035553Z">
+        <seg>}
+&lt;b1&gt;}&lt;/b1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>}
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035248Z" creationid="pingfangx" creationdate="20180518T035248Z">
+        <seg>}
+}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg> */
+class HelloWorldApp {
+    public static void main(String[] args) {
+        System.out.println("Hello World!"); // Display the string.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034535Z" creationid="pingfangx" creationdate="20180518T034535Z">
+        <seg> */
+class HelloWorldApp {
+    public static void main(String[] args) {
+        System.out.println("Hello World!"); // Display the string.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>    }
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034537Z" creationid="pingfangx" creationdate="20180518T034537Z">
+        <seg>    }
+}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>« Previous</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040704Z" creationid="pingfangx" creationdate="20180518T040704Z">
+        <seg>« Previous</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>
