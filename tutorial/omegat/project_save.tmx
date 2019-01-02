@@ -534,6 +534,14 @@ Your weight on NEPTUNE is 199.207413</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(By default, annotations are not included in Javadoc.) For more information, see the &lt;a3&gt;Javadoc tools page&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033929Z" creationid="pingfangx" creationdate="20190102T033929Z">
+        <seg>(默认情况下，注解不包含在 Javadoc 中。)有关更多信息，请参阅 &lt;a3&gt;Javadoc tools page&lt;/a3&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(Call the</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T021201Z" creationid="pingfangx" creationdate="20190102T021201Z">
@@ -602,6 +610,14 @@ Your weight on NEPTUNE is 199.207413</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T064805Z" creationid="pingfangx" creationdate="20180706T062951Z">
         <seg>(这解释了为什么在右花括号后边有一个分号。)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>(This is not true by default.) When the user queries the annotation type and the class has no annotation for this type, the class' superclass is queried for the annotation type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034034Z" creationid="pingfangx" creationdate="20190102T034034Z">
+        <seg>(默认情况下不是这样。)当用户查询注解类型并且该类没有此类型的注解时，将查询类的超类以获取注解类型。</seg>
       </tuv>
     </tu>
     <tu>
@@ -696,10 +712,66 @@ Your weight on NEPTUNE is 199.207413</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>* &lt;c1&gt;openFrontDoor&lt;/c1&gt; or</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041706Z" creationid="pingfangx" creationdate="20190102T041706Z">
+        <seg>* &lt;c1&gt;openFrontDoor&lt;/c1&gt; or</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* &lt;c2&gt;openBackDoor&lt;/c2&gt; instead.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041707Z" creationid="pingfangx" creationdate="20190102T041707Z">
+        <seg>* &lt;c2&gt;openBackDoor&lt;/c2&gt; instead.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* &lt;i0&gt;@deprecated&lt;/i0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033406Z" creationid="pingfangx" creationdate="20190102T033406Z">
+        <seg>* &lt;i0&gt;@deprecated&lt;/i0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* &lt;i1&gt;explanation of why it was deprecated&lt;/i1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033407Z" creationid="pingfangx" creationdate="20190102T033407Z">
+        <seg>* &lt;i1&gt;explanation of why it was deprecated&lt;/i1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* @deprecated use of &lt;c0&gt;open&lt;/c0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041705Z" creationid="pingfangx" creationdate="20190102T041705Z">
+        <seg>* @deprecated use of &lt;c0&gt;open&lt;/c0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* Describes the Request-for-Enhancement (RFE) annotation type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041813Z" creationid="pingfangx" creationdate="20190102T041813Z">
+        <seg>* Describes the Request-for-Enhancement (RFE) annotation type.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>* The HelloWorldApp class implements an application that</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035433Z" creationid="pingfangx" creationdate="20180518T035433Z">
         <seg>* The HelloWorldApp class implements an application that</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* is discouraged, use</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041705Z" creationid="pingfangx" creationdate="20190102T041705Z">
+        <seg>* is discouraged, use</seg>
       </tuv>
     </tu>
     <tu>
@@ -744,6 +816,14 @@ Your weight on NEPTUNE is 199.207413</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>*/</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033408Z" creationid="pingfangx" creationdate="20190102T033408Z">
+        <seg>*/</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>*/
 &lt;b0&gt;class HelloWorldApp {&lt;/b0&gt;</seg>
       </tuv>
@@ -760,6 +840,16 @@ class HelloWorldApp {</seg>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035626Z" creationid="pingfangx" creationdate="20180518T035626Z">
         <seg>*/
 class HelloWorldApp {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>*/
+public @interface RequestForEnhancement {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041813Z" creationid="pingfangx" creationdate="20190102T041813Z">
+        <seg>*/
+public @interface RequestForEnhancement {</seg>
       </tuv>
     </tu>
     <tu>
@@ -1084,6 +1174,14 @@ class HelloWorldApp {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T013954Z" creationid="pingfangx" creationdate="20190102T013954Z">
         <seg>../../../java/javaOO/innerclasses.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../../IandI/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041544Z" creationid="pingfangx" creationdate="20190102T041544Z">
+        <seg>../../IandI/index.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -1504,6 +1602,14 @@ class HelloWorldApp {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>../basics.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041540Z" creationid="pingfangx" creationdate="20190102T041540Z">
+        <seg>../basics.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>../branch.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T061746Z" creationid="pingfangx" creationdate="20180521T061746Z">
@@ -1588,6 +1694,14 @@ class HelloWorldApp {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T061730Z" creationid="pingfangx" creationdate="20180521T061730Z">
         <seg>../datatypes.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../declaring.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041541Z" creationid="pingfangx" creationdate="20190102T041541Z">
+        <seg>../declaring.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -1700,6 +1814,14 @@ class HelloWorldApp {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T061744Z" creationid="pingfangx" creationdate="20180521T061744Z">
         <seg>../for.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../generics/index.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033608Z" creationid="pingfangx" creationdate="20190102T033608Z">
+        <seg>../generics/index.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -1992,10 +2114,26 @@ class HelloWorldApp {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>../predefined.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041541Z" creationid="pingfangx" creationdate="20190102T041541Z">
+        <seg>../predefined.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>../problems/index.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034133Z" creationid="pingfangx" creationdate="20180518T034133Z">
         <seg>../problems/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../repeating.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041542Z" creationid="pingfangx" creationdate="20190102T041542Z">
+        <seg>../repeating.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -2028,6 +2166,14 @@ class HelloWorldApp {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T082443Z" creationid="pingfangx" creationdate="20180705T082443Z">
         <seg>../thiskey.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>../type_annotations.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041542Z" creationid="pingfangx" creationdate="20190102T041542Z">
+        <seg>../type_annotations.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -2204,6 +2350,14 @@ class HelloWorldApp {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>// - suppressed</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033606Z" creationid="pingfangx" creationdate="20190102T033606Z">
+        <seg>// - suppressed</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>// ...</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T085438Z" creationid="pingfangx" creationdate="20180706T085438Z">
@@ -2366,6 +2520,38 @@ class HelloWorldApp {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>// &lt;i0&gt;mark method as a superclass method&lt;/i0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033430Z" creationid="pingfangx" creationdate="20190102T033430Z">
+        <seg>// &lt;i0&gt;mark method as a superclass method&lt;/i0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// &lt;i0&gt;use a deprecated method and tell&lt;/i0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033602Z" creationid="pingfangx" creationdate="20190102T033602Z">
+        <seg>// &lt;i0&gt;use a deprecated method and tell&lt;/i0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// &lt;i1&gt;compiler not to generate a warning&lt;/i1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033603Z" creationid="pingfangx" creationdate="20190102T033603Z">
+        <seg>// &lt;i1&gt;compiler not to generate a warning&lt;/i1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// &lt;i1&gt;that has been overridden&lt;/i1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033431Z" creationid="pingfangx" creationdate="20190102T033431Z">
+        <seg>// &lt;i1&gt;that has been overridden&lt;/i1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>// &lt;s0&gt;Invalid: cannot put underscores&lt;/s0&gt;
 // &lt;s1&gt;adjacent to a decimal point&lt;/s1&gt;
 float pi1 = 3_.1415F;
@@ -2430,10 +2616,34 @@ int x7 = 0x52_;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>// Annotation element definitions</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025859Z" creationid="pingfangx" creationdate="20190102T025859Z">
+        <seg>// Annotation element definitions</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// Author: John Doe</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024825Z" creationid="pingfangx" creationdate="20190102T024825Z">
+        <seg>// Author: John Doe</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>// Bicycle objects</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062705Z" creationid="pingfangx" creationdate="20180518T062705Z">
         <seg>// Bicycle objects</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// By: Jane Doe</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024828Z" creationid="pingfangx" creationdate="20190102T024828Z">
+        <seg>// By: Jane Doe</seg>
       </tuv>
     </tu>
     <tu>
@@ -2458,6 +2668,22 @@ int x7 = 0x52_;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062704Z" creationid="pingfangx" creationdate="20180518T062704Z">
         <seg>// Create two different</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// Current revision: 6</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024826Z" creationid="pingfangx" creationdate="20190102T024826Z">
+        <seg>// Current revision: 6</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// Date: 3/17/2002</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024826Z" creationid="pingfangx" creationdate="20190102T024826Z">
+        <seg>// Date: 3/17/2002</seg>
       </tuv>
     </tu>
     <tu>
@@ -2502,6 +2728,22 @@ int x7 = 0x52_;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>// Javadoc comment follows</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033405Z" creationid="pingfangx" creationdate="20190102T033405Z">
+        <seg>// Javadoc comment follows</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// Last modified: 4/12/2004</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024827Z" creationid="pingfangx" creationdate="20190102T024827Z">
+        <seg>// Last modified: 4/12/2004</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>// Mr. Smith</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T042315Z" creationid="pingfangx" creationdate="20180521T042315Z">
@@ -2514,6 +2756,22 @@ int x7 = 0x52_;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T042316Z" creationid="pingfangx" creationdate="20180521T042316Z">
         <seg>// Ms. Jones</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// Note array notation</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025149Z" creationid="pingfangx" creationdate="20190102T025149Z">
+        <seg>// Note array notation</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// Note use of array</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024844Z" creationid="pingfangx" creationdate="20190102T024844Z">
+        <seg>// Note use of array</seg>
       </tuv>
     </tu>
     <tu>
@@ -2534,6 +2792,14 @@ int x7 = 0x52_;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>// Reviewers: Alice, Bill, Cindy</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024828Z" creationid="pingfangx" creationdate="20190102T024828Z">
+        <seg>// Reviewers: Alice, Bill, Cindy</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>// Start stepping through the array from the beginning</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T101058Z" creationid="pingfangx" creationdate="20180705T101058Z">
@@ -2546,6 +2812,14 @@ int x7 = 0x52_;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063951Z" creationid="pingfangx" creationdate="20180518T063919Z">
         <seg>//编译器现在需要这些方法</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// The documentation is</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041718Z" creationid="pingfangx" creationdate="20190102T041718Z">
+        <seg>// The documentation is</seg>
       </tuv>
     </tu>
     <tu>
@@ -2712,6 +2986,18 @@ Bicycle myBike = new Bicycle();</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>// class code goes here
+
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024829Z" creationid="pingfangx" creationdate="20190102T024829Z">
+        <seg>// class code goes here
+
+}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>// code to assign a new reference to circle</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T034341Z" creationid="pingfangx" creationdate="20180601T034341Z">
@@ -2770,6 +3056,14 @@ int[] anArray;</seg>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T033231Z" creationid="pingfangx" creationdate="20180521T033231Z">
         <seg>//声明一个整型数组
 int[] anArray;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// deprecation warning</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033605Z" creationid="pingfangx" creationdate="20190102T033605Z">
+        <seg>// deprecation warning</seg>
       </tuv>
     </tu>
     <tu>
@@ -2838,12 +3132,36 @@ int[] anArray;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>// import this to use &lt;c0&gt;@Documented&lt;/c0&gt;
+import java.lang.annotation.*;
+
+@Documented
+@interface ClassPreamble {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025857Z" creationid="pingfangx" creationdate="20190102T025857Z">
+        <seg>// import this to use &lt;c0&gt;@Documented&lt;/c0&gt;
+import java.lang.annotation.*;
+
+@Documented
+@interface ClassPreamble {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>// infinite loop
 for ( ; ; ) {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T085523Z" creationid="pingfangx" creationdate="20180521T085523Z">
         <seg>// infinite loop
 for ( ; ; ) {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// inherited from the interface.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041718Z" creationid="pingfangx" creationdate="20190102T041718Z">
+        <seg>// inherited from the interface.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3830,6 +4148,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Learning the Java Language&lt;/a1&gt; &gt; &lt;a2&gt;Annotations&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023822Z" creationid="pingfangx" creationdate="20190102T023822Z">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Learning the Java Language&lt;/a1&gt; &gt; &lt;a2&gt;Annotations&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Learning the Java Language&lt;/a1&gt; &gt; &lt;a2&gt;Classes and Objects&lt;/a2&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T023402Z" creationid="pingfangx" creationdate="20180525T023402Z">
@@ -4102,6 +4428,86 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b0&gt;@Deprecated&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Deprecated&lt;/c2&gt;&lt;/a1&gt; annotation indicates that the marked element is &lt;i3&gt;deprecated&lt;/i3&gt; and should no longer be used.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033315Z" creationid="pingfangx" creationdate="20190102T033315Z">
+        <seg>&lt;b0&gt;@Deprecated&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Deprecated&lt;/c2&gt;&lt;/a1&gt; 注解表示标记的元素 &lt;i3&gt;deprecated&lt;/i3&gt; 且不应再使用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;@Documented&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Documented&lt;/c2&gt;&lt;/a1&gt; annotation indicates that whenever the specified annotation is used those elements should be documented using the Javadoc tool.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033923Z" creationid="pingfangx" creationdate="20190102T033923Z">
+        <seg>&lt;b0&gt;@Documented&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Documented&lt;/c2&gt;&lt;/a1&gt; 注解表示无论何时使用指定的注解，都应使用 Javadoc 工具记录这些元素。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;@FunctionalInterface&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@FunctionalInterface&lt;/c2&gt;&lt;/a1&gt; annotation, introduced in Java SE 8, indicates that the type declaration is intended to be a functional interface, as defined by the Java Language Specification.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034158Z" creationid="pingfangx" creationdate="20190102T033814Z">
+        <seg>&lt;b0&gt;@FunctionalInterface&lt;/b0&gt; Java SE 8 中引入的 &lt;a1&gt;&lt;c2&gt;@FunctionalInterface&lt;/c2&gt;&lt;/a1&gt; 注解表明类型声明旨在成为一个函数式接口，由 Java 语言规范。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;@Inherited&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Inherited&lt;/c2&gt;&lt;/a1&gt; annotation indicates that the annotation type can be inherited from the super class.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034018Z" creationid="pingfangx" creationdate="20190102T034018Z">
+        <seg>&lt;b0&gt;@Inherited&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Inherited&lt;/c2&gt;&lt;/a1&gt; 注解表示注解类型可以从超类继承。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;@Override&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Override&lt;/c2&gt;&lt;/a1&gt; annotation informs the compiler that the element is meant to override an element declared in a superclass.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033423Z" creationid="pingfangx" creationdate="20190102T033423Z">
+        <seg>&lt;b0&gt;@Override&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Override&lt;/c2&gt;&lt;/a1&gt; 注解通知编译器该元素是要覆盖超类中声明的元素。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;@Repeatable&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Repeatable&lt;/c2&gt;&lt;/a1&gt; annotation, introduced in Java SE 8, indicates that the marked annotation can be applied more than once to the same declaration or type use.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034225Z" creationid="pingfangx" creationdate="20190102T034048Z">
+        <seg>&lt;b0&gt;@Repeatable&lt;/b0&gt; Java SE 8 中引入的 &lt;a1&gt;&lt;c2&gt;@Repeatable&lt;/c2&gt;&lt;/a1&gt; 注解表明标记的注解可以多次应用于同一声明或类型使用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;@Retention&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Retention&lt;/c2&gt;&lt;/a1&gt; annotation specifies how the marked annotation is stored:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033845Z" creationid="pingfangx" creationdate="20190102T033845Z">
+        <seg>&lt;b0&gt;@Retention&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Retention&lt;/c2&gt;&lt;/a1&gt; 注解指定标记注解的存储方式：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;@SafeVarargs&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@SafeVarargs&lt;/c2&gt;&lt;/a1&gt; annotation, when applied to a method or constructor, asserts that the code does not perform potentially unsafe operations on its &lt;c3&gt;varargs&lt;/c3&gt; parameter.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033742Z" creationid="pingfangx" creationdate="20190102T033742Z">
+        <seg>&lt;b0&gt;@SafeVarargs&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@SafeVarargs&lt;/c2&gt;&lt;/a1&gt; 注解，当应用于方法或构造函数时，断言代码不会对其 &lt;c3&gt;varargs&lt;/c3&gt; 参数执行潜在的不安全操作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;@SuppressWarnings&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@SuppressWarnings&lt;/c2&gt;&lt;/a1&gt; annotation tells the compiler to suppress specific warnings that it would otherwise generate.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033551Z" creationid="pingfangx" creationdate="20190102T033551Z">
+        <seg>&lt;b0&gt;@SuppressWarnings&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@SuppressWarnings&lt;/c2&gt;&lt;/a1&gt; 注解告诉编译器抑制否则会生成的特定警告。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;@Target&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Target&lt;/c2&gt;&lt;/a1&gt; annotation marks another annotation to restrict what kind of Java elements the annotation can be applied to.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033941Z" creationid="pingfangx" creationdate="20190102T033941Z">
+        <seg>&lt;b0&gt;@Target&lt;/b0&gt; &lt;a1&gt;&lt;c2&gt;@Target&lt;/c2&gt;&lt;/a1&gt; 注解标记另一个注解，以限制可以应用注解的 Java 元素类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b0&gt;Answer 1&lt;/b0&gt;: Bytecode.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040231Z" creationid="pingfangx" creationdate="20180518T040231Z">
@@ -4174,6 +4580,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Compile-time and deployment-time processing&lt;/b0&gt;  Software tools can process annotation information to generate code, XML files, and so forth.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023653Z" creationid="pingfangx" creationdate="20190102T023653Z">
+        <seg>&lt;b0&gt;编译时和部署时处理&lt;/b0&gt; 软件工具可以处理注解信息以生成代码，XML 文件等。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b0&gt;Exercise 1&lt;/b0&gt;: Change the &lt;a1&gt;&lt;c2&gt;HelloWorldApp.java&lt;/c2&gt;&lt;/a1&gt; program so that it displays &lt;c3&gt;Hola Mundo!&lt;/c3&gt; instead of &lt;c4&gt;Hello World!&lt;/c4&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040144Z" creationid="pingfangx" creationdate="20180518T040144Z">
@@ -4186,6 +4600,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040153Z" creationid="pingfangx" creationdate="20180518T040153Z">
         <seg>&lt;b0&gt;Exercise 2&lt;/b0&gt;：您可以在这里找到 &lt;c1&gt;HelloWorldApp&lt;/c1&gt; 的稍微修改版本：&lt;a2&gt;&lt;c3&gt;HelloWorldApp2.java&lt;/c3&gt;&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Information for the compiler&lt;/b0&gt;  Annotations can be used by the compiler to detect errors or suppress warnings.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023658Z" creationid="pingfangx" creationdate="20190102T023621Z">
+        <seg>&lt;b0&gt;为编译器提供信息&lt;/b0&gt; 编译器可以使用注解来检测错误或抑制警告。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4234,6 +4656,22 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033721Z" creationid="pingfangx" creationdate="20180518T033721Z">
         <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; About the Java Technology &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Annotations &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024227Z" creationid="pingfangx" creationdate="20190102T024227Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Annotations &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Annotations Basics &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025904Z" creationid="pingfangx" creationdate="20190102T025904Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Annotations Basics &lt;br1/&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -4354,6 +4792,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T065528Z" creationid="pingfangx" creationdate="20180525T065528Z">
         <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Declaring Member Variables &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Declaring an Annotation Type &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034106Z" creationid="pingfangx" creationdate="20190102T034106Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Declaring an Annotation Type &lt;br1/&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -4486,6 +4932,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Predefined Annotation Types &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040937Z" creationid="pingfangx" creationdate="20190102T040937Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Predefined Annotation Types &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Previous Lesson &lt;br1/&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034139Z" creationid="pingfangx" creationdate="20180518T034139Z">
@@ -4506,6 +4960,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T034515Z" creationid="pingfangx" creationdate="20180601T034515Z">
         <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Providing Constructors for Your Classes &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Questions and Exercises: Annotations</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041817Z" creationid="pingfangx" creationdate="20190102T041817Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Questions and Exercises: Annotations</seg>
       </tuv>
     </tu>
     <tu>
@@ -4646,6 +5108,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Repeating Annotations &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041642Z" creationid="pingfangx" creationdate="20190102T041642Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Repeating Annotations &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Returning a Value from a Method &lt;br1/&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180607T020413Z" creationid="pingfangx" creationdate="20180607T020413Z">
@@ -4730,6 +5200,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T085641Z" creationid="pingfangx" creationdate="20180521T085641Z">
         <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; The while and do-while Statements &lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Type Annotations and Pluggable Type Systems &lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041457Z" creationid="pingfangx" creationdate="20190102T041457Z">
+        <seg>&lt;b0&gt;Previous page:&lt;/b0&gt; Type Annotations and Pluggable Type Systems &lt;br1/&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -4870,6 +5348,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Runtime processing&lt;/b0&gt;  Some annotations are available to be examined at runtime.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023715Z" creationid="pingfangx" creationdate="20190102T023715Z">
+        <seg>&lt;b0&gt;运行时处理&lt;/b0&gt; 某些注解可在运行时检查。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b0&gt;Trail:&lt;/b0&gt; Getting Started</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032706Z" creationid="pingfangx" creationdate="20180518T032706Z">
@@ -4992,6 +5478,38 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b2&gt;@Deprecated&lt;/b2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033409Z" creationid="pingfangx" creationdate="20190102T033409Z">
+        <seg>&lt;b2&gt;@Deprecated&lt;/b2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;@Override&lt;/b2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033432Z" creationid="pingfangx" creationdate="20190102T033432Z">
+        <seg>&lt;b2&gt;@Override&lt;/b2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;@SuppressWarnings("deprecation")&lt;/b2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033604Z" creationid="pingfangx" creationdate="20190102T033604Z">
+        <seg>&lt;b2&gt;@SuppressWarnings("deprecation")&lt;/b2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Lesson:&lt;/b2&gt; Annotations</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023821Z" creationid="pingfangx" creationdate="20190102T023821Z">
+        <seg>&lt;b2&gt;Lesson:&lt;/b2&gt; 注解</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b2&gt;Lesson:&lt;/b2&gt; Classes and Objects</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T023226Z" creationid="pingfangx" creationdate="20180525T023226Z">
@@ -5084,6 +5602,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T020238Z" creationid="pingfangx" creationdate="20190102T020238Z">
         <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Annotations</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Annotations Basics</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023747Z" creationid="pingfangx" creationdate="20190102T023747Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Annotations Basics</seg>
       </tuv>
     </tu>
     <tu>
@@ -5192,6 +5718,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Declaring an Annotation Type</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024228Z" creationid="pingfangx" creationdate="20190102T024228Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Declaring an Annotation Type</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Defining Methods</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T064411Z" creationid="pingfangx" creationdate="20180525T064411Z">
@@ -5244,6 +5778,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T091954Z" creationid="pingfangx" creationdate="20180705T091954Z">
         <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Inner Class Example</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Interfaces and Inheritance</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041644Z" creationid="pingfangx" creationdate="20190102T041644Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Interfaces and Inheritance</seg>
       </tuv>
     </tu>
     <tu>
@@ -5328,6 +5870,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Predefined Annotation Types</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025904Z" creationid="pingfangx" creationdate="20190102T025904Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Predefined Annotation Types</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Primitive Data Types</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T074604Z" creationid="pingfangx" creationdate="20180518T074604Z">
@@ -5340,6 +5890,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T065528Z" creationid="pingfangx" creationdate="20180525T065528Z">
         <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Providing Constructors for Your Classes</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Questions and Exercises: Annotations</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041457Z" creationid="pingfangx" creationdate="20190102T041457Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Questions and Exercises: Annotations</seg>
       </tuv>
     </tu>
     <tu>
@@ -5420,6 +5978,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T061649Z" creationid="pingfangx" creationdate="20180521T061649Z">
         <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Questions and Exercises: Variables</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Repeating Annotations</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040939Z" creationid="pingfangx" creationdate="20190102T040939Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Repeating Annotations</seg>
       </tuv>
     </tu>
     <tu>
@@ -5508,6 +6074,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T082707Z" creationid="pingfangx" creationdate="20180521T082707Z">
         <seg>&lt;b2&gt;Next page:&lt;/b2&gt; The while and do-while Statements</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Type Annotations and Pluggable Type Systems</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034107Z" creationid="pingfangx" creationdate="20190102T034107Z">
+        <seg>&lt;b2&gt;Next page:&lt;/b2&gt; Type Annotations and Pluggable Type Systems</seg>
       </tuv>
     </tu>
     <tu>
@@ -5808,10 +6382,98 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;ElementType.ANNOTATION_TYPE&lt;/c0&gt; can be applied to an annotation type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033954Z" creationid="pingfangx" creationdate="20190102T033954Z">
+        <seg>&lt;c0&gt;ElementType.ANNOTATION_TYPE&lt;/c0&gt; 可以应用于注解类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;ElementType.CONSTRUCTOR&lt;/c0&gt; can be applied to a constructor.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033956Z" creationid="pingfangx" creationdate="20190102T033956Z">
+        <seg>&lt;c0&gt;ElementType.CONSTRUCTOR&lt;/c0&gt; 可以应用于构造函数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;ElementType.FIELD&lt;/c0&gt; can be applied to a field or property.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033958Z" creationid="pingfangx" creationdate="20190102T033958Z">
+        <seg>&lt;c0&gt;ElementType.FIELD&lt;/c0&gt; 可以应用于字段或属性。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;ElementType.LOCAL_VARIABLE&lt;/c0&gt; can be applied to a local variable.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034000Z" creationid="pingfangx" creationdate="20190102T034000Z">
+        <seg>&lt;c0&gt;ElementType.LOCAL_VARIABLE&lt;/c0&gt; 可以应用于局部变量。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;ElementType.METHOD&lt;/c0&gt; can be applied to a method-level annotation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034003Z" creationid="pingfangx" creationdate="20190102T034003Z">
+        <seg>&lt;c0&gt;ElementType.METHOD&lt;/c0&gt; 可以应用于方法级注解。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;ElementType.PACKAGE&lt;/c0&gt; can be applied to a package declaration.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034005Z" creationid="pingfangx" creationdate="20190102T034005Z">
+        <seg>&lt;c0&gt;ElementType.PACKAGE&lt;/c0&gt; 可以应用于包声明。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;ElementType.PARAMETER&lt;/c0&gt; can be applied to the parameters of a method.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034007Z" creationid="pingfangx" creationdate="20190102T034007Z">
+        <seg>&lt;c0&gt;ElementType.PARAMETER&lt;/c0&gt; 可以应用于方法的参数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;ElementType.TYPE&lt;/c0&gt; can be applied to any element of a class.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034010Z" creationid="pingfangx" creationdate="20190102T034010Z">
+        <seg>&lt;c0&gt;ElementType.TYPE&lt;/c0&gt; 可以应用于类的任何元素。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;MountainBike&lt;/c0&gt; inherits all the fields and methods of &lt;c1&gt;Bicycle&lt;/c1&gt; and adds the field &lt;c2&gt;seatHeight&lt;/c2&gt; and a method to set it (mountain bikes have seats that can be moved up and down as the terrain demands).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T025747Z" creationid="pingfangx" creationdate="20180525T025717Z">
         <seg>&lt;c0&gt;MountainBike&lt;/c0&gt; 继承 &lt;c1&gt;Bicycle&lt;/c1&gt; 的所有字段和方法，并添加字段 &lt;c2&gt;seatHeight&lt;/c2&gt; 以及设置它的方法(山地自行车有可移动的座位根据地形要求上下)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;RetentionPolicy.CLASS&lt;/c0&gt; – The marked annotation is retained by the compiler at compile time, but is ignored by the Java Virtual Machine (JVM).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033906Z" creationid="pingfangx" creationdate="20190102T033906Z">
+        <seg>&lt;c0&gt;RetentionPolicy.CLASS&lt;/c0&gt;  - 标记的注解在编译时由编译器保留，但 Java 虚拟机(JVM)会忽略。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;RetentionPolicy.RUNTIME&lt;/c0&gt; – The marked annotation is retained by the JVM so it can be used by the runtime environment.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033911Z" creationid="pingfangx" creationdate="20190102T033911Z">
+        <seg>&lt;c0&gt;RetentionPolicy.RUNTIME&lt;/c0&gt;  - 标记的注解由 JVM 保留，因此运行时环境可以使用它。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;RetentionPolicy.SOURCE&lt;/c0&gt; – The marked annotation is retained only in the source level and is ignored by the compiler.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033858Z" creationid="pingfangx" creationdate="20190102T033858Z">
+        <seg>&lt;c0&gt;RetentionPolicy.SOURCE&lt;/c0&gt;  - 标记的注解仅保留在源级别中，并被编译器忽略。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5852,6 +6514,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T071728Z" creationid="pingfangx" creationdate="20180521T071728Z">
         <seg>（&lt;c0&gt;if-then-else&lt;/c0&gt; 语句的缩写）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;implements&lt;/c0&gt; clause:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024204Z" creationid="pingfangx" creationdate="20190102T024204Z">
+        <seg>&lt;c0&gt;implements&lt;/c0&gt; 子句：</seg>
       </tuv>
     </tu>
     <tu>
@@ -6002,6 +6672,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;e0&gt;Annotations&lt;/e0&gt;, a form of metadata, provide data about a program that is not part of the program itself.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023522Z" creationid="pingfangx" creationdate="20190102T023522Z">
+        <seg>&lt;e0&gt;Annotations&lt;/e0&gt;，一种元数据形式，提供有关于程序但不属于程序本身的数据。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;e0&gt;expr&lt;/e0&gt;++ &lt;e1&gt;expr&lt;/e1&gt;--</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T062955Z" creationid="pingfangx" creationdate="20180521T062955Z">
@@ -6072,6 +6750,30 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T092038Z" creationid="pingfangx" creationdate="20180706T092038Z">
         <seg>&lt;s0&gt;(Person p) -&gt; p.getGender() == Person.Sex.MALE</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;@NonNull&lt;/s0&gt; String str;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040805Z" creationid="pingfangx" creationdate="20190102T035434Z">
+        <seg>&lt;s0&gt;@NonNull&lt;/s0&gt; String str;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Answer&lt;/s0&gt; The documentation should reflect why &lt;c1&gt;open&lt;/c1&gt; is deprecated and what to use instead.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041704Z" creationid="pingfangx" creationdate="20190102T041704Z">
+        <seg>&lt;s0&gt;Answer&lt;/s0&gt; 文档应该反映出为什么不推荐使用 &lt;c1&gt;open&lt;/c1&gt; 以及使用什么。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Answer&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041811Z" creationid="pingfangx" creationdate="20190102T041801Z">
+        <seg>&lt;s0&gt;答案&lt;/s0&gt;：</seg>
       </tuv>
     </tu>
     <tu>
@@ -6212,6 +6914,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Answer&lt;/s0&gt;: The code fails to compile.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041727Z" creationid="pingfangx" creationdate="20190102T041727Z">
+        <seg>&lt;s0&gt;Answer&lt;/s0&gt;：代码无法编译。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s0&gt;Answer&lt;/s0&gt;: The code never creates a &lt;a1&gt;&lt;c2&gt;Rectangle&lt;/c2&gt;&lt;/a1&gt; object.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T083453Z" creationid="pingfangx" creationdate="20180705T083453Z">
@@ -6224,6 +6934,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T083538Z" creationid="pingfangx" creationdate="20180705T083538Z">
         <seg>&lt;s0&gt;Answer&lt;/s0&gt;：有一个对 &lt;c1&gt;students&lt;/c1&gt; 数组的引用，该数组有一个对字符串 &lt;c2&gt;Peter Smith&lt;/c2&gt; 的引用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Answer&lt;/s0&gt;: You can deprecate the implementation of &lt;c1&gt;open&lt;/c1&gt;:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041717Z" creationid="pingfangx" creationdate="20190102T041717Z">
+        <seg>&lt;s0&gt;Answer&lt;/s0&gt;：您可以弃用 &lt;c1&gt;open&lt;/c1&gt; 的实现：</seg>
       </tuv>
     </tu>
     <tu>
@@ -6352,6 +7070,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T091448Z" creationid="pingfangx" creationdate="20180521T091448Z">
         <seg>&lt;s0&gt;Exercise:&lt;/s0&gt; 编写一个包含前面代码片段的测试程序; 使 &lt;c1&gt;aNumber&lt;/c1&gt; 为3。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Exercise&lt;/s0&gt;: Define an annotation type for an enhancement request with elements &lt;c1&gt;id&lt;/c1&gt;, &lt;c2&gt;synopsis&lt;/c2&gt;, &lt;c3&gt;engineer&lt;/c3&gt;, and &lt;c4&gt;date&lt;/c4&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041749Z" creationid="pingfangx" creationdate="20190102T041749Z">
+        <seg>&lt;s0&gt;Exercise&lt;/s0&gt;：为元素 &lt;c1&gt;id&lt;/c1&gt;，&lt;c2&gt;synopsis&lt;/c2&gt;，&lt;c3&gt;engineer&lt;/c3&gt; 和 &lt;c4&gt;date&lt;/c4&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6636,6 +7362,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; To make the information in &lt;c1&gt;@ClassPreamble&lt;/c1&gt; appear in Javadoc-generated documentation, you must annotate the &lt;c2&gt;@ClassPreamble&lt;/c2&gt; definition with the &lt;c3&gt;@Documented&lt;/c3&gt; annotation:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025854Z" creationid="pingfangx" creationdate="20190102T025220Z">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; 要使 &lt;c1&gt;@ClassPreamble&lt;/c1&gt; 中的信息出现在 Javadoc 生成的文档中，您必须使用 &lt;c3&gt;@Documented&lt;/c3&gt; 来注解 &lt;c2&gt;@ClassPreamble&lt;/c2&gt; 的定义：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; Type all code, commands, and file names exactly as shown.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034557Z" creationid="pingfangx" creationdate="20180518T034557Z">
@@ -6760,6 +7494,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Question&lt;/s0&gt;: Consider this implementation of the &lt;c1&gt;House&lt;/c1&gt; interface, shown in Question 1.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041711Z" creationid="pingfangx" creationdate="20190102T041711Z">
+        <seg>&lt;s0&gt;Question&lt;/s0&gt;：考虑问题 1 中所示的 &lt;c1&gt;House&lt;/c1&gt; 接口的这种实现。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s0&gt;Question&lt;/s0&gt;: How do you create an instance of &lt;c1&gt;Box&lt;/c1&gt;'s &lt;c2&gt;Filler&lt;/c2&gt; class?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T014742Z" creationid="pingfangx" creationdate="20190102T014742Z">
@@ -6836,6 +7578,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T014732Z" creationid="pingfangx" creationdate="20190102T014732Z">
         <seg>&lt;s0&gt;Question&lt;/s0&gt;：&lt;c1&gt;Box&lt;/c1&gt; 的内部类的超类是什么？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Question&lt;/s0&gt;: What is wrong with the following interface:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041656Z" creationid="pingfangx" creationdate="20190102T041656Z">
+        <seg>&lt;s0&gt;Question&lt;/s0&gt;：以下接口有什么问题：</seg>
       </tuv>
     </tu>
     <tu>
@@ -7174,10 +7924,174 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>@Alert(role="Manager")
+@Alert(role="Administrator")
+public class UnauthorizedAccessException extends SecurityException { ... }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041123Z" creationid="pingfangx" creationdate="20190102T041123Z">
+        <seg>@Alert(role="Manager")
+@Alert(role="Administrator")
+public class UnauthorizedAccessException extends SecurityException { ... }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@Author(</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023917Z" creationid="pingfangx" creationdate="20190102T023917Z">
+        <seg>@Author(</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@Author(name = "Jane Doe")
+@Author(name = "John Smith")
+class MyClass { ... }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024019Z" creationid="pingfangx" creationdate="20190102T024019Z">
+        <seg>@Author(name = "Jane Doe")
+@Author(name = "John Smith")
+class MyClass { ... }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@Author(name = "Jane Doe")
+@EBook
+class MyClass { ... }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024004Z" creationid="pingfangx" creationdate="20190102T024004Z">
+        <seg>@Author(name = "Jane Doe")
+@EBook
+class MyClass { ... }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@ClassPreamble (</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025145Z" creationid="pingfangx" creationdate="20190102T025145Z">
+        <seg>@ClassPreamble (</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@Critical TemperatureException { ... }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024214Z" creationid="pingfangx" creationdate="20190102T024214Z">
+        <seg>@Critical TemperatureException { ... }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@Deprecated</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041550Z" creationid="pingfangx" creationdate="20190102T041550Z">
+        <seg>@Deprecated</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@Entity</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023833Z" creationid="pingfangx" creationdate="20190102T023833Z">
+        <seg>@Entity</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>@Override</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T065638Z" creationid="pingfangx" creationdate="20180706T065638Z">
         <seg>@Override</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@Override
+void mySuperMethod() { ... }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023901Z" creationid="pingfangx" creationdate="20190102T023901Z">
+        <seg>@Override
+void mySuperMethod() { ... }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@Readonly List&lt;@Readonly T&gt; { ... }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024206Z" creationid="pingfangx" creationdate="20190102T024206Z">
+        <seg>@Readonly List&lt;@Readonly T&gt; { ... }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@Schedule(dayOfMonth="last")
+@Schedule(dayOfWeek="Fri", hour="23")
+public void doPeriodicCleanup() { ... }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041100Z" creationid="pingfangx" creationdate="20190102T041100Z">
+        <seg>@Schedule(dayOfMonth="last")
+@Schedule(dayOfWeek="Fri", hour="23")
+public void doPeriodicCleanup() { ... }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@SuppressWarnings("deprecation")</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041724Z" creationid="pingfangx" creationdate="20190102T041724Z">
+        <seg>@SuppressWarnings("deprecation")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@SuppressWarnings("unchecked")
+void myMethod() { ... }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023950Z" creationid="pingfangx" creationdate="20190102T023950Z">
+        <seg>@SuppressWarnings("unchecked")
+void myMethod() { ... }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@SuppressWarnings(value = "unchecked")
+void myMethod() { ... }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023943Z" creationid="pingfangx" creationdate="20190102T023943Z">
+        <seg>@SuppressWarnings(value = "unchecked")
+void myMethod() { ... }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@SuppressWarnings({"unchecked", "deprecation"})</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033700Z" creationid="pingfangx" creationdate="20190102T033700Z">
+        <seg>@SuppressWarnings({"unchecked", "deprecation"})</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@interface ClassPreamble {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024840Z" creationid="pingfangx" creationdate="20190102T024840Z">
+        <seg>@interface ClassPreamble {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>@java.lang.annotation.Repeatable(MealContainer.class)
+public @interface Meal { ... }
+
+public @interface MealContainer {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041745Z" creationid="pingfangx" creationdate="20190102T041745Z">
+        <seg>@java.lang.annotation.Repeatable(MealContainer.class)
+public @interface Meal { ... }
+
+public @interface MealContainer {</seg>
       </tuv>
     </tu>
     <tu>
@@ -7526,6 +8440,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A few examples of where types are used are class instance creation expressions (&lt;c1&gt;new&lt;/c1&gt;), casts, &lt;c2&gt;implements&lt;/c2&gt; clauses, and &lt;c3&gt;throws&lt;/c3&gt; clauses.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034937Z" creationid="pingfangx" creationdate="20190102T034937Z">
+        <seg>使用类型的一些示例是类实例创建表达式(&lt;c1&gt;new&lt;/c1&gt;)，强制转换，&lt;c2&gt;implements&lt;/c2&gt; 子句和 &lt;c3&gt;throws&lt;/c3&gt; 子句。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A field defining the number of gears for a particular kind of bicycle could be marked as &lt;c3&gt;static&lt;/c3&gt; since conceptually the same number of gears will apply to all instances.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T073454Z" creationid="pingfangx" creationdate="20180518T073454Z">
@@ -7718,6 +8640,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A set of annotation types are predefined in the Java SE API.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033237Z" creationid="pingfangx" creationdate="20190102T033237Z">
+        <seg>Java SE API 中预定义了一组注解类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A shell window.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034744Z" creationid="pingfangx" creationdate="20180518T034744Z">
@@ -7786,6 +8716,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T082044Z" creationid="pingfangx" creationdate="20180521T082044Z">
         <seg>&lt;c2&gt;switch&lt;/c2&gt; 块中的语句可以标注一个或多个 &lt;c3&gt;case&lt;/c3&gt; 或 &lt;c4&gt;default&lt;/c4&gt; 标签。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A target annotation specifies one of the following element types as its value:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033951Z" creationid="pingfangx" creationdate="20190102T033951Z">
+        <seg>目标注解指定以下元素类型之一作为其值：</seg>
       </tuv>
     </tu>
     <tu>
@@ -8214,6 +9152,22 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>After the annotation type is defined, you can use annotations of that type, with the values filled in, like this:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025145Z" creationid="pingfangx" creationdate="20190102T025145Z">
+        <seg>定义注解类型后，您可以使用该类型的注解，并填入值，如下所示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>After you correct the code to remove all warnings, this particular error will not occur when the program runs.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040828Z" creationid="pingfangx" creationdate="20190102T040828Z">
+        <seg>在更正代码以移除所有警告后，程序运行时不会发生此特定错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>After, it checks whether the phone number contains exactly ten digits (the length of a phone number in North America).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T122610Z" creationid="pingfangx" creationdate="20180705T122610Z">
@@ -8334,6 +9288,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Also, note that the Javadoc tag starts with a lowercase &lt;e7&gt;d&lt;/e7&gt; and the annotation starts with an uppercase &lt;e8&gt;D&lt;/e8&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033404Z" creationid="pingfangx" creationdate="20190102T033404Z">
+        <seg>另请注意，Javadoc 标记以小写 &lt;e7&gt;d&lt;/e7&gt; 开头，注解以大写 &lt;e8&gt;D&lt;/e8&gt; 开头。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Also, the constructor sets &lt;c3&gt;width&lt;/c3&gt; to 100 and &lt;c4&gt;height&lt;/c4&gt; to 200.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T071349Z" creationid="pingfangx" creationdate="20180601T071349Z">
@@ -8362,6 +9324,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T085105Z" creationid="pingfangx" creationdate="20181228T085105Z">
         <seg>或者，您可以按如下方式指定：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Alternatively, you can suppress the warning:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041724Z" creationid="pingfangx" creationdate="20190102T041724Z">
+        <seg>或者，您可以取消警告：</seg>
       </tuv>
     </tu>
     <tu>
@@ -8638,6 +9608,22 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Annotation Types Used by the Java Language</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033249Z" creationid="pingfangx" creationdate="20190102T033249Z">
+        <seg>Java 语言使用的注解类型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Annotation types are a form of &lt;i2&gt;interface&lt;/i2&gt;, which will be covered in a later lesson.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025119Z" creationid="pingfangx" creationdate="20190102T025029Z">
+        <seg>注解类型是 &lt;i2&gt;接口（interface）&lt;/i2&gt; 的一种形式，将在后面的课程中介绍。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Annotations</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T092315Z" creationid="pingfangx" creationdate="20180521T092315Z">
@@ -8650,6 +9636,54 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T092321Z" creationid="pingfangx" creationdate="20180521T092321Z">
         <seg>注解基础</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Annotations Basics (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023818Z" creationid="pingfangx" creationdate="20190102T023818Z">
+        <seg>Annotations Basics (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Annotations That Apply to Other Annotations</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033818Z" creationid="pingfangx" creationdate="20190102T033818Z">
+        <seg>适用于其他注解的注解</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Annotations can be applied to declarations: declarations of classes, fields, methods, and other program elements.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024110Z" creationid="pingfangx" creationdate="20190102T024110Z">
+        <seg>注解可以应用于声明：类，字段，方法和其他程序元素的声明。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Annotations have a number of uses, among them:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023535Z" creationid="pingfangx" creationdate="20190102T023535Z">
+        <seg>注解有许多用途，其中包括：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Annotations have no direct effect on the operation of the code they annotate.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023532Z" creationid="pingfangx" creationdate="20190102T023532Z">
+        <seg>注解对它们注解的代码的操作没有直接影响。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Annotations that apply to other annotations are called &lt;e0&gt;meta-annotations&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033833Z" creationid="pingfangx" creationdate="20190102T033833Z">
+        <seg>适用于其他注解的注解称为 &lt;e0&gt;元注解（meta-annotations）&lt;/e0&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8738,6 +9772,22 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064845Z" creationid="pingfangx" creationdate="20180518T064845Z">
         <seg>问题的答案</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Answers to Questions and Exercises: Annotations</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041653Z" creationid="pingfangx" creationdate="20190102T041653Z">
+        <seg>问题和练习的答案：注解</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Answers to Questions and Exercises: Annotations (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041649Z" creationid="pingfangx" creationdate="20190102T041649Z">
+        <seg>Answers to Questions and Exercises: Annotations (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
       </tuv>
     </tu>
     <tu>
@@ -8938,6 +9988,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T021008Z" creationid="pingfangx" creationdate="20190102T021008Z">
         <seg>Anyone can use this nested class.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Applying the same annotation to a declaration without first declaring it to be repeatable results in a compile-time error.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041234Z" creationid="pingfangx" creationdate="20190102T041234Z">
+        <seg>将相同的注解应用于声明而不首先声明它是可重复的，这会导致编译时错误。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9226,6 +10284,38 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T061151Z" creationid="pingfangx" creationdate="20180706T061151Z">
         <seg>如前所述，匿名类是一个表达式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As of JDK 8, the code fails to compile because the &lt;c1&gt;Meal&lt;/c1&gt; annotation type was not defined to be repeatable.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041739Z" creationid="pingfangx" creationdate="20190102T041739Z">
+        <seg>从 JDK 8 开始，代码无法编译，因为 &lt;c1&gt;Meal&lt;/c1&gt; 注解类型未定义为可重复。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As of the Java SE 8 release, &lt;e0&gt;repeating annotations&lt;/e0&gt; enable you to do this.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041006Z" creationid="pingfangx" creationdate="20190102T041006Z">
+        <seg>从 Java SE 8 发行版开始，&lt;e0&gt;repeating annotations&lt;/e0&gt; 使您能够执行此操作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As of the Java SE 8 release, annotations can also be applied to any &lt;e0&gt;type use&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034856Z" creationid="pingfangx" creationdate="20190102T034856Z">
+        <seg>从 Java SE 8 发行版开始，注解也可以应用于任何 &lt;e0&gt;类型使用&lt;/e0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As of the Java SE 8 release, annotations can also be applied to the &lt;e0&gt;use&lt;/e0&gt; of types.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024151Z" creationid="pingfangx" creationdate="20190102T024151Z">
+        <seg>从 Java SE 8 发行版开始，注解也可以应用于类型的 &lt;e0&gt;使用（use）&lt;/e0&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9670,6 +10760,22 @@ December</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Before JDK 8, repeatable annotations are not supported.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041731Z" creationid="pingfangx" creationdate="20190102T041731Z">
+        <seg>在 JDK 8 之前，不支持可重复的注解。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Before the Java SE 8 release, annotations could only be applied to declarations.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034844Z" creationid="pingfangx" creationdate="20190102T034844Z">
+        <seg>在 Java SE 8 发行版之前，注解只能应用于声明。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Besides &lt;c1&gt;int&lt;/c1&gt;, what other data types are there?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T073106Z" creationid="pingfangx" creationdate="20180518T073106Z">
@@ -10110,6 +11216,14 @@ C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Class instance creation expression:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024159Z" creationid="pingfangx" creationdate="20190102T024153Z">
+        <seg>类实例创建表达式：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Class methods &lt;b0&gt;cannot&lt;/b0&gt; access instance variables or instance methods directlythey must use an object reference.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T065211Z" creationid="pingfangx" creationdate="20180705T065211Z">
@@ -10546,6 +11660,14 @@ C:\myapplication&gt;&lt;s1&gt;dir&lt;/s1&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T061208Z" creationid="pingfangx" creationdate="20180706T061208Z">
         <seg>考虑 &lt;c0&gt;frenchGreeting&lt;/c0&gt; 对象的实例化：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Consider this implementation of the &lt;c0&gt;House&lt;/c0&gt; interface, shown in Question 1.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041558Z" creationid="pingfangx" creationdate="20190102T041558Z">
+        <seg>考虑问题 1 中所示的 &lt;c0&gt;House&lt;/c0&gt; 接口的这种实现。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11048,6 +12170,14 @@ ds.print(new EvenIterator());</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Declaring an Annotation Type (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024654Z" creationid="pingfangx" creationdate="20190102T024654Z">
+        <seg>Declaring an Annotation Type (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Decrement operator; decrements a value by 1</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T065208Z" creationid="pingfangx" creationdate="20180521T065129Z">
@@ -11104,6 +12234,14 @@ ds.print(new EvenIterator());</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Define an annotation type for an enhancement request with elements &lt;c0&gt;id&lt;/c0&gt;, &lt;c1&gt;synopsis&lt;/c1&gt;, &lt;c2&gt;engineer&lt;/c2&gt;, and &lt;c3&gt;date&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041632Z" creationid="pingfangx" creationdate="20190102T041632Z">
+        <seg>为元素 &lt;c0&gt;id&lt;/c0&gt;，&lt;c1&gt;synopsis&lt;/c1&gt;，&lt;c2&gt;engineer&lt;/c2&gt; 和 &lt;c3&gt;date&lt;/c3&gt; 定义增强请求的注解类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Define two methods so that the following two statements print elements that have an even index value and elements that have an odd index value:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T014205Z" creationid="pingfangx" creationdate="20190102T014205Z">
@@ -11156,6 +12294,14 @@ ds.print(new EvenIterator());</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T064406Z" creationid="pingfangx" creationdate="20180521T064406Z">
         <seg>描述</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Design Considerations</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041401Z" creationid="pingfangx" creationdate="20190102T041401Z">
+        <seg>设计注意事项</seg>
       </tuv>
     </tu>
     <tu>
@@ -11618,6 +12764,14 @@ Element at index 9: 1000</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Every compiler warning belongs to a category.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033611Z" creationid="pingfangx" creationdate="20190102T033611Z">
+        <seg>每个编译器警告都属于一个类别。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Every full implementation of the Java platform gives you the following features:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033611Z" creationid="pingfangx" creationdate="20180518T033611Z">
@@ -11990,6 +13144,14 @@ Second number is invalid</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For compatibility reasons, repeating annotations are stored in a &lt;e0&gt;container annotation&lt;/e0&gt; that is automatically generated by the Java compiler.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041135Z" creationid="pingfangx" creationdate="20190102T041135Z">
+        <seg>出于兼容性原因，重复注解存储在由 Java 编译器自动生成的 &lt;e0&gt;container annotation&lt;/e0&gt; 中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For decimal values, this data type is generally the default choice.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T081818Z" creationid="pingfangx" creationdate="20180518T081818Z">
@@ -12318,6 +13480,22 @@ Second number is invalid</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For example, you are writing code to use a timer service that enables you to run a method at a given time or on a certain schedule, similar to the UNIX &lt;t0&gt;cron&lt;/t0&gt; service.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041032Z" creationid="pingfangx" creationdate="20190102T041032Z">
+        <seg>例如，您正在编写代码以使用计时器服务，该服务使您能够在给定时间或某个计划上运行方法，类似于 UNIX &lt;t0&gt;cron&lt;/t0&gt; 服务。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, you can create a repeatable annotation type that can only be used on methods and fields.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041447Z" creationid="pingfangx" creationdate="20190102T041447Z">
+        <seg>例如，您可以创建只能在方法和字段上使用的可重复注解类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example, you can define a local class in a method body, a &lt;c1&gt;for&lt;/c1&gt; loop, or an &lt;c2&gt;if&lt;/c2&gt; clause.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T122419Z" creationid="pingfangx" creationdate="20180705T122419Z">
@@ -12346,6 +13524,30 @@ Second number is invalid</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T101414Z" creationid="pingfangx" creationdate="20180705T101414Z">
         <seg>例如，您可以使用访问说明符 &lt;c0&gt;private&lt;/c0&gt;，&lt;c1&gt;public&lt;/c1&gt; 和 &lt;c2&gt;protected&lt;/c2&gt; 来限制对内部类的访问，就像您使用它们来限制一样访问其他类成员。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, you have a class for handling unauthorized access exceptions.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041117Z" creationid="pingfangx" creationdate="20190102T041117Z">
+        <seg>例如，您有一个用于处理未授权访问异常的类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, you might want to take advantage of the Checker Framework created by the University of Washington.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040925Z" creationid="pingfangx" creationdate="20190102T040925Z">
+        <seg>例如，您可能希望利用华盛顿大学创建的 Checker Framework。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, you want to ensure that a particular variable in your program is never assigned to null; you want to avoid triggering a &lt;c0&gt;NullPointerException&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040748Z" creationid="pingfangx" creationdate="20190102T035029Z">
+        <seg>例如，您希望确保程序中的特定变量永远不会分配给 null;你想避免触发 &lt;c0&gt;NullPointerException&lt;/c0&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12446,6 +13648,38 @@ Second number is invalid</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For more information, see &lt;a0&gt;Repeating Annotations&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024028Z" creationid="pingfangx" creationdate="20190102T024028Z">
+        <seg>有关更多信息，请参阅 &lt;a0&gt;Repeating Annotations&lt;/a0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For more information, see &lt;a1&gt;Type Annotations and Pluggable Type Systems&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024226Z" creationid="pingfangx" creationdate="20190102T024226Z">
+        <seg>有关更多信息，请参阅 &lt;a1&gt;Type Annotations and Pluggable Type Systems&lt;/a1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For more information, see &lt;a3&gt;Repeating Annotations&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034105Z" creationid="pingfangx" creationdate="20190102T034100Z">
+        <seg>有关更多信息，请参阅 &lt;a3&gt;Repeating Annotations&lt;/a3&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For more information, see the &lt;a1&gt;Checker Framework&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040936Z" creationid="pingfangx" creationdate="20190102T040936Z">
+        <seg>有关更多信息，请参阅 &lt;a1&gt;Checker Framework&lt;/a1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For now it is enough to know that every application begins with a class definition.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035620Z" creationid="pingfangx" creationdate="20180518T035620Z">
@@ -12490,6 +13724,14 @@ Second number is invalid</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T023634Z" creationid="pingfangx" creationdate="20180525T023634Z">
         <seg>目前，不要关注细节。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For the moment, you do not need to understand interfaces.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025032Z" creationid="pingfangx" creationdate="20190102T025032Z">
+        <seg>目前，您不需要了解接口。</seg>
       </tuv>
     </tu>
     <tu>
@@ -13680,6 +14922,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If a method marked with &lt;c0&gt;@Override&lt;/c0&gt; fails to correctly override a method in one of its superclasses, the compiler generates an error.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033451Z" creationid="pingfangx" creationdate="20190102T033451Z">
+        <seg>如果标有 &lt;c0&gt;@Override&lt;/c0&gt; 的方法无法正确覆盖其某个超类中的方法，则编译器会生成错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If a second statement is later added to the "then" clause, a common mistake would be forgetting to add the newly required braces.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T081046Z" creationid="pingfangx" creationdate="20180521T081046Z">
@@ -13720,6 +14970,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If more than one annotation of the requested type is present, you can obtain them by first getting their container annotation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041339Z" creationid="pingfangx" creationdate="20190102T041339Z">
+        <seg>如果存在多个所请求类型的注解，则可以通过首先获取其容器注解来获取它们。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If not, you can use a "Unicode escape" such as &lt;c2&gt;'\u0108'&lt;/c2&gt; (capital C with circumflex), or &lt;c3&gt;"S\u00ED Se\u00F1or"&lt;/c3&gt; (Sí Señor in Spanish).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T083302Z" creationid="pingfangx" creationdate="20180518T083302Z">
@@ -13748,6 +15006,22 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T093849Z" creationid="pingfangx" creationdate="20180706T093849Z">
         <seg>如果 &lt;c5&gt;Person&lt;/c5&gt; 实例满足 &lt;c6&gt;tester&lt;/c6&gt; 指定的条件，则在 &lt;c8&gt;Person&lt;/c8&gt; 实例上调用方法 &lt;c7&gt;printPersron&lt;/c7&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the annotation has no elements, then the parentheses can be omitted, as shown in the previous &lt;c0&gt;@Override&lt;/c0&gt; example.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023958Z" creationid="pingfangx" creationdate="20190102T023958Z">
+        <seg>如果注解没有元素，则可以省略括号，如前面的 &lt;c0&gt;@Override&lt;/c0&gt; 示例所示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the annotations have the same type, then this is called a repeating annotation:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024018Z" creationid="pingfangx" creationdate="20190102T024018Z">
+        <seg>如果注解具有相同的类型，则称为重复注解：</seg>
       </tuv>
     </tu>
     <tu>
@@ -13856,6 +15130,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If there is just one element named &lt;c0&gt;value&lt;/c0&gt;, then the name can be omitted, as in:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023949Z" creationid="pingfangx" creationdate="20190102T023949Z">
+        <seg>如果只有一个名为 &lt;c0&gt;value&lt;/c0&gt; 的元素，则可以省略该名称，如：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If this is the case, the parameter is said to &lt;i0&gt;shadow&lt;/i0&gt; the field.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T033517Z" creationid="pingfangx" creationdate="20180601T033517Z">
@@ -13916,6 +15198,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T082235Z" creationid="pingfangx" creationdate="20180518T082235Z">
         <seg>如果你不能初始化声明它的局部变量，确保在你尝试使用它之前给它赋值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you compile this program, the compiler produces a warning because &lt;c0&gt;open&lt;/c0&gt; was deprecated (in the interface).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041608Z" creationid="pingfangx" creationdate="20190102T041608Z">
+        <seg>如果编译此程序，编译器会生成警告，因为不推荐使用 &lt;c0&gt;open&lt;/c0&gt;(在接口中)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14272,10 +15562,26 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In its simplest form, an annotation looks like the following:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023832Z" creationid="pingfangx" creationdate="20190102T023832Z">
+        <seg>在最简单的形式中，注解如下所示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In many cases it will also make your code self-documenting; fields named &lt;c0&gt;cadence&lt;/c0&gt;, &lt;c1&gt;speed&lt;/c1&gt;, and &lt;c2&gt;gear&lt;/c2&gt;, for example, are much more intuitive than abbreviated versions, such as &lt;c3&gt;s&lt;/c3&gt;, &lt;c4&gt;c&lt;/c4&gt;, and &lt;c5&gt;g&lt;/c5&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T074451Z" creationid="pingfangx" creationdate="20180518T074451Z">
         <seg>在很多情况下，它也会使你的代码自带文档;例如，名为 &lt;c0&gt;cadence&lt;/c0&gt;，&lt;c1&gt;speed&lt;/c1&gt; 和 &lt;c2&gt;gear&lt;/c2&gt; 的字段比缩写版本更直观，例如 &lt;c3&gt;s&lt;/c3&gt;，&lt;c4&gt;c&lt;/c4&gt; 和 &lt;c5&gt;g&lt;/c5&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In many cases, you do not have to write your own type checking modules.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040602Z" creationid="pingfangx" creationdate="20190102T040602Z">
+        <seg>在许多情况下，您不必编写自己的类型检查模块。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14300,6 +15606,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T082646Z" creationid="pingfangx" creationdate="20180521T082646Z">
         <seg>为了让 &lt;c5&gt;StringSwitchDemo&lt;/c5&gt; 示例接受任意月份而不考虑大小写，&lt;c6&gt;month&lt;/c6&gt; 将转换为小写形式(使用 &lt;a7&gt;&lt;c8&gt;toLowerCase&lt;/c8&gt;&lt;/a7&gt; 方法)，并且与 &lt;c9&gt;case&lt;/c9&gt; 标签关联的所有字符串都是小写字母。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In order for the compiler to do this, two declarations are required in your code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041141Z" creationid="pingfangx" creationdate="20190102T041141Z">
+        <seg>为了使编译器执行此操作，代码中需要两个声明。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14440,6 +15754,22 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In the following example, a deprecated method is used, and the compiler usually generates a warning.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033557Z" creationid="pingfangx" creationdate="20190102T033557Z">
+        <seg>在以下示例中，使用了不推荐使用的方法，编译器通常会生成警告。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the following example, the annotation's name is &lt;c1&gt;Override&lt;/c1&gt;:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023901Z" creationid="pingfangx" creationdate="20190102T023901Z">
+        <seg>在以下示例中，注解的名称为 &lt;c1&gt;Override&lt;/c1&gt;：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In the following example, this operator should be read as: "If &lt;c4&gt;someCondition&lt;/c4&gt; is &lt;c5&gt;true&lt;/c5&gt;, assign the value of &lt;c6&gt;value1&lt;/c6&gt; to &lt;c7&gt;result&lt;/c7&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T070318Z" creationid="pingfangx" creationdate="20180521T070318Z">
@@ -14468,6 +15798,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T122641Z" creationid="pingfangx" creationdate="20180705T122641Z">
         <seg>在前面的示例中，&lt;c0&gt;PhoneNumber&lt;/c0&gt; 构造函数访问成员 &lt;c1&gt;LocalClassExample.regularExpression&lt;/c1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the previous examples, &lt;c2&gt;Override&lt;/c2&gt; and &lt;c3&gt;SuppressWarnings&lt;/c3&gt; are &lt;a4&gt;predefined Java annotations&lt;/a4&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024051Z" creationid="pingfangx" creationdate="20190102T024051Z">
+        <seg>在前面的示例中，&lt;c2&gt;Override&lt;/c2&gt; 和 &lt;c3&gt;SuppressWarnings&lt;/c3&gt; 是 &lt;a4&gt;predefined Java annotations&lt;/a4&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14524,6 +15862,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T073527Z" creationid="pingfangx" creationdate="20180601T073527Z">
         <seg>在这种情况下，&lt;c0&gt;width&lt;/c0&gt; 和 &lt;c1&gt;height&lt;/c1&gt; 是简单名称。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this case, however, the annotation causes the warning to be suppressed.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033602Z" creationid="pingfangx" creationdate="20190102T033602Z">
+        <seg>但是，在这种情况下，注解会导致警告被抑制。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14648,6 +15994,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In this example, the containing annotation type is &lt;c1&gt;Schedules&lt;/c1&gt;, so repeating &lt;c2&gt;@Schedule&lt;/c2&gt; annotations is stored in an &lt;c3&gt;@Schedules&lt;/c3&gt; annotation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041218Z" creationid="pingfangx" creationdate="20190102T041218Z">
+        <seg>在此示例中，包含注解类型为 &lt;c1&gt;Schedules&lt;/c1&gt;，因此重复 &lt;c2&gt;@Schedule&lt;/c2&gt; 注解存储在 &lt;c3&gt;@Schedules&lt;/c3&gt; 注解中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In this example, the directory is &lt;c1&gt;myapplication&lt;/c1&gt; on the &lt;c2&gt;C&lt;/c2&gt; drive.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034647Z" creationid="pingfangx" creationdate="20180518T034647Z">
@@ -14740,6 +16094,22 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T021146Z" creationid="pingfangx" creationdate="20190102T021146Z">
         <seg>In this version, the button actually *does* something</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this way, legacy code continues to work.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041343Z" creationid="pingfangx" creationdate="20190102T041343Z">
+        <seg>通过这种方式，遗留代码继续工作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this way, you can build on top of the Java type system, adding specific checks when and where you want them.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040903Z" creationid="pingfangx" creationdate="20190102T040903Z">
+        <seg>这样，您可以在 Java 类型系统的顶部构建，并在需要的时候和特定的地方添加特定的检查。</seg>
       </tuv>
     </tu>
     <tu>
@@ -15144,6 +16514,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It can be fixed by adding the &lt;c2&gt;@Repeatable&lt;/c2&gt; meta-annotation and defining a container annotation type:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041745Z" creationid="pingfangx" creationdate="20190102T041745Z">
+        <seg>可以通过添加 &lt;c2&gt;@Repeatable&lt;/c2&gt; 元注解并定义容器注解类型来修复它：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It cannot be the same as the name of another parameter for the same method or constructor, and it cannot be the name of a local variable within the method or constructor.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T033457Z" creationid="pingfangx" creationdate="20180601T033457Z">
@@ -15256,6 +16634,30 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It is also possible to define your own annotation type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024055Z" creationid="pingfangx" creationdate="20190102T024055Z">
+        <seg>也可以定义自己的注解类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is also possible to restrict where an annotation type can be used by using the &lt;c2&gt;@Target&lt;/c2&gt; meta-annotation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041439Z" creationid="pingfangx" creationdate="20190102T041439Z">
+        <seg>也可以通过使用 &lt;c2&gt;@Target&lt;/c2&gt; 元注解来限制可以使用注解类型的位置。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is also possible to use multiple annotations on the same declaration:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024003Z" creationid="pingfangx" creationdate="20190102T024003Z">
+        <seg>也可以在同一声明上使用多个注解：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It is cumbersome to use a new name for each methodfor example, &lt;c0&gt;drawString&lt;/c0&gt;, &lt;c1&gt;drawInteger&lt;/c1&gt;, &lt;c2&gt;drawFloat&lt;/c2&gt;, and so on.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T065350Z" creationid="pingfangx" creationdate="20180525T065350Z">
@@ -15268,6 +16670,22 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033405Z" creationid="pingfangx" creationdate="20180518T033405Z">
         <seg>它被分组到相关类和接口的库中;这些库被称为 &lt;e0&gt;packages&lt;/e0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is important to design your annotation type carefully to ensure that the programmer &lt;e3&gt;using&lt;/e3&gt; the annotation finds it to be as flexible and powerful as possible.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041456Z" creationid="pingfangx" creationdate="20190102T041456Z">
+        <seg>仔细设计注解类型非常重要，以确保程序员 &lt;e3&gt;using&lt;/e3&gt; 注解发现它尽可能灵活和强大。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is now possible to use an annotation zero times, once, or, if the annotation's type is marked as &lt;c1&gt;@Repeatable&lt;/c1&gt;, more than once.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041432Z" creationid="pingfangx" creationdate="20190102T041432Z">
+        <seg>现在可以使用注解零次，一次，或者，如果注解的类型标记为 &lt;c1&gt;@Repeatable&lt;/c1&gt;，则不止一次。</seg>
       </tuv>
     </tu>
     <tu>
@@ -15696,6 +17114,22 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Lesson: Annotations</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023256Z" creationid="pingfangx" creationdate="20190102T023256Z">
+        <seg>课程：注解</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lesson: Annotations (The Java™ Tutorials &gt; Learning the Java Language)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023232Z" creationid="pingfangx" creationdate="20190102T023232Z">
+        <seg>Lesson: Annotations (The Java™ Tutorials &gt; Learning the Java Language)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Lesson: Classes and Objects</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T022913Z" creationid="pingfangx" creationdate="20180525T022913Z">
@@ -16104,6 +17538,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Many annotations replace comments in code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024728Z" creationid="pingfangx" creationdate="20190102T024728Z">
+        <seg>许多注解会替换代码中的注释。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Many times during the day.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T085412Z" creationid="pingfangx" creationdate="20180706T085412Z">
@@ -16132,6 +17574,16 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T074028Z" creationid="pingfangx" creationdate="20181228T073243Z">
         <seg>将每个过滤出的对象映射到由 &lt;c0&gt;Function&lt;/c0&gt; 对象 &lt;c1&gt;mapper&lt;/c1&gt; 指定的值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Meal[] value();
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041746Z" creationid="pingfangx" creationdate="20190102T041746Z">
+        <seg>Meal[] value();
+}</seg>
       </tuv>
     </tu>
     <tu>
@@ -16538,6 +17990,14 @@ Ms. Jones</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that they can define optional default values.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025135Z" creationid="pingfangx" creationdate="20190102T025135Z">
+        <seg>请注意，他们可以定义可选的默认值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that this lesson is for advanced users.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031600Z" creationid="pingfangx" creationdate="20180518T031600Z">
@@ -16670,6 +18130,14 @@ Ms. Jones</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035033Z" creationid="pingfangx" creationdate="20180518T034855Z">
         <seg>现在你已经准备好编译。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now you want to set a timer to run a method, &lt;t1&gt;doPeriodicCleanup&lt;/t1&gt;, on the last day of the month and on every Friday at 11:00 p.m.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041046Z" creationid="pingfangx" creationdate="20190102T041046Z">
+        <seg>现在，您要设置计时器以在该月的最后一天以及每周五的晚上 11 点运行方法 &lt;t1&gt;doPeriodicCleanup&lt;/t1&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -17074,6 +18542,14 @@ Ms. Jones</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Other methods were introduced in Java SE 8 that scan through the container annotation to return multiple annotations at once, such as &lt;a2&gt;AnnotatedElement.getAnnotationsByType(Class&lt;T&gt;)&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041354Z" creationid="pingfangx" creationdate="20190102T041354Z">
+        <seg>Java SE 8 中引入了其他方法，它们扫描容器注解以一次返回多个注解，例如 &lt;a2&gt;AnnotatedElement.getAnnotationsByType(Class&lt;T&gt;)&lt;/a2&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Otherwise, assign the value of &lt;c8&gt;value2&lt;/c8&gt; to &lt;c9&gt;result&lt;/c9&gt;."</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T070326Z" creationid="pingfangx" creationdate="20180521T070326Z">
@@ -17142,6 +18618,14 @@ Ms. Jones</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T092621Z" creationid="pingfangx" creationdate="20180521T092621Z">
         <seg>覆盖和隐藏方法</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Overriding methods will be discussed in &lt;a3&gt;Interfaces and Inheritance&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033429Z" creationid="pingfangx" creationdate="20190102T033429Z">
+        <seg>覆盖方法将在 &lt;a3&gt;Interfaces and Inheritance&lt;/a3&gt; 中讨论。</seg>
       </tuv>
     </tu>
     <tu>
@@ -17422,6 +18906,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Predefined Annotation Types (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033233Z" creationid="pingfangx" creationdate="20190102T033233Z">
+        <seg>Predefined Annotation Types (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Predicate&lt;Person&gt; tester,</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T094106Z" creationid="pingfangx" creationdate="20180706T094106Z">
@@ -17642,6 +19134,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T092435Z" creationid="pingfangx" creationdate="20180521T092435Z">
         <seg>问题和练习：注解</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Questions and Exercises: Annotations (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041539Z" creationid="pingfangx" creationdate="20190102T041539Z">
+        <seg>Questions and Exercises: Annotations (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
       </tuv>
     </tu>
     <tu>
@@ -18134,10 +19634,34 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Repeating Annotations (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040956Z" creationid="pingfangx" creationdate="20190102T040956Z">
+        <seg>Repeating Annotations (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Repeating annotations are supported as of the Java SE 8 release.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024025Z" creationid="pingfangx" creationdate="20190102T024025Z">
+        <seg>从 Java SE 8 发行版开始，支持重复注解。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Restrictions on Generics</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T093002Z" creationid="pingfangx" creationdate="20180521T093002Z">
         <seg>对泛型的限制</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Retrieving Annotations</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041256Z" creationid="pingfangx" creationdate="20190102T041256Z">
+        <seg>获取注解</seg>
       </tuv>
     </tu>
     <tu>
@@ -18262,6 +19786,16 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Schedule[] value();
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041253Z" creationid="pingfangx" creationdate="20190102T041253Z">
+        <seg>Schedule[] value();
+}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Searching an array for a specific value to get the index at which it is placed (the &lt;c0&gt;binarySearch&lt;/c0&gt; method).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T054436Z" creationid="pingfangx" creationdate="20180521T054436Z">
@@ -18330,6 +19864,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T021209Z" creationid="pingfangx" creationdate="20190102T021209Z">
         <seg>See Class2.java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See the &lt;a3&gt;AnnotatedElement&lt;/a3&gt; class specification for information on all of the available methods.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041359Z" creationid="pingfangx" creationdate="20190102T041359Z">
+        <seg>有关所有可用方法的信息，请参阅 &lt;a3&gt;AnnotatedElement&lt;/a3&gt; 类规范。</seg>
       </tuv>
     </tu>
     <tu>
@@ -18534,6 +20076,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Some annotation types are used by the Java compiler, and some apply to other annotations.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033245Z" creationid="pingfangx" creationdate="20190102T033245Z">
+        <seg>Java 编译器使用某些注解类型，有些注解类型适用于其他注解。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Some methods, such as &lt;t0&gt;getArea()&lt;/t0&gt;, return a value.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T085152Z" creationid="pingfangx" creationdate="20180601T085152Z">
@@ -18610,6 +20160,22 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031446Z" creationid="pingfangx" creationdate="20180518T031446Z">
         <seg>专业的路径与课程</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Specify the default value as &lt;c4&gt;unassigned&lt;/c4&gt; for engineer and &lt;c5&gt;unknown&lt;/c5&gt; for date.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041641Z" creationid="pingfangx" creationdate="20190102T041641Z">
+        <seg>为工程师指定默认值 &lt;c4&gt;unassigned&lt;/c4&gt;，为日期指定 &lt;c5&gt;unknown&lt;/c5&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Specify the default value as &lt;c5&gt;unassigned&lt;/c5&gt; for engineer and &lt;c6&gt;unknown&lt;/c6&gt; for date.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041756Z" creationid="pingfangx" creationdate="20190102T041756Z">
+        <seg>为工程师指定默认值 &lt;c5&gt;unassigned&lt;/c5&gt;，为日期指定 &lt;c6&gt;unknown&lt;/c6&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -18734,6 +20300,22 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Step 1: Declare a Repeatable Annotation Type</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041145Z" creationid="pingfangx" creationdate="20190102T041145Z">
+        <seg>第 1 步：声明可重复的注解类型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Step 2: Declare the Containing Annotation Type</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041236Z" creationid="pingfangx" creationdate="20190102T041236Z">
+        <seg>第 2 步：声明包含注解类型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Still, it is likely to make your programs better and requires less effort than other languages.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033754Z" creationid="pingfangx" creationdate="20180518T033754Z">
@@ -18766,6 +20348,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>String author();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024840Z" creationid="pingfangx" creationdate="20190102T024840Z">
+        <seg>String author();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>String currentNumber = phoneNumber.replaceAll(</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T122500Z" creationid="pingfangx" creationdate="20180705T122500Z">
@@ -18782,10 +20372,52 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>String date() default "[unknown]";
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041816Z" creationid="pingfangx" creationdate="20190102T041816Z">
+        <seg>String date() default "[unknown]";
+}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>String date();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024841Z" creationid="pingfangx" creationdate="20190102T024841Z">
+        <seg>String date();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>String dayOfMonth() default "first";</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041157Z" creationid="pingfangx" creationdate="20190102T041157Z">
+        <seg>String dayOfMonth() default "first";</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>String dayOfWeek() default "Mon";</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041158Z" creationid="pingfangx" creationdate="20190102T041158Z">
+        <seg>String dayOfWeek() default "Mon";</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>String emailAddress;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T085438Z" creationid="pingfangx" creationdate="20180706T085438Z">
         <seg>String emailAddress;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>String engineer() default "[unassigned]";</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041815Z" creationid="pingfangx" creationdate="20190102T041815Z">
+        <seg>String engineer() default "[unassigned]";</seg>
       </tuv>
     </tu>
     <tu>
@@ -18802,6 +20434,22 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T122456Z" creationid="pingfangx" creationdate="20180705T122456Z">
         <seg>String formattedPhoneNumber = null;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>String lastModified() default "N/A";</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024843Z" creationid="pingfangx" creationdate="20190102T024843Z">
+        <seg>String lastModified() default "N/A";</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>String lastModifiedBy() default "N/A";</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024844Z" creationid="pingfangx" creationdate="20190102T024844Z">
+        <seg>String lastModifiedBy() default "N/A";</seg>
       </tuv>
     </tu>
     <tu>
@@ -18902,6 +20550,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>String synopsis();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041815Z" creationid="pingfangx" creationdate="20190102T041815Z">
+        <seg>String synopsis();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>String thirdString = firstString+secondString;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T064828Z" creationid="pingfangx" creationdate="20180521T064828Z">
@@ -18914,6 +20570,16 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T082615Z" creationid="pingfangx" creationdate="20180521T082615Z">
         <seg>StringSwitchDemo.getMonthNumber(month);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>String[] reviewers();
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024849Z" creationid="pingfangx" creationdate="20190102T024849Z">
+        <seg>String[] reviewers();
+}</seg>
       </tuv>
     </tu>
     <tu>
@@ -19146,6 +20812,14 @@ studentName = null;
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T084930Z" creationid="pingfangx" creationdate="20181228T084930Z">
         <seg>Supplier&lt;DEST&gt; collectionFactory) {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Suppose that a software group traditionally starts the body of every class with comments providing important information:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024824Z" creationid="pingfangx" creationdate="20190102T024824Z">
+        <seg>假设一个软件组传统上在每个类的主体都以注释开始，其中包含提供重要信息的注释：</seg>
       </tuv>
     </tu>
     <tu>
@@ -20812,6 +22486,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c2&gt;unchecked&lt;/c2&gt; warning can occur when interfacing with legacy code written before the advent of &lt;a3&gt;generics&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033644Z" creationid="pingfangx" creationdate="20190102T033644Z">
+        <seg>当与 &lt;a3&gt;generics&lt;/a3&gt; 出现之前编写的遗留代码接口时，可能会发生 &lt;c2&gt;unchecked&lt;/c2&gt; 警告。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c3&gt;EventHandler&lt;ActionEvent&gt;&lt;/c3&gt; interface contains only one method, &lt;c4&gt;void handle(T event)&lt;/c4&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T075320Z" creationid="pingfangx" creationdate="20181228T075320Z">
@@ -20872,6 +22554,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T033627Z" creationid="pingfangx" creationdate="20180601T033627Z">
         <seg>&lt;c4&gt;setOrigin&lt;/c4&gt; 方法有两个参数，每个参数都与其中一个字段具有相同的名称。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c5&gt;Author&lt;/c5&gt; and &lt;c6&gt;Ebook&lt;/c6&gt; annotations in the previous example are custom annotation types.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024059Z" creationid="pingfangx" creationdate="20190102T024059Z">
+        <seg>上一个示例中的 &lt;c5&gt;Author&lt;/c5&gt; 和 &lt;c6&gt;Ebook&lt;/c6&gt; 注解是自定义注解类型。</seg>
       </tuv>
     </tu>
     <tu>
@@ -21100,6 +22790,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The Format of an Annotation</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023826Z" creationid="pingfangx" creationdate="20190102T023826Z">
+        <seg>注解的格式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The Garbage Collector</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T085429Z" creationid="pingfangx" creationdate="20180601T085311Z">
@@ -21116,6 +22814,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The Java Language Specification lists two categories: &lt;c0&gt;deprecation&lt;/c0&gt; and &lt;c1&gt;unchecked&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033618Z" creationid="pingfangx" creationdate="20190102T033618Z">
+        <seg>Java 语言规范列出了两个类别：&lt;c0&gt;deprecation&lt;/c0&gt; 和 &lt;c1&gt;unchecked&lt;/c1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The Java Platform</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033245Z" creationid="pingfangx" creationdate="20180518T033245Z">
@@ -21128,6 +22834,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032825Z" creationid="pingfangx" creationdate="20180518T032825Z">
         <seg>Java 编程语言</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Java SE 8 release does not provide a type checking framework, but it allows you to write (or download) a type checking framework that is implemented as one or more pluggable modules that are used in conjunction with the Java compiler.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040738Z" creationid="pingfangx" creationdate="20190102T040738Z">
+        <seg>Java SE 8 版本不提供类型检查框架，但它允许您编写(或下载)类型检查框架，该框架实现为与 Java 编译器结合使用的一个或多个可插入模块。</seg>
       </tuv>
     </tu>
     <tu>
@@ -21452,6 +23166,38 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The annotation can include &lt;e0&gt;elements&lt;/e0&gt;, which can be named or unnamed, and there are values for those elements:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023916Z" creationid="pingfangx" creationdate="20190102T023916Z">
+        <seg>注解可以包含 &lt;e0&gt;elements&lt;/e0&gt;，可以是命名或未命名，并且这些元素有值：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The annotation type can be one of the types that are defined in the &lt;c0&gt;java.lang&lt;/c0&gt; or &lt;c1&gt;java.lang.annotation&lt;/c1&gt; packages of the Java SE API.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024040Z" creationid="pingfangx" creationdate="20190102T024040Z">
+        <seg>注解类型可以是 Java SE API 的 &lt;c0&gt;java.lang&lt;/c0&gt; 或 &lt;c1&gt;java.lang.annotation&lt;/c1&gt; 包中定义的类型之一。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The annotation type definition looks similar to an interface definition where the keyword &lt;c0&gt;interface&lt;/c0&gt; is preceded by the at sign (&lt;c1&gt;@&lt;/c1&gt;) (@ = AT, as in annotation type).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024935Z" creationid="pingfangx" creationdate="20190102T024935Z">
+        <seg>注解类型定义类似于接口定义，其中关键字 &lt;c0&gt;interface&lt;/c0&gt; 前面带有 at 符号(&lt;c1&gt;@&lt;/c1&gt;)(@ = AT，如注解类型)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The annotation type must be marked with the &lt;c0&gt;@Repeatable&lt;/c0&gt; meta-annotation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041149Z" creationid="pingfangx" creationdate="20190102T041149Z">
+        <seg>注解类型必须使用 &lt;c0&gt;@Repeatable&lt;/c0&gt; 元注解进行标记。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The anonymous class expression consists of the following:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T061214Z" creationid="pingfangx" creationdate="20180706T061214Z">
@@ -21480,6 +23226,22 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T075446Z" creationid="pingfangx" creationdate="20181228T075446Z">
         <seg>箭头标记 &lt;c0&gt;-&gt;&lt;/c0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The at sign character (&lt;c0&gt;@&lt;/c0&gt;) indicates to the compiler that what follows is an annotation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023847Z" creationid="pingfangx" creationdate="20190102T023847Z">
+        <seg>at 符号字符(&lt;c0&gt;@&lt;/c0&gt;)向编译器指示后面的内容是注解。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The behavior of the methods that return a single annotation, such as &lt;a0&gt;AnnotatedElement.getAnnotation(Class&lt;T&gt;)&lt;/a0&gt;, are unchanged in that they only return a single annotation if &lt;e1&gt;one&lt;/e1&gt; annotation of the requested type is present.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041330Z" creationid="pingfangx" creationdate="20190102T041330Z">
+        <seg>返回单个注解的方法（例如 &lt;a0&gt;AnnotatedElement.getAnnotation(Class&lt;T&gt;)&lt;/a0&gt;）的行为未更改，因为如果 &lt;e1&gt;one&lt;/e1&gt; 注解，它们只返回单个注解请求的类型存在。</seg>
       </tuv>
     </tu>
     <tu>
@@ -21520,6 +23282,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T082035Z" creationid="pingfangx" creationdate="20180521T082035Z">
         <seg>&lt;c0&gt;switch&lt;/c0&gt; 语句的主体被称为 &lt;i1&gt;switch block&lt;/i1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The body of the previous annotation definition contains &lt;i0&gt;annotation type element&lt;/i0&gt; declarations, which look a lot like methods.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025110Z" creationid="pingfangx" creationdate="20190102T025110Z">
+        <seg>前一个注解定义的主体包含 &lt;i0&gt;注解类型元素（annotation type element）&lt;/i0&gt; 声明，它们看起来很像方法。</seg>
       </tuv>
     </tu>
     <tu>
@@ -21660,6 +23430,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The compiler generates a warning whenever a program uses a method, class, or field with the &lt;c4&gt;@Deprecated&lt;/c4&gt; annotation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033323Z" creationid="pingfangx" creationdate="20190102T033323Z">
+        <seg>只要程序使用带有 &lt;c4&gt;@Deprecated&lt;/c4&gt; 注解的方法，类或字段，编译器就会生成警告。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The compiler generates an error similar to "modifier 'static' is only allowed in constant variable declaration" when it encounters this method definition:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T144537Z" creationid="pingfangx" creationdate="20180705T144537Z">
@@ -21724,6 +23502,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The component type of the array type must be the repeatable annotation type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041247Z" creationid="pingfangx" creationdate="20190102T041247Z">
+        <seg>数组类型的组件类型必须是可重复的注解类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The constructor in the &lt;t0&gt;Point&lt;/t0&gt; class takes two integer arguments, as declared by the code &lt;t1&gt;(int a, int b)&lt;/t1&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T062526Z" creationid="pingfangx" creationdate="20180601T062526Z">
@@ -21736,6 +23522,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180607T020253Z" creationid="pingfangx" creationdate="20180607T020253Z">
         <seg>构造函数为初始值没有由参数提供的成员变量提供默认值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The containing annotation type must have a &lt;c0&gt;value&lt;/c0&gt; element with an array type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041242Z" creationid="pingfangx" creationdate="20190102T041242Z">
+        <seg>包含注解类型必须具有带有数组类型的 &lt;c0&gt;value&lt;/c0&gt; 元素。</seg>
       </tuv>
     </tu>
     <tu>
@@ -21792,6 +23586,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T032005Z" creationid="pingfangx" creationdate="20180601T032005Z">
         <seg>方法或构造函数的声明声明了该方法或构造函数的参数的数量和类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The declaration for the &lt;c1&gt;Schedules&lt;/c1&gt; containing annotation type is the following:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041252Z" creationid="pingfangx" creationdate="20190102T041252Z">
+        <seg>包含注解类型的 &lt;c1&gt;Schedules&lt;/c1&gt; 的声明如下：</seg>
       </tuv>
     </tu>
     <tu>
@@ -21988,6 +23790,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The first use specifies the last day of the month and the second specifies Friday at 11p.m., as shown in the following code example:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041100Z" creationid="pingfangx" creationdate="20190102T041100Z">
+        <seg>第一次使用指定月份的最后一天，第二次使用指定星期五晚上 11 点，如下面的代码示例所示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The floating point types (&lt;c0&gt;float&lt;/c0&gt; and &lt;c1&gt;double&lt;/c1&gt;) can also be expressed using E or e (for scientific notation), F or f (32-bit float literal) and D or d (64-bit double literal; this is the default and by convention is omitted).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T083130Z" creationid="pingfangx" creationdate="20180518T083130Z">
@@ -22120,6 +23930,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T075452Z" creationid="pingfangx" creationdate="20180521T075452Z">
         <seg>以下代码片段是___表达式的示例。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following example defines a custom &lt;c1&gt;@Schedule&lt;/c1&gt; repeatable annotation type:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041155Z" creationid="pingfangx" creationdate="20190102T041155Z">
+        <seg>以下示例定义自定义 &lt;c1&gt;@Schedule&lt;/c1&gt; 可重复注解类型：</seg>
       </tuv>
     </tu>
     <tu>
@@ -23132,10 +24950,26 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The predefined annotation types defined in &lt;c0&gt;java.lang&lt;/c0&gt; are &lt;c1&gt;@Deprecated&lt;/c1&gt;, &lt;c2&gt;@Override&lt;/c2&gt;, and &lt;c3&gt;@SuppressWarnings&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033301Z" creationid="pingfangx" creationdate="20190102T033301Z">
+        <seg>&lt;c0&gt;java.lang&lt;/c0&gt; 中定义的预定义注解类型是 &lt;c1&gt;@Deprecated&lt;/c1&gt;，&lt;c2&gt;@Override&lt;/c2&gt; 和 &lt;c3&gt;@SuppressWarnings&lt;/c3&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The prefix &lt;c0&gt;0x&lt;/c0&gt; indicates hexadecimal and &lt;c1&gt;0b&lt;/c1&gt; indicates binary:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T082901Z" creationid="pingfangx" creationdate="20180518T082901Z">
         <seg>前缀 &lt;c0&gt;0x&lt;/c0&gt; 表示十六进制，&lt;c1&gt;0b&lt;/c1&gt; 表示二进制：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The previous example applies an annotation to a method.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041108Z" creationid="pingfangx" creationdate="20190102T041108Z">
+        <seg>前面的示例将注解应用于方法。</seg>
       </tuv>
     </tu>
     <tu>
@@ -23404,6 +25238,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The syntax for doing this is:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024840Z" creationid="pingfangx" creationdate="20190102T024840Z">
+        <seg>这样做的语法是：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The syntax of an anonymous class expression is like the invocation of a constructor, except that there is a class definition contained in a block of code.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T061948Z" creationid="pingfangx" creationdate="20180706T061204Z">
@@ -23572,10 +25414,34 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The use of the at sign (&lt;c6&gt;@&lt;/c6&gt;) in both Javadoc comments and in annotations is not coincidental: they are related conceptually.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033355Z" creationid="pingfangx" creationdate="20190102T033355Z">
+        <seg>在 Javadoc 注解和注释中使用 at 符号(&lt;c6&gt;@&lt;/c6&gt;)并非巧合：它们在概念上是相关的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The value of the &lt;c0&gt;@Repeatable&lt;/c0&gt; meta-annotation, in parentheses, is the type of the container annotation that the Java compiler generates to store repeating annotations.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041206Z" creationid="pingfangx" creationdate="20190102T041206Z">
+        <seg>括号中的 &lt;c0&gt;@Repeatable&lt;/c0&gt; 元注解的值是 Java 编译器为存储重复注解而生成的容器注解的类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The variable &lt;c4&gt;x&lt;/c4&gt; defined as a parameter of the method &lt;c5&gt;methodInFirstLevel&lt;/c5&gt; shadows the variable of the inner class &lt;c6&gt;FirstLevel&lt;/c6&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T091633Z" creationid="pingfangx" creationdate="20180705T091633Z">
         <seg>定义为方法 &lt;c5&gt;methodInFirstLevel&lt;/c5&gt; 的参数的变量 &lt;c4&gt;x&lt;/c4&gt; 会遮蔽内部类 &lt;c6&gt;FirstLevel&lt;/c6&gt; 的变量。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The variable declaration might look like this:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T035425Z" creationid="pingfangx" creationdate="20190102T035425Z">
+        <seg>变量声明可能如下所示：</seg>
       </tuv>
     </tu>
     <tu>
@@ -23656,6 +25522,38 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T062847Z" creationid="pingfangx" creationdate="20180525T062847Z">
         <seg>有几种变量：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There are several meta-annotation types defined in &lt;c1&gt;java.lang.annotation&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033837Z" creationid="pingfangx" creationdate="20190102T033837Z">
+        <seg>在 &lt;c1&gt;java.lang.annotation&lt;/c1&gt; 中定义了几种元注解类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There are several methods available in the Reflection API that can be used to retrieve annotations.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041308Z" creationid="pingfangx" creationdate="20190102T041308Z">
+        <seg>Reflection API 中有几种可用于获取注解的方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There are some situations where you want to apply the same annotation to a declaration or type use.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041002Z" creationid="pingfangx" creationdate="20190102T041002Z">
+        <seg>在某些情况下，您希望将相同的注解应用于声明或类型用途。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There are third parties who have done the work for you.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040917Z" creationid="pingfangx" creationdate="20190102T040917Z">
+        <seg>有第三方为你完成了这项工作。</seg>
       </tuv>
     </tu>
     <tu>
@@ -23972,6 +25870,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This annotation applies only to class declarations.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034037Z" creationid="pingfangx" creationdate="20190102T034037Z">
+        <seg>此注解仅适用于类声明。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This applies to other parameter-accepting constructs as well (such as constructors and exception handlers) that you'll learn about later in the tutorial.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T073824Z" creationid="pingfangx" creationdate="20180518T073824Z">
@@ -24136,6 +26042,30 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T084300Z" creationid="pingfangx" creationdate="20180518T084300Z">
         <seg>例如，此功能支持您。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This form of annotation is called a &lt;e0&gt;type annotation&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024220Z" creationid="pingfangx" creationdate="20190102T024220Z">
+        <seg>这种形式的注解称为 &lt;e0&gt;type annotation&lt;/e0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This form of annotation is called a &lt;e4&gt;type annotation&lt;/e4&gt; and several examples are provided in &lt;a5&gt;Annotations Basics&lt;/a5&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034950Z" creationid="pingfangx" creationdate="20190102T034950Z">
+        <seg>这种形式的注解称为 &lt;e4&gt;type annotation&lt;/e4&gt;，并在 &lt;a5&gt;Annotations Basics&lt;/a5&gt; 中提供了几个示例。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This framework includes a &lt;c0&gt;NonNull&lt;/c0&gt; module, as well as a regular expression module, and a mutex lock module.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040933Z" creationid="pingfangx" creationdate="20190102T040933Z">
+        <seg>该框架包括 &lt;c0&gt;NonNull&lt;/c0&gt; 模块，以及正则表达式模块和互斥锁模块。</seg>
       </tuv>
     </tu>
     <tu>
@@ -24356,6 +26286,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This lesson explains where annotations can be used, how to apply annotations, what predefined annotation types are available in the Java Platform, Standard Edition (Java SE API), how type annnotations can be used in conjunction with pluggable type systems to write code with stronger type checking, and how to implement repeating annotations.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023742Z" creationid="pingfangx" creationdate="20190102T023742Z">
+        <seg>本课程介绍了可以使用注解的位置，如何应用注解，Java 平台，标准版(Java SE API)中可用的预定义注解类型，类型注解如何与可插入类型系统结合使用以更强大地编写代码类型检查，以及如何实现重复注解。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This lesson will introduce you to objects, classes, inheritance, interfaces, and packages.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042820Z" creationid="pingfangx" creationdate="20180518T042820Z">
@@ -24392,6 +26330,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180607T041955Z" creationid="pingfangx" creationdate="20180607T041955Z">
         <seg>这可能有助于简洁地说明一些观点，但不建议用于生产代码。）公共字段倾向于将您链接到特定的实现，并限制您更改代码的灵活性。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This means that annotations can be used anywhere you use a type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034901Z" creationid="pingfangx" creationdate="20190102T034901Z">
+        <seg>这意味着可以在任何使用类型的地方使用注解。</seg>
       </tuv>
     </tu>
     <tu>
@@ -24916,6 +26862,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Thrown exception declaration:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024210Z" creationid="pingfangx" creationdate="20190102T024210Z">
+        <seg>抛出异常声明：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Thus, &lt;c4&gt;second string&lt;/c4&gt; is displayed.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T091619Z" creationid="pingfangx" creationdate="20180521T091619Z">
@@ -24968,6 +26922,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T080751Z" creationid="pingfangx" creationdate="20181228T080751Z">
         <seg>要访问封闭类中的变量，请使用关键字 &lt;c2&gt;this&lt;/c2&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To add this same metadata with an annotation, you must first define the &lt;i0&gt;annotation type&lt;/i0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024838Z" creationid="pingfangx" creationdate="20190102T024838Z">
+        <seg>要使用注解添加此相同元数据，必须先定义 &lt;i0&gt;annotation type&lt;/i0&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -25164,10 +27126,26 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>To set the timer to run, create an &lt;c2&gt;@Schedule&lt;/c2&gt; annotation and apply it twice to the &lt;t3&gt;doPeriodicCleanup&lt;/t3&gt; method.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041054Z" creationid="pingfangx" creationdate="20190102T041054Z">
+        <seg>要将计时器设置为运行，请创建 &lt;c2&gt;@Schedule&lt;/c2&gt; 注解并将其应用于 &lt;t3&gt;doPeriodicCleanup&lt;/t3&gt; 方法两次。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To specify the search criteria, you implement the &lt;c0&gt;CheckPerson&lt;/c0&gt; interface:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T090144Z" creationid="pingfangx" creationdate="20180706T090144Z">
         <seg>要指定搜索条件，请实现 &lt;c0&gt;CheckPerson&lt;/c0&gt; 接口：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To suppress multiple categories of warnings, use the following syntax:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033700Z" creationid="pingfangx" creationdate="20190102T033700Z">
+        <seg>要禁止多种类别的警告，请使用以下语法：</seg>
       </tuv>
     </tu>
     <tu>
@@ -25340,6 +27318,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Type Annotations and Pluggable Type Systems (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034408Z" creationid="pingfangx" creationdate="20190102T034408Z">
+        <seg>Type Annotations and Pluggable Type Systems (The Java™ Tutorials &gt; Learning the Java Language &gt; Annotations)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Type Comparison Operator</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T071730Z" creationid="pingfangx" creationdate="20180521T071730Z">
@@ -25360,6 +27346,22 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T092912Z" creationid="pingfangx" creationdate="20180521T092907Z">
         <seg>类型推断</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Type annotations were created to support improved analysis of Java programs way of ensuring stronger type checking.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T035020Z" creationid="pingfangx" creationdate="20190102T035020Z">
+        <seg>创建类型注解是为了支持改进的 Java 程序分析，以确保更强的类型检查。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Type cast:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024201Z" creationid="pingfangx" creationdate="20190102T024201Z">
+        <seg>类型转换：</seg>
       </tuv>
     </tu>
     <tu>
@@ -26006,6 +28008,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>What can you do to get rid of that warning?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041611Z" creationid="pingfangx" creationdate="20190102T041611Z">
+        <seg>你能做些什么来摆脱那个警告？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>What do you need to do</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T020649Z" creationid="pingfangx" creationdate="20190102T020649Z">
@@ -26134,6 +28144,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>What is wrong with the following interface?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041549Z" creationid="pingfangx" creationdate="20190102T041549Z">
+        <seg>以下接口有什么问题？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>What kind of nested class is most appropriate for each of the following</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T020952Z" creationid="pingfangx" creationdate="20190102T020934Z">
@@ -26222,10 +28240,26 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>When an element is deprecated, it should also be documented using the Javadoc &lt;c5&gt;@deprecated&lt;/c5&gt; tag, as shown in the following example.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033334Z" creationid="pingfangx" creationdate="20190102T033334Z">
+        <seg>不推荐使用元素时，还应使用 Javadoc &lt;c5&gt;@deprecated&lt;/c5&gt; 标记对其进行记录，如以下示例所示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>When choosing a name for your variables, use full words instead of cryptic abbreviations.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T074358Z" creationid="pingfangx" creationdate="20180518T074358Z">
         <seg>为变量选择名称时，请使用完整的单词而不是隐含的缩写。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When designing an annotation type, you must consider the &lt;e0&gt;cardinality&lt;/e0&gt; of annotations of that type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041417Z" creationid="pingfangx" creationdate="20190102T041417Z">
+        <seg>设计注解类型时，必须考虑该类型注解的 &lt;e0&gt;cardinality&lt;/e0&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -26294,6 +28328,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>When this annotation type is used, unchecked warnings relating to &lt;c4&gt;varargs&lt;/c4&gt; usage are suppressed.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033753Z" creationid="pingfangx" creationdate="20190102T033753Z">
+        <seg>使用此注解类型时，将禁止与 &lt;c4&gt;varargs&lt;/c4&gt; 用法相关的未经检查的警告。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T092302Z" creationid="pingfangx" creationdate="20180521T092302Z">
@@ -26306,6 +28348,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T013205Z" creationid="pingfangx" creationdate="20190102T013205Z">
         <seg>When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions (The Java™ Tutorials &gt; Learning the Java Language &gt; Classes and Objects)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When used on a declaration, each annotation often appears, by convention, on its own line.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024119Z" creationid="pingfangx" creationdate="20190102T024119Z">
+        <seg>当在声明中使用时，每个注解通常按照惯例出现在它自己的行上。</seg>
       </tuv>
     </tu>
     <tu>
@@ -26346,6 +28396,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034749Z" creationid="pingfangx" creationdate="20180518T034749Z">
         <seg>当出现提示时，当前目录通常是 Windows XP 的主目录（如上图所示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When you compile the code, including the &lt;c0&gt;NonNull&lt;/c0&gt; module at the command line, the compiler prints a warning if it detects a potential problem, allowing you to modify the code to avoid the error.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040821Z" creationid="pingfangx" creationdate="20190102T040821Z">
+        <seg>当您在命令行编译代码（包括 &lt;c0&gt;NonNull&lt;/c0&gt; 模块）时，编译器会在检测到潜在问题时输出警告，允许您修改代码以避免错误。</seg>
       </tuv>
     </tu>
     <tu>
@@ -26398,6 +28456,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Where Annotations Can Be Used</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024102Z" creationid="pingfangx" creationdate="20190102T024102Z">
+        <seg>可以使用注解的位置</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Which method will be invoked in the following statement?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T082214Z" creationid="pingfangx" creationdate="20181228T082214Z">
@@ -26438,6 +28504,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>While it is not required to use this annotation when overriding a method, it helps to prevent errors.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033442Z" creationid="pingfangx" creationdate="20190102T033442Z">
+        <seg>虽然在重写方法时不需要使用此批注，但它有助于防止出错。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>While local classes are class declarations, anonymous classes are expressions, which means that you define the class in another expression.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T061059Z" creationid="pingfangx" creationdate="20180706T061059Z">
@@ -26466,6 +28540,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T090706Z" creationid="pingfangx" creationdate="20180705T090706Z">
         <seg>为什么使用嵌套类？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Why or why not?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041618Z" creationid="pingfangx" creationdate="20190102T041618Z">
+        <seg>为什么或者为什么不？</seg>
       </tuv>
     </tu>
     <tu>
@@ -26522,6 +28604,14 @@ Y Position of rectTwo: 72</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Will the following code compile without error?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041616Z" creationid="pingfangx" creationdate="20190102T041616Z">
+        <seg>以下代码是否会编译而不会出错？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>With a primitive variable, this declaration also reserves the proper amount of memory for the variable.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T042716Z" creationid="pingfangx" creationdate="20180601T042716Z">
@@ -26534,6 +28624,14 @@ Y Position of rectTwo: 72</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T063318Z" creationid="pingfangx" creationdate="20180521T063318Z">
         <seg>考虑到这一点，下面的讨论首先着眼于最有可能定期使用的运算符，然后最后关注那些不常见的操作上。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>With the judicious use of type annotations and the presence of pluggable type checkers, you can write code that is stronger and less prone to error.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T035603Z" creationid="pingfangx" creationdate="20190102T035603Z">
+        <seg>通过明智地使用类型注解和可插入类型检查器的存在，您可以编写更强大且更不容易出错的代码。</seg>
       </tuv>
     </tu>
     <tu>
@@ -26654,6 +28752,14 @@ Y Position of rectTwo: 72</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T083136Z" creationid="pingfangx" creationdate="20180601T083136Z">
         <seg>您还可以使用对象引用来调用对象的方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You annotate the class with one &lt;c0&gt;@Alert&lt;/c0&gt; annotation for managers and another for admins:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041122Z" creationid="pingfangx" creationdate="20190102T041122Z">
+        <seg>您使用一个 &lt;c0&gt;@Alert&lt;/c0&gt; 注解为管理员注解该类，为管理员注解另一个注解：</seg>
       </tuv>
     </tu>
     <tu>
@@ -26898,6 +29004,14 @@ Y Position of rectTwo: 72</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>You can repeat an annotation anywhere that you would use a standard annotation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041112Z" creationid="pingfangx" creationdate="20190102T041112Z">
+        <seg>您可以在使用标准注解的任何位置重复注解。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>You can replace each of these actions with an aggregate operation.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T074250Z" creationid="pingfangx" creationdate="20181228T073340Z">
@@ -27018,6 +29132,14 @@ Y Position of rectTwo: 72</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>You can use multiple type-checking modules where each module checks for a different kind of error.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T035510Z" creationid="pingfangx" creationdate="20190102T035510Z">
+        <seg>您可以使用多个类型检查模块，其中每个模块检查不同类型的错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>You can use primitive types such as &lt;c0&gt;int&lt;/c0&gt;, &lt;c1&gt;float&lt;/c1&gt;, &lt;c2&gt;boolean&lt;/c2&gt;, etc.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T064300Z" creationid="pingfangx" creationdate="20180525T064300Z">
@@ -27046,6 +29168,14 @@ Y Position of rectTwo: 72</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T101402Z" creationid="pingfangx" creationdate="20180705T101402Z">
         <seg>您可以对用于外部类的其他成员的内部类使用相同的修饰符。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can write a custom plug-in to check for this.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040752Z" creationid="pingfangx" creationdate="20190102T035038Z">
+        <seg>您可以编写自定义插件来检查此问题。</seg>
       </tuv>
     </tu>
     <tu>
@@ -27430,6 +29560,14 @@ Y Position of rectTwo: 72</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T085815Z" creationid="pingfangx" creationdate="20180706T085815Z">
         <seg>您必须重写大量 API 以适应此更改。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You would then modify your code to annotate that particular variable, indicating that it is never assigned to null.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040802Z" creationid="pingfangx" creationdate="20190102T040802Z">
+        <seg>然后，您将修改代码以注解该特定变量，表明它从未分配给 null。</seg>
       </tuv>
     </tu>
     <tu>
@@ -28144,6 +30282,14 @@ anArray[2] = 300; //等等</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>author = "John Doe",</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025146Z" creationid="pingfangx" creationdate="20190102T025146Z">
+        <seg>author = "John Doe",</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>b.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040038Z" creationid="pingfangx" creationdate="20180518T040038Z">
@@ -28164,6 +30310,14 @@ anArray[2] = 300; //等等</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T082841Z" creationid="pingfangx" creationdate="20180705T082841Z">
         <seg>b.y = 6</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>basics.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023233Z" creationid="pingfangx" creationdate="20190102T023233Z">
+        <seg>basics.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -29370,6 +31524,14 @@ cadence:40 speed:20 gear:3</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>class UnmodifiableList&lt;T&gt; implements</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024205Z" creationid="pingfangx" creationdate="20190102T024205Z">
+        <seg>class UnmodifiableList&lt;T&gt; implements</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>class Whatever {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T070540Z" creationid="pingfangx" creationdate="20180705T070540Z">
@@ -29594,6 +31756,14 @@ cadence:40 speed:20 gear:3</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>currentRevision = 6,</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025147Z" creationid="pingfangx" creationdate="20190102T025147Z">
+        <seg>currentRevision = 6,</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>currentSpeed--;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T080934Z" creationid="pingfangx" creationdate="20180521T080934Z">
@@ -29756,10 +31926,38 @@ cadence:40 speed:20 gear:3</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>date = "3/17/2002",</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025146Z" creationid="pingfangx" creationdate="20190102T025146Z">
+        <seg>date = "3/17/2002",</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>date = "3/27/2003"
+)
+class MyClass() { ... }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023934Z" creationid="pingfangx" creationdate="20190102T023934Z">
+        <seg>date = "3/27/2003"
+)
+class MyClass() { ... }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>datetime/index.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031252Z" creationid="pingfangx" creationdate="20180518T031252Z">
         <seg>datetime/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>declaring.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023234Z" creationid="pingfangx" creationdate="20190102T023234Z">
+        <seg>declaring.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -31138,6 +33336,14 @@ float f1  = 123.4f;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>http://types.cs.washington.edu/checker-framework/</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040910Z" creationid="pingfangx" creationdate="20190102T040910Z">
+        <seg>http://types.cs.washington.edu/checker-framework/</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>http://www.amazon.com/The-Java-Tutorial-Course-Edition/dp/0134034082</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030632Z" creationid="pingfangx" creationdate="20180518T030632Z">
@@ -31282,6 +33488,22 @@ float f1  = 123.4f;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033301Z" creationid="pingfangx" creationdate="20190102T033301Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033753Z" creationid="pingfangx" creationdate="20190102T033753Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T080520Z" creationid="pingfangx" creationdate="20180518T080520Z">
@@ -31298,10 +33520,26 @@ float f1  = 123.4f;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/Override.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033411Z" creationid="pingfangx" creationdate="20190102T033411Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/Override.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T082114Z" creationid="pingfangx" creationdate="20181228T082114Z">
         <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/SafeVarargs.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033701Z" creationid="pingfangx" creationdate="20190102T033701Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/SafeVarargs.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -31334,6 +33572,78 @@ float f1  = 123.4f;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T082624Z" creationid="pingfangx" creationdate="20180521T082624Z">
         <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#toLowerCase--</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/SuppressWarnings.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033452Z" creationid="pingfangx" creationdate="20190102T033452Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/SuppressWarnings.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033911Z" creationid="pingfangx" creationdate="20190102T033911Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Inherited.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034011Z" creationid="pingfangx" creationdate="20190102T034011Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Inherited.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T034038Z" creationid="pingfangx" creationdate="20190102T034038Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033838Z" creationid="pingfangx" creationdate="20190102T033838Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033930Z" creationid="pingfangx" creationdate="20190102T033930Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041259Z" creationid="pingfangx" creationdate="20190102T041259Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html#getAnnotation-java.lang.Class-</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041256Z" creationid="pingfangx" creationdate="20190102T041256Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html#getAnnotation-java.lang.Class-</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html#getAnnotationsByType-java.lang.Class-</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041257Z" creationid="pingfangx" creationdate="20190102T041257Z">
+        <seg>https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html#getAnnotationsByType-java.lang.Class-</seg>
       </tuv>
     </tu>
     <tu>
@@ -31786,6 +34096,20 @@ float f1  = 123.4f;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>import java.lang.annotation.Repeatable;
+
+&lt;s0&gt;@Repeatable(Schedules.class)&lt;/s0&gt;
+public @interface Schedule {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041155Z" creationid="pingfangx" creationdate="20190102T041155Z">
+        <seg>import java.lang.annotation.Repeatable;
+
+&lt;s0&gt;@Repeatable(Schedules.class)&lt;/s0&gt;
+public @interface Schedule {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>import java.util.function.Consumer;
 
 public class LambdaScopeTest {</seg>
@@ -31978,6 +34302,14 @@ int &lt;b2&gt;gear&lt;/b2&gt; = 1;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>int currentRevision() default 1;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024842Z" creationid="pingfangx" creationdate="20190102T024842Z">
+        <seg>int currentRevision() default 1;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>int gear = 1;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062535Z" creationid="pingfangx" creationdate="20180518T062535Z">
@@ -31990,6 +34322,16 @@ int &lt;b2&gt;gear&lt;/b2&gt; = 1;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T062310Z" creationid="pingfangx" creationdate="20180601T062310Z">
         <seg>int height = new Rectangle().height;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>int hour() default 12;
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041159Z" creationid="pingfangx" creationdate="20190102T041159Z">
+        <seg>int hour() default 12;
+}</seg>
       </tuv>
     </tu>
     <tu>
@@ -32016,6 +34358,14 @@ int n = i++%5;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T085846Z" creationid="pingfangx" creationdate="20180521T085846Z">
         <seg>int i;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>int id();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041814Z" creationid="pingfangx" creationdate="20190102T041814Z">
+        <seg>int id();</seg>
       </tuv>
     </tu>
     <tu>
@@ -32138,6 +34488,14 @@ if (month == 1) {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T064524Z" creationid="pingfangx" creationdate="20180521T064524Z">
         <seg>int original_result = result;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>int overriddenMethod() { }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033433Z" creationid="pingfangx" creationdate="20190102T033433Z">
+        <seg>int overriddenMethod() { }</seg>
       </tuv>
     </tu>
     <tu>
@@ -32838,6 +35196,22 @@ if (month == 1) {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>lastModified = "4/12/2004",</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025148Z" creationid="pingfangx" creationdate="20190102T025148Z">
+        <seg>lastModified = "4/12/2004",</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>lastModifiedBy = "Jane Doe",</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025148Z" creationid="pingfangx" creationdate="20190102T025148Z">
+        <seg>lastModifiedBy = "Jane Doe",</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>launch(args);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T065638Z" creationid="pingfangx" creationdate="20180706T065638Z">
@@ -33148,6 +35522,22 @@ long bytes = 0b11010010_01101001_10010100_10010010;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>myString = (@NonNull String) str;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024202Z" creationid="pingfangx" creationdate="20190102T024202Z">
+        <seg>myString = (@NonNull String) str;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>name = "Benjamin Franklin",</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023933Z" creationid="pingfangx" creationdate="20190102T023933Z">
+        <seg>name = "Benjamin Franklin",</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>name = someone;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T061129Z" creationid="pingfangx" creationdate="20180706T061129Z">
@@ -33208,6 +35598,14 @@ long bytes = 0b11010010_01101001_10010100_10010010;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T075733Z" creationid="pingfangx" creationdate="20180518T075733Z">
         <seg>new</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>new @Interned MyObject();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024200Z" creationid="pingfangx" creationdate="20190102T024200Z">
+        <seg>new @Interned MyObject();</seg>
       </tuv>
     </tu>
     <tu>
@@ -33542,6 +35940,14 @@ obj2 instanceof MyInterface: true</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>objectOne.deprecatedMethod();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033606Z" creationid="pingfangx" creationdate="20190102T033606Z">
+        <seg>objectOne.deprecatedMethod();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>objectReference.fieldName</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T073605Z" creationid="pingfangx" creationdate="20180601T073605Z">
@@ -33674,6 +36080,14 @@ obj2 instanceof MyInterface: true</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T072335Z" creationid="pingfangx" creationdate="20180518T072335Z">
         <seg>opsummary.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>or</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023942Z" creationid="pingfangx" creationdate="20190102T023942Z">
+        <seg>或者</seg>
       </tuv>
     </tu>
     <tu>
@@ -33950,6 +36364,14 @@ obj2 instanceof MyInterface: true</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T062953Z" creationid="pingfangx" creationdate="20180521T062953Z">
         <seg>后缀</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>predefined.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023234Z" creationid="pingfangx" creationdate="20190102T023234Z">
+        <seg>predefined.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -34268,6 +36690,32 @@ obj2 instanceof MyInterface: true</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>public @interface Meal { ... }
+
+@Meal("breakfast", mainDish="cereal")
+@Meal("lunch", mainDish="pizza")
+@Meal("dinner", mainDish="salad")
+public void evaluateDiet() { ... }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041618Z" creationid="pingfangx" creationdate="20190102T041618Z">
+        <seg>public @interface Meal { ... }
+
+@Meal("breakfast", mainDish="cereal")
+@Meal("lunch", mainDish="pizza")
+@Meal("dinner", mainDish="salad")
+public void evaluateDiet() { ... }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public @interface Schedules {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041253Z" creationid="pingfangx" creationdate="20190102T041253Z">
+        <seg>public @interface Schedules {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>public Bicycle seeWhosFastest(Bicycle myBike, Bicycle yourBike,</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T091701Z" creationid="pingfangx" creationdate="20180601T091701Z">
@@ -34548,6 +36996,14 @@ obj2 instanceof MyInterface: true</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>public class Generation3List extends Generation2List {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024825Z" creationid="pingfangx" creationdate="20190102T024825Z">
+        <seg>public class Generation3List extends Generation2List {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>public class HelloWorld extends Application {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T065637Z" creationid="pingfangx" creationdate="20180706T065637Z">
@@ -34584,6 +37040,14 @@ obj2 instanceof MyInterface: true</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T025707Z" creationid="pingfangx" creationdate="20180525T025707Z">
         <seg>public class MountainBike extends Bicycle {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public class MyHouse implements House {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041558Z" creationid="pingfangx" creationdate="20190102T041558Z">
+        <seg>public class MyHouse implements House {</seg>
       </tuv>
     </tu>
     <tu>
@@ -34938,6 +37402,14 @@ public int speed;</seg>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T082503Z" creationid="pingfangx" creationdate="20180705T082503Z">
         <seg>public int y = 3; 
 }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public interface House {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041549Z" creationid="pingfangx" creationdate="20190102T041549Z">
+        <seg>public interface House {</seg>
       </tuv>
     </tu>
     <tu>
@@ -35304,6 +37776,58 @@ public int speed;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>public void open() {}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041559Z" creationid="pingfangx" creationdate="20190102T041559Z">
+        <seg>public void open() {}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public void open();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041656Z" creationid="pingfangx" creationdate="20190102T041656Z">
+        <seg>public void open();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public void openBackDoor() {}
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041600Z" creationid="pingfangx" creationdate="20190102T041600Z">
+        <seg>public void openBackDoor() {}
+}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public void openBackDoor();
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041657Z" creationid="pingfangx" creationdate="20190102T041657Z">
+        <seg>public void openBackDoor();
+}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public void openFrontDoor() {}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041559Z" creationid="pingfangx" creationdate="20190102T041559Z">
+        <seg>public void openFrontDoor() {}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public void openFrontDoor();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041657Z" creationid="pingfangx" creationdate="20190102T041657Z">
+        <seg>public void openFrontDoor();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>public void printEven() {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T100907Z" creationid="pingfangx" creationdate="20180705T100907Z">
@@ -35498,6 +38022,14 @@ public int speed;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T063030Z" creationid="pingfangx" creationdate="20180521T063030Z">
         <seg>关系</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>repeating.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023238Z" creationid="pingfangx" creationdate="20190102T023238Z">
+        <seg>repeating.html</seg>
       </tuv>
     </tu>
     <tu>
@@ -35904,6 +38436,26 @@ public int speed;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>reviewers = {"Alice", "Bob", "Cindy"}
+)
+public class Generation3List extends Generation2List {
+
+// class code goes here
+
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T025150Z" creationid="pingfangx" creationdate="20190102T025150Z">
+        <seg>reviewers = {"Alice", "Bob", "Cindy"}
+)
+public class Generation3List extends Generation2List {
+
+// class code goes here
+
+}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>rmi/index.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031728Z" creationid="pingfangx" creationdate="20180518T031728Z">
@@ -36250,6 +38802,16 @@ third string</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T065303Z" creationid="pingfangx" creationdate="20180705T065303Z">
         <seg>static final double PI = 3.141592653589793;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>static void deprecatedMethod() { }
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033410Z" creationid="pingfangx" creationdate="20190102T033410Z">
+        <seg>static void deprecatedMethod() { }
+}</seg>
       </tuv>
     </tu>
     <tu>
@@ -36622,6 +39184,14 @@ third string</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>type_annotations.html</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023238Z" creationid="pingfangx" creationdate="20190102T023238Z">
+        <seg>type_annotations.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>uiswing/index.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031343Z" creationid="pingfangx" creationdate="20180518T031343Z">
@@ -36836,6 +39406,40 @@ value1 &lt;= value2</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>void monitorTemperature() throws</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024211Z" creationid="pingfangx" creationdate="20190102T024211Z">
+        <seg>void monitorTemperature() throws</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void open();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041550Z" creationid="pingfangx" creationdate="20190102T041550Z">
+        <seg>void open();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void openBackDoor();
+}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041551Z" creationid="pingfangx" creationdate="20190102T041551Z">
+        <seg>void openBackDoor();
+}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void openFrontDoor();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041551Z" creationid="pingfangx" creationdate="20190102T041551Z">
+        <seg>void openFrontDoor();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>void printStates() {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T062543Z" creationid="pingfangx" creationdate="20180518T062543Z">
@@ -36870,6 +39474,14 @@ public interface Callable&lt;V&gt; {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063856Z" creationid="pingfangx" creationdate="20180518T063856Z">
         <seg>void speedUp(int increment);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>void useDeprecatedMethod() {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033605Z" creationid="pingfangx" creationdate="20190102T033605Z">
+        <seg>void useDeprecatedMethod() {</seg>
       </tuv>
     </tu>
     <tu>
