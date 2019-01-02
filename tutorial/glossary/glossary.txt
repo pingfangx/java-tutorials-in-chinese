@@ -1,0 +1,55 @@
+#英文	中文	[不使用的翻译|]备注
+operator	运算符
+statements	语句	声明,陈述|
+remove	移除	删除|
+delete	删除	两者好像没有区别,但还是根据不同的单词进行不同的翻译
+cursor	光标
+caret	插入符	光标|与光标区分开
+change	更改,变更	改变|如果名词性不强,就使用“变更”
+all	全部,所有,全	
+live template	代码模板
+complete	补全,完整,完成,完全
+code complete	代码补全
+Popup Menu	弹出菜单
+action	操作,动作
+parentheses	括号,小括号,圆括号
+brackets,square brackets	括号,中括号,方括号
+braces,curly braces	括号,大括号,花括号
+angle brackets	尖括号
+period	句号
+comma	逗号
+semicolon	分号
+asterisk	星号
+i18n,internationalization	国际化
+L10n,localization	本地化
+Soft Wraps	自动换行
+super	超,super
+parent	父	两者应该没区别
+evaluated	计算,解析	评估|常用于调试部分,如计算表达式,无法解析字段
+expected	预期,期望	如期望一个布尔值
+Productivity Features Guide	生产力功能指南	就是统计你使用了哪些功能有助于提高你工作效率
+occurrence	匹配项	出现|有时也被翻译为出现,表示查找结果的匹配项
+pattern	模式	就是正则、字符串模式,不好翻译
+root	根	如git的根目录,项目根目录
+argument	参数,实参
+parameter	参数,形参	应该是混用的,只是在代码样式→换行和括号中补区分
+formal and actual parameters	形参和实参
+reference	引用,参考
+annotation	注解	注释
+scratch	临时文件,草稿,临时	不会列入项目中
+Instant Run	即时运行
+variant	变体
+repository	仓库	存储库,版本库|git 中统一翻译
+
+# 一些临时的
+class	类	课程,班级|
+primitive	基本	原始|
+field	字段	领域|
+extends	继承	扩展|
+highlighted	高亮	突出显示|
+local	局部	本地,当地|
+excerpt	片断	摘录|
+functional	函数式	功能|
+interface	接口	界面|
+generic	泛型	通用|
+retrieve	获取	检索|
