@@ -752,6 +752,22 @@ Your weight on NEPTUNE is 199.207413</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(&lt;i0&gt;Hint:&lt;/i0&gt; If you're invoking the compiler from the command line (as opposed to using a builder), invoke the compiler from the directory that contains the &lt;c1&gt;mygame&lt;/c1&gt; directory you just created.)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080011Z" creationid="pingfangx" creationdate="20190109T080011Z">
+        <seg>（&lt;i0&gt;Hint:&lt;/i0&gt; 如果从命令行调用编译器（而不是使用构建器），请从包含 &lt;c1&gt;mygame&lt;/c1&gt; 目录的目录调用编译器创建。）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>(&lt;i0&gt;Hint:&lt;/i0&gt; If you're invoking the compiler from the command line (as opposed to using a builder), invoke the compiler from the directory that contains the &lt;c1&gt;mygame&lt;/c1&gt; directory you just created.) Answer 1: Download this zip file with the solution: &lt;a2&gt;&lt;c3&gt;mygame.zip&lt;/c3&gt;&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080354Z" creationid="pingfangx" creationdate="20190109T080316Z">
+        <seg>（&lt;i0&gt;Hint:&lt;/i0&gt; 如果从命令行调用编译器（而不是使用构建器），请从包含 &lt;c1&gt;mygame&lt;/c1&gt; 目录的目录中调用编译器答案）1：下载包含答案的 zip 文件：&lt;a2&gt;&lt;c3&gt;mygame.zip&lt;/c3&gt;&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(A &lt;e0&gt;constant variable&lt;/e0&gt; is a variable of primitive type or type &lt;c1&gt;String&lt;/c1&gt; that is declared final and initialized with a compile-time constant expression.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T144834Z" creationid="pingfangx" creationdate="20180705T144834Z">
@@ -5226,6 +5242,14 @@ float anArrayOfFloats[];</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>123name.example.com</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071758Z" creationid="pingfangx" creationdate="20190109T071758Z">
+        <seg>123name.example.com</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>1a.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T085338Z" creationid="pingfangx" creationdate="20180706T085338Z">
@@ -5872,6 +5896,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Learning the Java Language&lt;/a1&gt; &gt; &lt;a2&gt;Packages&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T064037Z" creationid="pingfangx" creationdate="20190109T064037Z">
+        <seg>&lt;a0&gt;Home Page&lt;/a0&gt; &gt; &lt;a1&gt;Learning the Java Language&lt;/a1&gt; &gt; &lt;a2&gt;Packages&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;Internationalization&lt;/a0&gt; — An introduction to designing software so that it can be easily adapted (localized) to various languages and regions.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031632Z" creationid="pingfangx" creationdate="20180518T031632Z">
@@ -6042,32 +6074,32 @@ C:\myapplication&gt;</seg>
       <tuv lang="EN-US">
         <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040353Z" creationid="pingfangx" creationdate="20180518T040353Z">
-        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt;</seg>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080416Z" creationid="pingfangx" creationdate="20180518T040353Z">
+        <seg>&lt;a0&gt;« 上一页&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt; • &lt;a2&gt;Next »&lt;/a2&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032546Z" creationid="pingfangx" creationdate="20180518T032546Z">
-        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt; • &lt;a2&gt;Next »&lt;/a2&gt;</seg>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T063909Z" creationid="pingfangx" creationdate="20180518T032546Z">
+        <seg>&lt;a0&gt;« 上一页&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt; • &lt;a2&gt;下一页 »&lt;/a2&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;Trail&lt;/a1&gt; • &lt;a2&gt;Next »&lt;/a2&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032124Z" creationid="pingfangx" creationdate="20180518T032124Z">
-        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;Trail&lt;/a1&gt; • &lt;a2&gt;Next »&lt;/a2&gt;</seg>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T063704Z" creationid="pingfangx" creationdate="20180518T032124Z">
+        <seg>&lt;a0&gt;« 上一页&lt;/a0&gt; • &lt;a1&gt;路径&lt;/a1&gt; • &lt;a2&gt;下一页 »&lt;/a2&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040212Z" creationid="pingfangx" creationdate="20180518T040212Z">
-        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt;</seg>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080442Z" creationid="pingfangx" creationdate="20180518T040212Z">
+        <seg>&lt;a0&gt;« 上一页&lt;/a0&gt; • &lt;a1&gt;TOC&lt;/a1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -6082,8 +6114,8 @@ C:\myapplication&gt;</seg>
       <tuv lang="EN-US">
         <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;Trail&lt;/a1&gt; • &lt;a2&gt;Next »&lt;/a2&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T032712Z" creationid="pingfangx" creationdate="20180518T032712Z">
-        <seg>&lt;a0&gt;« Previous&lt;/a0&gt; • &lt;a1&gt;Trail&lt;/a1&gt; • &lt;a2&gt;Next »&lt;/a2&gt;</seg>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T063544Z" creationid="pingfangx" creationdate="20180518T032712Z">
+        <seg>&lt;a0&gt;« 上一页&lt;/a0&gt; • &lt;a1&gt;路径&lt;/a1&gt; • &lt;a2&gt;下一页 »&lt;/a2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -9042,6 +9074,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;c0&gt;Client.java&lt;/c0&gt; and &lt;c1&gt;Server.java&lt;/c1&gt; need to import the &lt;c2&gt;Utilities&lt;/c2&gt; class, which they can do in one of two ways:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080217Z" creationid="pingfangx" creationdate="20190109T080217Z">
+        <seg>&lt;c0&gt;Client.java&lt;/c0&gt; 和 &lt;c1&gt;Server.java&lt;/c1&gt; 需要导入 &lt;c2&gt;Utilities&lt;/c2&gt; 类，他们可以通过以下两种方式之一进行操作：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;c0&gt;DecimalFormat.java&lt;/c0&gt; Output</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T034125Z" creationid="pingfangx" creationdate="20190103T034125Z">
@@ -9288,6 +9328,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180528T034737Z" creationid="pingfangx" creationdate="20180528T034737Z">
         <seg>&lt;c0&gt;new Bicycle(30, 0, 8)&lt;/c0&gt; 为对象创建内存空间并初始化其字段。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;c0&gt;package mygame.server;&lt;/c0&gt;:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080130Z" creationid="pingfangx" creationdate="20190109T080130Z">
+        <seg>&lt;c0&gt;package mygame.server;&lt;/c0&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -10118,6 +10166,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Definition:&lt;/s0&gt; A &lt;i1&gt;package&lt;/i1&gt; is a grouping of related types providing access protection and name space management.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T064250Z" creationid="pingfangx" creationdate="20190109T064250Z">
+        <seg>&lt;s0&gt;Definition:&lt;/s0&gt; &lt;i1&gt;package&lt;/i1&gt; 是一组提供访问保护和名称空间管理的相关类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s0&gt;Definition:&lt;/s0&gt; Two of the components of a method declaration comprise the &lt;i1&gt;method signature&lt;/i1&gt;the method's name and the parameter types.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T065948Z" creationid="pingfangx" creationdate="20180525T065053Z">
@@ -10486,6 +10542,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; Another, less common form of &lt;c1&gt;import&lt;/c1&gt; allows you to import the public nested classes of an enclosing class.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072730Z" creationid="pingfangx" creationdate="20190109T072730Z">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; 另一种不太常见的 &lt;c1&gt;import&lt;/c1&gt; 形式允许您导入封闭类的公共嵌套类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; Each of the &lt;c1&gt;Number&lt;/c1&gt; subclasses that wrap primitive numeric types also provides a &lt;c2&gt;parseXXXX()&lt;/c2&gt; method (for example, &lt;c3&gt;parseFloat()&lt;/c3&gt;) that can be used to convert strings to primitive numbers.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T065236Z" creationid="pingfangx" creationdate="20190103T065236Z">
@@ -10530,6 +10594,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T102944Z" creationid="pingfangx" creationdate="20190102T102944Z">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; 如果覆盖 &lt;c1&gt;equals()&lt;/c1&gt;，则还必须覆盖 &lt;c2&gt;hashCode()&lt;/c2&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; If you put multiple types in a single source file, only one can be &lt;c1&gt;public&lt;/c1&gt;, and it must have the same name as the source file.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070418Z" creationid="pingfangx" creationdate="20190109T070418Z">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; 如果在单个源文件中放置多个类型，则只能有一个为 &lt;c1&gt;public&lt;/c1&gt;，并且它必须与源文件具有相同的名称。</seg>
       </tuv>
     </tu>
     <tu>
@@ -10690,6 +10762,14 @@ C:\myapplication&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034557Z" creationid="pingfangx" creationdate="20180518T034557Z">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; 完全按照所示键入所有代码，命令和文件名。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; Use static import very sparingly.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074220Z" creationid="pingfangx" creationdate="20190109T074220Z">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; 应非常谨慎地使用静态导入。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11252,6 +11332,14 @@ C:\myapplication&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s0&gt;class name&lt;/s0&gt; – &lt;c1&gt;graphics.Rectangle&lt;/c1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074625Z" creationid="pingfangx" creationdate="20190109T074625Z">
+        <seg>&lt;s0&gt;class name&lt;/s0&gt; – &lt;c1&gt;graphics.Rectangle&lt;/c1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s0&gt;default boolean didItWork(int i, double x, String s) {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T063124Z" creationid="pingfangx" creationdate="20190102T063124Z">
@@ -11306,6 +11394,14 @@ C:\myapplication&gt;</seg>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T094226Z" creationid="pingfangx" creationdate="20180706T094226Z">
         <seg>&lt;s0&gt;p -&gt; p.printPerson()&lt;/s0&gt;
 );</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;pathname to file&lt;/s0&gt; – &lt;c1&gt;graphics\Rectangle.java&lt;/c1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074626Z" creationid="pingfangx" creationdate="20190109T074626Z">
+        <seg>&lt;s0&gt;pathname to file&lt;/s0&gt; – &lt;c1&gt;graphics\Rectangle.java&lt;/c1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -12026,6 +12122,14 @@ public @interface MealContainer {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180607T035639Z" creationid="pingfangx" creationdate="20180607T035639Z">
         <seg>一个类可以使用修饰符 &lt;c0&gt;public&lt;/c0&gt; 来声明，在这种情况下，该类对任何地方的所有类都是可见的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A class path may include several paths, separated by a semicolon (Windows) or colon (UNIX).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075210Z" creationid="pingfangx" creationdate="20190109T075210Z">
+        <seg>类路径可能包含多个路径，由分号(Windows)或冒号(UNIX)分隔。</seg>
       </tuv>
     </tu>
     <tu>
@@ -13382,6 +13486,14 @@ public @interface MealContainer {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>All the top-level, non-public types will be &lt;i0&gt;package private&lt;/i0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070629Z" creationid="pingfangx" creationdate="20190109T070629Z">
+        <seg>所有顶级非公共类型都将是 &lt;i0&gt;package private&lt;/i0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>All variables must have a type.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T064219Z" creationid="pingfangx" creationdate="20180525T064219Z">
@@ -13418,6 +13530,14 @@ public @interface MealContainer {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T074516Z" creationid="pingfangx" creationdate="20180518T074516Z">
         <seg>另请注意，您选择的名称不得是 &lt;a6&gt;keyword or reserved word（关键字或保留字）&lt;/a6&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Also, &lt;c0&gt;Server.java&lt;/c0&gt; needs to import the &lt;c1&gt;Client&lt;/c1&gt; class:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080224Z" creationid="pingfangx" creationdate="20190109T080224Z">
+        <seg>此外，&lt;c0&gt;Server.java&lt;/c0&gt; 需要导入 &lt;c1&gt;Client&lt;/c1&gt; 类：</seg>
       </tuv>
     </tu>
     <tu>
@@ -14238,6 +14358,14 @@ public @interface MealContainer {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Another less common form of &lt;c0&gt;import&lt;/c0&gt;, the &lt;i1&gt;static import statement&lt;/i1&gt;, will be discussed at the end of this section.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072815Z" creationid="pingfangx" creationdate="20190109T072815Z">
+        <seg>另一种不太常见的 &lt;c0&gt;import&lt;/c0&gt; 形式，即 &lt;i1&gt;static import statement&lt;/i1&gt;，将在本节末尾讨论。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Another point of interest is the &lt;c0&gt;break&lt;/c0&gt; statement.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T082201Z" creationid="pingfangx" creationdate="20180521T082201Z">
@@ -14302,6 +14430,14 @@ public @interface MealContainer {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Answer 1a: The first line of each file must specify the package:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080123Z" creationid="pingfangx" creationdate="20190109T080123Z">
+        <seg>答案 1a：每个文件的第一行必须指定包：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Answer 1b: &lt;c0&gt;methodFour&lt;/c0&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190108T115947Z" creationid="pingfangx" creationdate="20190108T115947Z">
@@ -14318,10 +14454,26 @@ public @interface MealContainer {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Answer 1b: Within the &lt;c0&gt;mygame&lt;/c0&gt; directory, you need to create three subdirectories: &lt;c1&gt;client&lt;/c1&gt;, &lt;c2&gt;server&lt;/c2&gt;, and &lt;c3&gt;shared&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080148Z" creationid="pingfangx" creationdate="20190109T080148Z">
+        <seg>答案 1b：在 &lt;c0&gt;mygame&lt;/c0&gt; 目录中，您需要创建三个子目录：&lt;c1&gt;client&lt;/c1&gt;，&lt;c2&gt;server&lt;/c2&gt; 和 &lt;c3&gt;shared&lt;/c3&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Answer 1c: They cause compile-time errors.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T023737Z" creationid="pingfangx" creationdate="20190103T023737Z">
         <seg>答案 1c：它们导致编译时错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Answer 1c: Yes, you need to add import statements.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080211Z" creationid="pingfangx" creationdate="20190109T080211Z">
+        <seg>答案 1c：是的，您需要添加 import 语句。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14406,6 +14558,14 @@ public @interface MealContainer {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Answers</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080037Z" creationid="pingfangx" creationdate="20190109T080037Z">
+        <seg>答案</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Answers to Exercises</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064932Z" creationid="pingfangx" creationdate="20180518T064932Z">
@@ -14482,6 +14642,22 @@ public @interface MealContainer {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T091259Z" creationid="pingfangx" creationdate="20180521T091259Z">
         <seg>Answers to Questions and Exercises: Control Flow Statements (The Java™ Tutorials &gt; Learning the Java Language &gt; Language Basics)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Answers to Questions and Exercises: Creating and Using Packages</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080033Z" creationid="pingfangx" creationdate="20190109T080033Z">
+        <seg>问题和练习的答案：创建和使用包</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Answers to Questions and Exercises: Creating and Using Packages (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080027Z" creationid="pingfangx" creationdate="20190109T080027Z">
+        <seg>Answers to Questions and Exercises: Creating and Using Packages (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
       </tuv>
     </tu>
     <tu>
@@ -14738,6 +14914,14 @@ public @interface MealContainer {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T021008Z" creationid="pingfangx" creationdate="20190102T021008Z">
         <seg>Anyone can use this nested class.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Apparent Hierarchies of Packages</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073347Z" creationid="pingfangx" creationdate="20190109T073347Z">
+        <seg>包的表面层次结构</seg>
       </tuv>
     </tu>
     <tu>
@@ -15034,6 +15218,14 @@ public @interface MealContainer {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190108T082404Z" creationid="pingfangx" creationdate="20190108T082404Z">
         <seg>作为解决方法，您可以通过反射创建类型参数的对象：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As an alternative, you can &lt;i0&gt;import&lt;/i0&gt; the member or its package and then use its simple name.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072319Z" creationid="pingfangx" creationdate="20190109T072319Z">
+        <seg>作为替代方案，您可以 &lt;i0&gt;import&lt;/i0&gt; 成员或其包，然后使用其简单名称。</seg>
       </tuv>
     </tu>
     <tu>
@@ -15406,6 +15598,14 @@ public @interface MealContainer {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>As you should recall, by convention a company uses its reversed Internet domain name for its package names.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074733Z" creationid="pingfangx" creationdate="20190109T074733Z">
+        <seg>您应该记得，按照惯例，公司使用其反向的互联网域名作为其包名。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>As you've already learned, objects define their interaction with the outside world through the methods that they expose.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T063743Z" creationid="pingfangx" creationdate="20180518T063743Z">
@@ -15462,10 +15662,26 @@ public @interface MealContainer {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Assume you have written some classes.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075715Z" creationid="pingfangx" creationdate="20190109T075715Z">
+        <seg>假设你写了一些类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>At any point, the length and content of the sequence can be changed through method invocations.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T080449Z" creationid="pingfangx" creationdate="20190103T080449Z">
         <seg>在任何时候，可以通过方法调用来更改序列的长度和内容。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>At first, packages appear to be hierarchical, but they are not.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072951Z" creationid="pingfangx" creationdate="20190109T072951Z">
+        <seg>首先，包似乎是分层的，但它们不是。</seg>
       </tuv>
     </tu>
     <tu>
@@ -15644,6 +15860,14 @@ A a = b;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T035525Z" creationid="pingfangx" creationdate="20190103T035525Z">
         <seg>基本数学方法</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Be aware that the second import statement will &lt;i0&gt;not&lt;/i0&gt; import &lt;c1&gt;Rectangle&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072805Z" creationid="pingfangx" creationdate="20190109T072805Z">
+        <seg>请注意，第二个 import 语句将 &lt;i0&gt;不会&lt;/i0&gt; 导入 &lt;c1&gt;Rectangle&lt;/c1&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -15920,6 +16144,22 @@ A a = b;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Belatedly, you decide that they should be split into three packages, as listed in the table below.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080053Z" creationid="pingfangx" creationdate="20190109T080053Z">
+        <seg>稍后，您决定将它们拆分为三个包，如下表所示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Belatedly, you decide they should be split into three packages, as listed in the following table.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075728Z" creationid="pingfangx" creationdate="20190109T075728Z">
+        <seg>稍后，您决定将它们拆分为三个包，如下表所示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Besides &lt;c1&gt;int&lt;/c1&gt;, what other data types are there?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T073106Z" creationid="pingfangx" creationdate="20180518T073106Z">
@@ -16108,6 +16348,14 @@ A a = b;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034609Z" creationid="pingfangx" creationdate="20180518T034609Z">
         <seg>编译器(&lt;c1&gt;javac&lt;/c1&gt;)和启动器(&lt;c2&gt;java&lt;/c2&gt;)都是 &lt;e3&gt;case-sensitive&lt;/e3&gt;，因此您必须一致地大写。&lt;br4/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Both the compiler and the JVM construct the path to your &lt;c4&gt;.class&lt;/c4&gt; files by adding the package name to the class path.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075050Z" creationid="pingfangx" creationdate="20190109T075050Z">
+        <seg>编译器和 JVM 都通过将包名称添加到类路径来构造 &lt;c4&gt;.class&lt;/c4&gt; 文件的路径。</seg>
       </tuv>
     </tu>
     <tu>
@@ -16360,6 +16608,14 @@ Box rawBox = stringBox;               // OK</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>But if you use many types from a package, you should import the entire package.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072434Z" creationid="pingfangx" creationdate="20190109T072434Z">
+        <seg>但是如果从包中使用多种类型，则应导入整个包。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>But if you use this operator in part of a larger expression, the one that you choose may make a significant difference.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T065403Z" creationid="pingfangx" creationdate="20180521T065403Z">
@@ -16480,10 +16736,26 @@ Box rawBox = stringBox;               // OK</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>By default, the compiler and the JVM search the current directory and the JAR file containing the Java platform classes so that these directories are automatically in your class path.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075227Z" creationid="pingfangx" creationdate="20190109T075227Z">
+        <seg>默认情况下，编译器和 JVM 搜索当前目录和包含 Java 平台类的 JAR 文件，以便这些目录自动位于类路径中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>By definition, if two objects are equal, their hash code &lt;i0&gt;must also&lt;/i0&gt; be equal.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T103917Z" creationid="pingfangx" creationdate="20190102T103917Z">
         <seg>根据定义，如果两个对象相等，则它们的哈希码 &lt;i0&gt;必须也&lt;/i0&gt; 相等。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>By doing this, you can give the &lt;c0&gt;classes&lt;/c0&gt; directory to other programmers without revealing your sources.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074924Z" creationid="pingfangx" creationdate="20190109T074924Z">
+        <seg>通过这样做，您可以将 &lt;c0&gt;classes&lt;/c0&gt; 目录提供给其他程序员而不会泄露您的源。</seg>
       </tuv>
     </tu>
     <tu>
@@ -16952,6 +17224,14 @@ class D &lt;T extends A &amp; B &amp; C&gt; { /* ... */ }</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Class Name</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075803Z" creationid="pingfangx" creationdate="20190109T075803Z">
+        <seg>类名</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Class Variables</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180607T042217Z" creationid="pingfangx" creationdate="20180607T042217Z">
@@ -17112,6 +17392,22 @@ class D &lt;T extends A &amp; B &amp; C&gt; { /* ... */ }</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Client</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075808Z" creationid="pingfangx" creationdate="20190109T075808Z">
+        <seg>Client</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Client.java</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080152Z" creationid="pingfangx" creationdate="20190109T080152Z">
+        <seg>Client.java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Code re-use: If an object already exists (perhaps written by another software developer), you can use that object in your program.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061958Z" creationid="pingfangx" creationdate="20180518T061958Z">
@@ -17206,6 +17502,14 @@ class D &lt;T extends A &amp; B &amp; C&gt; { /* ... */ }</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T015250Z" creationid="pingfangx" creationdate="20190102T015250Z">
         <seg>常见示例包括罗盘方向(NORTH，SOUTH，EAST 和 WEST 的值)和星期几。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Companies use their reversed Internet domain name to begin their package namesfor example, &lt;c0&gt;com.example.mypackage&lt;/c0&gt; for a package named &lt;c1&gt;mypackage&lt;/c1&gt; created by a programmer at &lt;c2&gt;example.com&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071419Z" creationid="pingfangx" creationdate="20190109T071334Z">
+        <seg>公司使用他们的反向互联网域名来开始他们的包名称，例如在 &lt;c2&gt;example.com&lt;/c2&gt; 的程序员创建一个名为 &lt;c1&gt;mypackage&lt;/c1&gt; 的包 &lt;c0&gt;com.example.mypackage&lt;/c0&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -17334,6 +17638,14 @@ class D &lt;T extends A &amp; B &amp; C&gt; { /* ... */ }</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034351Z" creationid="pingfangx" creationdate="20180518T034351Z">
         <seg>将源文件编译为 &lt;c0&gt;.class&lt;/c0&gt; 文件</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Compile the revised source files.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075949Z" creationid="pingfangx" creationdate="20190109T075949Z">
+        <seg>编译修改后的源文件。</seg>
       </tuv>
     </tu>
     <tu>
@@ -18042,6 +18354,14 @@ class D &lt;T extends A &amp; B &amp; C&gt; { /* ... */ }</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Convention.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071208Z" creationid="pingfangx" creationdate="20190109T071208Z">
+        <seg>规范。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Conventions (and common sense) apply to this rule as well.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T074351Z" creationid="pingfangx" creationdate="20180518T074351Z">
@@ -18348,10 +18668,26 @@ Count is: 10</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Creating a Package (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070004Z" creationid="pingfangx" creationdate="20190109T070004Z">
+        <seg>Creating a Package (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Creating and Using Packages</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T093009Z" creationid="pingfangx" creationdate="20180521T093009Z">
         <seg>创建和使用包</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creating and Using Packages (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T064033Z" creationid="pingfangx" creationdate="20190109T064033Z">
+        <seg>Creating and Using Packages (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
       </tuv>
     </tu>
     <tu>
@@ -18828,6 +19164,14 @@ ds.print(new EvenIterator());</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Destination Packages</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075752Z" creationid="pingfangx" creationdate="20190109T075752Z">
+        <seg>目的包</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Determines whether the specified char value is a letter or a digit, respectively.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T062222Z" creationid="pingfangx" creationdate="20190103T062222Z">
@@ -18924,6 +19268,14 @@ ds.print(new EvenIterator());</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Do you think you'll need to make any other changes to the source files to make them compile correctly?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075900Z" creationid="pingfangx" creationdate="20190109T075900Z">
+        <seg>你认为你需要对源文件进行任何其他更改才能使它们正确编译吗？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Documentation</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030352Z" creationid="pingfangx" creationdate="20180518T030352Z">
@@ -18972,6 +19324,14 @@ ds.print(new EvenIterator());</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Domain Name</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071748Z" creationid="pingfangx" creationdate="20190109T071748Z">
+        <seg>域名</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Dot saw I was Tod</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T064438Z" creationid="pingfangx" creationdate="20190103T064438Z">
@@ -18984,6 +19344,14 @@ ds.print(new EvenIterator());</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T084704Z" creationid="pingfangx" creationdate="20190103T084704Z">
         <seg>Double</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Download the source files as listed here.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075937Z" creationid="pingfangx" creationdate="20190109T075937Z">
+        <seg>下载此处列出的源文件。</seg>
       </tuv>
     </tu>
     <tu>
@@ -19108,6 +19476,14 @@ ds.print(new EvenIterator());</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Each component of the package name corresponds to a subdirectory.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074810Z" creationid="pingfangx" creationdate="20190109T074810Z">
+        <seg>包名称的每个组件对应一个子目录。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Each constructor initializes some or all of the rectangle's member variables.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180607T020223Z" creationid="pingfangx" creationdate="20180607T020223Z">
@@ -19192,6 +19568,14 @@ ds.print(new EvenIterator());</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T084236Z" creationid="pingfangx" creationdate="20181228T084236Z">
         <seg>每个都具有以下特征：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Each is appropriate for different situations, as explained in the sections that follow.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072035Z" creationid="pingfangx" creationdate="20190109T072035Z">
+        <seg>每种情况都适用于不同的情况，如以下各节所述。</seg>
       </tuv>
     </tu>
     <tu>
@@ -19470,6 +19854,14 @@ Element at index 9: 1000</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Enumerations and annotation types are special kinds of classes and interfaces, respectively, so &lt;i3&gt;types&lt;/i3&gt; are often referred to in this lesson simply as &lt;i4&gt;classes and interfaces&lt;/i4&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T064355Z" creationid="pingfangx" creationdate="20190109T064355Z">
+        <seg>枚举和注解类型分别是特殊类型的类和接口，因此 &lt;i3&gt;types&lt;/i3&gt; 在本类中通常简称为 &lt;i4&gt;类和接口（classes and interfaces）&lt;/i4&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Environment env) {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T091706Z" creationid="pingfangx" creationdate="20180601T091706Z">
@@ -19708,6 +20100,14 @@ HelloWorldApp.java.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T065012Z" creationid="pingfangx" creationdate="20180525T065012Z">
         <seg>例外情况在后面的课程中讨论。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Exercise 1: Download three source files:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080229Z" creationid="pingfangx" creationdate="20190109T080229Z">
+        <seg>练习 1：下载三个源文件：</seg>
       </tuv>
     </tu>
     <tu>
@@ -20254,6 +20654,14 @@ Second number is invalid</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For convenience, the Java compiler automatically imports two entire packages for each source file: (1) the &lt;c0&gt;java.lang&lt;/c0&gt; package and (2) the current package (the package for the current file).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072904Z" creationid="pingfangx" creationdate="20190109T072904Z">
+        <seg>为方便起见，Java 编译器会自动为每个源文件导入两个完整的包：(1) &lt;c0&gt;java.lang&lt;/c0&gt; 包和 (2) 当前包(当前文件的包)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For decimal values, this data type is generally the default choice.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T081818Z" creationid="pingfangx" creationdate="20180518T081818Z">
@@ -20470,6 +20878,14 @@ Second number is invalid</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For example, if</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075052Z" creationid="pingfangx" creationdate="20190109T075052Z">
+        <seg>例如，如果</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example, if s = "333" and radix = 8, the method returns the base-ten integer equivalent of the octal number 333.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T031127Z" creationid="pingfangx" creationdate="20190103T031120Z">
@@ -20478,10 +20894,26 @@ Second number is invalid</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For example, if the &lt;c2&gt;graphics.Rectangle&lt;/c2&gt; class contained useful nested classes, such as &lt;c3&gt;Rectangle.DoubleWide&lt;/c3&gt; and &lt;c4&gt;Rectangle.Square&lt;/c4&gt;, you could import &lt;c5&gt;Rectangle&lt;/c5&gt; and its nested classes by using the following &lt;i6&gt;two&lt;/i6&gt; statements.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072755Z" creationid="pingfangx" creationdate="20190109T072755Z">
+        <seg>例如，如果 &lt;c2&gt;graphics.Rectangle&lt;/c2&gt; 类包含有用的嵌套类，例如 &lt;c3&gt;Rectangle.DoubleWide&lt;/c3&gt; 和 &lt;c4&gt;Rectangle.Square&lt;/c4&gt;，则可以导入 &lt;c5&gt;Rectangle&lt;/c5&gt; 及其嵌套类，使用以下 &lt;i6&gt;两个&lt;/i6&gt; 语句。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example, if the bicycle only has 6 gears, a method to change gears could reject any value that is less than 1 or greater than 6.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061903Z" creationid="pingfangx" creationdate="20180518T061903Z">
         <seg>例如，如果自行车只有 6 个档位，则更换档位的方法可以拒绝任何小于 1 或大于 6 的值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, if the source file is like this</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074848Z" creationid="pingfangx" creationdate="20190109T074848Z">
+        <seg>例如，如果源文件是这样的</seg>
       </tuv>
     </tu>
     <tu>
@@ -20630,6 +21062,14 @@ Second number is invalid</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For example, the &lt;c0&gt;graphics&lt;/c0&gt; package defined a class named &lt;c1&gt;Rectangle&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073429Z" creationid="pingfangx" creationdate="20190109T073429Z">
+        <seg>例如，&lt;c0&gt;graphics&lt;/c0&gt; 包定义了一个名为 &lt;c1&gt;Rectangle&lt;/c1&gt; 的类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example, the &lt;c1&gt;PhoneNumber&lt;/c1&gt; constructor can access the local variable &lt;c2&gt;numberLength&lt;/c2&gt; because it is declared final; &lt;c3&gt;numberLength&lt;/c3&gt; is a &lt;e4&gt;captured variable&lt;/e4&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T122804Z" creationid="pingfangx" creationdate="20180705T122804Z">
@@ -20642,6 +21082,14 @@ Second number is invalid</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T081426Z" creationid="pingfangx" creationdate="20180521T080856Z">
         <seg>例如，&lt;c3&gt;Bicycle&lt;/c3&gt; 类别&lt;i4&gt;只有&lt;/i4&gt;当自行车已经运动时才允许制动器降低自行车的速度。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, the Java API includes a &lt;c0&gt;java.awt&lt;/c0&gt; package, a &lt;c1&gt;java.awt.color&lt;/c1&gt; package, a &lt;c2&gt;java.awt.font&lt;/c2&gt; package, and many others that begin with &lt;c3&gt;java.awt&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073036Z" creationid="pingfangx" creationdate="20190109T073036Z">
+        <seg>例如，Java API 包括 &lt;c0&gt;java.awt&lt;/c0&gt; 包，&lt;c1&gt;java.awt.color&lt;/c1&gt; 包，&lt;c2&gt;java.awt.font&lt;/c2&gt; 包，以及 &lt;c3&gt;java.awt&lt;/c3&gt; 开头的许多其他包。</seg>
       </tuv>
     </tu>
     <tu>
@@ -20706,6 +21154,14 @@ Second number is invalid</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T072555Z" creationid="pingfangx" creationdate="20190103T072555Z">
         <seg>例如，以下代码获取字符串中索引 9 处的字符：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, the following does not match all the classes in the &lt;c1&gt;graphics&lt;/c1&gt; package that begin with &lt;c2&gt;A&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072706Z" creationid="pingfangx" creationdate="20190109T072706Z">
+        <seg>例如，以下语句无法匹配 &lt;c1&gt;graphics&lt;/c1&gt; 包中以 &lt;c2&gt;A&lt;/c2&gt; 开头的所有类。</seg>
       </tuv>
     </tu>
     <tu>
@@ -20810,6 +21266,14 @@ Second number is invalid</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T093405Z" creationid="pingfangx" creationdate="20180706T093405Z">
         <seg>例如，参数化类型 &lt;c4&gt;Predicate&lt;Person&gt;&lt;/c4&gt; 如下：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, the previous code snippet would become:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074140Z" creationid="pingfangx" creationdate="20190109T074140Z">
+        <seg>例如，之前的代码段将变为：</seg>
       </tuv>
     </tu>
     <tu>
@@ -20930,6 +21394,14 @@ Second number is invalid</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T114250Z" creationid="pingfangx" creationdate="20190103T114250Z">
         <seg>例如，您可以使用以下语句创建 &lt;t1&gt;Box&lt;Integer&gt;&lt;/t1&gt; 的实例：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, you can define &lt;c2&gt;public class Circle&lt;/c2&gt; in the file &lt;c3&gt;Circle.java&lt;/c3&gt;, define &lt;c4&gt;public interface Draggable&lt;/c4&gt; in the file &lt;c5&gt;Draggable.java&lt;/c5&gt;, define &lt;c6&gt;public enum Day&lt;/c6&gt; in the file &lt;c7&gt;Day.java&lt;/c7&gt;, and so forth.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070515Z" creationid="pingfangx" creationdate="20190109T070515Z">
+        <seg>例如，您可以在文件 &lt;c3&gt;Circle.java&lt;/c3&gt; 中定义 &lt;c2&gt;public class Circle&lt;/c2&gt;，在文件 &lt;c5&gt;Draggable.java&lt;/c5&gt; 中定义 &lt;c4&gt;public interface Draggable&lt;/c4&gt; ，在文件 &lt;c7&gt;Day.java&lt;/c7&gt; 中定义 &lt;c6&gt;public enum Day&lt;/c6&gt;等等。</seg>
       </tuv>
     </tu>
     <tu>
@@ -21486,6 +21958,22 @@ Second number is invalid</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Furthermore, assume that the classes are currently in the default package (they have no &lt;c0&gt;package&lt;/c0&gt; statements).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080059Z" creationid="pingfangx" creationdate="20190109T080059Z">
+        <seg>此外，假设类当前在默认包中(它们没有 &lt;c0&gt;package&lt;/c0&gt; 语句)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Furthermore, assume the classes are currently in the default package (they have no &lt;c0&gt;package&lt;/c0&gt; statements).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075738Z" creationid="pingfangx" creationdate="20190109T075738Z">
+        <seg>此外，假设类当前在默认包中(它们没有 &lt;c0&gt;package&lt;/c0&gt; 语句)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Gamma</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180607T041517Z" creationid="pingfangx" creationdate="20180607T041517Z">
@@ -21498,6 +21986,14 @@ Second number is invalid</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T043616Z" creationid="pingfangx" creationdate="20190102T043616Z">
         <seg>一般来说，&lt;i0&gt;interfaces&lt;/i0&gt; 就是这样的合约。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generally speaking, an unnamed package is only for small or temporary applications or when you are just beginning the development process.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070709Z" creationid="pingfangx" creationdate="20190109T070709Z">
+        <seg>一般来说，一个未命名的包只适用于小型或临时应用程序，或者刚刚开始开发过程。</seg>
       </tuv>
     </tu>
     <tu>
@@ -22176,6 +22672,14 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Here is the fully qualified name for the &lt;c0&gt;Rectangle&lt;/c0&gt; class declared in the &lt;c1&gt;graphics&lt;/c1&gt; package in the previous example.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072230Z" creationid="pingfangx" creationdate="20190109T072230Z">
+        <seg>以下是上一个示例中 &lt;c1&gt;graphics&lt;/c1&gt; 包中声明的 &lt;c0&gt;Rectangle&lt;/c0&gt; 类的完全限定名称。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Here is the output from this program.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T090651Z" creationid="pingfangx" creationdate="20180521T090651Z">
@@ -22292,6 +22796,14 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180607T020140Z" creationid="pingfangx" creationdate="20180607T020140Z">
         <seg>这是另一个 &lt;c2&gt;Rectangle&lt;/c2&gt; 类，它与 &lt;a3&gt;Objects&lt;/a3&gt; 部分中的不同。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Here's how you would import the &lt;c2&gt;Rectangle&lt;/c2&gt; class from the &lt;c3&gt;graphics&lt;/c3&gt; package created in the previous section.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072411Z" creationid="pingfangx" creationdate="20190109T072411Z">
+        <seg>以下是从上一节中创建的 &lt;c3&gt;graphics&lt;/c3&gt; 包导入 &lt;c2&gt;Rectangle&lt;/c2&gt; 类的方法。</seg>
       </tuv>
     </tu>
     <tu>
@@ -22632,6 +23144,14 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>However, if you are trying to use a member from a different package and that package has not been imported, you must use the member's fully qualified name, which includes the package name.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072219Z" creationid="pingfangx" creationdate="20190109T072219Z">
+        <seg>但是，如果您尝试使用其他包中的成员并且尚未导入该包，则必须使用该成员的完全限定名称，该名称包括包名称。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>However, if you need to use another number system, the following example shows the correct syntax.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T082856Z" creationid="pingfangx" creationdate="20180518T082856Z">
@@ -22704,6 +23224,14 @@ Hello World!</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>However, the &lt;c4&gt;java.awt.color&lt;/c4&gt; package, the &lt;c5&gt;java.awt.font&lt;/c5&gt; package, and other &lt;c6&gt;java.awt.xxxx&lt;/c6&gt; packages are &lt;i7&gt;not included&lt;/i7&gt; in the &lt;c8&gt;java.awt&lt;/c8&gt; package.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073113Z" creationid="pingfangx" creationdate="20190109T073113Z">
+        <seg>但是，&lt;c4&gt;java.awt.color&lt;/c4&gt; 包，&lt;c5&gt;java.awt.font&lt;/c5&gt; 包和其他 &lt;c6&gt;java.awt.xxxx&lt;/c6&gt; 包 &lt;i7&gt;不包含&lt;/i7&gt; 在 &lt;c8&gt;java.awt&lt;/c8&gt; 中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>However, the Java programming language also uses the term "variable" as well.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T072523Z" creationid="pingfangx" creationdate="20180518T072523Z">
@@ -22732,6 +23260,14 @@ Hello World!</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T021828Z" creationid="pingfangx" creationdate="20180521T021828Z">
         <seg>但是，该示例清楚地说明了数组语法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>However, the path to the &lt;c2&gt;.class&lt;/c2&gt; files does not have to be the same as the path to the &lt;c3&gt;.java&lt;/c3&gt; source files.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074908Z" creationid="pingfangx" creationdate="20190109T074908Z">
+        <seg>但是，&lt;c2&gt;.class&lt;/c2&gt; 文件的路径不必与 &lt;c3&gt;.java&lt;/c3&gt; 源文件的路径相同。</seg>
       </tuv>
     </tu>
     <tu>
@@ -23240,6 +23776,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If a member in one package shares its name with a member in another package and both packages are imported, you must refer to each member by its qualified name.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073424Z" creationid="pingfangx" creationdate="20190109T073424Z">
+        <seg>如果一个包中的成员与另一个包中的成员共享其名称，并且两个包都已导入，则必须通过其限定名称引用每个成员。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If a method marked with &lt;c0&gt;@Override&lt;/c0&gt; fails to correctly override a method in one of its superclasses, the compiler generates an error.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T033451Z" creationid="pingfangx" creationdate="20190102T033451Z">
@@ -23284,6 +23828,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190108T083259Z" creationid="pingfangx" creationdate="20190108T083259Z">
         <seg>如果允许参数化列表数组，则前面的代码将无法抛出所需的 &lt;t0&gt;ArrayStoreException&lt;/t0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If both &lt;c4&gt;graphics&lt;/c4&gt; and &lt;c5&gt;java.awt&lt;/c5&gt; have been imported, the following is ambiguous.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073453Z" creationid="pingfangx" creationdate="20190109T073453Z">
+        <seg>如果已导入 &lt;c4&gt;graphics&lt;/c4&gt; 和 &lt;c5&gt;java.awt&lt;/c5&gt;，则以下内容不明确。</seg>
       </tuv>
     </tu>
     <tu>
@@ -23372,6 +23924,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180607T020412Z" creationid="pingfangx" creationdate="20180607T020412Z">
         <seg>如果存在，则另一个构造函数的调用必须是构造函数中的第一行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If so, what?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075930Z" creationid="pingfangx" creationdate="20190109T075930Z">
+        <seg>如果需要，则需要做什么？</seg>
       </tuv>
     </tu>
     <tu>
@@ -23768,6 +24328,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If you do not use a &lt;c0&gt;package&lt;/c0&gt; statement, your type ends up in an unnamed package.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070655Z" creationid="pingfangx" creationdate="20190109T070655Z">
+        <seg>如果不使用 &lt;c0&gt;package&lt;/c0&gt; 语句，则类型最终会出现在未命名的包中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If you don't explicitly indicate the order for the operations to be performed, the order is determined by the precedence assigned to the operators in use within the expression.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T074614Z" creationid="pingfangx" creationdate="20180521T074614Z">
@@ -23868,6 +24436,22 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T103956Z" creationid="pingfangx" creationdate="20190102T103956Z">
         <seg>如果覆盖 &lt;c1&gt;equals()&lt;/c1&gt; 方法，更改两个对象的等效方式，则 &lt;c2&gt;Object&lt;/c2&gt; 的 &lt;c3&gt;hashCode()&lt;/c3&gt; 的实现不再有效。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you plan to use the classes and other types in &lt;c6&gt;java.awt.color&lt;/c6&gt; as well as those in &lt;c7&gt;java.awt&lt;/c7&gt;, you must import both packages with all their files:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073255Z" creationid="pingfangx" creationdate="20190109T073255Z">
+        <seg>如果您计划使用 &lt;c6&gt;java.awt.color&lt;/c6&gt; 中的类以及 &lt;c7&gt;java.awt&lt;/c7&gt; 中的其他类，则必须导入包含所有文件的包：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you put the graphics interface and classes listed in the preceding section in a package called &lt;c0&gt;graphics&lt;/c0&gt;, you would need six source files, like this:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070642Z" creationid="pingfangx" creationdate="20190109T070642Z">
+        <seg>如果将上一节中列出的图形接口和类放在名为 &lt;c0&gt;graphics&lt;/c0&gt; 的包中，则需要六个源文件，如下所示：</seg>
       </tuv>
     </tu>
     <tu>
@@ -24040,6 +24624,22 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Implement the changes you proposed in question 1, using the source files you just downloaded.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080232Z" creationid="pingfangx" creationdate="20190109T080232Z">
+        <seg>使用刚刚下载的源文件实现您在问题 1 中提出的更改。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Implement the changes you proposed in questions 1 through 3 using the source files you just downloaded.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075945Z" creationid="pingfangx" creationdate="20190109T075945Z">
+        <seg>使用刚刚下载的源文件实现您在问题 1 到 3 中提出的更改。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Implementing an Interface</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T092445Z" creationid="pingfangx" creationdate="20180521T092445Z">
@@ -24068,6 +24668,94 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T062123Z" creationid="pingfangx" creationdate="20190102T062123Z">
         <seg>实现 Relatable 接口</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Import the member's entire package</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072019Z" creationid="pingfangx" creationdate="20190109T072019Z">
+        <seg>导入成员的整个包</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Import the package member</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072016Z" creationid="pingfangx" creationdate="20190109T072016Z">
+        <seg>导入包成员</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Importing &lt;c0&gt;java.awt.*&lt;/c0&gt; imports all of the types in the &lt;c1&gt;java.awt&lt;/c1&gt; package, but it &lt;i2&gt;does not import&lt;/i2&gt; &lt;c3&gt;java.awt.color&lt;/c3&gt;, &lt;c4&gt;java.awt.font&lt;/c4&gt;, or any other &lt;c5&gt;java.awt.xxxx&lt;/c5&gt; packages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073215Z" creationid="pingfangx" creationdate="20190109T073215Z">
+        <seg>导入 &lt;c0&gt;java.awt.*&lt;/c0&gt; 会导入 &lt;c1&gt;java.awt&lt;/c1&gt; 包中的所有类型，但&lt;i2&gt;不会导入&lt;/i2&gt; &lt;c3&gt;java.awt.color&lt;/c3&gt;，&lt;c4&gt;java.awt.font&lt;/c4&gt; 或任何其他 &lt;c5&gt;java.awt.xxxx&lt;/c5&gt; 包。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Importing a Package Member</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072327Z" creationid="pingfangx" creationdate="20190109T072327Z">
+        <seg>导入包成员</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Importing an Entire Package</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072436Z" creationid="pingfangx" creationdate="20190109T072436Z">
+        <seg>导入整个包</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In &lt;c0&gt;Client.java&lt;/c0&gt; add:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080127Z" creationid="pingfangx" creationdate="20190109T080127Z">
+        <seg>在 &lt;c0&gt;Client.java&lt;/c0&gt; 中添加：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In &lt;c0&gt;Server.java&lt;/c0&gt; add:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080130Z" creationid="pingfangx" creationdate="20190109T080130Z">
+        <seg>在 &lt;c0&gt;Server.java&lt;/c0&gt; 中添加：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In &lt;c0&gt;Utilities.java&lt;/c0&gt; add:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080132Z" creationid="pingfangx" creationdate="20190109T080132Z">
+        <seg>在 &lt;c0&gt;Utilities.java&lt;/c0&gt; 中添加：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In &lt;c0&gt;mygame/client/&lt;/c0&gt; place:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080152Z" creationid="pingfangx" creationdate="20190109T080152Z">
+        <seg>在 &lt;c0&gt;mygame/client/&lt;/c0&gt; 中：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In &lt;c0&gt;mygame/server/&lt;/c0&gt; place:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080202Z" creationid="pingfangx" creationdate="20190109T080202Z">
+        <seg>在 &lt;c0&gt;mygame/server/&lt;/c0&gt; 中：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In &lt;c0&gt;mygame/shared/&lt;/c0&gt; place:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080207Z" creationid="pingfangx" creationdate="20190109T080207Z">
+        <seg>在 &lt;c0&gt;mygame/shared/&lt;/c0&gt; 中：</seg>
       </tuv>
     </tu>
     <tu>
@@ -24376,6 +25064,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In fact, the previous example does just that: It defines a &lt;c0&gt;Rectangle&lt;/c0&gt; class when there is already a &lt;c1&gt;Rectangle&lt;/c1&gt; class in the &lt;c2&gt;java.awt&lt;/c2&gt; package.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070956Z" creationid="pingfangx" creationdate="20190109T070956Z">
+        <seg>实际上，前面的示例就是这样：当 &lt;c2&gt;java.awt&lt;/c2&gt; 包中已经存在 &lt;c1&gt;Rectangle&lt;/c1&gt; 类时，它定义了一个 &lt;c0&gt;Rectangle&lt;/c0&gt; 类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In fact, this is the case.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T095832Z" creationid="pingfangx" creationdate="20190102T095832Z">
@@ -24576,10 +25272,26 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In some cases, the internet domain name may not be a valid package name.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071518Z" creationid="pingfangx" creationdate="20190109T071518Z">
+        <seg>在某些情况下，互联网域名可能不是有效的包名。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In such a case, a &lt;c2&gt;return&lt;/c2&gt; statement can be used to branch out of a control flow block and exit the method and is simply used like this:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T091334Z" creationid="pingfangx" creationdate="20180601T091334Z">
         <seg>在这种情况下，可以使用 &lt;c2&gt;return&lt;/c2&gt; 语句从控制流程块分支退出并退出该方法，并简单地使用如下所示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In such a situation, you have to use the member's fully qualified name to indicate exactly which &lt;c0&gt;Rectangle&lt;/c0&gt; class you want.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073515Z" creationid="pingfangx" creationdate="20190109T073515Z">
+        <seg>在这种情况下，您必须使用成员的完全限定名称来准确指出您想要的 &lt;c0&gt;Rectangle&lt;/c0&gt; 类。</seg>
       </tuv>
     </tu>
     <tu>
@@ -25052,6 +25764,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T094249Z" creationid="pingfangx" creationdate="20180706T094249Z">
         <seg>在这种情况下，您需要一个包含返回值的抽象方法的函数式接口。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this event, the suggested convention is to add an underscore.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071737Z" creationid="pingfangx" creationdate="20190109T071737Z">
+        <seg>在这种情况下，建议的约定是添加下划线。</seg>
       </tuv>
     </tu>
     <tu>
@@ -25680,6 +26400,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Instead, it generates a compiler error.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072709Z" creationid="pingfangx" creationdate="20190109T072709Z">
+        <seg>相反，它会生成编译器错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Instead, the field must be accessed through &lt;c0&gt;super&lt;/c0&gt;, which is covered in the next section.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T094344Z" creationid="pingfangx" creationdate="20190102T094344Z">
@@ -25988,6 +26716,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T033457Z" creationid="pingfangx" creationdate="20180601T033457Z">
         <seg>它不能与同一方法或构造函数的另一个参数的名称相同，也不能是方法或构造函数内的局部变量的名称。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It cannot be used to match a subset of the classes in a package.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072527Z" creationid="pingfangx" creationdate="20190109T072527Z">
+        <seg>它不能用于匹配包中类的子集。</seg>
       </tuv>
     </tu>
     <tu>
@@ -26752,6 +27488,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Legalizing Package Names</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071746Z" creationid="pingfangx" creationdate="20190109T071746Z">
+        <seg>合法化包名称</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Length and Capacity</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T080829Z" creationid="pingfangx" creationdate="20190103T080829Z">
@@ -26896,6 +27640,22 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Lesson: Packages</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T063547Z" creationid="pingfangx" creationdate="20190109T063547Z">
+        <seg>课程：包</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lesson: Packages (The Java™ Tutorials &gt; Learning the Java Language)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T063458Z" creationid="pingfangx" creationdate="20190109T063458Z">
+        <seg>Lesson: Packages (The Java™ Tutorials &gt; Learning the Java Language)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Lesson: The "Hello World!" Application</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034035Z" creationid="pingfangx" creationdate="20180518T034035Z">
@@ -26996,6 +27756,14 @@ System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T065025Z" creationid="pingfangx" creationdate="20190102T065025Z">
         <seg>与类中的静态方法一样，在方法签名开头使用 &lt;c0&gt;static&lt;/c0&gt; 关键字，以指定接口中的方法定义是静态方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Like the &lt;c0&gt;.java&lt;/c0&gt; source files, the compiled &lt;c1&gt;.class&lt;/c1&gt; files should be in a series of directories that reflect the package name.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074901Z" creationid="pingfangx" creationdate="20190109T074901Z">
+        <seg>与 &lt;c0&gt;.java&lt;/c0&gt; 源文件一样，已编译的 &lt;c1&gt;.class&lt;/c1&gt; 文件应位于一系列反映包名称的目录中。</seg>
       </tuv>
     </tu>
     <tu>
@@ -27480,6 +28248,14 @@ String s = list.get(0);   // no cast</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Managing Source and Class Files (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074312Z" creationid="pingfangx" creationdate="20190109T074312Z">
+        <seg>Managing Source and Class Files (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Managing memory explicitly is tedious and error-prone.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T085330Z" creationid="pingfangx" creationdate="20180601T085330Z">
@@ -27508,6 +28284,14 @@ String s = list.get(0);   // no cast</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T024728Z" creationid="pingfangx" creationdate="20190102T024728Z">
         <seg>许多注解会替换代码中的注释。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Many implementations of the Java platform rely on hierarchical file systems to manage source and class files, although &lt;i0&gt;The Java Language Specification&lt;/i0&gt; does not require this.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074354Z" creationid="pingfangx" creationdate="20190109T074354Z">
+        <seg>Java 平台的许多实现依赖于分层文件系统来管理源文件和类文件，尽管 &lt;i0&gt;The Java Language Specification&lt;/i0&gt; 不需要这样做。</seg>
       </tuv>
     </tu>
     <tu>
@@ -28102,10 +28886,34 @@ Ms. Jones</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Name Ambiguities</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073355Z" creationid="pingfangx" creationdate="20190109T073355Z">
+        <seg>名称歧义</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Name collisions that occur within a single company need to be handled by convention within that company, perhaps by including the region or the project name after the company name (for example, &lt;c0&gt;com.example.region.mypackage&lt;/c0&gt;).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071456Z" creationid="pingfangx" creationdate="20190109T071456Z">
+        <seg>在单个公司内发生的名称冲突需要通过公司内的约定来处理，可能是在公司名称后面包含区域或项目名称(例如，&lt;c0&gt;com.example.region.mypackage&lt;/c0&gt;) 。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Naming</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T074005Z" creationid="pingfangx" creationdate="20180518T074005Z">
         <seg>命名</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Naming Conventions</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071213Z" creationid="pingfangx" creationdate="20190109T071213Z">
+        <seg>命名规范</seg>
       </tuv>
     </tu>
     <tu>
@@ -28122,6 +28930,14 @@ Ms. Jones</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T093015Z" creationid="pingfangx" creationdate="20180521T093015Z">
         <seg>命名一个包</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Naming a Package (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070850Z" creationid="pingfangx" creationdate="20190109T070850Z">
+        <seg>Naming a Package (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
       </tuv>
     </tu>
     <tu>
@@ -28274,6 +29090,14 @@ Ms. Jones</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T082822Z" creationid="pingfangx" creationdate="20190103T082822Z">
         <seg>请注意，&lt;c0&gt;println()&lt;/c0&gt; 打印 string builder，如下所示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that &lt;i2&gt;types&lt;/i2&gt; refers to classes, interfaces, enumerations, and annotation types.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T064302Z" creationid="pingfangx" creationdate="20190109T064302Z">
+        <seg>请注意，&lt;i2&gt;types&lt;/i2&gt; 指的是类，接口，枚举和注解类型。</seg>
       </tuv>
     </tu>
     <tu>
@@ -28614,6 +29438,22 @@ Ms. Jones</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Now you can refer to any class or interface in the &lt;c0&gt;graphics&lt;/c0&gt; package by its simple name.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072512Z" creationid="pingfangx" creationdate="20190109T072512Z">
+        <seg>现在，您可以通过简单名称引用 &lt;c0&gt;graphics&lt;/c0&gt; 包中的任何类或接口。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now you can refer to the &lt;c0&gt;Rectangle&lt;/c0&gt; class by its simple name.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072417Z" creationid="pingfangx" creationdate="20190109T072417Z">
+        <seg>现在，您可以通过简单名称引用 &lt;c0&gt;Rectangle&lt;/c0&gt; 类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Now you want to set a timer to run a method, &lt;t1&gt;doPeriodicCleanup&lt;/t1&gt;, on the last day of the month and on every Friday at 11:00 p.m.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041046Z" creationid="pingfangx" creationdate="20190102T041046Z">
@@ -28830,6 +29670,14 @@ someObject = someInteger;   // OK</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Obviously, you can write your own classes that contain constants and static methods that you use frequently, and then use the static import statement.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074206Z" creationid="pingfangx" creationdate="20190109T074206Z">
+        <seg>显然，您可以编写自己的类，包含常用的常量和静态方法，然后使用 static import 语句。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Of course, some variables are used both for "in" and "out" purposes — this scenario is also addressed in the guidelines.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190108T061746Z" creationid="pingfangx" creationdate="20190108T061746Z">
@@ -28890,6 +29738,14 @@ someObject = someInteger;   // OK</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T061932Z" creationid="pingfangx" creationdate="20180518T061932Z">
         <seg>一旦创建，一个对象可以很容易地在系统内传递。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Once they have been imported, the static members can be used without qualification.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074135Z" creationid="pingfangx" creationdate="20190109T074135Z">
+        <seg>导入后，可以无限制地使用静态成员。</seg>
       </tuv>
     </tu>
     <tu>
@@ -29176,6 +30032,14 @@ OrderedPair&lt;String, String&gt;  p2 = new OrderedPair&lt;s1&gt;&lt;&gt;&lt;/s1
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Ordinarily, to use these objects from another class, you prefix the class name, as follows.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074049Z" creationid="pingfangx" creationdate="20190109T074015Z">
+        <seg>通常，要从另一个类中使用这些对象，需要使用类名前缀，如下所示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Other Methods for Manipulating Strings</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T072959Z" creationid="pingfangx" creationdate="20190103T072959Z">
@@ -29244,6 +30108,14 @@ OrderedPair&lt;String, String&gt;  p2 = new OrderedPair&lt;s1&gt;&lt;&gt;&lt;/s1
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T070326Z" creationid="pingfangx" creationdate="20180521T070326Z">
         <seg>否则，将 &lt;c8&gt;value2&lt;/c8&gt; 的值赋给 &lt;c9&gt;result&lt;/c9&gt;。“</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Otherwise, classes and interfaces belong in named packages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070720Z" creationid="pingfangx" creationdate="20190109T070720Z">
+        <seg>否则，类和接口属于命名的包。</seg>
       </tuv>
     </tu>
     <tu>
@@ -29344,6 +30216,14 @@ OrderedPair&lt;String, String&gt;  p2 = new OrderedPair&lt;s1&gt;&lt;&gt;&lt;/s1
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Overusing static import can result in code that is difficult to read and maintain, because readers of the code won't know which class defines a particular static object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074239Z" creationid="pingfangx" creationdate="20190109T074239Z">
+        <seg>过度使用静态导入会导致代码难以阅读和维护，因为代码的读者不知道哪个类定义了特定的静态对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Package</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180607T040213Z" creationid="pingfangx" creationdate="20180607T040204Z">
@@ -29352,10 +30232,42 @@ OrderedPair&lt;String, String&gt;  p2 = new OrderedPair&lt;s1&gt;&lt;&gt;&lt;/s1
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Package Name</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075755Z" creationid="pingfangx" creationdate="20190109T075755Z">
+        <seg>包名</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Package Name Prefix</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071752Z" creationid="pingfangx" creationdate="20190109T071752Z">
+        <seg>包名称前缀</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Package names are written in all lower case to avoid conflict with the names of classes or interfaces.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071227Z" creationid="pingfangx" creationdate="20190109T071227Z">
+        <seg>包名称全部小写，以避免与类或接口的名称冲突。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Packages</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T093006Z" creationid="pingfangx" creationdate="20180521T093006Z">
         <seg>包</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Packages in the Java language itself begin with &lt;c0&gt;java.&lt;/c0&gt; or &lt;c1&gt;javax.&lt;/c1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071511Z" creationid="pingfangx" creationdate="20190109T071511Z">
+        <seg>Java 语言本身的包以 &lt;c0&gt;java.&lt;/c0&gt; 或 &lt;c1&gt;javax.&lt;/c1&gt; 开头</seg>
       </tuv>
     </tu>
     <tu>
@@ -29782,6 +30694,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Prefixing the name of these classes over and over can result in cluttered code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073743Z" creationid="pingfangx" creationdate="20190109T073743Z">
+        <seg>反复对这些类的名称进行前缀可能会导致代码混乱。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Prevent Warnings from Varargs Methods with Non-Reifiable Formal Parameters</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190108T080941Z" creationid="pingfangx" creationdate="20190108T073338Z">
@@ -29958,6 +30878,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Put the source code for a class, interface, enumeration, or annotation type in a text file whose name is the simple name of the type and whose extension is &lt;c0&gt;.java&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074459Z" creationid="pingfangx" creationdate="20190109T074459Z">
+        <seg>将类，接口，枚举或注解类型的源代码放在文本文件中，该文件的名称是类型的简单名称，其扩展名为 &lt;c0&gt;.java&lt;/c0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>QUEEN  (12, "Queen"),</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T065246Z" creationid="pingfangx" creationdate="20190102T065246Z">
@@ -30074,6 +31002,22 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T072135Z" creationid="pingfangx" creationdate="20180518T072135Z">
         <seg>QandE/questions_variables.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Qualified names are all right for infrequent use.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072250Z" creationid="pingfangx" creationdate="20190109T072250Z">
+        <seg>限定名可以不经常使用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Question 1: Assume that you have written some classes.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080042Z" creationid="pingfangx" creationdate="20190109T080042Z">
+        <seg>问题 1：假设您已经写了一些类。</seg>
       </tuv>
     </tu>
     <tu>
@@ -30274,6 +31218,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T093036Z" creationid="pingfangx" creationdate="20180521T093036Z">
         <seg>问题和练习：创建和使用包</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Questions and Exercises: Creating and Using Packages (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075705Z" creationid="pingfangx" creationdate="20190109T075705Z">
+        <seg>Questions and Exercises: Creating and Using Packages (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
       </tuv>
     </tu>
     <tu>
@@ -30678,6 +31630,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Refer to the member by its fully qualified name</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072011Z" creationid="pingfangx" creationdate="20190109T072011Z">
+        <seg>通过其完全限定名称引用该成员</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Reference data type parameters, such as objects, are also passed into methods &lt;i0&gt;by value&lt;/i0&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T034724Z" creationid="pingfangx" creationdate="20180601T034113Z">
@@ -30762,6 +31722,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T073357Z" creationid="pingfangx" creationdate="20180601T073357Z">
         <seg>引用对象的字段</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Referring to a Package Member by Its Qualified Name</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072046Z" creationid="pingfangx" creationdate="20190109T072046Z">
+        <seg>用限定名引用包成员</seg>
       </tuv>
     </tu>
     <tu>
@@ -31664,6 +32632,22 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Server</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075805Z" creationid="pingfangx" creationdate="20190109T075805Z">
+        <seg>Server</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Server.java</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080202Z" creationid="pingfangx" creationdate="20190109T080202Z">
+        <seg>Server.java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Set&lt;Person&gt; rosterSet = transferElements(roster, HashSet::new);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T085035Z" creationid="pingfangx" creationdate="20181228T085035Z">
@@ -31700,6 +32684,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T081405Z" creationid="pingfangx" creationdate="20190103T081405Z">
         <seg>设置字符序列的长度。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Setting the CLASSPATH System Variable</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075231Z" creationid="pingfangx" creationdate="20190109T075231Z">
+        <seg>设置 CLASSPATH 系统变量</seg>
       </tuv>
     </tu>
     <tu>
@@ -31904,6 +32896,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>So far, most of the examples in this tutorial have referred to types by their simple names, such as &lt;c0&gt;Rectangle&lt;/c0&gt; and &lt;c1&gt;StackOfInts&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072115Z" creationid="pingfangx" creationdate="20190109T072115Z">
+        <seg>到目前为止，本教程中的大多数示例都通过简单名称引用类型，例如 &lt;c0&gt;Rectangle&lt;/c0&gt; 和 &lt;c1&gt;StackOfInts&lt;/c1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>So long as you do not vary the type argument, the subtyping relationship is preserved between the types.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190107T062552Z" creationid="pingfangx" creationdate="20190107T062552Z">
@@ -31932,6 +32932,14 @@ class PersonAgeComparator implements Comparator&lt;Person&gt; {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T075949Z" creationid="pingfangx" creationdate="20180601T075949Z">
         <seg>所以你可以使用从 new 返回的值来访问新对象的字段：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So, if the Example company had a &lt;c2&gt;com.example.graphics&lt;/c2&gt; package that contained a &lt;c3&gt;Rectangle.java&lt;/c3&gt; source file, it would be contained in a series of subdirectories like this:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074825Z" creationid="pingfangx" creationdate="20190109T074825Z">
+        <seg>因此，如果 Example 公司有一个包含 &lt;c3&gt;Rectangle.java&lt;/c3&gt; 源文件的 &lt;c2&gt;com.example.graphics&lt;/c2&gt; 包，它将包含在一系列子目录中，如下所示：</seg>
       </tuv>
     </tu>
     <tu>
@@ -32284,6 +33292,14 @@ myDeck.sort(new SortByRankThenSuit());</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T033754Z" creationid="pingfangx" creationdate="20180518T033754Z">
         <seg>尽管如此，它可能会使您的程序更好，并且比其他语言花费更少的工作量。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Still, the compiler allows both classes to have the same name if they are in different packages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071003Z" creationid="pingfangx" creationdate="20190109T071003Z">
+        <seg>尽管如此，编译器允许两个类在不同的包中具有相同的名称。</seg>
       </tuv>
     </tu>
     <tu>
@@ -33684,6 +34700,14 @@ studentName = null;
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Summary of Creating and Using Packages (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075441Z" creationid="pingfangx" creationdate="20190109T075441Z">
+        <seg>Summary of Creating and Using Packages (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Summary of Inheritance</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T092700Z" creationid="pingfangx" creationdate="20180521T092700Z">
@@ -33960,6 +34984,14 @@ studentName = null;
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190107T075405Z" creationid="pingfangx" creationdate="20190107T075405Z">
         <seg>假设您要使用空列表调用方法 &lt;c0&gt;processStringList&lt;/c0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Suppose you write a group of classes that represent graphic objects, such as circles, rectangles, lines, and points.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T065530Z" creationid="pingfangx" creationdate="20190109T065530Z">
+        <seg>假设您编写了一组表示图形对象的类，例如圆形，矩形，线和点。</seg>
       </tuv>
     </tu>
     <tu>
@@ -35832,6 +36864,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>That is, the fully qualified name of the &lt;c4&gt;Rectangle&lt;/c4&gt; class in the &lt;c5&gt;graphics&lt;/c5&gt; package is &lt;c6&gt;graphics.Rectangle&lt;/c6&gt;, and the fully qualified name of the &lt;c7&gt;Rectangle&lt;/c7&gt; class in the &lt;c8&gt;java.awt&lt;/c8&gt; package is &lt;c9&gt;java.awt.Rectangle&lt;/c9&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071114Z" creationid="pingfangx" creationdate="20190109T071114Z">
+        <seg>也就是说，&lt;c5&gt;graphics&lt;/c5&gt; 包中 &lt;c4&gt;Rectangle&lt;/c4&gt; 类的完全限定名是 &lt;c6&gt;graphics.Rectangle&lt;/c6&gt;，以及 &lt;c8&gt;java.awt&lt;/c8&gt; 包中的 &lt;c7&gt;Rectangle&lt;/c7&gt; 类的完全限定名是 &lt;c9&gt;java.awt.Rectangle&lt;/c9&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>That is, there is only one &lt;c5&gt;x&lt;/c5&gt;: when the value of &lt;c6&gt;x&lt;/c6&gt; changes in any instance it affects the value of &lt;c7&gt;x&lt;/c7&gt; for all instances of &lt;c8&gt;IdentifyMyParts&lt;/c8&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T082947Z" creationid="pingfangx" creationdate="20180705T082947Z">
@@ -36552,6 +37592,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;c0&gt;java.lang.Math&lt;/c0&gt; class defines the &lt;c1&gt;PI&lt;/c1&gt; constant and many static methods, including methods for calculating sines, cosines, tangents, square roots, maxima, minima, exponents, and many more.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073901Z" creationid="pingfangx" creationdate="20190109T073901Z">
+        <seg>&lt;c0&gt;java.lang.Math&lt;/c0&gt; 类定义 &lt;c1&gt;PI&lt;/c1&gt; 常量和许多静态方法，包括计算正弦，余弦，正切，平方根，最大值，最小值，指数等的方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;c0&gt;main&lt;/c0&gt; Method</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035621Z" creationid="pingfangx" creationdate="20180518T035621Z">
@@ -36804,6 +37852,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T034253Z" creationid="pingfangx" creationdate="20190103T034253Z">
         <seg>&lt;c2&gt;format&lt;/c2&gt; 方法通过四舍五入处理此问题。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;c2&gt;java.awt&lt;/c2&gt; package also contains a &lt;c3&gt;Rectangle&lt;/c3&gt; class.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073439Z" creationid="pingfangx" creationdate="20190109T073439Z">
+        <seg>&lt;c2&gt;java.awt&lt;/c2&gt; 包也包含一个 &lt;c3&gt;Rectangle&lt;/c3&gt; 类。</seg>
       </tuv>
     </tu>
     <tu>
@@ -37112,6 +38168,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;i0&gt;static import&lt;/i0&gt; statement gives you a way to import the constants and static methods that you want to use so that you do not need to prefix the name of their class.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073806Z" creationid="pingfangx" creationdate="20190109T073806Z">
+        <seg>&lt;i0&gt;static import&lt;/i0&gt; 语句为您提供了一种导入要使用的常量和静态方法的方法，这样您就不需要为其类的名称添加前缀。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;s0&gt;do-while&lt;/s0&gt; statement is similar to the &lt;c1&gt;while&lt;/c1&gt; statement, but evaluates its expression at the &lt;s2&gt;bottom&lt;/s2&gt; of the loop.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T091325Z" creationid="pingfangx" creationdate="20180521T091325Z">
@@ -37308,6 +38372,14 @@ System.out.println("third string");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T065847Z" creationid="pingfangx" creationdate="20180521T065847Z">
         <seg>相等性和关系运算符</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Example company, whose Internet domain name is &lt;c0&gt;example.com&lt;/c0&gt;, would precede all its package names with &lt;c1&gt;com.example&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074803Z" creationid="pingfangx" creationdate="20190109T074803Z">
+        <seg>示例公司的 Internet 域名为 &lt;c0&gt;example.com&lt;/c0&gt;，它的所有包名都以 &lt;c1&gt;com.example&lt;/c1&gt; 开头。</seg>
       </tuv>
     </tu>
     <tu>
@@ -37832,6 +38904,14 @@ System.out.println("third string");</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The Static Import Statement</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073518Z" creationid="pingfangx" creationdate="20190109T073518Z">
+        <seg>静态导入语句</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The StringBuilder Class</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T092757Z" creationid="pingfangx" creationdate="20180521T092757Z">
@@ -38002,6 +39082,14 @@ The min of 16 and 45 is 16</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The asterisk in the &lt;c0&gt;import&lt;/c0&gt; statement can be used only to specify all the classes within a package, as shown here.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072520Z" creationid="pingfangx" creationdate="20190109T072520Z">
+        <seg>&lt;c0&gt;import&lt;/c0&gt; 语句中的星号只能用于指定包中的所有类，如此处所示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The at sign character (&lt;c0&gt;@&lt;/c0&gt;) indicates to the compiler that what follows is an annotation.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T023847Z" creationid="pingfangx" creationdate="20190102T023847Z">
@@ -38014,6 +39102,14 @@ The min of 16 and 45 is 16</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T053834Z" creationid="pingfangx" creationdate="20190102T053834Z">
         <seg>汽车制造商必须发布一个行业标准的接口，详细说明可以调用哪些方法来使汽车移动(任何汽车，来自任何制造商)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The base name of the output file is the name of the type, and its extension is &lt;c0&gt;.class&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074845Z" creationid="pingfangx" creationdate="20190109T074845Z">
+        <seg>输出文件的基本名称是类型的名称，其扩展名为 &lt;c0&gt;.class&lt;/c0&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -39794,6 +40890,22 @@ The min of 16 and 45 is 16</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The full path to the &lt;c0&gt;classes&lt;/c0&gt; directory, &lt;c1&gt;&lt;path_two&gt;\classes&lt;/c1&gt;, is called the &lt;i2&gt;class path&lt;/i2&gt;, and is set with the &lt;c3&gt;CLASSPATH&lt;/c3&gt; system variable.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075014Z" creationid="pingfangx" creationdate="20190109T075014Z">
+        <seg>&lt;c0&gt;classes&lt;/c0&gt; 目录的完整路径 &lt;c1&gt;&lt;path_two&gt;\classes&lt;/c1&gt; 称为 &lt;i2&gt;class path&lt;/i2&gt;，并使用 &lt;c3&gt;CLASSPATH&lt;/c3&gt; 系统变量设置。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The fully qualified name of each &lt;c3&gt;Rectangle&lt;/c3&gt; class includes the package name.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071013Z" creationid="pingfangx" creationdate="20190109T071013Z">
+        <seg>每个 &lt;c3&gt;Rectangle&lt;/c3&gt; 类的完全限定名称包括包名称。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The functional interface &lt;c0&gt;Supplier&lt;/c0&gt; contains one method &lt;c1&gt;get&lt;/c1&gt; that takes no arguments and returns an object.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T084942Z" creationid="pingfangx" creationdate="20181228T084942Z">
@@ -40482,6 +41594,14 @@ The min of 16 and 45 is 16</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The names of your types won't conflict with the type names in other packages because the package creates a new namespace.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T065800Z" creationid="pingfangx" creationdate="20190109T065800Z">
+        <seg>类型的名称不会与其他包中的类型名称冲突，因为包会创建新的命名空间。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The new operator returns a reference to the object that was created.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T082202Z" creationid="pingfangx" creationdate="20180705T082202Z">
@@ -40746,6 +41866,14 @@ The min of 16 and 45 is 16</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The package statement (for example, &lt;c0&gt;package graphics;&lt;/c0&gt;) must be the first line in the source file.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070339Z" creationid="pingfangx" creationdate="20190109T070339Z">
+        <seg>package 语句(例如，&lt;c0&gt;package graphics;&lt;/c0&gt;)必须是源文件中的第一行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The parameter list in parenthesisa comma-delimited list of input parameters, preceded by their data types, enclosed by parentheses, &lt;c0&gt;()&lt;/c0&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T064931Z" creationid="pingfangx" creationdate="20180525T064931Z">
@@ -40758,6 +41886,14 @@ The min of 16 and 45 is 16</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T032238Z" creationid="pingfangx" creationdate="20180601T032238Z">
         <seg>这些参数在方法主体中使用，并且在运行时将采用传入的参数的值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The path names for a package's source and class files mirror the name of the package.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075644Z" creationid="pingfangx" creationdate="20190109T075644Z">
+        <seg>包的源文件和类文件的路径名称反映了包的名称。</seg>
       </tuv>
     </tu>
     <tu>
@@ -40806,6 +41942,14 @@ The min of 16 and 45 is 16</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T082901Z" creationid="pingfangx" creationdate="20180518T082901Z">
         <seg>前缀 &lt;c0&gt;0x&lt;/c0&gt; 表示十六进制，&lt;c1&gt;0b&lt;/c1&gt; 表示二进制：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The prefix &lt;c9&gt;java.awt&lt;/c9&gt; (the Java Abstract Window Toolkit) is used for a number of related packages to make the relationship evident, but not to show inclusion.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073146Z" creationid="pingfangx" creationdate="20190109T073146Z">
+        <seg>前缀 &lt;c9&gt;java.awt&lt;/c9&gt;(Java Abstract Window Toolkit) 用于许多相关的包，以使关系明显，但不显示包含。</seg>
       </tuv>
     </tu>
     <tu>
@@ -40990,6 +42134,14 @@ The min of 16 and 45 is 16</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T082320Z" creationid="pingfangx" creationdate="20180705T082320Z">
         <seg>实例变量的限定名称如下所示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The qualified name of the package member and the path name to the file are parallel, assuming the Microsoft Windows file name separator backslash (for UNIX, use the forward slash).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074621Z" creationid="pingfangx" creationdate="20190109T074621Z">
+        <seg>包成员的限定名称和文件的路径名是并行的，假定 Microsoft Windows 文件名分隔符为反斜杠(对于 UNIX，使用正斜杠)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -41268,12 +42420,28 @@ The smallest double value is 4.9E-324</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The static members of &lt;c1&gt;Math&lt;/c1&gt; can be imported either individually:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074123Z" creationid="pingfangx" creationdate="20190109T074123Z">
+        <seg>&lt;c1&gt;Math&lt;/c1&gt; 的静态成员可以单独导入：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The static method in Animal
 The instance method in Cat</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T090822Z" creationid="pingfangx" creationdate="20190102T090822Z">
         <seg>The static method in Animal
 The instance method in Cat</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The strategy is as follows.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074357Z" creationid="pingfangx" creationdate="20190109T074357Z">
+        <seg>策略如下。</seg>
       </tuv>
     </tu>
     <tu>
@@ -41574,6 +42742,22 @@ The instance method in Cat</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The types that are part of the Java platform are members of various packages that bundle classes by function: fundamental classes are in &lt;c0&gt;java.lang&lt;/c0&gt;, classes for reading and writing (input and output) are in &lt;c1&gt;java.io&lt;/c1&gt;, and so on.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T065500Z" creationid="pingfangx" creationdate="20190109T065500Z">
+        <seg>作为 Java 平台一部分的类型是按功能组织类的各种包的成员：基本类在 &lt;c0&gt;java.lang&lt;/c0&gt; 中，用于读写(输入和输出)的类在 &lt;c1&gt;java.io&lt;/c1&gt; 中等等。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The types that comprise a package are known as the &lt;i0&gt;package members&lt;/i0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071900Z" creationid="pingfangx" creationdate="20190109T071900Z">
+        <seg>组成包的类型称为 &lt;i0&gt;包成员（package members）&lt;/i0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The unary bitwise complement operator "&lt;c0&gt;~&lt;/c0&gt;" inverts a bit pattern; it can be applied to any of the integral types, making every "0" a "1" and every "1" a "0".</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T070733Z" creationid="pingfangx" creationdate="20180521T070733Z">
@@ -41842,6 +43026,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Then, put the source file in a directory whose name reflects the name of the package to which the type belongs:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074515Z" creationid="pingfangx" creationdate="20190109T074515Z">
+        <seg>然后，将源文件放在一个目录中，该目录的名称反映了该类型所属的包的名称：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Then, you can go straight to &lt;a3&gt;Compile the Source File into a &lt;c4&gt;.class&lt;/c4&gt; File&lt;/a3&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T034521Z" creationid="pingfangx" creationdate="20180518T034521Z">
@@ -41918,6 +43110,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041308Z" creationid="pingfangx" creationdate="20190102T041308Z">
         <seg>Reflection API 中有几种可用于获取注解的方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There are situations where you need frequent access to static final fields (constants) and static methods from one or two classes.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T073733Z" creationid="pingfangx" creationdate="20190109T073733Z">
+        <seg>在某些情况下，您需要频繁访问来自一个或两个类的静态最终字段(常量)和静态方法。</seg>
       </tuv>
     </tu>
     <tu>
@@ -42014,6 +43214,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T025925Z" creationid="pingfangx" creationdate="20190103T025200Z">
         <seg>但是，有时候需要使用对象代替基本类型，Java 平台为每个基本数据类型提供 &lt;i0&gt;包装（wrapper）&lt;/i0&gt; 类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There can be only one package statement in each source file, and it applies to all types in the file.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070354Z" creationid="pingfangx" creationdate="20190109T070354Z">
+        <seg>每个源文件中只能有一个 package 语句，它适用于文件中的所有类型。</seg>
       </tuv>
     </tu>
     <tu>
@@ -42530,6 +43738,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This approach works well if you use just a few members from the &lt;c0&gt;graphics&lt;/c0&gt; package.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072428Z" creationid="pingfangx" creationdate="20190109T072428Z">
+        <seg>如果您只使用 &lt;c0&gt;graphics&lt;/c0&gt; 包中的一些成员，这种方法很有效。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This array is the mechanism through which the runtime system passes information to your application.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T035729Z" creationid="pingfangx" creationdate="20180518T035729Z">
@@ -42598,6 +43814,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190104T065816Z" creationid="pingfangx" creationdate="20190104T065816Z">
         <seg>使用在原始类型上运行的旧 API 时会发生这种情况，如以下示例所示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This can occur if the domain name contains a hyphen or other special character, if the package name begins with a digit or other character that is illegal to use as the beginning of a Java name, or if the package name contains a reserved Java keyword, such as "int".</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071732Z" creationid="pingfangx" creationdate="20190109T071613Z">
+        <seg>以下情形会发生这种情况：如果域名包含连字符或其他特殊字符，如果包名称以数字或其他非法用作 Java 名称开头的字符开头，或者包名称包含 Java 的保留关键字，例如 "int"。</seg>
       </tuv>
     </tu>
     <tu>
@@ -43142,6 +44366,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T042909Z" creationid="pingfangx" creationdate="20180518T042909Z">
         <seg>本课介绍了状态和行为在对象中的表现方式，介绍了数据封装的概念，并解释了以这种方式设计软件的好处。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This lesson explains how to bundle classes and interfaces into packages, how to use classes that are in packages, and how to arrange your file system so that the compiler can find your source files.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T063625Z" creationid="pingfangx" creationdate="20190109T063625Z">
+        <seg>本课程解释了如何将类和接口组织到包中，如何使用包中的类，以及如何安排文件系统以便编译器可以找到源文件。</seg>
       </tuv>
     </tu>
     <tu>
@@ -43946,6 +45178,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This table lists some legal package names</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071742Z" creationid="pingfangx" creationdate="20190109T071742Z">
+        <seg>此表列出了一些合法的包名称</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This table lists the basic math methods</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T035520Z" creationid="pingfangx" creationdate="20190103T035520Z">
@@ -44070,6 +45310,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190107T075312Z" creationid="pingfangx" creationdate="20190107T075312Z">
         <seg>这适用于 Java SE 7 和 8。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This works well unless two independent programmers use the same name for their packages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071123Z" creationid="pingfangx" creationdate="20190109T071123Z">
+        <seg>除非两个独立的程序员为其包使用相同的名称，否则这很有效。</seg>
       </tuv>
     </tu>
     <tu>
@@ -44258,6 +45506,22 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>To adhere to the directory structure, you will need to create some subdirectories in the development directory and put source files in the correct subdirectories.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075840Z" creationid="pingfangx" creationdate="20190109T075840Z">
+        <seg>要遵循目录结构，您需要在开发目录中创建一些子目录，并将源文件放在正确的子目录中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To adhere to the directory structure, you will need to create some subdirectories in your development directory, and put source files in the correct subdirectories.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080144Z" creationid="pingfangx" creationdate="20190109T080144Z">
+        <seg>要遵循目录结构，您需要在开发目录中创建一些子目录，并将源文件放在正确的子目录中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To buy this book, refer to the box to the right.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T030947Z" creationid="pingfangx" creationdate="20180518T030947Z">
@@ -44314,6 +45578,22 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>To create a package for a type, put a &lt;c0&gt;package&lt;/c0&gt; statement as the first statement in the source file that contains the type (class, interface, enumeration, or annotation type).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075553Z" creationid="pingfangx" creationdate="20190109T075553Z">
+        <seg>要为类型创建包，请将 &lt;c0&gt;package&lt;/c0&gt; 语句作为包含类型(类，接口，枚举或注解类型)的源文件的第一个语句。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To create a package, you choose a name for the package (naming conventions are discussed in the next section) and put a &lt;c0&gt;package&lt;/c0&gt; statement with that name at the top of &lt;i1&gt;every source file&lt;/i1&gt; that contains the types (classes, interfaces, enumerations, and annotation types) that you want to include in the package.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070330Z" creationid="pingfangx" creationdate="20190109T070330Z">
+        <seg>要创建包，请选择包的名称(命名约定将在下一节中讨论)，并将带有该名称的 &lt;c0&gt;package&lt;/c0&gt; 语句放在 &lt;i1&gt;每一个源码文件&lt;/i1&gt; 的顶部，源文件包含要包含在包中的类型(类，接口，枚举和注解类型)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To create a parameterized type of &lt;t0&gt;Box&lt;T&gt;&lt;/t0&gt;, you supply an actual type argument for the formal type parameter &lt;t1&gt;T&lt;/t1&gt;:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190104T064644Z" creationid="pingfangx" creationdate="20190104T064644Z">
@@ -44362,6 +45642,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>To delete the current contents of the &lt;c0&gt;CLASSPATH&lt;/c0&gt; variable, use these commands:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075301Z" creationid="pingfangx" creationdate="20190109T075301Z">
+        <seg>要删除 &lt;c0&gt;CLASSPATH&lt;/c0&gt; 变量的当前内容，请使用以下命令：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To demonstrate polymorphic features in the Java language, extend the &lt;c0&gt;Bicycle&lt;/c0&gt; class with a &lt;c1&gt;MountainBike&lt;/c1&gt; and a &lt;c2&gt;RoadBike&lt;/c2&gt; class.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T093739Z" creationid="pingfangx" creationdate="20190102T093739Z">
@@ -44382,6 +45670,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20181228T081847Z" creationid="pingfangx" creationdate="20181228T081847Z">
         <seg>要确定 lambda 表达式的类型，Java 编译器将使用发现 lambda 表达式的上下文或情境的目标类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To display the current &lt;c0&gt;CLASSPATH&lt;/c0&gt; variable, use these commands in Windows and UNIX (Bourne shell):</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075341Z" creationid="pingfangx" creationdate="20190109T075257Z">
+        <seg>要显示当前的 &lt;c0&gt;CLASSPATH&lt;/c0&gt; 变量，请在 Windows 和 UNIX(Bourne shell) 中使用以下命令：</seg>
       </tuv>
     </tu>
     <tu>
@@ -44466,6 +45762,22 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>To import a specific member into the current file, put an &lt;c0&gt;import&lt;/c0&gt; statement at the beginning of the file before any type definitions but after the &lt;c1&gt;package&lt;/c1&gt; statement, if there is one.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072401Z" creationid="pingfangx" creationdate="20190109T072401Z">
+        <seg>要将特定成员导入当前文件，请在任何类型定义之前在文件开头放置 &lt;c0&gt;import&lt;/c0&gt; 语句，但在 &lt;c1&gt;package&lt;/c1&gt; 语句之后（如果有）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To import all the types contained in a particular package, use the &lt;c0&gt;import&lt;/c0&gt; statement with the asterisk &lt;c1&gt;(*)&lt;/c1&gt; wildcard character.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072451Z" creationid="pingfangx" creationdate="20190109T072451Z">
+        <seg>要导入特定包中包含的所有类型，请使用带有星号 &lt;c1&gt;(*)&lt;/c1&gt; 通配符的 &lt;c0&gt;import&lt;/c0&gt; 语句。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To instantiate an inner class, you must first instantiate the outer class.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T091317Z" creationid="pingfangx" creationdate="20180705T091317Z">
@@ -44494,6 +45806,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T015022Z" creationid="pingfangx" creationdate="20190102T015022Z">
         <seg>要调用此 &lt;c0&gt;print&lt;/c0&gt; 方法来打印具有偶数索引值的元素，可以指定实现方法 &lt;c1&gt;Boolean Function.apply(Integer t)&lt;/c1&gt; 的 lambda 表达式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To make types easier to find and use, to avoid naming conflicts, and to control access, programmers bundle groups of related types into packages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T064217Z" creationid="pingfangx" creationdate="20190109T064217Z">
+        <seg>为了使类型更易于查找和使用，避免命名冲突，以及控制访问，程序员将相关类型的组组织到包中。</seg>
       </tuv>
     </tu>
     <tu>
@@ -44602,6 +45922,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>To set the &lt;c0&gt;CLASSPATH&lt;/c0&gt; variable, use these commands (for example):</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075347Z" creationid="pingfangx" creationdate="20190109T075310Z">
+        <seg>要设置 &lt;c0&gt;CLASSPATH&lt;/c0&gt; 变量，请使用以下命令(示例)：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To set the timer to run, create an &lt;c2&gt;@Schedule&lt;/c2&gt; annotation and apply it twice to the &lt;t3&gt;doPeriodicCleanup&lt;/t3&gt; method.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T041054Z" creationid="pingfangx" creationdate="20190102T041054Z">
@@ -44670,6 +45998,22 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190108T081555Z" creationid="pingfangx" creationdate="20190108T081555Z">
         <seg>要有效地使用 Java 泛型，必须考虑以下限制：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To use a &lt;c0&gt;public&lt;/c0&gt; package member from outside its package, you must do one of the following:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071931Z" creationid="pingfangx" creationdate="20190109T071931Z">
+        <seg>要从包外部使用 &lt;c0&gt;public&lt;/c0&gt; 包成员，您必须执行以下操作之一：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To use a public type that's in a different package, you have three choices: (1) use the fully qualified name of the type, (2) import the type, or (3) import the entire package of which the type is a member.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075635Z" creationid="pingfangx" creationdate="20190109T075635Z">
+        <seg>要使用不同包中的公共类型，您有三种选择：(1) 使用类型的完全限定名称，(2) 导入类型，或 (3) 导入类型为成员的整个包。</seg>
       </tuv>
     </tu>
     <tu>
@@ -45426,6 +46770,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Used properly, static import makes code more readable by removing class name repetition.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074255Z" creationid="pingfangx" creationdate="20190109T074255Z">
+        <seg>正确使用，静态导入通过移除类名重复使代码更具可读性。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Useful Methods in the &lt;c0&gt;Character&lt;/c0&gt; Class</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T062208Z" creationid="pingfangx" creationdate="20190103T062208Z">
@@ -45518,6 +46870,14 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T093019Z" creationid="pingfangx" creationdate="20180521T093019Z">
         <seg>使用包成员</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Using Package Members (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071827Z" creationid="pingfangx" creationdate="20190109T071827Z">
+        <seg>Using Package Members (The Java™ Tutorials &gt; Learning the Java Language &gt; Packages)</seg>
       </tuv>
     </tu>
     <tu>
@@ -45630,6 +46990,22 @@ The arctangent of 1.0000 is 45.0000 degrees</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T092224Z" creationid="pingfangx" creationdate="20180601T092224Z">
         <seg>Using the this Keyword (The Java™ Tutorials &gt; Learning the Java Language &gt; Classes and Objects)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Utilities</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075806Z" creationid="pingfangx" creationdate="20190109T075806Z">
+        <seg>Utilities</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Utilities.java</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080207Z" creationid="pingfangx" creationdate="20190109T080207Z">
+        <seg>Utilities.java</seg>
       </tuv>
     </tu>
     <tu>
@@ -46256,6 +47632,14 @@ required: Box&lt;java.lang.Integer&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>What line of code will you need to add to each source file to put each class in the right package?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080117Z" creationid="pingfangx" creationdate="20190109T080117Z">
+        <seg>您需要在每个源文件中添加哪些代码才能将每个类放入正确的包中？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>What methods would a class that implements the &lt;c0&gt;java.lang.CharSequence&lt;/c0&gt; interface have to implement?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T074529Z" creationid="pingfangx" creationdate="20190102T074529Z">
@@ -46272,6 +47656,14 @@ required: Box&lt;java.lang.Integer&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>What prevents this problem?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071142Z" creationid="pingfangx" creationdate="20190109T071142Z">
+        <seg>是什么避免了这个问题？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>What static nested class does &lt;c0&gt;Box&lt;/c0&gt; define?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T013922Z" creationid="pingfangx" creationdate="20190102T013922Z">
@@ -46284,6 +47676,14 @@ required: Box&lt;java.lang.Integer&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T020826Z" creationid="pingfangx" creationdate="20190102T020826Z">
         <seg>Box 定义了什么静态嵌套类？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What subdirectories must you create?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075842Z" creationid="pingfangx" creationdate="20190109T075842Z">
+        <seg>您必须创建哪些子目录？</seg>
       </tuv>
     </tu>
     <tu>
@@ -46340,6 +47740,14 @@ required: Box&lt;java.lang.Integer&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T091822Z" creationid="pingfangx" creationdate="20180601T091822Z">
         <seg>当一个方法使用类名称作为它的返回类型时，例如 &lt;c0&gt;whosFastest&lt;/c0&gt; 所做的，返回对象类型的类必须是返回类型的子类或确切类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When a name is used repetitively, however, typing the name repeatedly becomes tedious and the code becomes difficult to read.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072309Z" creationid="pingfangx" creationdate="20190109T072309Z">
+        <seg>但是，重复使用名称时，重复键入名称会变得乏味，且代码变得难以阅读。</seg>
       </tuv>
     </tu>
     <tu>
@@ -46664,6 +48072,14 @@ required: Box&lt;java.lang.Integer&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>When you compile a source file, the compiler creates a different output file for each type defined in it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074835Z" creationid="pingfangx" creationdate="20190109T074835Z">
+        <seg>编译源文件时，编译器会为其中定义的每种类型创建不同的输出文件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>When you compile the code, including the &lt;c0&gt;NonNull&lt;/c0&gt; module at the command line, the compiler prints a warning if it detects a potential problem, allowing you to modify the code to avoid the error.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T040821Z" creationid="pingfangx" creationdate="20190102T040821Z">
@@ -46768,6 +48184,14 @@ required: Box&lt;java.lang.Integer&gt;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Which line of code will you need to add to each source file to put each class in the right package?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075830Z" creationid="pingfangx" creationdate="20190109T075830Z">
+        <seg>您需要在每个源文件中添加哪一行代码才能将每个类放入正确的包中？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Which method hides a method in the superclass?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190108T120046Z" creationid="pingfangx" creationdate="20190108T120046Z">
@@ -46852,6 +48276,14 @@ required: Box&lt;java.lang.Integer&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T021126Z" creationid="pingfangx" creationdate="20190103T021126Z">
         <seg>你应该使用抽象类还是接口？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Which subdirectory does each source file go in?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075853Z" creationid="pingfangx" creationdate="20190109T075853Z">
+        <seg>每个源文件进入哪个子目录？</seg>
       </tuv>
     </tu>
     <tu>
@@ -47060,10 +48492,26 @@ Y Position of rectTwo: 72</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>With programmers worldwide writing classes and interfaces using the Java programming language, it is likely that many programmers will use the same name for different types.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070938Z" creationid="pingfangx" creationdate="20190109T070938Z">
+        <seg>随着全世界程序员使用 Java 编程语言编写类和接口，很多程序员可能会对不同类型使用相同的名称。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>With that in mind, the following discussion focuses first on the operators that you're most likely to use on a regular basis, and ends focusing on those that are less common.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T063318Z" creationid="pingfangx" creationdate="20180521T063318Z">
         <seg>考虑到这一点，下面的讨论首先着眼于最有可能定期使用的运算符，然后最后关注那些不常见的操作上。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>With the &lt;c0&gt;import&lt;/c0&gt; statement, you generally import only a single package member or an entire package.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072718Z" creationid="pingfangx" creationdate="20190109T072718Z">
+        <seg>使用 &lt;c0&gt;import&lt;/c0&gt; 语句，通常只导入单个包成员或整个包。</seg>
       </tuv>
     </tu>
     <tu>
@@ -47372,10 +48820,42 @@ Y Position of rectTwo: 72</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>You also need to manage source and class files in this manner so that the compiler and the Java Virtual Machine (JVM) can find all the types your program uses.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074946Z" creationid="pingfangx" creationdate="20190109T074946Z">
+        <seg>您还需要以这种方式管理源文件和类文件，以便编译器和 Java 虚拟机(JVM)可以找到程序使用的所有类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>You also use an object reference to invoke an object's method.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T083136Z" creationid="pingfangx" creationdate="20180601T083136Z">
         <seg>您还可以使用对象引用来调用对象的方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You also write an interface, &lt;c0&gt;Draggable&lt;/c0&gt;, that classes implement if they can be dragged with the mouse.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T065715Z" creationid="pingfangx" creationdate="20190109T065715Z">
+        <seg>您还可以编写一个接口 &lt;c0&gt;Draggable&lt;/c0&gt;，如果可以使用鼠标拖动它们，那么这些类就可实现该接口。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You and other programmers can easily determine that these types are related.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T065735Z" creationid="pingfangx" creationdate="20190109T065735Z">
+        <seg>您和其他程序员可以轻松确定这些类型是否相关。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You and other programmers know where to find types that can provide graphics-related functions.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T065748Z" creationid="pingfangx" creationdate="20190109T065748Z">
+        <seg>您和其他程序员知道在哪里可以找到可以提供与图形相关的功能的类型。</seg>
       </tuv>
     </tu>
     <tu>
@@ -47416,6 +48896,14 @@ Y Position of rectTwo: 72</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190108T062333Z" creationid="pingfangx" creationdate="20190108T062333Z">
         <seg>您可以添加 &lt;t0&gt;null&lt;/t0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can allow types within the package to have unrestricted access to one another yet still restrict access for types outside the package.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T065829Z" creationid="pingfangx" creationdate="20190109T065829Z">
+        <seg>您可以允许程序包中的类型对彼此具有不受限制的访问权限，但仍限制程序包外部类型的访问。</seg>
       </tuv>
     </tu>
     <tu>
@@ -47496,6 +48984,14 @@ Y Position of rectTwo: 72</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T064408Z" creationid="pingfangx" creationdate="20190103T064408Z">
         <seg>您还可以将 &lt;c0&gt;concat()&lt;/c0&gt; 方法与字符串文字一起使用，如下所示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can arrange your source and class directories separately, as:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074915Z" creationid="pingfangx" creationdate="20190109T074915Z">
+        <seg>您可以单独排列源目录和类目录，如下所示：</seg>
       </tuv>
     </tu>
     <tu>
@@ -47684,6 +49180,14 @@ Y Position of rectTwo: 72</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>You can include non-public types in the same file as a public type (this is strongly discouraged, unless the non-public types are small and closely related to the public type), but only the public type will be accessible from outside of the package.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T070621Z" creationid="pingfangx" creationdate="20190109T070621Z">
+        <seg>您可以将非公共类型作为公共类型包含在同一文件中(强烈建议不要这样做，除非非公共类型很小且与公共类型密切相关)，但只有公共类型可以从包外部访问。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>You can insert an &lt;t2&gt;Object&lt;/t2&gt;, or any subtype of &lt;t3&gt;Object&lt;/t3&gt;, into a &lt;t4&gt;List&lt;Object&gt;&lt;/t4&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190107T084548Z" creationid="pingfangx" creationdate="20190107T084548Z">
@@ -47784,6 +49288,14 @@ Y Position of rectTwo: 72</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T030329Z" creationid="pingfangx" creationdate="20180525T030329Z">
         <seg>您可以在类声明的开始处提供有关该类的更多信息，例如其超类的名称，它是否实现了任何接口等等。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can put your types in packages too.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T065512Z" creationid="pingfangx" creationdate="20190109T065512Z">
+        <seg>您也可以将您的类型放入包中。</seg>
       </tuv>
     </tu>
     <tu>
@@ -47956,6 +49468,14 @@ Y Position of rectTwo: 72</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>You can use a package member's simple name if the code you are writing is in the same package as that member or if that member has been imported.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072138Z" creationid="pingfangx" creationdate="20190109T072138Z">
+        <seg>如果您编写的代码与该成员位于同一个包中，或者已导入该成员，则可以使用包成员的简单名称。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>You can use a standard functional interface in place of the interface &lt;c0&gt;CheckPerson&lt;/c0&gt;, which reduces even further the amount of code required.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180706T092107Z" creationid="pingfangx" creationdate="20180706T092107Z">
@@ -48112,6 +49632,14 @@ Y Position of rectTwo: 72</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T101402Z" creationid="pingfangx" creationdate="20180705T101402Z">
         <seg>您可以对用于外部类的其他成员的内部类使用相同的修饰符。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can use the static import statement to import the static members of java.lang.Math so that you don't need to prefix the class name, &lt;c0&gt;Math&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074117Z" creationid="pingfangx" creationdate="20190109T074117Z">
+        <seg>您可以使用 static import 语句导入 java.lang.Math 的静态成员，这样就不需要为类名 &lt;c0&gt;Math&lt;/c0&gt; 添加前缀。</seg>
       </tuv>
     </tu>
     <tu>
@@ -48348,6 +49876,14 @@ Y Position of rectTwo: 72</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>You could use this qualified name to create an instance of &lt;c0&gt;graphics.Rectangle&lt;/c0&gt;:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T072236Z" creationid="pingfangx" creationdate="20190109T072236Z">
+        <seg>您可以使用此限定名称来创建 &lt;c0&gt;graphics.Rectangle&lt;/c0&gt; 的实例：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>You create an object from a class by using the &lt;c0&gt;new&lt;/c0&gt; operator and a constructor.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180705T082156Z" creationid="pingfangx" creationdate="20180705T082156Z">
@@ -48492,10 +50028,26 @@ Y Position of rectTwo: 72</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>You might have to set your &lt;c0&gt;CLASSPATH&lt;/c0&gt; so that the compiler and the JVM can find the &lt;c1&gt;.class&lt;/c1&gt; files for your types.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075655Z" creationid="pingfangx" creationdate="20190109T075655Z">
+        <seg>您可能必须设置 &lt;c0&gt;CLASSPATH&lt;/c0&gt;，以便编译器和 JVM 可以找到类型的 &lt;c1&gt;.class&lt;/c1&gt; 文件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>You might keep HTML pages in one folder, images in another, and scripts or applications in yet another.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T064340Z" creationid="pingfangx" creationdate="20180518T064340Z">
         <seg>您可以将 HTML 页面保存在一个文件夹中，另一个文件中包含图像，另一个文件夹中包含脚本或应用程序。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You might need to change your proposed import code to reflect our implementation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080325Z" creationid="pingfangx" creationdate="20190109T080325Z">
+        <seg>您可能需要更改建议的导入代码以反映我们的实现。</seg>
       </tuv>
     </tu>
     <tu>
@@ -48608,6 +50160,14 @@ Y Position of rectTwo: 72</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T033306Z" creationid="pingfangx" creationdate="20190103T033306Z">
         <seg>您应始终使用 &lt;c0&gt;%n&lt;/c0&gt;，而不是 &lt;c1&gt;\n&lt;/c1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You should bundle these classes and the interface in a package for several reasons, including the following:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T065726Z" creationid="pingfangx" creationdate="20190109T065726Z">
+        <seg>您应该将这些类和接口组织在一个包中，原因有多种，包括：</seg>
       </tuv>
     </tu>
     <tu>
@@ -51626,6 +53186,14 @@ class B extends A { /* ... */ }</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>com.example._123name</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071758Z" creationid="pingfangx" creationdate="20190109T071758Z">
+        <seg>com.example._123name</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>comparestrings.html</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T024418Z" creationid="pingfangx" creationdate="20190103T024418Z">
@@ -52852,6 +54420,14 @@ float f1  = 123.4f;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T031207Z" creationid="pingfangx" creationdate="20180518T031207Z">
         <seg>essential/index.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>example.int</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071757Z" creationid="pingfangx" creationdate="20190109T071757Z">
+        <seg>example.int</seg>
       </tuv>
     </tu>
     <tu>
@@ -55142,6 +56718,14 @@ System.out.println(fs);</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>hyphenated-name.example.org</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071756Z" creationid="pingfangx" creationdate="20190109T071756Z">
+        <seg>hyphenated-name.example.org</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>i &lt;= (searchMeLength - findMeLength);</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T075857Z" creationid="pingfangx" creationdate="20190103T075857Z">
@@ -56934,6 +58518,14 @@ if (month == 1) {</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>int_.example</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071757Z" creationid="pingfangx" creationdate="20190109T071757Z">
+        <seg>int_.example</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>integerBox.inspect("10");</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190107T060344Z" creationid="pingfangx" creationdate="20190107T060344Z">
@@ -57130,6 +58722,14 @@ if (month == 1) {</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180521T071602Z" creationid="pingfangx" creationdate="20180521T071602Z">
         <seg>反转布尔值</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>is your class path, and the package name is</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075057Z" creationid="pingfangx" creationdate="20190109T075057Z">
+        <seg>是您的类路径，包名是</seg>
       </tuv>
     </tu>
     <tu>
@@ -58060,6 +59660,30 @@ long bytes = 0b11010010_01101001_10010100_10010010;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>mygame.client</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075807Z" creationid="pingfangx" creationdate="20190109T075807Z">
+        <seg>mygame.client</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>mygame.server</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075803Z" creationid="pingfangx" creationdate="20190109T075803Z">
+        <seg>mygame.server</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>mygame.shared</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075805Z" creationid="pingfangx" creationdate="20190109T075805Z">
+        <seg>mygame.shared</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>n</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190103T033246Z" creationid="pingfangx" creationdate="20190103T033246Z">
@@ -58728,6 +60352,14 @@ obj2 instanceof MyInterface: true</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>or as a group:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074130Z" creationid="pingfangx" creationdate="20190109T074130Z">
+        <seg>或作为一个群体导入：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>or like this</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T033229Z" creationid="pingfangx" creationdate="20180601T033229Z">
@@ -58748,6 +60380,14 @@ obj2 instanceof MyInterface: true</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180601T084839Z" creationid="pingfangx" creationdate="20180601T084839Z">
         <seg>或：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>org.example.hyphenated_name</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T071756Z" creationid="pingfangx" creationdate="20190109T071756Z">
+        <seg>org.example.hyphenated_name</seg>
       </tuv>
     </tu>
     <tu>
@@ -58938,6 +60578,14 @@ obj2 instanceof MyInterface: true</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>package and class names</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080105Z" creationid="pingfangx" creationdate="20190109T080105Z">
+        <seg>包和类名</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>package defaultmethods;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T061340Z" creationid="pingfangx" creationdate="20190102T061340Z">
@@ -58994,6 +60642,22 @@ public interface Card extends Comparable&lt;Card&gt; {</seg>
         <seg>package defaultmethods;
 
 public interface Card extends Comparable&lt;Card&gt; {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>package mygame.client;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080127Z" creationid="pingfangx" creationdate="20190109T080127Z">
+        <seg>package mygame.client;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>package mygame.shared;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T080133Z" creationid="pingfangx" creationdate="20190109T080133Z">
+        <seg>package mygame.shared;</seg>
       </tuv>
     </tu>
     <tu>
@@ -64386,6 +66050,22 @@ Serializable s = pick("d", new ArrayList&lt;String&gt;());</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>then the compiled files will be located at:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T074852Z" creationid="pingfangx" creationdate="20190109T074852Z">
+        <seg>然后编译的文件将位于：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>then the compiler and JVM look for &lt;c0&gt;.class files&lt;/c0&gt; in</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075122Z" creationid="pingfangx" creationdate="20190109T075122Z">
+        <seg>然后编译器和 JVM 在下述路径查找 &lt;c0&gt;.class files&lt;/c0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>then your objects can invoke the &lt;c1&gt;clone()&lt;/c1&gt; method.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190102T101701Z" creationid="pingfangx" creationdate="20190102T101701Z">
@@ -64534,6 +66214,14 @@ Serializable s = pick("d", new ArrayList&lt;String&gt;());</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180525T022844Z" creationid="pingfangx" creationdate="20180525T022844Z">
         <seg>thiskey.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>three destination packages</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T075746Z" creationid="pingfangx" creationdate="20190109T075746Z">
+        <seg>三个目的包</seg>
       </tuv>
     </tu>
     <tu>
@@ -66038,8 +67726,8 @@ class HelloWorldApp {
       <tuv lang="EN-US">
         <seg>« Previous</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20180518T040704Z" creationid="pingfangx" creationdate="20180518T040704Z">
-        <seg>« Previous</seg>
+      <tuv lang="ZH-CN" changeid="pingfangx" changedate="20190109T063939Z" creationid="pingfangx" creationdate="20180518T040704Z">
+        <seg>« 上一页</seg>
       </tuv>
     </tu>
 <!-- Alternative translations -->
