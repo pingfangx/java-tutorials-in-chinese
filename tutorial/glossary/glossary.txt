@@ -47,7 +47,6 @@ primitive	基本	原始,基元,原语|
 field	字段	领域|
 extends	继承	扩展|
 highlighted	高亮	突出显示|
-local	局部	本地,当地|
 excerpt	片断	摘录|
 interface	接口	界面|
 generic	泛型	通用|
@@ -57,3 +56,5 @@ override	覆盖	重写|
 box	装箱	打包|
 unbox	拆箱	解包|
 exception	异常	例外|
+native	原生	本地|
+token	语素	令牌|
