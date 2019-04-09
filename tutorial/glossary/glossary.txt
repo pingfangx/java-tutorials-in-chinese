@@ -61,3 +61,6 @@ token	语素	令牌|
 process	进程	过程|
 executor	执行器	执行程序|
 idiom	习惯用法	习语|
+unchecked exception	非检查型异常	未经检查的异常,未选中的异常|
+checked exception	检查型异常	经检查的异常,选中的异常|
+reluctant	懒惰	不情愿|
