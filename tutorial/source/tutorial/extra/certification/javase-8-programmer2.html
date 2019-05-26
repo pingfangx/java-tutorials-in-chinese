@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Java SE 8 Programmer II Exam (The Java&trade; Tutorials &gt;        
+            Bonus &gt; Preparation for Java Programmer Language Certification)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This Java tutorial describes generics, full screen mode API, and Java certification related resources" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java generics, full screen mode API, certification" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        A browser with JavaScript enabled is required for this page to operate properly.
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >Documentation</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">The Java&trade; Tutorials</div>
+                        <div id="TopBar_right"> 
+                            <!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">Hide TOC</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">Preparation for Java Programmer Language Certification</a></div>
+<div class="linkAHEAD"><a href="javase-8-programmer1.html">Java SE 8 Programmer I Exam</a></div>
+<div class="nolinkAHEAD">Java SE 8 Programmer II Exam</div>
+<div class="linkAHEAD"><a href="javase-8-upgrade.html">Java SE 8 Upgrade Exam</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Bonus
+        <br /><b>Lesson:</b> Preparation for Java Programmer Language Certification
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">Home Page</a>
+                &gt;
+                <a href="../index.html" target="_top">Bonus</a>
+                &gt;
+                <a href="index.html" target="_top">Preparation for Java Programmer Language Certification</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="javase-8-programmer1.html">&laquo;&nbsp;Previous</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">Trail</a>&nbsp;&bull;&nbsp;<a target="_top" href="javase-8-upgrade.html">Next&nbsp;&raquo;</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">The Java Tutorials have been written for JDK 8. Examples and practices described in this page don't take advantage of improvements introduced in later releases.</p></div>
+            <div id="PageTitle"><h1>Java SE 8 Programmer II Exam</h1></div>
+            <div id="PageContent">
+
+<!--Mapping Certification Objectives to Java Tutorials chapters-->
+
+<p>This page maps sections in the Java Tutorials to topics covered in the Java SE 8 Programmer II exam.  This exam is associated with the Oracle Certified Professional, Java SE 8 Programmer certificate. The topics covered in this exam are:</p>
+
+<ol>
+<li><a href="#classDesign">Java Class Design</a></li>
+<li><a href="#advancedClassDesign">Advanced Class Design</a></li>
+<li><a href="#generics">Generics and Collections</a></li>
+<li><a href="#lambda">Lambda Built-In Functional Interfaces</a></li>
+<li><a href="#stream">Java Stream API</a></li>
+<li><a href="#exceptions">Exceptions and Assertions</a></li>
+<li><a href="#datetime">Use Java SE 8 Date/Time API</a></li>
+<li><a href="#io">Java I/O Fundamentals</a></li>
+<li><a href="#nio2">Java File I/O (NIO.2)</a></li>
+<li><a href="#concurrency">Concurrency</a></li>
+<li><a href="#jdbc">Building Database Applications with JDBC</a></li>
+<li><a href="#localization">Localization</a></li>
+</ol>
+
+<!-- ======================================================================= -->
+<h2><a name="classDesign" id="classDesign">Section 1: Java Class Design</a></h2>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Implement encapsulation.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/concepts/object.html">What Is an Object?</a></li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Implement inheritance including visibility modifiers and composition.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/IandI/subclasses.html">Inheritance</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/IandI/override.html">Overriding and Hiding Methods</a></li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Implement polymorphism.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/IandI/polymorphism.html">Polymorphism</a></li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Override <tt>hasCode</tt>, <tt>equals</tt>, and <tt>toString</tt> methods from <tt>Object</tt> class.</p>
+<ul>
+<li>                              
+<a class="TutorialLink" target="_top" href="../../java/IandI/objectclass.html">Object as a Superclass</a></li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 5:</b> Create and use singleton classes and immutable classes.</p>
+<ul>
+<li>                              
+<a class="TutorialLink" target="_top" href="../../ext/basics/spi.html#singleton">The Singleton Design Pattern</a></li>
+<li>                              
+<a class="TutorialLink" target="_top" href="../../essential/concurrency/imstrat.html">A Strategy for Defining Immutable Objects</a></li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 6:</b> Develop code that uses the <tt>static</tt> keyword on initialize blocks, variables, methods, and classes.</p>
+<ul>
+<li>                              
+<a class="TutorialLink" target="_top" href="../../java/javaOO/classvars.html">Understanding Class Members</a></li>
+<li>                              
+<a class="TutorialLink" target="_top" href="../../java/javaOO/initial.html">Initializing Fields</a></li>
+<li>                              
+<a class="TutorialLink" target="_top" href="../../java/IandI/override.html">Overriding and Hiding Methods</a></li>
+<li>                              
+<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">Default Methods</a></li>
+</ul>
+
+<!-- ======================================================================= -->
+<h2><a name="advancedClassDesign" id="advancedClassDesign">Section 2: Advanced Class Design</a></h2>
+<p><b>Item 1:</b> Develop code that uses abstract classes and methods.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/IandI/abstract.html">Abstract Methods and Classes</a></li>
+</ul>
+
+<!--*************************************************************************-->
+<p><b>Item 2:</b> Develop code that uses the <tt>final</tt>.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/nutsandbolts/variables.html">Variables</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/classvars.html">Understanding Class Members</a></li>
+</ul>
+<!--*************************************************************************-->
+<p><b>Item 3:</b> Create inner classes including static inner classes, local classes, nested classes, and anonymous innter classes.</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/nested.html">Nested Classes</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/innerclasses.html">Inner Class Example</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/localclasses.html">Local Classes</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/anonymousclasses.html">Anonymous Classes</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/whentouse.html">When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions </a></li>
+</ul>
+
+<!--*************************************************************************-->
+<p><b>Item 4:</b> Use enumerated types including methods, and constructors in an <tt>enum</tt> type</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/enum.html">Enum Types</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">Default Methods</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../reflect/special/enum.html">Enumerated Types</a></li>
+</ul>
+
+<!--*************************************************************************-->
+<p><b>Item 5:</b> Develop code that declares, implements and/or extends interfaces and use the <tt>@Override</tt> annotation.</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/annotations/predefined.html">Predefined Annotation Types</a></li>
+</ul>
+
+
+<!--*************************************************************************-->
+<p><b>Item 6:</b> Create and use lambda expressions.</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a></li>
+</ul>
+
+<!-- ======================================================================= -->
+<h2><a name="generics" id="generics">Section 3: Generics and Collections</a></h2>
+<p>The
+<a class="TutorialLink" target="_top" href="../../java/generics/index.html">Generics (Updated)</a> lesson, the
+<a class="TutorialLink" target="_top" href="../../collections/index.html">Collections</a> trail and, in particular, the specified pages.</p>
+<!--************************************************************************-->
+<p><strong>Item 1</strong>: Create and use a generic class.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/generics/types.html">Generic Types</a></li>
+</ul>
+<!--************************************************************************-->
+<p><strong>Item 2</strong>: Create and use <tt>ArrayList</tt>, <tt>TreeSet</tt>, <tt>TreeMap</tt>, and <tt>ArrayDeque</tt> objects.</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../collections/interfaces/list.html">The List Interface</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../collections/interfaces/set.html">The Set Interface</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../collections/interfaces/map.html">The Map Interface</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../collections/interfaces/deque.html">The Deque Interface</a></li>
+</ul>
+
+
+<!--************************************************************************-->
+<p><strong>Item 3</strong>: Use <tt>java.util.Comparator</tt> and <tt>java.lang.Comparable</tt> interfaces.</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../collections/interfaces/order.html">Object Ordering</a></li>
+</ul>
+
+
+<!--************************************************************************-->
+<p><strong>Item 4</strong>: Collections, streams, and filters.</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a></li>
+</ul>
+
+
+<!--************************************************************************-->
+<p><strong>Item 5</strong>: Iterate using <tt>forEach</tt> methods of <tt>Streams</tt> and <tt>List</tt>.</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../collections/interfaces/collection.html">The Collection Interface</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a></li>
+</ul>
+
+<!--************************************************************************-->
+<p><strong>Item 6</strong>: Describe the <tt>Stream</tt> interface and the <tt>Stream</tt> pipeline.</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a></li>
+</ul>
+
+<!--************************************************************************-->
+<p><strong>Item 7</strong>: Filter a collection by using lambda expressions.</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../collections/interfaces/collection.html">The Collection Interface</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a></li>
+</ul>
+
+<!--************************************************************************-->
+<p><strong>Item 8</strong>: Use method references with streams.</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/methodreferences.html">Method References</a></li>
+</ul>
+
+
+<!-- ======================================================================= -->
+<h2><a name="lambda" id="lambda">Section 4: Lambda Built-In Functional Interfaces</a></h2>
+
+<p>The sections  
+<a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> and
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> cover some of the following items:</p>
+
+<!--************************************************************************-->
+<p><strong>Item 1</strong>: Use the built-in interfaces included in the <tt>java.util.function</tt> package such as <tt>Predicate</tt>, <tt>Consumer</tt>, <tt>Function</tt>, and <tt>Supplier</tt>.</p>
+
+<!--************************************************************************-->
+<p><strong>Item 2</strong>: Develop code that uses primitive versions of functional interfaces.</p>
+<!--************************************************************************-->
+<p><strong>Item 3</strong>: Develop code that uses binary versions of functional interfaces.</p>
+<!--************************************************************************-->
+<p><strong>Item 4</strong>: Develop code that uses the <tt>UnaryOperator</tt> interface.</p>
+
+
+
+<!-- ======================================================================= -->
+<h2><a name="stream" id="stream">Section 5: Java Stream API</a></h2>
+
+<p>The sections  
+<a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> and
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> cover some of the following items:</p>
+ 
+<!--************************************************************************-->
+<p><strong>Item 1</strong>: Develop code to extract data from an object using peek() and map() methods including primitive versions of the map() method.</p>
+<!--************************************************************************-->
+<p><strong>Item 2</strong>: Search for data by using search methods of the Stream classes including findFirst, findAny, anyMatch, allMatch, noneMatch.</p>
+<!--************************************************************************-->
+<p><strong>Item 3</strong>: Develop code that uses the Optional class.</p>
+<!--************************************************************************-->
+<p><strong>Item 4</strong>: Develop code that uses Stream data methods and calculation methods.</p>
+<!--************************************************************************-->
+<p><strong>Item 5</strong>: Sort a collection using Stream API.</p>
+<!--************************************************************************-->
+<p><strong>Item 6</strong>: Save results to a collection using the collect method and group/partition data using the Collectors class.</p>
+<!--************************************************************************-->
+<p><strong>Item 7</strong>: Use flatMap() methods in the Stream API.</p>
+<!--************************************************************************-->
+
+<!-- ======================================================================= -->
+<h2><a name="exceptions" id="exceptions">Section 6: Exceptions and Assertions</a></h2>
+<p><b>Item 1:</b> Use <tt>try</tt>-<tt>catch</tt> and <tt>throws</tt> statements.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/exceptions/declaring.html">Specifying the Exceptions Thrown by a Method</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/exceptions/throwing.html">How to Throw Exceptions</a></li>
+</ul>
+<!--************************************************************************-->
+<p><b>Item 2:</b> Use <tt>catch</tt>, <tt>multi-catch</tt>, and <tt>finally</tt> clauses.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/exceptions/handling.html">Catching and Handling Exceptions</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/exceptions/try.html">The try Block</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/exceptions/catch.html">The catch Blocks</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/exceptions/finally.html">The finally Block</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/exceptions/putItTogether.html">Putting It All Together</a></li>
+</ul>
+<!--************************************************************************-->
+<p><b>Item 3:</b> Use autoclose resources with a <tt>try</tt>-with-resources statement.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/exceptions/tryResourceClose.html">The try-with-resources Statement</a></li>
+</ul>
+<!--************************************************************************-->
+<p><b>Item 4:</b> Create custom exceptions and autocloseable resources.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/exceptions/creating.html">Creating Exception Classes</a></li>
+</ul>
+<!--************************************************************************-->
+<p><b>Item 5:</b> Test invariants by using assertions.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/QandE/creating-questions.html">Questions and Exercises: Classes (assertion example)</a></li>
+</ul>
+
+
+<!-- ======================================================================= -->
+<h2><a name="datetime" id="datetime">Section 7: Use Java SE 8 Date/Time API </a></h2>
+<!--************************************************************************-->
+<p><b>Item 1:</b> Create and manage date-based and time-based events including a combination of date and time into a single object using <tt>LocalDate</tt>, <tt>LocalTime</tt>, <tt>LocalDateTime</tt>, <tt>Instant</tt>, <tt>Period</tt>, and <tt>Duration</tt>.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/date.html">Date Classes</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/datetime.html">Date and Time Classes</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/instant.html">Instant Class</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/period.html">Period and Duration</a></li>
+</ul>
+
+<!--************************************************************************-->
+<p><b>Item 2:</b> Work with dates and times across timezones and manage changes resulting from daylight savings including Format date and times values.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/timezones.html">Time Zone and Offset Classes</a></li>
+</ul>
+<!--************************************************************************-->
+<p><b>Item 3:</b> Define and create and manage date-based and time-based events using <tt>Instant</tt>, <tt>Period</tt>, <tt>Duration</tt>, and <tt>TemporalUnit</tt>.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/instant.html">Instant Class</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/period.html">Period and Duration</a></li>
+
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/temporal.html">The Temporal Package</a></li>
+</ul>
+
+<!-- ======================================================================= -->
+<h2><a name="io" id="io">Section 8: Java I/O Fundamentals</a></h2>
+<p><strong>Item 1</strong>: Read and write data from the console.</p>
+<p>The 
+<a class="TutorialLink" target="_top" href="../../essential/io/streams.html">I/O Streams</a> lesson and, in particular, the following pages:</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/bytestreams.html">Byte Streams</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/cl.html">I/O from the Command Line</a></li>
+</ul>
+<!--************************************************************************-->
+<p><strong>Item 2</strong>: Use <tt>BufferedReader</tt>, <tt>BufferedWriter</tt>, <tt>File</tt>, <tt>FileReader</tt>, <tt>FileWriter</tt>, <tt>FileInputStream</tt>, <tt>FileOutputStream</tt>, <tt>ObjectOutputStream</tt>, <tt>ObjectInputStream</tt>, and <tt>PrintWriter</tt> in the <tt>java.io package</tt>.</p>
+<p>The 
+<a class="TutorialLink" target="_top" href="../../essential/io/fileio.html">File I/O (Featuring NIO.2)</a> lesson, and in particular, the following pages:</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/file.html">Reading, Writing, and Creating Files</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/dirs.html">Creating and Reading Directories</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/rafs.html">Random Access Files</a></li>
+</ul>
+
+
+<!-- ======================================================================= -->
+<h2><a name="nio2" id="nio2">Section 9: Java File I/O (NIO.2)</a></h2>
+<p><strong>Item 1</strong>: Use the <tt>Path</tt> interface to operate on file and directory paths.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/path.html">What Is a Path? (And Other File System Facts)</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/pathOps.html">Path Operations</a></li>
+</ul>
+<!--************************************************************************-->
+<p><strong>Item 2</strong>: Use the <tt>Files</tt> class to check, read, delete, copy, move, and manage metadata a file or directory.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/fileOps.html">File Operations</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/check.html">Checking a File or Directory</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/delete.html">Deleting a File or Directory</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/copy.html">Copying a File or Directory</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/move.html">Moving a File or Directory</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/fileAttr.html">Managing Metadata (File and File Store Attributes)</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/walk.html">Walking the File Tree</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/find.html">Finding Files</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/fileOps.html#glob">What is a Glob?</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/notification.html">Watching a Directory for Changes</a></li>
+</ul>
+<!--************************************************************************-->
+<p><strong>Item 3</strong>: Use Stream API with NIO.2.</p>
+
+
+
+
+<!-- ======================================================================= -->
+<h2><a name="ooDesign" id="ooDesign">Section 3: Object-Oriented Design Principles</a></h2>
+<p>The Java Tutorials do not cover Design Patterns topics. The following references cover design patterns using the Java programming language:</p>
+<ul>
+<li><em>Head First Design Patterns</em> by Elizabeth Freeman, et al.</li>
+<li><em>Java Design Pattern Essentials</em> by Tony Bevis</li>
+</ul>
+<p><b>Item 1:</b> Write code that declares, implements and/or extends interfaces.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/IandI/interfaceDef.html">Defining an Interface</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/IandI/createinterface.html">Interfaces</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/IandI/usinginterface.html">Implementing an Interface</a></li>
+</ul>
+<!--************************************************************************-->
+<p><b>Item 2:</b> Choose between interface inheritance and class inheritance.</p>
+<!--************************************************************************-->
+<p><b>Item 3:</b> Develop code that implements "is-a" and/or "has-a" relationships.</p>
+<!--************************************************************************-->
+<p><b>Item 4:</b> Apply object composition principles.</p>
+<!--***********************************************************************-->
+<p><b>Item 5:</b> Design a class using the Singleton design pattern.</p>
+<!--***********************************************************************-->
+<p><b>Item 6:</b> Write code to implement the DAO pattern.</p>
+<!--***********************************************************************-->
+<p><b>Item 7:</b> Design and create objects using a factory, and use factories from the API.</p>
+<!--************************************************************************-->
+
+
+<!-- ======================================================================= -->
+<h2><a name="strings" id="strings">Section 5: String Processing</a></h2>
+<p><b>Item 1:</b> Search, parse and build strings.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/data/strings.html">Strings</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/data/converting.html">Converting Between Numbers and Strings</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/data/comparestrings.html">Comparing Strings and Portions of Strings</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/data/manipstrings.html">Manipulating Characters in a String</a></li>
+</ul>
+<!--************************************************************************-->
+<p><b>Item 2:</b> Search, parse, and replace strings by using regular expressions.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/regex/pattern.html">Methods of the Pattern Class</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/regex/matcher.html">Methods of the Matcher Class</a></li>
+</ul>
+<!--************************************************************************-->
+<p><b>Item 3:</b> Use string formatting.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/data/strings.html">Strings</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/data/numberformat.html">Formatting Numeric Print Output</a></li>
+</ul>
+
+<!-- ======================================================================= -->
+<h2><a name="concurrency" id="concurrency">Section 10: Concurrency</a></h2>
+<!--************************************************************************ -->
+<p><b>Item 1:</b> Create worker threads using <tt>Runnable</tt>, <tt>Callable</tt> and use an <tt>ExecutorService</tt> to concurrently execute tasks.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/concurrency/executors.html">Executors</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/concurrency/exinter.html">Executor Interfaces</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/concurrency/pools.html">Thread Pools</a></li>
+</ul>
+
+
+<!--************************************************************************ -->
+<p><b>Item 2:</b> Identify potential threading problems among deadlock, starvation, livelock, and race conditions.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/concurrency/memconsist.html">Memory Consistency Errors</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/concurrency/deadlock.html">Deadlock</a></li>
+</ul>
+<!--************************************************************************ -->
+<p><b>Item 3:</b> Use synchronized keyword and java.util.concurrent.atomic package to control the order of thread execution.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/concurrency/atomicvars.html">Atomic Variables</a></li>
+</ul>
+<!--************************************************************************ -->
+<p><b>Item 4:</b> Use java.util.concurrent collections and classes including CyclicBarrier and CopyOnWriteArrayList.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/concurrency/collections.html">Concurrent Collections</a></li>
+</ul>
+<!--************************************************************************ -->
+<p><b>Item 5:</b> Use parallel Fork/Join Framework.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/concurrency/forkjoin.html">Fork/Join</a></li>
+</ul>
+<!--************************************************************************ -->
+<p><b>Item 6:</b> Use parallel Streams including reduction, decomposition, merging processes, pipelines and performance.</p>
+
+
+<!-- ======================================================================= -->
+<h2><a name="jdbc" id="jdbc">Section 11: Building Database Applicatons with JDBC</a></h2>
+<p><b>Item 1:</b>  Describe the interfaces that make up the core of the JDBC API including the <tt>Driver</tt>, <tt>Connection</tt>, <tt>Statement</tt>, and <tt>ResultSet</tt> interfaces and their relationship to provider implementations.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../jdbc/basics/gettingstarted.html">JDBC Basics: Getting Started</a></li>
+</ul>
+<!--************************************************************************-->
+<p><b>Item 2:</b> Identify the components required to connect to a database using the DriverManager class including the JDBC URL.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../jdbc/basics/connecting.html">Establishing a Connection</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../jdbc/basics/sqldatasources.html">Connecting with DataSource Objects</a></li>
+</ul>
+<!--************************************************************************-->
+<p><b>Item 3:</b>  Submit queries and read results from the database including creating statements, returning result sets, iterating through the results, and properly closing result sets, statements, and connections.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../jdbc/basics/processingsqlstatements.html">Processing SQL Statements with JDBC</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../jdbc/basics/transactions.html">Using Transactions</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../jdbc/basics/rowset.html">Using RowSet Objects</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../jdbc/basics/jdbcrowset.html">Using JdbcRowSet Objects</a></li>
+</ul>
+
+
+<!-- ======================================================================= -->
+<h2><a name="localization" id="localization">Section 12: Localization</a></h2>
+<p><b>Item 1:</b> Read and set the locale by using the <tt>Locale</tt> object..</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../i18n/locale/index.html">Setting the Locale</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../i18n/locale/create.html">Creating a Locale</a></li>
+</ul>
+<!--************************************************************************-->
+<p><b>Item 2:</b> Create and read a <tt>Properties</tt> file.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../i18n/resbundle/concept.html">About the ResourceBundle Class</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../i18n/resbundle/propfile.html">Backing a ResourceBundle with Properties Files</a></li>
+</ul>
+<!--************************************************************************-->
+<p><b>Item 3:</b> Build a resource bundle for each locale and load a resource bundle in an application.</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../i18n/resbundle/control.html">Customizing Resource Bundle Loading</a></li>
+</ul>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="javase-8-programmer1.html">&laquo; Previous</a>
+            &bull;
+            <a target="_top" href="../TOC.html">Trail</a>
+            &bull;
+            <a target="_top" href="javase-8-upgrade.html">Next &raquo;</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a> | 
+<a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> |
+<a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | 
+<a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> |
+<a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+Copyright &copy; 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Java SE 8 Programmer I Exam
+        <br /><b>Next page:</b> Java SE 8 Upgrade Exam
+    </div>
+</body>
+</html> 

@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Java SE 8 Upgrade Exam (The Java&trade; Tutorials &gt;        
+            Bonus &gt; Preparation for Java Programmer Language Certification)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This Java tutorial describes generics, full screen mode API, and Java certification related resources" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java generics, full screen mode API, certification" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        A browser with JavaScript enabled is required for this page to operate properly.
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >Documentation</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">The Java&trade; Tutorials</div>
+                        <div id="TopBar_right"> 
+                            <!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">Hide TOC</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">Preparation for Java Programmer Language Certification</a></div>
+<div class="linkAHEAD"><a href="javase-8-programmer1.html">Java SE 8 Programmer I Exam</a></div>
+<div class="linkAHEAD"><a href="javase-8-programmer2.html">Java SE 8 Programmer II Exam</a></div>
+<div class="nolinkAHEAD">Java SE 8 Upgrade Exam</div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Bonus
+        <br /><b>Lesson:</b> Preparation for Java Programmer Language Certification
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">Home Page</a>
+                &gt;
+                <a href="../index.html" target="_top">Bonus</a>
+                &gt;
+                <a href="index.html" target="_top">Preparation for Java Programmer Language Certification</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="javase-8-programmer2.html">&laquo;&nbsp;Previous</a>&nbsp;&bull;&nbsp;<a target="_top" href="../TOC.html">Trail</a>&nbsp;&bull;&nbsp;<a target="_top" href="../end.html">Next&nbsp;&raquo;</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">The Java Tutorials have been written for JDK 8. Examples and practices described in this page don't take advantage of improvements introduced in later releases.</p></div>
+            <div id="PageTitle"><h1>Java SE 8 Upgrade Exam</h1></div>
+            <div id="PageContent">
+
+<p>This page maps sections in the Java Tutorials to topics covered in the Upgrade to Java SE 8 OCP (Oracle Certified Professional) (Java SE 6 and all prior versions) and Upgrade Java SE 7 to Java SE 8 OCP exams. These exams are associated with the Oracle Certified Professional, Java SE 8 Programmer certificate.</p>
+
+<!--Mapping Certification Objectives to Java Tutorials chapters-->
+<h2>Upgrade to Java SE 8 OCP (Java SE 6 and all prior versions)</h2>
+
+<p>The topics covered in this exam are:</p>
+
+<ol>
+<li><a href="#language6">Language Enhancements</a></li>
+<li><a href="#concurrency6">Concurrency</a></li>
+<li><a href="#localization6">Localization</a></li>
+<li><a href="#nio26">Java File I/O (NIO.2)</a></li>
+<li><a href="#lambda6">Lambda</a></li>
+<li><a href="#collections6">Java Collections</a></li>
+<li><a href="#streams6">Java Streams</a></li>
+</ol>
+
+<h3><a name="language6" id="language6">Section 1: Language
+Enhancements</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Develop code that uses <tt>String</tt> objects in the
+<tt>switch</tt> statement, binary literals, and numeric literals, including
+underscores in literals</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/nutsandbolts/switch.html">The switch Statement</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/nutsandbolts/datatypes.html">Primitive Data Types</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/nutsandbolts/datatypes.html">Primitive Data Types</a></li>
+</ul>
+
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Develop code that uses <tt>try</tt>-with-resources
+statements, including using classes that implement the
+<tt>AutoCloseable</tt> interface</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/exceptions/tryResourceClose.html">The try-with-resources Statement</a></li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Develop code that handles multiple <tt>Exception</tt>
+types in a single <tt>catch</tt> block</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/exceptions/catch.html">The catch Blocks</a></li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Use static and default methods of an interface
+including inheritance rules for a default method</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">Default Methods</a></li>
+</ul>
+
+<h3><a name="concurrency6" id="concurrency6">Section 2: Concurrency</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Use classes from the <tt>java.util.concurrent</tt> package
+including <tt>CyclicBarrier</tt> and <tt>CopyOnWriteArrayList</tt> with a focus on
+the advantages over and differences from the traditional <tt>java.util</tt>
+collections</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Use <tt>Lock</tt>, <tt>ReadWriteLock</tt>, and <tt>ReentrantLock</tt>
+classes in the <tt>java.util.concurrent.locks</tt> and
+<tt>java.util.concurrent.atomic</tt> packages to support lock-free
+thread-safe programming on single variables</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/concurrency/atomicvars.html">Atomic Variables</a></li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Use <tt>Executor</tt>, <tt>ExecutorService</tt>, <tt>Executors</tt>,
+<tt>Callable</tt>, and <tt>Future</tt> to execute tasks using thread pools</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/concurrency/exinter.html">Executor Interfaces</a></li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Use the parallel Fork/Join Framework</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/concurrency/forkjoin.html">Fork/Join</a></li>
+</ul>
+
+
+<h3><a name="localization6"
+id="localization6">Section 3: Localization</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Describe the advantages of localizing an
+application and developing code that defines, reads, and sets the
+locale with a <tt>Locale</tt> object</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../i18n/intro/index.html">Introduction</a></li>
+</ul>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../i18n/locale/create.html">Creating a Locale</a></li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Build a resource bundle for a locale and call a
+resource bundle from an application</p>
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../i18n/resbundle/index.html">Isolating Locale-Specific Data</a></li>
+</ul>
+
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Create and manage date- and time-based events by
+using <tt>LocalDate</tt>, <tt>LocalTime</tt>, <tt>LocalDateTime</tt>, <tt>Instant</tt>, <tt>Period</tt>, and
+<tt>Duration</tt>, including a combination of date and time in a single
+object</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/date.html">Date Classes</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/datetime.html">Date and Time Classes</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/instant.html">Instant Class</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/period.html">Period and Duration</a></li>
+</ul>
+
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Format dates, numbers, and currency values for
+localization with the <tt>NumberFormat</tt> and <tt>DateFormat</tt> classes,
+including number and date format patterns</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../i18n/format/numberintro.html">Numbers and Currencies</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../i18n/format/dateintro.html">Dates and Times</a></li>
+</ul>
+
+
+<!-- *********************************************************************** -->
+<p><b>Item 5:</b> Work with dates and times across time zones and
+manage changes resulting from daylight savings</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/timezones.html">Time Zone and Offset Classes</a></li>
+</ul>                                        
+
+<!-- *********************************************************************** -->
+<h3><a name="nio26" id="nio26">Section 4: Java File I/O (NIO.2)</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Operate on file and directory paths by using the
+<tt>java.nio.Path</tt> class</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/pathOps.html">Path Operations</a></li>
+</ul> 
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Check, delete, copy, or move a file or directory
+by using the <tt>java.nio.Files</tt> class</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/check.html">Checking a File or Directory</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/delete.html">Deleting a File or Directory</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/copy.html">Copying a File or Directory</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/move.html">Moving a File or Directory</a></li>
+</ul> 
+
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Recursively access a directory tree by using the
+<tt>DirectoryStream</tt> and <tt>FileVisitor</tt> interfaces</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/dirs.html">Creating and Reading Directories</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/walk.html">Walking the File Tree</a></li>
+</ul> 
+
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Find a file by using the PathMatcher interface,
+and use Java SE 8 I/O improvements, including <tt>Files.find</tt>,
+<tt>Files.walk</tt>, and <tt>Files.lines methods</tt></p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/find.html">Finding Files</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/walk.html">Walking the File Tree</a></li>
+</ul>
+
+<!-- *********************************************************************** -->
+<p><b>Item 5:</b> Observe the changes in a directory by using the
+<tt>WatchService</tt> interface</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../essential/io/notification.html">Watching a Directory for Changes</a></li>
+</ul>
+
+<!-- *********************************************************************** -->
+<h3><a name="lambda6" id="lambda6">Section 5: Lambda</a></h3>
+
+<p>The sections  
+<a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> and
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> cover some of the following items:</p>
+ 
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Define and write functional interfaces and
+describe the interfaces of the <tt>java.util.function</tt> package</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Describe a lambda expression; refactor the code
+that uses an anonymous inner class to use a lambda expression;
+describe type inference and target typing</p>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Develop code that uses the built-in interfaces
+included in the <tt>java.util.function</tt> package, such as <tt>Function</tt>,
+<tt>Consumer</tt>, <tt>Supplier</tt>, <tt>UnaryOperator</tt>, <tt>Predicate</tt>, and <tt>Optional</tt> APIs,
+including the primitive and binary variations of the interfaces</p>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Develop code that uses a method reference,
+including refactoring a lambda expression to a method reference</p>
+<!-- *********************************************************************** -->
+
+<h3><a name="collections6" id="collections6">Section 6: Java
+Collections</a></h3>
+
+<p>The sections  
+<a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> and
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> cover some of the following items:</p>
+
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Develop code that uses diamond with generic
+declarations</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/generics/types.html#diamond">The Diamond</a></li>
+</ul>
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Develop code that iterates a collection, filters
+a collection, and sorts a collection by using lambda
+expressions</p>
+
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Search for data by using methods, such as
+<tt>findFirst</tt>, <tt>findAny</tt>, <tt>anyMatch</tt>, <tt>allMatch</tt>, and <tt>noneMatch</tt></p>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Perform calculations on Java streams by using
+<tt>count</tt>, <tt>max</tt>, <tt>min</tt>, <tt>average</tt>, and <tt>sum</tt> methods and save results to a
+collection by using the <tt>collect</tt> method and <tt>Collector</tt> class,
+including the <tt>averagingDouble</tt>, <tt>groupingBy</tt>, <tt>joining</tt>, and <tt>partitioningBy</tt>
+methods</p>
+<!-- *********************************************************************** -->
+<p><b>Item 5:</b> Develop code that uses Java SE 8 collection
+improvements, including the <tt>Collection.removeIf</tt>,
+<tt>List.replaceAll</tt>, <tt>Map.computeIfAbsent</tt>, and
+<tt>Map.computeIfPresent</tt> methods</p>
+<!-- *********************************************************************** -->
+<p><b>Item 6:</b> Develop code that uses the <tt>merge</tt>, <tt>flatMap</tt>,
+and <tt>map</tt> methods on Java streams</p>
+
+
+<!-- *********************************************************************** -->
+<h3><a name="streams6" id="streams6">Section 7: Java Streams</a></h3>
+
+<p>The sections  
+<a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> and
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> cover some of the following items:</p>
+ 
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Describe the <tt>Stream</tt> interface and pipelines;
+create a stream by using the <tt>Arrays.stream</tt> and <tt>IntStream.range</tt>
+methods; identify the lambda operations that are lazy</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Develop code that uses parallel streams,
+including decomposition operation and reduction operation in
+streams</p>
+<!-- *********************************************************************** -->
+
+
+
+
+<h2>Upgrade Java SE 7 to Java SE 8 OCP Programmer</h2>
+
+<p>The topics covered in this exam are:</p>
+ 
+<ol>
+<li><a href="#lambda7">Lambda Expressions</a></li>
+<li><a href="#builtinlambda7">Using Built-in Lambda Types</a></li>
+<li><a href="#collectionslambda7">Java Collections and Streams with
+Lambdas</a></li>
+<li><a href="#collectionoperations7">Collection Operations with
+Lambda</a></li>
+<li><a href="#parallel7">Parallel Streams</a></li>
+<li><a href="#lambdacookbook7">Lambda Cookbook</a></li>
+<li><a href="#methodenhancements">Method Enhancements</a></li>
+<li><a href="#datetime7">Use Java SE 8 Date/Time API</a></li>
+</ol>
+<h3><a name="lambda7" id="lambda7">Section 1: Lambda Expressions</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Describe and develop code that uses Java inner
+classes, including nested class, static class, local class, and
+anonymous classes</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/nested.html">Nested Classes</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/localclasses.html">Local Classes</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/anonymousclasses.html">Anonymous Classes</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../java/javaOO/whentouse.html">When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions </a></li>
+</ul>
+
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Describe and write functional interfaces</p>
+
+<a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Describe a lambda expression; refactor the code
+that uses an anonymous inner class to use a lambda expression;
+describe type inference and target typing</p>
+
+<a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a>
+<!-- *********************************************************************** -->
+<h3><a name="builtinlambda7" id="builtinlambda7">Section 2: Using Built-in
+Lambda Types</a></h3>
+
+<p>The sections  
+<a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> and
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> cover some of the following items:</p>
+ 
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Describe the interfaces of the java.util.function
+package</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Develop code that uses the Function interface</p>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Develop code that uses the Consumer interface</p>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Develop code that uses the Supplier interface</p>
+<!-- *********************************************************************** -->
+<p><b>Item 5:</b> Develop code that uses the UnaryOperator
+interface</p>
+<!-- *********************************************************************** -->
+<p><b>Item 6:</b> Develop code that uses the Predicate
+interface</p>
+<!-- *********************************************************************** -->
+<p><b>Item 7:</b> Develop code that uses the primitive and binary
+variations of the base interfaces of the java.util.function
+package</p>
+<!-- *********************************************************************** -->
+<p><b>Item 8:</b> Develop code that uses a method reference,
+including refactoring a lambda expression to a method reference</p>
+<!-- *********************************************************************** -->
+<h3><a name="collectionslambda7" id="collectionslambda7">Section 3: Java
+Collections and Streams with Lambdas</a></h3>
+
+<p>The sections  
+<a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> and
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> cover some of the following items:</p>
+
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Develop code that iterates a collection by using
+the forEach() method and method chaining</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Describe the Stream interface and pipelines</p>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Filter a collection by using lambda
+expressions</p>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Identify the operations, on stream, that are
+lazy</p>
+<!-- *********************************************************************** -->
+<h3><a name="collectionoperations7"
+id="collectionoperations7">Section 4: Collection Operations with
+Lambda</a></h3>
+
+<p>The sections  
+<a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> and
+<a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> cover some of the following items:</p>
+ 
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Develop code to extract data from an object by
+using the map() method</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Search for data by using methods such as
+findFirst(), findAny(), anyMatch(), allMatch(), and noneMatch()</p>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Describe the unique characteristics of the
+Optional class</p>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Perform calculations by using Java Stream
+methods, such as count(), max(), min(), average(), and sum()</p>
+<!-- *********************************************************************** -->
+<p><b>Item 5:</b> Sort a collection by using lambda expressions</p>
+<!-- *********************************************************************** -->
+<p><b>Item 6:</b> Develop code that uses the Stream.collect()
+method and Collectors class methods, such as averagingDouble(),
+groupingBy(), joining(), and partitioningBy()</p>
+<!-- *********************************************************************** -->
+<h3><a name="parallel7" id="parallel7">Section 5: Parallel Streams</a></h3>
+
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Develop code that uses parallel streams</p>
+
+<a class="TutorialLink" target="_top" href="../../collections/streams/parallelism.html">Parallelism</a>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Implement decomposition and reduction in
+streams</p>
+
+<a class="TutorialLink" target="_top" href="../../collections/streams/reduction.html">Reduction</a></macroinline
+
+<!-- *********************************************************************** -->
+<h3><a name="lambdacookbook7" id="lambdacookbook7">Section 6: Lambda
+Cookbook</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Develop code that uses Java SE 8 collection
+improvements, including Collection.removeIf, List.replaceAll,
+Map.computeIfAbsent, and Map.computeIfPresent methods</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Develop code that uses Java SE 8 I/O
+improvements, including Files.find, Files.walk, and Files.lines methods</p>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Use flatMap() methods in the Stream API</p>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Develop code that creates a stream by using the
+Arrays.stream() and IntStream.range() methods</p>
+<!-- *********************************************************************** -->
+<h3><a name="methodenhancements" id="methodenhancements">Section 7: Method
+Enhancements</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Add static methods to interfaces</p>
+
+<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html#static">Static Methods</a>
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Define and use a default method of an interface
+and describe the inheritance rules for the default method</p>
+
+<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">Default Methods</a>
+<a class="TutorialLink" target="_top" href="../../java/IandI/override.html">Overriding and Hiding Methods</a>
+<!-- *********************************************************************** -->
+<h3><a name="datetime7" id="datetime7">Section 8: Use Java SE 8 Date/Time
+API</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Create and manage date- and time-based events,
+including a combination of date and time in a single object, by
+using LocalDate, LocalTime, LocalDateTime, Instant, Period, and
+Duration</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/date.html">Date Classes</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/datetime.html">Date and Time Classes</a></li>
+</ul>
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Work with dates and times across time zones and
+manage changes resulting from daylight savings, including Format
+date and times values</p>
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/timezones.html">Time Zone and Offset Classes</a></li>
+</ul>
+
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Define, create, and manage date- and time-based
+events using Instant, Period, Duration, and TemporalUnit</p>
+<!-- *********************************************************************** -->
+
+<ul>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/instant.html">Instant Class</a></li>
+<li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/temporal.html">The Temporal Package</a></li><li>
+<a class="TutorialLink" target="_top" href="../../datetime/iso/period.html">Period and Duration</a></li>
+</ul>
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="javase-8-programmer2.html">&laquo; Previous</a>
+            &bull;
+            <a target="_top" href="../TOC.html">Trail</a>
+            &bull;
+            <a target="_top" href="../end.html">Next &raquo;</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a> | 
+<a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> |
+<a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | 
+<a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> |
+<a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+Copyright &copy; 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Java SE 8 Programmer II Exam
+        <br /><b>Next page:</b> End of Trail
+    </div>
+</body>
+</html> 

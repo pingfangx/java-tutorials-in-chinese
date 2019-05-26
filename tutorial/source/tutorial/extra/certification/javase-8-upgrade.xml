@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" [
+<!ATTLIST html
+xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation CDATA #IMPLIED
+>
+]>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta name="generator"
+content="HTML Tidy for Java (vers. 2009-12-01), see jtidy.sourceforge.net" />
+<title>leave this as is</title>
+</head>
+<body>
+
+<p>This page maps sections in the Java Tutorials to topics covered in the Upgrade to Java SE 8 OCP (Oracle Certified Professional) (Java SE 6 and all prior versions) and Upgrade Java SE 7 to Java SE 8 OCP exams. These exams are associated with the Oracle Certified Professional, Java SE 8 Programmer certificate.</p>
+
+<!--Mapping Certification Objectives to Java Tutorials chapters-->
+<h2>Upgrade to Java SE 8 OCP (Java SE 6 and all prior versions)</h2>
+
+<p>The topics covered in this exam are:</p>
+
+<ol>
+<li><a href="#language6">Language Enhancements</a></li>
+<li><a href="#concurrency6">Concurrency</a></li>
+<li><a href="#localization6">Localization</a></li>
+<li><a href="#nio26">Java File I/O (NIO.2)</a></li>
+<li><a href="#lambda6">Lambda</a></li>
+<li><a href="#collections6">Java Collections</a></li>
+<li><a href="#streams6">Java Streams</a></li>
+</ol>
+
+<h3><a name="language6" id="language6">Section 1: Language
+Enhancements</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Develop code that uses <tt>String</tt> objects in the
+<tt>switch</tt> statement, binary literals, and numeric literals, including
+underscores in literals</p>
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON nutsandbolts
+    FILE switch.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON nutsandbolts
+    FILE datatypes.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON nutsandbolts
+    FILE datatypes.html
+)
+</macroinline>
+</li>
+</ul>
+
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Develop code that uses <tt>try</tt>-with-resources
+statements, including using classes that implement the
+<tt>AutoCloseable</tt> interface</p>
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON exceptions
+    FILE tryResourceClose.html
+)
+</macroinline>
+</li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Develop code that handles multiple <tt>Exception</tt>
+types in a single <tt>catch</tt> block</p>
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON exceptions
+    FILE catch.html
+)
+</macroinline>
+</li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Use static and default methods of an interface
+including inheritance rules for a default method</p>
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON IandI
+    FILE defaultmethods.html
+)
+</macroinline>
+</li>
+</ul>
+
+<h3><a name="concurrency6" id="concurrency6">Section 2: Concurrency</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Use classes from the <tt>java.util.concurrent</tt> package
+including <tt>CyclicBarrier</tt> and <tt>CopyOnWriteArrayList</tt> with a focus on
+the advantages over and differences from the traditional <tt>java.util</tt>
+collections</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Use <tt>Lock</tt>, <tt>ReadWriteLock</tt>, and <tt>ReentrantLock</tt>
+classes in the <tt>java.util.concurrent.locks</tt> and
+<tt>java.util.concurrent.atomic</tt> packages to support lock-free
+thread-safe programming on single variables</p>
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON concurrency
+    FILE atomicvars.html
+)
+</macroinline>
+</li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Use <tt>Executor</tt>, <tt>ExecutorService</tt>, <tt>Executors</tt>,
+<tt>Callable</tt>, and <tt>Future</tt> to execute tasks using thread pools</p>
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON concurrency
+    FILE exinter.html
+)
+</macroinline>
+</li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Use the parallel Fork/Join Framework</p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON concurrency
+    FILE forkjoin.html
+)
+</macroinline>
+</li>
+</ul>
+
+
+<h3><a name="localization6"
+id="localization6">Section 3: Localization</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Describe the advantages of localizing an
+application and developing code that defines, reads, and sets the
+locale with a <tt>Locale</tt> object</p>
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL i18n
+    LESSON intro
+    FILE index.html
+)
+</macroinline>
+</li>
+</ul>
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL i18n
+    LESSON locale
+    FILE create.html
+)
+</macroinline>
+</li>
+</ul>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Build a resource bundle for a locale and call a
+resource bundle from an application</p>
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL i18n
+    LESSON resbundle
+    FILE index.html
+)
+</macroinline>
+</li>
+</ul>
+
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Create and manage date- and time-based events by
+using <tt>LocalDate</tt>, <tt>LocalTime</tt>, <tt>LocalDateTime</tt>, <tt>Instant</tt>, <tt>Period</tt>, and
+<tt>Duration</tt>, including a combination of date and time in a single
+object</p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL datetime
+    LESSON iso
+    FILE date.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL datetime
+    LESSON iso
+    FILE datetime.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL datetime
+    LESSON iso
+    FILE instant.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL datetime
+    LESSON iso
+    FILE period.html
+)
+</macroinline>
+</li>
+</ul>
+
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Format dates, numbers, and currency values for
+localization with the <tt>NumberFormat</tt> and <tt>DateFormat</tt> classes,
+including number and date format patterns</p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL i18n
+    LESSON format
+    FILE numberintro.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL i18n
+    LESSON format
+    FILE dateintro.html
+)
+</macroinline>
+</li>
+</ul>
+
+
+<!-- *********************************************************************** -->
+<p><b>Item 5:</b> Work with dates and times across time zones and
+manage changes resulting from daylight savings</p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL datetime
+    LESSON iso
+    FILE timezones.html
+)
+</macroinline>
+</li>
+</ul>                                        
+
+<!-- *********************************************************************** -->
+<h3><a name="nio26" id="nio26">Section 4: Java File I/O (NIO.2)</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Operate on file and directory paths by using the
+<tt>java.nio.Path</tt> class</p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON io
+    FILE pathOps.html
+)
+</macroinline>
+</li>
+</ul> 
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Check, delete, copy, or move a file or directory
+by using the <tt>java.nio.Files</tt> class</p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON io
+    FILE check.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON io
+    FILE delete.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON io
+    FILE copy.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON io
+    FILE move.html
+)
+</macroinline>
+</li>
+</ul> 
+
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Recursively access a directory tree by using the
+<tt>DirectoryStream</tt> and <tt>FileVisitor</tt> interfaces</p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON io
+    FILE dirs.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON io
+    FILE walk.html
+)
+</macroinline>
+</li>
+</ul> 
+
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Find a file by using the PathMatcher interface,
+and use Java SE 8 I/O improvements, including <tt>Files.find</tt>,
+<tt>Files.walk</tt>, and <tt>Files.lines methods</tt></p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON io
+    FILE find.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON io
+    FILE walk.html
+)
+</macroinline>
+</li>
+</ul>
+
+<!-- *********************************************************************** -->
+<p><b>Item 5:</b> Observe the changes in a directory by using the
+<tt>WatchService</tt> interface</p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL essential
+    LESSON io
+    FILE notification.html
+)
+</macroinline>
+</li>
+</ul>
+
+<!-- *********************************************************************** -->
+<h3><a name="lambda6" id="lambda6">Section 5: Lambda</a></h3>
+
+<p>The sections  
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON javaOO
+    FILE lambdaexpressions.html
+)
+</macroinline>
+ and
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL collections
+    LESSON streams
+    FILE index.html
+)
+</macroinline>
+ cover some of the following items:</p>
+ 
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Define and write functional interfaces and
+describe the interfaces of the <tt>java.util.function</tt> package</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Describe a lambda expression; refactor the code
+that uses an anonymous inner class to use a lambda expression;
+describe type inference and target typing</p>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Develop code that uses the built-in interfaces
+included in the <tt>java.util.function</tt> package, such as <tt>Function</tt>,
+<tt>Consumer</tt>, <tt>Supplier</tt>, <tt>UnaryOperator</tt>, <tt>Predicate</tt>, and <tt>Optional</tt> APIs,
+including the primitive and binary variations of the interfaces</p>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Develop code that uses a method reference,
+including refactoring a lambda expression to a method reference</p>
+<!-- *********************************************************************** -->
+
+<h3><a name="collections6" id="collections6">Section 6: Java
+Collections</a></h3>
+
+<p>The sections  
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON javaOO
+    FILE lambdaexpressions.html
+)
+</macroinline>
+ and
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL collections
+    LESSON streams
+    FILE index.html
+)
+</macroinline>
+ cover some of the following items:</p>
+
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Develop code that uses diamond with generic
+declarations</p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON generics
+    FILE types.html#diamond
+    LINKTEXT The Diamond
+)
+</macroinline>
+</li>
+</ul>
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Develop code that iterates a collection, filters
+a collection, and sorts a collection by using lambda
+expressions</p>
+
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Search for data by using methods, such as
+<tt>findFirst</tt>, <tt>findAny</tt>, <tt>anyMatch</tt>, <tt>allMatch</tt>, and <tt>noneMatch</tt></p>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Perform calculations on Java streams by using
+<tt>count</tt>, <tt>max</tt>, <tt>min</tt>, <tt>average</tt>, and <tt>sum</tt> methods and save results to a
+collection by using the <tt>collect</tt> method and <tt>Collector</tt> class,
+including the <tt>averagingDouble</tt>, <tt>groupingBy</tt>, <tt>joining</tt>, and <tt>partitioningBy</tt>
+methods</p>
+<!-- *********************************************************************** -->
+<p><b>Item 5:</b> Develop code that uses Java SE 8 collection
+improvements, including the <tt>Collection.removeIf</tt>,
+<tt>List.replaceAll</tt>, <tt>Map.computeIfAbsent</tt>, and
+<tt>Map.computeIfPresent</tt> methods</p>
+<!-- *********************************************************************** -->
+<p><b>Item 6:</b> Develop code that uses the <tt>merge</tt>, <tt>flatMap</tt>,
+and <tt>map</tt> methods on Java streams</p>
+
+
+<!-- *********************************************************************** -->
+<h3><a name="streams6" id="streams6">Section 7: Java Streams</a></h3>
+
+<p>The sections  
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON javaOO
+    FILE lambdaexpressions.html
+)
+</macroinline>
+ and
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL collections
+    LESSON streams
+    FILE index.html
+)
+</macroinline>
+ cover some of the following items:</p>
+ 
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Describe the <tt>Stream</tt> interface and pipelines;
+create a stream by using the <tt>Arrays.stream</tt> and <tt>IntStream.range</tt>
+methods; identify the lambda operations that are lazy</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Develop code that uses parallel streams,
+including decomposition operation and reduction operation in
+streams</p>
+<!-- *********************************************************************** -->
+
+
+
+
+<h2>Upgrade Java SE 7 to Java SE 8 OCP Programmer</h2>
+
+<p>The topics covered in this exam are:</p>
+ 
+<ol>
+<li><a href="#lambda7">Lambda Expressions</a></li>
+<li><a href="#builtinlambda7">Using Built-in Lambda Types</a></li>
+<li><a href="#collectionslambda7">Java Collections and Streams with
+Lambdas</a></li>
+<li><a href="#collectionoperations7">Collection Operations with
+Lambda</a></li>
+<li><a href="#parallel7">Parallel Streams</a></li>
+<li><a href="#lambdacookbook7">Lambda Cookbook</a></li>
+<li><a href="#methodenhancements">Method Enhancements</a></li>
+<li><a href="#datetime7">Use Java SE 8 Date/Time API</a></li>
+</ol>
+<h3><a name="lambda7" id="lambda7">Section 1: Lambda Expressions</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Describe and develop code that uses Java inner
+classes, including nested class, static class, local class, and
+anonymous classes</p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON javaOO
+    FILE nested.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON javaOO
+    FILE localclasses.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON javaOO
+    FILE anonymousclasses.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON javaOO
+    FILE whentouse.html
+)
+</macroinline>
+</li>
+</ul>
+
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Describe and write functional interfaces</p>
+
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON javaOO
+    FILE lambdaexpressions.html
+)
+</macroinline>
+
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Describe a lambda expression; refactor the code
+that uses an anonymous inner class to use a lambda expression;
+describe type inference and target typing</p>
+
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON javaOO
+    FILE lambdaexpressions.html
+)
+</macroinline>
+
+<!-- *********************************************************************** -->
+<h3><a name="builtinlambda7" id="builtinlambda7">Section 2: Using Built-in
+Lambda Types</a></h3>
+
+<p>The sections  
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON javaOO
+    FILE lambdaexpressions.html
+)
+</macroinline>
+ and
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL collections
+    LESSON streams
+    FILE index.html
+)
+</macroinline>
+ cover some of the following items:</p>
+ 
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Describe the interfaces of the java.util.function
+package</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Develop code that uses the Function interface</p>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Develop code that uses the Consumer interface</p>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Develop code that uses the Supplier interface</p>
+<!-- *********************************************************************** -->
+<p><b>Item 5:</b> Develop code that uses the UnaryOperator
+interface</p>
+<!-- *********************************************************************** -->
+<p><b>Item 6:</b> Develop code that uses the Predicate
+interface</p>
+<!-- *********************************************************************** -->
+<p><b>Item 7:</b> Develop code that uses the primitive and binary
+variations of the base interfaces of the java.util.function
+package</p>
+<!-- *********************************************************************** -->
+<p><b>Item 8:</b> Develop code that uses a method reference,
+including refactoring a lambda expression to a method reference</p>
+<!-- *********************************************************************** -->
+<h3><a name="collectionslambda7" id="collectionslambda7">Section 3: Java
+Collections and Streams with Lambdas</a></h3>
+
+<p>The sections  
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON javaOO
+    FILE lambdaexpressions.html
+)
+</macroinline>
+ and
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL collections
+    LESSON streams
+    FILE index.html
+)
+</macroinline>
+ cover some of the following items:</p>
+
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Develop code that iterates a collection by using
+the forEach() method and method chaining</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Describe the Stream interface and pipelines</p>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Filter a collection by using lambda
+expressions</p>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Identify the operations, on stream, that are
+lazy</p>
+<!-- *********************************************************************** -->
+<h3><a name="collectionoperations7"
+id="collectionoperations7">Section 4: Collection Operations with
+Lambda</a></h3>
+
+<p>The sections  
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON javaOO
+    FILE lambdaexpressions.html
+)
+</macroinline>
+ and
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL collections
+    LESSON streams
+    FILE index.html
+)
+</macroinline>
+ cover some of the following items:</p>
+ 
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Develop code to extract data from an object by
+using the map() method</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Search for data by using methods such as
+findFirst(), findAny(), anyMatch(), allMatch(), and noneMatch()</p>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Describe the unique characteristics of the
+Optional class</p>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Perform calculations by using Java Stream
+methods, such as count(), max(), min(), average(), and sum()</p>
+<!-- *********************************************************************** -->
+<p><b>Item 5:</b> Sort a collection by using lambda expressions</p>
+<!-- *********************************************************************** -->
+<p><b>Item 6:</b> Develop code that uses the Stream.collect()
+method and Collectors class methods, such as averagingDouble(),
+groupingBy(), joining(), and partitioningBy()</p>
+<!-- *********************************************************************** -->
+<h3><a name="parallel7" id="parallel7">Section 5: Parallel Streams</a></h3>
+
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Develop code that uses parallel streams</p>
+
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL collections
+    LESSON streams
+    FILE parallelism.html
+)
+</macroinline>
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Implement decomposition and reduction in
+streams</p>
+
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL collections
+    LESSON streams
+    FILE reduction.html
+)
+</macroinline
+
+<!-- *********************************************************************** -->
+<h3><a name="lambdacookbook7" id="lambdacookbook7">Section 6: Lambda
+Cookbook</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Develop code that uses Java SE 8 collection
+improvements, including Collection.removeIf, List.replaceAll,
+Map.computeIfAbsent, and Map.computeIfPresent methods</p>
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Develop code that uses Java SE 8 I/O
+improvements, including Files.find, Files.walk, and Files.lines methods</p>
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Use flatMap() methods in the Stream API</p>
+<!-- *********************************************************************** -->
+<p><b>Item 4:</b> Develop code that creates a stream by using the
+Arrays.stream() and IntStream.range() methods</p>
+<!-- *********************************************************************** -->
+<h3><a name="methodenhancements" id="methodenhancements">Section 7: Method
+Enhancements</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Add static methods to interfaces</p>
+
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON IandI
+    FILE defaultmethods.html#static
+    LINKTEXT Static Methods
+)
+</macroinline>
+
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Define and use a default method of an interface
+and describe the inheritance rules for the default method</p>
+
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON IandI
+    FILE defaultmethods.html
+)
+</macroinline>
+
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL java
+    LESSON IandI
+    FILE override.html
+)
+</macroinline>
+
+<!-- *********************************************************************** -->
+<h3><a name="datetime7" id="datetime7">Section 8: Use Java SE 8 Date/Time
+API</a></h3>
+<!-- *********************************************************************** -->
+<p><b>Item 1:</b> Create and manage date- and time-based events,
+including a combination of date and time in a single object, by
+using LocalDate, LocalTime, LocalDateTime, Instant, Period, and
+Duration</p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL datetime
+    LESSON iso
+    FILE date.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL datetime
+    LESSON iso
+    FILE datetime.html
+)
+</macroinline>
+</li>
+</ul>
+
+<!-- *********************************************************************** -->
+<p><b>Item 2:</b> Work with dates and times across time zones and
+manage changes resulting from daylight savings, including Format
+date and times values</p>
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL datetime
+    LESSON iso
+    FILE timezones.html
+)
+</macroinline>
+</li>
+</ul>
+
+<!-- *********************************************************************** -->
+<p><b>Item 3:</b> Define, create, and manage date- and time-based
+events using Instant, Period, Duration, and TemporalUnit</p>
+<!-- *********************************************************************** -->
+
+<ul>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL datetime
+    LESSON iso
+    FILE instant.html
+)
+</macroinline>
+</li>
+<li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL datetime
+    LESSON iso
+    FILE temporal.html
+)
+</macroinline>
+</li><li>
+<macroinline>
+#usemacro AUTOMATICLINK (
+    TRAIL datetime
+    LESSON iso
+    FILE period.html
+)
+</macroinline>
+</li>
+</ul>
+
+</body>
+</html>
