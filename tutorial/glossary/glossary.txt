@@ -69,3 +69,4 @@ reduction	缩减	还原,减少|
 parallel	并行	并发,平行|
 concurrent	并发	并行|
 ad hoc	特设	特殊,临时|
+literal	字面量	文字|
