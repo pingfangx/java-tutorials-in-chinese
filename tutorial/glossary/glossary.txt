@@ -45,7 +45,7 @@ repository	仓库	存储库,版本库|git 中统一翻译
 class	类	课程,班级|
 primitive	基本	原始,基元,原语|
 field	字段	领域|
-extends	继承	扩展|
+extends	继承	扩展
 highlighted	高亮	突出显示|
 excerpt	片断	摘录|
 interface	接口	界面|
@@ -71,7 +71,7 @@ concurrent	并发	并行|
 ad hoc	特设	特殊,临时|
 literal	字面量	文字|
 quote	引语	引用,引号,报价|用于数据报中的示例
-trail	路径	小路,小道,小径,线索|
+trail	路径	小路,小道,小径,线索,跟踪|
 cast	强制转换	演员|
 lower bounded	下界	下限有界,下限|
 upper bounded	上界	上限有界,上限|
