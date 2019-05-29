@@ -1,9 +1,9 @@
-#英文	中文	[不使用的翻译|]备注
+#英文	中文	[不使用的翻译|]备注，如果不包含 | 则只会提示，不会替换
 operator	运算符
 statements	语句	声明,陈述|
 remove	移除	删除|
 delete	删除	两者好像没有区别,但还是根据不同的单词进行不同的翻译
-cursor	光标
+cursor	光标	游标|
 caret	插入符	光标|与光标区分开
 change	更改,变更	改变|如果名词性不强,就使用“变更”
 all	全部,所有,全	
@@ -47,7 +47,7 @@ primitive	基本	原始,基元,原语|
 field	字段	领域|
 extends	继承	扩展
 highlighted	高亮	突出显示|
-excerpt	片断	摘录|
+excerpt	片段	摘录|
 interface	接口	界面|
 generic	泛型	通用,仿制药|只在泛型相关部分使用，其余还是使用“通用”
 retrieve	获取	检索|
@@ -58,7 +58,7 @@ unbox	拆箱	解包|
 exception	异常	例外|
 native	原生	本地|
 token	语素	令牌|
-process	进程	过程|
+process	进程	过程
 executor	执行器	执行程序|
 idiom	习惯用法	习语,成语,习惯用语|
 unchecked exception	非检查型异常	未经检查的异常,未选中的异常|
@@ -70,8 +70,22 @@ parallel	并行	并发,平行|
 concurrent	并发	并行|
 ad hoc	特设	特殊,临时|
 literal	字面量	文字|
-quote	引语	引用,引号,报价|用于数据报中的示例
+#quote	引语	引用,引号,报价|用于数据报中的示例
 trail	路径	小路,小道,小径,线索,跟踪|
 cast	强制转换	演员|
 lower bounded	下界	下限有界,下限|
 upper bounded	上界	上限有界,上限|
+program	程序	计划|
+end user	终端用户	最终用户|
+locale	区域设置	语言环境|
+tag	标签	标记|
+key	键	密钥|
+message	消息	邮件|
+sample	示例	样本,样品|
+collation	排序	归类,整理|
+supplementary	补充	增补|也译为辅助字符
+character	字符	角色|
+word	单词	文字,字|临时使用
+line	行	线|
+shaper	形状器	整形器|
+listener	监听器	侦听器|
