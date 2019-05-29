@@ -89,3 +89,4 @@ word	单词	文字,字|临时使用
 line	行	线|
 shaper	形状器	整形器|
 listener	监听器	侦听器|
+palette	面板	调色板|
