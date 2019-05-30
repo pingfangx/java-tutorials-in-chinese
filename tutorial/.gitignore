@@ -12,3 +12,13 @@
 /*-level1.tmx
 /*-level2.tmx
 /*-omegat.tmx
+
+# 忽略不翻译的文件
+*.zip
+*.jar
+*.java
+*.class
+
+# 忽略示例目录
+example/
+examples/
