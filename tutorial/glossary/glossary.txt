@@ -35,7 +35,6 @@ argument	参数,实参
 parameter	参数,形参	应该是混用的,只是在代码样式→换行和括号中补区分
 formal and actual parameters	形参和实参
 reference	引用,参考
-annotation	注解	注释
 scratch	临时文件,草稿,临时	不会列入项目中
 Instant Run	即时运行
 variant	变体
@@ -45,7 +44,6 @@ repository	仓库	存储库,版本库|git 中统一翻译
 class	类	课程,班级|
 primitive	基本	原始,基元,原语|
 field	字段	领域|
-extends	继承	扩展
 highlighted	高亮	突出显示|
 excerpt	片段	摘录|
 interface	接口	界面|
@@ -62,8 +60,10 @@ process	进程	过程
 executor	执行器	执行程序|
 idiom	习惯用法	习语,成语,习惯用语|
 unchecked exception	非检查型异常	未经检查的异常,未选中的异常|
-checked exception	检查型异常	经检查的异常,选中的异常|
+checked exception	检查型异常	经检查的异常,已检查的异常,选中的异常|
 reluctant	懒惰	不情愿|
+
+# 集体相关
 collection	集合	收藏品,收藏|
 reduction	缩减	还原,减少|
 parallel	并行	并发,平行|
@@ -72,9 +72,13 @@ ad hoc	特设	特殊,临时|
 literal	字面量	文字|
 #quote	引语	引用,引号,报价|用于数据报中的示例
 trail	路径	小路,小道,小径,线索,跟踪|
+
+# 泛型相关
 cast	强制转换	演员|
 lower bounded	下界	下限有界,下限|
 upper bounded	上界	上限有界,上限|
+
+# 国际化相关
 program	程序	计划|
 end user	终端用户	最终用户|
 locale	区域设置	语言环境|
@@ -90,3 +94,15 @@ line	行	线|
 shaper	形状器	整形器|
 listener	监听器	侦听器|
 palette	面板	调色板|
+
+# 反射相关
+reflect	反射	反思|
+annotation	注解	注释|
+extends	继承	扩展|
+formal parameter	形式参数	正式参数|
+variable arity	可变数量的	可变的 arity,变量 arity|可变参数或者可变数量的参数
+array	数组	阵列|
+identify	识别	标识|
+reference type	引用类型	参考类型|
+primitive type	基本类型
+
