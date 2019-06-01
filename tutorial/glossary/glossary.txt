@@ -112,3 +112,10 @@ download extension	下载型扩展	下载的扩展,下载扩展|
 header	头	标头|
 extension	扩展	扩展名|
 provider	提供者	提供程序,提供商|
+
+# 全屏独占
+active rendering	主动渲染	活动渲染|
+full-screen exclusive	全屏独占	
+monitor	显示器	监视器|
+robust	健壮	鲁棒,强大|
+graphics card	显卡	图形卡|
