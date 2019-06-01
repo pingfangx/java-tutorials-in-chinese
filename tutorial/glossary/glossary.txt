@@ -61,6 +61,7 @@ idiom	习惯用法	习语,成语,习惯用语|
 unchecked exception	非检查型异常	未经检查的异常,未选中的异常|
 checked exception	检查型异常	经检查的异常,已检查的异常,选中的异常|
 reluctant	懒惰	不情愿|
+sign	签名	签署|
 
 # 集体相关
 collection	集合	收藏品,收藏|
