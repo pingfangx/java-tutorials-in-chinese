@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>获取方法参数的名称(Java™ 教程-Java Tutorials 中文版&gt;反射 API&gt;成员)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This reflection Java tutorial describes using reflection for accessing and manipulating classes, fields, methods, and constructors" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java reflection" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">成员</a></div>
+<div class="linkAHEAD"><a href="field.html">字段</a></div>
+<div class="linkBHEAD"><a href="fieldTypes.html">获取字段类型</a></div>
+<div class="linkBHEAD"><a href="fieldModifiers.html">获取和解析字段修饰符</a></div>
+<div class="linkBHEAD"><a href="fieldValues.html">获取和设置字段值</a></div>
+<div class="linkBHEAD"><a href="fieldTrouble.html">故障排除</a></div>
+<div class="linkAHEAD"><a href="method.html">方法</a></div>
+<div class="linkBHEAD"><a href="methodType.html">获取方法类型信息</a></div>
+<div class="nolinkBHEAD">获取方法参数的名称</div>
+<div class="linkBHEAD"><a href="methodModifiers.html">获取和解析方法修饰符</a></div>
+<div class="linkBHEAD"><a href="methodInvocation.html">调用方法</a></div>
+<div class="linkBHEAD"><a href="methodTrouble.html">故障排除</a></div>
+<div class="linkAHEAD"><a href="ctor.html">构造函数</a></div>
+<div class="linkBHEAD"><a href="ctorLocation.html">查找构造函数</a></div>
+<div class="linkBHEAD"><a href="ctorModifiers.html">获取和解析构造函数修饰符</a></div>
+<div class="linkBHEAD"><a href="ctorInstance.html">创建新的类实例</a></div>
+<div class="linkBHEAD"><a href="ctorTrouble.html">故障排除</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> The Reflection API
+        <br /><b>Lesson:</b> Members
+        <br /><b>Section:</b> Methods
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">成员</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="methodType.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methodModifiers.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>获取方法参数的名称</h1></div>
+            <div id="PageContent">
+
+
+<p>您可以使用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html#getParameters--"><code>java.lang.reflect.Executable.getParameters</code></a> 获取任何方法或构造函数的形式参数的名称。(类 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html"><code>Method</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html"><code>Constructor</code></a> 继承类 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html"><code>Executable</code></a> 因此继承方法 <code>Executable.getParameters</code>。)但是，<code>.class</code> 文件默认不存储形式参数名。这是因为许多生成和使用类文件的工具可能不会期望包含参数名称的 <code>.class</code> 文件的较大静态和动态占用空间。特别是，这些工具必须处理较大的 <code>.class</code> 文件，Java 虚拟机(JVM)将使用更多内存。此外，某些参数名称(如 <code>secret</code> 或 <code>password</code>)可能会公开有关安全性敏感方法的信息。</p>
+
+<p>要将形式参数名称存储在特定的 <code>.class</code> 文件中，从而使反射 API 能够获取形式参数名称，请带 <code>-parameters</code> 选项使用 <code>javac</code> 编译器编译源文件 。</p>
+
+<p><a class="SourceLink" target="_blank" href="example/MethodParameterSpy.java" onclick="showCode('../../displayCode.html', 'example/MethodParameterSpy.java'); return false;"><code><code>MethodParameterSpy</code></code></a> 示例说明了如何获取给定类的所有构造函数和方法的形式参数的名称。该示例还打印有关每个参数的其他信息。</p>
+ 
+<p>以下命令打印类 <a class="SourceLink" target="_blank" href="example/ExampleMethods.java" onclick="showCode('../../displayCode.html', 'example/ExampleMethods.java'); return false;"><code><code>ExampleMethods</code></code></a> 的构造函数和方法的形式参数名称。<strong>注意</strong>:请记住使用 <code>-parameters</code> 编译器选项编译示例 <code>ExampleMethods</code>：</p>
+
+<pre class="codeblock"><em>java MethodParameterSpy ExampleMethods</em></pre>
+
+<p>此命令打印以下内容：</p>
+
+<pre class="codeblock">Number of constructors: 1
+
+Constructor #1
+public ExampleMethods()
+
+Number of declared constructors: 1
+
+Declared constructor #1
+public ExampleMethods()
+
+Number of methods: 4
+
+Method #1
+public boolean ExampleMethods.simpleMethod(java.lang.String,int)
+             Return type: boolean
+     Generic return type: boolean
+         Parameter class: class java.lang.String
+          Parameter name: stringParam
+               Modifiers: 0
+            Is implicit?: false
+        Is name present?: true
+           Is synthetic?: false
+         Parameter class: int
+          Parameter name: intParam
+               Modifiers: 0
+            Is implicit?: false
+        Is name present?: true
+           Is synthetic?: false
+
+Method #2
+public int ExampleMethods.varArgsMethod(java.lang.String...)
+             Return type: int
+     Generic return type: int
+         Parameter class: class [Ljava.lang.String;
+          Parameter name: manyStrings
+               Modifiers: 0
+            Is implicit?: false
+        Is name present?: true
+           Is synthetic?: false
+
+Method #3
+public boolean ExampleMethods.methodWithList(java.util.List&lt;java.lang.String&gt;)
+             Return type: boolean
+     Generic return type: boolean
+         Parameter class: interface java.util.List
+          Parameter name: listParam
+               Modifiers: 0
+            Is implicit?: false
+        Is name present?: true
+           Is synthetic?: false
+
+Method #4
+public &lt;T&gt; void ExampleMethods.genericMethod(T[],java.util.Collection&lt;T&gt;)
+             Return type: void
+     Generic return type: void
+         Parameter class: class [Ljava.lang.Object;
+          Parameter name: a
+               Modifiers: 0
+            Is implicit?: false
+        Is name present?: true
+           Is synthetic?: false
+         Parameter class: interface java.util.Collection
+          Parameter name: c
+               Modifiers: 0
+            Is implicit?: false
+        Is name present?: true
+           Is synthetic?: false</pre>
+       
+<p><code>MethodParameterSpy</code> 示例使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html"><code>Parameter</code></a> 类中的以下方法：</p>
+
+<ul>
+
+  <li><p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html#getType--"><code>getType</code></a>:返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a> 对象，该对象标识参数的声明类型。</p></li>
+  
+  <li><p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html#getName--"><code>getName</code></a>:返回参数的名称。如果参数的名称存在，则此方法返回 <code>.class</code> 文件提供的名称。否则，此方法合成一个名称 <code>arg<em>N</em></code>，其中 <code><em>N</em></code> 是声明参数的方法的描述符中的参数的索引。</p>
+  
+  <p>例如，假设您编译了类 <code>ExampleMethods</code> 而未指定 <code>-parameters</code> 编译器选项。示例 <code>MethodParameterSpy</code> 将为方法 <code>ExampleMethods.simpleMethod</code> 打印以下内容：</p>
+  
+  <pre class="codeblock">public boolean ExampleMethods.simpleMethod(java.lang.String,int)
+             Return type: boolean
+     Generic return type: boolean
+         Parameter class: class java.lang.String
+          Parameter name: arg0
+               Modifiers: 0
+            Is implicit?: false
+        Is name present?: false
+           Is synthetic?: false
+         Parameter class: int
+          Parameter name: arg1
+               Modifiers: 0
+            Is implicit?: false
+        Is name present?: false
+           Is synthetic?: false</pre></li>
+
+  <li><p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html#getModifiers--"><code>getModifiers</code></a>:返回一个整数，表示形式参数拥有的各种特征。如果适用于形式参数，则此值是以下值的总和：</p> 
+  
+  <table border="1" summary="getModifiers 方法的可能值">
+      <tr>
+          <th>值(十进制)</th>
+          <th>值(十六进制)</th>
+          <th>描述</th>
+      </tr>
+      <tr>
+          <td>16</td>
+          <td>0x0010</td>
+          <td>形式参数声明为 <code>final</code></td>
+      </tr>
+      <tr>
+          <td>4096</td>
+          <td>0x1000</td>
+          <td>形式参数是合成的。或者，您可以调用方法 <code>isSynthetic</code>。</td>
+      </tr>
+      <tr>
+          <td>32768</td>
+          <td>0x8000</td>
+          <td>该参数在源代码中隐式声明。或者，您可以调用方法 <code>isImplicit</code></td>
+      </tr>
+  </table>
+  </li>  
+        
+  <li><p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html#isImplicit--"><code>isImplicit</code></a>:如果在源代码中隐式声明此参数，则返回 <code>true</code>。有关详细信息，请参阅 <a href="#implcit_and_synthetic">Implicit and Synthetic Parameters</a> 部分。</p></li>
+  
+  <li><p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html#isNamePresent--"><code>isNamePresent</code></a>:如果参数根据 <code>.class</code> 文件具有名称，则返回 <code>true</code>。</p></li>
+  
+  <li><p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html#isSynthetic--"><code>isSynthetic</code></a>:如果在源代码中既没有隐式声明也没有显式声明此参数，则返回 <code>true</code>。有关详细信息，请参阅 <a href="#implcit_and_synthetic">Implicit and Synthetic Parameters</a> 部分。</p></li>
+</ul>
+
+<h2><a name="implcit_and_synthetic">隐式和合成参数</a></h2>  
+
+<p>如果没有显式地编写某些构造函数，则在源代码中隐式声明它们。例如，<a class="SourceLink" target="_blank" href="example/ExampleMethods.java" onclick="showCode('../../displayCode.html', 'example/ExampleMethods.java'); return false;"><code><code>ExampleMethods</code></code></a> 示例不包含构造函数。默认构造函数是为它隐式声明的。<code>MethodParameterSpy</code> 示例打印有关 <code>ExampleMethods</code> 的隐式声明构造函数的信息：</p>
+ 
+<pre class="codeblock">Number of declared constructors: 1
+public ExampleMethods()</pre>
+    
+<p>请考虑以下 <a class="SourceLink" target="_blank" href="example/MethodParameterExamples.java" onclick="showCode('../../displayCode.html', 'example/MethodParameterExamples.java'); return false;"><code><code>MethodParameterExamples</code></code></a> 的片段：</p>
+
+<pre class="codeblock">public class MethodParameterExamples {
+    public class InnerClass { }
+}</pre>
+
+<p>类 <code>InnerClass</code> 是非静态 <a class="TutorialLink" target="_top" href="../../java/javaOO/nested.html">嵌套类</a> 或内部类。内部类的构造函数也是隐式声明的。但是，此构造函数将包含一个参数。当 Java 编译器编译 <code>InnerClass</code> 时，它会创建一个 <code>.class</code> 文件，该文件代表类似于以下内容的代码：</p> 
+ 
+<pre class="codeblock">public class MethodParameterExamples {
+    public class InnerClass {
+        final MethodParameterExamples parent;
+        InnerClass(final MethodParameterExamples this&#x24;0) {
+            parent = this&#x24;0; 
+        }
+    }
+}</pre> 
+
+<p><code>InnerClass</code> 构造函数包含一个参数，其类型是包含 <code>InnerClass</code> 的类，即 <code>MethodParameterExamples</code>。因此，示例 <code>MethodParameterExamples</code> 将打印以下内容：</p>  
+
+<pre class="codeblock">public MethodParameterExamples&#x24;InnerClass(MethodParameterExamples)
+         Parameter class: class MethodParameterExamples
+          Parameter name: this&#x24;0
+               Modifiers: 32784
+            Is implicit?: true
+        Is name present?: true
+           Is synthetic?: false</pre>
+
+<p>因为隐式声明了类 <code>InnerClass</code> 的构造函数，所以它的参数也是隐式的。</p>
+
+<p><strong>注意</strong>:</p>
+
+<ul>
+  <li>Java 编译器为内部类的构造函数创建形式参数，以使编译器能够将创建表达式中的引用(表示立即封闭的实例)传递给成员类的构造函数。</li>
+  <li>值 32784 表示 <code>InnerClass</code> 构造函数的参数既是 final(16)，也是隐式(32768)。</li>
+  <li>Java 编程语言允许带有美元符号的变量名(<code>$</code>)；但是，按照惯例，美元符号不会用于变量名称。</li> 
+</ul>
+
+<p>如果 Java 编译器发出的构造函数与源代码中显式或隐式声明的构造函数不对应，则将其标记为 <em>synthetic</em>，除非它们是类初始化方法。合成构造是由编译器生成的工件，这些工件在不同的实现之间变化。请考虑以下 <a class="SourceLink" target="_blank" href="example/MethodParameterExamples.java" onclick="showCode('../../displayCode.html', 'example/MethodParameterExamples.java'); return false;"><code><code>MethodParameterExamples</code></code></a> 的片段：</p>
+
+<pre class="codeblock">public class MethodParameterExamples {
+    enum Colors {
+        RED, WHITE;
+    }
+}</pre>
+
+<p>当 Java 编译器遇到 <code>enum</code> 构造时，它会创建几个与 <code>.class</code> 文件结构兼容的方法，并提供预期功能的 <code>enum</code> 构造。例如，Java 编译器将为 <code>enum</code> 构造 <code>Colors</code> 创建一个 <code>.class</code> 文件，该文件代表类似于以下内容的代码：</p>
+
+<pre class="codeblock">final class Colors extends java.lang.Enum&lt;Colors&gt; {
+    public final static Colors RED = new Colors("RED", 0);
+    public final static Colors BLUE = new Colors("WHITE", 1);
+ 
+    private final static values = new Colors[]{ RED, BLUE };
+ 
+    private Colors(String name, int ordinal) {
+        super(name, ordinal);
+    }
+ 
+    public static Colors[] values(){
+        return values;
+    }
+ 
+    public static Colors valueOf(String name){
+        return (Colors)java.lang.Enum.valueOf(Colors.class, name);
+    }
+}</pre>
+
+<p>Java 编译器为此 <code>enum</code> 构造创建三个构造函及方法：<code>Colors(String name, int ordinal)</code>，<code>Colors[] values()</code>，和 <code>Colors valueOf(String name)</code>。方法 <code>values</code> 和 <code>valueOf</code> 是隐式声明的。因此，它们的形式参数名也被隐式声明。</p>
+
+
+<p><code>enum</code> 构造函数 <code>Colors(String name, int ordinal)</code> 是默认构造函数，它是隐式声明的。但是，此构造函数的形式参数(<code>name</code> 和 <code>ordinal</code>) <em>不是</em> 隐式声明的。因为这些形式参数既不是显式声明，也不是隐式声明，所以它们是合成的。(<code>enum</code> 构造的默认构造函数的形式参数未被隐式声明，因为不同的编译器不需要在此构造函数的形式上达成一致；另一个 Java 编译器可能为其指定不同的形式参数。当编译器编译使用 <code>enum</code> 常量的表达式时，它们只依赖于隐式声明的 <code>enum</code> 构造的公共静态字段，而不是它们的构造函数或这些常量如何被初始化。)</p>
+
+<p>因此，示例 <code>MethodParameterExample</code> 打印有关 <code>enum</code> 构造 <code>Colors</code> 的以下内容：</p>
+
+<pre class="codeblock">enum Colors:
+
+Number of constructors: 0
+
+Number of declared constructors: 1
+
+Declared constructor #1
+private MethodParameterExamples&#x24;Colors()
+         Parameter class: class java.lang.String
+          Parameter name: &#x24;enum&#x24;name
+               Modifiers: 4096
+            Is implicit?: false
+        Is name present?: true
+           Is synthetic?: true
+         Parameter class: int
+          Parameter name: &#x24;enum&#x24;ordinal
+               Modifiers: 4096
+            Is implicit?: false
+        Is name present?: true
+           Is synthetic?: true
+
+Number of methods: 2
+
+Method #1
+public static MethodParameterExamples&#x24;Colors[]
+    MethodParameterExamples&#x24;Colors.values()
+             Return type: class [LMethodParameterExamples&#x24;Colors;
+     Generic return type: class [LMethodParameterExamples&#x24;Colors;
+
+Method #2
+public static MethodParameterExamples&#x24;Colors
+    MethodParameterExamples&#x24;Colors.valueOf(java.lang.String)
+             Return type: class MethodParameterExamples&#x24;Colors
+     Generic return type: class MethodParameterExamples&#x24;Colors
+         Parameter class: class java.lang.String
+          Parameter name: name
+               Modifiers: 32768
+            Is implicit?: true
+        Is name present?: true
+           Is synthetic?: false</pre>
+
+<p>有关隐式声明的构造的更多信息，请参阅 <a href="https://docs.oracle.com/javase/specs/">Java Language Specification</a>，包括在反射 API 中显示为隐式的参数。</p>
+
+
+
+
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="methodType.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="methodModifiers.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Obtaining Method Type Information
+        <br /><b>Next page:</b> Retrieving and Parsing Method Modifiers
+    </div>
+</body>
+</html> 

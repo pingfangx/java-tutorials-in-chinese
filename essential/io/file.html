@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>读取、写入和创建文件(Java™ 教程-Java Tutorials 中文版&gt;必要类&gt;基本 I/O)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This Java tutorial describes exceptions, basic input/output, concurrency, regular expressions, and the platform environment" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java exception, java input output, java threads, java regex, regular expressions, path, classpath, environment variable" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">基本 I/O</a></div>
+<div class="linkAHEAD"><a href="streams.html">I/O 流</a></div>
+<div class="linkBHEAD"><a href="bytestreams.html">字节流</a></div>
+<div class="linkBHEAD"><a href="charstreams.html">字符流</a></div>
+<div class="linkBHEAD"><a href="buffers.html">缓冲流</a></div>
+<div class="linkBHEAD"><a href="scanfor.html">扫描和格式化</a></div>
+<div class="linkCHEAD"><a href="scanning.html">扫描</a></div>
+<div class="linkCHEAD"><a href="formatting.html">格式化</a></div>
+<div class="linkBHEAD"><a href="cl.html">来自命令行的 I/O</a></div>
+<div class="linkBHEAD"><a href="datastreams.html">数据流</a></div>
+<div class="linkBHEAD"><a href="objectstreams.html">对象流</a></div>
+<div class="linkAHEAD"><a href="fileio.html">文件 I/O(采用 NIO.2)</a></div>
+<div class="linkBHEAD"><a href="path.html">什么是路径？(和其他文件系统事实)</a></div>
+<div class="linkBHEAD"><a href="pathClass.html">路径类</a></div>
+<div class="linkCHEAD"><a href="pathOps.html">路径操作</a></div>
+<div class="linkBHEAD"><a href="fileOps.html">文件操作</a></div>
+<div class="linkBHEAD"><a href="check.html">检查文件或目录</a></div>
+<div class="linkBHEAD"><a href="delete.html">删除文件或目录</a></div>
+<div class="linkBHEAD"><a href="copy.html">复制文件或目录</a></div>
+<div class="linkBHEAD"><a href="move.html">移动文件或目录</a></div>
+<div class="linkBHEAD"><a href="fileAttr.html">管理元数据(文件和文件存储属性)</a></div>
+<div class="nolinkBHEAD">读取、写入和创建文件</div>
+<div class="linkBHEAD"><a href="rafs.html">随机访问文件</a></div>
+<div class="linkBHEAD"><a href="dirs.html">创建和读取目录</a></div>
+<div class="linkBHEAD"><a href="links.html">链接，符号或其他</a></div>
+<div class="linkBHEAD"><a href="walk.html">遍历文件树</a></div>
+<div class="linkBHEAD"><a href="find.html">查找文件</a></div>
+<div class="linkBHEAD"><a href="notification.html">观察目录中的更改</a></div>
+<div class="linkBHEAD"><a href="misc.html">其他有用的方法</a></div>
+<div class="linkBHEAD"><a href="legacy.html">旧版文件 I/O 代码</a></div>
+<div class="linkAHEAD"><a href="summary.html">总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Essential Classes
+        <br /><b>Lesson:</b> Basic I/O
+        <br /><b>Section:</b> File I/O (Featuring NIO.2)
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="fileAttr.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="rafs.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>读取、写入和创建文件</h1></div>
+            <div id="PageContent"><!-- Reading, Writing and Creating Files -->
+
+
+<p>本页讨论读取、写入、创建和打开文件的详细信息。有多种文件 I/O 方法可供选择。为了帮助理解 API，下图按复杂性排列文件 I/O 方法。</p>
+<center><img src="../../figures/essential/io-fileiomethods.gif" width="455" height="236" align="bottom" alt="使用从最不复杂(在左侧)到最复杂(在右侧)排列的文件 I/O 方法的线条图。" /></p><p class="FigureCaption"><center>文件 I/O 方法从较简单到最复杂排列</center></p></center><p>图的最左侧是实用方法 <code>readAllBytes</code>，<code>readAllLines</code> 和 <code>write</code> 方法，专为简单的常见情况而设计。在这些方法的右侧是用于迭代一行或多行文本的方法，例如 <code>newBufferedReader</code>，<code>newBufferedWriter</code>，然后 <code>newInputStream</code> 和 <code>newOutputStream</code>。这些方法可与 <code>java.io</code> 包互操作。在这些方法的右边是处理 <code>ByteChannels</code>，<code>SeekableByteChannels</code> 和 <code>ByteBuffers</code> 的方法，例如 <code>newByteChannel</code> 方法。最后，最右边是使用 <code>FileChannel</code> 的方法，用于需要文件锁定或内存映射 I/O 的高级应用程序。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;创建新文件的方法使您可以为文件指定一组可选的初始属性。例如，在支持 POSIX 标准集(例如 UNIX)的文件系统上，您可以在创建文件时指定文件所有者，组所有者或文件权限。<a class="TutorialLink" target="_top" href="fileAttr.html">Managing Metadata</a> 页面解释了文件属性以及如何访问和设置它们。
+<hr /></div>
+<p>此页面包含以下主题：</p>
+<ul>
+<li><a href="#openOptions"><code>OpenOptions</code> 参数</a></li>
+<li><a href="#common">小文件的常用方法</a></li>
+<li><a href="#textfiles">文本文件的缓冲 I/O 方法</a></li>
+<li><a href="#streams">无缓冲流的方法和可与 <code>java.io</code> API 互操作的方法</a></li>
+<li><a href="#channels">用于 Channels 和 <code>ByteBuffers</code> 的方法</a></li>
+<li><a href="#creating">创建常规和临时文件的方法</a></li>
+</ul>
+<hr />
+<h2><a name="openOptions" id="openOptions"><code>OpenOptions</code> 参数</a></h2>
+<p>本节中的几个方法采用可选的 <code>OpenOptions</code> 参数。此参数是可选的，API 会告诉您在未指定此参数时该方法的默认行为。</p>
+<p>支持以下 <code>StandardOpenOptions</code> 枚举：</p>
+<ul>
+<li><code>WRITE</code>  - 打开文件以进行写访问。</li>
+<li><code>APPEND</code>  - 将新数据附加到文件末尾。此选项与 <code>WRITE</code> 或 <code>CREATE</code> 选项一起使用。</li>
+<li><code>TRUNCATE_EXISTING</code>  - 将文件截断为零字节。此选项与 <code>WRITE</code> 选项一起使用。</li>
+<li><code>CREATE_NEW</code>  - 创建一个新文件，如果文件已存在，则抛出异常。</li>
+<li><code>CREATE</code>  - 打开文件（如果存在）或创建新文件（如果不存在）。</li>
+<li><code>DELETE_ON_CLOSE</code>  - 关闭流时删除文件。此选项对临时文件很有用。</li>
+<li><code>SPARSE</code>  - 提示新创建的文件将是稀疏的。此高级选项在某些文件系统（例如 NTFS）上受到尊重，其中具有数据“间隙”的大文件可以以更有效的方式存储，其中这些空间隙不占用磁盘空间。</li>
+<li><code>SYNC</code>  - 使文件(内容和元数据)与底层存储设备保持同步。</li>
+<li><code>DSYNC</code>  - 使文件内容与底层存储设备保持同步。</li>
+</ul>
+<hr />
+<h2><a name="common" id="common">小文件的常用方法</a></h2>
+<h3><a name="readAllLines" id="readAllLines">从文件中读取所有字节或行</a></h3>
+<p>如果您有一个小文件并且想要一次读取它的全部内容，您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllBytes-java.nio.file.Path-"><code>readAllBytes(Path)</code></a> 或 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllLines-java.nio.file.Path-java.nio.charset.Charset-"><code>readAllLines(Path, Charset)</code></a> 方法。这些方法可以为您完成大部分工作，例如打开和关闭流，但不用于处理大型文件。以下代码显示了如何使用 <code>readAllBytes</code> 方法：</p>
+<div class="codeblock"><pre>
+Path file = ...;
+byte[] fileArray;
+fileArray = Files.readAllBytes(file);
+</pre></div>
+<h3><a name="writeAllLines" id="writeAllLines">将所有字节或行写入文件</a></h3>
+<p>您可以使用其中一种写入方法将字节或行写入文件。</p>
+<ul>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#write-java.nio.file.Path-byte:A-java.nio.file.OpenOption...-"><code>write(Path, byte[], OpenOption...)</code></a></li>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#write-java.nio.file.Path-java.lang.Iterable-java.nio.charset.Charset-java.nio.file.OpenOption...-"><code>write(Path, Iterable&lt; extends CharSequence&gt;, Charset, OpenOption...)</code></a></li>
+</ul>
+<p>以下代码段显示了如何使用 <code>write</code> 方法。</p>
+<div class="codeblock"><pre>
+Path file = ...;
+byte[] buf = ...;
+Files.write(file, buf);
+
+</pre></div>
+<hr />
+<h2><a name="textfiles" id="textfiles">文本文件的缓冲 I/O 方法</a></h2>
+<p><code>java.nio.file</code> 包支持通道 I/O，它可以在缓冲区中移动数据，绕过一些可能会阻塞流 I/O 的层。</p>
+<h3><a name="readBufferedStream" id="readBufferedStream">使用缓冲流 I/O 读取文件</a></h3>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newBufferedReader-java.nio.file.Path-java.nio.charset.Charset-"><code>newBufferedReader(Path, Charset)</code></a> 方法打开一个文件进行读取，返回一个 <code>BufferedReader</code>，可用于从文件中读取文本。有效的方式。</p>
+<p>以下代码段显示了如何使用 <code>newBufferedReader</code> 方法从文件中读取。该文件以“US-ASCII”编码。</p>
+<div class="codeblock"><pre>
+Charset charset = Charset.forName("US-ASCII");
+try (BufferedReader reader = Files.newBufferedReader(file, charset)) {
+    String line = null;
+    while ((line = reader.readLine()) != null) {
+        System.out.println(line);
+    }
+} catch (IOException x) {
+    System.err.format("IOException: %s%n", x);
+}
+</pre></div>
+<h3><a name="writeBufferedStream" id="writeBufferedStream">使用缓冲流 I/O 写入文件</a></h3>
+<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newBufferedWriter-java.nio.file.Path-java.nio.charset.Charset-java.nio.file.OpenOption...-"><code>newBufferedWriter(Path, Charset, OpenOption...)</code></a> 方法使用 <code>BufferedWriter</code> 写入文件。</p>
+<p>以下代码段显示了如何使用此方法创建以“US-ASCII”编码的文件：</p>
+<div class="codeblock"><pre>
+Charset charset = Charset.forName("US-ASCII");
+String s = ...;
+try (BufferedWriter writer = Files.newBufferedWriter(file, charset)) {
+    writer.write(s, 0, s.length());
+} catch (IOException x) {
+    System.err.format("IOException: %s%n", x);
+}
+</pre></div>
+<hr />
+<h2><a name="streams" id="streams">无缓冲流的方法和可与 <code>java.io</code> API 互操作的方法</a></h2>
+<h3><a name="readStream" id="readStream">使用流 I/O 读取文件</a></h3>
+<p>要打开文件进行读取，可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newInputStream-java.nio.file.Path-java.nio.file.OpenOption...-"><code>newInputStream(Path, OpenOption...)</code></a> 方法。此方法返回一个无缓冲的输入流，用于从文件中读取字节。</p>
+<div class="codeblock"><pre>
+Path file = ...;
+try (InputStream in = Files.newInputStream(file);
+    BufferedReader reader =
+      new BufferedReader(new InputStreamReader(in))) {
+    String line = null;
+    while ((line = reader.readLine()) != null) {
+        System.out.println(line);
+    }
+} catch (IOException x) {
+    System.err.println(x);
+}
+</pre></div>
+<h3><a name="createStream" id="createStream">使用流 I/O 创建和写入文件</a></h3>
+<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newOutputStream-java.nio.file.Path-java.nio.file.OpenOption...-"><code>newOutputStream(Path, OpenOption...)</code></a> 方法创建文件，附加到文件或写入文件。此方法打开或创建用于写入字节的文件，并返回无缓冲的输出流。</p>
+<p>该方法采用可选的 <code>OpenOption</code> 参数。如果未指定打开选项，并且该文件不存在，则会创建一个新文件。如果文件存在，则会被截断。此选项等效于使用 <code>CREATE</code> 和 <code>TRUNCATE_EXISTING</code> 选项调用方法。</p>
+<p>以下示例打开一个日志文件。如果该文件不存在，则创建该文件。如果该文件存在，则打开该文件以进行追加。</p>
+<div class="codeblock"><pre>
+import static java.nio.file.StandardOpenOption.*;
+import java.nio.file.*;
+import java.io.*;
+
+public class LogFileTest {
+
+  public static void main(String[] args) {
+
+    // Convert the string to a
+    // byte array.
+    String s = "Hello World! ";
+    byte data[] = s.getBytes();
+    Path p = Paths.get("./logfile.txt");
+
+    try (OutputStream out = new BufferedOutputStream(
+      Files.newOutputStream(p, CREATE, APPEND))) {
+      out.write(data, 0, data.length);
+    } catch (IOException x) {
+      System.err.println(x);
+    }
+  }
+}
+</pre></div>
+<hr />
+<h2><a name="channels" id="channels">用于 Channels 和 <code>ByteBuffers</code> 的方法</a></h2>
+<h3><a name="channelio" id="channelio">使用通道 I/O 读取和写入文件</a></h3>
+<p>当流 I/O 一次读取一个字符时，通道 I/O 一次读取一个缓冲区。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/channels/ByteChannel.html"><code>ByteChannel</code></a> 接口提供基本的 <code>read</code> 和 <code>write</code> 功能。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/channels/SeekableByteChannel.html"><code>SeekableByteChannel</code></a> 是一个 <code>ByteChannel</code>，它能够维持通道中的位置并更改该位置。<code>SeekableByteChannel</code> 还支持截断与频道关联的文件并查询文件的大小。</p>
+<p>移动到文件中的不同点然后从该位置读取或写入的能力使得可以随机访问文件。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="rafs.html">Random Access Files</a>。</p>
+<p>读取和写入通道 I/O 有两种方法。</p>
+<ul>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newByteChannel-java.nio.file.Path-java.nio.file.OpenOption...-"><code>newByteChannel(Path, OpenOption...)</code></a></li>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newByteChannel-java.nio.file.Path-java.util.Set-java.nio.file.attribute.FileAttribute...-"><code>newByteChannel(Path, Set&lt;? extends OpenOption&gt;, FileAttribute&lt;?&gt;...)</code></a></li>
+</ul>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<code>newByteChannel</code> 方法返回 <code>SeekableByteChannel</code> 的实例。使用默认文件系统，您可以将此可搜索字节通道转换为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/channels/FileChannel.html"><code>FileChannel</code></a>，从而提供对更高级功能的访问，例如将文件区域直接映射到内存中以便更快地访问，锁定文件的一个区域，以便其他进程无法访问它，或者从绝对位置读取和写入字节而不影响通道的当前位置。
+<hr /></div>
+<p>两种 <code>newByteChannel</code> 方法都允许您指定 <code>OpenOption</code> 选项的列表。支持使用与 <code>newOutputStream</code> 方法相同的 <a href="#openOptions">open options</a>：除此外还多一个选项，<code>READ</code> 是必需的，因为 <code>SeekableByteChannel</code> 支持读取和写入。</p>
+<p>指定 <code>READ</code> 将打开要读取的通道。指定 <code>WRITE</code> 或 <code>APPEND</code> 将打开要写入的通道。如果未指定这些选项，则打开通道进行读取。</p>
+<p>以下代码段读取文件并将其打印到标准输出：</p>
+<div class="codeblock"><pre>
+// Defaults to READ
+try (SeekableByteChannel sbc = Files.newByteChannel(file)) {
+    ByteBuffer buf = ByteBuffer.allocate(10);
+
+    // Read the bytes with the proper encoding for this platform.  If
+    // you skip this step, you might see something that looks like
+    // Chinese characters when you expect Latin-style characters.
+    String encoding = System.getProperty("file.encoding");
+    while (sbc.read(buf) > 0) {
+        buf.rewind();
+        System.out.print(Charset.forName(encoding).decode(buf));
+        buf.flip();
+    }
+} catch (IOException x) {
+    System.out.println("caught exception: " + x);
+</pre></div>
+<p>以下示例是为 UNIX 和其他 POSIX 文件系统编写的，它创建了一个具有一组特定文件权限的日志文件。此代码创建日志文件或附加到日志文件（如果已存在）。创建日志文件时，对所有者具有读/写权限，对组具有只读权限。</p>
+<div class="codeblock"><pre>
+import static java.nio.file.StandardOpenOption.*;
+import java.nio.*;
+import java.nio.channels.*;
+import java.nio.file.*;
+import java.nio.file.attribute.*;
+import java.io.*;
+import java.util.*;
+
+public class LogFilePermissionsTest {
+
+  public static void main(String[] args) {
+  
+    // Create the set of options for appending to the file.
+    Set&lt;OpenOption&gt; options = new HashSet&lt;OpenOption&gt;();
+    options.add(APPEND);
+    options.add(CREATE);
+
+    // Create the custom permissions attribute.
+    Set&lt;PosixFilePermission&gt; perms =
+      PosixFilePermissions.fromString("rw-r-----");
+    FileAttribute&lt;Set&lt;PosixFilePermission&gt;&gt; attr =
+      PosixFilePermissions.asFileAttribute(perms);
+
+    // Convert the string to a ByteBuffer.
+    String s = "Hello World! ";
+    byte data[] = s.getBytes();
+    ByteBuffer bb = ByteBuffer.wrap(data);
+    
+    Path file = Paths.get("./permissions.log");
+
+    try (SeekableByteChannel sbc =
+      Files.newByteChannel(file, options, attr)) {
+      sbc.write(bb);
+    } catch (IOException x) {
+      System.out.println("Exception thrown: " + x);
+    }
+  }
+}
+</pre></div>
+<hr />
+<h2><a name="creating" id="creating">创建常规和临时文件的方法</a></h2>
+<h3><a name="createFile" id="createFile">创建文件</a></h3>
+<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createFile-java.nio.file.Path-java.nio.file.attribute.FileAttribute...-"><code>createFile(Path, FileAttribute&lt;?&gt;)</code></a> 方法创建具有初始属性集的空文件。例如，如果在创建时希望文件具有特定的文件权限集，请使用 <code>createFile</code> 方法执行此操作。如果未指定任何属性，则使用默认属性创建文件。如果该文件已存在，<code>createFile</code> 将引发异常。</p>
+<p>在单个原子操作中，<code>createFile</code> 方法检查文件是否存在，并使用指定的属性创建该文件，这使得该过程对恶意代码更安全。</p>
+<p>以下代码段创建一个具有默认属性的文件：</p>
+<div class="codeblock"><pre>
+Path file = ...;
+try {
+    // Create the empty file with default permissions, etc.
+    Files.createFile(file);
+} catch (FileAlreadyExistsException x) {
+    System.err.format("file named %s" +
+        " already exists%n", file);
+} catch (IOException x) {
+    // Some other sort of failure, such as permissions.
+    System.err.format("createFile error: %s%n", x);
+}
+</pre></div>
+<p>
+<a class="TutorialLink" target="_top" href="fileAttr.html#posix">POSIX 文件权限</a>有一个示例，它使用 <code>createFile(Path, FileAttribute&lt;?&gt;)</code> 创建具有预设权限的文件。</p>
+<p>您还可以使用 <code>newOutputStream</code> 方法创建新文件，如 <a class="TutorialLink" target="_top" href="file.html#createStream">Creating and Writing a File using Stream I/O</a> 中所述。如果打开新输出流并立即关闭它，则会创建一个空文件。</p>
+<h3><a name="createTempFile" id="createTempFile">创建临时文件</a></h3>
+<p>您可以使用以下 <code>createTempFile</code> 方法之一创建临时文件：</p>
+<ul>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createTempFile-java.nio.file.Path-java.lang.String-java.lang.String-java.nio.file.attribute.FileAttribute...-"><code>createTempFile(Path, String, String, FileAttribute&lt;?&gt;)</code></a></li>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createTempFile-java.lang.String-java.lang.String-java.nio.file.attribute.FileAttribute...-"><code>createTempFile(String, String, FileAttribute&lt;?&gt;)</code></a></li>
+</ul>
+<p>第一种方法允许代码指定临时文件的目录，第二种方法在默认临时文件目录中创建新文件。这两种方法都允许您为文件名指定后缀，第一种方法允许您指定前缀。以下代码段给出了第二种方法的示例：</p>
+<div class="codeblock"><pre>
+try {
+    Path tempFile = Files.createTempFile(null, ".myapp");
+    System.out.format("The temporary file" +
+        " has been created: %s%n", tempFile)
+;
+} catch (IOException x) {
+    System.err.format("IOException: %s%n", x);
+}
+</pre></div>
+<p>运行此文件的结果如下所示：</p>
+<div class="codeblock"><pre>
+The temporary file has been created: /tmp/509668702974537184.myapp
+</pre></div>
+<p>临时文件名的特定格式是特定于平台的。</p>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="fileAttr.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="rafs.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Managing Metadata (File and File Store Attributes)
+        <br /><b>Next page:</b> Random Access Files
+    </div>
+</body>
+</html> 

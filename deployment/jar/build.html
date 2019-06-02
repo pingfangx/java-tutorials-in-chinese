@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>创建 JAR 文件(Java™ 教程-Java Tutorials 中文版&gt;部署&gt;JAR 文件中的打包程序)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This deployment Java tutorial describes development and deployment of applets, Java Web Start applications, rich Internet applications, and JAR related tools" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java applet, java web start, rich internet application, RIA, jar, plugin, plug-in" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">JAR 文件中的打包程序</a></div>
+<div class="linkAHEAD"><a href="basicsindex.html">使用 JAR 文件：基础知识</a></div>
+<div class="nolinkBHEAD">创建 JAR 文件</div>
+<div class="linkBHEAD"><a href="view.html">查看 JAR 文件的内容</a></div>
+<div class="linkBHEAD"><a href="unpack.html">提取 JAR 文件的内容</a></div>
+<div class="linkBHEAD"><a href="update.html">更新 JAR 文件</a></div>
+<div class="linkBHEAD"><a href="run.html">运行 JAR 打包的软件</a></div>
+<div class="linkAHEAD"><a href="manifestindex.html">使用清单文件：基础知识</a></div>
+<div class="linkBHEAD"><a href="defman.html">理解默认清单</a></div>
+<div class="linkBHEAD"><a href="modman.html">修改清单文件</a></div>
+<div class="linkBHEAD"><a href="appman.html">设置应用程序的入口点</a></div>
+<div class="linkBHEAD"><a href="downman.html">将类添加到 JAR 文件的类路径中</a></div>
+<div class="linkBHEAD"><a href="packageman.html">设置包版本信息</a></div>
+<div class="linkBHEAD"><a href="sealman.html">在 JAR 文件中密封包</a></div>
+<div class="linkBHEAD"><a href="secman.html">使用清单属性增强安全性</a></div>
+<div class="linkAHEAD"><a href="signindex.html">签名和验证 JAR 文件</a></div>
+<div class="linkBHEAD"><a href="intro.html">理解签名和验证</a></div>
+<div class="linkBHEAD"><a href="signing.html">签名 JAR 文件</a></div>
+<div class="linkBHEAD"><a href="verify.html">验证签名的 JAR 文件</a></div>
+<div class="linkAHEAD"><a href="apiindex.html">使用与 JAR 相关的 API</a></div>
+<div class="linkBHEAD"><a href="jarclassloader.html">JarClassLoader 类</a></div>
+<div class="linkBHEAD"><a href="jarrunner.html">JarRunner 类</a></div>
+<div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Deployment
+        <br /><b>Lesson:</b> Packaging Programs in JAR Files
+        <br /><b>Section:</b> Using JAR Files: The Basics
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="basicsindex.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="view.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>创建 JAR 文件</h1></div>
+            <div id="PageContent">
+
+<p>用于创建 JAR 文件的命令的基本格式为：</p>
+<div class="codeblock"><pre>
+jar cf <i>jar-file input-file(s)</i>
+</pre></div>
+<p>此命令中使用的选项和参数是：</p>
+<ul>
+<li><tt>c</tt> 选项表示您要 <em>create (创建)</em> 一个 JAR 文件。</li>
+<li><tt>f</tt> 选项表示您希望输出转到 <em>file (文件)</em> 而不是 <tt>stdout</tt>。</li>
+<li><tt>jar-file</tt> 是您希望生成的 JAR 文件具有的名称。您可以使用任何文件名作为 JAR 文件。按照惯例，JAR 文件名的扩展名为 <tt>.jar</tt>，但这不是必需的。</li>
+<li><tt>input-file(s)</tt> 参数是一个以空格分隔的列表，其中包含要包含在 JAR 文件中的一个或多个文件。<tt>input-file(s)</tt> 参数可以包含通配符 <tt>*</tt> 符号。如果任何“输入文件”是目录，则这些目录的内容将以递归方式添加到 JAR 存档中。</li>
+</ul>
+<p><tt>c</tt> 和 <tt>f</tt> 选项可以按任意顺序出现，但它们之间不能有任何空格。</p>
+<p>此命令将生成压缩的 JAR 文件并将其放在当前目录中。该命令还将为 JAR 存档生成 <a class="TutorialLink" target="_top" href="defman.html">默认清单文件</a>。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>JAR 文件中的元数据(例如清单的条目名称，注释和内容)必须以 UTF8 编码。</p>
+<hr /></div>
+<p>您可以将以下任何附加选项添加到基本命令的 <tt>cf</tt> 选项中：</p>
+<table border="1" cellpadding="3" summary="jar 命令选项">
+<caption><strong>jar 命令选项</strong></caption>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+<tr>
+<td align="center"><tt>v</tt></td>
+<td>在构建 JAR 文件时，在 <tt>stdout</tt> 上生成 <em>verbose (详细)</em> 输出。详细输出告诉您添加到 JAR 文件中的每个文件的名称。</td>
+</tr>
+<tr>
+<td align="center"><tt>0</tt> (zero)</td>
+<td>表示您不希望压缩 JAR 文件。</td>
+</tr>
+<tr>
+<td align="center"><tt>M</tt></td>
+<td>表示不应生成默认清单文件。</td>
+</tr>
+<tr>
+<td align="center"><tt>m</tt></td>
+<td>用于包括现有清单文件中的清单信息。使用此选项的格式为：
+<div class="codeblock"><pre>
+jar cmf <em>jar-file</em> <em>existing-manifest</em> <em>input-file(s)</em>
+</pre></div>
+有关此选项的更多信息，请参见 <a class="TutorialLink" target="_top" href="modman.html">Modifying a Manifest File</a>。
+<div class="note"><hr /><strong>Warning:</strong> 清单必须以新行或回车结束。如果不以新行或回车结束，则不会正确解析最后一行。
+<hr /></div>
+</td>
+</tr>
+<tr>
+<td align="center"><tt>-C</tt></td>
+<td>在执行命令期间更改目录。请参阅下面的示例。</td>
+</tr>
+</table>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>创建 JAR 文件时，创建时间存储在 JAR 文件中。因此，即使 JAR 文件的内容没有更改，当您多次创建 JAR 文件时，生成的文件也不完全相同。在构建环境中使用 JAR 文件时，应该注意这一点。建议您使用清单文件中的版本控制信息而不是创建时间来控制 JAR 文件的版本。请参阅 <a class="TutorialLink" target="_top" href="packageman.html">Setting Package Version Information</a> 部分。</p>
+<hr /></div>
+<p><a name="example" id="example"></a></p>
+<h2>一个例子</h2>
+<p>我们来看一个例子。一个简单的 <tt>TicTacToe</tt> 小程序。您可以通过从 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Downloads</a> 下载 JDK 演示和示例包来查看此 applet 的源代码。此演示包含具有以下结构的类文件，音频文件和图像：</p>
+<center><img src="../../figures/deployment/jar/ticTacToeJar.gif" width="254" height="98" align="bottom" alt="TicTacToe 文件夹层次结构" /></p><p class="FigureCaption"><center><strong>TicTacToe 文件夹层次结构</strong></center></p></center><p><tt>audio</tt> 和 <tt>images</tt> 子目录包含 applet 使用的声音文件和 GIF 图像。</p>
+<p>在线下载整个教程时，您可以从 <i>jar/examples</i> 目录中获取所有这些文件。要将此演示打包到名为 <tt>TicTacToe.jar</tt> 的单个 JAR 文件中，您可以从 <tt>TicTacToe</tt> 目录中运行此命令：</p>
+<div class="codeblock"><pre>
+jar cvf TicTacToe.jar TicTacToe.class audio images
+</pre></div>
+<p><tt>audio</tt> 和 <tt>images</tt> 参数表示目录​​，因此 Jar 工具将递归地将它们及其内容放在 JAR 文件中。生成的 JAR 文件 <tt>TicTacToe.jar</tt> 将放在当前目录中。因为该命令使用 <tt>v</tt> 选项进行详细输出，所以在运行命令时会看到类似于此输出的内容：</p>
+<div class="codeblock"><pre>
+adding: TicTacToe.class (in=3825) (out=2222) (deflated 41%)
+adding: audio/ (in=0) (out=0) (stored 0%)
+adding: audio/beep.au (in=4032) (out=3572) (deflated 11%)
+adding: audio/ding.au (in=2566) (out=2055) (deflated 19%)
+adding: audio/return.au (in=6558) (out=4401) (deflated 32%)
+adding: audio/yahoo1.au (in=7834) (out=6985) (deflated 10%)
+adding: audio/yahoo2.au (in=7463) (out=4607) (deflated 38%)
+adding: images/ (in=0) (out=0) (stored 0%)
+adding: images/cross.gif (in=157) (out=160) (deflated -1%)
+adding: images/not.gif (in=158) (out=161) (deflated -1%)
+</pre></div>
+<p>您可以从此输出中看到压缩了 JAR 文件 <tt>TicTacToe.jar</tt>。Jar 工具默认压缩文件。您可以使用 <tt>0</tt>(零)选项关闭压缩功能，以便命令如下所示：</p>
+<div class="codeblock"><pre>
+jar cvf0 TicTacToe.jar TicTacToe.class audio images
+</pre></div>
+<p>例如，您可能希望避免压缩，以提高浏览器加载 JAR 文件的速度。通常可以比压缩文件更快地加载未压缩的 JAR 文件，因为消除了在加载期间解压缩文件的需要。但是，需要权衡的是，对于较大的未压缩文件，网络上的下载时间可能会更长。</p>
+<p>Jar 工具将接受使用通配符 <tt>*</tt> 符号的参数。只要 <tt>TicTacToe</tt> 目录中没有任何不需要的文件，您就可以使用此替代命令来构造 JAR 文件：</p>
+<div class="codeblock"><pre>
+jar cvf TicTacToe.jar *
+</pre></div>
+<p>虽然详细输出未指示它，但 Jar 工具会自动将清单文件以路径名为 <tt>META-INF/MANIFEST.MF</tt> 添加到 JAR 存档中。有关清单文件的信息，请参阅 <a class="TutorialLink" target="_top" href="manifestindex.html">Working with Manifest Files: The Basics</a> 部分。</p>
+<p>在上面的示例中，归档中的文件保留了它们的相对路径名和目录结构。Jar 工具提供 <tt>-C</tt> 选项，您可以使用该选项创建 JAR 文件，其中不保留已归档文件的相对路径。它是仿照 TAR 的 <tt>-C</tt> 选项。</p>
+<p>例如，假设您想将 TicTacToe 演示使用的音频文件和 gif 图像放入 JAR 文件中，并且您希望所有文件都位于顶层，没有目录层次结构。您可以通过从 <tt>images</tt> 和 <tt>audio</tt> 目录的父目录发出此命令来完成此操作：</p>
+<div class="codeblock"><pre>
+jar cf ImageAudio.jar -C images . -C audio .
+</pre></div>
+<p>此命令的 <tt>-C&nbsp;images</tt> 部分指示 Jar 工具转到 <tt>images</tt> 目录，<tt>-C&nbsp;images</tt> 后面的 <tt>.</tt> 指示 Jar 工具存档该目录的所有内容。然后，命令的 <tt>-C&nbsp;audio&nbsp;.</tt> 部分与 <tt>audio</tt> 目录相同。生成的 JAR 文件将具有以下目录：</p>
+<div class="codeblock"><pre>
+META-INF/MANIFEST.MF
+cross.gif
+not.gif
+beep.au
+ding.au
+return.au
+yahoo1.au
+yahoo2.au
+</pre></div>
+<p>相反，假设您使用的命令未使用 <tt>-C</tt> 选项：</p>
+<div class="codeblock"><pre>
+jar cf ImageAudio.jar images audio
+</pre></div>
+<p>生成的 JAR 文件将具有以下目录：</p>
+<div class="codeblock"><pre>
+META-INF/MANIFEST.MF
+images/cross.gif
+images/not.gif
+audio/beep.au
+audio/ding.au
+audio/return.au
+audio/yahoo1.au
+audio/yahoo2.au
+</pre></div>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="basicsindex.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="view.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Using JAR Files: The Basics
+        <br /><b>Next page:</b> Viewing the Contents of a JAR File
+    </div>
+</body>
+</html> 

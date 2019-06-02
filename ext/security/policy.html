@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>设置扩展的权限(Java™ 教程-Java Tutorials 中文版&gt;扩展机制&gt;使扩展安全)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This Java tutorial describes how to create and use extensions or optional packages and make them secure" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java extensions, java optional packages" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">使扩展安全</a></div>
+<div class="nolinkAHEAD">设置扩展的权限</div>
+<div class="linkAHEAD"><a href="sealing.html">在扩展中密封包</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> The Extension Mechanism
+        <br /><b>Lesson:</b> Making Extensions Secure
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">扩展机制</a>&gt;<a href="index.html" target="_top">使扩展安全</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="sealing.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>设置扩展的权限</h1></div>
+            <div id="PageContent">
+
+<p>如果 <a class="TutorialLink" target="_top" href="../../essential/environment/security.html">The Security Manager</a> 生效，则必须满足以下条件才能启用任何软件(包括扩展软件)执行安全敏感操作：</p>
+<ul>
+<li>扩展中的安全性敏感代码必须包装在 <code>PrivilegedAction</code> 对象中。</li>
+<li>安全管理器实现的安全策略必须向扩展授予适当的权限。默认情况下，安装型扩展会被授予所有安全权限，就好像它们是核心平台 API 的一部分一样。安全策略授予的权限仅适用于 <code>PrivilegedAction</code> 实例中包含的代码。</li>
+</ul>
+<p>让我们通过一些例子更详细地看一下这些条件。</p>
+<h2>使用 PrivilegedAction 类</h2>
+<p>假设您要修改上一课的扩展示例中的 <code>RectangleArea</code> 类，以将矩形面积写入文件而不是 stdout。但是，写入文件是一项对安全性敏感的操作，因此如果您的软件将在安全管理器下运行，则需要将您的代码标记为特权。您需要执行以下两个步骤：</p>
+<ol>
+<li>您需要在 <code>java.security.PrivilegedAction</code> 类型的对象的 <code>run</code> 方法中放置执行安全敏感操作的代码。</li>
+<li>必须使用 <code>PrivilegedAction</code> 对象作为调用 <code>java.security.AccessController</code> 的 <code>doPrivileged</code> 方法的参数。</li>
+</ol>
+<p>如果我们将这些指南应用于 <code>RectangleArea</code> 类，我们的类定义将如下所示：</p>
+<div class="codeblock"><pre>
+import java.io.*;
+import java.security.*;
+
+public final class RectangleArea {
+    public static void
+    writeArea(final java.awt.Rectangle r) {
+        AccessController.
+          doPrivileged(new PrivilegedAction() {
+            public Object run() {
+                try { 
+                    int area = r.width * r.height;
+                    String userHome = System.getProperty("user.home");
+                    FileWriter fw = new FileWriter( userHome + File.separator
+                        + "test" + File.separator + "area.txt");
+                    fw.write("The rectangle's area is " + area);
+                    fw.flush();
+                    fw.close();
+                } catch(IOException ioe) {
+                    System.err.println(ioe);
+                }
+                return null;
+            }
+        });
+    }
+}
+</pre></div>
+<p>此类中的单个方法 <code>writeArea</code>，计算矩形面积，并将该面积写入用户主目录下的 <code>test</code> 目录中的名为 <code>area.txt</code> 的文件中。</p>
+<p>处理输出文件的安全敏感语句位于 <code>PrivilegedAction</code> 的新实例的 <code>run</code> 方法中。(注意 <code>run</code> 要求返回 <code>Object</code> 实例。返回的对象可以是 <code>null</code>。)然后，新的 <code>PrivilegedAction</code> 实例作为参数传递给 <code>AccessController.doPrivileged</code>。</p>
+<p>有关使用 <code>doPrivileged</code> 的更多信息，请参阅 JDK™ 文档中的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/doprivileged.html">API for Privileged Blocks</a>。</p>
+<p>以这种方式在 <code>PrivilegedAction</code> 对象中包装安全敏感代码是启用扩展以执行安全敏感操作的第一个要求。第二个要求是：让安全管理器授予特权代码适当的权限。</p>
+<h2>使用安全策略指定权限</h2>
+<p>运行时生效的安全策略由 <em>policy file (策略文件)</em> 指定。默认策略由 JRE 软件中的文件 <code>lib/security/java.policy</code> 设置。</p>
+<p>策略文件使用 <em>grant</em> 条目为软件分配安全权限。策略文件可以包含任意数量的授权条目。默认策略文件具有安装型扩展的此授权条目：</p>
+<div class="codeblock"><pre>
+grant codeBase "file:${{java.ext.dirs}}/*" {
+    permission java.security.AllPermission;
+};
+</pre></div>
+<p>此条目指定由 <code>file:${{java.ext.dirs}}/*</code> 指定的目录中的文件被授予名为 <code>java.security.AllPermission</code> 的权限。(注意，从 Java 6 开始，<code>java.ext.dirs</code> 指的是一个 <tt>classpath</tt> 类似的目录路径，每个目录都可以保存安装型扩展。)这不是太难猜测 <code>java.security.AllPermission</code> 授予安装型扩展可以授予的所有安全权限。</p>
+<p>默认情况下，安装型扩展没有安全限制。扩展软件可以执行安全敏感操作，就好像没有安装安全管理器一样，前提是安全敏感代码包含在作为调用 <code>doPrivileged</code> 的参数传递的 <code>PrivilegedAction</code> 的实例中。</p>
+<p>要限制授予扩展的权限，您需要修改策略文件。要拒绝所有扩展的所有权限，您只需移除上述授权条目即可。</p>
+<p>并非所有权限都与默认授予的 <code>java.security.AllPermission</code> 一样全面。删除默认授权条目后，您可以输入特定权限的新授权条目，包括：</p>
+<ul>
+<li><code>java.awt.<b>AWTPermission</b></code></li>
+<li><code>java.io.<b>FilePermission</b></code></li>
+<li><code>java.net.<b>NetPermission</b></code></li>
+<li><code>java.util.<b>PropertyPermission</b></code></li>
+<li><code>java.lang.reflect.<b>ReflectPermission</b></code></li>
+<li><code>java.lang.<b>RuntimePermission</b></code></li>
+<li><code>java.security.<b>SecurityPermission</b></code></li>
+<li><code>java.io.<b>SerializablePermission</b></code></li>
+<li><code>java.net.<b>SocketPermission</b></code></li>
+</ul>
+<p><a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/permissions.html">Permissions in the JDK</a> 文档提供了有关每个权限的详细信息。让我们看一下使用 RectangleArea 作为扩展所需的那些。</p>
+<p><code>RectangleArea.writeArea</code> 方法需要两个权限：一个用于确定用户主目录的路径，另一个用于写入文件。假设 <code>RectangleArea</code> 类捆绑在文件 <code>area.jar</code> 中，您可以通过将此条目添加到策略文件来授予写入权限：</p>
+<div class="codeblock"><pre>
+grant codeBase "file:${java.home}/lib/ext/area.jar" {
+    permission java.io.PropertyPermission "user.home",
+        "read";
+    permission java.io.FilePermission
+        "${user.home}${/}test${/}*", "write";
+};
+</pre></div>
+<p>此条目的 <code>codeBase&nbsp;"file:${java.home}/lib/ext/area.jar"</code> 部分保证此条目指定的任何权限仅适用于 <code>area.jar</code>。<code>java.io.PropertyPermission</code> 允许访问属性。第一个参数 <code>"user.home"</code> 命名属性，第二个参数 <code>"read"</code> 表示可以读取属性。(另一种选择是 <code>"write"</code>。)</p>
+<p><code>java.io.FilePermission</code> 允许访问文件。第一个参数 <code>"${user.home}${/}test${/}*"</code>，表示 <code>area.jar</code> 被授予访问在用户主目录中的 <code>test</code> 目录中所有文件的权限。(请注意，<code>${/}</code> 是与平台无关的文件分隔符。)第二个参数表示授予的文件访问权限仅用于写入。(第二个参数的其他选择是 <code>"read"</code>，<code>"delete"</code> 和 <code>"execute"</code>。)</p>
+<h2>签名扩展</h2>
+<p>您可以使用策略文件对授予扩展的权限设置其他限制，方法是要求它们由可信实体签名。(有关签名和验证 JAR 文件的回顾，请参见本教程中的 <a class="TutorialLink" target="_top" href="../../deployment/jar/signing.html">Signing JAR Files</a> 课程。)</p>
+<p>要允许签名验证扩展或其他软件以及授予权限，策略文件必须包含 <em>keystore entry (密钥库条目)</em>。keystore 条目指定在验证中使用哪个密钥库。密钥库条目具有表单</p>
+<div class="codeblock"><pre>
+keystore "<i>keystore_url</i>";
+</pre></div>
+<p>URL <em>keystore_url</em> 是绝对的或相对的。如果它是相对的，则 URL 相对于策略文件的位置。例如，要使用 <tt>keytool</tt> 使用的默认密钥库，请将此条目添加到 <tt>java.policy</tt></p>
+<div class="codeblock"><pre>
+keystore "file://${user.home}/.keystore";
+</pre></div>
+<p>要指示必须签署扩展才能获得安全权限，请使用 <code>signedBy</code> 字段。例如，以下条目表示仅当扩展 <code>area.jar</code> 由别名 Robert 和 Rita 在密钥库中识别的用户签名时才会被授予列出的权限：</p>
+<div class="codeblock"><pre>
+grant signedBy "Robert,Rita",
+    codeBase "file:${java.home}/lib/ext/area.jar" {
+        permission java.io.PropertyPermission
+            "user.home", "read";
+        permission java.io.FilePermission
+            "${user.home}${/}test${/}*", "write";
+};
+</pre></div>
+<p>如果省略 <code>codeBase</code> 字段，如下面的“grant”，则权限被授予 <em>任何</em> 软件，包括安装型扩展或下载型扩展，由“Robert”或“Rita”签名：</p>
+<div class="codeblock"><pre>
+grant signedBy "Robert,Rita" {
+    permission java.io.FilePermission "*", "write";  
+};
+</pre></div>
+<p>有关策略文件格式的更多详细信息，请参阅 JDK 文档中 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-spec.doc3.html#20131">Security Architecture Specification</a> 的第 3.3.1 节。</p>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="index.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="sealing.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Making Extensions Secure
+        <br /><b>Next page:</b> Sealing Packages in Extensions
+    </div>
+</body>
+</html> 

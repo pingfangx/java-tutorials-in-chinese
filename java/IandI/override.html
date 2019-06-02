@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>覆盖和隐藏方法(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;接口和继承)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java objects, java classes, java inheritance, interfaces, variables, arrays, data types, operators, control flow, number, string" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">接口和继承</a></div>
+<div class="linkAHEAD"><a href="createinterface.html">接口</a></div>
+<div class="linkBHEAD"><a href="interfaceDef.html">定义一个接口</a></div>
+<div class="linkBHEAD"><a href="usinginterface.html">实现一个接口</a></div>
+<div class="linkBHEAD"><a href="interfaceAsType.html">使用接口作为类型</a></div>
+<div class="linkBHEAD"><a href="nogrow.html">不断发展的接口</a></div>
+<div class="linkBHEAD"><a href="defaultmethods.html">默认方法</a></div>
+<div class="linkBHEAD"><a href="summary-interface.html">接口总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
+<div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
+<div class="linkBHEAD"><a href="multipleinheritance.html">状态，实现和类型的多重继承</a></div>
+<div class="nolinkBHEAD">覆盖和隐藏方法</div>
+<div class="linkBHEAD"><a href="polymorphism.html">多态</a></div>
+<div class="linkBHEAD"><a href="hidevariables.html">隐藏字段</a></div>
+<div class="linkBHEAD"><a href="super.html">使用 super 关键字</a></div>
+<div class="linkBHEAD"><a href="objectclass.html">Object 作为超类</a></div>
+<div class="linkBHEAD"><a href="final.html">编写 final 类和方法</a></div>
+<div class="linkBHEAD"><a href="abstract.html">抽象方法和类</a></div>
+<div class="linkBHEAD"><a href="summaryinherit.html">继承总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/inherit-questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Learning the Java Language
+        <br /><b>Lesson:</b> Interfaces and Inheritance
+        <br /><b>Section:</b> Inheritance
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="multipleinheritance.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="polymorphism.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>覆盖和隐藏方法</h1></div>
+            <div id="PageContent"><!-- Overriding and Hiding Methods -->
+
+
+
+<h2>实例方法</h2>
+
+<p>具有相同签名(名称，加上其参数的数量和类型)和返回值的子类中的实例方法 <i>覆盖（overrides）</i> 超类的方法。</p>
+
+<p>子类覆盖方法的能力允许类从行为 "足够接近" 的超类继承，然后根据需要修改行为。覆盖方法与它覆盖的方法具有相同的名称，参数的数量和类型，和返回类型。覆盖方法还可以返回由覆盖方法返回的类型的子类型。此子类型称为 <i>协变返回类型（covariant return type）</i>。</p>
+
+<p>覆盖方法时，您可能希望使用 <code>@Override</code> 注解来指示编译器您要覆盖超类中的方法。如果由于某种原因，编译器检测到该方法在其中一个超类中不存在，那么它将生成错误。有关 <code>@Override</code> 的详细信息，请参阅 <a class="TutorialLink" target="_top" href="../annotations/index.html"><code>Annotations</code></a>。</p>
+
+<h2>静态方法</h2>
+
+<p>如果子类定义的静态方法与超类中的静态方法具有相同的签名，则子类方法 <i>隐藏（hides）</i> 超类中的方法。</p>
+
+<p>隐藏静态方法和覆盖实例方法之间的区别具有重要意义：</p>
+
+<ul>
+  <li>被调用的重写实例方法的版本是子类中的版本。</li>
+  <li>被调用的隐藏静态方法的版本取决于它是从超类还是从子类调用的。</li>
+</ul>
+
+<p>考虑一个包含两个类的示例。第一个是 <code>Animal</code>，它包含一个实例方法和一个静态方法：</p>
+
+<div class="codeblock"><pre>
+public class Animal {
+    public static void testClassMethod() {
+        System.out.println("The static method in Animal");
+    }
+    public void testInstanceMethod() {
+        System.out.println("The instance method in Animal");
+    }
+}
+</pre></div>
+<p>第二个类是 <code>Animal</code> 的子类，称为 <code>Cat</code>：</p>
+<div class="codeblock"><pre>
+public class Cat extends Animal {
+    public static void testClassMethod() {
+        System.out.println("The static method in Cat");
+    }
+    public void testInstanceMethod() {
+        System.out.println("The instance method in Cat");
+    }
+
+    public static void main(String[] args) {
+        Cat myCat = new Cat();
+        Animal myAnimal = myCat;
+        Animal.testClassMethod();
+        myAnimal.testInstanceMethod();
+    }
+}
+</pre></div>
+
+<p><code>Cat</code> 类会覆盖 <code>Animal</code> 中的实例方法，并隐藏 <code>Animal</code> 中的静态方法。此类中的 <code>main</code> 方法创建 <code>Cat</code> 的实例，然后在类上调用 <code>testClassMethod()</code> 方法，并且在实例上调用 <code>testInstanceMethod()</code> 方法。</p>
+
+<p>该程序的输出如下：</p>
+
+<div class="codeblock"><pre>
+The static method in Animal
+The instance method in Cat
+</pre></div>
+
+<p>正如所承诺的那样，被调用的隐藏静态方法的版本是超类中的版本，被调用的重写实例方法的版本是子类中的版本。</p><!-- *********************************************************************** -->
+
+
+
+<h2><a name="default">接口方法</a></h2>
+
+<p> 
+<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">默认方法</a>和 <a class="TutorialLink" target="_top" href="../../java/IandI/abstract.html">抽象方法</a> 与实例方法一样是继承的。但是，当类或接口的超类型提供具有相同签名的多个默认方法时，Java 编译器将遵循继承规则来解决名称冲突。这些规则由以下两个原则驱动：</p>
+
+<ul>
+  <li>
+    <p>实例方法优于接口默认方法。</p>
+  
+    <p>考虑以下类和接口：</p>
+
+<pre class="codeblock">public class Horse {
+    public String identifyMyself() {
+        return "I am a horse.";
+    }
+}</pre>
+
+<pre class="codeblock">public interface Flyer {
+    default public String identifyMyself() {
+        return "I am able to fly.";
+    }
+}</pre>
+
+<pre class="codeblock">public interface Mythical {
+    default public String identifyMyself() {
+        return "I am a mythical creature.";
+    }
+}</pre>
+
+<pre class="codeblock">public class Pegasus extends Horse implements Flyer, Mythical {
+    public static void main(String... args) {
+        Pegasus myApp = new Pegasus();
+        System.out.println(myApp.identifyMyself());
+    }
+}</pre>
+
+    <p>方法 <code>Pegasus.identifyMyself</code> 返回字符串 <code>I am a horse.</code></p>
+  </li>
+  
+  <li><p>其他候选项覆盖的方法将被忽略。当超类型共享共同的祖先时，可能会出现这种情况。</p>
+  
+  <p>考虑以下接口和类：</p>
+
+<pre class="codeblock">public interface Animal {
+    default public String identifyMyself() {
+        return "I am an animal.";
+    }
+}</pre>
+
+<pre class="codeblock">public interface EggLayer extends Animal {
+    default public String identifyMyself() {
+        return "I am able to lay eggs.";
+    }
+}</pre>
+
+<pre class="codeblock">public interface FireBreather extends Animal { }</pre>
+
+<pre class="codeblock">public class Dragon implements EggLayer, FireBreather {
+    public static void main (String... args) {
+        Dragon myApp = new Dragon();
+        System.out.println(myApp.identifyMyself());
+    }
+}</pre>
+
+<p>方法 <code>Dragon.identifyMyself</code> 返回字符串 <code>I am able to lay eggs.</code></p>
+</li>
+</ul>
+
+<p>如果两个或多个独立定义的默认方法冲突，或者默认方法与抽象方法冲突，则 Java 编译器会产生编译器错误。您必须显式覆盖超类型方法。</p>
+
+<p>考虑一下现在可以飞行的计算机控制汽车的例子。您有两个接口(<code>OperateCar</code> 和 <code>FlyCar</code>)，它们为同一方法提供默认实现(<code>startEngine</code>)：</p>
+
+<pre class="codeblock">public interface OperateCar {
+    // ...
+    default public int startEngine(EncryptedKey key) {
+        // Implementation
+    }
+}</pre>
+
+<pre class="codeblock">public interface FlyCar {
+    // ...
+    default public int startEngine(EncryptedKey key) {
+        // Implementation
+    }
+}</pre>
+
+<p>实现 <code>OperateCar</code> 和 <code>FlyCar</code> 的类必须覆盖方法 <code>startEngine</code>。您可以使用 <code>super</code> 关键字调用任何默认实现。</p> 
+
+<pre class="codeblock">public class FlyingCar implements OperateCar, FlyCar {
+    // ...
+    public int startEngine(EncryptedKey key) {
+        FlyCar.super.startEngine(key);
+        OperateCar.super.startEngine(key);
+    }
+}</pre>
+
+<p><code>super</code> 之前的名称(在此示例中，<code>FlyCar</code> 或 <code>OperateCar</code>)必须引用直接超接口，该接口用于定义或继承调用方法的默认值。这种形式的方法调用不限于区分包含具有相同签名的默认方法的多个已实现接口。您可以使用 <code>super</code> 关键字在类和接口中调用默认方法。</p>
+
+<p>类中的继承实例方法可以覆盖抽象接口方法。考虑以下接口和类：</p>
+  
+<div class="codeblock"><pre>
+public interface Mammal {
+    String identifyMyself();
+}
+</pre></div>
+
+<div class="codeblock"><pre>
+public class Horse {
+    public String identifyMyself() {
+        return "I am a horse.";
+    }
+}
+</pre></div>
+
+<div class="codeblock"><pre>
+public class Mustang extends Horse implements Mammal {
+    public static void main(String... args) {
+        Mustang myApp = new Mustang();
+        System.out.println(myApp.identifyMyself());
+    }
+}
+</pre></div>
+
+<p>方法 <code>Mustang.identifyMyself</code> 返回字符串 <code>I am a horse.</code> 类 <code>Mustang</code> 继承了方法 <code>identifyMyself</code> 从 <code>Horse</code> 类，它会覆盖接口 <code>Mammal</code> 中的同名抽象方法。</p>
+
+
+<p><strong>注意</strong>:接口中的静态方法永远不会被继承。</p> 
+
+<h2>修饰符</h2>
+
+<p>覆盖方法的访问说明符可以允许比覆盖方法更多，但不能更少，的访问。例如，超类中的 protected 实例方法可以在子类中 public，但不能 private。</p>
+
+<p>如果尝试将超类中的实例方法更改为子类中的静态方法，则会出现编译时错误，反之亦然。</p>
+<h2>总结</h2>
+<p>
+<span id="table:override-method">The following table</span> 总结了在定义与超类中的方法具有相同签名的方法时会发生什么。</p>
+<table border="1" summary="此表总结了在定义具有与超类中的方法相同的签名的方法时发生的情况">
+<caption style="font-weight: bold" id="override-method">定义与超类的方法具有相同签名的方法</caption>
+<tr>
+<th>&nbsp;</th>
+<th>超类实例方法</th>
+<th>超类静态方法</th>
+</tr>
+<tr>
+<th>子类实例方法</th>
+<td>Overrides</td>
+<td>生成编译时错误</td>
+</tr>
+<tr>
+<th>子类静态方法</th>
+<td>生成编译时错误</td>
+<td>Hides</td>
+</tr>
+</table>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;在子类中，您可以重载从超类继承的方法。这样的重载方法既不隐藏也不覆盖超类实例方法 - 它们是新方法，对于子类是唯一的。
+<hr /></div>
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="multipleinheritance.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="polymorphism.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Multiple Inheritance of State, Implementation, and Type
+        <br /><b>Next page:</b> Polymorphism
+    </div>
+</body>
+</html> 

@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>BufferStrategy 和 BufferCapabilities(Java™ 教程-Java Tutorials 中文版&gt;Bonus&gt;全屏独占模式 API)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This Java tutorial describes generics, full screen mode API, and Java certification related resources" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java generics, full screen mode API, certification" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">全屏独占模式 API</a></div>
+<div class="linkAHEAD"><a href="exclusivemode.html">全屏独占模式</a></div>
+<div class="linkAHEAD"><a href="displaymode.html">显示模式</a></div>
+<div class="linkAHEAD"><a href="rendering.html">被动与主动渲染</a></div>
+<div class="linkAHEAD"><a href="doublebuf.html">双缓冲和页面翻转</a></div>
+<div class="nolinkAHEAD">BufferStrategy 和 BufferCapabilities</div>
+<div class="linkAHEAD"><a href="example.html">例子</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Bonus
+        <br /><b>Lesson:</b> Full-Screen Exclusive Mode API
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">全屏独占模式 API</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="doublebuf.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="example.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>BufferStrategy 和 BufferCapabilities</h1></div>
+            <div id="PageContent"><!--BufferStrategy and BufferCapabilities-->
+
+
+<h2><code>BufferStrategy</code></h2>
+<p>在 Java 2 Standard Edition 中，您不必担心视频指针或视频内存，以便充分利用双缓冲或页面翻转。添加了新类 <tt>java.awt.image.BufferStrategy</tt> 是为了便于以一般方式处理绘制到表面和组件，无论使用的缓冲区数量或用于显示它们的技术如何。</p>
+<p>缓冲策略为您提供了两种通用的绘图方法：<tt>getDrawGraphics</tt> 和 <tt>show</tt>。当您想要开始绘图时，获取绘制图形并使用它。当您完成绘图并希望向屏幕显示您的信息时，请调用 <tt>show</tt>。这两种方法旨在相当优雅地适应渲染循环：</p>
+<div class="codeblock"><pre>
+BufferStrategy myStrategy;
+
+while (!done) {
+    Graphics g = myStrategy.getDrawGraphics();
+    render(g);
+    g.dispose();
+    myStrategy.show();
+}
+</pre></div>
+<p>还设置了缓冲策略来帮助您监控 <tt>VolatileImage</tt> 问题。在全屏独占模式下，<tt>VolatileImage</tt> 问题尤为重要，因为窗口系统有时可以收回它给您的视频内存。一个重要的例子是当用户在 Windows 中按下 <tt>ALT+TAB</tt> 组合键时 - 突然您的全屏程序在后台运行，您的视频内存丢失了。您可以调用 <tt>contentsLost</tt> 方法来查明是否发生了这种情况。同样，当窗口系统将内存返回给您时，您可以找到使用 <tt>contentsRestored</tt> 方法。</p>
+<h2><code>BufferCapabilities</code></h2>
+<p>如前所述，不同的操作系统，甚至同一操作系统上的不同显卡，可以使用不同的技术。这些 <i>capabilities (功能)</i> 为您公开，以便您可以为您的应用选择最佳技术。</p>
+<p>类 <tt>java.awt.BufferCapabilities</tt> 封装了这些功能。每个缓冲区策略都由其缓冲区功能控制，因此为您的应用选择正确的缓冲区非常重要。要找出可用的功能，请从图形设备上可用的 <tt>GraphicsConfiguration</tt> 对象调用 <tt>getBufferCapabilities</tt> 方法。</p>
+<p>Java 2 Standard Edition 1.4 版中提供的功能包括：</p><!--
+<dl>
+<dt><code>isPageFlipping</code></dt>
+<dd>This capability returns whether or not hardware page-flipping is available on this graphics configuration.</dd>
+<dt><code>isFullScreenRequired</code></dt>
+<dd>This capability returns whether or not full-screen exclusive mode is required before hardware page-flipping should be attempted.</dd>
+<dt><code>isMultiBufferAvailable</code></dt>
+<dd>This capability returns whether or not multiple buffering (two or more back buffers plus the primary surface) in hardware is available.</dd>
+<dt><code>getFlipContents</code></dt>
+<dd>This capability returns a hint of the technique used to do hardware page-flipping. This is important because the contents of the back buffer after a <tt>show</tt> are different depending on the technique used. The value returned can be null (if <tt>isPageFlipping</tt> returns <tt>false</tt>) or one of the following values. Any value can be specified for a buffer strategy so long as the <tt>isPageFlipping</tt> method returns true, though performance will vary depending on the available capabilities.</dd>
+<dt><code>FlipContents.COPIED</code></dt>
+<dd>This value means that the contents of the back buffer are copied to the primary surface. A &quot;flip&quot; is probably performed as a hardware blt, which means that hardware double-buffering is probably done using blitting instead of true page-flipping. This should (in theory) be faster, or at least as fast, as blitting from a <tt>VolatileImage</tt> to the primary surface, though your mileage may vary. The contents of the back buffer are the same as the primary surface after a flip.</dd>
+<dt><code>FlipContents.BACKGROUND</code></dt>
+<dd>This value means that the contents of the back buffer have been cleared with the background color. Either a true page-flip or a blt has occurred.</dd>
+<dt><code>FlipContents.PRIOR</code></dt>
+<dd>This value means that the contents of the back buffer are now the contents of the old primary surface, and vice versa. Generally this value indicates that true page-flipping occurs, though this is not guaranteed and, once again, your mileage on this operation may vary.</dd>
+<dt><code>FlipContents.UNKNOWN</code></dt>
+<dd>This value means that the contents of the back buffer are undefined after a flip. You may have to experiment to find which technique works best for you (or you may not care), and you will definitely have to set up the contents of the back buffer yourself each time you draw.</dd>
+</dl>
+-->
+
+<ul>
+<li><code>isPageFlipping</code><br/>
+此功能将返回此图形配置上是否提供硬件页面翻转。
+</li>
+<li><code>isFullScreenRequired</code><br/>
+在尝试进行硬件页面翻转之前，此功能将返回是否需要全屏独占模式。
+</li>
+<li><code>isMultiBufferAvailable</code><br/>
+此功能返回硬件中是否有多个缓冲区(两个或多个后缓冲区加上主表面)。
+</li>
+<li><code>getFlipContents</code><br/>
+此功能返回用于执行硬件页面翻转的技术的提示。这很重要，因为在 <tt>show</tt> 之后的后缓冲区的内容根据所使用的技术而不同。返回的值可以为 null(如果 <tt>isPageFlipping</tt> 返回 <tt>false</tt>)或以下值之一。只要 <tt>isPageFlipping</tt> 方法返回 true，就可以为缓冲区策略指定任何值，但性能会因可用功能而异。
+</li>
+<li><code>FlipContents.COPIED</code><br/>
+该值表示后缓冲区的内容被复制到主表面。“翻转”可能是作为硬件 blt 执行的，这意味着硬件双缓冲可能是使用 blitting 而不是真正的页面翻转来完成的。这应该(在理论上)比从 <tt>VolatileImage</tt> 到主表面的 blitting 更快，或者至少同样快，尽管您的里程可能会有所不同。翻转后后缓冲器的内容与主表面相同。
+</li>
+<li><code>FlipContents.BACKGROUND</code><br/>
+此值表示已使用背景颜色清除后缓冲区的内容。发生了真正的翻页或 blt。
+</li>
+<li><code>FlipContents.PRIOR</code><br/>
+此值表示后缓冲区的内容现在是旧主曲面的内容，反之亦然。通常，此值表示发生了真正的页面翻转，但这不能保证，并且再一次，您在此操作上的里程可能会有所不同。
+</li>
+<li><code>FlipContents.UNKNOWN</code><br/>
+该值表示翻转后后缓冲区的内容未定义。您可能需要尝试找到最适合您的技术(或者您可能不关心)，并且每次绘制时您必须自己设置后备缓冲区的内容。
+</li>
+</ul>
+<p>要为组件创建缓冲区策略，请调用 <tt>createBufferStrategy</tt> 方法，提供所需的缓冲区数(此数字包括主表面)。如果需要任何特定的缓冲技术，请提供适当的 <tt>BufferCapabilities</tt> 对象。请注意，当您使用此版本的方法时，如果您的选择不可用，则必须捕获 <tt>AWTException</tt>。另请注意，这些方法仅适用于 <tt>Canvas</tt> 和 <tt>Window</tt>。</p>
+<p>一旦为组件创建了特定的缓冲区策略，就可以使用 <tt>getBufferStrategy</tt> 方法对其进行操作。请注意，此方法也仅适用于画布和窗口。</p>
+<h2>编程提示</h2>
+<p>关于使用缓冲功能和缓冲策略的一些提示：</p>
+<ul>
+<li>在 <tt>try...finally</tt> 子句中获取，使用和处理图形对象更加健壮：
+<div class="codeblock"><pre>
+BufferStrategy myStrategy;
+
+while (!done) {
+    Graphics g;
+    try {
+        g = myStrategy.getDrawGraphics();
+        render(g);
+    } finally {
+        g.dispose();
+    }
+    myStrategy.show();
+}
+</pre></div>
+</li>
+<li>在使用缓冲策略之前检查可用功能。</li>
+<li>为获得最佳效果，请在全屏独占窗口上创建缓冲区策略。在使用页面翻转之前，请确保检查 <tt>isFullScreenRequired</tt> 和 <tt>isPageFlipping</tt> 功能。</li>
+<li>不要对性能做任何假设。根据需要调整代码，但请记住，不同的操作系统和显卡具有不同的功能。配置您的应用程序！</li>
+<li>您可能希望子组化您的组件以覆盖 <tt>createBufferStrategy</tt> 方法。使用算法选择最适合您的应用程序的策略。<tt>FlipBufferStrategy</tt> 和 <tt>BltBufferStrategy</tt> 内部类是 protected，可以进行子类化。</li>
+<li>不要忘记您可能会丢失您的绘图表面！在绘制之前，请务必检查 <tt>contentsLost</tt> 和 <tt>contentsRestored</tt>。丢失的所有缓冲区在恢复时都必须重绘。</li>
+<li>如果在 Swing 应用程序中使用缓冲策略进行双缓冲，则可能需要关闭 Swing 组件的双缓冲，因为它们已经是双缓冲的。视频内存有些宝贵，只应在绝对必要时使用。</li>
+<li>使用多个后备缓冲区可能最终会浪费。多次缓冲仅在绘图时间超过执行 <tt>show</tt> 所花费的时间时才有用。配置您的应用程序！</li>
+</ul>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="doublebuf.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="example.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Double Buffering and Page Flipping
+        <br /><b>Next page:</b> Examples
+    </div>
+</body>
+</html> 

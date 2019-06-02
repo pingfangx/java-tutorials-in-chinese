@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Collection 接口(Java™ 教程-Java Tutorials 中文版&gt;集合&gt;接口)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This collections Java tutorial describes interfaces, implementations, and algorithms in the Java Collections framework" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java collections, set, list, queue, map, array, arraylist" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">接口</a></div>
+<div class="nolinkAHEAD">Collection 接口</div>
+<div class="linkAHEAD"><a href="set.html">Set 接口</a></div>
+<div class="linkAHEAD"><a href="list.html">List 接口</a></div>
+<div class="linkAHEAD"><a href="queue.html">Queue 接口</a></div>
+<div class="linkAHEAD"><a href="deque.html">Deque 接口</a></div>
+<div class="linkAHEAD"><a href="map.html">Map 接口</a></div>
+<div class="linkAHEAD"><a href="order.html">对象排序</a></div>
+<div class="linkAHEAD"><a href="sorted-set.html">SortedSet 接口</a></div>
+<div class="linkAHEAD"><a href="sorted-map.html">SortedMap 接口</a></div>
+<div class="linkAHEAD"><a href="summary.html">接口总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Collections
+        <br /><b>Lesson:</b> Interfaces
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">接口</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="set.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>Collection 接口</h1></div>
+            <div id="PageContent">
+
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html"><code>Collection</code></a> 表示一组称为其元素的对象。<code>Collection</code> 接口用于传递需要最大泛型性的对象集合。例如，按照惯例，所有泛型集合实现都有一个带有 <code>Collection</code> 参数的构造函数。此构造函数(称为 <i>conversion constructor (转换构造函数)</i>)初始化新集合以包含指定集合中的所有元素，无论给定集合的子接口或实现类型如何。换句话说，它允许您 <i>convert (转换)</i> 集合的类型。</p>
+<p>例如，假设您有一个 <code>Collection&lt;String&gt; c</code>，它可能是 <code>List</code>，<code>Set</code>，或者是另一种 <code>Collection</code>。这个习惯用法创建一个新的 <code>ArrayList</code>(<code>List</code> 接口的实现)，最初包含 <code>c</code> 中的所有元素。</p>
+
+<div class="codeblock"><pre>
+List&lt;String&gt; list = new ArrayList&lt;String&gt;(c);
+</pre></div>
+
+或者 - 如果您使用的是 JDK 7 或更高版本 - 您可以使用菱形运算符：
+
+
+<div class="codeblock"><pre>
+List&lt;String&gt; list = new ArrayList&lt;&gt;(c);
+</pre></div><!--
+<p>The following shows the <code>Collection</code> interface.</p>
+<div class="codeblock"><pre>
+public interface Collection&lt;E&gt; extends Iterable&lt;E&gt; {
+    // Basic operations
+    int size();
+    boolean isEmpty();
+    boolean contains(Object element);
+    // optional
+    boolean add(E element);
+    // optional
+    boolean remove(Object element);
+    Iterator&lt;E&gt; iterator();
+
+    // Bulk operations
+    boolean containsAll(Collection&lt;?&gt; c);
+    // optional
+    boolean addAll(Collection&lt;? extends E&gt; c); 
+    // optional
+    boolean removeAll(Collection&lt;?&gt; c);
+    // optional
+    boolean retainAll(Collection&lt;?&gt; c);
+    // optional
+    void clear();
+
+    // Array operations
+    Object[] toArray();
+    &lt;T&gt; T[] toArray(T[] a);
+}
+</pre></div>
+
+-->
+
+
+
+
+
+
+<p>
+<code>Collection</code> 接口包含执行基本操作的方法，例如 <code>int size()</code>，<code>boolean isEmpty()</code>，<code>boolean contains(Object element)</code>，<code>boolean add(E element)</code>，<code>boolean remove(Object element)</code>，<code>Iterator&lt;E&gt; iterator()</code>。
+</p>
+
+<p>
+ 它还包含对整个集合进行操作的方法，例如 <code>boolean containsAll(Collection&lt;?&gt; c)</code>，<code>boolean addAll(Collection&lt;? extends E&gt; c)</code>，<code>boolean removeAll(Collection&lt;?&gt; c)</code>，<code>boolean retainAll(Collection&lt;?&gt; c)</code>，<code>void clear()</code>。
+</p>
+
+<p>
+ 还存在用于数组操作的其他方法(例如 <code>Object[] toArray()</code> 和 <code>&lt;T&gt; T[] toArray(T[] a)</code>。
+</p>
+
+<p>
+在 JDK 8 及更高版本中，<code>Collection</code> 接口还公开方法 <code>Stream&lt;E&gt; stream()</code> 和 <code>Stream&lt;E&gt; parallelStream()</code>，从底层集合中获取顺序或并行流。(有关使用流的更多信息，请参阅标题为 <a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> 的课程。)
+</p>
+
+
+<p>如果 <code>Collection</code> 表示一组对象，<code>Collection</code> 接口会执行您的预期。它有方法告诉您集合中有多少元素(<code>size</code>，<code>isEmpty</code>)，有方法检查给定对象是否在集合中(<code>contains</code>)，有从集合中添加和移除元素的方法(<code>add</code>，<code>remove</code>)，以及在集合上提供迭代器的方法(<code>iterator</code>)。</p>
+<p><code>add</code> 方法的定义足够通用，因此对于允许重复的集合以及不重复的集合都有意义。它保证在调用完成后 <code>Collection</code> 将包含指定的元素，并且如果 <code>Collection</code> 因调用而发生更改，则返回 <code>true</code>。类似地，<code>remove</code> 方法旨在从 <code>Collection</code> 中移除指定元素的单个实例，假设它包含要开始的元素，并返回 <code>true</code> 如果 <code>Collection</code> 被修改。 <a name="Traversing" id="Traversing"></a></p>
+
+
+<h2>遍历集合</h2>
+<p>遍历集合的方法有三种：(1)使用聚合操作(2)使用 <code>for-each</code> 结构，(3)使用 <code>Iterator</code>。 <a name="ForEach" id="ForEach"></a></p>
+
+<h3>聚合操作</h3>
+<p>
+在 JDK 8 及更高版本中，迭代集合的首选方法是获取流并对其执行聚合操作。聚合操作通常与 lambda 表达式结合使用，以使用较少的代码行，使编程更具表现力。以下代码按顺序遍历一组形状并打印出红色对象：
+</p>
+
+<div class="codeblock"><pre>
+myShapesCollection.stream()
+.filter(e -> e.getColor() == Color.RED)
+.forEach(e -> System.out.println(e.getName()));
+</pre></div>
+
+
+<p>
+同样，您可以轻松地请求并行流，如果集合足够大并且您的计算机具有足够的核心，这可能是有意义的：
+</p>
+
+
+<div class="codeblock"><pre>
+myShapesCollection.parallelStream()
+.filter(e -> e.getColor() == Color.RED)
+.forEach(e -> System.out.println(e.getName()));
+</pre></div>
+
+<p>
+使用此 API 收集数据的方法有很多种。例如，您可能希望将 <code>Collection</code> 的元素转换为 <code>String</code> 对象，然后将它们连接起来，用逗号分隔：
+</p>
+<pre>
+    String joined = elements.stream()
+    .map(Object::toString)
+    .collect(Collectors.joining(", "));
+</pre>
+
+<p>
+或者累计一下所有员工的工资：
+</p>
+
+<div class="codeblock"><pre>
+int total = employees.stream()
+.collect(Collectors.summingInt(Employee::getSalary)));
+</pre></div>
+
+<p>
+这些只是您可以使用流和聚合操作执行的一些示例。有关更多信息和示例，请参阅标题为 <a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> 的课程。
+</p>
+<p>
+Collections 框架一直提供许多所谓的“批量操作”作为其 API 的一部分。这些包括对整个集合进行操作的方法，例如 <code>containsAll</code>，<code>addAll</code>，<code>removeAll</code> 等。不要将这些方法与 JDK 8 中引入的聚合操作混淆。新聚合操作与现有批量操作(<code>containsAll</code>，<code>addAll</code> 等)之间的主要区别在于旧版本都是 <em>mutative (变化的)</em>，意味着它们都修改了底层集合。相反，新的聚合操作 <em>不会</em> 修改底层集合。使用新的聚合操作和 lambda 表达式时，必须注意避免突变，以免将来引入问题，如果您的代码稍后从并行流运行。
+
+
+
+
+</p>
+
+
+<h3>for-each 结构</h3>
+<p><code>for-each</code> 结构允许您使用 <code>for</code> 循环简洁地遍历集合或数组参见 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/for.html">The for Statement</a>。以下代码使用 <code>for-each</code> 结构在单独的行上打印出集合的每个元素。</p>
+<div class="codeblock"><pre>
+for (Object o : collection)
+    System.out.println(o);
+</pre></div>
+<h3><a name="Iterator" id="Iterator">迭代器</a></h3>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html"><code>Iterator</code></a> 是一个对象，使您可以遍历集合并有选择地从集合中移除元素(如果需要)。通过调用 <code>iterator</code> 方法，您可以获得集合的 <code>Iterator</code>。以下是 <code>Iterator</code> 接口。</p>
+<div class="codeblock"><pre>
+public interface Iterator&lt;E&gt; {
+    boolean hasNext();
+    E next();
+    void remove(); //optional
+}
+</pre></div>
+<p>如果迭代对象具有更多元素，则 <code>hasNext</code> 方法返回 <code>true</code>，<code>next</code> 方法返回迭代中的下一个元素。<code>remove</code> 方法从基础 <code>Collection</code> 中移除 <code>next</code> 返回的最后一个元素。每次调用 <code>next</code> 时，只能调用一次 <code>remove</code> 方法，如果违反此规则，则会抛出异常。</p>
+<p>请注意，<code>Iterator.remove</code> 是在迭代期间修改集合的 <i>only (唯一)</i> 安全方式；如果在迭代进行过程中以任何其他方式修改基础集合，则行为未指定。</p>
+<p>当您需要完成以下操作时，请使用 <code>Iterator</code> 而不是 <code>for-each</code> 构造：</p>
+<ul>
+<li>移除当前元素。<code>for-each</code> 构造隐藏了迭代器，因此您无法调用 <code>remove</code>。因此，<code>for-each</code> 结构不可用于过滤。</li>
+<li>并行迭代多个集合。</li>
+</ul>
+<p>以下方法介绍如何使用 <code>Iterator</code> 过滤任意 <code>Collection</code> 也就是说，遍历集合移除特定元素。</p>
+<div class="codeblock"><pre>
+static void filter(Collection&lt;?&gt; c) {
+    for (Iterator&lt;?&gt; it = c.iterator(); it.hasNext(); )
+        if (!cond(it.next()))
+            it.remove();
+}
+</pre></div>
+<p>这段简单的代码是多态的，这意味着无论实现如何，它都适用于 <i>any (任何)</i> <code>Collection</code>。此示例演示了使用 Java Collections Framework 编写多态算法是多么容易。</p>
+<h2>集合接口批量操作</h2>
+<p><i>Bulk operations (批量操作)</i> 对整个 <code>Collection</code> 执行操作。您可以使用基本操作实现这些速记操作，但在大多数情况下，此类实现效率较低。以下是批量操作：</p>
+<ul>
+<li><code>containsAll</code> 如果目标 <code>Collection</code> 包含指定 <code>Collection</code> 中的所有元素，则返回 <code>true</code>。</li>
+<li><code>addAll</code> 将指定的 <code>Collection</code> 中的所有元素添加到目标 <code>Collection</code>。</li>
+<li><code>removeAll</code> 从目标 <code>Collection</code> 中移除也包含在指定的 <code>Collection</code> 中的所有元素。</li>
+<li><code>retainAll</code> 从目标 <code>Collection</code> 中移除 <i>不</i> 包含在指定的 <code>Collection</code> 中的所有元素。也就是说，它仅保留目标 <code>Collection</code> 中也包含在指定的 <code>Collection</code> 中的那些元素。</li>
+<li><code>clear</code> 从 <code>Collection</code> 中移除所有元素。</li>
+</ul>
+<p>如果目标 <code>Collection</code> 在 <code>addAll</code>，<code>removeAll</code> 和 <code>retainAll</code> 方法执行操作的进程中被修改，则这些方法都返回 <code>true</code>。</p>
+<p>作为批量操作功能的一个简单示例，请考虑以下习惯用法从 <code>Collection</code> <code>c</code> 中移除指定元素 <code>e</code> 的 <i>所有</i> 实例。</p>
+<div class="codeblock"><pre>
+c.removeAll(Collections.singleton(e));
+</pre></div>
+<p>更具体地说，假设您要从 <code>Collection</code> 中移除所有 <code>null</code> 元素。</p>
+<div class="codeblock"><pre>
+c.removeAll(Collections.singleton(null));
+</pre></div>
+<p>这个习惯用法使用 <code>Collections.singleton</code>，这是一个静态工厂方法，它返回一个只包含指定元素的不可变 <code>Set</code>。 <a name="ArrayOps" id="ArrayOps"></a></p>
+<h2>集合接口数组操作</h2>
+<p><code>toArray</code> 方法是作为集合和旧 API 之间的桥梁提供的，这些 API 在输入时期望数组。数组操作允许将 <code>Collection</code> 的内容转换为数组。不带参数的简单形式会创建一个新的 <code>Object</code> 数组。更复杂的形式允许调用者提供数组或选择输出数组的运行时类型。</p>
+<p>例如，假设 <code>c</code> 是 <code>Collection</code>。以下代码段将 <code>c</code> 的内容转储到新分配的 <code>Object</code> 数组中，其长度与 <code>c</code> 中的元素数相同。</p>
+<div class="codeblock"><pre>
+Object[] a = c.toArray();
+</pre></div>
+<p>假设 <code>c</code> 仅包含字符串(可能因为 <code>c</code> 的类型为 <code>Collection&lt;String&gt;</code>)。以下代码段将 <code>c</code> 的内容转储到新分配的 <code>String</code> 数组中，其长度与 <code>c</code> 中的元素数相同。</p>
+<div class="codeblock"><pre>
+String[] a = c.toArray(new String[0]);
+</pre></div>
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="index.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="set.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Interfaces
+        <br /><b>Next page:</b> The Set Interface
+    </div>
+</body>
+</html> 

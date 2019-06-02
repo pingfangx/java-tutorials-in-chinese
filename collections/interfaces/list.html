@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>List 接口(Java™ 教程-Java Tutorials 中文版&gt;集合&gt;接口)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This collections Java tutorial describes interfaces, implementations, and algorithms in the Java Collections framework" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java collections, set, list, queue, map, array, arraylist" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">接口</a></div>
+<div class="linkAHEAD"><a href="collection.html">Collection 接口</a></div>
+<div class="linkAHEAD"><a href="set.html">Set 接口</a></div>
+<div class="nolinkAHEAD">List 接口</div>
+<div class="linkAHEAD"><a href="queue.html">Queue 接口</a></div>
+<div class="linkAHEAD"><a href="deque.html">Deque 接口</a></div>
+<div class="linkAHEAD"><a href="map.html">Map 接口</a></div>
+<div class="linkAHEAD"><a href="order.html">对象排序</a></div>
+<div class="linkAHEAD"><a href="sorted-set.html">SortedSet 接口</a></div>
+<div class="linkAHEAD"><a href="sorted-map.html">SortedMap 接口</a></div>
+<div class="linkAHEAD"><a href="summary.html">接口总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Collections
+        <br /><b>Lesson:</b> Interfaces
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">接口</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="set.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="queue.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>List 接口</h1></div>
+            <div id="PageContent">
+
+
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html"><code>List</code></a> 是有序的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html"><code>Collection</code></a>(有时称为 <i>sequence (序列)</i>)。列表可能包含重复元素。除了从 <code>Collection</code> 继承的操作之外，<code>List</code> 接口还包括以下操作：</p>
+<ul>
+<li><code>Positional access</code> 根据列表中的数字位置操纵元素。这包括 <code>get</code>，<code>set</code>，<code>add</code>，<code>addAll</code> 和 <code>remove</code> 等方法。</li>
+<li><code>Search</code> 搜索列表中的指定对象并返回其数字位置。搜索方法包括 <code>indexOf</code> 和 <code>lastIndexOf</code>。</li>
+<li><code>Iteration</code> 继承 <code>Iterator</code> 语义以利用列表的顺序特性。<code>listIterator</code> 方法提供此行为。</li>
+<li><code>Range-view</code>  <code>sublist</code> 方法在列表上执行任意 <i>range operations (范围操作)</i>。</li>
+</ul><!--
+
+<p>The <code>List</code> interface follows.</p>
+<div class="codeblock"><pre>
+public interface List&lt;E&gt; extends Collection&lt;E&gt; {
+    // Positional access
+    E get(int index);
+    // optional
+    E set(int index, E element);
+    // optional
+    boolean add(E element); 
+    // optional
+    void add(int index, E element);
+    // optional
+    E remove(int index);
+    // optional
+    boolean addAll(int index, Collection&lt;? extends E&gt; c);
+
+    // Search
+    int indexOf(Object o);
+    int lastIndexOf(Object o);
+
+    // Iteration
+    ListIterator&lt;E&gt; listIterator();
+    ListIterator&lt;E&gt; listIterator(int index);
+
+    // Range-view
+    List&lt;E&gt; subList(int from, int to);
+}
+</pre></div>
+
+-->
+
+
+
+ 
+
+
+<p>Java 平台包含两个泛型的 <code>List</code> 实现。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html"><code>ArrayList</code></a>，通常是性能更好的实现，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html"><code>LinkedList</code></a> 在某些情况下提供更好的性能。 
+</p>
+
+
+
+<h2>集合操作</h2>
+<p>从 <code>Collection</code> 继承的操作都是关于您期望他们做的事情，假设您已经熟悉它们。如果您不熟悉 <code>Collection</code>，现在是阅读 <a class="TutorialLink" target="_top" href="collection.html">The Collection Interface</a> 部分的好时机。<code>remove</code> 操作始终从列表中移除 <i>第一个</i> 匹配项。<code>add</code> 和 <code>addAll</code> 操作始终将新元素附加到列表的 <i>结尾</i>。因此，以下习惯用法将一个列表连接到另一个列表。</p>
+<div class="codeblock"><pre>
+list1.addAll(list2);
+</pre></div>
+<p>这是这个习惯用法的非破坏性形式，它产生第三个 <code>List</code>，由第一个附加的第二个列表组成。</p>
+<div class="codeblock"><pre>
+List&lt;Type&gt; list3 = new ArrayList&lt;Type&gt;(list1);
+list3.addAll(list2);
+</pre></div>
+<p>请注意，习惯用法以其非破坏性形式利用了 <code>ArrayList</code> 的标准转换构造函数。</p>
+
+<p>
+这是一个将一些名称聚合到 <code>List</code> 的示例(JDK 8 及更高版本)：
+</p>
+<div class="codeblock"><pre>
+List&lt;String&gt; list = people.stream()
+.map(Person::getName)
+.collect(Collectors.toList());
+</pre></div>
+
+
+<p>与 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html"><code>Set</code></a> 接口类似，<code>List</code> 增强了对 <code>equals</code> 和 <code>hashCode</code> 方法的要求这样就可以比较两个 <code>List</code> 对象的逻辑相等性而不考虑它们的实现类。如果两个 <code>List</code> 对象包含相同顺序的相同元素，则它们是相等的。</p>
+<h2>位置访问和搜索操作</h2>
+<p>基本的 <code>位置访问</code> 操作是 <code>get</code>，<code>set</code>，<code>add</code> 和 <code>remove</code>。(<code>set</code> 和 <code>remove</code> 操作返回被覆盖或移除的旧值。)其他操作(<code>indexOf</code> 和 <code>lastIndexOf</code>)返回列表中指定元素的第一个或最后一个索引。
+<!--
+ These behave just like their longer-named counterparts in <code>Vector</code> (<code>elementAt</code>, <code>setElementAt</code>, <code>insertElementAt</code>, and <code>removeElementAt</code>) with one noteworthy exception: The <code>set</code> and <code>remove</code> operations return the old value that is being overwritten or removed; the <code>Vector</code> counterparts (<code>setElementAt</code> and <code>removeElementAt</code>) return nothing (<code>void</code>). The <code>search</code> operations <code>indexOf</code> and <code>lastIndexOf</code> behave exactly like the identically named operations in <code>Vector</code>.
+-->
+
+</p>
+<p><code>addAll</code> 操作从指定位置开始插入指定 <code>Collection</code> 的所有元素。元素按照指定的 <code>Collection</code> 的迭代器返回的顺序插入。此调用是 <code>Collection</code> 的 <code>addAll</code> 操作的位置访问模拟。</p>
+<p>这是一个在 <code>List</code> 中交换两个索引值的方法。</p>
+<div class="codeblock"><pre>
+public static &lt;E&gt; void swap(List&lt;E&gt; a, int i, int j) {
+    E tmp = a.get(i);
+    a.set(i, a.get(j));
+    a.set(j, tmp);
+}
+</pre></div>
+<p><a name="shuffle" id="shuffle">当然，这有一个很大的不同。</a>这是一个多态算法：它在任何 <code>List</code> 中交换两个元素，而不管它的实现类型如何。这是另一种使用前面的 <code>swap</code> 方法的多态算法。</p>
+<div class="codeblock"><pre>
+public static void shuffle(List&lt;?&gt; list, Random rnd) {
+    for (int i = list.size(); i &gt; 1; i--)
+        swap(list, i - 1, rnd.nextInt(i));
+}
+</pre></div>
+<p>此算法包含在 Java 平台的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html"><code>Collections</code></a> 类中，使用指定的随机源随机置换指定的列表。它有点微妙：它从底部向上运行列表，反复地将随机选择的元素交换到当前位置。与大多数幼稚的洗牌尝试不同，它是 <i>fair (公平的)</i>(所有排列均以相同的可能性发生，假设无偏见的随机源)且 <i>fast (快速的)</i>(要求正好 <code>list.size()-1</code> 交换)。以下程序使用此算法以随机顺序打印其参数列表中的单词。</p>
+<div class="codeblock"><pre>
+import java.util.*;
+
+public class Shuffle {
+    public static void main(String[] args) {
+        List&lt;String&gt; list = new ArrayList&lt;String&gt;();
+        for (String a : args)
+            list.add(a);
+        Collections.shuffle(list, new Random());
+        System.out.println(list);
+    }
+}
+</pre></div>
+<p>事实上，这个程序可以更短，更快。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html"><code>Arrays</code></a> 类有一个名为 <code>asList</code> 的静态工厂方法，它允许将数组视为 <code>List</code>。此方法不会复制数组。<code>List</code> 中的更改将写入数组，反之亦然。生成的 List 不是通用的 <code>List</code> 实现，因为它没有实现(可选的)<code>add</code> 和 <code>remove</code> 操作：数组是不可调整大小。利用 <code>Arrays.asList</code> 并调用 <code>shuffle</code> 的库版本(使用默认的随机源)，您将获得以下 <a class="SourceLink" target="_blank" href="examples/Shuffle.java" onclick="showCode('../../displayCode.html', 'examples/Shuffle.java'); return false;"><code>tiny program</code></a>，其行为与之前的程序相同。</p>
+<div class="codeblock"><pre>
+import java.util.*;
+
+public class Shuffle {
+    public static void main(String[] args) {
+        List&lt;String&gt; list = Arrays.asList(args);
+        Collections.shuffle(list);
+        System.out.println(list);
+    }
+}
+</pre></div>
+<h2><a name="Iterator" id="Iterator">迭代器</a></h2>
+<p>正如您所期望的那样，<code>List</code> 的 <code>iterator</code> 操作返回的 <code>Iterator</code> 以正确的顺序返回列表的元素。<code>List</code> 还提供了一个更丰富的迭代器，称为 <code>ListIterator</code>，它允许您在任一方向遍历列表，在迭代期间修改列表，并获取迭代器的当前位置。 
+</p><!--
+<p>The <code>ListIterator</code> interface follows.</p>
+
+<div class="codeblock"><pre>
+public interface ListIterator&lt;E&gt; extends Iterator&lt;E&gt; {
+    boolean hasNext();
+    E next();
+    boolean hasPrevious();
+    E previous();
+    int nextIndex();
+    int previousIndex();
+    void remove(); //optional
+    void set(E e); //optional
+    void add(E e); //optional
+}
+</pre></div>
+-->
+
+
+
+<p><code>ListIterator</code> 继承自 <code>Iterator</code> 的三个方法(<code>hasNext</code>，<code>next</code>，<code>remove</code> )在两个接口中做同样的事情。<code>hasPrevious</code> 和 <code>previous</code> 操作是 <code>hasNext</code> 和 <code>next</code> 的精确类似物。前一个操作引用(隐式)游标之前的元素，而后者引用游标之后的元素。<code>previous</code> 操作向后移动光标，而 <code>next</code> 向前移动光标。</p>
+<p>这是在列表中向后迭代的标准习惯用法。</p>
+<div class="codeblock"><pre>
+for (ListIterator&lt;Type&gt; it = list.listIterator(list.size()); it.hasPrevious(); ) {
+    Type t = it.previous();
+    ...
+}
+</pre></div>
+<p>请注意上述习惯用法中 <code>listIterator</code> 的参数。<code>List</code> 接口有两种形式的 <code>listIterator</code> 方法。没有参数的形式返回位于列表开头的 <code>ListIterator</code>;带有 <code>int</code> 参数的形式返回位于指定索引处的 <code>ListIterator</code>。索引引用初始调用 <code>next</code> 返回的元素。对 <code>previous</code> 的初始调用将返回索引为 <code>index-1</code> 的元素。在长度 <code>n</code> 的列表中，有 <code>n+1</code> 个 <code>index</code> 的有效值，从 <code>0</code> 到 <code>n</code>，包括在内。</p>
+<p>直观地说，光标总是在两个元素之间通过调用 <code>previous</code> 返回的那个，以及通过调用 <code>next</code> 返回的那个。<code>n+1</code> 有效 <code>index</code> 值对应于元素之间的 <code>n+1</code> 间隙，从第一个元素之前的间隙到最后一个元素之后的间隙。<span id="figure:colls-fivePossibleCursor.gif">下图</span> 显示包含四个元素的列表中的五个可能的光标位置。</p>
+<center><img src="../../figures/collections/colls-fivePossibleCursor.gif" width="370" height="98" align="bottom" alt="五个箭头代表五个光标位置，从 0 到 4，有四个元素，每个箭头之间有一个元素。" /></p><p class="FigureCaption">五个可能的光标位置。</p></center><p>调用 <code>next</code> 和 <code>previous</code> 可以混合，但您必须要小心。第一次调用 <code>previous</code> 会返回与上一次调用 <code>next</code> 相同的元素。类似地，在对 <code>previous</code> 的一系列调用之后，第一次调用 <code>next</code> 会返回与上次调用 <code>previous</code> 相同的元素。</p>
+<p>毫无疑问，<code>nextIndex</code> 方法返回后续调用 <code>next</code> 返回的元素的索引，以及 <code>previousIndex</code> 返回后续调用 <code>previous</code> 返回的元素的索引。这些调用通常用于报告找到某些内容的位置或记录 <code>ListIterator</code> 的位置，以便可以创建具有相同位置的另一个 <code>ListIterator</code>。</p>
+<p>同样，<code>nextIndex</code> 返回的数字总是比 <code>previousIndex</code> 返回的数字大一点也就不足为奇了。这意味着两种边界情况的行为：(1)当光标在初始元素之前调用 <code>previousIndex</code> 返回 <code>-1</code> ，以及(2)调用 <code>nextIndex</code> 当光标位于最后一个元素之后返回 <code>list.size()</code>。为了使所有这些具体化，以下是 <code>List.indexOf</code> 的可能实现。</p>
+<div class="codeblock"><pre>
+public int indexOf(E e) {
+    for (ListIterator&lt;E&gt; it = listIterator(); it.hasNext(); )
+        if (e == null ? it.next() == null : e.equals(it.next()))
+            return it.previousIndex();
+    // Element not found
+    return -1;
+}
+</pre></div>
+<p>请注意，<code>indexOf</code> 方法返回 <code>it.previousIndex()</code>，即使它正在向前遍历列表。原因是 <code>it.nextIndex()</code> 将返回我们将要检查的元素的索引，并且我们想要返回我们刚刚检查的元素的索引。</p>
+<p><code>Iterator</code> 接口提供 <code>remove</code> 操作，以从 <code>Collection</code> 中移除 <code>next</code> 返回的最后一个元素。对于 <code>ListIterator</code>，此操作将移除 <code>next</code> 或 <code>previous</code> 返回的最后一个元素。<code>ListIterator</code> 接口提供了两个额外的操作来修改列表 <code>set</code> 和 <code>add</code>。<code>set</code> 方法用指定的元素覆盖 <code>next</code> 或 <code>previous</code> 返回的最后一个元素。以下多态算法使用 <code>set</code> 将一个指定值的所有匹配项替换为另一个。</p>
+<div class="codeblock"><pre>
+public static &lt;E&gt; void replace(List&lt;E&gt; list, E val, E newVal) {
+    for (ListIterator&lt;E&gt; it = list.listIterator(); it.hasNext(); )
+        if (val == null ? it.next() == null : val.equals(it.next()))
+            it.set(newVal);
+}
+</pre></div>
+<p>本例中唯一的棘手问题是 <code>val</code> 和 <code>it.next</code> 之间的相等性测试。您需要小心特殊情况下 <code>null</code> 的 <code>val</code> 值以防止 <code>NullPointerException</code>。</p>
+<p><code>add</code> 方法将新元素插入到列表中当前光标位置之前。此方法在以下多态算法中说明，以使用指定列表中包含的值序列替换指定值的所有匹配项。</p>
+<div class="codeblock"><pre>
+public static &lt;E&gt; 
+    void replace(List&lt;E&gt; list, E val, List&lt;? extends E&gt; newVals) {
+    for (ListIterator&lt;E&gt; it = list.listIterator(); it.hasNext(); ){
+        if (val == null ? it.next() == null : val.equals(it.next())) {
+            it.remove();
+            for (E e : newVals)
+                it.add(e);
+        }
+    }
+}
+</pre></div>
+<h2>范围视图操作</h2>
+<p><code>range-view</code> 操作，<code>subList(int fromIndex, int toIndex)</code>，返回此列表部分的 <code>List</code> 视图，其索引范围从 <code>fromIndex</code>(包括) 到 <code>toIndex</code>(不包含)。<i>half-open range (半开范围)</i> 反映了典型的 <code>for</code> 循环。</p>
+<div class="codeblock"><pre>
+for (int i = fromIndex; i &lt; toIndex; i++) {
+    ...
+}
+</pre></div>
+<p>正如术语 <i>view</i> 所暗示的那样，<code>subList</code> 被调用返回的 <code>List</code> 是 <code>List</code> 的备份，所以前者的变化反映在后者中。</p>
+<p>此方法消除了对显式范围操作(对于数组通常存在的排序)的需要。任何期望 <code>List</code> 的操作都可以通过传递 <code>subList</code> 视图而不是整个 <code>List</code> 来用作范围操作。例如，以下习惯用法从 <code>List</code> 中移除一系列元素。</p>
+<div class="codeblock"><pre>
+list.subList(fromIndex, toIndex).clear();
+</pre></div>
+<p>可以构造类似的习惯用法以搜索范围中的元素。</p>
+<div class="codeblock"><pre>
+int i = list.subList(fromIndex, toIndex).indexOf(o);
+int j = list.subList(fromIndex, toIndex).lastIndexOf(o);
+</pre></div>
+<p>请注意，前面的习惯用法返回 <code>subList</code> 中找到的元素的索引，而不是后备 <code>List</code> 中的索引。</p>
+<p>在 <code>List</code> 上运行的任何多态算法，例如 <code>replace</code> 和 <code>shuffle</code> 示例，都适用于通过 <code>subList</code> 返回的 <code>List</code>。</p>
+<p>这是一个多态算法，其实现使用 <code>subList</code> 来处理来自牌组的牌。也就是说，它返回一个新的 <code>List</code>(“hand”)，它包含从指定的 <code>List</code>(“deck”)的末尾获取的指定数量的元素。手中返回的元素将从牌组中移除。</p>
+<div class="codeblock"><pre>
+public static &lt;E&gt; List&lt;E&gt; dealHand(List&lt;E&gt; deck, int n) {
+    int deckSize = deck.size();
+    List&lt;E&gt; handView = deck.subList(deckSize - n, deckSize);
+    List&lt;E&gt; hand = new ArrayList&lt;E&gt;(handView);
+    handView.clear();
+    return hand;
+}
+</pre></div>
+<p>请注意，此算法会从牌组的 <i>尾端</i> 中移除手牌。对于许多常见的 <code>List</code> 实现，例如 <code>ArrayList</code>，从列表末尾移除元素的性能明显优于从开头移除元素的性能。</p>
+<p>以下是 <a class="SourceLink" target="_blank" href="examples/Deal.java" onclick="showCode('../../displayCode.html', 'examples/Deal.java'); return false;"><code>一个程序</code></a>，它使用 <code>dealHand</code> 方法结合 <code>Collections.shuffle</code> 从正常 52 张牌组中生成手牌。该程序采用两个命令行参数：(1)要处理的手牌组数和(2)每组手牌数。</p>
+<div class="codeblock"><pre>
+import java.util.*;
+
+public class Deal {
+    public static void main(String[] args) {
+        if (args.length &lt; 2) {
+            System.out.println("Usage: Deal hands cards");
+            return;
+        }
+        int numHands = Integer.parseInt(args[0]);
+        int cardsPerHand = Integer.parseInt(args[1]);
+    
+        // Make a normal 52-card deck.
+        String[] suit = new String[] {
+            "spades", "hearts", 
+            "diamonds", "clubs" 
+        };
+        String[] rank = new String[] {
+            "ace", "2", "3", "4",
+            "5", "6", "7", "8", "9", "10", 
+            "jack", "queen", "king" 
+        };
+
+        List&lt;String&gt; deck = new ArrayList&lt;String&gt;();
+        for (int i = 0; i &lt; suit.length; i++)
+            for (int j = 0; j &lt; rank.length; j++)
+                deck.add(rank[j] + " of " + suit[i]);
+    
+        // Shuffle the deck.
+        Collections.shuffle(deck);
+    
+        if (numHands * cardsPerHand &gt; deck.size()) {
+            System.out.println("Not enough cards.");
+            return;
+        }
+    
+        for (int i = 0; i &lt; numHands; i++)
+            System.out.println(dealHand(deck, cardsPerHand));
+    }
+  
+    public static &lt;E&gt; List&lt;E&gt; dealHand(List&lt;E&gt; deck, int n) {
+        int deckSize = deck.size();
+        List&lt;E&gt; handView = deck.subList(deckSize - n, deckSize);
+        List&lt;E&gt; hand = new ArrayList&lt;E&gt;(handView);
+        handView.clear();
+        return hand;
+    }
+}
+</pre></div>
+<p>运行程序会产生如下输出。</p>
+<div class="codeblock"><pre>
+% java Deal 4 5
+
+[8 of hearts, jack of spades, 3 of spades, 4 of spades,
+    king of diamonds]
+[4 of diamonds, ace of clubs, 6 of clubs, jack of hearts,
+    queen of hearts]
+[7 of spades, 5 of spades, 2 of diamonds, queen of diamonds,
+    9 of clubs]
+[8 of spades, 6 of diamonds, ace of spades, 3 of hearts,
+    ace of hearts]
+</pre></div>
+<p>虽然 <code>subList</code> 操作非常强大，但在使用它时必须小心。除了操作返回的 <code>List</code> 之外，如果以任何方式向后备 <code>List</code> 添加或移除元素，则 <code>subList</code> 返回的 <code>List</code> 的语义将变为未定义。因此，强烈建议您仅将 <code>subList</code> 返回的 <code>List</code> 用作瞬态对象在后备 <code>List</code> 上执行一个或一系列范围操作。使用 <code>subList</code> 实例的时间越长，通过直接修改后备 <code>List</code> 或通过另一个 <code>subList</code> 对象来破坏它的可能性就越大。请注意，修改子列表的子列表并继续使用原始子列表(尽管不是并发)是合法的。</p>
+<h2>列表算法</h2>
+<p><code>Collections</code> 类中的大多数多态算法专门应用于 <code>List</code>。拥有所有这些算法可以很容易地操作列表。以下是这些算法的摘要，这些算法在 <a class="TutorialLink" target="_top" href="../algorithms/index.html">Algorithms</a> 部分中有更详细的描述。</p>
+<ul>
+<li><code>sort</code> 使用合并排序算法对 <code>List</code> 进行排序，该算法提供快速，稳定的排序。(A <i>stable sort (稳定排序)</i> 是不重新排序相同元素的排序。)</li>
+<li><code>shuffle</code> 随机置换 <code>List</code> 中的元素。</li>
+<li><code>reverse</code> 颠倒 <code>List</code> 中元素的顺序。</li>
+<li><code>rotate</code> 将 <code>List</code> 中的所有元素旋转指定的距离。</li>
+<li><code>swap</code> 将元素交换到 <code>List</code> 中的指定位置。</li>
+<li><code>replaceAll</code> 将所有的匹配项用一个指定值替换为另一个。</li>
+<li><code>fill</code> 用指定的值覆盖 <code>List</code> 中的每个元素。</li>
+<li><code>copy</code> 将源 <code>List</code> 复制到目标 <code>List</code>。</li>
+<li><code>binarySearch</code> 使用二分搜索算法搜索有序 <code>List</code> 中的元素。</li>
+<li><code>indexOfSubList</code> 返回 <code>List</code> 中的第一个与另一个列表相等的子列表的索引。</li>
+<li><code>lastIndexOfSubList</code> 返回 <code>List</code> 中最后一个与另一个列表相等的子列表的索引。</li>
+</ul>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="set.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="queue.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> The Set Interface
+        <br /><b>Next page:</b> The Queue Interface
+    </div>
+</body>
+</html> 

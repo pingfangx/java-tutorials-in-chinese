@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>如何使用标签(Java™ 教程-Java Tutorials 中文版&gt;使用 JFC/Swing 创建 GUI&gt;使用 Swing 组件)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This Swing Java Tutorial describes developing graphical user interfaces (GUIs) for applications and applets using Swing components" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java swing, java ui, java user interface, swing components, swing events, swing layout  " />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">使用 Swing 组件</a></div>
+<div class="linkAHEAD"><a href="toplevel.html">使用顶级容器</a></div>
+<div class="linkAHEAD"><a href="jcomponent.html">JComponent 类</a></div>
+<div class="linkAHEAD"><a href="text.html">使用文本组件</a></div>
+<div class="linkBHEAD"><a href="generaltext.html">文本组件功能</a></div>
+<div class="linkBHEAD"><a href="textapi.html">文本组件 API</a></div>
+<div class="linkAHEAD"><a href="componentlist.html">如何使用各种组件</a></div>
+<div class="linkBHEAD"><a href="applet.html">如何制作 applet</a></div>
+<div class="linkBHEAD"><a href="button.html">如何使用按钮，复选框和单选按钮</a></div>
+<div class="linkBHEAD"><a href="buttongroup.html">如何使用 ButtonGroup 组件</a></div>
+<div class="linkBHEAD"><a href="colorchooser.html">如何使用颜色选择器</a></div>
+<div class="linkBHEAD"><a href="combobox.html">如何使用组合框</a></div>
+<div class="linkBHEAD"><a href="dialog.html">如何制作对话框</a></div>
+<div class="linkBHEAD"><a href="editorpane.html">如何使用编辑器窗格和文本窗格</a></div>
+<div class="linkBHEAD"><a href="filechooser.html">如何使用文件选择器</a></div>
+<div class="linkBHEAD"><a href="formattedtextfield.html">如何使用格式化文本框</a></div>
+<div class="linkBHEAD"><a href="frame.html">如何制作框架(主窗口)</a></div>
+<div class="linkBHEAD"><a href="internalframe.html">如何使用内部框架</a></div>
+<div class="nolinkBHEAD">如何使用标签</div>
+<div class="linkBHEAD"><a href="layeredpane.html">如何使用分层窗格</a></div>
+<div class="linkBHEAD"><a href="list.html">如何使用列表</a></div>
+<div class="linkBHEAD"><a href="menu.html">如何使用菜单</a></div>
+<div class="linkBHEAD"><a href="panel.html">如何使用面板</a></div>
+<div class="linkBHEAD"><a href="passwordfield.html">如何使用密码框</a></div>
+<div class="linkBHEAD"><a href="progress.html">如何使用进度条</a></div>
+<div class="linkBHEAD"><a href="rootpane.html">如何使用根窗格</a></div>
+<div class="linkBHEAD"><a href="scrollpane.html">如何使用滚动窗格</a></div>
+<div class="linkBHEAD"><a href="separator.html">如何使用分隔符</a></div>
+<div class="linkBHEAD"><a href="slider.html">如何使用滑块</a></div>
+<div class="linkBHEAD"><a href="spinner.html">如何使用微调器</a></div>
+<div class="linkBHEAD"><a href="splitpane.html">如何使用拆分窗格</a></div>
+<div class="linkBHEAD"><a href="tabbedpane.html">如何使用选项卡式窗格</a></div>
+<div class="linkBHEAD"><a href="table.html">如何使用表格</a></div>
+<div class="linkBHEAD"><a href="textarea.html">如何使用文本区域</a></div>
+<div class="linkBHEAD"><a href="textfield.html">如何使用文本框</a></div>
+<div class="linkBHEAD"><a href="toolbar.html">如何使用工具栏</a></div>
+<div class="linkBHEAD"><a href="tooltip.html">如何使用工具提示</a></div>
+<div class="linkBHEAD"><a href="tree.html">如何使用树</a></div>
+<div class="linkAHEAD"><a href="html.html">如何在 Swing 组件中使用 HTML</a></div>
+<div class="linkAHEAD"><a href="model.html">如何使用模型</a></div>
+<div class="linkAHEAD"><a href="icon.html">如何使用图标</a></div>
+<div class="linkAHEAD"><a href="border.html">如何使用边框</a></div>
+<div class="linkAHEAD"><a href="problems.html">解决常见的组件问题</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Creating a GUI With JFC/Swing
+        <br /><b>Lesson:</b> Using Swing Components
+        <br /><b>Section:</b> How to Use Various Components
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">使用 Swing 组件</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="internalframe.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="layeredpane.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>如何使用标签</h1></div>
+            <div id="PageContent">
+
+<p>With the 
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html"><code>JLabel</code></a> class, you can display unselectable text and images. If you need to create a component that displays a string, an image, or both, you can do so by using or extending <code>JLabel</code>. If the component is interactive and has a certain state, use a <a href="button.html">button</a> instead of a label.</p>
+<p>By specifying HTML code in a label's text, you can give the label various characteristics such as multiple lines, multiple fonts or multiple colors. If the label uses just a single color or font, you can avoid the overhead of HTML processing by using the <code>setForeground</code> or <code>setFont</code> method instead. See <a href="html.html">Using HTML in Swing Components</a> for details.</p>
+<p>Note that labels are not opaque by default. If you need to paint the label's background, it is recommended that you turn its opacity property to "true". The following code snippet shows how to do this.</p>
+<div class="codeblock"><pre>
+label.setOpaque(true);
+</pre></div>
+<p>The following picture introduces an application that displays three labels. The window is divided into three rows of equal height; the label in each row is as wide as possible.</p>
+<center><img src="../../figures/uiswing/components/LabelDemoMetal.png" width="181" height="160" align="bottom" alt="A snapshot of LabelDemo, which uses labels with text and icons." /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<li>Click the Launch button to run the Label Demo using 
+<a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#LabelDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/LabelDemoProject/LabelDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the LabelDemo Application" /></a><br /></li>
+<li>Resize the window so you can see how the labels' contents are placed within the labels' drawing area.<br />
+
+All the label contents have default vertical alignment  that is, the label contents are centered vertically in the label's drawing area. The top label, which contains both an image and text, has horizontal center alignment. The second label, which contains just text, has left (leading) alignment, which is the default for text-only labels in left-to-right languages. The third label, which contains just an image, has horizontal center alignment, which is the default for image-only labels.</li>
+</ol>
+<hr /></div>
+<p>Below is the code from 
+<a class="SourceLink" target="_blank" href="../examples/components/LabelDemoProject/src/components/LabelDemo.java" onclick="showCode('../../displayCode.html', '../examples/components/LabelDemoProject/src/components/LabelDemo.java'); return false;"><code>LabelDemo.java</code></a> that creates the labels in the previous example.</p>
+<div class="codeblock"><pre>
+ImageIcon icon = createImageIcon("images/middle.gif");
+. . .
+label1 = new JLabel("Image and Text",
+                    icon,
+                    JLabel.CENTER);
+//Set the position of the text, relative to the icon:
+label1.setVerticalTextPosition(JLabel.BOTTOM);
+label1.setHorizontalTextPosition(JLabel.CENTER);
+
+label2 = new JLabel("Text-Only Label");
+label3 = new JLabel(icon);
+</pre></div>
+<p>The code for the <code>createImageIcon</code> method is similar to that used throughout this tutorial. You can find it in 
+<a class="TutorialLink" target="_top" href="../components/icon.html">How to Use Icons</a>.</p>
+<p>Often, a label describes another component. When this occurs, you can improve your program's accessibility by using the <code>setLabelFor</code> method to identify the component that the label describes. 例如：</p>
+<div class="codeblock"><pre>
+amountLabel.setLabelFor(amountField);
+</pre></div>
+<p>The preceding code, taken from the <code>FormattedTextFieldDemo</code> example discussed in <a href="formattedtextfield.html">How to Use Formatted Text Fields</a>, lets assistive technologies know that the label (<code>amountLabel</code>) provides information about the formatted text field (<code>amountField</code>). For more information about assistive technologies, see 
+<a class="TutorialLink" target="_top" href="../misc/access.html">How to Support Assistive Technologies</a>.</p>
+<h2><a name="api" id="api">The Label API</a></h2>
+<p>The following tables list the commonly used <code>JLabel</code> constructors and methods. Other methods you are likely to call are defined by the <code>Component</code> and <code>JComponent</code> classes. They include <code>setFont</code>, <code>setForeground</code>, <code>setBorder</code>, <code>setOpaque</code>, and <code>setBackground</code>. See <a href="jcomponent.html">The JComponent Class</a> for details. The API for using labels falls into three categories:</p>
+<ul>
+<li><a href="#contentsapi">Setting or Getting the Label's Contents</a></li>
+<li><a href="#looksapi">Fine Tuning the Label's Appearance</a></li>
+<li><a href="#accessapi">Supporting Accessibility</a></li>
+</ul>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>In the following API, do not confuse label alignment with X and Y alignment. X and Y alignment are used by layout managers and can affect the way any component  not just a label  is sized or positioned. Label alignment, on the other hand, has no effect on a label's size or position. Label alignment simply determines where, inside the label's painting area, the label's contents are positioned. Typically, the label's painting area is exactly the size needed to paint on the label and thus label alignment is irrelevant. For more information about X and Y alignment, see 
+<a class="TutorialLink" target="_top" href="../layout/box.html">How to Use BoxLayout</a>.</p>
+<hr /></div>
+<table border="1" summary="methods for setting or getting the label">
+<caption><a style="font-weight: bold" name="contentsapi" id="contentsapi">Setting or Getting the Label's Contents</a></caption>
+<tr>
+<th>Method or Constructor</th>
+<th>目的</th>
+</tr>
+<tr>
+<td>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#JLabel-javax.swing.Icon-">JLabel(Icon)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#JLabel-javax.swing.Icon-int-">JLabel(Icon, int)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#JLabel-java.lang.String-">JLabel(String)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#JLabel-java.lang.String-javax.swing.Icon-int-">JLabel(String, Icon, int)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#JLabel-java.lang.String-int-">JLabel(String, int)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#JLabel--">JLabel()</a></td>
+<td>Creates a <code>JLabel</code> instance, initializing it to have the specified text/image/alignment. The <code>int</code> argument specifies the horizontal alignment of the label's contents within its drawing area. The horizontal alignment must be one of the following constants defined in the 
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/SwingConstants.html"><code>SwingConstants</code></a> interface (which <code>JLabel</code> implements): <code>LEFT</code>, <code>CENTER</code>, <code>RIGHT</code>, <code>LEADING</code>, or <code>TRAILING</code>. For ease of localization, we strongly recommend using <code>LEADING</code> and <code>TRAILING</code>, rather than <code>LEFT</code> and <code>RIGHT</code>.</td>
+</tr>
+<tr>
+<td>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#setText-java.lang.String-">void setText(String)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#getText--">String getText()</a></td>
+<td>Sets or gets the text displayed by the label. You can use HTML tags to format the text, as described in <a href="html.html">Using HTML in Swing Components</a>.</td>
+</tr>
+<tr>
+<td>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#setIcon-javax.swing.Icon-">void setIcon(Icon)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#getIcon--">Icon getIcon()</a></td>
+<td>Sets or gets the image displayed by the label.</td>
+</tr>
+<tr>
+<td>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#setDisplayedMnemonic-char-">void setDisplayedMnemonic(char)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#getDisplayedMnemonic--">char getDisplayedMnemonic()</a></td>
+<td>Sets or gets the letter that should look like a keyboard alternative. This is helpful when a label describes a component (such as a text field) that has a keyboard alternative but cannot display it. If the labelFor property is also set (using <code>setLabelFor</code>), then when the user activates the mnemonic, the keyboard focus is transferred to the component specified by the labelFor property.</td>
+</tr>
+<tr>
+<td>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#setDisplayedMnemonicIndex-int-">void setDisplayedMnemonicIndex(int)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#getDisplayedMnemonicIndex--">int getDisplayedMnemonicIndex()</a></td>
+<td>Sets or gets a hint as to which character in the text should be decorated to represent the mnemonic. This is useful when you have two instances of the same character and wish to decorate the second instance. For example, <code>setDisplayedMnemonicIndex(5)</code> decorates the character that is at position 5 (that is, the 6th character in the text). Not all types of look and feel may support this feature.</td>
+</tr>
+<tr>
+<td>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#setDisabledIcon-javax.swing.Icon-">void setDisabledIcon(Icon)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#getDisabledIcon--">Icon getDisabledIcon()</a></td>
+<td>Sets or gets the image displayed by the label when it is disabled. If you do not specify a disabled image, then the look and feel creates one by manipulating the default image.</td>
+</tr>
+</table>
+<table border="1" summary="methods for fine tuning the label's appearance">
+<caption><a style="font-weight: bold" name="looksapi" id="looksapi">Fine Tuning the Label's Appearance</a></caption>
+<tr>
+<th>方法</th>
+<th>目的</th>
+</tr>
+<tr>
+<td>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#setHorizontalAlignment-int-">void setHorizontalAlignment(int)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#setVerticalAlignment-int-">void setVerticalAlignment(int)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#getHorizontalAlignment--">int getHorizontalAlignment()</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#getVerticalAlignment--">int getVerticalAlignment()</a></td>
+<td>Sets or gets the area on the label where its contents should be placed. The 
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/SwingConstants.html"><code>SwingConstants</code></a> interface defines five possible values for horizontal alignment: <code>LEFT</code>, <code>CENTER</code> (the default for image-only labels), <code>RIGHT</code>, <code>LEADING</code> (the default for text-only labels), <code>TRAILING</code>. For vertical alignment: <code>TOP</code>, <code>CENTER</code> (the default), and <code>BOTTOM</code>.</td>
+</tr>
+<tr>
+<td>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#setHorizontalTextPosition-int-">void setHorizontalTextPosition(int)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#setVerticalTextPosition-int-">void setVerticalTextPosition(int)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#getHorizontalTextPosition--">int getHorizontalTextPosition()</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#getVerticalTextPosition--">int getVerticalTextPosition()</a></td>
+<td>Sets or gets the location where the label's text will be placed, relative to the label's image. The 
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/SwingConstants.html"><code>SwingConstants</code></a> interface defines five possible values for horizontal position: <code>LEADING</code>, <code>LEFT</code>, <code>CENTER</code>, <code>RIGHT</code>, and <code>TRAILING</code> (the default). For vertical position: <code>TOP</code>, <code>CENTER</code> (the default), and <code>BOTTOM</code>.</td>
+</tr>
+<tr>
+<td>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#setIconTextGap-int-">void setIconTextGap(int)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#getIconTextGap--">int getIconTextGap()</a></td>
+<td>Sets or gets the number of pixels between the label's text and its image.</td>
+</tr>
+</table>
+<table border="1" summary="methods for supporting accessibility">
+<caption><a style="font-weight: bold" name="accessapi" id="accessapi">Supporting Accessibility</a></caption>
+<tr>
+<th>方法</th>
+<th>目的</th>
+</tr>
+<tr>
+<td>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#setLabelFor-java.awt.Component-">void setLabelFor(Component)</a><br />
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html#getLabelFor--">Component getLabelFor()</a></td>
+<td>Sets or gets which component the label describes.</td>
+</tr>
+</table>
+<h2><a name="eg" id="eg">Examples That Use Labels</a></h2>
+<p>The following table lists some of the many examples that use labels.</p>
+<table summary="Information about examples">
+<tr>
+<th align="left">例子</th>
+<th align="left">Where Described</th>
+<th align="left">Notes</th>
+</tr>
+<tr>
+<td><a href="../examples/components/index.html#LabelDemo"><code>LabelDemo</code></a></td>
+<td>This section</td>
+<td>Shows how to specify horizontal and vertical alignment as well as how to align a label's text and image.</td>
+</tr>
+<tr>
+<td><a href="../examples/components/index.html#HtmlDemo"><code>HtmlDemo</code></a></td>
+<td><a href="html.html">Using HTML in Swing Components</a></td>
+<td>Lets you experiment with specifying HTML text for a label.</td>
+</tr>
+<tr>
+<td><a href="../examples/layout/index.html#BoxAlignmentDemo"><code>BoxAlignmentDemo</code></a></td>
+<td><a href="../layout/box.html#alignment">Fixing Alignment Problems</a></td>
+<td>Demonstrates possible alignment problems when using a label in a vertical box layout. Shows how to solve the problem.</td>
+</tr>
+<tr>
+<td><a href="../examples/components/index.html#DialogDemo"><code>DialogDemo</code></a></td>
+<td><a href="dialog.html">How to Use Dialogs</a></td>
+<td>Uses a changeable label to display instructions and provide feedback.</td>
+</tr>
+<tr>
+<td><a href="../examples/components/index.html#SplitPaneDemo"><code>SplitPaneDemo</code></a></td>
+<td><a href="splitpane.html">如何使用拆分窗格</a>and <a href="list.html">How to Use Lists</a></td>
+<td>Displays an image using a label inside of a scroll pane.</td>
+</tr>
+<tr>
+<td><a href="../examples/components/index.html#SliderDemo2"><code>SliderDemo2</code></a></td>
+<td><a href="slider.html">如何使用滑块</a></td>
+<td>Uses <code>JLabel</code> to provide labels for a slider.</td>
+</tr>
+<tr>
+<td><a href="../examples/components/index.html#TableDialogEditDemo"><code>TableDialogEditDemo</code></a></td>
+<td><a href="table.html">如何使用表格</a></td>
+<td>Implements a label subclass, <code>ColorRenderer</code>, to display colors in table cells.</td>
+</tr>
+<tr>
+<td><a href="../examples/components/index.html#FormattedTextFieldDemo"><code>FormattedTextFieldDemo</code></a></td>
+<td><a href="formattedtextfield.html">如何使用格式化文本框</a></td>
+<td>Has four rows, each containing a label and the formatted text field it describes.</td>
+</tr>
+<tr>
+<td><a href="../examples/components/index.html#TextComponentDemo"><code>TextComponentDemo</code></a></td>
+<td><a href="generaltext.html">文本组件功能</a></td>
+<td><code>TextComponentDemo</code> has an inner class (<code>CaretListenerLabel</code>) that extends <code>JLabel</code> to provide a label that listens for events, updating itself based on the events.</td>
+</tr>
+<tr>
+<td><a href="../examples/components/index.html#ColorChooserDemo"><code>ColorChooserDemo</code></a></td>
+<td><a href="colorchooser.html">如何使用颜色选择器</a></td>
+<td>Uses an opaque label to display the currently chosen color against a fixed-color background.</td>
+</tr>
+</table>
+
+<p>
+
+See the
+<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/label.htm">Using JavaFX UI Controls: Label</a> tutorial to learn about JavaFX labeled controls.</p>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="internalframe.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="layeredpane.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> How to Use Internal Frames
+        <br /><b>Next page:</b> How to Use Layered Panes
+    </div>
+</body>
+</html> 

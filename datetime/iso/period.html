@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Period 和 Duration(Java™ 教程-Java Tutorials 中文版&gt;日期时间&gt;标准日历)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This date-time Java tutorial describes how to use the java.time APIs introduced in JDK 8 to write date and time code. The core package uses the standard calendar as defined in the ISO calendar system." />
+     <meta name="keywords" content="java programming, learn java, java sample code, datetime, date time, JSR 310, date-time, date, time, java.time, jdk8, ISO" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">标准日历</a></div>
+<div class="linkAHEAD"><a href="overview.html">概述</a></div>
+<div class="linkAHEAD"><a href="enum.html">DayOfWeek 和 Month 枚举</a></div>
+<div class="linkAHEAD"><a href="date.html">日期类</a></div>
+<div class="linkAHEAD"><a href="datetime.html">日期和时间类</a></div>
+<div class="linkAHEAD"><a href="timezones.html">时区和偏移类</a></div>
+<div class="linkAHEAD"><a href="instant.html">Instant 类</a></div>
+<div class="linkAHEAD"><a href="format.html">解析和格式化</a></div>
+<div class="linkAHEAD"><a href="temporal.html">Temporal 包</a></div>
+<div class="linkBHEAD"><a href="adjusters.html">Temporal Adjuster</a></div>
+<div class="linkBHEAD"><a href="queries.html">Temporal Query</a></div>
+<div class="nolinkAHEAD">Period 和 Duration</div>
+<div class="linkAHEAD"><a href="clock.html">Clock</a></div>
+<div class="linkAHEAD"><a href="nonIso.html">非 ISO 日期转换</a></div>
+<div class="linkAHEAD"><a href="legacy.html">旧版日期时间代码</a></div>
+<div class="linkAHEAD"><a href="summary.html">总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Date Time
+        <br /><b>Lesson:</b> Standard Calendar
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>&gt;<a href="index.html" target="_top">标准日历</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="queries.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="clock.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>Period 和 Duration</h1></div>
+            <div id="PageContent">
+
+
+<p>
+编写代码以指定时间量时，请使用最符合您需要的类或方法：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html"><tt>Duration</tt></a> 类，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html"><tt>Period</tt></a> 类，或 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/ChronoUnit.html#between-java.time.temporal.Temporal-java.time.temporal.Temporal-"><tt>ChronoUnit.between</tt></a> 方法。<tt>Duration</tt> 使用基于时间的值(秒，纳秒)测量时间量。<tt>Period</tt> 使用基于日期的值(年，月，日)。</p>
+
+<div class="note"><hr /><strong>注意:</strong>&nbsp;一天的 <tt>Duration</tt> <em>正好时</em> 24 小时。一天的 <tt>Period</tt>，当添加到 <tt>ZonedDateTime</tt> 时，可能会根据时区而有所不同。例如，如果它发生在夏令时的第一天或最后一天。
+<hr /></div>
+
+<h2>Duration</h2>
+<p>
+<tt>Duration</tt> 最适合测量基于机器的时间的情况，例如使用 <tt>Instant</tt> 对象的代码。<tt>Duration</tt> 对象以秒或纳秒为单位测量，并且不使用基于日期的构造，例如年，月和日，尽管该类提供了转换为天，小时和分钟的方法。如果 <tt>Duration</tt> 是使用在起点之前发生的终点创建的，则可以具有负值。</p>
+<p>
+以下代码以纳秒为单位计算两个时刻之间的持续时间：</p>
+<div class="codeblock"><pre>
+Instant t1, t2;
+...
+long ns = Duration.between(t1, t2).toNanos();
+</pre></div>
+<p>
+以下代码为 <tt>Instant</tt> 添加 10 秒：</p>
+<div class="codeblock"><pre>
+Instant start;
+...
+Duration gap = Duration.ofSeconds(10);
+Instant later = start.plus(gap);
+</pre></div>
+<p>
+<tt>Duration</tt> 未连接到时间线，因为它不跟踪时区或夏令时。将 <tt>Duration</tt> 等于 1 天添加到 <tt>ZonedDateTime</tt> 会导致正好 24 小时的添加，无论夏令时或其他可能导致的时间差异如何。</p>
+
+<h2>ChronoUnit</h2>
+<p>
+<a class="TutorialLink" target="_top" href="temporal.html">The Temporal Package</a> 中讨论的 <tt>ChronoUnit</tt> 枚举定义了用于测量时间的单位。当您想要仅在单个时间单位(例如天或秒)中测量时间量时，<tt>ChronoUnit.between</tt> 方法非常有用。<tt>between</tt> 适用于所有基于时间的对象，但它仅返回单个单位中的数量。以下代码计算两个时间戳之间的间隔(以毫秒为单位)：</p>
+
+<div class="codeblock"><pre>
+import java.time.Instant;
+import java.time.temporal.Temporal;
+import java.time.temporal.ChronoUnit;
+
+Instant previous, current, gap;
+...
+current = Instant.now();
+if (previous != null) {
+    gap = ChronoUnit.MILLIS.between(previous,current);
+}
+...
+</pre></div>
+
+<h2>Period</h2>
+<p>
+要使用基于日期的值(年，月，日)定义时间量，请使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html"><tt>Period</tt></a> 类。<tt>Period</tt> 类提供各种 <tt>get</tt> 方法，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html#getMonths--"><tt>getMonths</tt></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html#getDays--"><tt>getDays</tt></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html#getYears--"><tt>getYears</tt></a>，以便您可以从期间中提取时间。</p>
+<p>
+总时间段由所有三个单元一起表示：月，日和年。要显示在单个时间单位(例如天)中测量的时间量，您可以使用 <tt>ChronoUnit.between</tt> 方法。</p>
+<p>
+假设您出生于 1960 年 1 月 1 日，以下代码报告您的年龄。<tt>Period</tt> 类用于确定年，月和日的时间。使用 <tt>ChronoUnit.between</tt> 方法确定同一时段(总天数)，并显示在括号中：</p>
+<div class="codeblock"><pre>
+LocalDate today = LocalDate.now();
+LocalDate birthday = LocalDate.of(1960, Month.JANUARY, 1);
+
+Period p = Period.between(birthday, today);
+long p2 = ChronoUnit.DAYS.between(birthday, today);
+System.out.println("You are " + p.getYears() + " years, " + p.getMonths() +
+                   " months, and " + p.getDays() +
+                   " days old. (" + p2 + " days total)");
+</pre></div>
+<p>
+代码生成类似于以下内容的输出：</p>
+<div class="codeblock"><pre>
+You are 53 years, 4 months, and 29 days old. (19508 days total)
+</pre></div>
+<p>
+要计算到下一个生日的时间，您可以使用 <a class="SourceLink" target="_blank" href="examples/Birthday.java" onclick="showCode('../../displayCode.html', 'examples/Birthday.java'); return false;"><code><tt>Birthday</tt></code></a> 示例中的以下代码。<tt>Period</tt> 类用于确定以月和日为单位的值。<tt>ChronoUnit.between</tt> 方法返回总天数值，并显示在括号中。</p>
+<div class="codeblock"><pre>
+LocalDate birthday = LocalDate.of(1960, Month.JANUARY, 1);
+
+LocalDate nextBDay = birthday.withYear(today.getYear());
+
+//If your birthday has occurred this year already, add 1 to the year.
+if (nextBDay.isBefore(today) || nextBDay.isEqual(today)) {
+    nextBDay = nextBDay.plusYears(1);
+}
+
+Period p = Period.between(today, nextBDay);
+long p2 = ChronoUnit.DAYS.between(today, nextBDay);
+System.out.println("There are " + p.getMonths() + " months, and " +
+                   p.getDays() + " days until your next birthday. (" +
+                   p2 + " total)");
+</pre></div>
+<p>
+代码生成类似于以下内容的输出：</p>
+<div class="codeblock"><pre>
+There are 7 months, and 2 days until your next birthday. (216 total)
+</pre></div>
+<p>
+这些计算不考虑时区差异。例如，如果您出生在澳大利亚，但目前住在班加罗尔，这会略微影响您确切年龄的计算。在这种情况下，将 <tt>Period</tt> 与 <tt>ZonedDateTime</tt> 类结合使用。将 <tt>Period</tt> 添加到 <tt>ZonedDateTime</tt> 时，会观察到时间差。</p>
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="queries.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="clock.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Temporal Query
+        <br /><b>Next page:</b> Clock
+    </div>
+</body>
+</html> 

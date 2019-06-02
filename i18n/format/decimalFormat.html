@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>自定义格式(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;格式化)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
+     <meta name="keywords" content="java programming, learn java, java sample code, i18n, internationalization, locale, text formatting" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">格式化</a></div>
+<div class="linkAHEAD"><a href="numberintro.html">数字和货币</a></div>
+<div class="linkBHEAD"><a href="numberFormat.html">使用预定义格式</a></div>
+<div class="nolinkBHEAD">自定义格式</div>
+<div class="linkAHEAD"><a href="dateintro.html">日期和时间</a></div>
+<div class="linkBHEAD"><a href="dateFormat.html">使用预定义格式</a></div>
+<div class="linkBHEAD"><a href="simpleDateFormat.html">自定义格式</a></div>
+<div class="linkBHEAD"><a href="dateFormatSymbols.html">更改日期格式符号</a></div>
+<div class="linkAHEAD"><a href="messageintro.html">消息</a></div>
+<div class="linkBHEAD"><a href="messageFormat.html">处理复合消息</a></div>
+<div class="linkBHEAD"><a href="choiceFormat.html">处理复数</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Internationalization
+        <br /><b>Lesson:</b> Formatting
+        <br /><b>Section:</b> Numbers and Currencies
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">格式化</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="numberFormat.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="dateintro.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>自定义格式</h1></div>
+            <div id="PageContent">
+
+<p>您可以使用 <code>DecimalFormat</code> 类将十进制数格式化为特定于语言环境的字符串。此类允许您控制前导和尾随零，前缀和后缀，分组(千)分隔符和小数分隔符的显示。如果要更改格式符号(例如小数点分隔符)，可以将 <code>DecimalFormatSymbols</code> 与 <code>DecimalFormat</code> 类结合使用。这些类在数字格式化方面提供了极大的灵活性，但它们可以使您的代码更加复杂。</p>
+<p>下面的文本使用演示 <code>DecimalFormat</code> 和 <code>DecimalFormatSymbols</code> 类的示例。此材料中的代码示例来自名为 <a class="SourceLink" target="_blank" href="examples/DecimalFormatDemo.java" onclick="showCode('../../displayCode.html', 'examples/DecimalFormatDemo.java'); return false;"><code>DecimalFormatDemo</code></a> 的示例程序。</p>
+<h2>构建模式</h2>
+<p>使用模式 <code>String</code> 指定 <code>DecimalFormat</code> 的格式设置属性。模式决定格式化后的数字的外观。有关模式语法的完整说明，请参阅 <a href="#numberpattern">Number Format Pattern Syntax</a>。</p>
+<p>下面的示例通过将模式 <code>String</code> 传递给 <code>DecimalFormat</code> 构造函数来创建格式化程序。<code>format</code> 方法接受 <code>double</code> 值作为参数，并在 <code>String</code> 中返回格式化的数字：</p>
+<div class="codeblock"><pre>
+DecimalFormat myFormatter = new DecimalFormat(pattern);
+String output = myFormatter.format(value);
+System.out.println(value + &quot; &quot; + pattern + &quot; &quot; + output);
+</pre></div>
+<p>前面的代码行的输出如下表所述。<code>value</code> 是要格式化的数字，<code>double</code> 类型。<code>pattern</code> 是 <code>String</code>，它指定格式设置属性。<code>output</code>，即 <code>String</code>，表示格式化的数字。</p>
+<table summary="DecimalFormatDemo 程序的输出" border="1">
+<caption><code>DecimalFormatDemo</code> 程序输出</caption>
+<tr>
+<th><code>值</code></th>
+<th><code>模式</code></th>
+<th><code>output</code></th>
+<th>解释</th>
+</tr>
+<tr>
+<td>123456.789</td>
+<td>###,###.###</td>
+<td>123,456.789</td>
+<td>井号(#)表示一个数字，逗号是分组分隔符的占位符，句点是小数分隔符的占位符。</td>
+</tr>
+<tr>
+<td>123456.789</td>
+<td>###.##</td>
+<td>123456.79</td>
+<td><code>value</code> 在小数点右边有三位数，但 <code>pattern</code> 只有两位。<code>format</code> 方法通过四舍五入处理此问题。</td>
+</tr>
+<tr>
+<td>123.78</td>
+<td>000000.000</td>
+<td>000123.780</td>
+<td><code>pattern</code> 指定前导零和尾随零，因为使用 0 字符而不是井号(#)。</td>
+</tr>
+<tr>
+<td>12345.67</td>
+<td>$###,###.###</td>
+<td>$12,345.67</td>
+<td><code>pattern</code> 中的第一个字符是美元符号($)。请注意，它紧接在格式化的 <code>output</code> 中最左边的数字之前。</td>
+</tr>
+<tr>
+<td>12345.67</td>
+<td>\u00A5###,###.###</td>
+<td>¥12,345.67</td>
+<td><code>pattern</code> 使用 Unicode 值为 00A5 指定日元(¥)的货币符号。</td>
+</tr>
+</table>
+<h2>区域敏感格式</h2>
+<p>上面的示例为默认的 <code>Locale</code> 创建了一个 <code>DecimalFormat</code> 对象。如果想要非缺省 <code>Locale</code> 的 <code>DecimalFormat</code> 对象，则实例化 <code>NumberFormat</code>，然后将其强制转换为 <code>DecimalFormat</code>。这是一个例子：</p>
+<div class="codeblock"><pre>
+NumberFormat nf = NumberFormat.getNumberInstance(loc);
+DecimalFormat df = (DecimalFormat)nf;
+df.applyPattern(pattern);
+String output = df.format(value);
+System.out.println(pattern + &quot; &quot; + output + &quot; &quot; + loc.toString());
+</pre></div>
+<p>运行上一个代码示例将导致后面的输出。格式化的数字(在第二列中)随 <code>Locale</code> 而变化：</p>
+<div class="codeblock"><pre>
+###,###.###      123,456.789     en_US
+###,###.###      123.456,789     de_DE
+###,###.###      123 456,789     fr_FR
+</pre></div>
+<p>到目前为止，这里讨论的格式模式遵循美国英语的惯例。例如，在模式 ###,###.## 中，逗号是千位分隔符，句点表示小数点。如果终端用户没有接触到它，那么这个约定很好。但是，某些应用程序(如电子表格和报表生成器)允许终端用户定义自己的格式设置模式。对于这些应用程序，终端用户指定的格式模式应使用本地化表示法。在这些情况下，您需要在 <code>DecimalFormat</code> 对象上调用 <code>applyLocalizedPattern</code> 方法。</p>
+<h2>改变格式符号</h2>
+<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormatSymbols.html">DecimalFormatSymbols</a> 类来更改由 <code>format</code> 方法生成的格式化数字中出现的符号。这些符号包括小数分隔符，分组分隔符，减号和百分号等。</p>
+<p>下一个示例通过对数字应用奇怪的格式来演示 <code>DecimalFormatSymbols</code> 类。不常见的格式是调用 <code>setDecimalSeparator</code>，<code>setGroupingSeparator</code> 和 <code>setGroupingSize</code> 方法的结果。</p>
+<div class="codeblock"><pre>
+DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols(currentLocale);
+unusualSymbols.setDecimalSeparator('|');
+unusualSymbols.setGroupingSeparator('^');
+
+String strange = &quot;#,##0.###&quot;;
+DecimalFormat weirdFormatter = new DecimalFormat(strange, unusualSymbols);
+weirdFormatter.setGroupingSize(4);
+
+String bizarre = weirdFormatter.format(12345.678);
+System.out.println(bizarre);
+</pre></div>
+<p>运行时，此示例以奇怪的格式打印数字：</p>
+<div class="codeblock"><pre>
+1^2345|678
+</pre></div>
+<h2><a name="numberpattern" id="numberpattern"></a>数字格式模式语法</h2>
+<p>您可以按照以下 BNF 图表指定的规则为数字设计自己的格式模式：</p>
+<div class="codeblock"><pre>
+pattern    := subpattern{;subpattern}
+subpattern := {prefix}integer{.fraction}{suffix}
+prefix     := '\\u0000'..'\\uFFFD' - specialCharacters
+suffix     := '\\u0000'..'\\uFFFD' - specialCharacters
+integer    := '#'* '0'* '0'
+fraction   := '0'* '#'*
+</pre></div>
+<p>上图中使用的符号如下表所示：</p>
+<table border="1" summary="符号说明">
+<tr>
+<th>符号</th>
+<th>描述</th>
+</tr>
+<tr>
+<td><code>X*</code></td>
+<td>0 个或更多个 X 实例</td>
+</tr>
+<tr>
+<td><code>(X | Y)</code></td>
+<td>X 或 Y</td>
+</tr>
+<tr>
+<td><code>X..Y</code></td>
+<td>从 X 到 Y 的任何字符，包括在内</td>
+</tr>
+<tr>
+<td><code>S - T</code></td>
+<td>S 中的字符，除了 T 中的字符</td>
+</tr>
+<tr>
+<td><code>{X}</code></td>
+<td>X 是可选的</td>
+</tr>
+</table>
+<p>在前面的 BNF 图中，第一个子模式指定了正数的格式。第二个子模式是可选的，指定负数的格式。</p>
+<p>虽然未在 BNF 图中注明，但逗号可能出现在整数部分内。</p>
+<p>在子模式中，您可以使用特殊符号指定格式。这些符号如下表所述：</p>
+<table border="1" summary="格式符号说明">
+<tr>
+<th>符号</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>0</td>
+<td>一个数字</td>
+</tr>
+<tr>
+<td>#</td>
+<td>一个数字，不存在时显示为零</td>
+</tr>
+<tr>
+<td>.</td>
+<td>小数分隔符的占位符</td>
+</tr>
+<tr>
+<td>,</td>
+<td>分组分隔符的占位符</td>
+</tr>
+<tr>
+<td>E</td>
+<td>为指数格式分隔尾数和指数</td>
+</tr>
+<tr>
+<td>;</td>
+<td>分隔格式</td>
+</tr>
+<tr>
+<td>-</td>
+<td>默认负前缀</td>
+</tr>
+<tr>
+<td>%</td>
+<td>乘以 100 并显示为百分比</td>
+</tr>
+<tr>
+<td>?</td>
+<td>乘以 1000，以千为单位显示</td>
+</tr>
+<tr>
+<td>¤</td>
+<td>货币符号；用货币符号代替；如果是两个，用国际货币符号代替；如果存在于模式中，则使用货币小数分隔符而不是小数分隔符</td>
+</tr>
+<tr>
+<td>X</td>
+<td>任何其他字符都可以在前缀或后缀中使用</td>
+</tr>
+<tr>
+<td>'</td>
+<td>用于转义前缀或后缀中的特殊字符</td>
+</tr>
+</table>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="numberFormat.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="dateintro.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Using Predefined Formats
+        <br /><b>Next page:</b> Dates and Times
+    </div>
+</body>
+</html> 

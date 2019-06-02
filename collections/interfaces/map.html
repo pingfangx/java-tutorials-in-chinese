@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Map 接口(Java™ 教程-Java Tutorials 中文版&gt;集合&gt;接口)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This collections Java tutorial describes interfaces, implementations, and algorithms in the Java Collections framework" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java collections, set, list, queue, map, array, arraylist" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">接口</a></div>
+<div class="linkAHEAD"><a href="collection.html">Collection 接口</a></div>
+<div class="linkAHEAD"><a href="set.html">Set 接口</a></div>
+<div class="linkAHEAD"><a href="list.html">List 接口</a></div>
+<div class="linkAHEAD"><a href="queue.html">Queue 接口</a></div>
+<div class="linkAHEAD"><a href="deque.html">Deque 接口</a></div>
+<div class="nolinkAHEAD">Map 接口</div>
+<div class="linkAHEAD"><a href="order.html">对象排序</a></div>
+<div class="linkAHEAD"><a href="sorted-set.html">SortedSet 接口</a></div>
+<div class="linkAHEAD"><a href="sorted-map.html">SortedMap 接口</a></div>
+<div class="linkAHEAD"><a href="summary.html">接口总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Collections
+        <br /><b>Lesson:</b> Interfaces
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">接口</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="deque.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="order.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>Map 接口</h1></div>
+            <div id="PageContent">
+
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html"><code>Map</code></a> 是将键映射到值的对象。map 不能包含重复键：每个键最多可映射一个值。它模拟了数学 <i>function (函数)</i> 抽象。<code>Map</code> 接口包括基本操作的方法(例如 <code>put</code>，<code>get</code>，<code>remove</code>，<code>containsKey</code>，<code>containsValue</code>，<code>size</code> 和 <code>empty</code>)，批量操作(例如 <code>putAll</code> 和 <code>clear</code>)和集合视图(例如 <code>keySet</code>，<code>entrySet</code> 和 <code>values</code>)。
+</p><!--
+<div class="codeblock"><pre>
+public interface Map&lt;K,V&gt; {
+
+    // Basic operations
+    V put(K key, V value);
+    V get(Object key);
+    V remove(Object key);
+    boolean containsKey(Object key);
+    boolean containsValue(Object value);
+    int size();
+    boolean isEmpty();
+
+    // Bulk operations
+    void putAll(Map&lt;? extends K, ? extends V&gt; m);
+    void clear();
+
+    // Collection Views
+    public Set&lt;K&gt; keySet();
+    public Collection&lt;V&gt; values();
+    public Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet();
+
+    // Interface for entrySet elements
+    public interface Entry {
+        K getKey();
+        V getValue();
+        V setValue(V value);
+    }
+}
+</pre></div>
+-->
+
+<p>Java 平台包含三个通用 <code>Map</code> 实现：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code>HashMap</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html"><code>TreeMap</code></a>，和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html"><code>LinkedHashMap</code></a>。它们的行为和性能完全类似于 <code>HashSet</code>，<code>TreeSet</code> 和 <code>LinkedHashSet</code>，如 <a class="TutorialLink" target="_top" href="set.html">The Set Interface</a> 部分所述。 </p>
+
+<p>
+本页的其余部分详细讨论了 <code>Map</code> 接口。但首先，这里有一些使用 JDK 8 聚合操作收集到 <code>Map</code> 的示例。对现实世界对象进行建模是面向对象编程中的常见任务，因此可以合理地认为某些程序可能会按部门对员工进行分组：
+</p>
+
+<div class="codeblock"><pre>
+// Group employees by department
+Map&lt;Department, List&lt;Employee&gt;&gt; byDept = employees.stream()
+.collect(Collectors.groupingBy(Employee::getDepartment));
+</pre></div>
+
+<p>
+或者按部门计算所有工资的总和：
+</p>
+
+
+<div class="codeblock"><pre>
+// Compute sum of salaries by department
+Map&lt;Department, Integer&gt; totalByDept = employees.stream()
+.collect(Collectors.groupingBy(Employee::getDepartment,
+Collectors.summingInt(Employee::getSalary)));
+</pre></div>
+
+<p>
+或者通过及格或不及格来对学生进行分组：
+</p>
+
+
+<div class="codeblock"><pre>
+// Partition students into passing and failing
+Map&lt;Boolean, List&lt;Student&gt;&gt; passingFailing = students.stream()
+.collect(Collectors.partitioningBy(s -&gt; s.getGrade()&gt;= PASS_THRESHOLD)); 
+</pre></div>
+
+<p>
+您还可以按城市分组：
+</p>
+
+<div class="codeblock"><pre>
+// Classify Person objects by city
+Map&lt;String, List&lt;Person&gt;&gt; peopleByCity
+         = personStream.collect(Collectors.groupingBy(Person::getCity));
+</pre></div>
+
+<p>
+或者将两个集合串联起来，按州和城市对人们进行分类：
+</p>
+
+<div class="codeblock"><pre>
+// Cascade Collectors 
+Map&lt;String, Map&lt;String, List&lt;Person&gt;&gt;&gt; peopleByStateAndCity
+  = personStream.collect(Collectors.groupingBy(Person::getState,
+  Collectors.groupingBy(Person::getCity)))
+</pre></div>
+
+<p>
+同样，这些只是如何使用新 JDK 8 API 的几个示例。有关 lambda 表达式和聚合操作的深入报道，请参阅标题为 <a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> 的课程。
+</p><!--
+<h2>Comparison to Hashtable</h2>
+<p>If you&#39;ve used <code>Hashtable</code>, you&#39;re already familiar with the general basics of <code>Map</code>. (Of course, <code>Map</code> is an interface, while <code>Hashtable</code> is a concrete implementation.) The following are the major differences:</p>
+<ul>
+<li><code>Map</code> provides <code>Collection</code> views instead of direct support for iteration via <code>Enumeration</code> objects. <code>Collection</code> views greatly enhance the expressiveness of the interface, as discussed later in this section.</li>
+<li><code>Map</code> allows you to iterate over keys, values, or key-value pairs; <code>Hashtable</code> does not provide the third option.</li>
+<li><code>Map</code> provides a safe way to remove entries in the midst of iteration; <code>Hashtable</code> did not.</li>
+</ul>
+<p>Finally, <code>Map</code> fixes a minor deficiency in the <code>Hashtable</code> interface. <code>Hashtable</code> has a method called <code>contains</code>, which returns <code>true</code> if the <code>Hashtable</code> contains a given <i>value</i>. Given its name, you&#39;d expect this method to return <code>true</code> if the <code>Hashtable</code> contained a given <i>key</i>, because the key is the primary access mechanism for a <code>Hashtable</code>. The <code>Map</code> interface eliminates this source of confusion by renaming the method <code>containsValue</code>. Also, this improves the interface&#39;s consistency &#151; <code>containsValue</code> parallels <code>containsKey</code>.</p>
+-->
+
+
+
+
+
+
+<h2>Map 接口基本操作</h2>
+<p><code>Map</code> 的基本操作(<code>put</code>，<code>get</code>，<code>containsKey</code>，<code>containsValue</code>，<code>size</code> 和 <code>isEmpty</code>)的行为与 <code>Hashtable</code> 中的对应行为完全相同。<a class="SourceLink" target="_blank" href="examples/Freq.java" onclick="showCode('../../displayCode.html', 'examples/Freq.java'); return false;"><code>下面的程序</code></a> 生成其参数列表中找到的单词的频率表。频率表将每个单词映射到它在参数列表中出现的次数。</p>
+<div class="codeblock"><pre>
+import java.util.*;
+
+public class Freq {
+    public static void main(String[] args) {
+        Map&lt;String, Integer&gt; m = new HashMap&lt;String, Integer&gt;();
+
+        // Initialize frequency table from command line
+        for (String a : args) {
+            Integer freq = m.get(a);
+            m.put(a, (freq == null) ? 1 : freq + 1);
+        }
+
+        System.out.println(m.size() + &quot; distinct words:&quot;);
+        System.out.println(m);
+    }
+}
+</pre></div>
+<p>关于这个程序唯一棘手的问题是 <code>put</code> 语句的第二个参数。该参数是一个条件表达式，如果该单词之前从未见过，则将频率设置为 1，如果已经见过该单词，则将其设置为当前值加 1。尝试使用以下命令运行此程序：</p>
+<div class="codeblock"><pre>
+java Freq if it is to be it is up to me to delegate
+</pre></div>
+<p>该程序产生以下输出。</p>
+<div class="codeblock"><pre>
+8 distinct words:
+{to=3, delegate=1, be=1, it=2, up=1, if=1, me=1, is=2}
+</pre></div>
+<p>假设您希望按字母顺序查看频率表。您所要做的就是将 <code>Map</code> 的实现类型从 <code>HashMap</code> 更改为 <code>TreeMap</code>。进行这种四个字符的更改会导致程序从同一命令行生成以下输出。</p>
+<div class="codeblock"><pre>
+8 distinct words:
+{be=1, delegate=1, if=1, is=2, it=2, me=1, to=3, up=1}
+</pre></div>
+<p>类似地，您可以通过将 map 的实现类型更改为 <code>LinkedHashMap</code>，使程序按照单词首次出现在命令行上的顺序打印频率表。这样做会产生以下输出。</p>
+<div class="codeblock"><pre>
+8 distinct words:
+{if=1, it=2, is=2, to=3, be=1, up=1, me=1, delegate=1}
+</pre></div>
+<p>这种灵活性有力地说明了基于接口的框架的强大功能。</p>
+<p>与 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html"><code>Set</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html"><code>List</code></a> 接口类似，<code>Map</code> 增强了对 <code>equals</code> 和 <code>hashCode</code> 方法的要求，以便可以比较两个 <code>Map</code> 对象的逻辑相等性，而不考虑它们的实现类型。如果两个 <code>Map</code> 实例表示相同的键值映射，则它们是相等的。</p>
+<p>按照惯例，所有通用 <code>Map</code> 实现都提供构造函数，这些构造函数接受 <code>Map</code> 对象并初始化新的 <code>Map</code> 以包含指定的 <code>Map</code> 中所有的键值映射。此标准 <code>Map</code> 转换构造函数完全类似于标准 <code>Collection</code> 构造函数：它允许调用者创建最初所需实现类型的 <code>Map</code> 包含另一个 <code>Map</code> 中的所有映射，无论其他 <code>Map</code> 的实现类型如何。例如，假设您有 <code>Map</code>，名为 <code>m</code>。以下单行创建一个新的 <code>HashMap</code>，最初包含与 <code>m</code> 相同的所有键值映射。</p>
+<div class="codeblock"><pre>
+Map&lt;K, V&gt; copy = new HashMap&lt;K, V&gt;(m);
+</pre></div>
+<h2>Map 接口批量操作</h2>
+<p><code>clear</code> 操作完全按照您的想法执行：它从 <code>Map</code> 中移除所有映射。<code>putAll</code> 操作是 <code>Collection</code> 接口的 <code>addAll</code> 操作的 <code>Map</code> 类似物。除了明显使用将一个 <code>Map</code> 转储到另一个之外，它还有第二个更微妙的用途。假设 <code>Map</code> 用于表示属性 - 值对的集合；<code>putAll</code> 操作与 <code>Map</code> 转换构造函数结合使用，提供了一种使用默认值实现属性映射创建的简洁方法。以下是演示此技术的静态工厂方法。</p>
+<div class="codeblock"><pre>
+static &lt;K, V&gt; Map&lt;K, V&gt; newAttributeMap(Map&lt;K, V&gt;defaults, Map&lt;K, V&gt; overrides) {
+    Map&lt;K, V&gt; result = new HashMap&lt;K, V&gt;(defaults);
+    result.putAll(overrides);
+    return result;
+}
+</pre></div>
+<h2>集合视图</h2>
+<p><code>Collection</code> 视图方法允许以下列三种方式将 <code>Map</code> 视为 <code>Collection</code>：</p>
+<ul>
+<li><code>keySet</code>  <code>Map</code> 中包含的键的 <code>Set</code>。</li>
+<li><code>values</code>  <code>Map</code> 中包含的值的 <code>Collection</code>。此 <code>Collection</code> 不是 <code>Set</code>，因为多个键可以映射到相同的值。</li>
+<li><code>entrySet</code>  <code>Map</code> 中包含的键值对的 <code>Set</code>。<code>Map</code> 接口提供了一个名为 <code>Map.Entry</code> 的小型嵌套接口，这是 <code>Set</code> 中元素的类型。</li>
+</ul>
+<p><code>Collection</code> 视图提供 <i>唯一</i> 方法迭代 <code>Map</code>。此示例说明了使用 <code>for-each</code> 构造迭代 <code>Map</code> 中的键的标准惯用法：</p>
+<div class="codeblock"><pre>
+for (KeyType key : m.keySet())
+    System.out.println(key);
+</pre></div>
+<p>及使用 <code>iterator</code>：</p>
+<div class="codeblock"><pre>
+// Filter a map based on some 
+// property of its keys.
+for (Iterator&lt;Type&gt; it = m.keySet().iterator(); it.hasNext(); )
+    if (it.next().isBogus())
+        it.remove();
+</pre></div>
+<p>迭代值的习惯用法类似。以下是迭代键值对的习惯用法。</p>
+<div class="codeblock"><pre>
+for (Map.Entry&lt;KeyType, ValType&gt; e : m.entrySet())
+    System.out.println(e.getKey() + ": " + e.getValue());
+</pre></div>
+<p>起初，很多人担心这些习惯用法可能会很慢，因为每次调用 <code>Collection</code> 视图操作时，<code>Map</code> 都必须创建一个新的 <code>Collection</code> 实例。请不用担心：每次要求给定 <code>Collection</code> 视图时，<code>Map</code> 始终会返回相同的对象。这正是 <code>java.util</code> 中所有 <code>Map</code> 实现的功能。</p>
+<p>使用所有三个 <code>Collection</code> 视图，调用 <code>Iterator</code> 的 <code>remove</code> 操作将从后备 <code>Map</code> 中移除关联的条目，假设后备 <code>Map</code> 支持元素移除。这由前面的过滤习惯用法说明。</p>
+<p>使用 <code>entrySet</code> 视图，还可以通过在迭代期间调用 <code>Map.Entry</code> 的 <code>setValue</code> 方法来更改与键关联的值(再次，假设 <code>Map</code> 支持值修改)。请注意，这些是在迭代期间修改 <code>Map</code> 的 <i>only (唯一)</i> 安全方法；如果在迭代进行过程中以任何其他方式修改基础 <code>Map</code>，则行为未指定。</p>
+<p><code>Collection</code> 视图支持以多种形式移除元素 <code>remove</code>，<code>removeAll</code>，<code>retainAll</code> 和 <code>clear</code> 操作，以及 <code>Iterator.remove</code> 操作。(再次，这假设后备 <code>Map</code> 支持元素移除。)</p>
+<p>在任何情况下，<code>Collection</code> 视图 <i>都不支持</i> 元素添加。对于 <code>keySet</code> 和 <code>values</code> 视图没有任何意义，并且 <code>entrySet</code> 视图没有必要，因为后备 <code>Map</code> 的 <code>put</code> 和 <code>putAll</code> 方法提供相同的功能。</p>
+<h2>集合视图的花哨用途：地图代数</h2>
+<p>当应用于 <code>Collection</code> 视图时，批量操作(<code>containsAll</code>，<code>removeAll</code> 和 <code>retainAll</code>)是令人惊讶的有效工具。对于初学者，假设您想知道一个 <code>Map</code> 是否是另一个的子图也就是说，第一个 <code>Map</code> 是否包含第二个中的所有键值映射。以下习惯用法可以解决这个问题。</p>
+<div class="codeblock"><pre>
+if (m1.entrySet().containsAll(m2.entrySet())) {
+    ...
+}
+</pre></div>
+<p>沿着类似的行，假设您想知道两个 <code>Map</code> 对象是否包含所有相同键的映射。</p>
+<div class="codeblock"><pre>
+if (m1.keySet().equals(m2.keySet())) {
+    ...
+}
+</pre></div>
+<p>假设您有一个 <code>Map</code> 表示一组属性 - 值对，两个 <code>Set</code> 表示必需的属性和允许的属性。(允许的属性包括必需的属性。)以下代码段确定属性映射是否符合这些约束，如果不符合则打印详细的错误消息。</p>
+<div class="codeblock"><pre>
+static &lt;K, V&gt; boolean validate(Map&lt;K, V&gt; attrMap, Set&lt;K&gt; requiredAttrs, Set&lt;K&gt;permittedAttrs) {
+    boolean valid = true;
+    Set&lt;K&gt; attrs = attrMap.keySet();
+
+    if (! attrs.containsAll(requiredAttrs)) {
+        Set&lt;K&gt; missing = new HashSet&lt;K&gt;(requiredAttrs);
+        missing.removeAll(attrs);
+        System.out.println("Missing attributes: " + missing);
+        valid = false;
+    }
+    if (! permittedAttrs.containsAll(attrs)) {
+        Set&lt;K&gt; illegal = new HashSet&lt;K&gt;(attrs);
+        illegal.removeAll(permittedAttrs);
+        System.out.println("Illegal attributes: " + illegal);
+        valid = false;
+    }
+    return valid;
+}
+</pre></div>
+<p>假设您想知道两个 <code>Map</code> 对象共有的所有键。</p>
+<div class="codeblock"><pre>
+Set&lt;KeyType&gt;commonKeys = new HashSet&lt;KeyType&gt;(m1.keySet());
+commonKeys.retainAll(m2.keySet());
+</pre></div>
+<p>类似的习惯用法可以为您提供共同的值。</p>
+<p>到目前为止提出的所有习惯用法都是非破坏性的；也就是说，他们不会修改后备 <code>Map</code>。这里有一些会。假设您要移除一个 <code>Map</code> 与另一个键共有的所有键值对。</p>
+<div class="codeblock"><pre>
+m1.entrySet().removeAll(m2.entrySet());
+</pre></div>
+<p>假设您要从一个 <code>Map</code> 中移除在另一个中具有映射的所有键。</p>
+<div class="codeblock"><pre>
+m1.keySet().removeAll(m2.keySet());
+</pre></div>
+<p>在同一批量操作中开始混合键和值时会发生什么？假设您有一个 <code>Map</code>，<code>managers</code>，它将公司中的每个员工映射到员工的经理。我们会故意模糊键和值对象的类型。没关系，只要它们是相同的。现在假设您想知道所有“个人贡献者”(或非管理者)是谁。以下代码段将准确告诉您您想要了解的内容。</p>
+<div class="codeblock"><pre>
+Set&lt;Employee&gt; individualContributors = new HashSet&lt;Employee&gt;(managers.keySet());
+individualContributors.removeAll(managers.values());
+</pre></div>
+<p>假设您要解雇所有直接向某位经理 Simon 报告的员工。</p>
+<div class="codeblock"><pre>
+Employee simon = ... ;
+managers.values().removeAll(Collections.singleton(simon));
+</pre></div>
+<p>请注意，此习惯用法使用 <code>Collections.singleton</code>，这是一个静态工厂方法，它返回带有单个指定元素的不可变 <code>Set</code>。</p>
+<p>一旦您完成了这项工作，您可能会有一大堆员工，他们的经理不再为公司工作(如果任何西蒙的直接报告本身就是经理)。以下代码将告诉您哪些员工拥有不再为公司工作的经理。</p>
+<div class="codeblock"><pre>
+Map&lt;Employee, Employee&gt; m = new HashMap&lt;Employee, Employee&gt;(managers);
+m.values().removeAll(managers.keySet());
+Set&lt;Employee&gt; slackers = m.keySet();
+</pre></div>
+<p>这个例子有点棘手。首先，它创建 <code>Map</code> 的临时副本，并从临时副本中移除其(manager)值是原始 <code>Map</code> 中的键的所有条目。请记住，原始 <code>Map</code> 为每位员工都有一个条目。因此，临时 <code>Map</code> 中的其余条目包含原始 <code>Map</code> 中的所有条目，其(经理)值不再是雇员。因此，临时副本中的 key 恰好代表了我们正在寻找的员工。</p>
+<p>还有很多像本节所包含的那样的习惯用法，但是将它们全部列出是不实际和繁琐的。一旦您掌握了它的窍门，当您需要它的时候，找到一个合适的并不难。</p>
+<h2>Multimaps</h2>
+<p><i>multimap</i> 类似于 <code>Map</code>，但它可以将每个键映射到多个值。Java Collections Framework 不包含多重映射的接口，因为它们不常用。将值 <code>List</code> 实例的 <code>Map</code> 用作 multimap，这是一件相当简单的事情。在下一个代码示例中演示了此技术，该示例读取每行包含一个单词(全部小写)的单词列表，并打印出符合大小标准的所有 anagram 组。<i>anagram group</i> 是一堆单词，所有单词都包含完全相同的字母，但顺序不同。该程序在命令行上有两个参数：(1)字典文件的名称和(2)要打印的 anagram 组的最小大小。不打印包含少于指定最小值的单词组的 Anagram 组。</p>
+<p>找到 anagram 组有一个标准技巧：对于字典中的每个单词，按字母顺序排列单词中的字母(即将单词的字母重新排序为字母顺序)并将条目放入 multimap，将字母顺序排列的单词映射到原始单词字。例如，单词 <em>bad</em> 会产生 <em>abd</em> 映射 <em>bad</em> 的条目以放入 multimap。片刻的反射将显示任何给定键映射形成 anagram 组的所有单词。迭代 multimap 中的键，打印出满足大小约束的每个 anagram 组是一件简单的事情。</p>
+<p>
+<a class="SourceLink" target="_blank" href="examples/Anagrams.java" onclick="showCode('../../displayCode.html', 'examples/Anagrams.java'); return false;"><code>以下程序</code></a>是该技术的直接实现。</p>
+<div class="codeblock"><pre>
+import java.util.*;
+import java.io.*;
+
+public class Anagrams {
+    public static void main(String[] args) {
+        int minGroupSize = Integer.parseInt(args[1]);
+
+        // Read words from file and put into a simulated multimap
+        Map&lt;String, List&lt;String&gt;&gt; m = new HashMap&lt;String, List&lt;String&gt;&gt;();
+
+        try {
+            Scanner s = new Scanner(new File(args[0]));
+            while (s.hasNext()) {
+                String word = s.next();
+                String alpha = alphabetize(word);
+                List&lt;String&gt; l = m.get(alpha);
+                if (l == null)
+                    m.put(alpha, l=new ArrayList&lt;String&gt;());
+                l.add(word);
+            }
+        } catch (IOException e) {
+            System.err.println(e);
+            System.exit(1);
+        }
+
+        // Print all permutation groups above size threshold
+        for (List&lt;String&gt; l : m.values())
+            if (l.size() &gt;= minGroupSize)
+                System.out.println(l.size() + &quot;: &quot; + l);
+    }
+
+    private static String alphabetize(String s) {
+        char[] a = s.toCharArray();
+        Arrays.sort(a);
+        return new String(a);
+    }
+}
+</pre></div>
+<p>在 173,000 字的字典文件上运行此程序，最小 anagram 组大小为 8 会产生以下输出。</p>
+<div class="codeblock"><pre>
+9: [estrin, inerts, insert, inters, niters, nitres, sinter,
+     triens, trines]
+8: [lapse, leaps, pales, peals, pleas, salep, sepal, spale]
+8: [aspers, parses, passer, prases, repass, spares, sparse,
+     spears]
+10: [least, setal, slate, stale, steal, stela, taels, tales,
+      teals, tesla]
+8: [enters, nester, renest, rentes, resent, tenser, ternes,
+     treens]
+8: [arles, earls, lares, laser, lears, rales, reals, seral]
+8: [earings, erasing, gainers, reagins, regains, reginas,
+     searing, seringa]
+8: [peris, piers, pries, prise, ripes, speir, spier, spire]
+12: [apers, apres, asper, pares, parse, pears, prase, presa,
+      rapes, reaps, spare, spear]
+11: [alerts, alters, artels, estral, laster, ratels, salter,
+      slater, staler, stelar, talers]
+9: [capers, crapes, escarp, pacers, parsec, recaps, scrape,
+     secpar, spacer]
+9: [palest, palets, pastel, petals, plates, pleats, septal,
+     staple, tepals]
+9: [anestri, antsier, nastier, ratines, retains, retinas,
+     retsina, stainer, stearin]
+8: [ates, east, eats, etas, sate, seat, seta, teas]
+8: [carets, cartes, caster, caters, crates, reacts, recast,
+     traces]
+
+</pre></div>
+<p>许多这些词似乎有点虚伪，但这不是程序的错；他们在字典文件中。这是我们使用的 <a class="SourceLink" target="_blank" href="examples/dictionary.txt" onclick="showCode('../../displayCode.html', 'examples/dictionary.txt'); return false;"><code>dictionary file</code></a>。它源自 Public Domain ENABLE 基准参考词列表。
+</p>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="deque.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="order.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> The Deque Interface
+        <br /><b>Next page:</b> Object Ordering
+    </div>
+</body>
+</html> 

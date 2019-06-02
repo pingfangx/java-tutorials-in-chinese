@@ -1,0 +1,1180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>创建可扩展的应用程序(Java™ 教程-Java Tutorials 中文版&gt;扩展机制&gt;创建和使用扩展)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This Java tutorial describes how to create and use extensions or optional packages and make them secure" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java extensions, java optional packages" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">创建和使用扩展</a></div>
+<div class="linkAHEAD"><a href="install.html">安装型扩展</a></div>
+<div class="linkAHEAD"><a href="download.html">下载型扩展</a></div>
+<div class="linkAHEAD"><a href="load.html">理解扩展类加载</a></div>
+<div class="nolinkAHEAD">创建可扩展的应用程序</div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> The Extension Mechanism
+        <br /><b>Lesson:</b> Creating and Using Extensions
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">扩展机制</a>&gt;<a href="index.html" target="_top">创建和使用扩展</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="load.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../security/index.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>创建可扩展的应用程序</h1></div>
+            <div id="PageContent">
+
+
+<p>涵盖以下主题：</p>
+
+<ul>
+  <li><a href="#introduction">介绍</a></li>
+  <li><a href="#dictionary-service-example">字典服务示例</a></li>
+  <li><a href="#running-the-dictionaryservicedemo-sample">运行 DictionaryServiceDemo 示例</a></li>
+  <li><a href="#compiling-and-running-the-dictionaryservicedemo-sample">编译并运行 DictionaryServiceDemo 示例</a></li>
+  <li><a href="#understanding-the-dictionaryservicedemo-sample">理解 DictionaryServiceDemo 示例</a>
+    <ol>
+      <li><a href="#define-the-service-provider-interface">定义服务提供者接口</a></li>
+      <li><a href="#definte-the-service-that-retrieves-service-provider-implementations">定义获取服务提供者实现的服务</a>
+        <ul>
+          <li><a href="#singleton">单例设计模式</a></li>
+        </ul>
+      </li>
+      <li><a href="#implement-the-service-provider">实现服务提供者</a></li>
+      <li><a href="#register-service-providers">注册服务提供者</a></li>
+      <li><a href="#create-a-client-that-uses-the-service-and-service-providers">创建使用服务和服务提供者的客户端</a></li>
+      <li><a href="#package-in-jar-files">在 JAR 文件中打包服务提供者，服务和服务客户​​端</a>
+        <ul>
+          <li><a href="#packaging-service-providers-in-jar-files">将服务提供者打包到 JAR 文件中</a></li>
+          <li><a href="#packaging-the-dictionary-service-in-a-jar-file">将字典 SPI 和字典服务打包在 JAR 文件中</a></li>
+          <li><a href="#packaging-the-client-in-a-jar-file">将客户端打包在 JAR 文件中</a></li>
+        </ul>
+      </li>
+      <li><a href="#run-the-client">运行客户端</a></li>
+    </ol>
+  </li>
+  <li><a href="#the-serviceloader-class">ServiceLoader 类</a></li>  
+  <li><a href="#limitations-of-the-service-loader-api">ServiceLoader API 的局限性</a></li>
+  <li><a href="#summary">总结</a></li>  
+</ul>
+
+<h2><a name="introduction">介绍</a></h2>
+
+<p><i>extensible (可扩展)</i> 应用程序是您可以在不修改其原始代码库的情况下扩展的应用程序。您可以使用新的插件或模块增强其功能。开发人员，软件供应商和客户可以通过将新的 Java Archive(JAR)文件添加到应用程序类路径或特定于应用程序的扩展目录中来添加新功能或应用程序编程接口(API)。 </p>
+
+<p>本节介绍如何使用可扩展服务创建应用程序，使您或其他人能够提供不需要修改原始应用程序的服务实现。通过设计可扩展的应用程序，您可以在不更改核心应用程序的情况下提供升级或增强产品特定部分的方法。 </p>
+
+<p>可扩展应用程序的一个示例是允许终端用户添加新词典或拼写检查器的单词处理器。在此示例中，单词处理器提供字典或拼写功能，其他开发人员甚至客户可以通过提供他们自己的功能实现来扩展。</p>
+
+<p>以下是了解可扩展应用程序的重要术语和定义：</p>
+
+<dl>
+
+  <dt>服务</dt>
+  <dd>一组编程接口和类，提供对某些特定应用程序功能或特性的访问。该服务可以定义功能的接口和获取实现的方法。在单词处理器示例中，字典服务可以定义获取字典和单词定义的方法，但它不实现底层特征集。相反，它依赖于 <i>service provider (服务提供者)</i> 来实现该功能。</dd>
+  
+  <dt>服务提供者接口(SPI)</dt>
+  <dd>服务定义的公共接口和抽象类的集合。SPI 定义了应用程序可用的类和方法。</dd>
+  
+  <dt>服务提供者</dt>
+  <dd>实现 SPI。具有可扩展服务的应用程序使您，供应商和客户能够在不修改原始应用程序的情况下添加服务提供者。</dd>
+  
+</dl>
+
+
+<h2><a name="dictionary-service-example">字典服务示例</a></h2>
+
+<p>考虑如何在单词处理器或编辑器中设计字典服务。一种方法是定义由名为 <code>DictionaryService</code> 的类和名为 <code>Dictionary</code> 的服务提供者接口表示的服务。<code>DictionaryService</code> 提供单例 <code>DictionaryService</code> 对象。(有关详细信息，请参阅 <a href="#singleton">The Singleton Design Pattern</a> 一节。)此对象从 <code>Dictionary</code> 提供者中获取单词的定义。字典服务客户端 - 您的应用程序代码 - 获取此服务的实例，该服务将搜索，实例化和使用 <code>Dictionary</code> 服务提供者。</p>
+
+<p>虽然单词处理开发人员很可能会提供原始产品的基本通用字典，但客户可能需要专门的字典，可能包含法律或技术术语。理想情况下，客户可以创建或购买新词典并将其添加到现有应用程序中。</p>
+
+
+
+<p>
+<code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo</a></code> 示例演示如何实现 <code>Dictionary</code> 服务，创建添加其他词典的 <code>Dictionary</code> 服务提供者，以及创建一个简单的 <code>Dictionary</code> 服务客户端来测试服务。此示例包装在 zip 文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 中，包含以下文件：
+
+</p>
+
+<ul>
+  <li>
+<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/build.xml" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/build.xml'); return false;"><code><code>build.xml</code></code></a>  </li>
+  
+  <li><code>DictionaryDemo</code>
+    <ul>
+      <li>
+<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryDemo/build.xml" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryDemo/build.xml'); return false;"><code><code>build.xml</code></code></a>      </li>
+      <li><code>build</code></li>
+      <li><code>dist</code>
+        <ul>
+          <li><code>DictionaryDemo.jar</code></li>
+        </ul>
+      </li>
+      <li><code>src</code>
+        <ul>
+          <li><code>dictionary</code>
+            <ul>
+              <li>
+<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryDemo/src/dictionary/DictionaryDemo.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryDemo/src/dictionary/DictionaryDemo.java'); return false;"><code><code>DictionaryDemo.java</code></code></a>              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  
+    <li><code>DictionaryServiceProvider</code>
+    <ul>
+      <li>
+<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryDemo/build.xml" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryDemo/build.xml'); return false;"><code><code>build.xml</code></code></a>      </li>
+      <li><code>build</code></li>
+      <li><code>dist</code>
+        <ul>
+          <li><code>DictionaryServiceProvider.jar</code></li>
+        </ul>
+      </li>
+      <li><code>src</code>
+        <ul>
+          <li><code>dictionary</code>
+            <ul>
+              <li>
+<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/DictionaryService.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/DictionaryService.java'); return false;"><code><code>DictionaryService.java</code></code></a>              </li>
+              <li><code>spi</code>
+                <ul>
+                  <li>
+<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/spi/Dictionary.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/spi/Dictionary.java'); return false;"><code><code>Dictionary.java</code></code></a>                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code>ExtendedDictionary</code>
+    <ul>
+      <li>
+<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/ExtendedDictionary/build.xml" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/ExtendedDictionary/build.xml'); return false;"><code><code>build.xml</code></code></a>      </li>
+      <li><code>build</code></li>
+      <li><code>dist</code>
+        <ul>
+          <li><code>ExtendedDictionary.jar</code></li>
+        </ul>
+      </li>
+      <li><code>src</code>
+        <ul>
+          <li><code>dictionary</code>
+            <ul>
+              <li>
+<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/ExtendedDictionary/src/dictionary/ExtendedDictionary.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/ExtendedDictionary/src/dictionary/ExtendedDictionary.java'); return false;"><code><code>ExtendedDictionary.java</code></code></a>              </li>
+            </ul>
+          </li>
+          <li><code>META-INF</code>
+            <ul>
+              <li><code>services</code>
+                <ul>
+                  <li>
+<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/ExtendedDictionary/src/META-INF/services/dictionary.spi.Dictionary" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/ExtendedDictionary/src/META-INF/services/dictionary.spi.Dictionary'); return false;"><code><code>dictionary.spi.Dictionary</code></code></a>                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code>GeneralDictionary</code>
+    <ul>
+      <li>
+<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/GeneralDictionary/build.xml" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/GeneralDictionary/build.xml'); return false;"><code><code>build.xml</code></code></a>      </li>
+      <li><code>build</code></li>
+      <li><code>dist</code>
+        <ul>
+          <li><code>GeneralDictionary.jar</code></li>
+        </ul>
+      </li>
+      <li><code>src</code>
+        <ul>
+          <li><code>dictionary</code>
+            <ul>
+              <li>
+<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/GeneralDictionary/src/dictionary/GeneralDictionary.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/GeneralDictionary/src/dictionary/GeneralDictionary.java'); return false;"><code><code>GeneralDictionary.java</code></code></a>              </li>
+            </ul>
+          </li>
+          <li><code>META-INF</code>
+            <ul>
+              <li><code>services</code>
+                <ul>
+                  <li>
+<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/GeneralDictionary/src/META-INF/services/dictionary.spi.Dictionary" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/GeneralDictionary/src/META-INF/services/dictionary.spi.Dictionary'); return false;"><code><code>dictionary.spi.Dictionary</code></code></a>                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>注意</strong>:<code>build</code> 目录包含同一级别的 <code>src</code> 目录中包含的 Java 源文件的已编译类文件。</p>
+
+<h2><a name="running-the-dictionaryservicedemo-sample">运行 DictionaryServiceDemo 示例</a></h2>
+
+<p>由于 zip 文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 包含已编译的类文件，因此您可以通过以下步骤将此文件解压缩到您的计算机并运行示例而不用编译它：</p>
+
+<ol>
+  <li>                 
+    <p>
+    下载并解压缩示例代码：将文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 下载并解压缩到您的计算机。这些步骤假设您将此文件的内容解压缩到目录 <code>C:\DictionaryServiceDemo</code> 中。
+
+    </p>
+  </li>
+  
+  <li>
+    <p>将当前目录更改为 <code>C:\DictionaryServiceDemo\DictionaryDemo</code>，然后执行步骤 <a href="#run-the-client">Run the Client</a>。</p>
+  </li>
+</ol>
+  
+
+
+<h2><a name="compiling-and-running-the-dictionaryservicedemo-sample">编译并运行 DictionaryServiceDemo 示例</a></h2>
+
+
+
+<p><code>DictionaryServiceDemo</code> 示例包含 Apache Ant 构建文件，这些文件都名为 <code>build.xml</code>。以下步骤说明如何使用 Apache Ant 编译，构建和运行 <code>DictionaryServiceDemo</code> 示例：</p>
+
+<ol>
+
+  <li><p>安装 Apache Ant：转到以下链接下载并安装 Apache Ant：</p>
+  
+  <p><code><a href="http://ant.apache.org/">http://ant.apache.org/</a></code></p>
+  
+  <p>确保包含 Apache Ant 可执行文件的目录位于 <code>PATH</code> 环境变量中，以便可以从任何目录运行它。此外，确保您的 JDK 的 <code>bin</code> 目录，其中包含 <code>java</code> 和 <code>javac</code> 可执行文件(<code>java.exe</code> 和 <code>javac.exe</code> 用于 Microsoft Windows)。在您的 <code>PATH</code> 环境变量中。有关设置 <code>PATH</code> 环境变量的信息，请参见 <a class="TutorialLink" target="_top" href="../../essential/environment/paths.html">PATH and CLASSPATH</a>。</p></li>
+  
+  <li>
+    <p>
+    下载并解压缩示例代码：将文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 下载并解压缩到您的计算机。这些步骤假定您将此文件的内容解压缩到目录 <code>C:\DictionaryServiceDemo</code> 中。
+  
+    </p>
+  </li>
+  
+  <li>
+    <p>编译代码：将当前目录更改为 <code>C:\DictionaryServiceDemo</code> 并运行以下命令：</p>
+  
+    <pre class="codeblock">ant compile-all</pre>
+  
+    <p>此命令编译目录 <code>DictionaryDemo</code>，<code>DictionaryServiceProvider</code>，<code>ExtendedDictionary</code> 以及 <code>GeneralDictionary</code> 中包含的 <code>src</code> 目录中的源代码，并将生成的 <code>class</code> 文件放在相应的 <code>build</code> 目录中。</p>
+  </li>
+  
+  <li>
+    <p>将已编译的 Java 文件打包到 JAR 文件中：确保当前目录为 <code>C:\DictionaryServiceDemo</code> 并运行以下命令：</p>
+  
+    <pre class="codeblock">ant jar</pre>
+  
+    <p>此命令将创建以下 JAR 文件：</p>
+    
+    <ul>
+      <li><code>DictionaryDemo/dist/DictionaryDemo.jar</code></li>
+      <li><code>DictionaryServiceProvider/dist/DictionaryServiceProvider.jar</code></li>
+      <li><code>GeneralDictionary/dist/GeneralDictionary.jar</code></li>
+      <li><code>ExtendedDictionary/dist/ExtendedDictionary.jar</code></li>
+    </ul>
+  </li>
+  
+  <li>
+    <p>运行示例：确保包含 <code>java</code> 可执行文件的目录位于 <code>PATH</code> 环境变量中。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../essential/environment/paths.html">PATH and CLASSPATH</a>。</p>
+     
+    <p>将当前目录更改为 <code>C:\DictionaryServiceDemo\DictionaryDemo</code> 并运行以下命令：</p>
+    
+    <pre class="codeblock">ant run</pre>
+    
+    <p>该示例打印以下内容：</p>
+    
+    <p><code>book: a set of written or printed pages, usually bound with a protective cover<br/>editor: a person who edits<br/>xml: a document standard often used in web services, among other things<br/>REST: an architecture style for creating, reading, updating, and deleting data that attempts to use the common vocabulary of the HTTP protocol; Representational State Transfer</code></p>
+    
+  </li>
+</ol>
+
+<h2><a name="understanding-the-dictionaryservicedemo-sample">理解 DictionaryServiceDemo 示例</a></h2>
+
+<p>
+    以下步骤说明如何重新创建文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 的内容。这些步骤向您展示了示例的工作原理以及如何运行它。
+ 
+</p>
+
+<h3><a name="define-the-service-provider-interface">1. 定义服务提供者接口</a></h3>
+
+<p><code>DictionaryServiceDemo</code> 示例定义了一个 SPI，<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/spi/Dictionary.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/spi/Dictionary.java'); return false;"><code><code>Dictionary.java</code></code></a> 接口。它只包含一种方法：</p>
+
+<pre class="codeblock">
+
+package dictionary.spi;
+
+public interface Dictionary {
+    public String getDefinition(String word);
+}
+</pre>
+
+<p>该示例将已编译的类文件存储在目录 <code>DictionaryServiceProvider/build</code> 中。</p>
+
+
+<h3><a name="definte-the-service-that-retrieves-service-provider-implementations">2. 定义获取服务提供者实现的服务</a></h3>
+
+<p><a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/DictionaryService.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/DictionaryService.java'); return false;"><code><code>DictionaryService.java</code></code></a> 类代表字典服务客户端加载和访问可用的 <code>Dictionary</code> 服务提供者：</p> 
+
+<pre class="codeblock">
+
+package dictionary;
+
+import dictionary.spi.Dictionary;
+import java.util.Iterator;
+import java.util.ServiceConfigurationError;
+import java.util.ServiceLoader;
+
+public class DictionaryService {
+
+    private static DictionaryService service;
+    private ServiceLoader&lt;Dictionary&gt; loader;
+
+    private DictionaryService() {
+        loader = ServiceLoader.load(Dictionary.class);
+    }
+
+    public static synchronized DictionaryService getInstance() {
+        if (service == null) {
+            service = new DictionaryService();
+        }
+        return service;
+    }
+
+
+    public String getDefinition(String word) {
+        String definition = null;
+
+        try {
+            Iterator&lt;Dictionary&gt; dictionaries = loader.iterator();
+            while (definition == null &amp;&amp; dictionaries.hasNext()) {
+                Dictionary d = dictionaries.next();
+                definition = d.getDefinition(word);
+            }
+        } catch (ServiceConfigurationError serviceError) {
+            definition = null;
+            serviceError.printStackTrace();
+
+        }
+        return definition;
+    }
+}
+</pre>
+
+<p>该示例将已编译的类文件存储在目录 <code>DictionaryServiceProvider/build</code> 中。</p>
+
+
+<p><code>DictionaryService</code> 类实现单例设计模式。这意味着只创建了 <code>DictionaryService</code> 类的单个实例。有关详细信息，请参阅 <a href="#singleton">The Singleton Design Pattern</a> 部分。</p>
+
+<p><code>DictionaryService</code> 类是字典服务客户端使用任何已安装的 <code>Dictionary</code> 服务提供者的入口点。使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html#load-java.lang.Class-"><code>ServiceLoader.load</code></a> 方法获取私有静态成员 <code>DictionaryService.service</code>，即单例服务入口点。然后应用程序可以调用 <code>getDefinition</code> 方法，该方法迭代可用的 <code>Dictionary</code> 提供程序，直到找到目标单词。如果没有 <code>Dictionary</code> 实例包含指定的单词定义，则 <code>getDefinition</code> 方法返回 null。</p>
+
+<p>字典服务使用 <code>ServiceLoader.load</code> 方法来查找目标类。SPI 由接口 <code>dictionary.spi.Dictionary</code> 定义，因此该示例使用此类作为加载方法的参数。默认的 load 方法使用默认的类加载器搜索应用程序类路径。</p>
+
+<p>但是，如果您愿意，可以使用此方法的重载版本来指定自定义类加载器。这使您可以进行更复杂的类搜索。例如，一个特别热心的程序员可能会创建一个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html"><code>ClassLoader</code></a> 实例，该实例可以在特定于应用程序的子目录中搜索，该子目录包含在运行时添加的提供程序 JAR。结果是一个不需要重新启动来访问新提供程序类的应用程序。</p>
+
+<p>存在此类的加载器后，您可以使用其迭代器方法来访问和使用它找到的每个提供程序。<code>getDefinition</code> 方法使用 <code>Dictionary</code> 迭代器遍历提供程序，直到找到指定单词的定义。迭代器方法缓存 <code>Dictionary</code> 实例，因此连续调用几乎不需要额外的处理时间。如果自上次调用以来已将新提供程序置于服务中，则迭代器方法会将它们添加到列表中。</p>
+
+<p><a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryDemo/src/dictionary/DictionaryDemo.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryDemo/src/dictionary/DictionaryDemo.java'); return false;"><code><code>DictionaryDemo.java</code></code></a> 类使用此服务。要使用该服务，应用程序将获取 <code>DictionaryService</code> 实例并调用 <code>getDefinition</code> 方法。如果定义可用，应用程序将打印它。如果定义不可用，应用程序将打印一条消息，指出没有可用的字典包含该单词。</p>
+
+ 
+<h4><a name="singleton">单例设计模式</a></h4>
+
+<p>设计模式是软件设计中常见问题的通用解决方案。我们的想法是将解决方案转换为代码，并且该代码可以应用于发生问题的不同情况。单例模式描述了一种技术，以确保只创建一个类的单个实例。本质上，该技术采用以下方法：不要让类外的任何人创建对象的实例。</p>
+
+<p>例如，<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/DictionaryService.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/DictionaryService.java'); return false;"><code><code>DictionaryService</code></code></a> 类实现单例模式，如下所示：</p>
+
+<ul>
+  
+  <li>将 <code>DictionaryService</code> 构造函数声明为 <code>private</code>，这会阻止除 <code>DictionaryService</code> 之外的所有其他类创建它的实例。</li>
+  
+  <li>将 <code>DictionaryService</code> 成员变量 <code>service</code> 定义为 <code>static</code>，这样可确保只存在 <code>DictionaryService</code> 的一个实例。</li>
+  
+  <li>定义方法 <code>getInstance</code>，它允许其他类控制访问 <code>DictionaryService</code> 成员变量 <code>service</code>。</li>
+</ul>  
+
+<h3><a name="implement-the-service-provider">3. 实现服务提供者</a></h3>
+
+<p>要提供此服务，您必须创建 <a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/spi/Dictionary.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/spi/Dictionary.java'); return false;"><code><code>Dictionary.java</code></code></a> 实现。为了简单起见，创建一个只定义几个单词的通用字典。您可以使用数据库，一组属性文件或任何其他技术来实现字典。演示提供者模式的最简单方法是在单个文件中包含所有单词和定义。 </p>
+
+<p>以下代码显示了 <code>Dictionary</code> SPI 的实现，<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/GeneralDictionary/src/dictionary/GeneralDictionary.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/GeneralDictionary/src/dictionary/GeneralDictionary.java'); return false;"><code><code>GeneralDictionary.java</code></code></a> 类。请注意，它提供了无参数构造函数，并实现了 SPI 定义的 <code>getDefinition</code> 方法。</p>
+
+<pre class="codeblock">
+
+package dictionary;
+
+import dictionary.spi.Dictionary;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class GeneralDictionary implements Dictionary {
+
+    private SortedMap&lt;String, String&gt; map;
+    
+    public GeneralDictionary() {
+        map = new TreeMap&lt;String, String&gt;();
+        map.put(
+            &quot;book&quot;,
+            &quot;a set of written or printed pages, usually bound with &quot; +
+                &quot;a protective cover&quot;);
+        map.put(
+            &quot;editor&quot;,
+            &quot;a person who edits&quot;);
+    }
+
+    @Override
+    public String getDefinition(String word) {
+        return map.get(word);
+    }
+
+}
+</pre>
+
+<p>该示例将已编译的类文件存储在目录 <code>GeneralDictionary/build</code> 中。<strong>注意</strong>:您必须在类 <code>GeneralDictionary</code> 之前编译类 <code>dictionary.DictionaryService</code> 和 <code>dictionary.spi.Dictionary</code>。</p>
+
+<p>此示例的 <code>GeneralDictionary</code> 提供者仅定义了两个单词：<i>book</i> 和 <i>editor</i>。显然，更可用的字典将提供更实质的常用词汇表。</p>
+
+<p>为了演示多个提供者如何实现相同的 SPI，以下代码显示了另一个可能的提供者。<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/ExtendedDictionary/src/dictionary/ExtendedDictionary.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/ExtendedDictionary/src/dictionary/ExtendedDictionary.java'); return false;"><code><code>ExtendedDictionary.java</code></code></a> 服务提供者是一个扩展字典，包含大多数软件开发人员熟悉的技术术语。 </p>
+
+<pre class="codeblock">
+
+package dictionary;
+
+import dictionary.spi.Dictionary;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class ExtendedDictionary implements Dictionary {
+
+        private SortedMap&lt;String, String&gt; map;
+
+    public ExtendedDictionary() {
+        map = new TreeMap&lt;String, String&gt;();
+        map.put(
+            &quot;xml&quot;,
+            &quot;a document standard often used in web services, among other &quot; +
+                &quot;things&quot;);
+        map.put(
+            &quot;REST&quot;,
+            &quot;an architecture style for creating, reading, updating, &quot; +
+                &quot;and deleting data that attempts to use the common &quot; +
+                &quot;vocabulary of the HTTP protocol; Representational State &quot; +
+                &quot;Transfer&quot;);
+    }
+
+    @Override
+    public String getDefinition(String word) {
+        return map.get(word);
+    }
+
+}
+</pre>
+
+<p>该示例将已编译的类文件存储在目录 <code>ExtendedDictionary/build</code> 中。<strong>注意</strong>:您必须在类 <code>ExtendedDictionary</code> 之前编译类 <code>dictionary.DictionaryService</code> 和 <code>dictionary.spi.Dictionary</code>。</p>
+
+<p>很容易想象客户使用一整套 <code>Dictionary</code> 提供者来满足他们自己的特殊需求。服务加载器 API 使他们能够根据需要或首选项更改为其应用程序添加新词典。由于底层单词处理器应用程序是可扩展的，因此客户无需额外编码即可使用新提供者。</p>
+
+<h3><a name="register-service-providers">4. 注册服务提供者</a></h3>
+
+<p>要注册服务提供者，请创建提供者配置文件，该文件存储在服务提供者的 JAR 文件的 <code>META-INF/services</code> 目录中。配置文件的名称是服务提供者的完全限定类名，其中名称的每个组件用句点(<code>.</code>)分隔，嵌套类用美元符号分隔(<code>$</code>)。</p>
+
+<p>提供者配置文件包含服务提供者的完全限定类名，每行一个名称。该文件必须是 UTF-8 编码的。此外，您可以在文件中包含注释，通过在行首使用数字符号(<code>#</code>)注释行。</p> 
+
+<p>例如，要注册服务提供者 <code>GeneralDictionary</code>，请创建名为 <a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/GeneralDictionary/src/META-INF/services/dictionary.spi.Dictionary" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/GeneralDictionary/src/META-INF/services/dictionary.spi.Dictionary'); return false;"><code><code>dictionary.spi.Dictionary</code></code></a> 的文本文件。该文件包含一行：</p>
+
+<pre class="codeblock">
+dictionary.GeneralDictionary
+</pre>
+
+<p>同样，要注册服务提供者 <code>ExtendedDictionary</code>，请创建名为 <a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/ExtendedDictionary/src/META-INF/services/dictionary.spi.Dictionary" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/ExtendedDictionary/src/META-INF/services/dictionary.spi.Dictionary'); return false;"><code><code>dictionary.spi.Dictionary</code></code></a> 的文本文件。该文件包含一行：</p>
+
+<pre class="codeblock">
+dictionary.ExtendedDictionary
+</pre>
+
+<h3><a name="create-a-client-that-uses-the-service-and-service-providers">5. 创建使用服务和服务提供者的客户端</a></h3>
+
+<p>由于开发完整的单词处理器应用程序是一项重大任务，因此本教程提供了一个使用 <code>DictionaryService</code> 和 <code>Dictionary</code> SPI 的更简单的应用程序。<code>DictionaryDemo</code> 示例搜索单词 <em>book</em>，<em>editor</em>，<em>xml</em> 和 <em>REST</em> 从来自类路径上任何 <code>Dictionary</code> 提供者并获取它们的定义。</p>
+
+<p>以下是 <a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryDemo/src/dictionary/DictionaryDemo.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryDemo/src/dictionary/DictionaryDemo.java'); return false;"><code><code>DictionaryDemo</code></code></a> 示例。它从 <code>DictionaryService</code> 实例请求定义目标单词，该实例将请求传递给其已知的 <code>Dictionary</code> 提供者。</p>
+
+<pre class="codeblock">
+
+package dictionary;
+
+import dictionary.DictionaryService;
+
+public class DictionaryDemo {
+
+  public static void main(String[] args) {
+
+    DictionaryService dictionary = DictionaryService.getInstance();
+    System.out.println(DictionaryDemo.lookup(dictionary, &quot;book&quot;));
+    System.out.println(DictionaryDemo.lookup(dictionary, &quot;editor&quot;));
+    System.out.println(DictionaryDemo.lookup(dictionary, &quot;xml&quot;));
+    System.out.println(DictionaryDemo.lookup(dictionary, &quot;REST&quot;));
+  }
+
+  public static String lookup(DictionaryService dictionary, String word) {
+    String outputString = word + &quot;: &quot;;
+    String definition = dictionary.getDefinition(word);
+    if (definition == null) {
+      return outputString + &quot;Cannot find definition for this word.&quot;;
+    } else {
+      return outputString + definition;
+    }
+  }
+}
+</pre>
+
+<p>该示例将已编译的类文件存储在目录 <code>DictionaryDemo/build</code> 中。<strong>注意</strong>:您必须在类 <code>DictionaryDemo</code> 之前编译类 <code>dictionary.DictionaryService</code> 和 <code>dictionary.spi.Dictionary</code>。</p>
+
+<h3><a name="package-in-jar-files">6. 在 JAR 文件中打包服务提供者，服务和服务客户​​端</a></h3>
+
+<p>有关如何创建 JAR 文件的信息，请参阅 <a class="TutorialLink" target="_top" href="../../deployment/jar/index.html">Packaging Programs in JAR Files</a> 课程。</p>
+ 
+<h4><a name="packaging-service-providers-in-jar-files">将服务提供者打包到 JAR 文件中</a></h4>
+
+<p>要打包 <code>GeneralDictionary</code> 服务提供者，请创建一个名为 <code>GeneralDictionary/dist/GeneralDictionary.jar</code> 的 JAR 文件，其中包含此服务提供者的已编译类文件和配置文件，按以下目录结构：</p>
+
+<ul>
+  <li><code>META-INF</code>
+    <ul>
+      <li><code>services</code>
+        <ul>
+          <li><code>dictionary.spi.Dictionary</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code>dictionary</code>
+    <ul>
+      <li><code>GeneralDictionary.class</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>同样，要打包 <code>ExtendedDictionary</code> 服务提供者，请创建一个名为 <code>ExtendedDictionary/dist/ExtendedDictionary.jar</code> 的 JAR 文件，其中包含此服务提供者的已编译类文件和配置文件，按以下目录结构：</p>
+
+<ul>
+  <li><code>META-INF</code>
+    <ul>
+      <li><code>services</code>
+        <ul>
+          <li><code>dictionary.spi.Dictionary</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code>dictionary</code>
+    <ul>
+      <li><code>ExtendedDictionary.class</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>请注意，提供者配置文件必须位于 JAR 文件的 <code>META-INF/services</code> 目录中。</p>
+
+<h4><a name="packaging-the-dictionary-service-in-a-jar-file">将字典 SPI 和字典服务打包在 JAR 文件中</a></h4>
+
+<p>创建一个名为 <code>DictionaryServiceProvider/dist/DictionaryServiceProvider.jar</code> 的 JAR 文件，其中包含以下文件：</p>
+
+<ul>
+  <li><code>dictionary</code>
+    <ul>
+      <li><code>DictionaryService.class</code></li>
+      <li><code>spi</code>
+        <ul>
+          <li><code>Dictionary.class</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+        
+<h4><a name="packaging-the-client-in-a-jar-file">将客户端打包在 JAR 文件中</a></h4>
+
+<p>创建一个名为 <code>DictionaryDemo/dist/DictionaryDemo.jar</code> 的 JAR 文件，其中包含以下文件：</p>
+
+<ul>
+  <li><code>dictionary</code>
+    <ul>
+      <li><code>DictionaryDemo.class</code></li>
+    </ul>
+  </li>
+</ul>
+ 
+<h3><a name="run-the-client">7. 运行客户端</a></h3>
+
+<p>以下命令使用 <code>GeneralDictionary</code> 服务提供者运行 <code>DictionaryDemo</code> 示例：</p>
+
+<p><strong>Linux 和 Solaris：</strong></p>
+<p><code>java -Djava.ext.dirs=../DictionaryServiceProvider/dist:../GeneralDictionary/dist -cp dist/DictionaryDemo.jar dictionary.DictionaryDemo</code></p>
+
+<p><strong>Windows：</strong></p>
+<p><code>java -Djava.ext.dirs=..\DictionaryServiceProvider\dist;..\GeneralDictionary\dist -cp dist\DictionaryDemo.jar dictionary.DictionaryDemo</code></p>
+
+<p>使用此命令时，假定以下内容：</p>
+
+<ul>
+  <li>当前目录是 <code>DictionaryDemo</code>。</li>
+  <li>存在以下 JAR 文件：
+    <ul>
+      <li><code>DictionaryDemo/dist/DictionaryDemo.jar</code>：包含 <code>DictionaryDemo</code> 类</li>
+      <li><code>DictionaryServiceProvider/dist/DictionaryServiceProvider.jar</code>：包含 <code>Dictionary</code> SPI 和 <code>DictionaryService</code> 类</li>
+      <li><code>GeneralDictionary/dist/GeneralDictionary.jar</code>：包含 <code>GeneralDictionary</code> 服务提供者和配置文件</li>
+    </ul>
+  </li>
+</ul>
+
+
+<p>该命令打印以下内容：</p>
+
+<pre class="codeblock">
+book: a set of written or printed pages, usually bound with a protective cover
+editor: a person who edits
+xml: Cannot find definition for this word.
+REST: Cannot find definition for this word.
+</pre>
+
+<p>假设您运行以下命令并且 <code>ExtendedDictionary/dist/ExtendedDictionary.jar</code> 存在：</p> 
+
+<p><strong>Linux 和 Solaris：</strong></p>
+<p><code>java -Djava.ext.dirs=../DictionaryServiceProvider/dist:../ExtendedDictionary/dist -cp dist/DictionaryDemo.jar dictionary.DictionaryDemo</code></p>
+
+<p><strong>Windows：</strong></p>
+<p><code>java -Djava.ext.dirs=..\DictionaryServiceProvider\dist;..\ExtendedDictionary\dist -cp dist\DictionaryDemo.jar dictionary.DictionaryDemo</code></p>
+
+<p>该命令打印以下内容：</p>
+
+<pre class="codeblock">
+book: Cannot find definition for this word.
+editor: Cannot find definition for this word.
+xml: a document standard often used in web services, among other things
+REST: an architecture style for creating, reading, updating, and deleting data that attempts to use the common vocabulary of the HTTP protocol; Representational State Transfer
+</pre>
+
+<h2><a name="the-serviceloader-class">ServiceLoader 类</a></h2>
+
+<p><code>java.util.ServiceLoader</code> 类可帮助您查找，加载和使用服务提供者。它在应用程序的类路径或运行时环境的扩展目录中搜索服务提供者。它加载它们并使您的应用程序能够使用提供者的 API。如果将新提供者添加到类路径或运行时扩展目录，则 <code>ServiceLoader</code> 类将找到它们。如果您的应用程序知道提供者接口，则可以找到并使用该接口的不同实现。您可以使用接口的第一个可加载实例，也可以遍历所有可用接口。</p>
+
+<p><code>ServiceLoader</code> 类是 final，这意味着您不能将其作为子类或覆盖其加载算法。例如，您无法更改其算法以从其他位置搜索服务。</p>
+
+<p>从 <code>ServiceLoader</code> 类的角度来看，所有服务都有一个类型，通常是单个接口或抽象类。提供者本身包含一个或多个具体类，这些类使用特定于其目的的实现来扩展服务类型。<code>ServiceLoader</code> 类要求单个公开的提供者类型具有默认构造函数，该构造函数不需要参数。这使 <code>ServiceLoader</code> 类可以轻松实例化它找到的服务提供者。</p>
+
+<p>提供者按需定位和实例化。服务加载程序维护已加载的提供者的缓存。每次调用加载器的 <code>iterator</code> 方法都会返回一个迭代器，该迭代器首先以实例化的顺序生成缓存的所有元素。然后，服务加载器定位并实例化任何新提供者，依次将每个提供者添加到缓存中。您可以使用 <code>reload</code> 方法清除提供者缓存。</p>
+
+<p>要为特定类创建加载器，请将类本身提供给 <code>load</code> 或 <code>loadInstalled</code> 方法。您可以使用默认的类加载器或提供您自己的 <code>ClassLoader</code> 子类。</p>
+
+<p><code>loadInstalled</code> 方法搜索运行时环境的已安装运行时提供者的扩展目录。默认扩展位置是运行时环境的 <code>jre/lib/ext</code> 目录。您应该仅将扩展位置用于众所周知的受信任提供者，因为此位置将成为所有应用程序的类路径的一部分。在本文中，提供者不使用扩展目录，而是依赖于特定于应用程序的类路径。</p>
+
+<h2><a name="limitations-of-the-service-loader-api">ServiceLoader API 的局限性</a></h2>
+
+<p><code>ServiceLoader</code> API 很有用，但它有局限性。例如，无法从 <code>ServiceLoader</code> 类派生类，因此您无法修改其行为。您可以使用自定义 <code>ClassLoader</code> 子类来更改类的查找方式，但无法扩展 <code>ServiceLoader</code> 本身。此外，当运行时新的提供者可用时，当前的 <code>ServiceLoader</code> 类无法告诉您的应用程序。此外，您无法将更改监听器添加到加载程序以查明是否将新提供者放入特定于应用程序的扩展目录中。 </p>
+
+
+<p>Java SE 6 中提供了公共 <code>ServiceLoader</code> API。虽然加载器服务早在 JDK 1.3 中就已存在，但 API 是私有的，仅适用于内部 Java 运行时代码。 </p>
+
+
+<h2><a name="summary">总结</a></h2>
+
+<p>可扩展应用程序提供可由服务提供者扩展的服务点。创建可扩展应用程序的最简单方法是使用 <code>ServiceLoader</code>，它可用于 Java SE 6 及更高版本。使用此类，您可以将提供者实现添加到应用程序类路径以使新功能可用。<code>ServiceLoader</code> 类是 final，因此您无法修改其功能。</p>
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="load.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="../security/index.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Understanding Extension Class Loading
+        <br /><b>Next page:</b> Making Extensions Secure
+    </div>
+</body>
+</html> 

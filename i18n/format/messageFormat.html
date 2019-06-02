@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>处理复合消息(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;格式化)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
+     <meta name="keywords" content="java programming, learn java, java sample code, i18n, internationalization, locale, text formatting" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">格式化</a></div>
+<div class="linkAHEAD"><a href="numberintro.html">数字和货币</a></div>
+<div class="linkBHEAD"><a href="numberFormat.html">使用预定义格式</a></div>
+<div class="linkBHEAD"><a href="decimalFormat.html">自定义格式</a></div>
+<div class="linkAHEAD"><a href="dateintro.html">日期和时间</a></div>
+<div class="linkBHEAD"><a href="dateFormat.html">使用预定义格式</a></div>
+<div class="linkBHEAD"><a href="simpleDateFormat.html">自定义格式</a></div>
+<div class="linkBHEAD"><a href="dateFormatSymbols.html">更改日期格式符号</a></div>
+<div class="linkAHEAD"><a href="messageintro.html">消息</a></div>
+<div class="nolinkBHEAD">处理复合消息</div>
+<div class="linkBHEAD"><a href="choiceFormat.html">处理复数</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Internationalization
+        <br /><b>Lesson:</b> Formatting
+        <br /><b>Section:</b> Messages
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">格式化</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="messageintro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="choiceFormat.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>处理复合消息</h1></div>
+            <div id="PageContent">
+
+<p>复合消息可能包含多种变量：日期，时间，字符串，数字，货币和百分比。若要以与语言环境无关的方式格式化复合消息，请构造应用于 <code>MessageFormat</code> 对象的模式，并将此模式存储在 <code>ResourceBundle</code> 中。</p>
+<p>通过逐步演示示例程序，本节演示了如何国际化复合消息。示例程序使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/MessageFormat.html"><code>MessageFormat</code></a> 类。该程序的完整源代码位于名为 <a class="SourceLink" target="_blank" href="examples/MessageFormatDemo.java" onclick="showCode('../../displayCode.html', 'examples/MessageFormatDemo.java'); return false;"><code>MessageFormatDemo.java</code></a> 的文件中。德语语言环境属性位于名为 <a class="SourceLink" target="_blank" href="examples/MessageBundle_de_DE.properties" onclick="showCode('../../displayCode.html', 'examples/MessageBundle_de_DE.properties'); return false;"><code>MessageBundle_de_DE.properties</code></a> 的文件中。</p>
+<h2>1. 识别消息中的变量</h2>
+<p>假设您要国际化以下消息：</p>
+<center><img src="../../figures/i18n/i18n-2.gif" width="574" height="66" align="bottom" alt="以下文字：At 1:15 on April 13, 1998, we detected 7 spaceships on the planet Mars.  可变数据(1:15, April 13,1998, 7, and Mars)已加下划线。" /></center><p>请注意，我们已经为变量数据加下划线，并确定了哪种对象将代表这些数据。</p>
+<h2>2. 隔离 ResourceBundle 中的消息模式</h2>
+<p>将消息存储在名为 <code>MessageBundle</code> 的 <code>ResourceBundle</code> 中，如下所示：</p>
+<div class="codeblock"><pre>
+ResourceBundle messages =
+   ResourceBundle.getBundle(&quot;MessageBundle&quot;, currentLocale);
+</pre></div>
+<p>此 <code>ResourceBundle</code> 由每个 <code>Locale</code> 的属性文件支持。由于 <code>ResourceBundle</code> 被称为 <code>MessageBundle</code>，因此美国英语的属性文件名为 <code>MessageBundle_en_US.properties</code>。该文件的内容如下：</p>
+<div class="codeblock"><pre>
+template = At {2,time,short} on {2,date,long}, \
+    we detected {1,number,integer} spaceships on \
+    the planet {0}.
+planet = Mars
+</pre></div>
+<p>属性文件的第一行包含消息模式。如果将此模式与步骤 1 中显示的消息文本进行比较，您将看到括在大括号中的参数替换消息文本中的每个变量。每个参数都以一个名为参数编号的数字开头，该数字与 <code>Object</code> 数组中保存参数值的元素的索引相匹配。请注意，在模式中，参数编号不是任何特定顺序。您可以将参数放在模式中的任何位置。唯一的要求是参数号在参数值数组中具有匹配元素。</p>
+<p>下一步讨论参数值数组，但首先让我们看一下模式中的每个参数。下表提供了有关参数的一些详细信息：</p>
+<table summary="MessageBundle_en_US.properties 中模板的参数" border="1">
+<caption><code>MessageBundle_en_US.properties</code> 中 <code>template</code> 的参数</caption>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+<tr>
+<td><code>{2,time,short}</code></td>
+<td><code>Date</code> 对象的时间部分。<code>short</code> 样式指定 <code>DateFormat.SHORT</code> 格式样式。</td>
+</tr>
+<tr>
+<td><code>{2,date,long}</code></td>
+<td><code>Date</code> 对象的日期部分。相同的 <code>Date</code> 对象用于日期和时间变量。在 <code>Object</code> 参数数组中，包含 <code>Date</code> 对象的元素的索引是 2。(这将在下一步中介绍。)</td>
+</tr>
+<tr>
+<td><code>{1,number,integer}</code></td>
+<td>一个 <code>Number</code> 对象，进一步限定为 <code>integer</code> 数字样式。</td>
+</tr>
+<tr>
+<td><code>{0}</code></td>
+<td><code>ResourceBundle</code> 中的 <code>String</code>，对应 <code>planet</code> 键。</td>
+</tr>
+</table>
+<p>有关参数语法的完整说明，请参阅 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/MessageFormat.html"><code>MessageFormat</code></a> 类的 API 文档。</p>
+<h2>3. 设置消息参数</h2>
+<p>以下代码行，为模式中的每个参数赋值。<code>messageArguments</code> 数组中元素的索引与模式中的参数号匹配。例如，索引 1 处的 <code>Integer</code> 元素对应于模式中的 <code>{1,number,integer}</code> 参数。因为必须进行转换，所以元素 0 处的 <code>String</code> 对象将使用 <code>getString</code> 方法从 <code>ResourceBundle</code> 中获取。以下是定义消息参数数组的代码：</p>
+<div class="codeblock"><pre>
+Object[] messageArguments = {
+    messages.getString(&quot;planet&quot;),
+    new Integer(7),
+    new Date()
+};
+</pre></div>
+<h2>4. 创建格式化程序</h2>
+<p>接下来，创建一个 <code>MessageFormat</code> 对象。您设置 <code>Locale</code>，因为该消息包含 <code>Date</code> 和 <code>Number</code> 对象，这些对象应以区域设置敏感的方式进行格式化。</p>
+<div class="codeblock"><pre>
+MessageFormat formatter = new MessageFormat(&quot;&quot;);
+formatter.setLocale(currentLocale);
+</pre></div>
+<h2>5. 使用模式和参数格式化消息</h2>
+<p>此步骤显示模式，消息参数和格式化程序如何一起工作。首先，使用 <code>getString</code> 方法从 <code>ResourceBundle</code> 中获取模式 <code>String</code>。模式的键是 <code>template</code>。使用 <code>applyPattern</code> 方法将模式 <code>String</code> 传递给格式化程序。然后通过调用 <code>format</code> 方法，使用消息参数数组格式化消息。<code>format</code> 方法返回的 <code>String</code> 已准备好显示。所有这一切都只需两行代码即可完成：</p>
+<div class="codeblock"><pre>
+formatter.applyPattern(messages.getString(&quot;template&quot;));
+String output = formatter.format(messageArguments);
+</pre></div>
+<h2>6. 运行演示程序</h2>
+<p>演示程序打印英语和德语语言环境的翻译消息，并正确格式化日期和时间变量。请注意，英语和德语动词(“detected”和“entdeckt”)位于相对于变量的不同位置：</p>
+<div class="codeblock"><pre>
+currentLocale = en_US
+At 10:16 AM on July 31, 2009, we detected 7
+spaceships on the planet Mars.
+currentLocale = de_DE
+Um 10:16 am 31. Juli 2009 haben wir 7 Raumschiffe
+auf dem Planeten Mars entdeckt.
+</pre></div>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="messageintro.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="choiceFormat.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Messages
+        <br /><b>Next page:</b> Handling Plurals
+    </div>
+</body>
+</html> 

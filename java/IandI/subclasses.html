@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>继承(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;接口和继承)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java objects, java classes, java inheritance, interfaces, variables, arrays, data types, operators, control flow, number, string" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">接口和继承</a></div>
+<div class="linkAHEAD"><a href="createinterface.html">接口</a></div>
+<div class="linkBHEAD"><a href="interfaceDef.html">定义一个接口</a></div>
+<div class="linkBHEAD"><a href="usinginterface.html">实现一个接口</a></div>
+<div class="linkBHEAD"><a href="interfaceAsType.html">使用接口作为类型</a></div>
+<div class="linkBHEAD"><a href="nogrow.html">不断发展的接口</a></div>
+<div class="linkBHEAD"><a href="defaultmethods.html">默认方法</a></div>
+<div class="linkBHEAD"><a href="summary-interface.html">接口总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
+<div class="nolinkAHEAD">继承</div>
+<div class="linkBHEAD"><a href="multipleinheritance.html">状态，实现和类型的多重继承</a></div>
+<div class="linkBHEAD"><a href="override.html">覆盖和隐藏方法</a></div>
+<div class="linkBHEAD"><a href="polymorphism.html">多态</a></div>
+<div class="linkBHEAD"><a href="hidevariables.html">隐藏字段</a></div>
+<div class="linkBHEAD"><a href="super.html">使用 super 关键字</a></div>
+<div class="linkBHEAD"><a href="objectclass.html">Object 作为超类</a></div>
+<div class="linkBHEAD"><a href="final.html">编写 final 类和方法</a></div>
+<div class="linkBHEAD"><a href="abstract.html">抽象方法和类</a></div>
+<div class="linkBHEAD"><a href="summaryinherit.html">继承总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/inherit-questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Learning the Java Language
+        <br /><b>Lesson:</b> Interfaces and Inheritance
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="QandE/interfaces-questions.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="multipleinheritance.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>继承</h1></div>
+            <div id="PageContent"><!-- Inheritance -->
+
+
+<p>在前面的课程中，您已经多次看到 <i>inheritance</i>。在 Java 语言中，类可以从其他类 <i>派生（derived）</i>，从而从那些类 <i>继承（inheriting）</i> 字段和方法。</p>
+<div class="note"><hr /><strong>Definitions:</strong> 从另一个类派生的类称为 <i>subclass</i>(也是 <i>derived class</i>，<i>extended class</i> ，或 <i>child class</i>)。从中派生子类的类称为 <i>superclass</i>(也是 <i>base class</i> 或 <i>parent class</i>)。<br /><br />
+除了 <code>Object</code>，它没有超类，每个类有且只有一个直接超类(单继承)。在没有任何其他显式超类的情况下，每个类都隐式地是 <code>Object</code> 的子类。<br /><br />
+类可以派生自一个派生类，该派生类可以派生自一个派生类，依此类推，最终派生自最顶层的类 <code>Object</code>。这样的类被称为 <i>descended</i> 从延伸回 <code>Object</code> 的继承链中的所有类。
+<hr /></div>
+<p>继承的想法很简单但很强大：当你想创建一个新类并且已经有一个包含你想要的代码的类时，你可以从现有的类派生你的新类。在这样做时，您可以重用现有类的字段和方法，而无需自己编写(和调试！)它们。</p>
+<p>子类从其超类继承所有 <i>members</i>(字段，方法和嵌套类)。构造函数不是成员，因此它们不是由子类继承的，但是可以从子类调用超类的构造函数。</p>
+<h2>Java 平台类层次结构</h2>
+<p>在 <code>java.lang</code> 包中定义的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html"><code>Object</code></a> 类定义并实现所有类共有的行为，包括您编写的类。在 Java 平台中，许多类直接从 <code>Object</code> 派生，其他类派生自其中一些类，依此类推，形成类的层次结构。</p>
+<center><img src="../../figures/java/classes-object.gif" width="560" height="241" align="bottom" alt="Java 平台中的所有类都是 Object 的后代" /></p><p class="FigureCaption">Java 平台中的所有类都是 Object 的后代</p></center><p>在层次结构的顶部，<code>Object</code> 是所有类中最一般的。层次结构底部附近的类提供更专业的行为。</p>
+<h2>继承的一个例子</h2>
+<p>以下是在“类和对象”类中提供的 <code>Bicycle</code> 类的可能实现的示例代码： 
+</p>
+<div class="codeblock"><pre>
+public class Bicycle {
+        
+    // <b>the Bicycle class has three <i>fields</i></b>
+    public int cadence;
+    public int gear;
+    public int speed;
+        
+    // <b>the Bicycle class has one <i>constructor</i></b>
+    public Bicycle(int startCadence, int startSpeed, int startGear) {
+        gear = startGear;
+        cadence = startCadence;
+        speed = startSpeed;
+    }
+        
+    // <b>the Bicycle class has four <i>methods</i></b>
+    public void setCadence(int newValue) {
+        cadence = newValue;
+    }
+        
+    public void setGear(int newValue) {
+        gear = newValue;
+    }
+        
+    public void applyBrake(int decrement) {
+        speed -= decrement;
+    }
+        
+    public void speedUp(int increment) {
+        speed += increment;
+    }
+        
+}
+</pre></div>
+<p><code>MountainBike</code> 类的类声明是 <code>Bicycle</code> 的子类，可能如下所示：</p>
+<div class="codeblock"><pre>
+public class MountainBike extends Bicycle {
+        
+    // <b>the MountainBike subclass adds one <i>field</i></b>
+    public int seatHeight;
+
+    // <b>the MountainBike subclass has one <i>constructor</i></b>
+    public MountainBike(int startHeight,
+                        int startCadence,
+                        int startSpeed,
+                        int startGear) {
+        super(startCadence, startSpeed, startGear);
+        seatHeight = startHeight;
+    }   
+        
+    // <b>the MountainBike subclass adds one <i>method</i></b>
+    public void setHeight(int newValue) {
+        seatHeight = newValue;
+    }   
+}
+</pre></div>
+<p><code>MountainBike</code> 继承 <code>Bicycle</code> 的所有字段和方法，并添加字段 <code>seatHeight</code> 以及设置它的方法。除了构造函数之外，就好像你已经从头开始编写了一个新的 <code>MountainBike</code> 类，有四个字段和五个方法。但是，您不必完成所有工作。如果 <code>Bicycle</code> 类中的方法很复杂并且需要花费大量时间来调试，这将特别有价值。</p>
+<h2>您可以在子类中执行的操作</h2>
+<p>无论子类所在的包是什么，子类都会继承其父类的所有 <i>public</i> 和 <i>protected</i> 成员。如果子类与其父类在同一个包中，它还会继承父类的 <i>package-private</i> 成员。您可以按原样使用继承的成员，替换它们，隐藏它们或用新成员补充它们：</p>
+<ul>
+<li>继承的字段可以直接使用，就像任何其他字段一样。</li>
+<li>您可以在子类中声明一个与超类中的字段同名的字段，从而 <i>（隐藏）hiding</i> 它(不推荐)。</li>
+<li>您可以在子类中声明不在超类中的新字段。</li>
+<li>继承的方法可以直接使用。</li>
+<li>您可以在子类中编写一个新的 <i>instance</i> 方法，该方法与超类中的签名具有相同的签名，从而 <i>覆盖（overriding）</i> 它。</li>
+<li>您可以在子类中编写一个新的 <i>static</i> 方法，该方法与超类中的签名具有相同的签名，因此 <i>hiding</i> 它。</li>
+<li>您可以在子类中声明不在超类中的新方法。</li>
+<li>您可以编写一个子类构造函数，它可以隐式地或使用关键字 <code>super</code> 来调用超类的构造函数。</li>
+</ul>
+<p>本课程的以下部分将扩展这些主题。</p>
+<h2>超级私有会员</h2>
+<p>子类不继承其父类的 <code>private</code> 成员。但是，如果超类具有访问其私有字段的公共或受保护方法，则子类也可以使用这些方法。</p>
+<p>嵌套类可以访问其封闭类的所有私有成员 - 包括字段和方法。因此，子类继承的公共或受保护嵌套类可以间接访问超类的所有私有成员。</p>
+<h2>转换对象</h2>
+<p>我们已经看到一个对象是实例化它的类的数据类型。例如，如果我们写</p>
+<div class="codeblock"><pre>
+public MountainBike myBike = new MountainBike();
+</pre></div>
+<p>那么 <code>myBike</code> 的类型为 <code>MountainBike</code>。</p>
+<p><code>MountainBike</code> 来自 <code>Bicycle</code> 和 <code>Object</code>。因此，<code>MountainBike</code> 是 <code>Bicycle</code> 并且也是 <code>Object</code>，它可以在任何调用 <code>Bicycle</code> 或<code> Object </code> 的地方使用。</p>
+<p>反过来不一定正确：<code>Bicycle</code> <i>可能是</i> 一个 <code>MountainBike</code>，但不一定如此。类似地，<code>Object</code> <i>可能是</i> 一个 <code>Bicycle</code> 或 <code>MountainBike</code>，但不一定如此。</p>
+<p><i>Casting</i> 显示在继承和实现允许的对象中使用一种类型的对象代替另一种类型。例如，如果我们写</p>
+<div class="codeblock"><pre>
+Object obj = new MountainBike();
+</pre></div>
+<p>然后 <code>obj</code> 既是 <code>Object</code> 又是 <code>MountainBike</code>(直到 <code>obj</code> 分配另一个对象 <i>不是</i> 一个 <code>MountainBike</code>)。这称为 <i>隐式转换（implicit casting）</i>。</p>
+<p>另一方面，如果我们写</p>
+<div class="codeblock"><pre>
+MountainBike myBike = obj;
+</pre></div>
+<p>我们会得到编译时错误，因为编译器不知道 <code>obj</code> 是 <code>MountainBike</code>。但是，我们可以 <i>告诉</i> 编译器我们承诺分配一个 <code>MountainBike</code> 给 <code>obj</code> ，通过 <i>显示转换（explicit casting）:</i></p>
+<div class="codeblock"><pre>
+MountainBike myBike = (MountainBike)obj;
+</pre></div>
+<p>此强制转换插入运行时检查 <code>obj</code> 被分配 <code>MountainBike</code>，以便编译器可以安全地假设 <code>obj</code> 是 <code>MountainBike</code>。如果 <code>obj</code> 在运行时不是 <code>MountainBike</code>，则会抛出异常。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;您可以使用 <code>instanceof</code> 运算符对特定对象的类型进行逻辑测试。这可以避免由于不正确的强制转换而出现运行时错误。例如：
+<div class="codeblock"><pre>
+if (obj instanceof MountainBike) {
+    MountainBike myBike = (MountainBike)obj;
+}
+</pre></div>
+<p>这里 <code>instanceof</code> 运算符验证 <code>obj</code> 是否指向 <code>MountainBike</code>，以便我们可以使用转换，而不会抛出运行时异常。</p>
+<hr /></div>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="QandE/interfaces-questions.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="multipleinheritance.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Questions and Exercises: Interfaces
+        <br /><b>Next page:</b> Multiple Inheritance of State, Implementation, and Type
+    </div>
+</body>
+</html> 

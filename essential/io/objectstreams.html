@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>对象流(Java™ 教程-Java Tutorials 中文版&gt;必要类&gt;基本 I/O)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This Java tutorial describes exceptions, basic input/output, concurrency, regular expressions, and the platform environment" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java exception, java input output, java threads, java regex, regular expressions, path, classpath, environment variable" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">基本 I/O</a></div>
+<div class="linkAHEAD"><a href="streams.html">I/O 流</a></div>
+<div class="linkBHEAD"><a href="bytestreams.html">字节流</a></div>
+<div class="linkBHEAD"><a href="charstreams.html">字符流</a></div>
+<div class="linkBHEAD"><a href="buffers.html">缓冲流</a></div>
+<div class="linkBHEAD"><a href="scanfor.html">扫描和格式化</a></div>
+<div class="linkCHEAD"><a href="scanning.html">扫描</a></div>
+<div class="linkCHEAD"><a href="formatting.html">格式化</a></div>
+<div class="linkBHEAD"><a href="cl.html">来自命令行的 I/O</a></div>
+<div class="linkBHEAD"><a href="datastreams.html">数据流</a></div>
+<div class="nolinkBHEAD">对象流</div>
+<div class="linkAHEAD"><a href="fileio.html">文件 I/O(采用 NIO.2)</a></div>
+<div class="linkBHEAD"><a href="path.html">什么是路径？(和其他文件系统事实)</a></div>
+<div class="linkBHEAD"><a href="pathClass.html">路径类</a></div>
+<div class="linkCHEAD"><a href="pathOps.html">路径操作</a></div>
+<div class="linkBHEAD"><a href="fileOps.html">文件操作</a></div>
+<div class="linkBHEAD"><a href="check.html">检查文件或目录</a></div>
+<div class="linkBHEAD"><a href="delete.html">删除文件或目录</a></div>
+<div class="linkBHEAD"><a href="copy.html">复制文件或目录</a></div>
+<div class="linkBHEAD"><a href="move.html">移动文件或目录</a></div>
+<div class="linkBHEAD"><a href="fileAttr.html">管理元数据(文件和文件存储属性)</a></div>
+<div class="linkBHEAD"><a href="file.html">读取、写入和创建文件</a></div>
+<div class="linkBHEAD"><a href="rafs.html">随机访问文件</a></div>
+<div class="linkBHEAD"><a href="dirs.html">创建和读取目录</a></div>
+<div class="linkBHEAD"><a href="links.html">链接，符号或其他</a></div>
+<div class="linkBHEAD"><a href="walk.html">遍历文件树</a></div>
+<div class="linkBHEAD"><a href="find.html">查找文件</a></div>
+<div class="linkBHEAD"><a href="notification.html">观察目录中的更改</a></div>
+<div class="linkBHEAD"><a href="misc.html">其他有用的方法</a></div>
+<div class="linkBHEAD"><a href="legacy.html">旧版文件 I/O 代码</a></div>
+<div class="linkAHEAD"><a href="summary.html">总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Essential Classes
+        <br /><b>Lesson:</b> Basic I/O
+        <br /><b>Section:</b> I/O Streams
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="datastreams.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="fileio.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>对象流</h1></div>
+            <div id="PageContent">
+
+<p>正如数据流支持基本数据类型的 I/O 一样，对象流也支持对象的 I/O。大多数（但不是全部）标准类支持其对象的序列化。那些确实实现了标记接口 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html"><code>Serializable</code></a>。</p>
+<p>对象流类是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html"><code>ObjectInputStream</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectOutputStream.html"><code>ObjectOutputStream</code></a>。这些类实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInput.html"><code>ObjectInput</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectOutput.html"><code>ObjectOutput</code></a>，它们是 <code>DataInput</code> 和 <code>DataOutput</code> 的子接口。这意味着 <a href="datastreams.html">Data Streams</a> 中涵盖的所有基本数据 I/O 方法也在对象流中实现。因此，对象流可以包含基本值和对象值的混合。<a class="SourceLink" target="_blank" href="examples/ObjectStreams.java" onclick="showCode('../../displayCode.html', 'examples/ObjectStreams.java'); return false;"><code>ObjectStreams</code></a> 示例说明了这一点。<code>ObjectStreams</code> 创建与 <code>DataStreams</code> 相同的应用程序，并进行了一些更改。首先，价格现在是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html"><code>BigDecimal</code></a> 对象，以更好地表示小数值。其次，将 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Calendar.html"><code>Calendar</code></a> 对象写入数据文件，指示发票日期。</p>
+<p>如果 <code>readObject()</code> 未返回预期的对象类型，则尝试将其强制转换为正确的类型可能会抛出 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html"><code>ClassNotFoundException</code></a>。在这个简单的例子中，这不可能发生，因此我们不会尝试捕获异常。相反，我们通过将 <code>ClassNotFoundException</code> 添加到 <code>main</code> 方法的 <code>throws</code> 子句来通知编译器我们已经知道了这个问题。</p>
+<h2>复杂对象的输出和输入</h2>
+<p><code>writeObject</code> 和 <code>readObject</code> 方法易于使用，但它们包含一些非常复杂的对象管理逻辑。这对像 Calendar 这样的类来说并不重要，它只封装了基本值。但是许多对象包含对其他对象的引用。如果 <code>readObject</code> 是要从流重构对象，则它必须能够重新构建原始对象所引用的所有对象。这些附加对象可能有自己的引用，依此类推。在这种情况下，<code>writeObject</code> 遍历整个对象引用 Web，并将该 Web 中的所有对象写入流中。因此，单次调用 <code>writeObject</code> 会导致将大量对象写入流中。</p>
+<p>下图演示了这一点，其中调用 <code>writeObject</code> 来写入名为 <b>a</b> 的单个对象。该对象包含对象 <b>b</b> 和 <b>c</b> 的引用，而 <b>b</b> 包含对 <b>d</b> 和 <b>e</b> 的引用。调用 <code>writeobject(a)</code> 不仅写入 <b>a</b>，而且还要写入重构 <b>a</b> 所需的所有对象，因此也写入此 Web 中的其他四个对象。当 <code>readObject</code> 读回 <b>a</b> 时，也会回读其他四个对象，并保留所有原始对象引用。</p>
+<center><img src="../../figures/essential/io-trav.gif" width="456" height="195" align="bottom" alt="多个引用对象的 I/O." /></p><p class="FigureCaption">多个引用对象的 I/O.</p></center><p>您可能想知道如果同一个流上的两个对象都包含对单个对象的引用会发生什么。当他们回读时，他们都会引用一个对象吗？答案是肯定的。流可以只包含一个对象的副本，尽管它可以包含任意数量的对象。因此，如果您将对象显式写入流两次，那么您实际上只写入了两次引用。例如，如果以下代码将对象 <code>ob</code> 两次写入流：</p>
+<div class="codeblock"><pre>
+Object ob = new Object();
+out.writeObject(ob);
+out.writeObject(ob);
+</pre></div>
+<p>每个 <code>writeObject</code> 必须与 <code>readObject</code> 匹配，因此读回流的代码将如下所示：</p>
+<div class="codeblock"><pre>
+Object ob1 = in.readObject();
+Object ob2 = in.readObject();
+</pre></div>
+<p>这导致两个变量 <code>ob1</code> 和 <code>ob2</code>，它们是对单个对象的引用。</p>
+<p>但是，如果将单个对象写入两个不同的流，则它是有效地重复读取两个流的单个程序将看到两个不同的对象。</p>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="datastreams.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="fileio.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Data Streams
+        <br /><b>Next page:</b> File I/O (Featuring NIO.2)
+    </div>
+</body>
+</html> 

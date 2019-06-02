@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>下载型扩展(Java™ 教程-Java Tutorials 中文版&gt;扩展机制&gt;创建和使用扩展)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This Java tutorial describes how to create and use extensions or optional packages and make them secure" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java extensions, java optional packages" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">创建和使用扩展</a></div>
+<div class="linkAHEAD"><a href="install.html">安装型扩展</a></div>
+<div class="nolinkAHEAD">下载型扩展</div>
+<div class="linkAHEAD"><a href="load.html">理解扩展类加载</a></div>
+<div class="linkAHEAD"><a href="spi.html">创建可扩展的应用程序</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> The Extension Mechanism
+        <br /><b>Lesson:</b> Creating and Using Extensions
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">扩展机制</a>&gt;<a href="index.html" target="_top">创建和使用扩展</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="install.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="load.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>下载型扩展</h1></div>
+            <div id="PageContent">
+
+<p>下载型扩展是 JAR 文件中的类(和相关资源)的集合。JAR 文件的清单可以包含引用一个或多个下载型扩展的头。可以通过以下两种方式之一引用扩展：</p>
+<ul>
+<li>通过 <tt>Class-Path</tt> 头</li>
+<li>通过 <tt>Extension-List</tt> 头</li>
+</ul>
+<p>请注意，清单中最多允许使用其中一个。由 <tt>Class-Path</tt> 头指示的下载型扩展名仅在下载它们的应用程序（例如 Web 浏览器）的生命周期内下载。它们的优点是客户端没有安装任何东西；它们的缺点是每次需要时都会下载它们。由 <tt>Extension-List</tt> 头下载的下载型扩展安装在下载它们的 JRE 的 <tt>/lib/ext</tt> 目录中。它们的优点是它们在第一次需要时下载；随后它们可以在不下载的情况下使用。但是，如本教程后面所示，部署它们会更复杂。</p>
+<p>由于使用 <tt>Class-Path</tt> 头的下载型扩展更简单，因此我们先考虑它们。例如，假设 <tt>a.jar</tt> 和 <tt>b.jar</tt> 是同一目录中的两个 JAR 文件，并且 <tt>a.jar</tt> 的清单包含这个 header：</p>
+<div class="codeblock"><pre>
+Class-Path: b.jar
+</pre></div>
+<p>然后 <tt>b.jar</tt> 中的类用作 <tt>a.jar</tt> 中类的扩展类。<tt>a.jar</tt> 中的类可以调用 <tt>b.jar</tt> 中的类，而不必在类路径上指名 <tt>b.jar</tt> 的类。<tt>a.jar</tt> 本身可能是也可能不是扩展。如果 <tt>b.jar</tt> 与 <tt>a.jar</tt> 不在同一目录中，那么 <tt>Class-Path</tt> 头的值应设置为 <tt>b.jar</tt> 的相对路径名。</p>
+<p>正在扮演下载型扩展的角色的类没有什么特别之处。它们被视为扩展，仅仅因为它们被其他 JAR 文件的清单引用。</p>
+<p>为了更好地理解下载型扩展如何工作，让我们创建一个并将其用于使用。</p>
+<h2>一个例子</h2>
+<p>假设您要创建一个使用上一节的 <code>RectangleArea</code> 类的 applet：</p>
+<div class="codeblock"><pre>
+public final class RectangleArea {  
+    public static int area(java.awt.Rectangle r) {
+        return r.width * r.height;
+    }
+}
+</pre></div>
+<p>在上一节中，您将 <tt>RectangleArea</tt> 类放入安装型扩展中，方法是将包含它的 JAR 文件放入 JRE 的 <tt>lib/ext</tt> 目录中。通过使它成为一个安装型扩展，您可以让任何应用程序使用 <tt>RectangleArea</tt> 类，就像它是 Java 平台的一部分一样。</p>
+<p>如果您希望能够从 applet 使用 <tt>RectangleArea</tt> 类，情况会有所不同。例如，假设您有一个小程序 <code>AreaApplet</code>，它使用了类 <tt>RectangleArea</tt>：</p>
+<div class="codeblock"><pre>
+import java.applet.Applet;
+import java.awt.*;
+
+public class AreaApplet extends Applet {
+    Rectangle r;
+
+    public void init() {    
+        int width = 10;
+        int height = 5;
+
+        r = new Rectangle(width, height);
+    }
+
+    public void paint(Graphics g) {
+        g.drawString("The rectangle's area is " 
+                      + RectangleArea.area(r), 10, 10);
+    }
+}
+</pre></div>
+<p>此 applet 实例化一个 10 <var>x</var> 5 矩形，然后使用 <tt>RectangleArea.area</tt> 方法显示矩形面积。</p>
+<p>但是，您不能假设下载和使用您的 applet 的每个人都将在其系统上提供 <tt>RectangleArea</tt> 类，作为安装型扩展或其他方式。解决该问题的一种方法是从服务器端提供 <tt>RectangleArea</tt> 类，并且可以通过将其用作下载型扩展来实现。</p>
+<p>为了了解它是如何完成的，我们假设您已将 <code>AreaApplet</code> 打包在名为 <tt>AreaApplet.jar</tt> 的 JAR 文件中，并且打包了 <tt>RectangleArea</tt> 类在 <tt>RectangleArea.jar</tt> 中。为了将 <tt>RectangleArea.jar</tt> 视为下载型扩展，<tt>RectangleArea.jar</tt> 必须在 <tt>AreaApplet.jar</tt> 的清单中列出 <tt>Class-Path</tt> 头。<tt>AreaApplet.jar</tt> 的清单可能如下所示，例如：</p>
+<div class="codeblock"><pre>
+Manifest-Version: 1.0
+Class-Path: RectangleArea.jar
+</pre></div>
+<p>此清单中 <tt>Class-Path</tt> 头的值为 <tt>RectangleArea.jar</tt>，未指定路径，表示 <tt>RectangleArea.jar</tt> 位于与 applet 的 JAR 文件相同的目录。</p>
+<h2>有关 Class-Path 头的更多信息</h2>
+<p>如果 applet 或应用程序使用多个扩展，您可以在清单中列出多个 URL。例如，以下是有效的头：</p>
+<div class="codeblock"><pre>
+Class-Path: area.jar servlet.jar images/
+</pre></div>
+<p>在 <tt>Class-Path</tt> 头中，列出的所有未以“<tt>/</tt>”结尾的 URL 都是 JAR 文件。以“<tt>/</tt>”结尾的 URL 表示目录。在前面的示例中，<tt>images/</tt> 可能是包含 applet 或应用程序所需资源的目录。</p>
+<p>请注意，清单文件中只允许一个 <tt>Class-Path</tt> 头，并且清单中的每一行长度不得超过 72 个字符。如果需要指定多于适合一行的类路径条目，可以将它们扩展到后续的延续行。以两个空格开始每个延续行。例如：</p>
+<div class="codeblock"><pre>
+Class-Path: area.jar servlet.jar monitor.jar datasource.jar
+  provider.jar gui.jar
+</pre></div>
+<p>未来版本可以消除每个头仅具有一个实例的限制，以及行仅限于 72 个字符的限制。</p>
+<p>下载型扩展可以是“菊花链的”，这意味着一个下载型扩展的清单可以有一个 <tt>Class-Path</tt> 头，其引用第二个扩展，其引用第三个扩展，依此类推。</p>
+<h2>安装下载型扩展</h2>
+<p>在上面的示例中，applet 下载型扩展只有在加载 applet 的浏览器仍在运行时才可用。但是，如果 applet 和扩展程序的清单中包含其他信息，则 applet 可以触发扩展程序的安装。</p>
+<p>由于此机制扩展了平台的核心 API，因此应明智地应用它。它很少适用于单个或一小组应用程序使用的接口。所有可见符号应遵循反向域名和类层次结构约定。</p>
+<p>基本要求是 applet 和它使用的扩展都在其清单中提供版本信息，并且它们是签名的。版本信息允许 Java Plug-in 确保扩展代码具有 applet 期望的版本。例如，<tt>AreaApplet</tt> 可以在其清单中指定 <tt>areatest</tt> 扩展：</p>
+<div class="codeblock"><pre>
+Manifest-Version: 1.0
+Extension-List: areatest
+areatest-Extension-Name: area
+areatest-Specification-Version: 1.1
+areatest-Implementation-Version: 1.1.2
+areatest-Implementation-Vendor-Id: com.example
+areatest-Implementation-URL: http://www.example.com/test/area.jar
+</pre></div>
+<p><tt>area.jar</tt> 中的清单将提供相应的信息：</p>
+<div class="codeblock"><pre>
+Manifest-Version: 1.0
+Extension-Name: area
+Specification-Vendor: Example Tech, Inc
+Specification-Version: 1.1
+Implementation-Vendor-Id: com.example
+Implementation-Vendor: Example Tech, Inc
+Implementation-Version: 1.1.2
+</pre></div>
+<p>applet 和扩展都必须由同一个签名者签名。签名 jar 文件将就地修改它们，在其清单文件中提供更多信息。签名有助于确保只安装受信任的代码。签名 jar 文件的一种简单方法是首先创建一个密钥库，然后使用它来保存 applet 和扩展的证书。例如：</p>
+<div class="codeblock"><pre>
+keytool -genkey -dname "cn=Fred" -alias test  -validity 180
+</pre></div>
+<p>系统将提示您输入密钥库和密钥密码。生成密钥后，可以对 jar 文件进行签名：</p>
+<div class="codeblock"><pre>
+jarsigner AreaApplet.jar test
+jarsigner area.jar test
+</pre></div>
+<p>系统将提示您输入密钥库和密钥密码。有关 <tt>keytool</tt>，<tt>jarsigner</tt> 和其他安全工具的更多信息，请参阅 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/SecurityToolsSummary.html">Summary of Tools for the Java 2 Platform Security</a>。</p>
+<p>这是 <tt>AreaDemo.html</tt>，它加载 applet 并导致下载和安装扩展代码：</p>
+<div class="codeblock"><pre>
+&lt;html&gt;
+&lt;body&gt;
+  &lt;applet code="AreaApplet.class" archive="AreaApplet.jar"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+<p>首次加载页面时，会告知用户 applet 需要安装扩展程序。随后的对话框会通知用户签名的 applet。接受两者会在 JRE 的 <tt>lib/ext</tt> 文件夹中安装扩展并运行 applet。</p>
+<p>重新启动 Web 浏览器并加载相同的 Web 页面后，仅显示有关 applet 签名者的对话框，因为已经安装了 <tt>area.jar</tt>。如果在不同的 Web 浏览器中打开 <tt>AreaDemo.html</tt>(假设两个浏览器使用相同的 JRE)，也是如此。</p>
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="install.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="load.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Installed Extensions
+        <br /><b>Next page:</b> Understanding Extension Class Loading
+    </div>
+</body>
+</html> 

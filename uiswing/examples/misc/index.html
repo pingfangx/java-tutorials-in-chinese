@@ -1,0 +1,861 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Using Other Swing Features: Examples(Java™ 教程-Java Tutorials 中文版&gt;使用 Swing 创建 GUI&gt;使用其他 Swing 功能)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This Swing Java Tutorial describes developing graphical user interfaces (GUIs) for applications and applets using Swing components" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java swing, java ui, java user interface, swing components, swing events, swing layout  " />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="MainFlow_wide">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Creating a GUI with Swing
+        <br /><b>Lesson:</b> Using Other Swing Features
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../../index.html" target="_top">主页</a>&gt;<a href="../../index.html" target="_top">使用 Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">使用其他 Swing 功能</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="../../examples/components/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../../examples/layout/index.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>Using Other Swing Features: Examples</h1></div>
+            <div id="PageContent">
+
+<p>The <a href="#table">table</a> that follows lists every example in the Using Other Swing Features lesson, with links to required files and to where each example is discussed. The first column of the table has links to JNLP files that let you run the examples using Java™ Web Start.</p>
+<div class="note"><hr /><strong>NOTE:</strong>&nbsp;Release 7.0 is required to run all applets and Java Web Start examples. Most examples will run on an earlier release but you must compile and run them locally.
+
+<hr /></div>
+<p>To run an example using Java Web Start, click the <em>[Launch]</em> link in the first column of the <a href="#table">table</a>. The first time you run an example, there will be a delay while Java Web Start downloads the JAR file containing the class files for this lesson's examples. Afterward, the examples should execute more quickly.</p>
+
+
+<h2>Compiling and Running the Examples Locally</h2>
+<p>The second column in the table below has links to zip files for each demo that you can open and run in the NetBeans IDE. Refer to 
+<a class="TutorialLink" target="_top" href="../../../information/examples.html">Running Tutorial Examples in NetBeans IDE</a> for more information.</p>
+
+<p>If you download an individual example, take care to have all the necessary files in the proper hierarchy when you compile and run it. All of the examples in the Swing tutorial are placed in a package. For example, the components examples are placed in a <code>components</code> package. See the following image for the complete structure. Note that any examples using images expect their image files to be in a directory named <code>images</code> that is in the same directory as the example's src files.</p>
+
+
+<p>You can find out which files each example needs by consulting the following table or by looking at the comments at the beginning of each source file.</p>
+<h2><a name="table" id="table">Table of Examples</a></h2>
+<table border="1" summary="Information about examples"><!-- Five headings:
+ * Example
+ * Zip File
+ * Source Files
+ * Image Files
+ * Where Described
+-->
+
+
+
+<tr>
+
+<th>例子</th>
+
+<th>Zip File<br />
+<em>(contains all files necessary for the example plus NetBeans IDE project metadata)</em></th>
+
+<th>Source Files <em>(first file has the main method, except for examples that run only as applets)</em></th>
+
+<th>Image &amp; Other Files</th>
+
+<th>Where Described</th>
+
+</tr>
+
+<tr>
+
+<td><a name="AccessibleScrollDemo" id="AccessibleScrollDemo"></a>
+
+AccessibleScrollDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/AccessibleScrollDemoProject/AccessibleScrollDemo.jnlp"><em>[Launch]</em></a>
+</td>
+
+<td><a href="../zipfiles/misc-AccessibleScrollDemoProject.zip">Accessible Scroll Demo Project</a></td>
+
+<td>
+<a class="SourceLink" target="_blank" href="AccessibleScrollDemoProject/src/misc/AccessibleScrollDemo.java" onclick="showCode('../../../displayCode.html', 'AccessibleScrollDemoProject/src/misc/AccessibleScrollDemo.java'); return false;"><code>AccessibleScrollDemo.java</code></a><br />
+&nbsp;&nbsp; 
+<a class="SourceLink" target="_blank" href="AccessibleScrollDemoProject/src/misc/Rule.java" onclick="showCode('../../../displayCode.html', 'AccessibleScrollDemoProject/src/misc/Rule.java'); return false;"><code>Rule.java</code></a><br />
+&nbsp;&nbsp; 
+<a class="SourceLink" target="_blank" href="AccessibleScrollDemoProject/src/misc/Corner.java" onclick="showCode('../../../displayCode.html', 'AccessibleScrollDemoProject/src/misc/Corner.java'); return false;"><code>Corner.java</code></a><br />
+&nbsp;&nbsp; 
+<a class="SourceLink" target="_blank" href="AccessibleScrollDemoProject/src/misc/ScrollablePicture.java" onclick="showCode('../../../displayCode.html', 'AccessibleScrollDemoProject/src/misc/ScrollablePicture.java'); return false;"><code>ScrollablePicture.java</code></a></td>
+<td><a href="AccessibleScrollDemoProject/src/misc/images/flyingBee.jpg"><code>flyingBee.jpg</code></a></td>
+<td><a href="../../misc/access.html">如何支持辅助技术</a></td>
+</tr>
+<tr>
+<td><a name="ActionDemo" id="ActionDemo"></a>
+
+ActionDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ActionDemoProject/ActionDemo.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-ActionDemoProject.zip">Action Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="ActionDemoProject/src/misc/ActionDemo.java" onclick="showCode('../../../displayCode.html', 'ActionDemoProject/src/misc/ActionDemo.java'); return false;"><code>ActionDemo.java</code></a></td>
+<td><a href="http://www.oracle.com/technetwork/java/index-138612.html"><code>jlfgr-1_0.jar</code></a></td>
+<td><a href="../../misc/action.html">如何使用动作</a></td>
+</tr>
+<tr>
+<td><a name="DesktopDemo" id="DesktopDemo">DesktopDemo</a><a href="#security">*</a></td>
+<td><a href="../zipfiles/misc-DesktopDemoProject.zip">Desktop Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="DesktopDemoProject/src/misc/DesktopDemo.java" onclick="showCode('../../../displayCode.html', 'DesktopDemoProject/src/misc/DesktopDemo.java'); return false;"><code>DesktopDemo.java</code></a></td>
+<td><a href="DesktopDemoProject/src/misc/images/desk32.gif">desk32.gif</a></td>
+<td><a href="../../misc/desktop.html">如何与桌面类集成</a></td>
+</tr>
+<tr>
+<td><a name="Diva" id="Diva"></a>
+
+Diva <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/DivaProject/Diva.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-DivaProject.zip">Diva Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="DivaProject/src/Diva.java" onclick="showCode('../../../displayCode.html', 'DivaProject/src/Diva.java'); return false;"><code>Diva.java</code></a></td>
+<td>&nbsp;</td>
+<td><a href="../../misc/jlayer.html#events">How to Decorate Components with JLayer</a></td>
+</tr>
+<tr>
+<td><a name="FieldValidator" id="FieldValidator"></a>
+
+FieldValidator <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/FieldValidatorProject/FieldValidator.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-FieldValidatorProject.zip">FieldValidator Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="FieldValidatorProject/src/FieldValidator.java" onclick="showCode('../../../displayCode.html', 'FieldValidatorProject/src/FieldValidator.java'); return false;"><code>FieldValidator.java</code></a></td>
+<td>&nbsp;</td>
+<td><a href="../../misc/jlayer.html#validation">How to Decorate Components with JLayer</a></td>
+</tr>
+<tr>
+<td><a name="FocusConceptsDemo" id="FocusConceptsDemo"></a>
+
+FocusConceptsDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/FocusConceptsDemoProject/FocusConceptsDemo.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-FocusConceptsDemoProject.zip">Focus Concepts Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="FocusConceptsDemoProject/src/misc/FocusConceptsDemo.java" onclick="showCode('../../../displayCode.html', 'FocusConceptsDemoProject/src/misc/FocusConceptsDemo.java'); return false;"><code>FocusConceptsDemo.java</code></a></td>
+<td>&nbsp;&nbsp;</td>
+<td><a href="../../misc/focus.html">如何使用焦点子系统</a></td>
+</tr>
+<tr>
+<td><a name="FocusTraversalDemo" id="FocusTraversalDemo"></a>
+
+FocusTraversalDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/FocusTraversalDemoProject/FocusTraversalDemo.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-FocusTraversalDemoProject.zip">Focus Traversal Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="FocusTraversalDemoProject/src/misc/FocusTraversalDemo.java" onclick="showCode('../../../displayCode.html', 'FocusTraversalDemoProject/src/misc/FocusTraversalDemo.java'); return false;"><code>FocusTraversalDemo.java</code></a></td>
+<td>&nbsp;&nbsp;</td>
+<td><a href="../../misc/focus.html">如何使用焦点子系统</a></td>
+</tr><!-- ****** START of GradientTranslucentWindowDemo ************ -->
+
+
+
+<tr>
+
+<td><a name="GradientTranslucentWindowDemo" id="GradientTranslucentWindowDemo"></a>
+
+GradientTranslucentWindowDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/GradientTranslucentWindowDemoProject/GradientTranslucentWindowDemo.jnlp"><em>[Launch]</em></a>
+</td>
+
+<td><a href="../zipfiles/misc-GradientTranslucentWindowDemoProject.zip">Gradient Translucent Window Demo Project</a></td>
+
+<td>
+<a class="SourceLink" target="_blank" href="GradientTranslucentWindowDemoProject/src/misc/GradientTranslucentWindowDemo.java" onclick="showCode('../../../displayCode.html', 'GradientTranslucentWindowDemoProject/src/misc/GradientTranslucentWindowDemo.java'); return false;"><code>GradientTranslucentWindowDemo.java</code></a></td>
+
+<td>&nbsp;</td>
+
+<td><a href="../../misc/trans_shaped_windows.html">如何创建半透明和形状的 Windows</a></td>
+
+</tr><!-- ****** END of GradientTranslucentWindowDemo ******************* -->
+
+
+
+
+
+<tr>
+<td><a name="InputVerificationDemo" id="InputVerificationDemo"></a>
+
+InputVerificationDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/InputVerificationDemoProject/InputVerificationDemo.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-InputVerificationDemoProject.zip">Input Verification Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="InputVerificationDemoProject/src/misc/InputVerificationDemo.java" onclick="showCode('../../../displayCode.html', 'InputVerificationDemoProject/src/misc/InputVerificationDemo.java'); return false;"><code>InputVerificationDemo.java</code></a></td>
+<td>&nbsp;&nbsp;</td>
+<td><a href="../../misc/focus.html">如何使用焦点子系统</a></td>
+</tr>
+<tr>
+<td><a name="InputVerificationDialogDemo" id="InputVerificationDialogDemo"></a>
+
+InputVerificationDialogDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/InputVerificationDialogDemoProject/InputVerificationDialogDemo.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-InputVerificationDialogDemoProject.zip">Input Verification Dialog Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="InputVerificationDialogDemoProject/src/misc/InputVerificationDialogDemo.java" onclick="showCode('../../../displayCode.html', 'InputVerificationDialogDemoProject/src/misc/InputVerificationDialogDemo.java'); return false;"><code>InputVerificationDialogDemo.java</code></a></td>
+<td>&nbsp;&nbsp;</td>
+<td><a href="../../misc/focus.html">如何使用焦点子系统</a></td>
+</tr>
+<tr>
+<td><a name="ModalityDemo" id="ModalityDemo"></a>
+
+ModalityDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ModalityDemoProject/ModalityDemo.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-ModalityDemoProject.zip">Modality Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="ModalityDemoProject/src/misc/ModalityDemo.java" onclick="showCode('../../../displayCode.html', 'ModalityDemoProject/src/misc/ModalityDemo.java'); return false;"><code>ModalityDemo.java</code></a></td>
+<td>&nbsp;&nbsp;</td>
+<td><a href="../../misc/modality.html">如何在对话框中使用模态</a></td>
+</tr>
+<tr>
+<td><a name="Myopia" id="Myopia"></a>
+
+Myopia <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/MyopiaProject/Myopia.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-MyopiaProject.zip">Myopia Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="MyopiaProject/src/Myopia.java" onclick="showCode('../../../displayCode.html', 'MyopiaProject/src/Myopia.java'); return false;"><code>Myopia.java</code></a></td>
+<td>&nbsp;</td>
+<td><a href="../../misc/jlayer.html#drawing">How to Decorate Components with JLayer</a></td>
+</tr><!-- ****** START of ShapedWindowDemo ************ -->
+
+
+
+<tr>
+<td><a name="ShapedWindowDemo" id="ShapedWindowDemo"></a>
+
+ShapedWindowDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ShapedWindowDemoProject/ShapedWindowDemo.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-ShapedWindowDemoProject.zip">Shaped Window Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="ShapedWindowDemoProject/src/misc/ShapedWindowDemo.java" onclick="showCode('../../../displayCode.html', 'ShapedWindowDemoProject/src/misc/ShapedWindowDemo.java'); return false;"><code>ShapedWindowDemo.java</code></a></td>
+<td>&nbsp;</td>
+<td><a href="../../misc/trans_shaped_windows.html">如何创建半透明和形状的 Windows</a></td>
+</tr><!-- ****** END of ShapedWindowDemo ******************* -->
+
+
+
+
+
+
+<tr>
+<td><a name="SplashDemo" id="SplashDemo">SplashDemo</a></td>
+<td><a href="../zipfiles/misc-SplashDemoProject.zip">Splash Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="SplashDemoProject/src/misc/SplashDemo.java" onclick="showCode('../../../displayCode.html', 'SplashDemoProject/src/misc/SplashDemo.java'); return false;"><code>SplashDemo.java</code></a></td>
+<td><a href="SplashDemoProject/src/misc/images/splash.gif"><code>splash.gif</code></a></td>
+<td><a href="../../misc/splashscreen.html">如何创建启动画面</a></td>
+</tr>
+<tr>
+<td><a name="TablePrintDemo1" id="TablePrintDemo1"></a>
+
+TablePrintDemo1 <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TablePrintDemo1Project/TablePrintDemo1.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-TablePrintDemo1Project.zip">Table Print Demo1 Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="TablePrintDemo1Project/src/misc/TablePrintDemo1.java" onclick="showCode('../../../displayCode.html', 'TablePrintDemo1Project/src/misc/TablePrintDemo1.java'); return false;"><code>TablePrintDemo1.java</code></a></td>
+<td><a href="TablePrintDemo1Project/src/misc/images/failed.png"><code>failed.png</code></a>, <a href="TablePrintDemo1Project/src/misc/images/passed.png"><code>passed.png</code></a>.</td>
+<td><a href="../../misc/printtable.html">如何打印表格</a></td>
+</tr>
+<tr>
+<td><a name="TablePrintDemo2" id="TablePrintDemo2"></a>
+
+TablePrintDemo2 <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TablePrintDemo2Project/TablePrintDemo2.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-TablePrintDemo2Project.zip">Table Print Demo2 Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="TablePrintDemo2Project/src/misc/TablePrintDemo2.java" onclick="showCode('../../../displayCode.html', 'TablePrintDemo2Project/src/misc/TablePrintDemo2.java'); return false;"><code>TablePrintDemo2.java</code></a><br />
+&nbsp;&nbsp; 
+<a class="SourceLink" target="_blank" href="TablePrintDemo2Project/src/misc/TablePrintDemo1.java" onclick="showCode('../../../displayCode.html', 'TablePrintDemo2Project/src/misc/TablePrintDemo1.java'); return false;"><code>TablePrintDemo1.java</code></a></td>
+<td><a href="TablePrintDemo2Project/src/misc/images/failed.png"><code>failed.png</code></a>, <a href="TablePrintDemo2Project/src/misc/images/passed.png"><code>passed.png</code></a> <a href="TablePrintDemo2Project/src/misc/images/failed-BW.png"><code>failed-BW.png</code></a>, <a href="TablePrintDemo2Project/src/misc/images/passed-BW.png"><code>passed-BW.png</code></a>.</td>
+<td><a href="../../misc/printtable.html">如何打印表格</a></td>
+</tr>
+<tr>
+<td><a name="TablePrintDemo3" id="TablePrintDemo3"></a>
+
+TablePrintDemo3 <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TablePrintDemo3Project/TablePrintDemo3.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-TablePrintDemo3Project.zip">Table Print Demo3 Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="TablePrintDemo3Project/src/misc/TablePrintDemo3.java" onclick="showCode('../../../displayCode.html', 'TablePrintDemo3Project/src/misc/TablePrintDemo3.java'); return false;"><code>TablePrintDemo3.java</code></a><br />
+&nbsp;&nbsp; 
+<a class="SourceLink" target="_blank" href="TablePrintDemo3Project/src/misc/TablePrintDemo2.java" onclick="showCode('../../../displayCode.html', 'TablePrintDemo3Project/src/misc/TablePrintDemo2.java'); return false;"><code>TablePrintDemo2.java</code></a><br />
+&nbsp;&nbsp; 
+<a class="SourceLink" target="_blank" href="TablePrintDemo3Project/src/misc/TablePrintDemo1.java" onclick="showCode('../../../displayCode.html', 'TablePrintDemo3Project/src/misc/TablePrintDemo1.java'); return false;"><code>TablePrintDemo1.java</code></a></td>
+<td><a href="TablePrintDemo3Project/src/misc/images/failed.png"><code>failed.png</code></a>, <a href="TablePrintDemo3Project/src/misc/images/passed.png"><code>passed.png</code></a> <a href="TablePrintDemo3Project/src/misc/images/failed-BW.png"><code>failed-BW.png</code></a>, <a href="TablePrintDemo3Project/src/misc/images/passed-BW.png"><code>passed-BW.png</code></a> <a href="TablePrintDemo3Project/src/misc/images/clipBottom.png"><code>clipBottom.png</code></a>, <a href="TablePrintDemo3Project/src/misc/images/clipBottomLeft.png"><code>clipBottomLeft.png</code></a> <a href="TablePrintDemo3Project/src/misc/images/clipBottomRight.png"><code>clipBottomRight.png</code></a>, <a href="TablePrintDemo3Project/src/misc/images/clipLeft.png"><code>clipLeft.png</code></a>, <a href="TablePrintDemo3Project/src/misc/images/clipRight.png"><code>clipRight.png</code></a>, <a href="TablePrintDemo3Project/src/misc/images/clipTop.png"><code>clipTop.png</code></a>, <a href="TablePrintDemo3Project/src/misc/images/clipTopCenter.png"><code>clipTopCenter.png</code></a>, <a href="TablePrintDemo3Project/src/misc/images/clipTopLeft.png"><code>clipTopLeft.png</code></a>, <a href="TablePrintDemo3Project/src/misc/images/clipTopRight.png"><code>clipTopRight.png</code></a>, <a href="TablePrintDemo3Project/src/misc/images/finalGrades.png"><code>finalGrades.png</code></a>.</td>
+<td><a href="../../misc/printtable.html">如何打印表格</a></td>
+</tr>
+<tr>
+<td><a name="TapTapTap" id="TapTapTap"></a>
+
+TapTapTap <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TapTapTapProject/TapTapTap.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-TapTapTapProject.zip">TapTapTap Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="TapTapTapProject/src/TapTapTap.java" onclick="showCode('../../../displayCode.html', 'TapTapTapProject/src/TapTapTap.java'); return false;"><code>TapTapTap.java</code></a></td>
+<td>&nbsp;</td>
+<td><a href="../../misc/jlayer.html#animating">How to Decorate Components with JLayer</a></td>
+</tr>
+<tr>
+<td><a name="TextAreaPrintingDemo" id="TextAreaPrintingDemo"></a>
+
+TextAreaPrintingDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TextAreaPrintingDemoProject/TextAreaPrintingDemo.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-TextAreaPrintingDemoProject.zip">Text Area Printing Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="TextAreaPrintingDemoProject/src/misc/TextAreaPrintingDemo.java" onclick="showCode('../../../displayCode.html', 'TextAreaPrintingDemoProject/src/misc/TextAreaPrintingDemo.java'); return false;"><code>TextAreaPrintingDemo.java</code></a></td>
+<td><a href="TextAreaPrintingDemoProject/src/misc/images/print.png"><code>print.png</code></a>, <a href="TextAreaPrintingDemoProject/src/misc/toprint.txt"><code>toprint.txt</code></a>, <a href="TextAreaPrintingDemoProject/src/misc/guide.txt"><code>guide.txt</code></a>.</td>
+<td><a href="../../misc/printtext.html">如何打印文本</a></td>
+</tr>
+<tr>
+<td><a name="TextBatchPrintingDemo" id="TextBatchPrintingDemo"></a>
+
+TextBatchPrintingDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TextBatchPrintingDemoProject/TextBatchPrintingDemo.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-TextBatchPrintingDemoProject.zip">Text Batch Printing Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="TextBatchPrintingDemoProject/src/misc/TextBatchPrintingDemo.java" onclick="showCode('../../../displayCode.html', 'TextBatchPrintingDemoProject/src/misc/TextBatchPrintingDemo.java'); return false;"><code>TextBatchPrintingDemo.java</code></a></td>
+<td><a href="TextBatchPrintingDemoProject/src/misc/index.html"><code>index.html</code></a>, <a href="TextBatchPrintingDemoProject/src/misc/chapter1.html"><code>chapter1.html</code></a>, <a href="TextBatchPrintingDemoProject/src/misc/chapter2.html"><code>chapter2.html</code></a>, <a href="TextBatchPrintingDemoProject/src/misc/chapter3.html"><code>chapter3.html</code></a>, <a href="TextBatchPrintingDemoProject/src/misc/chapter4.html"><code>chapter4.html</code></a>, <a href="TextBatchPrintingDemoProject/src/misc/chapter5.html"><code>chapter5.html</code></a>, <a href="TextBatchPrintingDemoProject/src/misc/chapter6.html"><code>chapter6.html</code></a>, <a href="TextBatchPrintingDemoProject/src/misc/chapter7.html"><code>chapter7.html</code></a>, <a href="TextBatchPrintingDemoProject/src/misc/chapter8.html"><code>chapter8.html</code></a>, <a href="TextBatchPrintingDemoProject/src/misc/chapter9.html"><code>chapter9.html</code></a>, <a href="TextBatchPrintingDemoProject/src/misc/chapter10.html"><code>chapter10.html</code></a>, <a href="TextBatchPrintingDemoProject/src/misc/chapter11.html"><code>chapter11.html</code></a>.</td>
+<td><a href="../../misc/printtext.html">如何打印文本</a></td>
+</tr>
+
+
+<tr>
+<td><a name="TrackFocusDemo" id="TrackFocusDemo"></a>
+
+TrackFocusDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TrackFocusDemoProject/TrackFocusDemo.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-TrackFocusDemoProject.zip">Track Focus Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="TrackFocusDemoProject/src/misc/TrackFocusDemo.java" onclick="showCode('../../../displayCode.html', 'TrackFocusDemoProject/src/misc/TrackFocusDemo.java'); return false;"><code>TrackFocusDemo.java</code></a><br />
+&nbsp;&nbsp; 
+<a class="SourceLink" target="_blank" href="TrackFocusDemoProject/src/misc/Picture.java" onclick="showCode('../../../displayCode.html', 'TrackFocusDemoProject/src/misc/Picture.java'); return false;"><code>Picture.java</code></a></td>
+<td><a href="TrackFocusDemoProject/src/misc/images/Maya.jpg"><code>Maya.jpg</code></a>, <a href="TrackFocusDemoProject/src/misc/images/Anya.jpg"><code>Anya.jpg</code></a>, <a href="TrackFocusDemoProject/src/misc/images/Laine.jpg"><code>Laine.jpg</code></a>, <a href="TrackFocusDemoProject/src/misc/images/Cosmo.jpg"><code>Cosmo.jpg</code></a>, <a href="TrackFocusDemoProject/src/misc/images/Adele.jpg"><code>Adele.jpg</code></a>, <a href="TrackFocusDemoProject/src/misc/images/Alexi.jpg"><code>Alexi.jpg</code></a>.</td>
+<td><a href="../../misc/focus.html">如何使用焦点子系统</a></td>
+</tr>
+<tr>
+<td><a name="TrayIconDemo" id="TrayIconDemo">TrayIconDemo</a><a href="#security">*</a></td>
+<td><a href="../zipfiles/misc-TrayIconDemoProject.zip">Tray Icon Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="TrayIconDemoProject/src/misc/TrayIconDemo.java" onclick="showCode('../../../displayCode.html', 'TrayIconDemoProject/src/misc/TrayIconDemo.java'); return false;"><code>TrayIconDemo.java</code></a></td>
+<td><a href="TrayIconDemoProject/src/misc/images/bulb.gif"><code>bulb.gif</code></a></td>
+<td><a href="../../misc/systemtray.html">如何使用系统托盘</a></td>
+</tr><!-- ****** START of TranslucentWindowDemo ************ -->
+
+
+
+<tr>
+<td><a name="TranslucentWindowDemo" id="TranslucentWindowDemo"></a>
+
+TranslucentWindowDemo <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TranslucentWindowDemoProject/TranslucentWindowDemo.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-TranslucentWindowDemoProject.zip">Translucent Window Demo Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="TranslucentWindowDemoProject/src/misc/TranslucentWindowDemo.java" onclick="showCode('../../../displayCode.html', 'TranslucentWindowDemoProject/src/misc/TranslucentWindowDemo.java'); return false;"><code>TranslucentWindowDemo.java</code></a></td>
+<td>&nbsp;</td>
+<td><a href="../../misc/trans_shaped_windows.html">如何创建半透明和形状的 Windows</a></td>
+</tr><!-- ****** END of TranslucentWindowDemo ******************* -->
+
+
+
+
+<tr>
+<td><a name="Wallpaper" id="Wallpaper"></a>
+
+Wallpaper <a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/WallpaperProject/Wallpaper.jnlp"><em>[Launch]</em></a>
+</td>
+<td><a href="../zipfiles/misc-WallpaperProject.zip">Wallpaper Project</a></td>
+<td>
+<a class="SourceLink" target="_blank" href="WallpaperProject/src/Wallpaper.java" onclick="showCode('../../../displayCode.html', 'WallpaperProject/src/Wallpaper.java'); return false;"><code>Wallpaper.java</code></a></td>
+<td>&nbsp;</td>
+<td><a href="../../misc/jlayer.html#drawing">How to Decorate Components with JLayer</a></td>
+</tr>
+</table>
+<p><br />
+<a name="security" id="security">* This application is not currently available with Java Web Start. To run it, download and compile it, and then run it as an application.</a></p>
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="../../examples/components/index.html">« 上一页</a>•<a target="_top" href="../../TOC.html">路径</a>•<a target="_top" href="../../examples/layout/index.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> 
+        <br /><b>Next page:</b> 
+    </div>
+</body>
+</html> 
+
+

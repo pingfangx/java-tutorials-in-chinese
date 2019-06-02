@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>编写套接字的服务器端(Java™ 教程-Java Tutorials 中文版&gt;自定义网络&gt;关于套接字)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This networking Java tutorial describes networking capabilities of the Java platform, working with URLs, sockets, datagrams, and cookies" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java networking, java url, java socket, datagram, java cookie" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">关于套接字</a></div>
+<div class="linkAHEAD"><a href="definition.html">什么是套接字？</a></div>
+<div class="linkAHEAD"><a href="readingWriting.html">读取和写入套接字</a></div>
+<div class="nolinkAHEAD">编写套接字的服务器端</div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Custom Networking
+        <br /><b>Lesson:</b> All About Sockets
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">关于套接字</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="readingWriting.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../datagrams/index.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>编写套接字的服务器端</h1></div>
+            <div id="PageContent">
+
+<p>本节介绍如何编写服务器以及随之而来的客户端。客户端/服务器对中的服务器提供 Knock Knock 笑话。Knock Knock 笑话受到孩子们的青睐，通常是坏双关语的载体。它们是这样的：</p>
+<p><strong>Server</strong>: "Knock knock!"<br/>
+<strong>Client</strong>: "Who's there?"<br/>
+<strong>Server</strong>: "Dexter."<br/>
+<strong>Client</strong>: "Dexter who?"<br/>
+<strong>Server</strong>: "Dexter halls with boughs of holly."<br/>
+<strong>Client</strong>: "Groan."</p>
+<p>该示例包含两个独立运行的 Java 程序：客户端程序和服务器程序。客户端程序由单个类 <a class="SourceLink" target="_blank" href="examples/KnockKnockClient.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockClient.java'); return false;"><code>KnockKnockClient</code></a> 实现，并且非常类似于 <a class="SourceLink" target="_blank" href="examples/EchoClient.java" onclick="showCode('../../displayCode.html', 'examples/EchoClient.java'); return false;"><code>EchoClient</code></a> 示例上一节。服务器程序由两个类实现：<a class="SourceLink" target="_blank" href="examples/KnockKnockServer.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockServer.java'); return false;"><code>KnockKnockServer</code></a> 和 <a class="SourceLink" target="_blank" href="examples/KnockKnockProtocol.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockProtocol.java'); return false;"><code>KnockKnockProtocol</code></a>。<code>KnockKnockServer</code>，类似于 <a class="SourceLink" target="_blank" href="examples/EchoServer.java" onclick="showCode('../../displayCode.html', 'examples/EchoServer.java'); return false;"><code>EchoServer</code></a>，包含服务器程序的 <code>main</code> 方法并执行监听端口，建立连接，读取和写入套接字的工作。类 <a class="SourceLink" target="_blank" href="examples/KnockKnockProtocol.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockProtocol.java'); return false;"><code>KnockKnockProtocol</code></a> 提供了笑话。它跟踪当前的笑话，当前状态(发送 knock knock，发送线索等)，并根据当前状态返回笑话的各种文本片段。此对象实现协议 - 客户端和服务器已同意用于通信的语言。</p>
+
+<p>以下部分详细介绍了客户端和服务器中的每个类，然后向您展示了如何运行它们。</p>
+
+<h2>Knock Knock 服务器</h2>
+
+<p>本节将介绍实现 Knock Knock 服务器程序的代码，<a class="SourceLink" target="_blank" href="examples/KnockKnockServer.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockServer.java'); return false;"><code>KnockKnockServer</code></a>。</p>
+ 
+<p>服务器程序首先创建一个新的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html"><code>ServerSocket</code></a> 对象以侦听特定端口(请参阅以下代码段中的粗体语句)。运行此服务器时，请选择尚未专用于某些其他服务的端口。例如，此命令启动服务器程序 <code>KnockKnockServer</code>，以便它侦听端口 4444：</p>
+
+<div class="codeblock"><pre>
+java KnockKnockServer 4444
+</pre></div>
+
+<p>服务器程序在 <code>try</code>-with-resources 语句中创建 <code>ServerSocket</code> 对象：</p>
+
+<div class="codeblock"><pre>
+int portNumber = Integer.parseInt(args[0]);
+
+try ( 
+    <strong>ServerSocket serverSocket = new ServerSocket(portNumber);</strong>
+    Socket clientSocket = serverSocket.accept();
+    PrintWriter out =
+        new PrintWriter(clientSocket.getOutputStream(), true);
+    BufferedReader in = new BufferedReader(
+        new InputStreamReader(clientSocket.getInputStream()));
+) {
+</pre></div>
+
+<p><code>ServerSocket</code> 是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/package-frame.html"><code>java.net</code></a> 类，它提供客户端/服务器套接字连接的服务器端的系统无关实现。如果 <code>ServerSocket</code> 的构造函数无法侦听指定的端口(例如，端口已被使用)，则会引发异常。在这种情况下，<code>KnockKnockServer</code> 别无选择，只能退出。</p>
+
+<p>如果服务器成功绑定到其端口，则成功创建 <code>ServerSocket</code> 对象，服务器继续执行下一步 - 接受来自客户端的连接(<code>try</code>-with-resources 语句中的下一语句)：</p>
+
+<div class="codeblock"><pre>
+clientSocket = serverSocket.accept();
+</pre></div>
+
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html#accept--"><code>accept</code></a> 方法等待，直到客户端启动并请求此服务器的主机和端口上的连接。(假设您在名为 <code>knockknockserver.example.com</code> 的计算机上运行了服务器程序 <code>KnockKnockServer</code>。)在此示例中，服务器运行在由第一个命令行参数指定端口号上。请求并成功建立连接时，accept 方法返回一个新的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html"><code>Socket</code></a> 对象，该对象绑定到同一本地端口并将其远程地址和远程端口设置为客户端。服务器可以通过这个新的 <code>Socket</code> 与客户端通信，并继续监听原始 <code>ServerSocket</code> 上的客户端连接请求。该程序的特定版本不会监听更多客户端连接请求。但是，在 <a href="#later">Supporting Multiple Clients</a> 中提供了该程序的修改版本。</p>
+
+<p>服务器成功建立与客户端的连接后，它使用以下代码与客户端通信：</p>
+<div class="codeblock"><pre>
+try (
+    // ...
+    PrintWriter out =
+        new PrintWriter(clientSocket.getOutputStream(), true);
+    BufferedReader in = new BufferedReader(
+        new InputStreamReader(clientSocket.getInputStream()));
+) {
+    String inputLine, outputLine;
+            
+    <strong>// Initiate conversation with client
+    KnockKnockProtocol kkp = new KnockKnockProtocol();
+    outputLine = kkp.processInput(null);
+    out.println(outputLine);</strong>
+
+    while ((inputLine = in.readLine()) != null) {
+        outputLine = kkp.processInput(inputLine);
+        out.println(outputLine);
+        if (outputLine.equals("Bye."))
+            break;
+    }
+</pre></div>
+
+<p>此代码执行以下操作：</p>
+<ol>
+    <li>获取套接字的输入和输出流，并在其上打开读写器。</li>
+    <li>通过写入套接字启动与客户端的通信(以粗体显示)。</li>
+    <li>通过读取和写入套接字(<code>while</code> 循环)与客户端进行通信。</li>
+</ol>
+
+<p>第 1 步已经很熟悉了。第 2 步以粗体显示，值得一些评论。上面代码段中的粗体语句启动与客户端的对话。代码创建一个 <code>KnockKnockProtocol</code> 对象 - 跟踪当前笑话的对象，笑话中的当前状态，等等。</p>
+
+<p>创建 <code>KnockKnockProtocol</code> 后，代码调用 <code>KnockKnockProtocol</code> 的 <code>processInput</code> 方法以获取服务器发送给客户端的第一条消息。对于这个例子，服务器说的第一件事是“Knock!Knock!“接下来，服务器将信息写入连接到客户端套接字的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html"><code>PrintWriter</code></a>，从而将消息发送到客户端。</p>
+
+<p>步骤 3 在 <code>while</code> 循环中编码。只要客户端和服务器仍然有相互说话的内容，服务器就会读取和写入套接字，在客户端和服务器之间来回发送消息。</p>
+
+<p>服务器发起对话使用 "Knock!Knock!" 所以之后服务器必须等待客户端说”Who's there?“结果，<code>while</code> 循环迭代读取输入流。<code>readLine</code> 方法等待，直到客户端通过向其输出流(服务器的输入流)写入内容来响应。当客户端响应时，服务器将客户端的响应传递给 <code>KnockKnockProtocol</code> 对象，并要求 <code>KnockKnockProtocol</code> 对象进行适当的回复。服务器使用对 println 的调用，立即通过连接到套接字的输出流将回复发送到客户端。如果从 <code>KnockKnockServer</code> 对象生成的服务器响应是 "Bye." 这表明客户端不再需要笑话和循环退出。</p>
+
+<p>Java 运行时会自动关闭输入和输出流，客户端套接字和服务器套接字，因为它们是在 <code>try</code>-with-resources 语句中创建的。</p>
+
+<h2>Knock Knock 协议</h2>
+<p><a class="SourceLink" target="_blank" href="examples/KnockKnockProtocol.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockProtocol.java'); return false;"><code>KnockKnockProtocol</code></a> 类实现客户端和服务器用于通信的协议。该类跟踪客户端和服务器在对话中的位置，并提供服务器对客户端语句的响应。<code>KnockKnockProtocol</code> 对象包含所有笑话的文本，并确保客户端对服务器的语句给出正确的响应。让客户说“Dexter who?”是不行的。当服务器说"Knock!Knock!"</p>
+ 
+<p>所有客户端/服务器对必须具有一些协议，通过它们相互通信；否则，来回传递的数据将毫无意义。您自己的客户端和服务器使用的协议完全取决于它们完成任务所需的通信。</p>
+
+<h2>Knock Knock 客户端</h2>
+
+<p><a class="SourceLink" target="_blank" href="examples/KnockKnockClient.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockClient.java'); return false;"><code>KnockKnockClient</code></a> 类实现了与 <code>KnockKnockServer</code> 对话的客户端程序。<code>KnockKnockClient</code> 基于上一节中的 <code>EchoClient</code> 程序，<a class="TutorialLink" target="_top" href="readingWriting.html">Reading from and Writing to a Socket</a>，对您来说应该有些熟悉。但是我们还是会检查程序，然后根据服务器中发生的情况来查看客户端中发生的情况。</p>
+
+ <p>启动客户端程序时，服务器应该已经在运行并监听端口，等待客户端请求连接。因此，客户端程序所做的第一件事就是打开一个连接到运行在指定主机名和端口上的服务器的套接字：</p>
+<div class="codeblock"><pre>
+String hostName = args[0];
+int portNumber = Integer.parseInt(args[1]);
+
+try (
+    <strong>Socket kkSocket = new Socket(hostName, portNumber);</strong>
+    PrintWriter out = new PrintWriter(kkSocket.getOutputStream(), true);
+    BufferedReader in = new BufferedReader(
+        new InputStreamReader(kkSocket.getInputStream()));
+)
+</pre></div>
+
+<p>创建套接字时，<code>KnockKnockClient</code> 示例使用第一个命令行参数的主机名，即网络上运行服务器程序 <code>KnockKnockServer</code> 的计算机的名称。 </p>
+
+<p><code>KnockKnockClient</code> 示例在创建套接字时使用第二个命令行参数作为端口号。这是 <em>remote port number (远程端口号)</em>  - 服务器计算机上端口号，是 <code>KnockKnockServer</code> 正在侦听的端口。例如，以下命令运行 <code>KnockKnockClient</code> 示例，使用 <code>knockknockserver.example.com</code> 作为运行服务器程序 <code>KnockKnockServer</code> 的计算机的名称和 4444 作为远程端口号：</p>
+
+<div class="codeblock"><pre>
+java KnockKnockClient knockknockserver.example.com 4444
+</pre></div>
+
+<p>客户端的套接字绑定到任何可用的 <em>local port (本地端口)</em> -客户端计算机上的端口。请记住，服务器也会获得一个新的套接字。如果在前面的示例中使用命令行参数运行 <code>KnockKnockClient</code> 示例，则此套接字绑定到运行 <code>KnockKnockClient</code> 示例的计算机上的本地端口号 4444。服务器的套接字和客户端的套接字已连接。</p>
+
+<p>接下来是 <code>while</code> 循环，它实现了客户端和服务器之间的通信。服务器首先说话，所以客户端必须先听。客户端通过读取连接到套接字的输入流来完成此操作。如果服务器说话，它会说 "Bye." 并且客户端退出循环。否则，客户端将文本显示到标准输出，然后读取用户的响应，用户键入标准输入。用户键入回车符后，客户端通过附加到套接字的输出流将文本发送到服务器。</p>
+<div class="codeblock"><pre>
+while ((fromServer = in.readLine()) != null) {
+    System.out.println("Server: " + fromServer);
+    if (fromServer.equals("Bye."))
+        break;
+
+    fromUser = stdIn.readLine();
+    if (fromUser != null) {
+        System.out.println("Client: " + fromUser);
+        out.println(fromUser);
+    }
+}
+</pre></div>
+<p>当服务器询问客户是否希望听到另一个笑话，客户端拒绝，并且服务器说 "Bye." 时，通信结束。</p>
+
+<p>客户端自动关闭其输入和输出流以及套接字，因为它们是在 <code>try</code>-with-resources 语句中创建的。</p>
+
+<h2>运行程序</h2>
+
+<p>您必须首先启动服务器程序。为此，请使用 Java 解释器运行服务器程序，就像使用任何其他 Java 应用程序一样。指定服务器程序侦听的端口号作为命令行参数：</p>
+
+<div class="codeblock"><pre>
+java KnockKnockServer 4444
+</pre></div>
+
+<p>接下来，运行客户端程序。请注意，您可以在网络上的任何计算机上运行客户端；它不必与服务器在同一台计算机上运行。指定运行 <code>KnockKnockServer</code> 服务器程序的计算机的主机名和端口号作为命令行参数：</p>
+
+<div class="codeblock"><pre>
+java KnockKnockClient knockknockserver.example.com 4444
+</pre></div>
+
+<p>如果您太快，可以在服务器有机会初始化并开始侦听端口之前启动客户端。如果发生这种情况，您将看到来自客户端的堆栈跟踪。如果发生这种情况，请重启客户端。</p>
+
+<p>如果在第一个客户端连接到服务器时尝试启动第二个客户端，则第二个客户端将挂起。下一节 <a href="#later">Supporting Multiple Clients</a>，讨论支持多个客户端。</p>
+
+<p>当您成功获得客户端和服务器之间的连接后，您将在屏幕上看到以下文本：</p>
+<div class="codeblock"><pre>
+Server: Knock! Knock!
+</pre></div>
+<p>现在，您必须回复：</p>
+<div class="codeblock"><pre>
+<strong>Who's there?</strong>
+</pre></div>
+
+<p>客户端回显您键入的内容并将文本发送到服务器。服务器响应其剧目中众多 Knock Knock 笑话中的第一行。现在您的屏幕应该包含这个(您输入的文字是粗体)：</p>
+
+<div class="codeblock"><pre>
+Server: Knock! Knock!
+<strong>Who's there?</strong>
+Client: Who's there?
+Server: Turnip
+</pre></div>
+
+<p>现在，您回复：</p>
+<div class="codeblock"><pre>
+Turnip who?
+</pre></div>
+<p>同样，客户端回应您键入的内容并将文本发送到服务器。服务器响应妙语。现在您的屏幕应该包含这个：</p>
+<div class="codeblock"><pre>
+Server: Knock! Knock!
+<strong>Who's there?</strong>
+Client: Who's there?
+Server: Turnip
+<strong>Turnip who?</strong>
+Client: Turnip who?
+Server: Turnip the heat, it's cold in here! Want another? (y/n)   
+</pre></div>
+
+<p>如果您想听另一个笑话，请输入 <strong>y</strong>;如果不想，请键入 <strong>n</strong>。如果您键入 <strong>y</strong>，服务器将再次启动 "Knock!Knock!" 如果输入 <strong>n</strong>，服务器会说 "Bye."，从而导致客户端和服务器都退出。</p>
+<p>如果在任何时候您输入错误，<code>KnockKnockServer</code> 对象会捕获它，服务器会响应类似这样的消息：</p>
+
+<div class="codeblock"><pre>
+Server: You're supposed to say "Who's there?"!
+</pre></div>
+<p>然后服务器再次启动笑话：</p>
+<div class="codeblock"><pre>
+Server: Try again. Knock! Knock!
+</pre></div>
+<p>请注意，<code>KnockKnockProtocol</code> 对象特别关注拼写和标点符号，但不是不区分大小写。</p>
+
+<h2><a name="later" id="later">支持多个客户端</a></h2>
+
+<p>为了简化 <code>KnockKnockServer</code> 示例，我们将其设计为侦听和处理单个连接请求。但是，多个客户端请求可以进入同一个端口，因此也可以进入相同的 <code>ServerSocket</code>。客户端连接请求在端口排队，因此服务器必须按顺序接受连接。但是，服务器可以通过使用线程同时为它们提供服务 - 每个客户端连接一个线程。</p>
+<p>这种服务器的逻辑基本流程如下：</p>
+<div class="codeblock"><pre>
+while (true) {
+    accept a connection;
+    create a thread to deal with the client;
+}
+</pre></div>
+<p>线程根据需要读取和写入客户端连接。</p>
+<div class="note"><hr /><strong>Try This:</strong>&nbsp;<p>修改 <code>KnockKnockServer</code>，以便它可以同时为多个客户端提供服务。两个类构成了我们的解决方案：<a class="SourceLink" target="_blank" href="examples/KKMultiServer.java" onclick="showCode('../../displayCode.html', 'examples/KKMultiServer.java'); return false;"><code>KKMultiServer</code></a> 和 <a class="SourceLink" target="_blank" href="examples/KKMultiServerThread.java" onclick="showCode('../../displayCode.html', 'examples/KKMultiServerThread.java'); return false;"><code>KKMultiServerThread</code></a>。<code>KKMultiServer</code> 永远循环，在 <code>ServerSocket</code> 上侦听客户端连接请求。当请求进入时，<code>KKMultiServer</code> 接受连接，创建一个新的 <code>KKMultiServerThread</code> 对象来处理它，将它从 accept 返回的套接字交给它，然后启动该线程。然后服务器返回监听连接请求。<code>KKMultiServerThread</code> 对象通过读取和写入套接字与客户端进行通信。运行新的 Knock Knock 服务器 <code>KKMultiServer</code>，然后连续运行多个客户端。</p>
+<hr /></div>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="readingWriting.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="../datagrams/index.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Reading from and Writing to a Socket
+        <br /><b>Next page:</b> All About Datagrams
+    </div>
+</body>
+</html> 

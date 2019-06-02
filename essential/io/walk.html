@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>遍历文件树(Java™ 教程-Java Tutorials 中文版&gt;必要类&gt;基本 I/O)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This Java tutorial describes exceptions, basic input/output, concurrency, regular expressions, and the platform environment" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java exception, java input output, java threads, java regex, regular expressions, path, classpath, environment variable" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">基本 I/O</a></div>
+<div class="linkAHEAD"><a href="streams.html">I/O 流</a></div>
+<div class="linkBHEAD"><a href="bytestreams.html">字节流</a></div>
+<div class="linkBHEAD"><a href="charstreams.html">字符流</a></div>
+<div class="linkBHEAD"><a href="buffers.html">缓冲流</a></div>
+<div class="linkBHEAD"><a href="scanfor.html">扫描和格式化</a></div>
+<div class="linkCHEAD"><a href="scanning.html">扫描</a></div>
+<div class="linkCHEAD"><a href="formatting.html">格式化</a></div>
+<div class="linkBHEAD"><a href="cl.html">来自命令行的 I/O</a></div>
+<div class="linkBHEAD"><a href="datastreams.html">数据流</a></div>
+<div class="linkBHEAD"><a href="objectstreams.html">对象流</a></div>
+<div class="linkAHEAD"><a href="fileio.html">文件 I/O(采用 NIO.2)</a></div>
+<div class="linkBHEAD"><a href="path.html">什么是路径？(和其他文件系统事实)</a></div>
+<div class="linkBHEAD"><a href="pathClass.html">路径类</a></div>
+<div class="linkCHEAD"><a href="pathOps.html">路径操作</a></div>
+<div class="linkBHEAD"><a href="fileOps.html">文件操作</a></div>
+<div class="linkBHEAD"><a href="check.html">检查文件或目录</a></div>
+<div class="linkBHEAD"><a href="delete.html">删除文件或目录</a></div>
+<div class="linkBHEAD"><a href="copy.html">复制文件或目录</a></div>
+<div class="linkBHEAD"><a href="move.html">移动文件或目录</a></div>
+<div class="linkBHEAD"><a href="fileAttr.html">管理元数据(文件和文件存储属性)</a></div>
+<div class="linkBHEAD"><a href="file.html">读取、写入和创建文件</a></div>
+<div class="linkBHEAD"><a href="rafs.html">随机访问文件</a></div>
+<div class="linkBHEAD"><a href="dirs.html">创建和读取目录</a></div>
+<div class="linkBHEAD"><a href="links.html">链接，符号或其他</a></div>
+<div class="nolinkBHEAD">遍历文件树</div>
+<div class="linkBHEAD"><a href="find.html">查找文件</a></div>
+<div class="linkBHEAD"><a href="notification.html">观察目录中的更改</a></div>
+<div class="linkBHEAD"><a href="misc.html">其他有用的方法</a></div>
+<div class="linkBHEAD"><a href="legacy.html">旧版文件 I/O 代码</a></div>
+<div class="linkAHEAD"><a href="summary.html">总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Essential Classes
+        <br /><b>Lesson:</b> Basic I/O
+        <br /><b>Section:</b> File I/O (Featuring NIO.2)
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="links.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="find.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>遍历文件树</h1></div>
+            <div id="PageContent"><!-- Walking the File Tree -->
+
+
+<p>您是否需要创建一个递归访问文件树中所有文件的应用程序？也许您需要删除树中的每个 <code>.class</code> 文件，或查找去年未访问过的每个文件。您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html"><code>FileVisitor</code></a> 接口执行此操作。</p>
+<p>本节包括以下内容：</p>
+<ul>
+<li><a href="#filevisitor">FileVisitor 接口</a></li>
+<li><a href="#invoke">启动遍历过程</a></li>
+<li><a href="#order">创建 FileVisitor 时的注意事项</a></li>
+<li><a href="#return">控制流</a></li>
+<li><a href="#ex">例子</a></li>
+</ul>
+<h2><a name="filevisitor" id="filevisitor">FileVisitor 接口</a></h2>
+<p>要遍历文件树，首先需要实现 <code>FileVisitor</code>。<code>FileVisitor</code> 指定遍历过程中关键点所需的行为：访问文件时，访问目录之前，访问目录之后，或发生故障时。该接口有四种方法对应于这些情况：</p>
+<ul>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html#preVisitDirectory-T-java.nio.file.attribute.BasicFileAttributes-"><code>preVisitDirectory</code></a>–在访问目录条目之前调用。</li>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html#postVisitDirectory-T-java.io.IOException-"><code>postVisitDirectory</code></a>–访问目录中的所有条目后调用。如果遇到任何错误，则将特定异常传递给该方法。</li>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html#visitFile-T-java.nio.file.attribute.BasicFileAttributes-"><code>visitFile</code></a>–在被访问的文件上调用。文件的 <code>BasicFileAttributes</code> 将传递给方法，或者您可以使用 <a class="TutorialLink" target="_top" href="fileAttr.html">file attributes</a> 包来读取一组特定的属性。例如，您可以选择读取文件的 <code>DosFileAttributeView</code> 以确定文件是否设置了“隐藏”位。</li>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html#visitFileFailedy-T-java.io.IOException-"><code>visitFileFailed</code></a>–无法访问文件时调用。特定异常传递给该方法。您可以选择是抛出异常，将其打印到控制台或日志文件，等等。</li>
+</ul>
+<p>如果您不需要实现所有四个 <code>FileVisitor</code> 方法，则不需要实现 <code>FileVisitor</code> 接口，可以继承 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/SimpleFileVisitor.html"><code>SimpleFileVisitor</code></a> 类。此类实现 <code>FileVisitor</code> 接口，访问树中的所有文件，并在遇到错误时抛出 <code>IOError</code>。您可以继承此类并仅覆盖所需的方法。</p>
+<p>下面是一个继承 <code>SimpleFileVisitor</code> 的示例，用于打印文件树中的所有条目。它打印条目不管条目是常规文件，符号链接，目录还是其他“未指定”类型的文件。它还会打印每个文件的大小（以字节为单位）。遇到的任何异常都会打印到控制台。</p>
+<p><code>FileVisitor</code> 方法以粗体显示：</p>
+<div class="codeblock"><pre>
+import static java.nio.file.FileVisitResult.*;
+
+public static class PrintFiles
+    extends SimpleFileVisitor&lt;Path&gt; {
+
+    // Print information about
+    // each type of file.
+    @Override
+    <strong>public FileVisitResult visitFile(Path file,
+                                   BasicFileAttributes attr)</strong> {
+        if (attr.isSymbolicLink()) {
+            System.out.format("Symbolic link: %s ", file);
+        } else if (attr.isRegularFile()) {
+            System.out.format("Regular file: %s ", file);
+        } else {
+            System.out.format("Other: %s ", file);
+        }
+        System.out.println("(" + attr.size() + "bytes)");
+        return CONTINUE;
+    }
+
+    // Print each directory visited.
+    @Override
+    <strong>public FileVisitResult postVisitDirectory(Path dir,
+                                          IOException exc)</strong> {
+        System.out.format("Directory: %s%n", dir);
+        return CONTINUE;
+    }
+
+    // If there is some error accessing
+    // the file, let the user know.
+    // If you don't override this method
+    // and an error occurs, an IOException 
+    // is thrown.
+    @Override
+    <strong>public FileVisitResult visitFileFailed(Path file,
+                                       IOException exc)</strong> {
+        System.err.println(exc);
+        return CONTINUE;
+    }
+}
+</pre></div>
+<h2><a name="invoke" id="invoke">启动遍历过程</a></h2>
+<p>实现 <code>FileVisitor</code> 后，如何启动文件遍历？<code>Files</code> 类中有两个 <code>walkFileTree</code> 方法。</p>
+<ul>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#walkFileTree-java.nio.file.Path-java.nio.file.FileVisitor-"><code>walkFileTree(Path, FileVisitor)</code></a></li>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#walkFileTree-java.nio.file.Path-java.util.Set-int-java.nio.file.FileVisitor-"><code>walkFileTree(Path, Set&lt;FileVisitOption&gt;, int, FileVisitor)</code></a></li>
+</ul>
+<p>第一种方法只需要一个起点和 <code>FileVisitor</code> 的实例。您可以按如下方式调用 <code>PrintFiles</code> 文件访问者：</p>
+<div class="codeblock"><pre>
+Path startingDir = ...;
+PrintFiles pf = new PrintFiles();
+Files.walkFileTree(startingDir, pf);
+</pre></div>
+<p>第二个 <code>walkFileTree</code> 方法允许您另外指定访问级别数限制和一组 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitOption.html"><code>FileVisitOption</code></a> 枚举。如果要确保此方法遍历整个文件树，可以为最大深度参数指定 <code>Integer.MAX_VALUE</code>。</p>
+<p>您可以指定 <code>FileVisitOption</code> 枚举，<code>FOLLOW_LINKS</code>，表示应遵循符号链接。</p>
+<p>此代码段显示了如何调用四参数方法：</p>
+<div class="codeblock"><pre>
+import static java.nio.file.FileVisitResult.*;
+
+Path startingDir = ...;
+
+EnumSet&lt;FileVisitOption&gt; opts = EnumSet.of(FOLLOW_LINKS);
+
+Finder finder = new Finder(pattern);
+Files.walkFileTree(startingDir, opts, Integer.MAX_VALUE, finder);
+</pre></div>
+<h2><a name="order" id="order">创建 FileVisitor 时的注意事项</a></h2>
+<p>首先深度遍历文件树，但是您不能对访问子目录的迭代顺序做出任何假设。</p>
+<p>如果您的程序将更改文件系统，则需要仔细考虑如何实现 <code>FileVisitor</code>。</p>
+<p>例如，如果您正在编写递归删除，则首先删除目录中的文件，然后再删除目录本身。在这种情况下，您在 <code>postVisitDirectory</code> 中删除目录。</p>
+<p>如果您正在编写递归复制，则在 <code>preVisitDirectory</code> 中创建新目录，然后将文件复制到目录中（在 <code>visitFiles</code> 方法中）。如果要保留源目录的属性(类似于 UNIX <code>cp -p</code> 命令)，则需要在复制文件之 <em>后</em> 的 <code>postvisitdirectory</code> 中执行该操作。<a class="SourceLink" target="_blank" href="examples/Copy.java" onclick="showCode('../../displayCode.html', 'examples/Copy.java'); return false;"><code><code>Copy</code></code></a> 示例显示了如何执行此操作。</p>
+<p>如果您正在编写文件搜索，则在 <code>visitFile</code> 方法中执行比较。此方法查找符合条件的所有文件，但不查找目录。如果要查找文件和目录，还必须在 <code>preVisitDirectory</code> 或 <code>postVisitDirectory</code> 方法中执行比较。<a class="SourceLink" target="_blank" href="examples/Find.java" onclick="showCode('../../displayCode.html', 'examples/Find.java'); return false;"><code><code>Find</code></code></a> 示例显示了如何执行此操作。</p>
+<p>您需要决定是否要遵循符号链接。例如，如果要删除文件，则可能不建议遵循符号链接。如果要复制文件树，则可能需要遵循它。默认情况下，<code>walkFileTree</code> 不遵循符号链接。</p>
+<p>为文件调用 <code>visitFile</code> 方法。如果已指定 <code>FOLLOW_LINKS</code> 选项，并且文件树具有指向父目录的循环链接，则循环目录将在 <code>visitFileFailed</code> 方法中被报告，通过 <code>FileSystemLoopException</code>。以下代码段显示了如何捕获循环链接，并且来自 <a class="SourceLink" target="_blank" href="examples/Copy.java" onclick="showCode('../../displayCode.html', 'examples/Copy.java'); return false;"><code><code>Copy</code></code></a> 示例：</p>
+<div class="codeblock"><pre>
+@Override
+public FileVisitResult
+    visitFileFailed(Path file,
+        IOException exc) {
+    if (exc instanceof FileSystemLoopException) {
+        System.err.println("cycle detected: " + file);
+    } else {
+        System.err.format("Unable to copy:" + " %s: %s%n", file, exc);
+    }
+    return CONTINUE;
+}
+</pre></div>
+<p>仅当程序遵循符号链接时才会出现这种情况。</p>
+<h2><a name="return" id="return">控制流</a></h2>
+<p>也许您想要遍历文件树以查找特定目录，并且在找到时，您希望该过程终止。也许您想跳过特定的目录。</p>
+<p><code>FileVisitor</code> 方法返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitResult.html"><code>FileVisitResult</code></a> 值。您可以中止文件遍历过程或控制是否访问目录，通过 <code>FileVisitor</code> 方法中返回的值：</p>
+<ul>
+<li><code>CONTINUE</code>  - 表示文件遍历应继续。如果 <code>preVisitDirectory</code> 方法返回 <code>CONTINUE</code>，则访问该目录。</li>
+<li><code>TERMINATE</code>  - 立即中止文件遍历。返回此值后，不会调用其他文件遍历方法。</li>
+<li><code>SKIP_SUBTREE</code>  - 当 <code>preVisitDirectory</code> 返回此值时，将跳过指定的目录及其子目录。这个分支被“修剪”出树。</li>
+<li><code>SKIP_SIBLINGS</code>  - 当 <code>preVisitDirectory</code> 返回此值时，不会访问指定的目录，不会调用 <code>postVisitDirectory</code>，也不会访问任何未访问过的兄弟姐妹。如果从 <code>postVisitDirectory</code> 方法返回，则不会访问其他兄弟节点。基本上，在指定的目录中没有进一步发生。</li>
+</ul>
+<p>在此代码段中，将跳过名为 <code>SCCS</code> 的任何目录：</p>
+<div class="codeblock"><pre>
+import static java.nio.file.FileVisitResult.*;
+
+public FileVisitResult
+     preVisitDirectory(Path dir,
+         BasicFileAttributes attrs) {
+    (if (dir.getFileName().toString().equals("SCCS")) {
+         return SKIP_SUBTREE;
+    }
+    return CONTINUE;
+}
+</pre></div>
+<p>在此代码段中，只要找到特定文件，文件名就会打印到标准输出，文件遍历将终止：</p>
+<div class="codeblock"><pre>
+import static java.nio.file.FileVisitResult.*;
+
+// The file we are looking for.
+Path lookingFor = ...;
+
+public FileVisitResult
+    visitFile(Path file,
+        BasicFileAttributes attr) {
+    if (file.getFileName().equals(lookingFor)) {
+        System.out.println("Located file: " + file);
+        return TERMINATE;
+    }
+    return CONTINUE;
+}
+</pre></div>
+<h2><a name="ex" id="ex">例子</a></h2>
+<p>以下示例演示了文件遍历机制：</p>
+<ul>
+<li>
+<a class="SourceLink" target="_blank" href="examples/Find.java" onclick="showCode('../../displayCode.html', 'examples/Find.java'); return false;"><code><code>Find</code></code></a>–递归文件树，查找与特定 glob 模式匹配的文件和目录。在 <a class="TutorialLink" target="_top" href="find.html">Finding Files</a> 中讨论了此示例。</li>
+<li>
+<a class="SourceLink" target="_blank" href="examples/Chmod.java" onclick="showCode('../../displayCode.html', 'examples/Chmod.java'); return false;"><code><code>Chmod</code></code></a>–递归更改文件树的权限(仅适用于 POSIX 系统)。</li>
+<li>
+<a class="SourceLink" target="_blank" href="examples/Copy.java" onclick="showCode('../../displayCode.html', 'examples/Copy.java'); return false;"><code><code>Copy</code></code></a>–递归复制文件树。</li>
+<li>
+<a class="SourceLink" target="_blank" href="examples/WatchDir.java" onclick="showCode('../../displayCode.html', 'examples/WatchDir.java'); return false;"><code><code>WatchDir</code></code></a>–演示监听目录以查找创建，删除或修改的文件的机制。使用 <code>-r</code> 选项调用此程序会监听整个树的更改。有关文件通知服务的详细信息，请参阅 <a class="TutorialLink" target="_top" href="notification.html">Watching a Directory for Changes</a>。</li>
+</ul>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="links.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="find.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Links, Symbolic or Otherwise
+        <br /><b>Next page:</b> Finding Files
+    </div>
+</body>
+</html> 

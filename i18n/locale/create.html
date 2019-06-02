@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>创建区域设置(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置区域设置)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
+     <meta name="keywords" content="java programming, learn java, java sample code, i18n, internationalization, locale, text formatting" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">设置区域设置</a></div>
+<div class="nolinkAHEAD">创建区域设置</div>
+<div class="linkAHEAD"><a href="extensions.html">BCP 47 扩展</a></div>
+<div class="linkAHEAD"><a href="identify.html">识别可用的区域设置</a></div>
+<div class="linkAHEAD"><a href="matching.html">语言标签过滤和查找</a></div>
+<div class="linkAHEAD"><a href="scope.html">区域设置的范围</a></div>
+<div class="linkAHEAD"><a href="services.html">区域敏感服务 SPI</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Internationalization
+        <br /><b>Lesson:</b> Setting the Locale
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置区域设置</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="extensions.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>创建区域设置</h1></div>
+            <div id="PageContent"><!-- Creating a Locale -->
+
+
+<p>有几种方法可以创建 <code>Locale</code> 对象。无论使用何种技术，创建都可以像指定语言代码一样简单。但是，您可以通过设置区域(也称为“国家/地区”)和变体代码来进一步区分区域设置。如果您使用的是 JDK 7 或更高版本，则还可以指定脚本代码和 Unicode 区域设置扩展。</p>
+<p>创建 <code>Locale</code> 对象的四种方法是：</p>
+<ul>
+<li><a href="#builder"><code>Locale.Builder</code> 类</a></li>
+<li><a href="#constructors"><code>Locale</code> 构造函数</a></li>
+<li><a href="#factory"><code>Locale.forLanguageTag</code> 工厂方法</a></li>
+<li><a href="#constants"><code>Locale</code> 常量</a></li>
+</ul>
+<div class="note"><hr /><strong>Version Note:</strong> 在 Java SE 7 发行版中添加了 <code>Locale.Builder</code> 类和 <code>forLanguageTag</code> 方法。
+<hr /></div>
+<h2><a name="builder" id="builder"><code>LocaleBuilder</code> 类</a></h2>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.Builder.html"><code>Locale.Builder</code></a> 实用程序类可用于构造符合 IETF BCP 47 语法的 <code>Locale</code> 对象。例如，要指定法语和加拿大的国家/地区，可以调用 <code>Locale.Builder</code> 构造函数，然后按如下方式链接 setter 方法：</p>
+<div class="codeblock"><pre>
+Locale aLocale = new Locale.Builder().setLanguage("fr").setRegion("CA").build();
+</pre></div>
+<p>下一个示例为美国和英国的英语创建 <code>Locale</code> 对象：</p>
+<div class="codeblock"><pre>
+Locale bLocale = new Locale.Builder().setLanguage("en").setRegion("US").build();
+Locale cLocale = new Locale.Builder().setLanguage("en").setRegion("GB").build();
+</pre></div>
+<p>最后一个示例为俄语创建 <code>Locale</code> 对象：</p>
+<div class="codeblock"><pre>
+Locale dLocale = new Locale.Builder().setLanguage("ru").setScript("Cyrl").build();
+</pre></div>
+<h2><a name="constructors" id="constructors"><code>Locale</code> 构造函数</a></h2>
+<p><code>Locale</code> 类中有三个构造函数可用于创建 <code>Locale</code> 对象：</p>
+<ul>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#Locale-java.lang.String-"><code>Locale(String language)</code></a></li>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#Locale-java.lang.String-java.lang.String-"><code>Locale(String language, String country)</code></a></li>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#Locale-java.lang.String-java.lang.String-java.lang.String-"><code>Locale(String language, String country, String variant)</code></a></li>
+</ul>
+<p>以下示例为加拿大的法语，美国和英国的英语以及俄语创建 <code>Locale</code> 对象。</p>
+<div class="codeblock"><pre>
+aLocale = new Locale("fr", "CA");
+bLocale = new Locale("en", "US");
+cLocale = new Locale("en", "GB");
+dLocale = new Locale("ru");
+</pre></div>
+<p>在 JDK 7 之前的版本中，无法在 <code>Locale</code> 对象上设置脚本代码。</p>
+<h2><a name="factory" id="factory"><code>forLanguageTag</code> 工厂方法</a></h2>
+<p>如果您的语言标记字符串符合 IETF BCP 47 标准，则可以使用 Java SE 7 发行版中引入的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-"><code>forLanguageTag(String)</code></a> 工厂方法。例如：</p>
+<div class="codeblock"><pre>
+Locale aLocale = Locale.forLanguageTag("en-US");
+Locale bLocale = Locale.forLanguageTag("ja-JP-u-ca-japanese");
+</pre></div>
+<h2><a name="constants" id="constants"><code>Locale</code> 常量</a></h2>
+<p>为方便起见，<code>Locale</code> 类为某些语言和国家/地区提供了 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#field_summary">常量</a>。例如：</p>
+<div class="codeblock"><pre>
+cLocale = Locale.JAPAN;
+dLocale = Locale.CANADA_FRENCH;
+</pre></div>
+<p>指定语言常量时，<code>Locale</code> 的区域部分未定义。接下来的三个语句创建等效的 <code>Locale</code> 对象：</p>
+<div class="codeblock"><pre>
+j1Locale = Locale.JAPANESE;
+j2Locale = new Locale.Builder().setLanguage("ja").build();
+j3Locale = new Locale("ja");
+</pre></div>
+<p>由以下三个语句创建的 <code>Locale</code> 对象也是等效的：</p>
+<div class="codeblock"><pre>
+j4Locale = Locale.JAPAN;
+j5Locale = new Locale.Builder().setLanguage("ja").setRegion("JP").build();
+j6Locale = new Locale("ja", "JP");
+</pre></div>
+<h2>代码</h2>
+<p>以下部分讨论语言代码和可选脚本，区域和变体代码。</p>
+<h3>语言代码</h3>
+<p>语言代码是符合 ISO 639 标准的两个或三个小写字母。您可以在 <a class="OutsideLink" target="_blank" href="http://www.loc.gov/standards/iso639-2/php/code_list.php">http://www.loc.gov/standards/iso639-2/php/code_list.php</a> 找到 ISO 639 代码的完整列表。</p>
+<p>下表列出了一些语言代码。</p>
+<table border="1" summary="此表列出了一些示例语言代码">
+<caption>示例语言代码</caption>
+<thead>
+<tr>
+<th>语言代码</th>
+<th>描述</th>
+</tr>
+</thead>
+<tr>
+<td><code>de</code></td>
+<td>German</td>
+</tr>
+<tr>
+<td><code>en</code></td>
+<td>English</td>
+</tr>
+<tr>
+<td><code>fr</code></td>
+<td>French</td>
+</tr>
+<tr>
+<td><code>ru</code></td>
+<td>Russian</td>
+</tr>
+<tr>
+<td><code>ja</code></td>
+<td>Japanese</td>
+</tr>
+<tr>
+<td><code>jv</code></td>
+<td>Javanese</td>
+</tr>
+<tr>
+<td><code>ko</code></td>
+<td>Korean</td>
+</tr>
+<tr>
+<td><code>zh</code></td>
+<td>Chinese</td>
+</tr>
+</table>
+<h3>脚本代码</h3>
+<p>脚本代码以大写字母开头，后跟三个小写字母，符合 ISO 15924 标准。您可以在 <a class="OutsideLink" target="_blank" href="http://unicode.org/iso15924/iso15924-codes.html">http://unicode.org/iso15924/iso15924-codes.html</a> 找到 ISO 15924 代码的完整列表。</p>
+<p>下表列出了一些脚本代码。</p>
+<table border="1" summary="此表列出了一些示例脚本代码">
+<caption>示例脚本代码</caption>
+<thead>
+<tr>
+<th>脚本代码</th>
+<th>描述</th>
+</tr>
+</thead>
+<tr>
+<td><code>Arab</code></td>
+<td>Arabic</td>
+</tr>
+<tr>
+<td><code>Cyrl</code></td>
+<td>Cyrillic</td>
+</tr>
+<tr>
+<td><code>Kana</code></td>
+<td>Katakana</td>
+</tr>
+<tr>
+<td><code>Latn</code></td>
+<td>Latin</td>
+</tr>
+</table>
+<p>获取 <code>Locale</code> 的脚本信息有三种方法：</p>
+<ul>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getScript--"><code>getScript()</code></a>返回 <code>Locale</code> 对象的 4 个字母的脚本代码。如果没有为语言环境定义脚本，则返回空字符串。</li>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getDisplayScript--"><code>getDisplayScript()</code></a>返回适合显示给用户的语言环境脚本的名称。如果可能，将为默认语言环境本地化名称。因此，例如，如果脚本代码是“Latin”，则返回的显示脚本名称将是英语语言环境的字符串“Latin”。</li>
+<li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getDisplayScript-java.util.Locale-"><code>getDisplayScript(Locale)</code></a>如果可能，返回本地化的指定 <code>Locale</code> 的显示名称。</li>
+</ul>
+<h3>区域代码</h3>
+<p>区域(国家/地区)代码包含符合 ISO 3166 标准的两个或三个大写字母，或符合 UN M.49 标准的三个数字。可以在 <a class="OutsideLink" target="_blank" href="http://www.chemie.fu-berlin.de/diverse/doc/ISO_3166.html">http://www.chemie.fu-berlin.de/diverse/doc/ISO_3166.html</a> 找到代码的副本。</p>
+<p>下表包含几个示例国家和地区代码。</p>
+<table border="1" summary="此表列出了一些示例国家/地区代码">
+<caption>示例区域代码</caption>
+<tr>
+<th>A-2 Code</th>
+<th>A-3 Code</th>
+<th>Numeric Code</th>
+<th>描述</th>
+</tr>
+<tr>
+<td><code>AU</code></td>
+<td><code>AUS</code></td>
+<td><code>036</code></td>
+<td>Australia</td>
+</tr>
+<tr>
+<td><code>BR</code></td>
+<td><code>BRA</code></td>
+<td><code>076</code></td>
+<td>Brazil</td>
+</tr>
+<tr>
+<td><code>CA</code></td>
+<td><code>CAN</code></td>
+<td><code>124</code></td>
+<td>Canada</td>
+</tr>
+<tr>
+<td><code>CN</code></td>
+<td><code>CHN</code></td>
+<td><code>156</code></td>
+<td>China</td>
+</tr>
+<tr>
+<td><code>DE</code></td>
+<td><code>DEU</code></td>
+<td><code>276</code></td>
+<td>Germany</td>
+</tr>
+<tr>
+<td><code>FR</code></td>
+<td><code>FRA</code></td>
+<td><code>250</code></td>
+<td>France</td>
+</tr>
+<tr>
+<td><code>IN</code></td>
+<td><code>IND</code></td>
+<td><code>356</code></td>
+<td>India</td>
+</tr>
+<tr>
+<td><code>RU</code></td>
+<td><code>RUS</code></td>
+<td><code>643</code></td>
+<td>Russian Federation</td>
+</tr>
+<tr>
+<td><code>US</code></td>
+<td><code>USA</code></td>
+<td><code>840</code></td>
+<td>United States</td>
+</tr>
+</table>
+
+<h3><a name="variant-code">变体代码</a></h3>
+
+<p>可选的 <code>variant</code> 代码可用于进一步区分 <code>Locale</code>。例如，变体代码可用于指示区域代码未涵盖的辩证差异。</p>
+
+<div class="note"><hr /><strong>Version Note:</strong> 在 Java SE 7 发行版之前，变体代码有时用于识别不是特定于语言或区域的差异。例如，它可能已被用于识别计算平台之间的差异，例如 Windows 或 UNIX。根据 IETF BCP 47 标准，不鼓励这种使用。<br /><br />
+要定义与您的环境相关的非语言特定变体，请使用扩展机制，如 <a class="TutorialLink" target="_top" href="extensions.html">BCP 47 Extensions</a> 中所述。
+<hr /></div>
+
+<p>从符合 IETF BCP 47 标准的 Java SE 7 版本开始，变体代码专门用于指示定义语言或其方言的其他变体。IETF BCP 47 标准对变体子标签强加了语法限制。您可以在 <a class="OutsideLink" target="_blank" href="http://www.iana.org/assignments/language-subtag-registry">http://www.iana.org/assignments/language-subtag-registry</a> 上查看变体代码列表(搜索 <em>variant</em>)。</p>
+
+<p>例如，Java SE 使用变体代码来支持泰语。按照惯例，<code>NumberFormat</code> 对象用于 <code>th</code> 和 <code>th_TH</code> 语言环境的将使用常见的阿拉伯数字形状，或阿拉伯数字来格式化泰语数字。但是，<code>th_TH_TH</code> 区域设置的 <code>NumberFormat</code> 使用泰国数字形状。<a class="SourceLink" target="_blank" href="examples/ThaiDigits.java" onclick="showCode('../../displayCode.html', 'examples/ThaiDigits.java'); return false;"><code>ThaiDigits.java</code></a> 的片段演示了这一点：</p>
+
+<div class="codeblock"><pre>
+String outputString = new String();
+Locale[] thaiLocale = {
+             new Locale("th"),
+             new Locale("th", "TH"),
+             new Locale("th", "TH", "TH")
+         };
+
+for (Locale locale : thaiLocale) {
+    NumberFormat nf = NumberFormat.getNumberInstance(locale);
+    outputString = outputString + locale.toString() + ": ";
+    outputString = outputString + nf.format(573.34) + "\n";
+}
+</pre></div>
+
+<p>以下是此示例的屏幕截图：</p>
+
+<center><img src="../../figures/i18n/locale/thaidigits.jpg" width="347" height="141" align="bottom" alt="ThaiDigits.java 示例的屏幕截图" /></center>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="index.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="extensions.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Setting the Locale
+        <br /><b>Next page:</b> BCP 47 Extensions
+    </div>
+</body>
+</html> 

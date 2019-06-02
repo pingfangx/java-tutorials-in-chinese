@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>编写数据报客户端和服务器(Java™ 教程-Java Tutorials 中文版&gt;自定义网络&gt;关于数据报)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This networking Java tutorial describes networking capabilities of the Java platform, working with URLs, sockets, datagrams, and cookies" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java networking, java url, java socket, datagram, java cookie" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">关于数据报</a></div>
+<div class="linkAHEAD"><a href="definition.html">什么是数据报？</a></div>
+<div class="nolinkAHEAD">编写数据报客户端和服务器</div>
+<div class="linkAHEAD"><a href="broadcasting.html">广播给多个收件人</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Custom Networking
+        <br /><b>Lesson:</b> All About Datagrams
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">关于数据报</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="definition.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="broadcasting.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>编写数据报客户端和服务器</h1></div>
+            <div id="PageContent">
+
+<p>本节中的示例包含两个应用程序：客户端和服务器。服务器通过数据报套接字连续接收数据报包。服务器接收的每个数据报包指示客户端对引语的请求。当服务器收到数据报时，它通过向客户端发送包含一行“quote of the moment”的数据报包来回复。</p>
+<p>此示例中的客户端应用程序非常简单。它向服务器发送单个数据报包，指示客户端希望接收当前的引语。然后，客户端等待服务器发送数据报包作为响应。</p>
+<p>两个类实现服务器应用程序：<code>QuoteServer</code> 和 <code>QuoteServerThread</code>。单个类实现客户端应用程序：<code>QuoteClient</code>。</p>
+<p>让我们从包含服务器应用程序的 <code>main</code> 方法的类开始研究这些类。<a class="TutorialLink" target="_top" href="../../deployment/applet/server.html">Working With a Server-Side Application </a> 包含 <code>QuoteClient</code> 类的 applet 版本。</p>
+<h2><a name="mainprogram" id="mainprogram">QuoteServer 类</a></h2>
+<p>此处完整显示的 <a class="SourceLink" target="_blank" href="examples/QuoteServer.java" onclick="showCode('../../displayCode.html', 'examples/QuoteServer.java'); return false;"><code>QuoteServer</code></a> 类包含一个方法：引语服务器应用程序的 <code>main</code> 方法。<code>main</code> 方法只是创建一个新的 <code>QuoteServerThread</code> 对象并启动它：</p>
+<div class="codeblock"><pre>
+import java.io.*;
+
+public class QuoteServer {
+    public static void main(String[] args) throws IOException {
+        new QuoteServerThread().start();
+    }
+}
+</pre></div>
+<p><code>QuoteServerThread</code> 类实现了引语服务器的主要逻辑。</p>
+<h2><code>QuoteServerThread</code> 类</h2>
+<p>创建时，<a class="SourceLink" target="_blank" href="examples/QuoteServerThread.java" onclick="showCode('../../displayCode.html', 'examples/QuoteServerThread.java'); return false;"><code>QuoteServerThread</code></a> 在端口 4445(任意选择)上创建 <code>DatagramSocket</code>。这是 <code>DatagramSocket</code>，服务器通过它与所有客户端进行通信。</p>
+<div class="codeblock"><pre>
+public QuoteServerThread() throws IOException {
+    this("QuoteServer");
+}
+
+public QuoteServerThread(String name) throws IOException {
+    super(name);
+    socket = new DatagramSocket(4445);
+
+    try {
+        in = new BufferedReader(new FileReader("one-liners.txt"));
+    }   
+    catch (FileNotFoundException e){
+        System.err.println("Couldn't open quote file.  Serving time instead.");
+    }
+}  
+</pre></div>
+<p>请记住，某些端口专用于众所周知的服务，您无法使用它们。如果指定正在使用的端口，则 <code>DatagramSocket</code> 的创建将失败。</p>
+<p>构造函数还在名为 <a class="SourceLink" target="_blank" href="examples/one-liners.txt" onclick="showCode('../../displayCode.html', 'examples/one-liners.txt'); return false;"><code>one-liners.txt</code></a> 的文件上打开 <code>BufferedReader</code><!--
+<a href="examples/one-liners.txt">one-liners.txt</a> 
+-->
+其中包含引语列表。文件中的每个引语都是单独的。</p>
+<p>现在，对于 <code>QuoteServerThread</code> 的有趣部分：它的 <code>run</code> 方法。<code>run</code> 方法覆盖 <code>Thread</code> 类中的 <code>run</code>，并提供该线程的实现。有关线程的信息，请参阅 <a class="TutorialLink" target="_top" href="../../essential/concurrency/runthread.html">Defining and Starting a Thread</a>。</p>
+<p><code>run</code> 方法包含 <code>while</code> 循环，只要文件中有更多引语，该循环就会继续。在循环的每次迭代期间，线程等待 <code>DatagramPacket</code> 通过 <code>DatagramSocket</code> 到达。数据包表示来自客户端的请求。为了响应客户端的请求，<code>QuoteServerThread</code> 从文件中获取引语，将其放在 <code>DatagramPacket</code> 中，并通过 <code>DatagramSocket</code> 将其发送到请求它的客户。</p>
+<p>让我们首先看一下接收客户请求的部分：</p>
+<div class="codeblock"><pre>
+byte[] buf = new byte[256];
+DatagramPacket packet = new DatagramPacket(buf, buf.length);
+socket.receive(packet);
+</pre></div>
+<p>第一个语句创建一个字节数组，然后用于创建 <code>DatagramPacket</code>。由于用于创建它的构造函数，<code>DatagramPacket</code> 将用于从套接字接收数据报。此构造函数只需要两个参数：包含特定于客户端的数据的字节数组和字节数组的长度。构造 <code>DatagramPacket</code> 以通过 <code>DatagramSocket</code> 发送时，还必须提供数据包目标的 Internet 地址和端口号。稍后当我们讨论服务器如何响应客户端请求时，您会看到这一点。</p>
+<p>前一个代码段中的最后一个语句从套接字接收数据报(从客户端接收的信息被复制到数据包中)。receive 方法一直等待，直到收到数据包。如果没有收到数据包，则服务器不再继续进行，只是等待。</p>
+<p>现在假设，服务器已收到来自客户端的引语请求。现在服务器必须响应。run 方法中的这部分代码构造响应：</p>
+<div class="codeblock"><pre>
+String dString = null;
+if (in == null)
+    dString = new Date().toString();
+else
+    dString = getNextQuote();
+buf = dString.getBytes();
+</pre></div>
+<p>如果由于某种原因导致文件没有打开，那么 <code>in</code> 等于 null。如果是这种情况，引语服务器会提供一天中的时间。否则，引语服务器从已打开的文件中获取下一个引语。最后，代码将字符串转换为字节数组。</p>
+<p>现在，<code>run</code> 方法通过以下代码通过 <code>DatagramSocket</code> 将响应发送到客户端：</p>
+<div class="codeblock"><pre>
+InetAddress address = packet.getAddress();
+int port = packet.getPort();
+packet = new DatagramPacket(buf, buf.length, address, port);
+socket.send(packet);
+</pre></div>
+<p>此代码段中的前两个语句分别从从客户端接收的数据报包中获取 Internet 地址和端口号。Internet 地址和端口号表示数据报包的来源。这是服务器必须发送其响应的位置。在此示例中，数据报包的字节数组不包含相关信息。数据包本身的到达表示来自客户端的请求，该请求可以在数据报包中指示的因特网地址和端口号处找到。</p>
+<p>第三个语句创建一个新的 <code>DatagramPacket</code> 对象，用于通过数据报套接字发送数据报消息。您可以告诉新的 <code>DatagramPacket</code> 旨在通过套接字发送数据，因为用于创建它的构造函数。此构造函数需要四个参数。前两个参数与用于创建接收数据报的构造函数相同：一个字节数组，包含从发送方到接收方的消息以及该数组的长度。接下来的两个参数是不同的：Internet 地址和端口号。这两个参数是数据报包的目的地的完整地址，必须由数据报的发送者提供。最后一行代码在其路上发送 <code>DatagramPacket</code>。</p>
+<p>当服务器读取了引语文件中的所有引语时，<code>while</code> 循环终止并且 <code>run</code> 方法清除：</p>
+<div class="codeblock"><pre>
+socket.close();
+</pre></div>
+<h2>QuoteClient 类</h2>
+<p><a class="SourceLink" target="_blank" href="examples/QuoteClient.java" onclick="showCode('../../displayCode.html', 'examples/QuoteClient.java'); return false;"><code>QuoteClient</code></a> 类实现 <code>QuoteServer</code> 的客户端应用程序。此应用程序向 <code>QuoteServer</code> 发送请求，等待响应，并在收到响应时将其显示到标准输出。让我们详细看一下代码。</p>
+<p><code>QuoteClient</code> 类包含一个方法，即客户端应用程序的 <code>main</code> 方法。<code>main</code> 方法的顶部声明了几个局部变量供其使用：</p>
+<div class="codeblock"><pre>
+int port;
+InetAddress address;
+DatagramSocket socket = null;
+DatagramPacket packet;
+byte[] sendBuf = new byte[256];
+</pre></div>
+<p>首先，<code>main</code> 方法处理用于调用 <code>QuoteClient</code> 应用程序的命令行参数：</p>
+<div class="codeblock"><pre>
+if (args.length != 1) {
+    System.out.println("Usage: java QuoteClient &lt;hostname&gt;");
+    return;
+}
+</pre></div>
+<p><code>QuoteClient</code> 应用程序需要一个命令行参数：运行 <code>QuoteServer</code> 的计算机的名称。</p>
+<p>接下来，<code>main</code> 方法创建 <code>DatagramSocket</code>：</p>
+<div class="codeblock"><pre>
+DatagramSocket socket = new DatagramSocket();
+</pre></div>
+<p>客户端使用不需要端口号的构造函数。此构造函数只是将 <code>DatagramSocket</code> 绑定到任何可用的本地端口。客户端绑定到哪个端口并不重要，因为 <code>DatagramPacket</code> 包含寻址信息。服务器从 <code>DatagramPacket</code> 获取端口号，并将其响应发送到该端口。</p>
+<p>接下来，<code>QuoteClient</code> 程序向服务器发送请求：</p>
+<div class="codeblock"><pre>
+byte[] buf = new byte[256];
+InetAddress address = InetAddress.getByName(args[0]);
+DatagramPacket packet = new DatagramPacket(buf, buf.length, 
+                                address, 4445);
+socket.send(packet);
+</pre></div>
+<p>代码段获取命令行上命名的主机的 Internet 地址(可能是运行服务器的计算机的名称)。然后使用此 <code>InetAddress</code> 和端口号 4445(服务器用于创建其 <code>DatagramSocket</code> 的端口号)来为那个互联网地址和端口号创建 <code>DatagramPacket</code> 。因此，<code>DatagramPacket</code> 将被传递到引语服务器。</p>
+<p>请注意，代码创建一个带有空字节数组的 <code>DatagramPacket</code>。字节数组为空，因为该数据报包只是向服务器请求信息的请求。服务器需要知道发送响应的内容 - 响应的地址和端口号 - 自动成为数据包的一部分。</p>
+<p>接下来，客户端从服务器获取响应并显示它：</p>
+<div class="codeblock"><pre>
+packet = new DatagramPacket(buf, buf.length);
+socket.receive(packet);
+String received = new String(packet.getData(), 0, packet.getLength());
+System.out.println("Quote of the Moment: " + received);
+</pre></div>
+<p>为了从服务器获得响应，客户端创建“receive”数据包并使用 <code>DatagramSocket</code> 接收方法从服务器接收回复。receive 方法等待，直到发往客户端的数据报包通过套接字到来。请注意，如果服务器的回复以某种方式丢失，则客户端将永远等待，因为数据报模型的无保证策略。通常，客户端设置一个计时器，以便它不会永远等待回复；如果没有回复，则计时器关闭，客户端重新发送。</p>
+<p>当客户端从服务器收到回复时，客户端使用 getData 方法从数据包中获取该数据。然后，客户端将数据转换为字符串并显示它。</p>
+<h2>运行服务器和客户端</h2>
+<p>成功编译服务器和客户端程序后，运行它们。您必须先运行服务器程序。只需使用 Java 解释器并指定 <code>QuoteServer</code> 类名。</p>
+<p>服务器启动后，您可以运行客户端程序。请记住使用一个命令行参数运行客户端程序：运行 <code>QuoteServer</code> 的主机的名称。</p>
+<p>客户端发送请求并从服务器收到响应后，您应该看到与此类似的输出：</p>
+<div class="codeblock"><pre>
+Quote of the Moment:
+Good programming is 99% sweat and 1% coffee.
+</pre></div>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="definition.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="broadcasting.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> What Is a Datagram?
+        <br /><b>Next page:</b> Broadcasting to Multiple Recipients
+    </div>
+</body>
+</html> 

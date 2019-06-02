@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<title>Java 教程学习路径</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<style type="text/css">
+/*<![CDATA[*/
+/* styles specific to this page */
+.nonfloatingimg { 
+vertical-align:middle;
+}
+
+.floatingimg {
+float: left;
+margin: 4px;
+}
+
+.homepagediv {
+float: right;
+margin: 0px 15px 10px 3em;
+}
+
+.cdiv {
+padding:0;
+} 
+.ldiv,.rdiv{
+padding:1px;
+}
+
+.paneldiv {
+width: 44%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.panelimagediv {
+float:left;
+padding:1px;
+}
+
+.ldiv {
+width:48%;
+float:left;
+text-align:justify;
+}
+.rdiv {
+margin-left:51%;
+text-align:justify;
+}
+.clear {
+clear:both;
+}
+
+h1 {
+margin-left:10px;
+font-family: sans-serif;
+font-size: 20px;
+color: #F90000;
+margin-bottom: 3px;
+}
+h2 {
+font-family: sans-serif; 
+font-size: 18px;
+color: #F90000;
+margin-bottom: 3px;
+}
+/* styles specific to this page end */
+/* other standard tutorial styles */
+body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-size:12px;
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+
+    div#TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    div#TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    div#TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;
+		align: left;
+        height: 60px;
+    }
+    div#TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    div#TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+   
+    div#PageTitle {          
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+        float: left;
+    }
+
+   
+    div#Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;   
+    }
+  
+    .footertext {
+        font-size: 11px;
+        color: #454545
+    }
+    
+    div#TagNotes {
+        margin-top: 10px;
+        color: #35556B;
+    }
+    @media print {
+        span#TagNotes a:visited, span#TagNotes a:link {
+            text-decoration: none;
+        }
+    }
+    div#TutBody {
+        margin: 10px 3em 10px 3em;
+    }
+   
+    
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+    .thickhr {
+        color:#000000;
+        background-color:#000000;
+        height:3px;
+        border:none;
+    }
+
+
+/*]]>*/
+</style>
+</head>
+<body><!-- tutorial boiler plate start -->
+
+<div class="header-container">
+    <div class="bookwrapper  clearfix">       
+        <div id="brandProdName">
+            <div id="logocover"></div>
+            <div id="productName" >文档</div>
+        </div> 
+        <br class="clearfloat" />
+    </div>
+</div>
+<div id="TopBar">
+    <div id="TopBar_tr">
+        <div id="TopBar_tl">
+            <div id="TopBar_br">
+                <div id="TopBar_bl">
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                    <div id="TopBar_right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- tutorial boiler plate end -->
+
+<div id="PageTitle">
+<h1>Java 教程学习路径</h1>
+</div>
+<div class="homepagediv">
+<p><a href="index.html">主页</a></p>
+</div>
+<div class="clear"></div>
+<div id="TutBody">
+<p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p>
+<p>您是学生想要学习 Java 语言或者是寻求扩展技能的专业人士？如果您对 Java 平台的广度感到有点不知所措，这里有一些建议的学习途径可以帮助您从 Java 学习体验中获得最大收益。</p>
+<div class="cdiv">
+<div class="paneldiv">
+<div class="panelimagediv"><a href="#newtojava" title=
+"适合初学者的 Java"><img alt="适合初学者的 Java" src=
+"images/newtojava.png" style="border-style: none" /></a></div>
+<div class="panelimagediv"><a href="#buildingon" title=
+"中级 Java 主题"><img alt="中级 Java 主题" src=
+"images/buildingon.png" style="border-style: none" /></a></div>
+<div class="panelimagediv"><a href="#client" title=
+"Java UI 和富 internet 应用程序"><img alt=
+"Java UI 和富 internet 应用程序" src="images/client.png"
+style="border-style: none" /></a></div>
+<div class="panelimagediv"><a href="#server" title=
+"中间件和服务器相关的主题"><img alt=
+"中间件和服务器相关的主题" src="images/server.png"
+style="border-style: none" /></a></div>
+</div>
+<div class="clear"></div>
+<hr class="thickhr" />
+<div class="ldiv">
+<h2><a id="newtojava" name="newtojava"></a>刚接触 Java</h2>
+<p><img alt="块" src="images/abc_blocks_petri_lummema_01.png"
+class="nonfloatingimg" /> 以下路径对初学者最有用：</p>
+<ul>
+<li><a href="getStarted/index.html">入门</a>–(译) Java 技术的介绍以入安装 Java 开发软件并使用它创建简单程序的课程。</li>
+<li><a href="java/index.html">学习 Java 语言</a>–(译) 描述基本概念(如类，对象，继承，数据类型，泛型和包)的类。</li>
+<li><a href="essential/index.html">必要的 Java 类</a>–(译) 关于异常，基本输入/输出，并发，正则表达式和平台环境的课程。</li>
+</ul>
+</div>
+<div class="rdiv">
+<h2><a id="buildingon" name="buildingon"></a>建立在基础上</h2>
+<p><img alt="建造" src="images/brunurb_LegoBlocks_brunurb.png"
+class="nonfloatingimg" /> 准备深入了解技术？请参阅以下主题：</p>
+<ul>
+<li><a href="collections/index.html">集合</a>–(译) 使用和扩展 Java 集合框架的课程。</li>
+<li><a href="java/javaOO/lambdaexpressions.html">Lambda 表达式</a>:(译) 了解如何以及为什么在应用程序中使用 lambda 表达式。</li>
+<li><a href="collections/streams/index.html">聚合操作</a>:(译) 探索聚合操作、流和 lambda 表达式如何协同工作以提供强大的过滤功能。</li>
+<li><a href="deployment/jar/index.html">(译) 打包程序到 JAR 文件中</a>–(译) 关于创建和签名 JAR 文件的课程。</li>
+<li><a href="i18n/index.html">国际化</a>–(译) 设计软件的介绍，以便可以轻松地适应(本地化)各种语言和区域。</li>
+<li><a href="reflect/index.html">反射</a>–(译) 表示("反射")当前 Java 虚拟机中的类，接口和对象的 API。</li>
+<li><a href="security/index.html">安全</a>–有助于保护应用程序免受恶意软件攻击的 Java 平台功能。</li>
+<li><a href="javabeans/index.html">JavaBeans</a>–(译) Java 平台的组件技术。</li>
+<li><a href="ext/index.html">扩展机制</a>–(译) 如何使自定义 API 可用于在 Java 平台上运行的所有应用程序。</li>
+<li><a href="extra/generics/index.html">泛型</a>–(译) 对类型系统的增强，支持对各种类型对象的操作，同时提供编译时类型安全性。</li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div class="cdiv">
+<div class="ldiv">
+<h2><a id="client" name="client"></a>珍惜客户端吗？</h2>
+<img alt="客户端" src="images/rihard_Computer_LCD_display.png"
+class="floatingimg" />
+<p>如果您希望专注于开发基于 Java 的桌面解决方案和富 Internet 应用程序，请参阅以下主题：</p>
+<ul>
+<li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&id=JFXST804">JavaFX 入门</a>–一组示例应用程序，旨在帮助您开始使用常见的 JavaFX 任务</li>
+<li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&id=JSBGS101">开始使用 Scene Builder</a>–逐步向您展示如何使用 JavaFX Scene Builder 工具创建简单的问题跟踪应用程序。</li>
+<li><a href="uiswing/index.html">使用 Swing 创建 GUI</a>–全面介绍 Java 平台上的 GUI 创建。</li>
+<li><a href="deployment/index.html">部署</a>–(译) 如何使用 JAR 文件打包应用程序和 applet，并使用 Java Web Start 和 Java 插件部署它们。</li>
+<li><a href="2d/index.html">2D 图形</a>–如何在应用程序中显示和打印 2D 图形。</li>
+<li><a href="extra/fullscreen/index.html">全屏独占模式 API</a>–(译) 如何编写更充分利用用户图形硬件的应用程序。</li>
+</ul>
+</div>
+<div class="rdiv">
+<h2><a id="server" name="server"></a>对服务器热情！</h2>
+<img alt="服务器" src="images/Anonymous_server.png" class=
+"floatingimg" />
+<p>如果您有兴趣获得对中间件，服务器端或 Web 应用程序开发很重要的技能，请参阅以下路径：</p>
+<ul>
+<li><a href="jdbc/index.html">JDBC 数据库访问</a>–介绍用于 Java 应用程序与各种数据库和数据源之间连接的 API。</li>
+<li><a href="jmx/index.html">JMX</a>–Java Management Extensions 提供了管理资源（如应用程序，设备和服务）的标准方法。</li>
+<li><a href="jndi/index.html">JNDI</a>–Java 命名和目录接口允许访问命名和目录服务，例如 DNS 和 LDAP。</li>
+<li><a href="jaxp/index.html">JAXP</a>–介绍了用于 XML 处理的 JavaAPI(JAXP) 1.4 技术。</li>
+<li><a href="rmi/index.html">RMI</a>–远程方法调用 API 允许对象调用在另一个 Java 虚拟机上运行的对象的方法。</li>
+<li><a href="essential/concurrency/index.html">并发</a>–(译) Java 平台具有 API，可帮助您开发多线程程序。</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<hr /><!-- tutorial boiler plate start -->
+
+
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div><!-- tutorial boiler plate end -->
+
+
+</div>
+<noscript>
+<p>此页面上的脚本跟踪网页流量，但不会以任何方式更改内容。</p>
+
+</noscript>
+</body>
+</html>

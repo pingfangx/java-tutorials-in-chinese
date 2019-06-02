@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>将信息传递给方法或构造函数(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;类和对象)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java objects, java classes, java inheritance, interfaces, variables, arrays, data types, operators, control flow, number, string" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">类和对象</a></div>
+<div class="linkAHEAD"><a href="classes.html">类</a></div>
+<div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
+<div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
+<div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="nolinkBHEAD">将信息传递给方法或构造函数</div>
+<div class="linkAHEAD"><a href="objects.html">对象</a></div>
+<div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
+<div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
+<div class="linkAHEAD"><a href="more.html">更多关于类</a></div>
+<div class="linkBHEAD"><a href="returnvalue.html">从方法中返回一个值</a></div>
+<div class="linkBHEAD"><a href="thiskey.html">使用 this 关键字</a></div>
+<div class="linkBHEAD"><a href="accesscontrol.html">控制对类成员的访问</a></div>
+<div class="linkBHEAD"><a href="classvars.html">理解类成员</a></div>
+<div class="linkBHEAD"><a href="initial.html">初始化字段</a></div>
+<div class="linkBHEAD"><a href="summaryclasses.html">创建及使用类和对象的总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
+<div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
+<div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
+<div class="linkBHEAD"><a href="innerclasses.html">内部类示例</a></div>
+<div class="linkBHEAD"><a href="localclasses.html">局部类</a></div>
+<div class="linkBHEAD"><a href="anonymousclasses.html">匿名类</a></div>
+<div class="linkBHEAD"><a href="lambdaexpressions.html">Lambda 表达式</a></div>
+<div class="linkCHEAD"><a href="methodreferences.html">方法引用</a></div>
+<div class="linkBHEAD"><a href="whentouse.html">何时使用嵌套类，本地类，匿名类和 Lambda 表达式 </a></div>
+<div class="linkQUESTIONS"><a href="QandE/nested-questions.html">问题和练习</a></div>
+<div class="linkAHEAD"><a href="enum.html">枚举类型</a></div>
+<div class="linkQUESTIONS"><a href="QandE/enum-questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Learning the Java Language
+        <br /><b>Lesson:</b> Classes and Objects
+        <br /><b>Section:</b> Classes
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="constructors.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="objects.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>将信息传递给方法或构造函数</h1></div>
+            <div id="PageContent"><!-- Passing Information to a Method or a Constructor -->
+
+
+<p>方法或构造函数的声明声明了该方法或构造函数的参数的数量和类型。例如，以下是根据贷款金额，利率，贷款期限(期数)和贷款的未来价值计算住房贷款的每月支付的方法：</p>
+<div class="codeblock"><pre>
+public double computePayment(
+                  double <b>loanAmt</b>,
+                  double <b>rate</b>,
+                  double <b>futureValue</b>,
+                  int <b>numPeriods</b>) {
+    double interest = <b>rate</b> / 100.0;
+    double partial1 = Math.pow((1 + interest), 
+                    - <b>numPeriods</b>);
+    double denominator = (1 - partial1) / interest;
+    double answer = (-<b>loanAmt</b> / denominator)
+                    - ((<b>futureValue</b> * partial1) / denominator);
+    return answer;
+}
+</pre></div>
+<p>该方法有四个参数：贷款金额，利率，未来价值和期数。前三个是双精度浮点数，第四个是整数。这些参数在方法主体中使用，并且在运行时将采用传入的参数的值。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<i>Parameters（形参）</i> 是指方法声明中的变量列表。<i>Arguments（实参）</i> 是调用方法时传入的实际值。当你调用一个方法时，使用的实参必须与形参的类型和顺序相匹配。
+<hr /></div>
+<h2>参数类型</h2>
+<p>您可以将任何数据类型用于方法或构造函数的参数。这包括像 <code>computePayment</code> 方法中所看到的双精度浮点数和整数等基本数据类型以及对象和数组等引用数据类型。</p>
+<p>下面是一个接受数组作为参数的方法的示例。在此示例中，该方法创建一个新的 <code>Polygon</code> 对象并从 <code>Point</code> 对象的数组中初始化它(假设 <code>Point</code> 是一个表示一个 x，y 坐标的类)：</p>
+<div class="codeblock"><pre>
+public Polygon polygonFrom(Point[] corners) {
+    // method body goes here
+}
+</pre></div>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;如果要将方法传递给方法，请使用 <a class="TutorialLink" target="_top" href="lambdaexpressions.html">lambda expression</a> 或 <a class="TutorialLink" target="_top" href="methodreferences.html">method reference</a>。 
+<hr /></div>
+<h2><a name="varargs" id="varargs">任意数量的参数</a></h2>
+<p>您可以使用名为 <em>varargs</em> 的构造将任意数量的值传递给方法。当您不知道将有多少特定类型的参数传递给该方法时，您可以使用可变参数。这是手动创建数组的快捷方式(之前的方法可以使用可变参数而不是数组)。</p>
+<p>要使用可变参数，在最后一个参数的类型后面加上省略号(三个点，...)，空格和参数名称。然后可以用任意数量的该参数调用该方法，包括无。</p>
+<div class="codeblock"><pre>
+public Polygon polygonFrom(Point... corners) {
+    int numberOfSides = corners.length;
+    double squareOfSide1, lengthOfSide1;
+    squareOfSide1 = (corners[1].x - corners[0].x)
+                     * (corners[1].x - corners[0].x) 
+                     + (corners[1].y - corners[0].y)
+                     * (corners[1].y - corners[0].y);
+    lengthOfSide1 = Math.sqrt(squareOfSide1);
+
+    // more method body code follows that creates and returns a 
+    // polygon connecting the Points
+}
+</pre></div>
+<p>你可以看到，在该方法中，<code>corners</code> 被视为一个数组。该方法可以通过一个数组或一系列参数来调用。在任何一种情况下，方法主体中的代码都会将参数视为数组。</p>
+<p>打印方法的可变参数是你会最常见的;例如，这个 <code>printf</code> 方法：</p>
+<div class="codeblock"><pre>
+public PrintStream printf(String format, Object... args)
+</pre></div>
+<p>允许您打印任意数量的对象。它可以这样调用：</p>
+<div class="codeblock"><pre>
+System.out.printf("%s: %d, %s%n", name, idnum, address);
+</pre></div>
+<p>或者像这样</p>
+<div class="codeblock"><pre>
+System.out.printf("%s: %d, %s, %s, %s%n", name, idnum, address, phone, email);
+</pre></div>
+<p>或者具有不同数量的参数。</p>
+<h2>参数名称</h2>
+<p>向方法或构造函数声明参数时，要为该参数提供一个名称。该名称在方法体内用于引用传入的参数。</p>
+<p>参数的名称在其范围内必须是唯一的。它不能与同一方法或构造函数的另一个参数的名称相同，也不能是方法或构造函数内的局部变量的名称。</p>
+<p>一个参数可以和一个类的字段名称相同。如果是这种情况，则该参数被称为 <i>shadow</i> 该字段。阴影字段可能会使您的代码难以阅读，并且通常仅用于设置特定字段的构造函数和方法中。例如，请考虑以下 <code>Circle</code> 类及其 <code>setOrigin</code> 方法：</p>
+<div class="codeblock"><pre>
+public class Circle {
+    private int x, y, radius;
+    public void setOrigin(int x, int y) {
+        ...
+    }
+}
+</pre></div>
+<p><code>Circle</code> 类有三个字段：<code>x</code>，<code>y</code> 和 <code>radius</code>。<code>setOrigin</code> 方法有两个参数，每个参数都与其中一个字段具有相同的名称。每个方法参数都会隐藏共享其名称的字段。因此，在方法体内使用简单名称 <code>x</code> 或 <code>y</code> 是指该字段的参数 <i>而不是</i>字段。要访问该字段，您必须使用限定名称。这将在本课稍后的标题为 "使用 <code>this</code> 关键字" 部分进行讨论。</p>
+<h2>传递基本数据类型参数</h2>
+<p>基本参数（如 <code>int</code> 或 <code>double</code>）<i>通过值</i>传递到方法中。这意味着对参数值的任何更改仅存在于该方法的范围内。当该方法返回时，参数将消失，对其进行的任何更改都将丢失。这里是一个例子：</p>
+<div class="codeblock"><pre>
+public class PassPrimitiveByValue {
+
+    public static void main(String[] args) {
+           
+        int x = 3;
+           
+        // invoke passMethod() with 
+        // x as argument
+        passMethod(x);
+           
+        // print x to see if its 
+        // value has changed
+        System.out.println("After invoking passMethod, x = " + x);
+           
+    }
+        
+    // change parameter in passMethod()
+    public static void passMethod(int p) {
+        p = 10;
+    }
+}
+</pre></div>
+<p>当你运行这个程序时，输出是：</p>
+<div class="codeblock"><pre>
+After invoking passMethod, x = 3
+</pre></div>
+<h2>传递引用数据类型参数</h2>
+<p>引用数据类型的参数（如对象）也<i>通过值</i>传递到方法中。这意味着当方法返回时，传入的引用仍然引用与之前相同的对象。<i>然而</i>，如果对象的字段的值具有适当的访问级别，则<i>可以</i>在该方法中更改该字段。</p>
+<p>例如，考虑任意类中的移动 <code>Circle</code> 对象的方法：</p>
+<div class="codeblock"><pre>
+public void moveCircle(Circle circle, int deltaX, int deltaY) {
+    // code to move origin of circle to x+deltaX, y+deltaY
+    circle.setX(circle.getX() + deltaX);
+    circle.setY(circle.getY() + deltaY);
+        
+    // code to assign a new reference to circle
+    circle = new Circle(0, 0);
+}
+</pre></div>
+<p>用这些参数调用该方法：</p>
+<div class="codeblock"><pre>
+moveCircle(myCircle, 23, 56)
+</pre></div>
+<p>在该方法内部，<code>circle</code> 最初引用 <code>myCircle</code>。该方法将 <code>circle</code> 引用的对象(即 <code>myCircle</code>)的 x 和 y 坐标分别改为 23 和 56。方法返回时，这些更改将持续。然后 <code>circle</code> 被赋予一个 <code>x = y = 0</code> 的新 <code>Circle</code> 对象的引用。然而，这种重新分配没有永久性，因为引用是通过值传递的，并且不能更改。在该方法中，由 <code>circle</code> 指向的对象已经发生了变化，但是当方法返回时，<code>myCircle</code> 仍然像该方法被调用前一样引用相同的 <code>Circle</code> 对象。</p>
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="constructors.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="objects.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Providing Constructors for Your Classes
+        <br /><b>Next page:</b> Objects
+    </div>
+</body>
+</html> 

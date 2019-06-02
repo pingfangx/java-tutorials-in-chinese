@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>获取和解析方法修饰符(Java™ 教程-Java Tutorials 中文版&gt;反射 API&gt;成员)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This reflection Java tutorial describes using reflection for accessing and manipulating classes, fields, methods, and constructors" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java reflection" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">成员</a></div>
+<div class="linkAHEAD"><a href="field.html">字段</a></div>
+<div class="linkBHEAD"><a href="fieldTypes.html">获取字段类型</a></div>
+<div class="linkBHEAD"><a href="fieldModifiers.html">获取和解析字段修饰符</a></div>
+<div class="linkBHEAD"><a href="fieldValues.html">获取和设置字段值</a></div>
+<div class="linkBHEAD"><a href="fieldTrouble.html">故障排除</a></div>
+<div class="linkAHEAD"><a href="method.html">方法</a></div>
+<div class="linkBHEAD"><a href="methodType.html">获取方法类型信息</a></div>
+<div class="linkBHEAD"><a href="methodparameterreflection.html">获取方法参数的名称</a></div>
+<div class="nolinkBHEAD">获取和解析方法修饰符</div>
+<div class="linkBHEAD"><a href="methodInvocation.html">调用方法</a></div>
+<div class="linkBHEAD"><a href="methodTrouble.html">故障排除</a></div>
+<div class="linkAHEAD"><a href="ctor.html">构造函数</a></div>
+<div class="linkBHEAD"><a href="ctorLocation.html">查找构造函数</a></div>
+<div class="linkBHEAD"><a href="ctorModifiers.html">获取和解析构造函数修饰符</a></div>
+<div class="linkBHEAD"><a href="ctorInstance.html">创建新的类实例</a></div>
+<div class="linkBHEAD"><a href="ctorTrouble.html">故障排除</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> The Reflection API
+        <br /><b>Lesson:</b> Members
+        <br /><b>Section:</b> Methods
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">成员</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="methodparameterreflection.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methodInvocation.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>获取和解析方法修饰符</h1></div>
+            <div id="PageContent">
+
+<p>有几个修饰符可能是方法声明的一部分：</p>
+<ul>
+<li>访问修饰符：<code>public</code>，<code>protected</code> 和 <code>private</code></li>
+<li>限制为一个实例的修饰符：<code>static</code></li>
+<li>禁止修改值的修饰符：<code>final</code></li>
+<li>需要覆盖的修饰符：<code>abstract</code></li>
+<li>防止重入的修饰符：<code>synchronized</code></li>
+<li>指示在另一种编程语言中实现的修饰符：<code>native</code></li>
+<li>强制执行严格的浮点行为的修饰符：<code>strictfp</code></li>
+<li>注解</li>
+</ul>
+<p><a class="SourceLink" target="_blank" href="example/MethodModifierSpy.java" onclick="showCode('../../displayCode.html', 'example/MethodModifierSpy.java'); return false;"><code><code>MethodModifierSpy</code></code></a> 示例列出了具有给定名称的方法的修饰符。它还显示方法是合成的(编译器生成的)，可变数量的还是桥接方法(编译器生成的以支持泛型接口)。</p>
+<div class="codeblock"><pre>
+
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import static java.lang.System.out;
+
+public class MethodModifierSpy {
+
+    private static int count;
+    private static synchronized void inc() { count++; }
+    private static synchronized int cnt() { return count; }
+
+    public static void main(String... args) {
+	try {
+	    Class&lt;?&gt; c = Class.forName(args[0]);
+	    Method[] allMethods = c.getDeclaredMethods();
+	    for (Method m : allMethods) {
+		if (!m.getName().equals(args[1])) {
+		    continue;
+		}
+		out.format(&quot;%s%n&quot;, m.toGenericString());
+		out.format(&quot;  Modifiers:  %s%n&quot;,
+			   Modifier.toString(m.getModifiers()));
+		out.format(&quot;  [ synthetic=%-5b var_args=%-5b bridge=%-5b ]%n&quot;,
+			   m.isSynthetic(), m.isVarArgs(), m.isBridge());
+		inc();
+	    }
+	    out.format(&quot;%d matching overload%s found%n&quot;, cnt(),
+		       (cnt() == 1 ? &quot;&quot; : &quot;s&quot;));
+
+        // production code should handle this exception more gracefully
+	} catch (ClassNotFoundException x) {
+	    x.printStackTrace();
+	}
+    }
+}
+</pre></div>
+<p>输出 <a class="SourceLink" target="_blank" href="example/MethodModifierSpy.java" onclick="showCode('../../displayCode.html', 'example/MethodModifierSpy.java'); return false;"><code><code>MethodModifierSpy</code></code></a> 的一些示例生成如下。</p>
+<div class="codeblock"><pre>
+&#36; <em>java MethodModifierSpy java.lang.Object wait</em>
+public final void java.lang.Object.wait() throws java.lang.InterruptedException
+  Modifiers:  public final
+  [ synthetic=false var_args=false bridge=false ]
+public final void java.lang.Object.wait(long,int)
+  throws java.lang.InterruptedException
+  Modifiers:  public final
+  [ synthetic=false var_args=false bridge=false ]
+public final native void java.lang.Object.wait(long)
+  throws java.lang.InterruptedException
+  Modifiers:  public final native
+  [ synthetic=false var_args=false bridge=false ]
+3 matching overloads found
+</pre></div>
+<div class="codeblock"><pre>
+&#36; <em>java MethodModifierSpy java.lang.StrictMath toRadians</em>
+public static double java.lang.StrictMath.toRadians(double)
+  Modifiers:  public static strictfp
+  [ synthetic=false var_args=false bridge=false ]
+1 matching overload found
+</pre></div>
+<div class="codeblock"><pre>
+&#36; <em>java MethodModifierSpy MethodModifierSpy inc</em>
+private synchronized void MethodModifierSpy.inc()
+  Modifiers: private synchronized
+  [ synthetic=false var_args=false bridge=false ]
+1 matching overload found
+</pre></div>
+<div class="codeblock"><pre>
+&#36; <em>java MethodModifierSpy java.lang.Class getConstructor</em>
+public java.lang.reflect.Constructor&lt;T&gt; java.lang.Class.getConstructor
+  (java.lang.Class&lt;T&gt;[]) throws java.lang.NoSuchMethodException,
+  java.lang.SecurityException
+  Modifiers: public transient
+  [ synthetic=false var_args=true bridge=false ]
+1 matching overload found
+</pre></div>
+<div class="codeblock"><pre>
+&#36; <em>java MethodModifierSpy java.lang.String compareTo</em>
+public int java.lang.String.compareTo(java.lang.String)
+  Modifiers: public
+  [ synthetic=false var_args=false bridge=false ]
+public int java.lang.String.compareTo(java.lang.Object)
+  Modifiers: public volatile
+  [ synthetic=true  var_args=false bridge=true  ]
+2 matching overloads found
+</pre></div>
+<p>请注意 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html#isVarArgs--"><code>Method.isVarArgs()</code></a> 为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getConstructor-java.lang.Class...-"><code>Class.getConstructor()</code></a> 返回 <code>true</code>。这表明方法声明如下所示：</p>
+<div class="codeblock"><pre>
+public Constructor&lt;T&gt; getConstructor(Class&lt;?&gt;... parameterTypes)
+</pre></div>
+<p>而不是这样的：</p>
+<div class="codeblock"><pre>
+public Constructor&lt;T&gt; getConstructor(Class&lt;?&gt; [] parameterTypes)
+</pre></div>
+<p>请注意，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#compareTo-java.lang.String-"><code>String.compareTo()</code></a> 的输出包含两种方法。在 <code>String.java</code> 中声明的方法：</p>
+<div class="codeblock"><pre>
+public int compareTo(String anotherString);
+</pre></div>
+<p>和第二个 <em>synthetic (合成)</em> 或编译器生成的 <em>bridge (桥接)</em> 方法。发生这种情况是因为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code>String</code></a> 实现了参数化接口 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html"><code>Comparable</code></a>。在类型擦除期间，继承方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T-"><code>Comparable.compareTo()</code></a> 的参数类型从 <code>java.lang.Object</code> 更改为 <code>java.lang.String</code>。由于 <code>Comparable</code> 和 <code>String</code> 中 <code>compareTo</code> 方法的参数类型在擦除后不再匹配，因此不能进行覆盖。在所有其他情况下，这将产生编译时错误，因为未实现接口。增加桥接方法可以避免这个问题。</p>
+<p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html"><code>方法</code></a>实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html"><code>java.lang.reflect.AnnotatedElement</code></a>。因此，可以获取具有 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME"><code>java.lang.annotation.RetentionPolicy.RUNTIME</code></a> 的任何运行时注解。有关获取注解的示例，请参阅 <a href="../class/classModifiers.html">Examining Class Modifiers and Types</a> 部分。</p>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="methodparameterreflection.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="methodInvocation.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Obtaining Names of Method Parameters
+        <br /><b>Next page:</b> Invoking Methods
+    </div>
+</body>
+</html> 

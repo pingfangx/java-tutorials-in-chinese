@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>操纵字符串中的字符(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;数字和字符串)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java objects, java classes, java inheritance, interfaces, variables, arrays, data types, operators, control flow, number, string" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">数字和字符串</a></div>
+<div class="linkAHEAD"><a href="numbers.html">数字</a></div>
+<div class="linkBHEAD"><a href="numberclasses.html">数字类</a></div>
+<div class="linkBHEAD"><a href="numberformat.html">格式化数字打印输出</a></div>
+<div class="linkBHEAD"><a href="beyondmath.html">基础算法之外的补充</a></div>
+<div class="linkBHEAD"><a href="numbersummary.html">数字总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/numbers-questions.html">问题和练习</a></div>
+<div class="linkAHEAD"><a href="characters.html">Characters</a></div>
+<div class="linkAHEAD"><a href="strings.html">Strings</a></div>
+<div class="linkBHEAD"><a href="converting.html">在数字和字符串之间转换</a></div>
+<div class="nolinkBHEAD">操纵字符串中的字符</div>
+<div class="linkBHEAD"><a href="comparestrings.html">比较字符串和字符串的部分</a></div>
+<div class="linkBHEAD"><a href="buffers.html">StringBuilder 类</a></div>
+<div class="linkBHEAD"><a href="stringsummary.html">字符和字符串总结</a></div>
+<div class="linkAHEAD"><a href="autoboxing.html">自动装箱和拆箱</a></div>
+<div class="linkQUESTIONS"><a href="QandE/characters-questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Learning the Java Language
+        <br /><b>Lesson:</b> Numbers and Strings
+        <br /><b>Section:</b> Strings
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">数字和字符串</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="converting.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="comparestrings.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>操纵字符串中的字符</h1></div>
+            <div id="PageContent"><!-- Manipulating Characters in a String -->
+
+
+<p><code>String</code> 类有许多方法可用于检查字符串的内容，查找字符串中的字符或获取子字符串，更改大小写以及其他任务。</p>
+<h2>按索引获取字符和子字符串</h2>
+<p>您可以通过调用 <code>charAt()</code> 访问器方法获取字符串中特定索引处的字符。第一个字符的索引是 0，而最后一个字符的索引是 <code>length()-1</code>。例如，以下代码获取字符串中索引 9 处的字符：</p>
+<div class="codeblock"><pre>
+String anotherPalindrome = "Niagara. O roar again!"; 
+char aChar = anotherPalindrome.charAt(9);
+</pre></div>
+<p>索引从 0 开始，因此索引 9 处的字符为 'O' ，如下图所示： <!-- figure --></p>
+<center><img src="../../figures/java/objects-charAt.gif" width="569" height="78" align="bottom" alt="使用 charAt 方法获取特定索引处的字符。" /></center><p>如果要从字符串中获取多个连续字符，可以使用 <code>substring</code> 方法。<code>substring</code> 方法有两个版本，如下表所示：</p>
+<table width="100%" border="1" cellpadding="4" cellspacing="3" summary="该表列出了 String 方法">
+<caption style="font-weight: bold"><code>String</code> 类中的 <code>substring</code> 方法</caption>
+<tr>
+<th>方法</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td><code>String substring(int beginIndex, int endIndex)</code></td>
+<td>返回一个新字符串，该字符串是此字符串的子字符串。子字符串从指定的 <code>beginIndex</code> 开始，并扩展到索引 <code>endIndex - 1</code> 处的字符。</td>
+</tr>
+<tr>
+<td><code>String substring(int beginIndex)</code></td>
+<td>返回一个新字符串，该字符串是此字符串的子字符串。integer 参数指定第一个字符的索引。这里，返回的子字符串扩展到原始字符串的末尾。</td>
+</tr>
+</table>
+<p>以下代码从 Niagara 回文中获取从索引 11 延伸到但不包括索引 15 的子字符串，这是 "roar" 一词：</p>
+<div class="codeblock"><pre>
+String anotherPalindrome = "Niagara. O roar again!"; 
+String roar = anotherPalindrome.substring(11, 15); 
+</pre></div><!-- figure -->
+
+<center><img src="../../figures/java/objects-substring.gif" width="482" height="90" align="bottom" alt="使用 substring 方法获取字符串的一部分。" /></center><h2>操纵字符串的其他方法</h2>
+<p>以下是几个用于操作字符串的 <code>String</code> 方法：</p>
+<table width="100%" border="1" cellpadding="4" cellspacing="3" summary="此表列出了 String 类中用于操作字符串的其他方法">
+<caption style="font-weight: bold">用于操作字符串的 <code>String</code> 类中的其他方法</caption>
+<tr>
+<th>方法</th>
+<th width="50%">描述</th>
+</tr>
+<tr>
+<td><code>String[] split(String regex)</code><br />
+<code>String[] split(String regex, int limit)</code></td>
+<td>搜索字符串参数(包含正则表达式)指定的匹配项，并相应地将此字符串拆分为字符串数组。可选的整数参数指定返回数组的最大大小。正则表达式在标题为 "正则表达式" 的课程中介绍。</td>
+</tr>
+<tr>
+<td><code>CharSequence subSequence(int beginIndex, int endIndex)</code></td>
+<td>返回从 <code>beginIndex</code> 索引到 <code>endIndex</code> - 1 构造的新字符序列。</td>
+</tr>
+<tr>
+<td><code>String trim()</code></td>
+<td>返回此字符串的副本，其中移除了前导和尾随空格。</td>
+</tr>
+<tr>
+<td><code>String toLowerCase()<br />
+
+String toUpperCase()</code></td>
+<td>返回转换为小写或大写的此字符串的副本。如果不需要转换，则这些方法返回原始字符串。</td>
+</tr>
+</table>
+<h2>在字符串中搜索字符和子字符串</h2>
+<p>以下是一些用于查找字符串中的字符或子字符串的其他 <code>String</code> 方法。<code>String</code> 类提供了访问器方法，这些方法返回特定字符或子字符串在字符串中的位置：<code>indexOf()</code> 和 <code>lastIndexOf()</code>。<code>indexOf()</code> 方法从字符串的开头向前搜索，<code>lastIndexOf()</code> 方法从字符串的末尾向后搜索。如果未找到字符或子字符串，<code>indexOf()</code> 和 <code>lastIndexOf()</code> 将返回-1。</p>
+<p><code>String</code> 类还提供了一个搜索方法 <code>contains</code>，如果字符串包含特定字符序列，则返回 true。当您只需知道字符串是否包含字符序列，但精确位置并不重要时，请使用此方法。</p>
+<p>下表描述了各种字符串搜索方法。</p>
+<table width="100%" border="1" cellpadding="4" cellspacing="3" summary="此表列出了 String 类中的搜索方法">
+<caption style="font-weight: bold"><code>String</code> 类中的搜索方法</caption>
+<tr>
+<th>方法</th>
+<th width="50%">描述</th>
+</tr>
+<tr>
+<td><code>int indexOf(int ch)<br />
+
+int lastIndexOf(int ch)</code></td>
+<td>返回指定字符的第一个(最后一个)匹配项的索引。</td>
+</tr>
+<tr>
+<td><code>int indexOf(int ch, int fromIndex)<br />
+
+int lastIndexOf(int ch, int fromIndex)</code></td>
+<td>返回指定字符的第一个(最后一个)匹配项的索引，从指定的索引向前(向后)搜索。</td>
+</tr>
+<tr>
+<td><code>int indexOf(String str)<br />
+
+int lastIndexOf(String str)</code></td>
+<td>返回指定子字符串的第一个(最后一个)匹配项的索引。</td>
+</tr>
+<tr>
+<td><code>int indexOf(String str, int fromIndex)<br />
+
+int lastIndexOf(String str, int fromIndex)</code></td>
+<td>返回指定子字符串的第一个(最后一个)匹配项的索引，从指定的索引向前(向后)搜索。</td>
+</tr>
+<tr>
+<td><code>boolean contains(CharSequence s)</code></td>
+<td>如果字符串包含指定的字符序列，则返回 true。</td>
+</tr>
+</table>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<code>CharSequence</code> 是由 <code>String</code> 类实现的接口。因此，您可以使用字符串作为 <code>contains()</code> 方法的参数。
+<hr /></div>
+<h2>将字符和子字符串替换为字符串</h2>
+<p><code>String</code> 类只有很少的方法可以将字符或子字符串插入到字符串中。通常，它们不是必需的：您可以通过连接要 <i>移除</i> 的源字符的子字符串和要插入的子字符串，来创建一个新字符串。</p>
+<p>但是，<code>String</code> 类有 <i>replacing</i> 找到的字符或子字符串的四种方法。他们是：</p>
+<table width="100%" border="1" cellpadding="4" cellspacing="3" summary="此表列出了用于操作字符串的 String 方法">
+<caption style="font-weight: bold">用于操作字符串的 <code>String</code> 类中的方法</caption>
+<tr>
+<th>方法</th>
+<th width="50%">描述</th>
+</tr>
+<tr>
+<td><code>String replace(char oldChar, char newChar)</code></td>
+<td>返回一个新字符串，将此字符串中所有的 oldChar 替换为 newChar 。</td>
+</tr>
+<tr>
+<td><code>String replace(CharSequence target, CharSequence replacement)</code></td>
+<td>将此字符串中与 target 匹配的每个子字符串替换为指定的 replacement 序列。</td>
+</tr>
+<tr>
+<td><code>String replaceAll(String regex, String replacement)</code></td>
+<td>将此字符串中与给定正则表达式匹配的的每一个子字符串替换为给定的 replacement。</td>
+</tr>
+<tr>
+<td><code>String replaceFirst(String regex, String replacement)</code></td>
+<td>将此字符串中与给定正则表达式匹配的的第一个子字符串替换为给定的 replacement。</td>
+</tr>
+</table>
+<h2>一个例子</h2>
+<p>以下类 <a class="SourceLink" target="_blank" href="examples/Filename.java" onclick="showCode('../../displayCode.html', 'examples/Filename.java'); return false;"><code>Filename</code></a> 说明了使用 <code>lastIndexOf()</code> 和 <code>substring()</code> 来隔离不同部分的文件名。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;以下 <code>Filename</code> 类中的方法不进行任何错误检查，并假设其参数包含完整目录路径和带扩展名的文件名。如果这些方法是生产代码，他们将验证他们的参数是否正确构造。
+<hr /></div>
+<div class="codeblock"><pre>
+
+public class Filename {
+    private String fullPath;
+    private char pathSeparator, 
+                 extensionSeparator;
+
+    public Filename(String str, char sep, char ext) {
+        fullPath = str;
+        pathSeparator = sep;
+        extensionSeparator = ext;
+    }
+
+    public String extension() {
+        int dot = fullPath.lastIndexOf(extensionSeparator);
+        return fullPath.substring(dot + 1);
+    }
+
+    // gets filename without extension
+    public String filename() {
+        int dot = fullPath.lastIndexOf(extensionSeparator);
+        int sep = fullPath.lastIndexOf(pathSeparator);
+        return fullPath.substring(sep + 1, dot);
+    }
+
+    public String path() {
+        int sep = fullPath.lastIndexOf(pathSeparator);
+        return fullPath.substring(0, sep);
+    }
+}
+</pre></div>
+<p>这是一个程序 <a class="SourceLink" target="_blank" href="examples/FilenameDemo.java" onclick="showCode('../../displayCode.html', 'examples/FilenameDemo.java'); return false;"><code>FilenameDemo</code></a>，它构造一个 <code>Filename</code> 对象并调用其所有方法：</p>
+<div class="codeblock"><pre>
+
+public class FilenameDemo {
+    public static void main(String[] args) {
+        final String FPATH = &quot;/home/user/index.html&quot;;
+        Filename myHomePage = new Filename(FPATH, '/', '.');
+        System.out.println(&quot;Extension = &quot; + myHomePage.extension());
+        System.out.println(&quot;Filename = &quot; + myHomePage.filename());
+        System.out.println(&quot;Path = &quot; + myHomePage.path());
+    }
+}
+</pre></div>
+<p>下面是程序的输出：</p>
+<div class="codeblock"><pre>
+Extension = html
+Filename = index
+Path = /home/user
+</pre></div>
+<p>如下图所示，我们的 <code>extension</code> 方法使用 <code>lastIndexOf</code> 来查找文件名中最后一个匹配项的句点(.)。然后 <code>substring</code> 使用 <code>lastIndexOf</code> 的返回值来提取文件扩展名也就是说，从字符串的句点到结尾的子字符串。此代码假定文件名中包含句点;如果文件名没有句点，则 <code>lastIndexOf</code> 返回-1，并且 substring 方法抛出 <code>StringIndexOutOfBoundsException</code>。</p>
+<center><img src="../../figures/java/objects-lastIndexOf.gif" width="325" height="127" align="bottom" alt="在 Filename 类的扩展方法中使用 lastIndexOf 和 substring。" /></center><p>另请注意，<code>extension</code> 方法使用 <code>dot + 1</code> 作为 <code>substring</code> 的参数。如果句点字符(.)是字符串的最后一个字符，则 <code>dot + 1</code> 等于字符串的长度，该字符串大于字符串中的最大索引(因为索引从 0 开始)。这是 <code>substring</code> 的合法参数，因为该方法接受的索引等于但不大于字符串的长度，并将其解释为 "字符串的结尾"。</p>
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="converting.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="comparestrings.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Converting Between Numbers and Strings
+        <br /><b>Next page:</b> Comparing Strings and Portions of Strings
+    </div>
+</body>
+</html> 

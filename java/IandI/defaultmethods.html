@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>默认方法(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;接口和继承)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java objects, java classes, java inheritance, interfaces, variables, arrays, data types, operators, control flow, number, string" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">接口和继承</a></div>
+<div class="linkAHEAD"><a href="createinterface.html">接口</a></div>
+<div class="linkBHEAD"><a href="interfaceDef.html">定义一个接口</a></div>
+<div class="linkBHEAD"><a href="usinginterface.html">实现一个接口</a></div>
+<div class="linkBHEAD"><a href="interfaceAsType.html">使用接口作为类型</a></div>
+<div class="linkBHEAD"><a href="nogrow.html">不断发展的接口</a></div>
+<div class="nolinkBHEAD">默认方法</div>
+<div class="linkBHEAD"><a href="summary-interface.html">接口总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/interfaces-questions.html">问题和练习</a></div>
+<div class="linkAHEAD"><a href="subclasses.html">继承</a></div>
+<div class="linkBHEAD"><a href="multipleinheritance.html">状态，实现和类型的多重继承</a></div>
+<div class="linkBHEAD"><a href="override.html">覆盖和隐藏方法</a></div>
+<div class="linkBHEAD"><a href="polymorphism.html">多态</a></div>
+<div class="linkBHEAD"><a href="hidevariables.html">隐藏字段</a></div>
+<div class="linkBHEAD"><a href="super.html">使用 super 关键字</a></div>
+<div class="linkBHEAD"><a href="objectclass.html">Object 作为超类</a></div>
+<div class="linkBHEAD"><a href="final.html">编写 final 类和方法</a></div>
+<div class="linkBHEAD"><a href="abstract.html">抽象方法和类</a></div>
+<div class="linkBHEAD"><a href="summaryinherit.html">继承总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/inherit-questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Learning the Java Language
+        <br /><b>Lesson:</b> Interfaces and Inheritance
+        <br /><b>Section:</b> Interfaces
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="nogrow.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summary-interface.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>默认方法</h1></div>
+            <div id="PageContent">
+
+
+<p><a class="TutorialLink" target="_top" href="../../java/IandI/createinterface.html">Interfaces</a> 部分描述了一个涉及计算机控制汽车制造商的例子，他们发布了行业标准接口，描述了可以调用哪些方法来操作他们的汽车。如果那些计算机控制的汽车制造商为他们的汽车添加新的函数式，例如飞行，该怎么办？这些制造商需要指定新的方法，以使其他公司(如电子制导仪器制造商)能够使其软件适应飞行汽车。这些汽车制造商将在哪里宣布这些与航班有关的新方法？如果他们将它们添加到原始接口，那么实现了这些接口的程序员将不得不重写他们的实现。如果他们将它们作为静态方法添加，那么程序员会将它们视为实用方法，而不是必要的核心方法。</p>
+
+<p>默认方法使您能够向库的接口添加新函数式，并确保与为这些接口的旧版本编写的代码的二进制兼容性。</p> 
+
+<p>考虑以下接口 <a class="SourceLink" target="_blank" href="examples/TimeClient.java" onclick="showCode('../../displayCode.html', 'examples/TimeClient.java'); return false;"><code>TimeClient</code></a>，如 <a class="TutorialLink" target="_top" href="../../java/IandI/QandE/interfaces-answers.html">Answers to Questions and Exercises: Interfaces</a> 中所述：</p>
+
+<div class="codeblock"><pre>
+
+import java.time.*; 
+ 
+public interface TimeClient {
+    void setTime(int hour, int minute, int second);
+    void setDate(int day, int month, int year);
+    void setDateAndTime(int day, int month, int year,
+                               int hour, int minute, int second);
+    LocalDateTime getLocalDateTime();
+}
+</pre></div>
+
+<p>以下类 <a class="SourceLink" target="_blank" href="examples/defaultmethods/SimpleTimeClient.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/SimpleTimeClient.java'); return false;"><code>SimpleTimeClient</code></a>，实现 <code>TimeClient</code>：</p>
+
+<div class="codeblock"><pre>
+
+package defaultmethods;
+
+import java.time.*;
+import java.lang.*;
+import java.util.*;
+
+public class SimpleTimeClient implements TimeClient {
+    
+    private LocalDateTime dateAndTime;
+    
+    public SimpleTimeClient() {
+        dateAndTime = LocalDateTime.now();
+    }
+    
+    public void setTime(int hour, int minute, int second) {
+        LocalDate currentDate = LocalDate.from(dateAndTime);
+        LocalTime timeToSet = LocalTime.of(hour, minute, second);
+        dateAndTime = LocalDateTime.of(currentDate, timeToSet);
+    }
+    
+    public void setDate(int day, int month, int year) {
+        LocalDate dateToSet = LocalDate.of(day, month, year);
+        LocalTime currentTime = LocalTime.from(dateAndTime);
+        dateAndTime = LocalDateTime.of(dateToSet, currentTime);
+    }
+    
+    public void setDateAndTime(int day, int month, int year,
+                               int hour, int minute, int second) {
+        LocalDate dateToSet = LocalDate.of(day, month, year);
+        LocalTime timeToSet = LocalTime.of(hour, minute, second); 
+        dateAndTime = LocalDateTime.of(dateToSet, timeToSet);
+    }
+    
+    public LocalDateTime getLocalDateTime() {
+        return dateAndTime;
+    }
+    
+    public String toString() {
+        return dateAndTime.toString();
+    }
+    
+    public static void main(String... args) {
+        TimeClient myTimeClient = new SimpleTimeClient();
+        System.out.println(myTimeClient.toString());
+    }
+}
+</pre></div>
+
+<p>假设您要向 <code>TimeClient</code> 接口添加新函数式，例如通过 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html"><code>ZonedDateTime</code></a> 对象指定时区的函数式(这是像 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html"><code>LocalDateTime</code></a> 对象，除了它存储时区信息)：</p>
+
+<div class="codeblock"><pre>
+public interface TimeClient {
+    void setTime(int hour, int minute, int second);
+    void setDate(int day, int month, int year);
+    void setDateAndTime(int day, int month, int year,
+        int hour, int minute, int second);
+    LocalDateTime getLocalDateTime();                           
+    <strong>ZonedDateTime getZonedDateTime(String zoneString);</strong>
+}
+</pre></div>
+
+<p>在对 <code>TimeClient</code> 接口进行此修改之后，您还必须修改类 <code>SimpleTimeClient</code> 并实现方法 <code>getZonedDateTime</code>。但是，您可以改为定义 <em>默认实现</em>，而不是让 <code>getZonedDateTime</code> <code>abstract</code>(如上例所示)。(请记住，<a class="TutorialLink" target="_top" href="../../java/IandI/abstract.html">abstract method</a> 是在没有实现的情况下声明的方法。)</p>
+
+<div class="codeblock"><pre>
+
+package defaultmethods;
+ 
+import java.time.*;
+
+public interface TimeClient {
+    void setTime(int hour, int minute, int second);
+    void setDate(int day, int month, int year);
+    void setDateAndTime(int day, int month, int year,
+                               int hour, int minute, int second);
+    LocalDateTime getLocalDateTime();
+    
+    static ZoneId getZoneId (String zoneString) {
+        try {
+            return ZoneId.of(zoneString);
+        } catch (DateTimeException e) {
+            System.err.println(&quot;Invalid time zone: &quot; + zoneString +
+                &quot;; using default time zone instead.&quot;);
+            return ZoneId.systemDefault();
+        }
+    }
+        
+    default ZonedDateTime getZonedDateTime(String zoneString) {
+        return ZonedDateTime.of(getLocalDateTime(), getZoneId(zoneString));
+    }
+}
+</pre></div>
+
+<p>您指定在接口中定义的方法是默认方法，并在方法签名的开头使用 <code>default</code> 关键字。接口中的所有方法声明（包括默认方法）都隐式 <code>public</code>，因此您可以省略 <code>public</code> 修饰符。</p>
+
+<p>使用此接口，您不必修改类 <code>SimpleTimeClient</code>，并且此类(以及实现接口 <code>TimeClient</code> 的任何类)将具有已定义的方法 <code>getZonedDateTime</code> 。以下示例 <a class="SourceLink" target="_blank" href="examples/defaultmethods/TestSimpleTimeClient.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/TestSimpleTimeClient.java'); return false;"><code>TestSimpleTimeClient</code></a> 从 <code>SimpleTimeClient</code> 的实例调用方法 <code>getZonedDateTime</code>：</p>
+
+<div class="codeblock"><pre>
+
+package defaultmethods;
+ 
+import java.time.*;
+import java.lang.*;
+import java.util.*;
+
+public class TestSimpleTimeClient {
+    public static void main(String... args) {
+        TimeClient myTimeClient = new SimpleTimeClient();
+        System.out.println(&quot;Current time: &quot; + myTimeClient.toString());
+        System.out.println(&quot;Time in California: &quot; +
+            myTimeClient.getZonedDateTime(&quot;Blah blah&quot;).toString());
+    }
+}
+</pre></div><!-- *********************************************************************** -->
+
+
+
+<h2><a name="extending">继承包含默认方法的接口</a></h2>
+
+<p>继承包含默认方法的接口时，可以执行以下操作：</p>
+
+<ul>
+    <li>不提及默认方法，它允许继承的接口继承默认方法。</li>
+    <li>重新声明默认方法，使其成为 <code>abstract</code>。</li>
+    <li>重新定义默认方法，将重写该方法。</li>
+</ul>
+
+<p>假设您继承接口 <code>TimeClient</code>，如下所示：</p>
+
+<div class="codeblock"><pre>
+public interface AnotherTimeClient extends TimeClient { }
+</pre></div>
+
+<p>任何实现接口 <code>AnotherTimeClient</code> 的类都将具有由 <code>TimeClient.getZonedDateTime</code> 默认方法指定的实现。</p>
+
+<p>假设您继承接口 <code>TimeClient</code>，如下所示：</p>
+
+<div class="codeblock"><pre>
+public interface AbstractZoneTimeClient extends TimeClient {
+    public ZonedDateTime getZonedDateTime(String zoneString);
+}
+</pre></div>
+
+<p>任何实现接口 <code>AbstractZoneTimeClient</code> 的类都必须实现方法 <code>getZonedDateTime</code>;此方法是一个 <code>abstract</code> 方法，就像接口中的所有其他非默认(和非静态)方法一样。</p>
+
+<p>假设您继承接口 <code>TimeClient</code>，如下所示：</p>
+
+<div class="codeblock"><pre>
+public interface HandleInvalidTimeZoneClient extends TimeClient {
+    default public ZonedDateTime getZonedDateTime(String zoneString) {
+        try {
+            return ZonedDateTime.of(getLocalDateTime(),ZoneId.of(zoneString)); 
+        } catch (DateTimeException e) {
+            System.err.println("Invalid zone ID: " + zoneString +
+                "; using the default time zone instead.");
+            return ZonedDateTime.of(getLocalDateTime(),ZoneId.systemDefault());
+        }
+    }
+}
+</pre></div>
+
+<p>任何实现接口 <code>HandleInvalidTimeZoneClient</code> 的类都将使用此接口指定的 <code>getZonedDateTime</code> 的实现，而不是接口 <code>TimeClient</code> 指定的实现。</p><!-- *********************************************************************** -->
+
+
+
+<h2><a name="static">静态方法</a></h2>
+
+<p>除了默认方法，您还可以在接口中定义 <a class="TutorialLink" target="_top" href="../../java/javaOO/classvars.html">static methods </a>。（静态方法是一种与定义它的类相关联的方法，而不是与任何对象相关联的方法。该类的每个实例都共享其静态方法。）这使您可以更轻松地在库中组织辅助方法;您可以在同一个接口中保留特定于接口的静态方法，而不是在单独的类中。以下示例定义一个静态方法，该方法获取与时区标识符对应的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html"><code>ZoneId</code></a> 对象;如果没有与给定标识符对应的 <code>ZoneId</code> 对象，它将使用系统默认时区。(因此，您可以简化方法 <code>getZonedDateTime</code>)：</p>
+
+<div class="codeblock"><pre>
+public interface TimeClient {
+    // ...
+    static public ZoneId getZoneId (String zoneString) {
+        try {
+            return ZoneId.of(zoneString);
+        } catch (DateTimeException e) {
+            System.err.println("Invalid time zone: " + zoneString +
+                "; using default time zone instead.");
+            return ZoneId.systemDefault();
+        }
+    }
+
+    default public ZonedDateTime getZonedDateTime(String zoneString) {
+        return ZonedDateTime.of(getLocalDateTime(), getZoneId(zoneString));
+    }    
+}
+</pre></div>
+
+<p>与类中的静态方法一样，在方法签名开头使用 <code>static</code> 关键字，以指定接口中的方法定义是静态方法。接口中的所有方法声明（包括静态方法）都隐式 <code>public</code>，因此您可以省略 <code>public</code> 修饰符。</p><!-- *********************************************************************** -->
+
+
+
+
+<h2><a name="existing_libraries">将默认方法集成到现有库中</a></h2>
+
+<p>默认方法使您能够向现有接口添加新函数式，并确保与为这些接口的旧版本编写的代码的二进制兼容性。特别是，默认方法使您能够将接受 lambda 表达式的方法添加为现有接口的参数。本节演示如何使用默认和静态方法增强 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html"><code>Comparator</code></a> 接口。</p> 
+
+<p>考虑 <a class="TutorialLink" target="_top" href="../../java/javaOO/QandE/creating-questions.html">Questions and Exercises: Classes</a> 中描述的 <code>Card</code> 和 <code>Deck</code> 类。此示例将 <a class="SourceLink" target="_blank" href="examples/defaultmethods/Card.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/Card.java'); return false;"><code>Card</code></a> 和 <a class="SourceLink" target="_blank" href="examples/defaultmethods/Deck.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/Deck.java'); return false;"><code>Deck</code></a> 类重写为接口。<code>Card</code> 接口包含两个 <code>enum</code> 类型(<code>Suit</code> 和 <code>Rank</code>)和两个抽象方法(<code>getSuit</code> 和 <code>getRank</code>)：</p>
+ 
+<div class="codeblock"><pre>
+
+package defaultmethods;
+
+public interface Card extends Comparable&lt;Card&gt; {
+    
+    public enum Suit { 
+        DIAMONDS (1, &quot;Diamonds&quot;), 
+        CLUBS    (2, &quot;Clubs&quot;   ), 
+        HEARTS   (3, &quot;Hearts&quot;  ), 
+        SPADES   (4, &quot;Spades&quot;  );
+        
+        private final int value;
+        private final String text;
+        Suit(int value, String text) {
+            this.value = value;
+            this.text = text;
+        }
+        public int value() {return value;}
+        public String text() {return text;}
+    }
+    
+    public enum Rank { 
+        DEUCE  (2 , &quot;Two&quot;  ),
+        THREE  (3 , &quot;Three&quot;), 
+        FOUR   (4 , &quot;Four&quot; ), 
+        FIVE   (5 , &quot;Five&quot; ), 
+        SIX    (6 , &quot;Six&quot;  ), 
+        SEVEN  (7 , &quot;Seven&quot;),
+        EIGHT  (8 , &quot;Eight&quot;), 
+        NINE   (9 , &quot;Nine&quot; ), 
+        TEN    (10, &quot;Ten&quot;  ), 
+        JACK   (11, &quot;Jack&quot; ),
+        QUEEN  (12, &quot;Queen&quot;), 
+        KING   (13, &quot;King&quot; ),
+        ACE    (14, &quot;Ace&quot;  );
+        private final int value;
+        private final String text;
+        Rank(int value, String text) {
+            this.value = value;
+            this.text = text;
+        }
+        public int value() {return value;}
+        public String text() {return text;}
+    }
+    
+    public Card.Suit getSuit();
+    public Card.Rank getRank();
+}
+</pre></div>
+
+<p><code>Deck</code> 接口包含操作牌堆中的牌各种方法：</p>
+
+<div class="codeblock"><pre>
+
+package defaultmethods; 
+ 
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+ 
+public interface Deck {
+    
+    List&lt;Card&gt; getCards();
+    Deck deckFactory();
+    int size();
+    void addCard(Card card);
+    void addCards(List&lt;Card&gt; cards);
+    void addDeck(Deck deck);
+    void shuffle();
+    void sort();
+    void sort(Comparator&lt;Card&gt; c);
+    String deckToString();
+
+    Map&lt;Integer, Deck&gt; deal(int players, int numberOfCards)
+        throws IllegalArgumentException;
+
+}
+</pre></div>
+
+<p>类 <a class="SourceLink" target="_blank" href="examples/defaultmethods/PlayingCard.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/PlayingCard.java'); return false;"><code>PlayingCard</code></a> 实现接口 <code>Card</code>，类 <a class="SourceLink" target="_blank" href="examples/defaultmethods/StandardDeck.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/StandardDeck.java'); return false;"><code>StandardDeck</code></a> 实现接口 <code>Deck</code>。</p>
+
+<p>类 <code>StandardDeck</code> 实现抽象方法 <code>Deck.sort</code>，如下所示：</p>
+
+<div class="codeblock"><pre>
+public class StandardDeck implements Deck {
+    
+    private List&lt;Card&gt; entireDeck;
+    
+    // ...
+    
+    public void sort() {
+        Collections.sort(entireDeck);
+    }
+    
+    // ...
+}
+</pre></div>
+
+<p>方法 <code>Collections.sort</code> 对 <code>List</code> 的实例进行排序，其元素类型实现接口 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html"><code>Comparable</code></a>。成员 <code>entireDeck</code> 是 <code>List</code> 的一个实例，其元素的类型为 <code>Card</code>，它继承了 <code>Comparable</code>。类 <code>PlayingCard</code> 实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T-"><code>Comparable.compareTo</code></a> 方法，如下所示：</p>
+
+<div class="codeblock"><pre>
+public int hashCode() {
+    return ((suit.value()-1)*13)+rank.value();
+}
+
+public int compareTo(Card o) {
+    return this.hashCode() - o.hashCode();
+}
+</pre></div>
+
+<p>方法 <code>compareTo</code> 使方法 <code>StandardDeck.sort()</code> 首先按花色对牌进行排序，然后按点数排序。</p>
+
+<p>如果你想先按点数排序，然后按花色排序怎么办？您需要实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html"><code>Comparator</code></a> 接口以指定新的排序条件，并使用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#sort-java.util.List-java.util.Comparator-"><code>sort(List&lt;T&gt; list, Comparator&lt;? super T&gt; c)</code></a>(包含 <code>Comparator</code> 参数的 <code>sort</code> 方法的版本)。您可以在类 <code>StandardDeck</code> 中定义以下方法：</p>
+
+<div class="codeblock"><pre>
+public void sort(Comparator&lt;Card&gt; c) {
+    Collections.sort(entireDeck, c);
+}  
+</pre></div>
+
+<p>使用此方法，您可以指定方法 <code>Collections.sort</code> 如何对 <code>Card</code> 类的实例进行排序。一种方法是实现 <code>Comparator</code> 接口，以指定您希望卡牌的排序方式。示例 <a class="SourceLink" target="_blank" href="examples/defaultmethods/SortByRankThenSuit.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/SortByRankThenSuit.java'); return false;"><code>SortByRankThenSuit</code></a> 执行此操作：
+</p>
+
+<div class="codeblock"><pre>
+
+package defaultmethods;
+
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class SortByRankThenSuit implements Comparator&lt;Card&gt; {
+    public int compare(Card firstCard, Card secondCard) {
+        int compVal =
+            firstCard.getRank().value() - secondCard.getRank().value();
+        if (compVal != 0)
+            return compVal;
+        else
+            return firstCard.getSuit().value() - secondCard.getSuit().value(); 
+    }
+}
+</pre></div>
+
+<p>以下调用首先按点数对扑克牌进行排序，然后按照花色进行排序：</p>
+
+<div class="codeblock"><pre>
+StandardDeck myDeck = new StandardDeck();
+myDeck.shuffle();
+myDeck.sort(new SortByRankThenSuit());
+</pre></div>
+
+<p>但是，这种方法过于冗长;如果你能指定要排序 <em>什么（what）</em>，而不是 <em>如何（how）</em> 排序，那会更好。假设您是编写 <code>Comparator</code> 接口的开发人员。您可以将哪些默认或静态方法添加到 <code>Comparator</code> 接口，以使其他开发人员能够更轻松地指定排序条件？</p>
+
+<p>首先，假设您想按点数对扑克牌进行排序，而不考虑花色。您可以按如下方式调用 <code>StandardDeck.sort</code> 方法：</p>
+
+<div class="codeblock"><pre>
+StandardDeck myDeck = new StandardDeck();
+myDeck.shuffle();
+myDeck.sort(
+    (firstCard, secondCard) -&gt;
+        firstCard.getRank().value() - secondCard.getRank().value()
+); 
+</pre></div>
+
+<p>由于接口 <code>Comparator</code> 是 <a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html#approach6">functional interface</a>，因此可以使用 lambda 表达式作为 <code>sort</code> 方法的参数。在此示例中，lambda 表达式比较两个整数值。</p>
+
+<p>如果他们可以通过仅调用方法 <code>Card.getRank</code> 来创建 <code>Comparator</code> 实例，那么对于开发人员来说会更简单。特别是，如果您的开发人员可以创建一个 <code>Comparator</code> 实例，以比较可以从一个方法返回数值的任何对象时（如 <code>getValue</code> 或 <code>hashCode</code> ），这会很有用。<code>Comparator</code> 接口已通过静态方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#comparing-java.util.function.Function-java.util.Comparator-"><code>comparing</code></a> 增强了此功能：</p>
+ 
+<div class="codeblock"><pre>
+myDeck.sort(Comparator.comparing((card) -> card.getRank()));  
+</pre></div>
+
+<p>在此示例中，您可以使用 <a class="TutorialLink" target="_top" href="../../java/javaOO/methodreferences.html">方法引用（method reference）</a>：</p>
+
+<div class="codeblock"><pre>
+myDeck.sort(Comparator.comparing(Card::getRank));  
+</pre></div>
+
+<p>此调用更好地演示排序 <em>什么（what）</em> 而不是 <em>如何（how）</em> 进行排序。</p>
+
+<p><code>Comparator</code> 接口已通过其他版本的静态方法 <code>comparing</code> 进行了增强，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#comparingDouble-java.util.function.ToDoubleFunction-java.util.Comparator-"><code>comparingDouble</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#comparingLong-java.util.function.ToLongFunction-"><code>comparingLong</code></a>，使您能够创建比较其他数据类型的 <code>Comparator</code> 实例。</p>
+
+<p>假设您的开发人员想要创建一个 <code>Comparator</code> 实例，该实例可以比较具有多个条件的对象。例如，你如何先按点数排序扑克牌，然后按花色排序？和以前一样，您可以使用 lambda 表达式来指定这些排序条件：</p>  
+
+<div class="codeblock"><pre>
+StandardDeck myDeck = new StandardDeck();
+myDeck.shuffle();
+myDeck.sort(
+    (firstCard, secondCard) -> {
+        int compare =
+            firstCard.getRank().value() - secondCard.getRank().value();
+        if (compare != 0)
+            return compare;
+        else
+            return firstCard.getSuit().value() - secondCard.getSuit().value();
+    }      
+); 
+</pre></div>
+
+<p>如果他们可以从一系列 <code>Comparator</code> 实例中构建 <code>Comparator</code> 实例，那么对于您的开发人员来说会更简单。<code>Comparator</code> 接口已使用默认方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#thenComparing-java.util.Comparator-"><code>thenComparing</code></a> 对此功能进行了增强：</p>
+
+<div class="codeblock"><pre>
+myDeck.sort(
+    Comparator
+        .comparing(Card::getRank)
+        .thenComparing(Comparator.comparing(Card::getSuit)));
+</pre></div>
+
+<p><code>Comparator</code> 接口已使用其他版本的默认方法 <code>thenComparing</code> 进行了增强(例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#thenComparingDouble-java.util.function.ToDoubleFunction-"><code>thenComparingDouble</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#thenComparingLong-java.util.function.ToLongFunction-"><code>thenComparingLong</code></a>)，使您能够构建比较其他数据类型的 <code>Comparator</code> 实例。</p>
+ 
+<p>假设您的开发人员想要创建一个 <code>Comparator</code> 实例，使他们能够以相反的顺序对对象集合进行排序。例如，你如何按照点数的降序排序扑克牌，从 Ace 到 2(而不是从 2 到 Ace)？和以前一样，您可以指定另一个 lambda 表达式。但是，如果您的开发人员可以通过调用方法来反转现有的 <code>Comparator</code>，则会更简单。<code>Comparator</code> 接口使用默认方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#reversed--"><code>reversed</code></a> 增强了此功能：</p>
+
+<div class="codeblock"><pre>
+myDeck.sort(
+    Comparator.comparing(Card::getRank)
+        .reversed()
+        .thenComparing(Comparator.comparing(Card::getSuit)));
+</pre></div>
+       
+<p>此示例演示如何使用默认方法，静态方法，lambda 表达式和方法引用增强 <code>Comparator</code> 接口，以创建更具表现力的库方法，其函数式程序员可以通过查看它们的调用方式快速推断出来。使用这些构造来增强库中的接口。</p>     
+    
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="nogrow.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="summary-interface.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Evolving Interfaces
+        <br /><b>Next page:</b> Summary of Interfaces
+    </div>
+</body>
+</html> 

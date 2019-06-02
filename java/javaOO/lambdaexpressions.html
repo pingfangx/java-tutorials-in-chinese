@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Lambda 表达式(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;类和对象)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java objects, java classes, java inheritance, interfaces, variables, arrays, data types, operators, control flow, number, string" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">类和对象</a></div>
+<div class="linkAHEAD"><a href="classes.html">类</a></div>
+<div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
+<div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
+<div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
+<div class="linkAHEAD"><a href="objects.html">对象</a></div>
+<div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
+<div class="linkBHEAD"><a href="usingobject.html">使用对象</a></div>
+<div class="linkAHEAD"><a href="more.html">更多关于类</a></div>
+<div class="linkBHEAD"><a href="returnvalue.html">从方法中返回一个值</a></div>
+<div class="linkBHEAD"><a href="thiskey.html">使用 this 关键字</a></div>
+<div class="linkBHEAD"><a href="accesscontrol.html">控制对类成员的访问</a></div>
+<div class="linkBHEAD"><a href="classvars.html">理解类成员</a></div>
+<div class="linkBHEAD"><a href="initial.html">初始化字段</a></div>
+<div class="linkBHEAD"><a href="summaryclasses.html">创建及使用类和对象的总结</a></div>
+<div class="linkQUESTIONS"><a href="QandE/creating-questions.html">问题和练习</a></div>
+<div class="linkQUESTIONS"><a href="QandE/objects-questions.html">问题和练习</a></div>
+<div class="linkAHEAD"><a href="nested.html">嵌套类</a></div>
+<div class="linkBHEAD"><a href="innerclasses.html">内部类示例</a></div>
+<div class="linkBHEAD"><a href="localclasses.html">局部类</a></div>
+<div class="linkBHEAD"><a href="anonymousclasses.html">匿名类</a></div>
+<div class="nolinkBHEAD">Lambda 表达式</div>
+<div class="linkCHEAD"><a href="methodreferences.html">方法引用</a></div>
+<div class="linkBHEAD"><a href="whentouse.html">何时使用嵌套类，本地类，匿名类和 Lambda 表达式 </a></div>
+<div class="linkQUESTIONS"><a href="QandE/nested-questions.html">问题和练习</a></div>
+<div class="linkAHEAD"><a href="enum.html">枚举类型</a></div>
+<div class="linkQUESTIONS"><a href="QandE/enum-questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Learning the Java Language
+        <br /><b>Lesson:</b> Classes and Objects
+        <br /><b>Section:</b> Nested Classes
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="anonymousclasses.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methodreferences.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>Lambda 表达式</h1></div>
+            <div id="PageContent">
+
+<p>匿名类的一个问题是，如果匿名类的实现非常简单，例如只包含一个方法的接口，那么匿名类的语法可能看起来不实用且不清楚。在这些情况下，您通常会尝试将函数作为参数传递给另一个方法，例如当有人单击按钮时应采取的操作。Lambda 表达式使您可以执行此操作，将函数视为方法参数，或将代码视为数据。</p>
+
+<p>上一节 <a class="TutorialLink" target="_top" href="anonymousclasses.html">匿名类</a>，向您展示了如何在不给它命名的情况下实现某个基类。虽然这通常比命名类更简洁，但对于只有一个方法的类，即使是匿名类也似乎有点过分和繁琐。Lambda 表达式允许您更紧凑地表达单方法的类的实例。</p>
+
+<p>本节包括以下主题：</p>
+
+<ul>
+  <li><a href="#use-case">Lambda 表达式的理想用例</a>
+    <ul>
+      <li><a href="#approach1">方法 1：创建搜索匹配一个特征的成员的方法</a></li>
+      <li><a href="#approach2">方法 2：创建更通用的搜索方法</a></li>
+      <li><a href="#approach3">方法 3：在局部类中指定搜索条件代码</a></li>
+      <li><a href="#approach4">方法 4：在匿名类中指定搜索条件代码</a></li>
+      <li><a href="#approach5">方法 5：使用 Lambda 表达式指定搜索条件代码</a></li>
+      <li><a href="#approach6">方法 6：将标准函数式接口与 Lambda 表达式一起使用</a></li>
+      <li><a href="#approach7">方法 7：在整个应用程序中使用 Lambda 表达式</a></li>
+      <li><a href="#approach8">方法 8：更广泛地使用泛型</a></li>
+      <li><a href="#approach9">方法 9：使用接受 Lambda 表达式作为参数的聚合操作</a></li>
+    </ul>
+  </li>
+  <li><a href="#lambda-expressions-in-gui-applications">GUI 应用程序中的 Lambda 表达式</a></li>
+  <li><a href="#syntax">Lambda 表达式的语法</a></li>
+  <li><a href="#accessing-local-variables">访问封闭范围的局部变量</a></li>
+  <li><a href="#target-typing">目标类型</a>
+    <ul>
+      <li><a href="#target-types-and-method-arguments">目标类型和方法参数</a></li>
+    </ul>
+  </li>
+  <li><a href="#serialization">序列化</a></li>
+</ul>
+
+<h2><a name="use-case">Lambda 表达式的理想用例</a></h2>
+
+<p>假设您正在创建社交网络应用程序。您希望创建一项功能，使管理员能够对满足特定条件的社交网络应用程序成员执行任何类型的操作，例如发送消息。下表详细描述了此用例：</p>
+
+<table border="1" summary="用于社交网络应用程序的用例">
+  <tr>
+    <th>字段</th>
+    <th>描述</th>
+  </tr>
+
+  <tr>
+    <td>Name</td>
+    <td>对选定的成员执行操作</td>
+  </tr>
+
+  <tr>
+    <td>主要操作者</td>
+    <td>管理员</td>
+  </tr>
+
+  <tr>
+     <td>前提条件</td>
+     <td>管理员已登录系统。</td>
+  </tr>
+
+  <tr>
+    <td>后置条件</td>
+    <td>仅对符合指定条件的成员执行操作。</td>
+  </tr>
+
+  <tr>
+    <td>主要成功案例</td>
+    <td>
+      <ol>
+        <li>管理员指定要执行特定操作的成员的条件。</li>
+        <li>管理员指定要对这些选定成员执行的操作。</li>
+        <li>管理员选择 <strong>Submit</strong> 按钮。</li>
+        <li>系统查找符合指定条件的所有成员。</li>
+        <li>系统对所有匹配成员执行指定的操作。</li>
+      </ol>
+    </td>
+  </tr>
+
+  <tr>
+    <td>扩展</td>
+    <td>
+      <p>1a. 管理员可以选择在指定要执行的操作之前或选择 <strong>Submit</strong> 按钮之前预览符合指定条件的成员。</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>发生频率</td>
+    <td>每天很多次。</td>
+  </tr>
+</table>
+
+<p>假设此社交网络应用程序的成员由以下 <a class="SourceLink" target="_blank" href="examples/Person.java" onclick="showCode('../../displayCode.html', 'examples/Person.java'); return false;"><code>Person</code></a> 类表示：</p>
+
+<pre class="codeblock">public class Person {
+
+    public enum Sex {
+        MALE, FEMALE
+    }
+
+    String name;
+    LocalDate birthday;
+    Sex gender;
+    String emailAddress;
+
+    public int getAge() {
+        // ...
+    }
+
+    public void printPerson() {
+        // ...
+    }
+}</pre>
+
+<p>假设您的社交网络应用程序的成员存储在 <code>List&lt;Person&gt;</code> 实例中。</p>
+
+<p>本节首先介绍这种用例的简单方法。它使用局部和匿名类改进了这种方法，然后使用 lambda 表达式以高效和简洁的方法完成。在示例 <a class="SourceLink" target="_blank" href="examples/RosterTest.java" onclick="showCode('../../displayCode.html', 'examples/RosterTest.java'); return false;"><code>RosterTest</code></a> 中查找本节中描述的代码片段。
+</p>
+
+<h3><a name="approach1">方法 1：创建搜索匹配一个特征的成员的方法</a></h3>
+
+<p>一种简单的方法是创建几种方法;每种方法都会搜索与一个特征匹配的成员，例如性别或年龄。以下方法打印超过指定年龄的成员：</p>
+
+
+<pre class="codeblock">public static void printPersonsOlderThan(List&lt;Person&gt; roster, int age) {
+    for (Person p : roster) {
+        if (p.getAge() &gt;= age) {
+            p.printPerson();
+        }
+    }
+}</pre>
+
+<p><b>Note</b>：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html"><code>List</code></a> 是有序的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html"><code>Collection</code></a>。<em>collection</em> 是将多个元素组合到一个单元中的对象。集合用于存储，检索，操作和传递聚合数据。有关集合的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/index.html">Collections</a> 路径。</p>
+
+<p>这种方法可能会使您的应用程序 <em>brittle（脆弱）</em>，这是由于引入了更新(例如更新的数据类型)而导致应用程序无法工作的可能性。假设您升级应用程序并更改 <code>Person</code> 类的结构，使其包含不同的成员变量;也许该类记录和测量年龄与不同的数据类型或算法。您必须重写大量 API 以适应此更改。此外，这种方法是不必要的限制;例如，如果您想要打印年龄小于某个年龄的成员，该怎么办？</p><!-- ********************************************************************** -->
+
+
+<h3><a name="approach2">方法 2：创建更通用的搜索方法</a></h3>
+
+<p>以下方法比 <code>printPersonsOlderThan</code> 更通用;它会在指定的年龄范围内打印成员：</p>
+
+<pre class="codeblock">public static void printPersonsWithinAgeRange(
+    List&lt;Person&gt; roster, int low, int high) {
+    for (Person p : roster) {
+        if (low &lt;= p.getAge() &amp;&amp; p.getAge() &lt; high) {
+            p.printPerson();
+        }
+    }
+}</pre>
+
+
+<p>如果您想要打印指定性别的成员，或指定性别和年龄范围的组合，该怎么办？如果您决定更改 <code>Person</code> 类并添加其他属性（如关系状态或地理位置），该怎么办？虽然此方法比 <code>printPersonsOlderThan</code> 更通用，但尝试为每个可能的搜索查询创建单独的方法仍然会导致代码脆弱。您可以改为分隔指定要在其他类中搜索的条件的代码。</p><!-- ********************************************************************** -->
+
+
+<h3><a name="approach3">方法 3：在局部类中指定搜索条件代码</a></h3>
+
+<p>以下方法打印与您指定的搜索条件匹配的成员：</p>
+
+<pre class="codeblock">public static void printPersons(
+    List&lt;Person&gt; roster, CheckPerson tester) {
+    for (Person p : roster) {
+        if (tester.test(p)) {
+            p.printPerson();
+        }
+    }
+}</pre>
+
+<p>此方法检查 <code>List</code> 参数 <code>roster</code> 中包含的每个 <code>Person</code> 实例是否满足由 <code>CheckPerson</code> 类的参数 <code>tester</code> 指定的搜索条件，通过调用方法 <code>tester.test</code>。如果方法 <code>tester.test</code> 返回 <code>true</code> 值，则在 <code>Person</code> 实例上调用方法 <code>printPersons</code>。</p>
+
+<p>要指定搜索条件，请实现 <code>CheckPerson</code> 接口：</p>
+
+<pre class="codeblock">interface CheckPerson {
+    boolean test(Person p);
+}</pre>
+
+<p>以下类通过指定方法 <code>test</code> 的实现来实现 <code>CheckPerson</code> 接口。此方法筛选符合美国兵役登记制度（Selective Service）的成员：如果 <code>Person</code> 参数为男性且年龄介于 18 和 25 之间，则返回 <code>true</code> 值：</p>
+
+<pre class="codeblock">class CheckPersonEligibleForSelectiveService implements CheckPerson {
+    public boolean test(Person p) {
+        return p.gender == Person.Sex.MALE &amp;&amp;
+            p.getAge() &gt;= 18 &amp;&amp;
+            p.getAge() &lt;= 25;
+    }
+}</pre>
+
+<p>要使用此类，请创建它的新实例并调用 <code>printPersons</code> 方法：</p>
+
+<pre class="codeblock">printPersons(
+    roster, new CheckPersonEligibleForSelectiveService());</pre>
+
+<p>虽然这种方法不那么脆弱 - 如果更改 <code>Person</code> 的结构，则不必重写方法 - 但还是需要写其他代码：为在应用中执行的每个搜索写新接口和局部类。因为 <code>CheckPersonEligibleForSelectiveService</code> 实现了一个接口，所以您可以使用匿名类而不是局部类，并且无需为每次搜索声明一个新类。</p><!-- ********************************************************************** -->
+
+
+<h3><a name="approach4">方法 4：在匿名类中指定搜索条件代码</a></h3>
+
+<p>下面调用方法 <code>printPersons</code> 的一个参数是一个匿名类，用于过滤符合美国兵役登记制度的成员：男性且年龄在 18 到 25 岁之间的成员：</p>
+
+<pre class="codeblock">printPersons(
+    roster,
+    new CheckPerson() {
+        public boolean test(Person p) {
+            return p.getGender() == Person.Sex.MALE
+                &amp;&amp; p.getAge() &gt;= 18
+                &amp;&amp; p.getAge() &lt;= 25;
+        }
+    }
+);</pre>
+
+<p>此方法减少了所需的代码量，因为您不必为要执行的每个搜索创建新类。但是，考虑到 <code>CheckPerson</code> 接口只包含一个方法，匿名类的语法很笨重。在这种情况下，您可以使用 lambda 表达式而不是匿名类，如下一节中所述。</p><!-- ********************************************************************** -->
+
+
+<h3><a name="approach5">方法 5：使用 Lambda 表达式指定搜索条件代码</a></h3>
+
+<p><code>CheckPerson</code> 接口是 <i>functional interface（函数式接口）</i>。函数式接口是任何只包含一个 <a class="TutorialLink" target="_top" href="../../java/IandI/abstract.html">抽象方法</a> 的接口。(函数式接口可能包含一个或多个 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">default methods（默认方法）</a> 或 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html#static">static methods（静态方法）</a>。)因为函数式接口只包含一个抽象方法，所以当您实现它时可省略该方法的名称。要执行此操作，请使用 <i>lambda 表达式</i>，而不是使用匿名类表达式，该表达式在以下方法调用中高亮：</p>
+
+<pre class="codeblock">printPersons(
+    roster,
+    <strong>(Person p) -&gt; p.getGender() == Person.Sex.MALE
+        &amp;&amp; p.getAge() &gt;= 18
+        &amp;&amp; p.getAge() &lt;= 25</strong>
+);</pre>
+
+<p>有关如何定义 lambda 表达式的信息，请参阅 <a href="#syntax">Syntax of Lambda Expressions</a>。</p>
+
+<p>您可以使用标准函数式接口代替接口 <code>CheckPerson</code>，这可以进一步减少所需的代码量。</p><!-- ********************************************************************** -->
+
+
+<h3><a name="approach6">方法 6：将标准函数式接口与 Lambda 表达式一起使用</a></h3>
+
+<p>重新考虑 <code>CheckPerson</code> 接口：</p>
+
+<pre class="codeblock">interface CheckPerson {
+    boolean test(Person p);
+}</pre>
+
+<p>这是一个非常简单的接口。它是一个函数式接口，因为它只包含一个抽象方法。此方法接受一个参数并返回 <code>boolean</code> 值。该方法非常简单，在您的应用程序中定义一个方法可能不值得。因此，JDK 定义了几个标准函数式接口，您可以在包 <code>java.util.function</code> 中找到它们。</p>
+
+<p>例如，您可以使用 <code>Predicate&lt;T&gt;</code> 接口代替 <code>CheckPerson</code>。该接口包含方法 <code>boolean test(T t)</code>：</p>
+
+
+<pre class="codeblock">interface Predicate&lt;T&gt; {
+    boolean test(T t);
+}</pre>
+
+<p>接口 <code>Predicate&lt;T&gt;</code> 是泛型接口的示例。（有关泛型的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../java/generics/index.html">Generics (Updated)</a> 课程。）泛型类型（如泛型接口）在尖括号（<code>&lt;&gt;</code> ）内指定一个或多个类型参数。此接口仅包含一个类型参数 <code>T</code>。当您使用实际类型参数声明或实例化泛型类型时，您具有参数化类型。例如，参数化类型 <code>Predicate&lt;Person&gt;</code> 如下：</p>
+
+<pre class="codeblock">interface Predicate&lt;<code>Person</code>&gt; {
+    boolean test(<code>Person</code> t);
+}</pre>
+
+<p>此参数化类型包含与 <code>CheckPerson.boolean test(Person p)</code> 具有相同返回类型和参数的方法。因此，您可以使用 <code>Predicate&lt;T&gt;</code> 代替 <code>CheckPerson</code>，如以下方法所示：</p>
+
+<pre class="codeblock">public static void printPersonsWithPredicate(
+    List&lt;Person&gt; roster, Predicate&lt;Person&gt; tester) {
+    for (Person p : roster) {
+        if (tester.test(p)) {
+            p.printPerson();
+        }
+    }
+}</pre>
+
+<p>因此，以下方法调用与在 <a href="#approach3">方法 3：在局部类中指定搜索条件代码</a> 中调用 <code>printPersons</code> 时相同，以获取符合美国兵役登记制度的成员：</p>
+
+<pre class="codeblock">printPersonsWithPredicate(
+    roster,
+    p -&gt; p.getGender() == Person.Sex.MALE
+        &amp;&amp; p.getAge() &gt;= 18
+        &amp;&amp; p.getAge() &lt;= 25
+);</pre>
+
+<p>这不是此方法中使用 lambda 表达式的唯一可能位置。以下方法提出了使用 lambda 表达式的其他方法。</p><!-- ********************************************************************** -->
+
+
+<h3><a name="approach7">方法 7：在整个应用程序中使用 Lambda 表达式</a></h3>
+
+<p>重新考虑方法 <code>printPersonsWithPredicate</code> 以查看可以使用 lambda 表达式的其他位置：</p>
+
+<pre class="codeblock">public static void printPersonsWithPredicate(
+    List&lt;Person&gt; roster, Predicate&lt;Person&gt; tester) {
+    for (Person p : roster) {
+        if (tester.test(p)) {
+            p.printPerson();
+        }
+    }
+}</pre>
+
+<p>此方法检查 <code>List</code> 参数 <code>roster</code> 中包含的每个 <code>Person</code> 实例是否满足 <code>Predicate</code> 参数 <code>tester</code> 中指定的条件。如果 <code>Person</code> 实例满足 <code>tester</code> 指定的条件，则在 <code>Person</code> 实例上调用方法 <code>printPersron</code>。</p>
+
+<p>您可以指定对满足 <code>tester</code> 指定条件的 <code>Person</code> 实例执行的其他操作，而不是调用方法 <code>printPerson</code>。您可以使用 lambda 表达式指定此操作。假设你想要一个类似于 <code>printPerson</code> 的 lambda 表达式，一个接受一个参数(类型为 <code>Person</code> 的对象)并返回 void。请记住，要使用 lambda 表达式，您需要实现一个函数式接口。在这种情况下，您需要一个包含抽象方法的函数式接口，该方法可以接受一个 <code>Person</code> 类型的参数并返回 void。<code>Consumer&lt;T&gt;</code> 接口包含方法 <code>void accept(T t)</code>，它具有这些特性。以下方法将调用 <code>p.printPerson()</code> 替换为调用方法 <code>accept</code> 的 <code>Consumer&lt;Person&gt;</code> 实例：</p>
+
+<pre class="codeblock">public static void processPersons(
+    List&lt;Person&gt; roster,
+    Predicate&lt;Person&gt; tester,
+    <strong>Consumer&lt;Person&gt; block</strong>) {
+        for (Person p : roster) {
+            if (tester.test(p)) {
+                <strong>block.accept(p);</strong>
+            }
+        }
+}</pre>
+
+<p>因此，以下方法调用与在 <a href="#approach3">方法 3：在局部类中指定搜索条件代码</a> 中调用 <code>printPersons</code> 时相同，以获取符合美国兵役登记制度的成员：The lambda expression used to print members is highlighted:</p>
+
+<pre class="codeblock">processPersons(
+     roster,
+     p -&gt; p.getGender() == Person.Sex.MALE
+         &amp;&amp; p.getAge() &gt;= 18
+         &amp;&amp; p.getAge() &lt;= 25,
+     <strong>p -&gt; p.printPerson()</strong>
+);</pre>
+
+<p>如果您想对会员的个人资料进行更多操作而不是打印出来，该怎么办？。假设您要验证成员的个人资料或检索他们的联系信息？在这种情况下，您需要一个包含返回值的抽象方法的函数式接口。<code>Function&lt;T,R&gt;</code> 接口包含方法 <code>R apply(T t)</code>。以下方法检索由参数 <code>mapper</code> 指定的数据，然后对参数 <code>block</code> 指定的操作执行操作：</p>
+
+<pre class="codeblock">public static void processPersonsWithFunction(
+    List&lt;Person&gt; roster,
+    Predicate&lt;Person&gt; tester,
+    Function&lt;Person, String&gt; mapper,
+    Consumer&lt;String&gt; block) {
+    for (Person p : roster) {
+        if (tester.test(p)) {
+            String data = mapper.apply(p);
+            block.accept(data);
+        }
+    }
+}</pre>
+
+<p>以下方法从 <code>roster</code> 中包含的每个符合美国兵役登记制度的成员检索电子邮件地址，然后将其打印出来：</p>
+
+<pre class="codeblock">processPersonsWithFunction(
+    roster,
+    p -&gt; p.getGender() == Person.Sex.MALE
+        &amp;&amp; p.getAge() &gt;= 18
+        &amp;&amp; p.getAge() &lt;= 25,
+    p -&gt; p.getEmailAddress(),
+    email -&gt; System.out.println(email)
+);</pre><!-- ********************************************************************** -->
+
+
+<h3><a name="approach8">方法 8：更广泛地使用泛型</a></h3>
+
+<p>重新考虑方法 <code>processPersonsWithFunction</code>。以下是它的泛型版本，它接受包含任何数据类型元素的集合作为参数：</p>
+
+<pre class="codeblock">public static &lt;X, Y&gt; void processElements(
+    Iterable&lt;X&gt; source,
+    Predicate&lt;X&gt; tester,
+    Function &lt;X, Y&gt; mapper,
+    Consumer&lt;Y&gt; block) {
+    for (X p : source) {
+        if (tester.test(p)) {
+            Y data = mapper.apply(p);
+            block.accept(data);
+        }
+    }
+}</pre>
+
+<p>要打印符合美国兵役登记制度的成员的电子邮件地址，请按如下方式调用 <code>processElements</code> 方法：</p>
+
+<pre class="codeblock">processElements(
+    roster,
+    p -&gt; p.getGender() == Person.Sex.MALE
+        &amp;&amp; p.getAge() &gt;= 18
+        &amp;&amp; p.getAge() &lt;= 25,
+    p -&gt; p.getEmailAddress(),
+    email -&gt; System.out.println(email)
+);</pre>
+
+<p>此方法调用执行以下操作：</p>
+
+<ol>
+  <li>从集合 <code>source</code> 获取对象源。在此示例中，它从集合 <code>roster</code> 中获取 <code>Person</code> 对象的来源。请注意，集合 <code>roster</code> 是 <code>List</code> 类型的集合，也是 <code>Iterable</code> 类型的对象。</li>
+  
+  <li>过滤与 <code>Predicate</code> 对象 <code>tester</code> 匹配的对象。在此示例中，<code>Predicate</code> 对象是一个 lambda 表达式，用于指定哪些成员符合美国兵役登记制度。</li>
+  
+  <li>将每个过滤出的对象映射到由 <code>Function</code> 对象 <code>mapper</code> 指定的值。在此示例中，<code>Function</code> 对象是一个 lambda 表达式，它返回成员的电子邮件地址。</li>
+  
+  <li>对每个映射对象执行由 <code>Consumer</code> 对象 <code>block</code> 指定的操作。在此示例中，<code>Consumer</code> 对象是一个 lambda 表达式，用于输出字符串，该字符串是 <code>Function</code> 对象返回的电子邮件地址。</li>
+  
+</ol>
+
+<p>您可以使用聚合操作替换每个操作。</p><!-- ********************************************************************** -->
+
+
+<h3><a name="approach9">方法 9：使用接受 Lambda 表达式作为参数的聚合操作</a></h3>
+
+<p>以下示例使用聚合操作来打印集合 <code>roster</code> 中包含的符合美国兵役登记制度的成员的电子邮件地址：</p>
+
+<pre class="codeblock">roster
+    .stream()
+    .filter(
+        p -&gt; p.getGender() == Person.Sex.MALE
+            &amp;&amp; p.getAge() &gt;= 18
+            &amp;&amp; p.getAge() &lt;= 25)
+    .map(p -&gt; p.getEmailAddress())
+    .forEach(email -&gt; System.out.println(email));</pre>
+
+<p>下表将方法 <code>processElements</code> 执行的每个操作映射到相应的聚合操作：</p>
+
+<table border="1" summary="方法 processElements 执行的每个操作与相应的聚合操作的映射">
+<tr>
+  <th><code>processElements</code> 操作</th>
+  <th>聚合操作</th>
+</tr>
+
+<tr>
+  <td>获取对象的源</td>
+  
+  <td><code>Stream&lt;E&gt; <strong>stream</strong>()</code></td>
+</tr>
+
+<tr>
+  <td>过滤与 <code>Predicate</code> 对象匹配的对象</td>
+  <td><code>Stream&lt;T&gt; <strong>filter</strong>(Predicate&lt;? super T&gt; predicate)</code></td>
+</tr>
+
+<tr>
+
+  <td>将对象映射到 <code>Function</code> 对象指定的另一个值</td>
+  
+  <td><code>&lt;R&gt; Stream&lt;R&gt; <strong>map</strong>(Function&lt;? super T,? extends R&gt; mapper)</code></td>
+  
+</tr>
+
+<tr>
+  <td>执行 <code>Consumer</code> 对象指定的操作</td>
+  <td><code>void <strong>forEach</strong>(Consumer&lt;? super T&gt; action)</code></td>
+</tr>
+
+</table>
+
+<p>操作 <code>filter</code>，<code>map</code> 和 <code>forEach</code> 是 <em>聚合操作（aggregate operations）</em>。聚合操作处理流中的元素，而不是直接来自集合(这是在此示例中调用的第一个方法是 <code>stream</code> 的原因)。<em>stream</em> 是一系列元素。与集合不同，它不是存储元素的数据结构。相反，流通过管道携带来自源（例如集合）的值。<em>pipeline</em> 是一系列流操作，在此示例中是 <code>filter</code>  -  <code>map</code>  -  <code>forEach</code>。此外，聚合操作通常接受 lambda 表达式作为参数，使您可以自定义它们的行为方式。</p>
+
+<p>有关聚合操作的更全面讨论，请参阅 <a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> 课程。</p>
+
+
+<h2><a name="lambda-expressions-in-gui-applications">GUI 应用程序中的 Lambda 表达式</a></h2>
+
+<p>要处理图形用户接口(GUI)应用程序中的事件，例如键盘操作，鼠标操作和滚动操作，通常会创建事件处理程序，这通常涉及实现特定的接口。通常，事件处理程序接口是函数式接口;他们往往只有一种方法。</p>
+
+<p>在 JavaFX 示例 <a href=
+"https://docs.oracle.com/javase/8/javafx/get-started-tutorial/hello_world.htm"> <code>HelloWorld.java</code></a>(在上一节 <a class="TutorialLink" target="_top" href="anonymousclasses.html">Anonymous Classes</a> 中讨论过)中，您可以使用 lambda 表达式替换该语句中高亮的匿名类：</p>
+
+<pre class="codeblock">        btn.setOnAction(<b>new EventHandler&lt;ActionEvent&gt;() {</b>
+
+            <b>@Override</b>
+            <b>public void handle(ActionEvent event) {</b>
+                <b>System.out.println("Hello World!");</b>
+            <b>}</b>
+        <b>}</b>);</pre>
+
+<p>方法调用 <code>btn.setOnAction</code> 指定当您选择 <code>btn</code> 对象表示的按钮时会发生什么。此方法需要类型为 <code>EventHandler&lt;ActionEvent&gt;</code> 的对象。<code>EventHandler&lt;ActionEvent&gt;</code> 接口只包含一个方法，<code>void handle(T event)</code>。此接口是一个函数式接口，因此您可以使用以下高亮的 lambda 表达式来替换它：</p>
+
+<pre class="codeblock">        btn.setOnAction(
+          <b>event -&gt; System.out.println("Hello World!")</b>
+        );</pre>
+
+<h2><a name="syntax">Lambda 表达式的语法</a></h2>
+
+<p>lambda 表达式包含以下内容：</p>
+
+<ul>
+  <li><p>括号中用逗号分隔的形式参数列表。<code>CheckPerson.test</code> 方法包含一个参数 <code>p</code>，它表示 <code>Person</code> 类的实例。</p>
+  <p><b>Note</b>：您可以省略 lambda 表达式中参数的数据类型。此外，如果只有一个参数，则可以省略括号。例如，以下 lambda 表达式也是有效的：</p>
+
+<pre class="codeblock">p -&gt; p.getGender() == Person.Sex.MALE 
+    &amp;&amp; p.getAge() &gt;= 18
+    &amp;&amp; p.getAge() &lt;= 25</pre></li>
+
+  <li><p>箭头标记 <code>-&gt;</code></p></li>
+  <li><p>一个主体，由单个表达式或语句块组成。此示例使用以下表达式：</p>
+
+<pre class="codeblock">p.getGender() == Person.Sex.MALE 
+    &amp;&amp; p.getAge() &gt;= 18
+    &amp;&amp; p.getAge() &lt;= 25</pre>
+
+<p>如果指定单个表达式，则 Java 运行时将计算表达式，然后返回其值。或者，您可以使用 return 语句：</p>
+
+<pre class="codeblock">p -&gt; {
+    return p.getGender() == Person.Sex.MALE
+        &amp;&amp; p.getAge() &gt;= 18
+        &amp;&amp; p.getAge() &lt;= 25;
+}</pre>
+
+  <p>return 语句不是表达式;在 lambda 表达式中，必须将语句括在大括号(<code>{}</code>)中。但是，您不必在大括号中包含 void 方法调用。例如，以下是有效的 lambda 表达式：</p>
+
+<pre class="codeblock">email -&gt; System.out.println(email)</pre>
+</li>
+
+</ul>
+
+<p>请注意，lambda 表达式看起来很像方法声明;您可以将 lambda 表达式视为匿名方法 - 没有名称的方法。</p>
+
+<p>以下示例 <a class="SourceLink" target="_blank" href="examples/Calculator.java" onclick="showCode('../../displayCode.html', 'examples/Calculator.java'); return false;"><code>Calculator</code></a> 是一个 lambda 表达式的示例，它采用多个形式参数：</p>
+
+<pre class="codeblock">
+
+public class Calculator {
+  
+    interface IntegerMath {
+        int operation(int a, int b);   
+    }
+  
+    public int operateBinary(int a, int b, IntegerMath op) {
+        return op.operation(a, b);
+    }
+ 
+    public static void main(String... args) {
+    
+        Calculator myApp = new Calculator();
+        IntegerMath addition = (a, b) -&gt; a + b;
+        IntegerMath subtraction = (a, b) -&gt; a - b;
+        System.out.println(&quot;40 + 2 = &quot; +
+            myApp.operateBinary(40, 2, addition));
+        System.out.println(&quot;20 - 10 = &quot; +
+            myApp.operateBinary(20, 10, subtraction));    
+    }
+}
+
+</pre>
+
+<p>方法 <code>operateBinary</code> 对两个整型操作数执行数学运算。操作本身由 <code>IntegerMath</code> 的实例指定。该示例使用 lambda 表达式定义两个操作，<code>addition</code> 和 <code>subtraction</code>。示例打印以下内容：</p>
+
+<pre class="codeblock">40 + 2 = 42
+20 - 10 = 10</pre>
+
+
+<h2><a name="accessing-local-variables">访问封闭范围的局部变量</a></h2>
+
+<p>像局部和匿名类一样，lambda 表达式可以 <a class="TutorialLink" target="_top" href="localclasses.html#accessing-members-of-an-enclosing-class">捕获变量（capture variables）</a>;它们对封闭范围的局部变量具有相同的访问权限。但是，与局部和匿名类不同，lambda 表达式没有任何阴影问题(有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../java/javaOO/nested.html#shadowing">Shadowing</a>)。Lambda 表达式是词法（lexically）范围的。这意味着它们不会从超类型继承任何名称或引入新级别的范围。lambda 表达式中的声明与封闭环境中的声明一样被解释。以下示例 <a class="SourceLink" target="_blank" href="examples/LambdaScopeTest.java" onclick="showCode('../../displayCode.html', 'examples/LambdaScopeTest.java'); return false;"><code>LambdaScopeTest</code></a> 演示了这一点：</p>
+
+<pre class="codeblock">
+
+import java.util.function.Consumer;
+
+public class LambdaScopeTest {
+
+    public int x = 0;
+
+    class FirstLevel {
+
+        public int x = 1;
+
+        void methodInFirstLevel(int x) {
+            
+            // The following statement causes the compiler to generate
+            // the error &quot;local variables referenced from a lambda expression
+            // must be final or effectively final&quot; in statement A:
+            //
+            // x = 99;
+            
+            Consumer&lt;Integer&gt; myConsumer = (y) -&gt; 
+            {
+                System.out.println(&quot;x = &quot; + x); // Statement A
+                System.out.println(&quot;y = &quot; + y);
+                System.out.println(&quot;this.x = &quot; + this.x);
+                System.out.println(&quot;LambdaScopeTest.this.x = &quot; +
+                    LambdaScopeTest.this.x);
+            };
+
+            myConsumer.accept(x);
+
+        }
+    }
+
+    public static void main(String... args) {
+        LambdaScopeTest st = new LambdaScopeTest();
+        LambdaScopeTest.FirstLevel fl = st.new FirstLevel();
+        fl.methodInFirstLevel(23);
+    }
+}
+</pre>
+
+<p>此示例生成以下输出：</p>
+
+<pre class="codeblock">
+x = 23
+y = 23
+this.x = 1
+LambdaScopeTest.this.x = 0</pre>
+
+<p>如果在 lambda 表达式 <code>myConsumer</code> 的声明中替换参数 <code>x</code> 代替 <code>y</code>，则编译器会生成错误：</p>
+
+<pre class="codeblock">Consumer&lt;Integer&gt; myConsumer = (x) -> {
+    // ...
+}</pre>
+
+<p>编译器生成错误 "变量 x 已在方法 methodInFirstLevel(int) 中定义"，因为 lambda 表达式不会引入新的作用域级别。因此，您可以直接访问封闭范围的字段，方法和局部变量。例如，lambda 表达式直接访问方法 <code>methodInFirstLevel</code> 的参数 <code>x</code>。要访问封闭类中的变量，请使用关键字 <code>this</code>。在此示例中，<code>this.x</code> 引用成员变量 <code>FirstLevel.x</code>。</p>
+
+<p>但是，与局部和匿名类一样，lambda 表达式只能访问 final 或 effectively final 的封闭块的局部变量和参数。例如，假设您在 <code>methodInFirstLevel</code> 定义语句之后立即添加以下赋值语句：</p>
+
+<pre class="codeblock">void methodInFirstLevel(int x) {
+    <strong>x = 99;</strong>
+    // ...
+}</pre>
+
+<p>由于这个赋值语句，变量 <code>FirstLevel.x</code> 不再是 effectively final 的。因此，在 lambda 表达式 <code>myConsumer</code> 尝试访问 <code>FirstLevel.x</code> 变量的地方，Java 编译器生成类似于 "从 lambda 表达式引用的局部变量必须是 final 或者 effectively final" 的错误消息：</p>
+
+<pre class="codeblock">System.out.println("x = " + x);</pre>
+
+<h2><a name="target-typing">目标类型</a></h2>
+
+<p>如何确定 lambda 表达式的类型？回想一下 lambda 表达式，它选择了男性且年龄在 18 到 25 岁之间的成员：</p>
+
+<pre class="codeblock">p -&gt; p.getGender() == Person.Sex.MALE
+    &amp;&amp; p.getAge() &gt;= 18
+    &amp;&amp; p.getAge() &lt;= 25</pre>
+
+<p>这个 lambda 表达式用于以下两种方法：</p>
+
+<ul>
+
+<li><p><code>public static void printPersons(List&lt;Person&gt; roster, CheckPerson tester)</code> in <a href="#approach3">Approach 3: Specify Search Criteria Code in a Local Class</a></p></li>
+
+<li><p><code>public void printPersonsWithPredicate(List&lt;Person&gt; roster, Predicate&lt;Person&gt; tester)</code> in <a href="#approach6">Approach 6: Use Standard Functional Interfaces with Lambda Expressions</a></p></li>
+
+</ul>
+
+<p>当 Java 运行时调用方法 <code>printPersons</code> 时，它期望数据类型为 <code>CheckPerson</code>，因此 lambda 表达式属于此类型。但是，当 Java 运行时调用方法 <code>printPersonsWithPredicate</code> 时，它期望数据类型为 <code>Predicate&lt;Person&gt;</code>，因此 lambda 表达式属于此类型。这些方法所期望的数据类型称为 <em>目标类型（target type）</em>。要确定 lambda 表达式的类型，Java 编译器将使用发现 lambda 表达式的上下文或情境的目标类型。因此，您只能在 Java 编译器可以确定目标类型的情况下使用 lambda 表达式：</p>
+
+<ul>
+  <li><p>变量声明</p></li>
+  <li><p>赋值</p></li>
+  <li><p>返回语句</p></li>
+  <li><p>数组初始化器</p></li>
+  <li><p>方法或构造函数参数</p></li>
+  <li><p>Lambda 表达式主体</p></li>
+  <li><p>条件表达式，<code>?:</code></p></li>
+  <li><p>转换表达式</p></li>
+</ul>
+
+<h3><a name="target-types-and-method-arguments">目标类型和方法参数</a></h3>
+
+<p>对于方法参数，Java 编译器使用另外两种语言特性确定目标类型：重载决策和类型参数推断。</p>
+
+<p>考虑以下两个函数式接口(<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html"><code>java.lang.Runnable</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html"><code>java.util.concurrent.Callable&lt;V&gt;</code></a>)：</p>
+
+<pre class="codeblock">public interface Runnable {
+    void run();
+}
+
+public interface Callable&lt;V&gt; {
+    V call();
+}</pre>
+
+<p>方法 <code>Runnable.run</code> 不返回值，而 <code>Callable&lt;V&gt;.call</code> 则返回值。</p>
+
+<p>假设您已按如下方式重载方法 <code>invoke</code>(有关重载方法的详细信息，请参阅 <a class="TutorialLink" target="_top" href="methods.html">Defining Methods</a>)：</p>
+
+<pre class="codeblock">void invoke(Runnable r) {
+    r.run();
+}
+
+&lt;T&gt; T invoke(Callable&lt;T&gt; c) {
+    return c.call();
+}</pre>
+
+<p>将在以下语句中调用哪个方法？</p>
+
+<pre class="codeblock">String s = invoke(() -&gt; "done");</pre>
+
+<p>将调用方法 <code>invoke(Callable&lt;T&gt;)</code>，因为该方法返回一个值;方法 <code>invoke(Runnable)</code> 则没有。在这种情况下，lambda 表达式 <code>() -&gt; "done"</code> 的类型是 <code>Callable&lt;T&gt;</code>。</p>
+
+<h2><a name="serialization">序列化</a></h2>
+
+<p>如果 lambda 表达式的目标类型及其捕获的参数是可序列化的，则可以 <a class="TutorialLink" target="_top" href="../../jndi/objects/serial.html">序列化（serialize）</a> 一个表达式。但是，与 <a class="TutorialLink" target="_top" href="nested.html#serialization">inner classes</a> 类似，强烈建议不要对 lambda 表达式进行序列化。</p>
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="anonymousclasses.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="methodreferences.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Anonymous Classes
+        <br /><b>Next page:</b> Method References
+    </div>
+</body>
+</html> 

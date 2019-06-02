@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>与旧代码互操作(Java™ 教程-Java Tutorials 中文版&gt;Bonus&gt;泛型)
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This Java tutorial describes generics, full screen mode API, and Java certification related resources" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java generics, full screen mode API, certification" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- header -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr">
+            <div id="TopBar_tl">
+                <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">Java™ 教程-Java Tutorials 中文版</div>
+                        <div id="TopBar_right"><!--
+                            <a href="URL" target="_blank">External Link</a><br/>
+                            --> 
+                             
+                            <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="linkLESSON"><a href="index.html">泛型</a></div>
+<div class="linkAHEAD"><a href="intro.html">介绍</a></div>
+<div class="linkAHEAD"><a href="simple.html">定义简单泛型</a></div>
+<div class="linkAHEAD"><a href="subtype.html">泛型与子类型</a></div>
+<div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
+<div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
+<div class="nolinkAHEAD">与旧代码互操作</div>
+<div class="linkAHEAD"><a href="fineprint.html">附属细则</a></div>
+<div class="linkAHEAD"><a href="literals.html">类字面量作为运行时类型标记</a></div>
+<div class="linkAHEAD"><a href="morefun.html">使用通配符更多的乐趣</a></div>
+<div class="linkAHEAD"><a href="convert.html">将旧版代码转换为使用泛型</a></div>
+<div class="linkAHEAD"><a href="acknowledgements.html">致谢</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+    <div class="PrintHeaders">
+        <b>Trail:</b> Bonus
+        <br /><b>Lesson:</b> Generics
+    </div>
+            <div id="BreadCrumbs">
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">泛型</a>
+            </div>
+            <div class="NavBit">
+                <a target="_top" href="methods.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="fineprint.html">Next&nbsp;»</a>
+            </div>
+            <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+            <div id="PageTitle"><h1>与旧代码互操作</h1></div>
+            <div id="PageContent"><!--Interoperating with Legacy Code-->
+
+
+<p>到目前为止，我们所有的例子都假设了一个理想化的世界，每个人都在使用最新版本的 Java 编程语言，它支持泛型。</p>
+<p>唉，实际情况并非如此。在早期版本的语言中已经编写了数百万行代码，并且它们不会在一夜之间全部转换。</p>
+<p>稍后，在 <a class="TutorialLink" target="_top" href="convert.html">Converting Legacy Code to Use Generics</a> 部分中，我们将解决将旧代码转换为使用泛型的问题。在本节中，我们将关注一个更简单的问题：遗留代码和泛型代码如何互操作？这个问题有两个部分：使用泛型代码中的遗留代码和在遗留代码中使用泛型代码。</p>
+<h2>在泛型代码中使用旧代码</h2>
+<p>如何使用旧代码，同时仍然在自己的代码中享受泛型的好处？</p>
+<p>例如，假设您要使用包 <code>com.Example.widgets</code>。Example.com 的人们推出了一个库存控制系统，其亮点如下所示：</p>
+<div class="codeblock"><pre>
+<b>package</b> com.Example.widgets;
+
+<b>public interface</b> Part {...}
+
+<b>public class</b> Inventory {
+    /**
+     * Adds a new Assembly to the inventory database.
+     * The assembly is given the name name, and 
+     * consists of a set parts specified by parts. 
+     * All elements of the collection parts
+     * must support the Part interface.
+     **/ 
+    <b>public static void</b> addAssembly(String name, Collection parts) {...}
+    <b>public static</b> Assembly getAssembly(String name) {...}
+}
+
+<b>public interface</b> Assembly {
+    // <i>Returns a collection of Parts</i>
+    Collection getParts();
+}
+</pre></div>
+<p>现在，您想要添加使用上述 API 的新代码。确保您始终使用正确的参数调用 <code>addAssembly()</code> 会很好 - 也就是说，您传入的集合确实是 <code>Part</code> 的 <code>Collection</code> 。当然，泛型是为此量身定制的：</p>
+<div class="codeblock"><pre>
+<b>package</b> com.mycompany.inventory;
+
+<b>import</b> com.Example.widgets.*;
+
+<b>public class</b> Blade implements Part {
+    ...
+}
+
+<b>public class</b> Guillotine implements Part {
+}
+
+<b>public class</b> Main {
+    <b>public static void</b> main(String[] args) {
+        Collection&lt;Part&gt; c = new ArrayList&lt;Part&gt;();
+        c.add(new Guillotine()) ;
+        c.add(new Blade());
+        Inventory.addAssembly("thingee", c);
+        Collection&lt;Part&gt; k = Inventory.getAssembly("thingee").getParts();
+    }
+}
+</pre></div>
+<p>当我们调用 <code>addAssembly</code> 时，它期望第二个参数是 <code>Collection</code> 类型。实际参数的类型为 <code>Collection&lt;Part&gt;</code>。这有效，但为什么呢？毕竟，大多数集合不包含 <code>Part</code> 对象，因此通常，编译器无法知道 <code>Collection</code> 类型所指的集合类型。</p>
+<p>在适当的泛型代码中，<code>Collection</code> 将始终伴随类型参数。当使用类似 <code>Collection</code> 的泛型类型而没有类型参数时，它被称为 <i>raw type (原始类型)</i>。</p>
+<p>大多数人的第一直觉是 <code>Collection</code> 实际上意味着 <code>Collection&lt;Object&gt;</code>。但是，正如我们之前看到的那样，在需要 <code>Collection&lt;Object&gt;</code> 的地方传递 <code>Collection&lt;Part&gt;</code> 是不安全的。更确切地说，<code>Collection</code> 类型表示某种未知类型的集合，就像 <code>Collection&lt;?&gt;</code> 一样。</p>
+<p>但等等，这也不是正确的！考虑调用 <code>getParts()</code>，它返回 <code>Collection</code>。然后将其分配给 <code>k</code>，这是 <code>Collection&lt;Part&gt;</code>。如果调用的结果是 <code>Collection&lt;?&gt;</code>，则赋值将会出错。</p>
+<p>实际上，分配是合法的，但它会生成 <i>unchecked warning (未经检查的警告)</i>。这个警告是必要的，因为事实是编译器无法保证其正确性。我们无法检查 <code>getAssembly()</code> 中的遗留代码，以确保返回的集合确实是 <code>Part</code> 的集合。代码中使用的类型是 <code>Collection</code>，可以合法地将所有类型的对象插入到这样的集合中。</p>
+<p>那么，这不应该是一个错误吗？从理论上讲，是的；但实际上，如果泛型代码要调用遗留代码，则必须允许这样做。程序员可以自己确定，在这种情况下，赋值是安全的，因为 <code>getAssembly()</code> 的契约表示它返回 <code>Part</code> 的集合，即使类型签名没有显示这一点。</p>
+<p>因此原始类型非常类似于通配符类型，但它们并没有严格地进行类型检查。这是一个深思熟虑的设计决策，允许泛型与预先存在的遗留代码进行互操作。</p>
+<p>从泛型代码调用遗留代码本质上是危险的；一旦将泛型代码与非泛型遗留代码混合，泛型类型系统通常提供的所有安全保证都是无效的。但是，您仍然比没有使用泛型更好。至少您知道您的代码是一致的。</p>
+<p>目前有非常多的非泛型代码，然后有泛型代码，并且不可避免地会出现需要混合的情况。</p>
+<p>如果您发现必须混合使用旧代码和泛型代码，请密切注意未经检查的警告。仔细考虑如何证明产生警告的代码的安全性。</p>
+<p>如果您仍然犯了错误会发生什么，导致警告的代码确实不是类型安全的？我们来看看这种情况。在此过程中，我们将深入了解编译器的工作原理。</p>
+<h2>擦除和翻译</h2>
+<div class="codeblock"><pre>
+<b>public</b> String loophole(Integer x) {
+    List&lt;String&gt; ys = new LinkedList&lt;String&gt;();
+    List xs = ys;
+    xs.add(x); // <i>Compile-time unchecked warning</i>
+    <b>return</b> ys.iterator().next();
+}
+</pre></div>
+<p>在这里，我们给一个字符串列表和一个普通的旧列表起别名。我们在列表中插入 <code>Integer</code>，并尝试提取 <code>String</code>。这显然是错误的。如果我们忽略警告并尝试执行此代码，它将在我们尝试使用错误类型的位置完全失败。在运行时，此代码的行为类似于：</p>
+<div class="codeblock"><pre>
+<b>public</b> String loophole(Integer x) {
+    List ys = new LinkedList;
+    List xs = ys;
+    xs.add(x); 
+    <b>return</b>(String) ys.iterator().next(); // <i>run time error</i>
+}
+</pre></div>
+<p>当我们从列表中提取元素并尝试通过将其转换为 <code>String</code> 将其视为字符串时，我们将得到 <code>ClassCastException</code>。与 <code>loophole()</code> 的泛型版本完全相同。</p>
+<p>原因是，Java 编译器将泛型实现为名为 <i>erasure (擦除)</i> 的前端转换。您可以(几乎)将其视为源到源的转换，其中 <code>loophole()</code> 的泛型版本将转换为非泛型版本。</p>
+<p>因此， <b>即使存在未经检查的警告，Java 虚拟机的类型安全性和完整性也不会存在风险</b>。</p>
+<p>基本上，擦除消除了(或 <i>erases (擦除)</i>)所有泛型类型信息。抛弃尖括号之间的所有类型信息，例如，像 <code>List&lt;String&gt;</code> 这样的参数化类型被转换为 <code>List</code>。类型变量的所有剩余使用都由类型变量的上界替换(通常为 <code>Object</code>)。并且，只要结果代码不是类型正确的，就会插入适当类型的强制转换，如 <code>loophole</code> 的最后一行。</p>
+<p>擦除的全部细节超出了本教程的范围，但我们刚刚给出的简单描述与事实相差无几。了解一点这一点很好，特别是如果您想做更复杂的事情，比如将现有的 API 转换为使用泛型(参见 <a class="TutorialLink" target="_top" href="convert.html">Converting Legacy Code to Use Generics</a> 部分)，或者只是想了解为什么事情是这样的。 <!-- inverse: calling generic libraries from legacy code--></p>
+<h2>在遗留代码中使用泛型代码</h2>
+<p>现在让我们考虑相反的情况。想象一下，Example.com 选择将他们的 API 转换为使用泛型，但他们的一些客户端还没有。所以现在代码看起来像：</p>
+<div class="codeblock"><pre>
+<b>package</b> com.Example.widgets;
+
+<b>public interface</b> Part { 
+    ...
+}
+
+<b>public class</b> Inventory {
+    /**
+     * Adds a new Assembly to the inventory database.
+     * The assembly is given the name name, and 
+     * consists of a set parts specified by parts. 
+     * All elements of the collection parts
+     * must support the Part interface.
+     **/ 
+    <b>public static void</b> addAssembly(String name, Collection&lt;Part&gt; parts) {...}
+    <b>public static</b> Assembly getAssembly(String name) {...}
+}
+
+<b>public interface</b> Assembly {
+    // <i>Returns a collection of Parts</i>
+    Collection&lt;Part&gt; getParts();
+}
+</pre></div>
+<p>客户端代码如下所示：</p>
+<div class="codeblock"><pre>
+<b>package</b> com.mycompany.inventory;
+
+<b>import</b> com.Example.widgets.*;
+
+<b>public class</b> Blade implements Part {
+...
+}
+
+<b>public class</b> Guillotine implements Part {
+}
+
+<b>public class</b> Main {
+    <b>public static void</b> main(String[] args) {
+        Collection c = new ArrayList();
+        c.add(new Guillotine()) ;
+        c.add(new Blade());
+
+        // <i>1: unchecked warning</i>
+        Inventory.addAssembly("thingee", c);
+
+        Collection k = Inventory.getAssembly("thingee").getParts();
+    }
+}
+</pre></div>
+<p>客户端代码是在引入泛型之前编写的，但它使用包 <code>com.Example.widgets</code> 和集合库，两者都使用泛型类型。客户端代码中泛型类型声明的所有用法都是原始类型。</p>
+<p>第 1 行生成未经检查的警告，因为正在传递原始 <code>Collection</code>，其中需要 <code>Part</code> 的 <code>Collection</code>，并且编译器无法确保原始 <code>Collection</code> 确实是 <code>Part</code> 的 <code>Collection</code>。</p>
+<p>作为替代方法，您可以使用 source 1.4 标志编译客户端代码，确保不生成任何警告。但是，在这种情况下，您将无法使用 JDK 5.0 中引入的任何新语言功能。</p>
+<hr />
+<p><!--restrictions - on casts, instanceOf, reflection, arrays--></p>
+
+
+        </div>
+        <div class="NavBit">
+            <a target="_top" href="methods.html">« 上一页</a>•<a target="_top" href="../TOC.html">路径</a>•<a target="_top" href="fineprint.html">下一页 »</a>
+        </div>
+    </div>
+    
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>    
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Generic Methods
+        <br /><b>Next page:</b> The Fine Print
+    </div>
+</body>
+</html> 

@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>课程：聚合操作(Java™ 教程-Java Tutorials 中文版&gt;集合)</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="description" content="This collections Java tutorial describes interfaces, implementations, and algorithms in the Java Collections framework" />
+     <meta name="keywords" content="java programming, learn java, java sample code, java collections, set, list, queue, map, array, arraylist" />
+        
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+    function leftBar() {
+        var nameq = 'tutorial_showLeftBar='
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieString = cookies[i];
+            while (cookieString.charAt(0) == ' ') {
+                cookieString = cookieString.substring(1, cookieString.length);
+            }
+            if (cookieString.indexOf(nameq) == 0) {
+                cookieValue =  cookieString.substring(nameq.length,
+                        cookieString.length);
+                return cookieValue == 'yes';
+            }
+        }
+        return true;
+    }
+
+    function showLeft(b) {
+        var contents = document.getElementById("LeftBar");
+        var main = document.getElementById("MainFlow");
+        var toggle = document.getElementById("ToggleLeft");
+        if (b) {
+            contents.className = "LeftBar_shown";
+            main.className = "MainFlow_indented";
+            toggle.innerHTML = "Hide TOC";
+            document.cookie = 'tutorial_showLeftBar=yes; path=/';
+        } else {
+            contents.className = "LeftBar_hidden";
+            main.className = "MainFlow_wide";
+            toggle.innerHTML = "Show the TOC";
+            document.cookie = 'tutorial_showLeftBar=no; path=/';
+        }
+    }
+
+    function toggleLeft() {
+        showLeft(document.getElementById("LeftBar").className ==
+                "LeftBar_hidden");
+        document.getElementById("ToggleLeft").blur();
+    }
+
+    function load() {
+        showLeft(leftBar());
+        document.getElementById("ToggleLeft").style.display="inline";
+    }
+
+    function showCode(displayCodePage, codePath) {
+        var codePathEls = codePath.split("/");
+        var currDocPathEls = location.href.split("/");
+        //alert ("codePathEls = " + codePathEls + "\n" + "currDocPathEls = " + currDocPathEls);
+        currDocPathEls.pop(); // remove file name at the end
+        while (codePathEls.length > 0) {
+            if (codePathEls[0] == "..") {
+                codePathEls.shift();
+                currDocPathEls.pop();
+            } else {
+                break;
+            }
+        }
+        var fullCodePath = currDocPathEls.join("/") + "/" + codePathEls.join("/");
+        //alert ("fullCodePath = " + fullCodePath );
+        if (codePath.indexOf(".java") != -1 || codePath.indexOf(".jnlp") != -1) {
+            window.location.href = displayCodePage + "?code=" + encodeURI(fullCodePath);
+        } else {
+            window.location.href = fullCodePath;
+        }
+    }
+/* ]]> */    
+</script>
+
+
+    </head>
+<body onload="load()">
+    <noscript>
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+    <!-- ixheader -->
+    <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr"> <div id="TopBar_tl"> <div id="TopBar_br"> <div id="TopBar_bl"> 
+                    <div id="TopBar_left">
+                        Java™ 教程-Java Tutorials 中文版
+                    </div>
+                    <div id="TopBar_right"> 
+                        <a href="javascript:toggleLeft()" id="ToggleLeft">隐藏目录</a>
+                    </div> 
+      </div> </div> </div> </div> </div>
+
+    <div id="LeftBar" class="LeftBar_shown">
+        <div id="Contents">
+            <div class="nolinkLESSON">聚合操作</div>
+<div class="linkAHEAD"><a href="reduction.html">缩减</a></div>
+<div class="linkAHEAD"><a href="parallelism.html">并行</a></div>
+<div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
+</div>
+    </div>
+    <div id="MainFlow" class="MainFlow_indented">
+        <div class="PrintHeaders">
+            <b>Trail:</b> Collections
+        </div>
+        <div id="BreadCrumbs">
+            <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>
+        </div>
+        <div class="NavBit">
+                <a target="_top" href="../interfaces/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="reduction.html">Next&nbsp;»</a>
+        </div>
+        <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+        <div id="PageTitle"><h1>课程：聚合操作</h1></div>
+        <div id="PageContent">
+ 
+<p><strong>注意</strong>:要更好地理解本节中的概念，请查看 <a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> 和 <a class="TutorialLink" target="_top" href="../../java/javaOO/methodreferences.html">Method References</a> 部分。</p>
+
+<p>您用什么集合？您不是简单地将对象存储在集合中并将其保留在那里。在大多数情况下，您使用集合来获取存储在其中的项目。</p>
+
+<p>再次考虑 <a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> 部分中描述的场景。假设您正在创建社交网络应用程序。您希望创建一项功能，使管理员能够对满足特定条件的社交网络应用程序成员执行任何类型的操作，例如发送消息。</p>
+
+<p>和以前一样，假设此社交网络应用程序的成员由以下 <a class="SourceLink" target="_blank" href="examples/Person.java" onclick="showCode('../../displayCode.html', 'examples/Person.java'); return false;"><code>Person</code></a> 类表示：</p>
+
+<pre class="codeblock">public class Person {
+
+    public enum Sex {
+        MALE, FEMALE
+    }
+
+    String name;
+    LocalDate birthday;
+    Sex gender;
+    String emailAddress;
+    
+    // ...
+
+    public int getAge() {
+        // ...
+    }
+
+    public String getName() {
+        // ...
+    }
+}</pre>
+
+<p>以下示例使用 for-each 循环打印集合 <code>roster</code> 中包含的所有成员的名称：</p>
+
+<pre class="codeblock">for (Person p : roster) {
+    System.out.println(p.getName());
+}</pre>
+
+<p>以下示例打印集合 <code>roster</code> 中包含的所有成员，但使用聚合操作 <code>forEach</code>：</p>
+
+<pre class="codeblock">roster
+    .stream()
+    .forEach(e -> System.out.println(e.getName());</pre>
+
+<p>虽然在此示例中，使用聚合操作的版本比使用 for-each 循环的版本长，但您会看到使用批量数据操作的版本对于更复杂的任务将更简洁。</p>
+
+<p>涵盖以下主题：</p>
+
+<ul>
+  <li><a href="#pipelines">管道和流</a></li>
+  <li><a href="#differences">聚合操作和迭代器之间的差异</a></li>
+</ul>
+
+<p>在示例 <a class="SourceLink" target="_blank" href="examples/BulkDataOperationsExamples.java" onclick="showCode('../../displayCode.html', 'examples/BulkDataOperationsExamples.java'); return false;"><code>BulkDataOperationsExamples</code></a> 中查找本节中描述的代码片段。</p>
+
+<h3><a name="pipelines">管道和流</a></h3>
+
+<p><em>pipeline</em> 是一系列聚合操作。以下示例使用由聚合操作 <code>filter</code> 和 <code>forEach</code> 组成的管道打印集合 <code>roster</code> 中包含的男性成员：</p>
+
+<pre class="codeblock">roster
+    .stream()
+    .filter(e -&gt; e.getGender() == Person.Sex.MALE)
+    .forEach(e -> System.out.println(e.getName()));</pre>
+    
+<p>将此示例与以下内容进行比较，使用 for-each 循环打印集合 <code>roster</code> 中包含的男性成员：</p>
+
+<pre class="codeblock">for (Person p : roster) {
+    if (p.getGender() == Person.Sex.MALE) {
+        System.out.println(p.getName());
+    }
+}</pre>
+    
+<p>管道包含以下组件：</p>
+
+  <ul>
+  
+    <li><p>源：这可以是集合，数组，生成器函数或 I/O 通道。在此示例中，源是集合 <code>roster</code>。</p></li>
+    
+    <li><p>零个或多个 <em>中间操作</em>。中间操作(例如 <code>filter</code>)会生成新的流。</p>
+    
+    <p><em>stream</em> 是一系列元素。与集合不同，它不是存储元素的数据结构。相反，流通过管道从源传输值。此示例通过调用方法 <code>stream</code> 从集合 <code>roster</code> 创建流。</p>    
+    
+    <p><code>filter</code> 操作返回一个新流，其中包含与其谓词匹配的元素(此操作的参数)。在此示例中，谓词是 lambda 表达式 <code>e -&gt; e.getGender() == Person.Sex.MALE</code>。如果对象 <code>e</code> 的 <code>gender</code> 字段的值为 <code>Person.Sex.MALE</code>，则返回布尔值 <code>true</code>。因此，此示例中的 <code>filter</code> 操作返回包含集合 <code>roster</code> 中所有男性成员的流。</p></li>
+    
+    <li><p><em>terminal operation (终端操作)</em>。终端操作（例如 <code>forEach</code>）会产生非流结果，例如基本类型值（如 double 值），集合，或者在 <code>forEach</code> 的情况下，没有任何值。在此示例中，<code>forEach</code> 操作的参数是 lambda 表达式 <code>e -&gt; System.out.println(e.getName())</code>，它在每个对象 <code>e</code> 上调用方法 <code>getName</code>。(Java 运行时和编译器推断对象 <code>e</code> 的类型是 <code>Person</code>。)</p></li>
+</ul>
+  
+<p>以下示例使用由聚合操作 <code>filter</code>，<code>mapToInt</code> 和 <code>average</code> 组成的管道计算集合 <code>roster</code> 中包含的所有男性成员的平均年龄：</p>
+
+<pre class="codeblock">double average = roster
+    .stream()
+    .filter(p -> p.getGender() == Person.Sex.MALE)
+    .mapToInt(Person::getAge)
+    .average()
+    .getAsDouble();</pre>
+    
+<p><code>mapToInt</code> 操作返回类型为 <code>IntStream</code> 的新流(这是一个仅包含整数值的流)。该操作将其参数中指定的函数应用于特定流中的每个元素。在此示例中，函数是 <code>Person::getAge</code>，它是一个返回成员年龄的方法引用。(或者，您可以使用 lambda 表达式 <code>e -&gt; e.getAge()</code>。)因此，此示例中的 <code>mapToInt</code> 操作返回一个流包含<code>roster</code> 集合中所有男性成员的年龄。</p>
+
+<p><code>average</code> 操作计算 <code>IntStream</code> 类型流中包含的元素的平均值。它返回一个 <code>OptionalDouble</code> 类型的对象。如果流不包含任何元素，则 <code>average</code> 操作返回 <code>OptionalDouble</code> 的空实例，并且调用方法 <code>getAsDouble</code> 会抛出 <code>NoSuchElementException</code>。JDK 包含许多终端操作，例如 <code>average</code>，它通过组合流的内容返回一个值。这些操作称为 <em>reduction operations (还原操作)</em>;有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/streams/reduction.html">Reduction</a> 部分。</p>
+
+<h3><a name="differences">聚合操作和迭代器之间的差异</a></h3>
+
+<p>聚合操作，如 <code>forEach</code>，看起来像迭代器。但是，它们有几个根本区别：</p>
+
+<ul><!-- ********************* -->
+
+  
+  
+  <li><p><strong>它们使用内部迭代</strong>：聚合操作不包含 <code>next</code> 之类的方法来指示他们处理集合的下一个元素。使用 <em>内部委托</em>，您的应用程序确定是 <em>什么</em> 集合，但 JDK 确定 <em>如何</em> 迭代集合。使用 <em>外部迭代</em>，您的应用程序将确定它迭代的集合以及迭代它的方式。但是，外部迭代只能按顺序迭代集合的元素。内部迭代没有此限制。它可以更容易地利用并行计算，这涉及将问题分解为子问题，同时解决这些问题，然后组合子问题解决方案的结果。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/streams/parallelism.html">Parallelism</a> 部分。</p></li><!-- ********************* -->
+ 
+  
+  
+  <li><p><strong>它们处理流中的元素</strong>：聚合操作处理来自流的元素，而不是直接来自集合。因此，它们也称为 <em>stream operations (流操作)</em>。</p></li><!-- ********************* -->
+  
+  
+  
+  <li><p><strong>它们支持行为作为参数</strong>：您可以将 <a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">lambda expressions</a> 指定为大多数聚合操作的参数。这使您可以自定义特定聚合操作的行为。</p></li>      
+ 
+</ul>
+
+
+        </div>
+    <div class="NavBit">
+        <a href="../interfaces/index.html">« 上一页</a>•<a href="../TOC.html">路径</a>•<a href="reduction.html">下一页 »</a>
+    </div>
+    </div>
+   
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>   
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Previous Lesson
+        <br /><b>Next page:</b> Reduction
+    </div>
+</body>
+</html> 

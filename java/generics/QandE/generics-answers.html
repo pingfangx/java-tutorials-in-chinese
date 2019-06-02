@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>问题和练习的答案：泛型(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;泛型(更新))</title>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<style type="text/css">
+    body {
+        margin-left:10px;
+        margin-right:10px;
+        line-height: 1.5;
+        FONT-FAMILY: Arial, Helvetica, sans-serif; 
+        font-size: 0.8em;
+    }
+    
+    a:link{text-decoration:none; color:#09569d;}
+    a:visited{text-decoration:none; color: #3a87cf;}
+    a:hover{text-decoration:underline; }
+        
+    code{
+        font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .header-container {
+        background-color: #fff;
+        border-bottom: 1px solid #C1CFDA;
+        -webkit-box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+        box-shadow: 0 2px 2px rgba(117, 163, 231, 0.1);
+    }
+    
+    .bookwrapper {
+        width: auto;
+        margin: auto;
+    }
+    
+    .clearfix {
+    }
+    
+    .clearfloat {
+        clear: both;
+        overflow: auto;
+        height: 0px;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    
+    #brandProdName {
+        width: auto;
+        height: auto;
+    }
+    
+    #logocover {
+        display: block;
+        background: transparent url(../../../images/oracle-java-logo.png) 0px 0px no-repeat;
+        height: 50px;
+        width: 229px;
+        float: left;
+    }
+    
+    #productName {
+        font-size: 16px;
+        position: relative;
+        top: 19px;
+        padding-left: 3px;
+        color: #457798;
+        white-space: nowrap;
+        width: 340px;
+    }
+
+
+    .FigureCaption   { 
+        font-family: sans-serif; 
+        text-align: center;
+    }
+    
+    #TopBar_bl {        
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_br {
+        width: 100%;
+        height: 60px;
+    }
+    #TopBar_tl {
+        margin-left: -110px;
+        margin-right: -100px;       
+		align: left;
+        height: 60px;
+    }
+    #TopBar_tr {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #TopBar {
+        min-width:700px;
+        padding:25px 100px 10px;
+        margin-bottom:25px;
+        clear:both;
+        
+        border-bottom:1px solid #d2dde5;
+        border-radius: 3px;
+    
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
+    }
+    
+    #TopBar_left {
+        line-height: 14px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: left;
+        font: 13px/20px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+    
+    #TopBar_right {
+        line-height: 12px;
+        float: right;
+        padding-top: 10px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+
+    @media print {
+        #BreadCrumbs, #Download {
+            display: none;
+        }
+    }
+    
+     
+    @media print {
+        #TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+    }
+ 
+    #BreadCrumbs {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+        float: right;
+    }
+    
+    #BreadCrumbs a {
+        color:#09569d;
+    }
+    
+    #BreadCrumbs a:visited, #BreadCrumbs a:link {
+        text-decoration: none;
+    }
+    
+    #BreadCrumbs a:hover, #BreadCrumbs a:active {
+        text-decoration: underline;
+    }
+    
+    #PageTitle {
+        margin: 0 5px 0.5em 0;
+        color: #F90000;
+    }
+    
+    #PageContent{
+        margin: 0 5px 0 20px;
+    }
+    
+    .LeftBar_shown {
+        width: 13em;
+        float: left;
+    }
+    
+    @media print {
+        .LeftBar_shown {
+            display: none;
+        }
+    }
+    
+    .LeftBar_hidden {
+        display: none;
+    }
+    
+    #Footer {
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-right: 10px;       
+    }
+    
+    .footertext {
+        font-size: 10px;
+        font-family: sans-serif; 
+        margin-top: 1px;
+    }
+
+    .NavBit  {
+        padding: 15px 5px 0.5em 0;
+        font-family: sans-serif; 
+    }
+    
+    @media print {
+        .NavBit {
+            display: none;
+        }
+    }
+    
+    #TagNotes {
+        text-align: right;        
+    }
+    
+    @media print {
+        #TagNotes a:visited, #TagNotes a:link {
+            color: #35556B;
+            text-decoration: none;
+        }
+    }
+    
+    #Contents a, .NavBit a, #TagNotes a {
+        color:#09569d;
+    }
+    
+    #TagNotes a:visited, #TagNotes a:link,
+    #Contents a:visited, #Contents a:link,
+    .NavBit a:visited, .NavBit a:link {
+        text-decoration: none;
+    }
+    
+    #TagNotes a:hover, #TagNotes a:active,   
+    #Contents a:hover, #Contents a:active,   
+    .NavBit a:hover, .NavBit a:active {  
+        text-decoration: underline;
+    }
+    
+    #Contents {
+        float: left;
+        font-family: sans-serif; 
+    }
+    @media print {
+        #Contents {
+            display: none;
+        }
+    }
+    @media screen {
+        div.PrintHeaders {
+            display: none;
+        }
+    }
+    .linkLESSON, .nolinkLESSON {
+        margin-left: 0.5em;
+        text-indent: -0.5em;
+    }
+    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
+        margin-left: 1.5em; 
+        text-indent: -0.5em
+    }
+    .linkBHEAD, .nolinkBHEAD   {
+        margin-left: 2.5em;
+        text-indent: -0.5em
+    }
+    .linkCHEAD, .nolinkCHEAD   {
+        margin-left: 3.5em;
+        text-indent: -0.5em
+    }
+    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
+    .nolinkQUESTIONS {
+        font-weight: bold;
+        color: #333;
+		
+		
+    }
+    .MainFlow_indented {
+        margin-right: 10px;
+        margin-left: 15em;
+        margin-bottom: 2em;
+
+    }
+    .MainFlow_wide {
+	
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 2em;
+
+    }
+    @media print {
+        .MainFlow_indented, .MainFlow_wide {
+            padding-top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        color: #333;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    #ToggleLeft {
+        display: none;
+    }
+    
+    .note {
+        margin: 0 30px 0px 30px;
+    }
+    
+    .codeblock {
+        margin: 0 30px 0px 30px;
+		font-size:12px;
+		font-family:Monaco,Courier,"Courier New";
+    }
+    
+    .tocli {
+        list-style-type:none;
+    }
+
+    .betadraft {
+        color: red;
+    }
+
+</style>
+    </head>
+<body>
+    <noscript> 
+        这个页面需要一个启用 JavaScript 的浏览器才能正常运行。
+    </noscript>
+        <!-- altheader -->
+     <div class="header-container">
+        <div class="bookwrapper  clearfix">       
+            <div id="brandProdName">
+                <div id="logocover"></div>
+                <div id="productName" >文档</div>
+            </div> 
+            <br class="clearfloat" />
+        </div>
+    </div>
+    
+    <div id="TopBar">
+        <div id="TopBar_tr"> <div id="TopBar_tl"> <div id="TopBar_br"> <div id="TopBar_bl"> 
+                        <div id="TopBar_left">
+                            Java™ 教程-Java Tutorials 中文版
+                        </div>
+                        <div id="TopBar_right"></div>
+                            <div class="PrintHeaders">
+                                <b>Trail:</b> Learning the Java Language
+                                <br /><b>Lesson:</b> Generics (Updated)
+                            </div>
+                    </div> </div> </div> </div> </div>
+
+    <div class="MainFlow_wide">
+        <span id="BreadCrumbs">
+            <a href="../../../index.html" target="_top">主页</a>&gt;<a href="../../index.html" target="_top">学习 Java 语言</a>&gt;<a href="../index.html" target="_top">泛型(更新)</a>
+        </span>
+        <div class="NavBit">
+            <a href="../QandE/generics-questions.html">« 上一页</a>&nbsp;•&nbsp;<a href="../../TOC.html">目录</a>
+        </div>
+        <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
+        <div id="PageTitle"><h1>问题和练习的答案：泛型</h1></div>
+        <div id="PageContent">
+
+<ol>
+<li>编写一个泛型方法来计算集合中具有特定属性的元素数(例如，奇数整数，素数，回文数)。<br /><br />
+<strong>答案</strong>：
+<div class="codeblock"><pre>
+public final class Algorithm {
+    public static &lt;T&gt; int countIf(Collection&lt;T&gt; c, UnaryPredicate&lt;T&gt; p) {
+
+        int count = 0;
+        for (T elem : c)
+            if (p.test(elem))
+                ++count;
+        return count;
+    }
+}
+</pre></div>
+泛型 <tt>UnaryPredicate</tt> 接口定义如下：
+<div class="codeblock"><pre>
+public interface UnaryPredicate&lt;T&gt; {
+    public boolean test(T obj);
+}
+</pre></div>
+例如，以下程序计算整数列表中奇数整数的数量：
+<div class="codeblock"><pre>
+import java.util.*;
+
+class OddPredicate implements UnaryPredicate&lt;Integer&gt; {
+    public boolean test(Integer i) { return i % 2 != 0; }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Collection&lt;Integer&gt; ci = Arrays.asList(1, 2, 3, 4);
+        int count = Algorithm.countIf(ci, new OddPredicate());
+        System.out.println("Number of odd integers = " + count);
+    }
+}
+</pre></div>
+程序打印：
+<div class="codeblock"><pre>
+Number of odd integers = 2
+</pre></div>
+</li>
+<li>下面的类会编译吗？如果没有，为什么？
+<div class="codeblock"><pre>
+public final class Algorithm {
+    public static &lt;T&gt; T max(T x, T y) {
+        return x &gt; y ? x : y;
+    }
+}
+</pre></div>
+<strong>Answer</strong>: No. 大于(<tt>&gt;</tt>)运算符仅适用于基本数字类型。<br /><br />
+</li>
+<li>编写一个泛型方法来交换数组中两个不同元素的位置。<br /><br />
+<strong>答案</strong>：
+<div class="codeblock"><pre>
+public final class Algorithm {
+    public static &lt;T&gt; void swap(T[] a, int i, int j) {
+        T temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+    }
+}
+</pre></div>
+</li>
+<li>如果编译器在编译时擦除所有类型参数，为什么要使用泛型？<br /><br />
+<strong>Answer</strong>：您应该使用泛型，因为：
+<ul>
+<li>Java 编译器在编译时对泛型代码强制执行更严格的类型检查。</li>
+<li>泛型支持编程类型作为参数。</li>
+<li>泛型使您能够实现泛型算法。</li>
+</ul>
+<br /><br />
+</li>
+<li>以下类在类型擦除后转换为什么？
+<div class="codeblock"><pre>
+public class Pair&lt;K, V&gt; {
+
+    public Pair(K key, V value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    public K getKey(); { return key; }
+    public V getValue(); { return value; }
+
+    public void setKey(K key)     { this.key = key; }
+    public void setValue(V value) { this.value = value; }
+
+    private K key;
+    private V value;
+}
+</pre></div>
+<strong>答案</strong>：
+<div class="codeblock"><pre>
+public class Pair {
+
+    public Pair(Object key, Object value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    public Object getKey()   { return key; }
+    public Object getValue() { return value; }
+
+    public void setKey(Object key)     { this.key = key; }
+    public void setValue(Object value) { this.value = value; }
+
+    private Object key;
+    private Object value;
+}
+</pre></div>
+</li>
+<li>以下方法在类型擦除后转换为什么？
+<div class="codeblock"><pre>
+public static &lt;T extends Comparable&lt;T&gt;&gt;
+    int findFirstGreaterThan(T[] at, T elem) {
+    // ...
+}
+</pre></div>
+<strong>答案</strong>：
+<div class="codeblock"><pre>
+public static int findFirstGreaterThan(Comparable[] at, Comparable elem) {
+    // ...
+    }
+</pre></div>
+</li>
+<li>以下方法会编译吗？如果没有，为什么？
+<div class="codeblock"><pre>
+public static void print(List&lt;? extends Number&gt; list) {
+    for (Number n : list)
+        System.out.print(n + " ");
+    System.out.println();
+}
+</pre></div>
+<strong>Answer</strong>: Yes.
+
+<br /><br />
+</li>
+<li>编写一个泛型方法来查找列表 <tt>[begin, end)</tt> 范围内的最大元素。<br /><br />
+<strong>答案</strong>：
+<div class="codeblock"><pre>
+import java.util.*;
+
+public final class Algorithm {
+    public static &lt;T extends Object &amp; Comparable&lt;? super T&gt;&gt;
+        T max(List&lt;? extends T&gt; list, int begin, int end) {
+
+        T maxElem = list.get(begin);
+
+        for (++begin; begin &lt; end; ++begin)
+            if (maxElem.compareTo(list.get(begin)) &lt; 0)
+                maxElem = list.get(begin);
+        return maxElem;
+    }
+}
+</pre></div>
+</li>
+<li>下面的类会编译吗？如果没有，为什么？
+<div class="codeblock"><pre>
+public class Singleton&lt;T&gt; {
+
+    public static T getInstance() {
+        if (instance == null)
+            instance = new Singleton&lt;T&gt;();
+
+        return instance;
+    }
+
+    private static T instance = null;
+}
+</pre></div>
+<strong>Answer</strong>: No. 您不能创建类型参数 <tt>T</tt> 的静态字段。
+<br /><br />
+</li>
+<li> 考虑到以下类：
+<div class="codeblock"><pre>
+class Shape { /* ... */ }
+class Circle extends Shape { /* ... */ }
+class Rectangle extends Shape { /* ... */ }
+
+class Node&lt;T&gt; { /* ... */ }
+</pre></div>
+下面的代码会编译吗？如果没有，为什么？
+<div class="codeblock"><pre>
+Node&lt;Circle&gt; nc = new Node&lt;&gt;();
+Node&lt;Shape&gt;  ns = nc;
+</pre></div>
+<strong>Answer</strong>: No. 因为 <tt>Node&lt;Circle&gt;</tt> 不是 <tt>Node&lt;Shape&gt;</tt> 的子类型。
+<br /><br />
+</li>
+<li>考虑这个类：
+<div class="codeblock"><pre>
+class Node&lt;T&gt; implements Comparable&lt;T&gt; {
+    public int compareTo(T obj) { /* ... */ }
+    // ...
+}
+</pre></div>
+下面的代码会编译吗？如果没有，为什么？<br /><br />
+<strong>Answer</strong>: Yes.
+
+<div class="codeblock"><pre>
+Node&lt;String&gt; node = new Node&lt;&gt;();
+Comparable&lt;String&gt; comp = node;
+</pre></div>
+</li>
+<li>如何调用以下方法来查找列表中的第一个整数，该整数是指定整数列表的相对素数？
+<div class="codeblock"><pre>
+public static &lt;T&gt;
+    int findFirst(List&lt;T&gt; list, int begin, int end, UnaryPredicate&lt;T&gt; p)
+</pre></div>
+注意，如果 gcd(<em>a, b</em>)= 1，则两个整数 <em>a</em> 和 <em>b</em> 是相对素数，其中 gcd 是最大公约数的缩写。<br /><br />
+<strong>答案</strong>：
+<div class="codeblock"><pre>
+import java.util.*;
+
+public final class Algorithm {
+
+    public static &lt;T&gt;
+        int findFirst(List&lt;T&gt; list, int begin, int end, UnaryPredicate&lt;T&gt; p) {
+
+        for (; begin &lt; end; ++begin)
+            if (p.test(list.get(begin)))
+                return begin;
+        return -1;
+    }
+
+    // x &gt; 0 and y &gt; 0
+    public static int gcd(int x, int y) {
+        for (int r; (r = x % y) != 0; x = y, y = r) { }
+            return y;
+    }
+}
+</pre></div>
+泛型 <tt>UnaryPredicate</tt> 接口定义如下：
+<div class="codeblock"><pre>
+public interface UnaryPredicate&lt;T&gt; {
+    public boolean test(T obj);
+}
+</pre></div>
+以下程序测试 <tt>findFirst</tt> 方法：
+<div class="codeblock"><pre>
+import java.util.*;
+
+class RelativelyPrimePredicate implements UnaryPredicate&lt;Integer&gt; {
+    public RelativelyPrimePredicate(Collection&lt;Integer&gt; c) {
+        this.c = c;
+    }
+
+    public boolean test(Integer x) {
+        for (Integer i : c)
+            if (Algorithm.gcd(x, i) != 1)
+                return false;
+
+        return c.size() &gt; 0;
+    }
+
+    private Collection&lt;Integer&gt; c;
+}
+
+public class Test {
+    public static void main(String[] args) throws Exception {
+
+        List&lt;Integer&gt; li = Arrays.asList(3, 4, 6, 8, 11, 15, 28, 32);
+        Collection&lt;Integer&gt; c = Arrays.asList(7, 18, 19, 25);
+        UnaryPredicate&lt;Integer&gt; p = new RelativelyPrimePredicate(c);
+
+        int i = ALgorithm.findFirst(li, 0, li.size(), p);
+
+        if (i != -1) {
+            System.out.print(li.get(i) + " is relatively prime to ");
+            for (Integer k : c)
+                System.out.print(k + " ");
+            System.out.println();
+        }
+    }
+}
+</pre></div>
+程序打印：
+<div class="codeblock"><pre>
+11 is relatively prime to 7 18 19 25
+</pre></div>
+</li>
+</ol>
+
+        </div>
+    </div>
+    <div class="NavBit">
+        <a href="../QandE/generics-questions.html">« 上一页</a>•<a href="../../TOC.html">目录</a>
+    </div>
+<hr class="clearfloat"/>
+
+<div id="Footer">
+
+<p class="footertext">
+<a href="http://www.oracle.com/corporate/index.html">About Oracle</a>| <a href="http://www.oracle.com/us/corporate/contact/index.html">Contact Us</a> | <a href="http://www.oracle.com/us/legal/index.html">Legal Notices</a> | <a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a> | <a href="http://www.oracle.com/us/legal/privacy/index.html">Your Privacy Rights</a> | <a href="https://www.pingfangx.com/xx/translation/java_tutorial">关于汉化</a></p>
+
+<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+
+Copyright © 1995, 2017 Oracle and/or its affiliates. All rights reserved.</a></p>
+       
+</div>
+    <div class="PrintHeaders">
+        <b>Previous page:</b> Questions and Exercises: Generics
+    </div>
+</body>
+</html> 
+
+
+
