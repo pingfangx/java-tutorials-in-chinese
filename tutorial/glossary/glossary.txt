@@ -52,7 +52,7 @@ implement	实现	实施|
 override	覆盖	重写|
 box	装箱	打包|
 unbox	拆箱	解包|
-exception	异常	例外|
+#exception	异常	例外|
 native	原生	本地|
 token	语素	令牌|
 process	进程	过程
