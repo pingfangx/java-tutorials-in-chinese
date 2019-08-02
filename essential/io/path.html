@@ -545,7 +545,7 @@ C:\home\sally\statusReport
 <p>相对路径需要与另一个路径组合才能访问文件。例如，<code>joe/foo</code> 是相对路径。如果没有更多信息，程序将无法在文件系统中可靠地找到 <code>joe/foo</code> 目录。</p>
 <h2><a name="symlink" id="symlink">符号链接</a></h2>
 <p>文件系统对象通常是目录或文件。每个人都熟悉这些对象。但是一些文件系统也支持符号链接的概念。符号链接也称为 <em>symlink</em> 或 <em>soft link</em>。</p>
-<p><em>symbolic link</em> 是一个特殊文件，用作对另一个文件的引用。在大多数情况下，符号链接对应用程序是透明的，符号链接上的操作会自动重定向到链接的目标。(指向的文件或目录称为链接的 <em>target</em>。)异常情况是删除或重命名符号链接，在这种情况下链接本身被删除，或重命名而不是链接的目标。</p>
+<p><em>symbolic link</em> 是一个特殊文件，用作对另一个文件的引用。在大多数情况下，符号链接对应用程序是透明的，符号链接上的操作会自动重定向到链接的目标。(指向的文件或目录称为链接的 <em>target</em>。)例外情况是删除或重命名符号链接，在这种情况下链接本身被删除，或重命名而不是链接的目标。</p>
 <p>在下图中，<code>logFile</code> 似乎是用户的常规文件，但它实际上是指向 <code>dir/logs/HomeLogFile</code> 的符号链接。<code>HomeLogFile</code> 是链接的目标。</p>
 <center><img src="../../figures/essential/io-symlink.gif" width="384" height="307" align="bottom" alt="示例符号链接" /></p><p class="FigureCaption"><center>符号链接的示例。</center></p></center><p>符号链接通常对用户是透明的。读取或写入符号链接与读取或写入任何其他文件或目录相同。</p>
 <p>短语 <em>resolving a link</em> 意味着用文件系统中的实际位置替换符号链接。在该示例中，解析 <code>logFile</code> 会产生 <code>dir/logs/HomeLogFile</code>。</p>

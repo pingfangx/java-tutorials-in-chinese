@@ -592,7 +592,7 @@ Exception in thread "main" java.lang.RuntimeException: exception in constructor
         at java.lang.Class.newInstance(Class.java:308)
         at ConstructorTroubleToo.main(ConstructorTroubleToo.java:15)
 </pre></div>
-<p>这种情况是反射所特有的。通常，编写忽略检查型异常异常的代码是不可能的，因为它无法编译。可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html#newInstance-java.lang.Object...-"><code>Constructor.newInstance()</code></a> 而不是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#newInstance--"><code>Class.newInstance()</code></a> 来包装构造函数抛出的任何异常。</p>
+<p>这种情况是反射所特有的。通常，编写忽略检查型异常的代码是不可能的，因为它无法编译。可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html#newInstance-java.lang.Object...-"><code>Constructor.newInstance()</code></a> 而不是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#newInstance--"><code>Class.newInstance()</code></a> 来包装构造函数抛出的任何异常。</p>
 <div class="codeblock"><pre>
 &#36; <em>java ConstructorTroubleToo</em>
 java.lang.reflect.InvocationTargetException

@@ -552,7 +552,7 @@ instances.add(this);
 </pre></div>
 但是其他线程可以在构造对象完成之前使用 <code>instances</code> 来访问对象。
 <hr /></div>
-<p>同步方法启用了一种简单的策略来防止线程干扰和内存一致性错误：如果一个对象对多个线程可见，则对该对象变量的所有读取或写入都是通过 <code>synchronized</code> 方法完成的。(一个重要的异常：<code>final</code> 字段，它在在构造对象后无法修改，因此一旦构造了对象，可以通过非同步方法安全地读取)此策略有效，但可能会出现 <a href="liveness.html">liveness</a> 问题，我们将在本课后面看到。</p>
+<p>同步方法启用了一种简单的策略来防止线程干扰和内存一致性错误：如果一个对象对多个线程可见，则对该对象变量的所有读取或写入都是通过 <code>synchronized</code> 方法完成的。(一个重要的例外：<code>final</code> 字段，它在在构造对象后无法修改，因此一旦构造了对象，可以通过非同步方法安全地读取)此策略有效，但可能会出现 <a href="liveness.html">liveness</a> 问题，我们将在本课后面看到。</p>
 
         </div>
         <div class="NavBit">

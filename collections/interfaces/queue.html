@@ -535,12 +535,12 @@ public interface Queue&lt;E&gt; extends Collection&lt;E&gt; {
 </tr>
 </table>
 <br />
-<p>队列通常（但不一定）以 FIFO（先进先出）方式对元素进行排序。异常情况包括优先级队列，优先级队列根据元素的值对元素进行排序有关详细信息，请参见 <a class="TutorialLink" target="_top" href="order.html">Object Ordering</a> 部分。无论使用什么排序，队列的头部是通过调用 <code>remove</code> 或 <code>poll</code> 来移除的元素。在 FIFO 队列中，所有新元素都插入队列的尾部。其他类型的队列可能使用不同的放置规则。每个 <code>Queue</code> 实现都必须指定其排序属性。</p>
+<p>队列通常（但不一定）以 FIFO（先进先出）方式对元素进行排序。例外情况包括优先级队列，优先级队列根据元素的值对元素进行排序有关详细信息，请参见 <a class="TutorialLink" target="_top" href="order.html">Object Ordering</a> 部分。无论使用什么排序，队列的头部是通过调用 <code>remove</code> 或 <code>poll</code> 来移除的元素。在 FIFO 队列中，所有新元素都插入队列的尾部。其他类型的队列可能使用不同的放置规则。每个 <code>Queue</code> 实现都必须指定其排序属性。</p>
 <p><code>Queue</code> 实现可以限制它所拥有的元素数量；这样的队列被称为 <i>bounded (有界的)</i>。<code>java.util.concurrent</code> 中的某些 <code>Queue</code> 实现是有界的，但 <code>java.util</code> 中的实现不是。</p>
 <p><code>add</code> 方法，<code>Queue</code> 继承自 <code>Collection</code>，插入一个元素，除非它违反了队列的容量限制，在这种情况下它会抛出 <code>IllegalStateException</code>。<code>offer</code> 方法仅适用于有界队列，与 <code>add</code> 的区别仅在于它通过返回 <code>false</code> 来表示无法插入元素。</p>
 <p><code>remove</code> 和 <code>poll</code> 方法都移除并返回队列的头部。确切地移除哪个元素由队列的排序策略决定。仅当队列为空时，<code>remove</code> 和 <code>poll</code> 方法的行为才有所不同。在这些情况下，<code>remove</code> 抛出 <code>NoSuchElementException</code>，而 <code>poll</code> 返回 <code>null</code>。</p>
 <p><code>element</code> 和 <code>peek</code> 方法返回但不移除队列的头部。它们的区别与 <code>remove</code> 和 <code>poll</code> 完全相同：如果队列为空，<code>element</code> 会抛出 <code>NoSuchElementException</code>，而 <code>peek</code> 返回 <code>null</code>。</p>
-<p><code>Queue</code> 实现通常不允许插入 <code>null</code> 元素。<code>LinkedList</code> 实现是一个异常，它被改进以实现 <code>Queue</code>。由于历史原因，它允许 <code>null</code> 元素，但您应该避免利用这一点，因为 <code>null</code> 被 <code>poll</code> 和 <code>peek</code> 方法用作特殊返回值。</p>
+<p><code>Queue</code> 实现通常不允许插入 <code>null</code> 元素。<code>LinkedList</code> 实现是一个例外，它被改进以实现 <code>Queue</code>。由于历史原因，它允许 <code>null</code> 元素，但您应该避免利用这一点，因为 <code>null</code> 被 <code>poll</code> 和 <code>peek</code> 方法用作特殊返回值。</p>
 <p>队列实现通常不定义 <code>equals</code> 和 <code>hashCode</code> 方法的基于元素的版本，而是从 <code>Object</code> 继承基于身份的版本。</p>
 <p><code>Queue</code> 接口未定义阻塞队列方法，这在并发编程中很常见。这些等待元素出现或空间可用的方法在接口 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/BlockingQueue.html"><code>java.util.concurrent.BlockingQueue</code></a> 中定义，继承 <code>Queue</code>。</p>
 <p>在以下示例程序中，队列用于实现倒数计时器。队列预先加载了从命令行上指定的数字到 0 的所有整数值，按降序排列。然后，从队列中移除值并以一秒的间隔打印。该程序是人为的，因为在不使用队列的情况下执行相同的操作会更自然，但它说明了在后续处理之前使用队列来存储元素。</p>

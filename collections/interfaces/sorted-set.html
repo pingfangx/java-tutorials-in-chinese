@@ -523,14 +523,14 @@ public interface SortedSet&lt;E&gt; extends Set&lt;E&gt; {
 }
 </pre></div>
 <h2>Set 运算</h2>
-<p><code>SortedSet</code> 继承自 <code>Set</code> 的操作在排序集和普通集上的行为完全相同，但有两个异常：</p>
+<p><code>SortedSet</code> 继承自 <code>Set</code> 的操作在排序集和普通集上的行为完全相同，但有两个例外：</p>
 <ul>
 <li><code>iterator</code> 操作返回的 <code>Iterator</code> 按顺序遍历有序集。</li>
 <li><code>toArray</code> 返回的数组按顺序包含有序集的元素。</li>
 </ul>
 <p>虽然接口不保证它，但 Java 平台的 <code>SortedSet</code> 实现的 <code>toString</code> 方法按顺序返回一个包含有序集的所有元素的字符串。</p>
 <h2><a name="constructor" id="constructor">标准构造函数</a></h2>
-<p>按照惯例，所有通用 <code>Collection</code> 实现都提供了一个标准转换构造函数，它采用 <code>Collection</code>; <code>SortedSet</code> 实现也不异常。在 <code>TreeSet</code> 中，此构造函数创建一个实例，根据其自然顺序对其元素进行排序。这可能是一个错误。最好动态检查以查看指定的集合是否为 <code>SortedSet</code> 实例，如果是，则根据相同的标准对新的 <code>TreeSet</code> 进行排序(比较器或自然排序)。因为 <code>TreeSet</code> 采用了它所采用的方法，它还提供了一个构造函数，它接受 <code>SortedSet</code> 并返回一个新的 <code>TreeSet</code>，其中包含相同的元素排序依据达到同样的标准。请注意，它是参数的编译时类型，而不是其运行时类型，它确定调用这两个构造函数中的哪一个(以及是否保留了排序条件)。</p>
+<p>按照惯例，所有通用 <code>Collection</code> 实现都提供了一个标准转换构造函数，它采用 <code>Collection</code>; <code>SortedSet</code> 实现也不例外。在 <code>TreeSet</code> 中，此构造函数创建一个实例，根据其自然顺序对其元素进行排序。这可能是一个错误。最好动态检查以查看指定的集合是否为 <code>SortedSet</code> 实例，如果是，则根据相同的标准对新的 <code>TreeSet</code> 进行排序(比较器或自然排序)。因为 <code>TreeSet</code> 采用了它所采用的方法，它还提供了一个构造函数，它接受 <code>SortedSet</code> 并返回一个新的 <code>TreeSet</code>，其中包含相同的元素排序依据达到同样的标准。请注意，它是参数的编译时类型，而不是其运行时类型，它确定调用这两个构造函数中的哪一个(以及是否保留了排序条件)。</p>
 <p>按照惯例，<code>SortedSet</code> 实现还提供了一个构造函数，它接受 <code>Comparator</code> 并返回根据指定的 <code>Comparator</code> 排序的空集。如果将 <code>null</code> 传递给此构造函数，它将返回一个集合，该集合根据其自然顺序对其元素进行排序。</p>
 <h2>范围视图操作</h2>
 <p><code>range-view</code> 操作有点类似于 <code>List</code> 接口提供的操作，但有一个很大的区别。即使直接修改了后备排序集，排序集的范围视图仍然有效。这是可行的，因为有序集的范围视图的端点是元素空间中的绝对点，而不是后备集合中的特定元素，如列表的情况。排序集的 <code>range-view</code> 实际上只是该集合的任何部分位于元素空间的指定部分中的窗口。对 <code>range-view</code> 的更改将写回到后备排序集，反之亦然。因此，与列表上的 <code>range-view</code> 不同，可以长时间在有序集上使用 <code>range-view</code>。</p>

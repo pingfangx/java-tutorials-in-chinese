@@ -517,7 +517,7 @@ Date-Time API 提供了两个用于指定时区或偏移的类：</p>
 <li><tt>ZoneOffset</tt> 指定从格林威治/ UTC 时间偏移的时区。</li>
 </ul>
 <p>
-格林威治/ UTC 时间的偏差通常在整数小时内定义，但也有异常。以下代码，来自 <a class="SourceLink" target="_blank" href="examples/TimeZoneId.java" onclick="showCode('../../displayCode.html', 'examples/TimeZoneId.java'); return false;"><code><tt>TimeZoneId</tt></code></a> 示例，打印使用格林威治/ UTC 偏移的所有时区的列表，这些时区未定义整数小时。</p>
+格林威治/ UTC 时间的偏差通常在整数小时内定义，但也有例外。以下代码，来自 <a class="SourceLink" target="_blank" href="examples/TimeZoneId.java" onclick="showCode('../../displayCode.html', 'examples/TimeZoneId.java'); return false;"><code><tt>TimeZoneId</tt></code></a> 示例，打印使用格林威治/ UTC 偏移的所有时区的列表，这些时区未定义整数小时。</p>
 <div class="codeblock"><pre>
 Set&lt;String&gt; allZones = ZoneId.getAvailableZoneIds();
 LocalDateTime dt = LocalDateTime.now();
