@@ -62,13 +62,14 @@ unchecked exception	非检查型异常	未经检查的异常,未选中的异常|
 checked exception	检查型异常	经检查的异常,已检查的异常,选中的异常|
 reluctant	懒惰	不情愿|
 sign	签名	签署|
+convention	规范	约定|
 
 # 集体相关
 collection	集合	收藏品,收藏|
 reduction	缩减	还原,减少|
 parallel	并行	并发,平行|
 concurrent	并发	并行|
-ad hoc	特设	特殊,临时|
+ad hoc	专用的	特殊,临时|
 literal	字面量	文字|
 #quote	引语	引用,引号,报价|用于数据报中的示例
 trail	路径	小路,小道,小径,线索,跟踪|
@@ -82,7 +83,7 @@ upper bounded	上界	上限有界,上限|
 # 国际化相关
 program	程序	计划|
 end user	终端用户	最终用户|
-locale	区域设置	语言环境|
+locale	语言环境	区域设置|根据中文 api 统一为语言环境
 tag	标签	标记|
 key	键	密钥
 message	消息	邮件|
@@ -113,6 +114,7 @@ download extension	下载型扩展	下载的扩展,下载扩展|
 header	头	标头|
 extension	扩展	扩展名|
 provider	提供者	提供程序,提供商|
+bundle	打包	捆绑|
 
 # 全屏独占
 active rendering	主动渲染	活动渲染|
