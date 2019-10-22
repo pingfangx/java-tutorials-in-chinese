@@ -499,18 +499,18 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>&gt;<a href="index.html" target="_top">标准日历</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="period.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="nonIso.html">Next&nbsp;»</a>
+                <a target="_top" href="period.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="nonIso.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Clock</h1></div>
             <div id="PageContent">
 
 <p>
-大多数基于时间的对象提供无参数 <tt>now()</tt> 方法，该方法使用系统时钟和默认时区提供当前日期和时间。这些基于时间的对象还提供单参数 <tt>now(Clock)</tt> 方法，允许您传入替代 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html"><tt>Clock</tt></a>。</p>
+大多数基于时间的对象提供无参数 <tt>now()</tt> 方法，该方法使用系统时钟和默认时区提供当前日期和时间。这些基于时间的对象还提供单参数 <tt>now(Clock)</tt> 方法，允许你传入替代 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html"><tt>Clock</tt></a>。</p>
 <p>
-当前日期和时间取决于时区，对于全球化应用程序，需要 <tt>Clock</tt> 以确保使用正确的时区创建日期/时间。因此，尽管 <tt>Clock</tt> 类的使用是可选的，但此功能允许您测试其他时区的代码，或者使用固定时钟，时间不会更改。</p>
+当前日期和时间取决于时区，对于全球化应用程序，需要 <tt>Clock</tt> 以确保使用正确的时区创建日期/时间。因此，尽管 <tt>Clock</tt> 类的使用是可选的，但此功能允许你测试其他时区的代码，或者使用固定时钟，时间不会更改。</p>
 <p>
-<tt>Clock</tt> 类是抽象的，因此您无法创建它的实例。以下工厂方法可用于测试。</p>
+<tt>Clock</tt> 类是抽象的，因此你无法创建它的实例。以下工厂方法可用于测试。</p>
 <ul>
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html#offset-java.time.Clock-java.time.Duration-"><tt>Clock.offset(Clock, Duration)</tt></a>返回一个偏移指定 <tt>Duration</tt> 的时钟。

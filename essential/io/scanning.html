@@ -516,7 +516,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="scanfor.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="formatting.html">Next&nbsp;»</a>
+                <a target="_top" href="scanfor.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="formatting.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>扫描</h1></div>
@@ -548,7 +548,7 @@ public class ScanXan {
     }
 }
 </pre></div>
-<p>请注意，当扫描对象完成时，<code>ScanXan</code> 会调用 <code>Scanner</code> 的 <code>close</code> 方法。即使扫描程序不是流，您也需要将其关闭以指示您已完成其底层流。</p>
+<p>请注意，当扫描对象完成时，<code>ScanXan</code> 会调用 <code>Scanner</code> 的 <code>close</code> 方法。即使扫描程序不是流，你也需要将其关闭以指示你已完成其底层流。</p>
 <p><code>ScanXan</code> 的输出如下所示：</p>
 <div class="codeblock"><pre>
 In
@@ -561,13 +561,13 @@ stately
 pleasure-dome
 ...
 </pre></div>
-<p>要使用其他语素分隔符，请调用 <code>useDelimiter()</code>，指定正则表达式。例如，假设您希望语素分隔符为逗号，可选地后跟空格。您会调用，</p>
+<p>要使用其他语素分隔符，请调用 <code>useDelimiter()</code>，指定正则表达式。例如，假设你希望语素分隔符为逗号，可选地后跟空格。你会调用，</p>
 <div class="codeblock"><pre>
 s.useDelimiter(",\\s*");
 </pre></div>
 <h2>转换单个语素</h2>
-<p><code>ScanXan</code> 示例将所有输入语素视为简单的 <code>String</code> 值。<code>Scanner</code> 还支持所有 Java 语言基本类型的语素 (<code>char</code> 除外 )，以及 <code>BigInteger</code> 和 <code>BigDecimal</code>。此外，数值可以使用千位分隔符。因此，在 <code>US</code> 区域设置中，<code>Scanner</code> 正确读取字符串“32,767”表示整数值。</p>
-<p>我们必须提到语言环境，因为千位分隔符和小数符号是特定于语言环境的。因此，如果我们未指定扫描程序应使用 <code>US</code> 语言环境，则以下示例将无法在所有语言环境中正常运行。这通常不必担心，因为您的输入数据通常来自使用相同语言环境的源。但是这个例子是 Java Tutorial 的一部分，并且分布在世界各地。</p>
+<p><code>ScanXan</code> 示例将所有输入语素视为简单的 <code>String</code> 值。<code>Scanner</code> 还支持所有 Java 语言基本类型的语素 (<code>char</code> 除外 )，以及 <code>BigInteger</code> 和 <code>BigDecimal</code>。此外，数值可以使用千位分隔符。因此，在 <code>US</code> 语言环境中，<code>Scanner</code> 正确读取字符串“32,767”表示整数值。</p>
+<p>我们必须提到语言环境，因为千位分隔符和小数符号是特定于语言环境的。因此，如果我们未指定扫描程序应使用 <code>US</code> 语言环境，则以下示例将无法在所有语言环境中正常运行。这通常不必担心，因为你的输入数据通常来自使用相同语言环境的源。但是这个例子是 Java Tutorial 的一部分，并且分布在世界各地。</p>
 <p><a class="SourceLink" target="_blank" href="examples/ScanSum.java" onclick="showCode('../../displayCode.html', 'examples/ScanSum.java'); return false;"><code>ScanSum</code></a> 示例读取 <code>double</code> 值列表并将其相加。这是来源：</p>
 <div class="codeblock"><pre>
 import java.io.FileReader;
@@ -608,7 +608,7 @@ public class ScanSum {
 3.14159
 1,000,000.1
 </pre></div>
-<p>输出字符串是“1032778.74159”。在某些语言环境中，句点将是不同的字符，因为 <code>System.out</code> 是 <code>PrintStream</code> 对象，并且该类不提供覆盖默认语言环境的方法。我们可以覆盖整个程序的语言环境或者我们可以使用格式化，如下一主题 <a class="TutorialLink" target="_top" href="formatting.html">Formatting</a> 中所述。</p>
+<p>输出字符串是“1032778.74159”。在某些语言环境中，句点将是不同的字符，因为 <code>System.out</code> 是 <code>PrintStream</code> 对象，并且该类不提供覆盖默认语言环境的方法。我们可以覆盖整个程序的语言环境  或者我们可以使用格式化，如下一主题 <a class="TutorialLink" target="_top" href="formatting.html">Formatting</a> 中所述。</p>
 
 
         </div>

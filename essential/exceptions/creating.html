@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="nolinkBHEAD">创建异常类</div>
-<div class="linkAHEAD"><a href="runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="summary.html">总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -500,32 +500,32 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="chained.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="runtime.html">Next&nbsp;»</a>
+                <a target="_top" href="chained.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="runtime.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>创建异常类</h1></div>
             <div id="PageContent">
 
-<p>当面对选择要抛出的异常类型时，你可以使用别人写的一个 Java 平台提供了很多可以使用的异常类或者你可以自己写一个。如果您对以下任何问题的回答是肯定的，那么您应该编写自己的异常类;否则，你可能会使用别人的。</p>
+<p>当面对选择要抛出的异常类型时，你可以使用别人写的一个  Java 平台提供了很多可以使用的异常类  或者你可以自己写一个。如果你对以下任何问题的回答是肯定的，那么你应该编写自己的异常类;否则，你可能会使用别人的。</p>
 <ul>
-<li>您是否需要 Java 平台中未表示的异常类型？</li>
-<li>它是否有助于用户可以将您的异常与其他供应商编写的类别所引发的异常区分开来？</li>
-<li>您的代码是否会抛出多个相关的异常？</li>
-<li>如果您使用其他人的异常，用户是否可以访问这些异常？一个类似的问题是，你的包应该是独立的且自己独用的吗？</li>
+<li>你是否需要 Java 平台中未表示的异常类型？</li>
+<li>它是否有助于用户可以将你的异常与其他供应商编写的类别所引发的异常区分开来？</li>
+<li>你的代码是否会抛出多个相关的异常？</li>
+<li>如果你使用其他人的异常，用户是否可以访问这些异常？一个类似的问题是，你的包应该是独立的且自己独用的吗？</li>
 </ul>
 <h2>一个例子</h2>
-<p>假设您正在编写链表类。该类支持以下方法，其中包括：</p>
+<p>假设你正在编写链表类。该类支持以下方法，其中包括：</p>
 <ul>
-<li><b><code>objectAt(int n)</code></b> 返回列表中 <code>n</code> 位置的对象。如果参数小于 0 或大于列表中当前对象的数量，则抛出异常。</li>
-<li><b><code>firstObject()</code></b> 返回列表中的第一个对象。如果列表不包含任何对象，则引发异常。</li>
-<li><b><code>indexOf(Object o)</code></b> 在列表中搜索指定的 <code>Object</code> 并返回其在列表中的位置。如果传递给方法的对象不在列表中，则引发异常。</li>
+<li><b><code>objectAt(int n)</code></b>  返回列表中 <code>n</code> 位置的对象。如果参数小于 0 或大于列表中当前对象的数量，则抛出异常。</li>
+<li><b><code>firstObject()</code></b>  返回列表中的第一个对象。如果列表不包含任何对象，则引发异常。</li>
+<li><b><code>indexOf(Object o)</code></b>  在列表中搜索指定的 <code>Object</code> 并返回其在列表中的位置。如果传递给方法的对象不在列表中，则引发异常。</li>
 </ul>
-<p>链表类可以抛出多个异常，并且能够通过一个异常处理程序捕获链表所引发的所有异常是很方便的。此外，如果您计划在包中分发链接列表，则应将所有相关代码打包在一起。因此，链表应该提供自己的一组异常类。</p>
+<p>链表类可以抛出多个异常，并且能够通过一个异常处理程序捕获链表所引发的所有异常是很方便的。此外，如果你计划在包中分发链接列表，则应将所有相关代码打包在一起。因此，链表应该提供自己的一组异常类。</p>
 <p>
-<span id="figure:exceptions-hierarchy.gif">The next figure</span> 说明了链表引发的异常的一个可能的类层次结构。</p>
+<span id="figure:exceptions-hierarchy.gif">下图</span> 说明了链表引发的异常的一个可能的类层次结构。</p>
 <center><img src="../../figures/essential/exceptions-hierarchy.gif" width="329" height="131" align="bottom" alt="链表引发的异常的可能类层次结构。" /></p><p class="FigureCaption">示例异常类层次结构。</p></center><h2>选择超类</h2>
 <p>任何 <code>Exception</code> 子类都可以用作 <code>LinkedListException</code> 的父类。但是，快速浏览这些子类表明它们不合适，因为它们太专业化或与 <code>LinkedListException</code> 完全无关。因此，<code>LinkedListException</code> 的父类应该是 <code>Exception</code>。</p>
-<p>您编写的大多数 applet 和应用程序将抛出 <code>Exception</code> 的对象。<code>Error</code> 通常用于系统中严重的硬错误，例如阻止 JVM 运行的错误。</p>
+<p>你编写的大多数 applet 和应用程序将抛出 <code>Exception</code> 的对象。<code>Error</code> 通常用于系统中严重的硬错误，例如阻止 JVM 运行的错误。</p>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;对于可读代码，最好将字符串 <code>Exception</code> 附加到从 <code>Exception</code> 类继承(直接或间接)的所有类的名称。
 <hr /></div>
 

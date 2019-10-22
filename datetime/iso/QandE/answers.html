@@ -400,11 +400,11 @@
 
 
 <h2>问题</h2>
-<p><strong>问题1</strong>. 您将使用哪个类来存储您的生日，包括年，月，日，秒和纳秒？</p>
-<p><strong>答案1</strong>. 很可能您会使用 <tt>LocalDateTime</tt> 类。要考虑特定时区，可以使用 <tt>ZonedDateTime</tt> 类。这两个类都将日期和时间跟踪为纳秒精度，并且当与 <tt>Period</tt> 结合使用时，这两个类使用基于人的单位的组合(例如年，月和日)来给出结果。</p>
+<p><strong>问题1</strong>. 你将使用哪个类来存储你的生日，包括年，月，日，秒和纳秒？</p>
+<p><strong>答案1</strong>. 很可能你会使用 <tt>LocalDateTime</tt> 类。要考虑特定时区，可以使用 <tt>ZonedDateTime</tt> 类。这两个类都将日期和时间跟踪为纳秒精度，并且当与 <tt>Period</tt> 结合使用时，这两个类使用基于人的单位的组合(例如年，月和日)来给出结果。</p>
 
-<p><strong>问题2</strong>. 给定一个随机日期，您如何找到上周四的日期？</p>
-<p><strong>答案2</strong>. 您可以使用 <tt>TemporalAdjuster</tt> 的 <tt>previous</tt> 方法：</p>
+<p><strong>问题2</strong>. 给定一个随机日期，你如何找到上周四的日期？</p>
+<p><strong>答案2</strong>. 你可以使用 <tt>TemporalAdjuster</tt> 的 <tt>previous</tt> 方法：</p>
 <div class="codeblock"><pre>
 LocalDate date = ...;
 System.out.printf("The previous Thursday is: %s%n",
@@ -415,20 +415,20 @@ System.out.printf("The previous Thursday is: %s%n",
 </p>
 <p><strong>答案3</strong>. <tt>ZoneId</tt> 和 <tt>ZoneOffset</tt> 都跟踪格林威治/ UTC 时间的偏移量，但 <tt>ZoneOffset</tt> 类仅跟踪格林威治/ UTC 的绝对偏移量。<tt>ZoneId</tt> 类还使用 <tt>ZoneRules</tt> 来确定偏移量在特定时间和地区的变化情况。</p>
 
-<p><strong>问题4</strong>. 如何将 <tt>Instant</tt> 转换为 <tt>ZonedDateTime</tt>？您如何将 <tt>ZonedDateTime</tt> 转换为 <tt>Instant</tt>？</p>
+<p><strong>问题4</strong>. 如何将 <tt>Instant</tt> 转换为 <tt>ZonedDateTime</tt>？你如何将 <tt>ZonedDateTime</tt> 转换为 <tt>Instant</tt>？</p>
 
-<p><strong>答案4</strong>. 您可以使用 <tt>ZonedDateTime.ofInstant</tt> 方法将 <tt>Instant</tt> 转换为 <tt>ZonedDateTime</tt>。您还需要提供 <tt>ZoneId</tt>：</p>
+<p><strong>答案4</strong>. 你可以使用 <tt>ZonedDateTime.ofInstant</tt> 方法将 <tt>Instant</tt> 转换为 <tt>ZonedDateTime</tt>。你还需要提供 <tt>ZoneId</tt>：</p>
 <div class="codeblock"><pre>
 ZonedDateTime zdt = ZonedDateTime.ofInstant(Instant.now(),
                                             ZoneId.systemDefault());
 </pre></div>
 <p>
-或者，您可以使用 <tt>Instant.atZone</tt> 方法：</p>
+或者，你可以使用 <tt>Instant.atZone</tt> 方法：</p>
 <div class="codeblock"><pre>
 ZonedDateTime zdt = Instant.now().atZone(ZoneId.systemDefault());
 </pre></div>
 <p>
-您可以使用 <tt>ChronoZonedDateTime</tt> 接口中的 <tt>toInstant</tt> 方法，由 <tt>ZonedDateTime</tt> 类实现，以转换为 <tt>ZonedDateTime</tt> 到 <tt>Instant</tt>：</p>
+你可以使用 <tt>ChronoZonedDateTime</tt> 接口中的 <tt>toInstant</tt> 方法，由 <tt>ZonedDateTime</tt> 类实现，以转换为 <tt>ZonedDateTime</tt> 到 <tt>Instant</tt>：</p>
 <div class="codeblock"><pre>
 Instant inst = ZonedDateTime.now().toInstant();
 </pre></div>

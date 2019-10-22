@@ -480,7 +480,7 @@
 <div class="linkAHEAD"><a href="operators.html">运算符</a></div>
 <div class="linkBHEAD"><a href="op1.html">赋值，算术和一元运算符</a></div>
 <div class="linkBHEAD"><a href="op2.html">相等性，关系和条件运算符 </a></div>
-<div class="linkBHEAD"><a href="op3.html">按位和位移运算符</a></div>
+<div class="linkBHEAD"><a href="op3.html">位运算和移位运算符</a></div>
 <div class="linkBHEAD"><a href="opsummary.html">运算符总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_operators.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="expressions.html">表达式，语句和块</a></div>
@@ -505,7 +505,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">语言基础</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="flow.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="switch.html">Next&nbsp;»</a>
+                <a target="_top" href="flow.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="switch.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>if-then 和 if-then-else 语句</h1></div>
@@ -523,7 +523,7 @@ void applyBrakes() {
 }
 </pre></div>
 <p>如果此测试计算为 <code>false</code>(表示自行车不在运动中)，则控制跳转到 <code>if-then</code> 语句的末尾。</p>
-<p>另外，打开和关闭大括号是可选的，只要 "then" 子句只包含一个语句：</p>
+<p>此外，如果“then”子句只包含一个语句，则左大括号和右大括号是可选的：</p>
 <div class="codeblock"><pre>
 void applyBrakes() {
     // same as above, but without braces 
@@ -531,9 +531,9 @@ void applyBrakes() {
         currentSpeed--;
 }
 </pre></div>
-<p>决定何时省略大括号是个人品味的问题。省略它们会使代码变得更脆弱。如果第二个语句后来被添加到 "then" 子句中，则常见的错误是忘记添加新需要的大括号。编译器无法捕捉到这种错误;你只会得到错误的结果。</p>
+<p>决定何时省略大括号是个人品味的问题。省略它们会使代码变得更脆弱。如果第二个语句后来被添加到 "then" 子句中，常见的错误是忘记加新要求的大括号。编译器无法捕捉到这种错误;你只会得到错误的结果。</p>
 <h2><code>if-then-else</code> 语句</h2>
-<p>当 "if" 子句计算为 <code>false</code> 时，<code>if-then-else</code> 语句提供执行的辅助路径。您可以在 <code>applyBrakes</code> 方法中使用 <code>if-then-else</code> 语句来采取一些行动，如果在自行车未运动时应用刹车。在这种情况下，动作是简单地打印一条错误消息，指出自行车已经停止。</p>
+<p>当 "if" 子句计算为 <code>false</code> 时，<code>if-then-else</code> 语句提供执行的辅助路径。你可以在 <code>applyBrakes</code> 方法中使用 <code>if-then-else</code> 语句来采取一些行动，如果在自行车未运动时应用刹车。在这种情况下，动作是简单地打印一条错误消息，指出自行车已经停止。</p>
 <div class="codeblock"><pre>
 void applyBrakes() {
     if (isMoving) {
@@ -571,7 +571,7 @@ class IfElseDemo {
 <div class="codeblock"><pre>
     Grade = C
 </pre></div>
-<p>您可能已经注意到 <code>testscore</code> 的值可以满足复合语句中的多个表达式：<code>76 &gt;= 70</code> 和 <code>76 &gt;= 60</code> 。但是，一旦满足条件，就会执行相应的语句 <code>(grade = 'C';)</code> 并且不计算其余条件。</p>
+<p>你可能已经注意到 <code>testscore</code> 的值可以满足复合语句中的多个表达式：<code>76 &gt;= 70</code> 和 <code>76 &gt;= 60</code> 。但是，一旦满足条件，就会执行相应的语句 <code>(grade = 'C';)</code> 并且不计算其余条件。</p>
 
 
         </div>

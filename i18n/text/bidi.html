@@ -474,7 +474,7 @@
             <div class="linkLESSON"><a href="index.html">使用文本</a></div>
 <div class="linkAHEAD"><a href="charintro.html">检查字符属性</a></div>
 <div class="linkAHEAD"><a href="collationintro.html">比较字符串</a></div>
-<div class="linkBHEAD"><a href="locale.html">执行与区域设置无关的比较</a></div>
+<div class="linkBHEAD"><a href="locale.html">执行与语言环境无关的比较</a></div>
 <div class="linkBHEAD"><a href="rule.html">自定义排序规则</a></div>
 <div class="linkBHEAD"><a href="perform.html">提高排序性能</a></div>
 <div class="linkAHEAD"><a href="unicode.html">Unicode</a></div>
@@ -507,7 +507,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">使用文本</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="normalizerapi.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../network/index.html">Next&nbsp;»</a>
+                <a target="_top" href="normalizerapi.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../network/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用 JTextComponent 类处理双向文本</h1></div>
@@ -515,7 +515,7 @@
 
 
 
-<p>本节讨论如何使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html"><code>JTextComponent</code></a> 类处理双向文本。双向文本是包含从左到右和从右到左两个方向运行的文本的文本。双向文本的示例是包含数字(从左到右运行)的阿拉伯文本(从右向左运行)。显示和管理双向文本更加困难；但 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html"><code>JTextComponent</code></a> 会为您处理这些问题。</p>
+<p>本节讨论如何使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html"><code>JTextComponent</code></a> 类处理双向文本。双向文本是包含从左到右和从右到左两个方向运行的文本的文本。双向文本的示例是包含数字(从左到右运行)的阿拉伯文本(从右向左运行)。显示和管理双向文本更加困难；但 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html"><code>JTextComponent</code></a> 会为你处理这些问题。</p>
 
 <p>涵盖以下主题：</p>
 
@@ -527,7 +527,7 @@
   <li><a href="#setting-component-orientation">设置组件方向</a></li>
 </ul>
 
-<p>有关这些问题的更多信息，或者如果您需要更多控制来处理这些问题，请参阅 <a class="TutorialLink" target="_top" href="../../2d/index.html">2D Graphics</a> 路径中的 <a class="TutorialLink" target="_top" href="../../2d/text/textlayoutbidirectionaltext.html">Working with Bidirectional Text</a>。</p><!-- *********************************************************************** -->
+<p>有关这些问题的更多信息，或者如果你需要更多控制来处理这些问题，请参阅 <a class="TutorialLink" target="_top" href="../../2d/index.html">2D Graphics</a> 路径中的 <a class="TutorialLink" target="_top" href="../../2d/text/textlayoutbidirectionaltext.html">Working with Bidirectional Text</a>。</p><!-- *********************************************************************** -->
 
 
 
@@ -538,7 +538,7 @@
 <center><img src="../../figures/i18n/text/biditextcomponentdemo.jpg" width="353" height="271" align="bottom" alt="BidiTextComponentDemo.java" /></center>
 <h3>在 JTextComponent 对象中显式指定文本运行方向</h3>
 
-<p>您可以指定 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html"><code>JTextComponent</code></a> 对象的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Document.html"><code>Document</code></a> 对象的运行方向。例如，以下语句指定 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextPane.html"><code>JTextPane</code></a> 对象 <code>textPane</code> 中的文本从右向左运行：</p>
+<p>你可以指定 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html"><code>JTextComponent</code></a> 对象的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Document.html"><code>Document</code></a> 对象的运行方向。例如，以下语句指定 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextPane.html"><code>JTextPane</code></a> 对象 <code>textPane</code> 中的文本从右向左运行：</p>
 
 <div class="codeblock"><pre>
 textPane.getDocument().putProperty(
@@ -546,7 +546,7 @@ textPane.getDocument().putProperty(
     TextAttribute.RUN_DIRECTION_RTL);
 </pre></div>
 
-<p>或者，您可以根据区域设置指定特定 Swing 组件的组件方向。例如，以下语句指定对象 <code>textPane</code> 的组件方向基于 ar-SA 区域设置：</p>
+<p>或者，你可以根据语言环境指定特定 Swing 组件的组件方向。例如，以下语句指定对象 <code>textPane</code> 的组件方向基于 ar-SA 语言环境：</p>
 
 <div class="codeblock"><pre>
 Locale arabicSaudiArabia = 
@@ -575,7 +575,7 @@ textPane.setComponentOrientation(
 
 <p>通常，设备空间中的位置必须转换为文本偏移量。例如，当用户在可选文本上单击鼠标时，鼠标的位置将转换为文本偏移并用作选择范围的一端。从逻辑上讲，这与定位插入符相反。</p>
 
-<p>您可以将插入符监听器附加到 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html"><code>JTextComponent</code></a> 的实例。插入符号监听器使您能够处理插入符号事件，这些事件在插入符号移动或文本组件中的选择发生更改时发生。使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html#addCaretListener-javax.swing.event.CaretListener-"><code>addCaretListener</code></a> 方法附加插入符监听器。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../../uiswing/events/caretlistener.html">How to Write a Caret Listener</a>。</p><!-- *********************************************************************** -->
+<p>你可以将插入符监听器附加到 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html"><code>JTextComponent</code></a> 的实例。插入符号监听器使你能够处理插入符号事件，这些事件在插入符号移动或文本组件中的选择发生更改时发生。使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html#addCaretListener-javax.swing.event.CaretListener-"><code>addCaretListener</code></a> 方法附加插入符监听器。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../../uiswing/events/caretlistener.html">How to Write a Caret Listener</a>。</p><!-- *********************************************************************** -->
 
 
 
@@ -592,18 +592,18 @@ textPane.setComponentOrientation(
 
 <h2><a name="setting-component-orientation">设置组件方向</a></h2>
 
-<p>Swing 的布局管理器了解区域设置如何影响 UI;没有必要为每个区域设置创建新布局。例如，在文本从右向左流动的区域设置中，布局管理器将以相同的方向排列组件。</p>
+<p>Swing 的布局管理器了解语言环境如何影响 UI;没有必要为每个语言环境创建新布局。例如，在文本从右向左流动的语言环境中，布局管理器将以相同的方向排列组件。</p>
 
 <p>示例 <a class="SourceLink" target="_blank" href="../format/examples/InternationalizedMortgageCalculator.java" onclick="showCode('../../displayCode.html', '../format/examples/InternationalizedMortgageCalculator.java'); return false;"><code>InternationalizedMortgageCalculator.java</code></a> 已针对美国英语；英国英语；法国法语；加拿大法国；和沙特阿拉伯阿拉伯语进行了本地化。</p>
 
-<p>以下使用 en-US 区域设置：</p>
+<p>以下使用 en-US 语言环境：</p>
 
-<center><img src="../../figures/i18n/format/mortgage-calculator-en-us.jpg" width="372" height="202" align="bottom" alt="按揭计算器，en-US 区域设置" /></center>
-<p>以下使用 ar-SA 区域设置：</p>
+<center><img src="../../figures/i18n/format/mortgage-calculator-en-us.jpg" width="372" height="202" align="bottom" alt="按揭计算器，en-US 语言环境" /></center>
+<p>以下使用 ar-SA 语言环境：</p>
 
-<center><img src="../../figures/i18n/format/mortgage-calculator-ar-sa.jpg" width="362" height="202" align="bottom" alt="按揭计算器，ar-SA 区域设置" /></center>
+<center><img src="../../figures/i18n/format/mortgage-calculator-ar-sa.jpg" width="362" height="202" align="bottom" alt="按揭计算器，ar-SA 语言环境" /></center>
 
-<p>请注意，组件的布局方向与相应的区域设置相同：en-US 从左到右，ar-SA 从右到左。<a class="SourceLink" target="_blank" href="../format/examples/InternationalizedMortgageCalculator.java" onclick="showCode('../../displayCode.html', '../format/examples/InternationalizedMortgageCalculator.java'); return false;"><code>InternationalizedMortgageCalculator.java</code></a> 示例调用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html#applyComponentOrientation-java.awt.ComponentOrientation-"><code>applyComponentOrientation</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/ComponentOrientation.html#getOrientation-java.util.Locale-"><code>getOrientation</code></a> 按区域设置指定其组件的方向：</p>
+<p>请注意，组件的布局方向与相应的语言环境相同：en-US 从左到右，ar-SA 从右到左。<a class="SourceLink" target="_blank" href="../format/examples/InternationalizedMortgageCalculator.java" onclick="showCode('../../displayCode.html', '../format/examples/InternationalizedMortgageCalculator.java'); return false;"><code>InternationalizedMortgageCalculator.java</code></a> 示例调用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html#applyComponentOrientation-java.awt.ComponentOrientation-"><code>applyComponentOrientation</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/ComponentOrientation.html#getOrientation-java.util.Locale-"><code>getOrientation</code></a> 按语言环境指定其组件的方向：</p>
 
 <div class="codeblock"><pre>
 private static JFrame frame;

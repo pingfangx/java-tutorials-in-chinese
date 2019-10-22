@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,21 +512,21 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="nested.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="localclasses.html">Next&nbsp;»</a>
+                <a target="_top" href="nested.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="localclasses.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>内部类示例</h1></div>
             <div id="PageContent"><!-- Inner Class Example -->
 
 
-<p>要查看正在使用的内部类，首先要考虑一个数组。在下面的示例中，您将创建一个数组，用整数值填充它，然后仅按升序输出数组的偶数索引值。</p>
+<p>要查看正在使用的内部类，首先要考虑一个数组。在下面的示例中，你将创建一个数组，用整数值填充它，然后仅按升序输出数组的偶数索引值。</p>
 
 <p>接下来的 <a class="SourceLink" target="_blank" href="examples/DataStructure.java" onclick="showCode('../../displayCode.html', 'examples/DataStructure.java'); return false;"><code>DataStructure.java</code></a> 示例包括：</p>
 
 <ul>
 <li><code>DataStructure</code> 外部类，包括用于创建 <code>DataStructure</code> 实例的构造函数，其中包含一个填充了连续整数值(0,1,2,3 等)的数组以及打印具有偶数索引值的数组元素的方法。</li>
 
-<li><code>EvenIterator</code> 内部类，它实现 <code>DataStructureIterator</code> 接口，继承 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html"><code>Iterator</code></a><code>&lt;</code> <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html"><code>Integer</code></a><code>&gt;</code> 接口。迭代器用于逐步执行数据结构，并且通常具有测试最后一个元素，检索当前元素以及移动到下一个元素的方法。</li>
+<li><code>EvenIterator</code> 内部类，它实现 <code>DataStructureIterator</code> 接口，继承 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html"><code>Iterator</code></a><code>&lt;</code> <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html"><code>Integer</code></a><code>&gt;</code> 接口。迭代器用于逐步遍历数据结构，并且通常具有测试最后一个元素，检索当前元素以及移动到下一个元素的方法。</li>
 
 <li>实例化 <code>DataStructure</code> 对象(<code>ds</code>)的 <code>main</code> 方法，然后调用 <code>printEven</code> 方法打印数组 <code>arrayOfInts</code> 中具有偶数索引的元素。</li> 
 
@@ -599,15 +599,15 @@ public class DataStructure {
 
 <p>请注意，<code>EvenIterator</code> 类直接引用 <code>DataStructure</code> 对象的 <code>arrayOfInts</code> 实例变量。</p>
 
-<p>您可以使用内部类来实现帮助程序类，例如本示例中显示的帮助程序类。要处理用户界面事件，您必须知道如何使用内部类，因为事件处理机制会广泛使用它们。</p>
+<p>你可以使用内部类来实现帮助程序类，例如本示例中显示的帮助程序类。要处理用户界面事件，你必须知道如何使用内部类，因为事件处理机制会广泛使用它们。</p>
 
 <h2>局部类和匿名类</h2>
 
-<p>还有两种类型的内部类。您可以在方法体内声明内部类。这些类称为 <a class="TutorialLink" target="_top" href="localclasses.html">local classes（局部类）</a>。您还可以在方法体内声明内部类，而无需命名该类。这些类称为 <a class="TutorialLink" target="_top" href="anonymousclasses.html">anonymous classes（匿名类）</a>。</p>
+<p>还有两种类型的内部类。你可以在方法体内声明内部类。这些类称为 <a class="TutorialLink" target="_top" href="localclasses.html">local classes (局部类)</a>。你还可以在方法体内声明内部类，而无需命名该类。这些类称为 <a class="TutorialLink" target="_top" href="anonymousclasses.html">anonymous classes (匿名类)</a>。</p>
 
 <h2>修饰符</h2>
 
-<p>您可以对用于外部类的其他成员的内部类使用相同的修饰符。例如，您可以使用访问说明符 <code>private</code>，<code>public</code> 和 <code>protected</code> 来限制对内部类的访问，就像您使用它们来限制一样访问其他类成员。</p>
+<p>对于内部类，可以使用与外部类的其他成员相同的修饰符。例如，你可以使用访问修饰符 <code>private</code>，<code>public</code> 和 <code>protected</code> 来限制对内部类的访问，就像你使用它们来限制访问其他类成员一样。</p>
 
 
         </div>

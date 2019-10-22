@@ -515,18 +515,18 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="syncmeth.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="atomic.html">Next&nbsp;»</a>
+                <a target="_top" href="syncmeth.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="atomic.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>内部锁和同步</h1></div>
             <div id="PageContent">
 
 <p>同步是围绕称为 <i>intrinsic lock (内部锁)</i> 或 <i>monitor lock (监视器锁)</i> 的内部实体构建的。(API 规范通常将此实体简称为“监视器”。)内部锁在同步的两个方面都发挥作用：强制对对象状态进行独占访问，并建立对可见性至关重要的 happens-before 关系。</p>
-<p>每个对象都有一个与之相关联的内部锁。按照惯例，需要对对象字段进行独占和一致访问的线程必须在访问对象之前 <i>acquire (获取)</i> 对象的内部锁，然后在完成时 <i>release (释放)</i> 内部锁。一个线程被称为 <i>own (拥有)</i> 内部锁，在获取锁和释放锁定之间的时间段。只要一个线程拥有一个内部锁，其他线程就不可以获取相同的锁。另一个线程在尝试获取锁时将阻塞。</p>
+<p>每个对象都有一个与之相关联的内部锁。按照规范，需要对对象字段进行独占和一致访问的线程必须在访问对象之前 <i>acquire (获取)</i> 对象的内部锁，然后在完成时 <i>release (释放)</i> 内部锁。一个线程在获取锁和释放锁之间的时间段内，被称为 <i>own (拥有)</i> 内部锁。只要一个线程拥有一个内部锁，其他线程就不可以获取相同的锁。另一个线程在尝试获取锁时将阻塞。</p>
 <p>当线程释放内部锁时，在该操作与同一锁的任何后续获取之间建立 happens-before 关系。</p>
 <h2>同步方法中的锁</h2>
 <p>当线程调用同步方法时，它会自动获取该方法的对象的内部锁，并在方法返回时释放它。即使返回是由未捕获的异常引起的，也会释放锁。</p>
-<p>您可能想知道在调用静态同步方法时会发生什么，因为静态方法与类关联，而不是与对象关联。在这种情况下，线程获取与该类关联的 <code>Class</code> 对象的内部锁。因此，访问类的静态字段是由一个锁控制的，该锁与任何该类的实例的锁都不同。</p>
+<p>你可能想知道在调用静态同步方法时会发生什么，因为静态方法与类关联，而不是与对象关联。在这种情况下，线程获取与该类关联的 <code>Class</code> 对象的内部锁。因此，访问类的静态字段是由一个锁控制的，该锁与任何该类的实例的锁都不同。</p>
 <h2>同步语句</h2>
 <p>创建同步代码的另一种方法是使用 <i>synchronized statements (同步语句)</i>。与同步方法不同，同步语句必须指定提供内部锁的对象：</p>
 <div class="codeblock"><pre>
@@ -539,7 +539,7 @@ public void addName(String name) {
 }
 </pre></div>
 <p>在此示例中，<code>addName</code> 方法需要将更改同步到 <code>lastName</code> 和 <code>nameCount</code>，但还需要避免其他对象方法的同步调用。(从同步代码调用其他对象的方法可能会产生 <a href="liveness.html">Liveness</a> 一节中描述的问题。)如果没有同步语句，则必须有一个单独的，不同步的方法，仅用于调用 <code>nameList.add</code>。</p>
-<p>同步语句对于通过细粒度的同步来提高并发性也很有用。例如，假设 <code>MsLunch</code> 类有两个实例字段，<code>c1</code> 和 <code>c2</code>，它们从不一起使用。必须同步这些字段的所有更新，但是没有理由阻止 c1 的更新与 c2 的更新交错  这样做会创建不必要的阻塞，从而降低并发性。我们创建两个仅用于提供锁对象，而不是使用同步方法或使用与 <code>this</code> 关联的锁。</p>
+<p>同步语句对于通过细粒度的同步来提高并发性也很有用。例如，假设 <code>MsLunch</code> 类有两个实例字段，<code>c1</code> 和 <code>c2</code>，它们从不一起使用。必须同步这些字段的所有更新，但是没有理由阻止 c1 的更新与 c2 的更新交错  这样做会创建不必要的阻塞，从而降低并发性。我们创建了两个对象单独提供锁，而不是使用同步方法或使用与 <code>this</code> 关联的锁。</p>
 <div class="codeblock"><pre>
 public class MsLunch {
     private long c1 = 0;
@@ -560,7 +560,7 @@ public class MsLunch {
     }
 }
 </pre></div>
-<p>谨慎使用这种惯用方式。您必须绝对确保对受影响字段的访问进行交错是安全的。</p>
+<p>谨慎使用这种惯用方式。你必须绝对确保对受影响字段的访问进行交错是安全的。</p>
 <h2>Reentrant Synchronization (重入同步)</h2>
 <p>回想一下，线程无法获取另一个线程拥有的锁。但是线程 <i>can (可以)</i> 获取它已经拥有的锁。允许线程多次获取相同的锁启用了 <i>reentrant synchronization (重入同步)</i>。这描述了一种情况，其中同步代码直接或间接地调用也包含同步代码的方法，并且两组代码使用相同的锁。在没有重入同步的情况下，同步代码必须采取许多额外的预防措施，以避免线程导致自身阻塞。</p>
 

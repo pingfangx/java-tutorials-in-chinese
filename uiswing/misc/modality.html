@@ -497,7 +497,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">使用其他 Swing 功能</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="keybinding.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="printtable.html">Next&nbsp;»</a>
+                <a target="_top" href="keybinding.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="printtable.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>如何在对话框中使用模态</h1></div>
@@ -524,11 +524,10 @@
 <ul>
 <li><strong>Exclusion mode</strong> — Any top-level window can be marked not to be blocked by modal dialogs. This property enables you to set up the <em>modal exclusion</em> mode. The <code>Dialog.ModalExclusionType</code> enum specifies the possible modal exclusion types.</li>
 </ul>
-<div class="note"><hr /><strong>Note :</strong>&nbsp;The new modality model does not implement a system modality, which blocks all applications (including Java applications) that are displayed on the desktop while a modal dialog box is active.
-
+<div class="note"><hr /><strong>注意:</strong>&nbsp;The new modality model does not implement a system modality, which blocks all applications (including Java applications) that are displayed on the desktop while a modal dialog box is active.
 <hr /></div>
 <p>The ModalityDemo example demonstrates the first three of the four modality types mentioned above.</p>
-<center><a href="../../figures/uiswing/misc/modalityDemo.png" target="_top"><img src="../../figures/uiswing/misc/modalityDemo.png" width="684" height="434" align="bottom" alt="Four frames to demonstrate different modality types " /></a><br /><em>这个图已缩小以适合页面。 <br /> 单击图像以其自然大小查看。</em></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<center><a href="../../figures/uiswing/misc/modalityDemo.png" target="_top"><img src="../../figures/uiswing/misc/modalityDemo.png" width="684" height="434" align="bottom" alt="Four frames to demonstrate different modality types " /></a><br /><em>这个图已缩小以适合页面。 <br /> 单击图像以其自然大小查看。</em></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run ModalityDemo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/misc/index.html#ModalityDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ModalityDemoProject/ModalityDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" align="bottom" alt="Launches the ModalityDemo application" /></a><br /></li>
 <li>The following dialog boxes will appear:
@@ -544,8 +543,7 @@
 <li>The Biography title will be displayed in the title of the dialog box. Enter the name, for example - “John”, into the text field.</li>
 <li>Switch to the Book 1 frame and change the title to Funny Tale, then select OK. Since the dialog box for entering the name is <em>modeless</em>, you can easily switch to its <em>parent</em> frame.
 
-<div class="note"><hr /><strong>Note :</strong>&nbsp;The modeless dialog box title has been changed to Funny Tale.
-
+<div class="note"><hr /><strong>注意:</strong>&nbsp;The modeless dialog box title has been changed to Funny Tale.
 <hr /></div>
 </li>
 <li>Select OK in the modeless dialog box.</li>

@@ -514,7 +514,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="objectstreams.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="path.html">Next&nbsp;»</a>
+                <a target="_top" href="objectstreams.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="path.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>文件 I/O(采用 NIO.2)</h1></div>
@@ -522,13 +522,13 @@
 
 
 <hr />
-<p><strong>注意:</strong>本教程反映了 JDK 7 发行版中引入的文件 I/O 机制。文件 I/O 教程的 Java SE 6 版本很简短，但您可以下载包含早期文件 I/O 内容的教程的 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-tutorials-419421.html#tutorial-2008_03_14-oth-JPR">Java SE Tutorial 2008-03-14</a> 版本。</p>
+<p><strong>注意:</strong>本教程反映了 JDK 7 发行版中引入的文件 I/O 机制。文件 I/O 教程的 Java SE 6 版本很简短，但你可以下载包含早期文件 I/O 内容的教程的 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-tutorials-419421.html#tutorial-2008_03_14-oth-JPR">Java SE Tutorial 2008-03-14</a> 版本。</p>
 <hr />
-<p><code>java.nio.file</code> 包及其相关包 <code>java.nio.file.attribute</code> 为文件 I/O 和访问默认文件系统提供全面支持。虽然 API 有很多类，但您只需要关注几个入口点。您将看到此 API 非常直观且易于使用。</p>
+<p><code>java.nio.file</code> 包及其相关包 <code>java.nio.file.attribute</code> 为文件 I/O 和访问默认文件系统提供全面支持。虽然 API 有很多类，但你只需要关注几个入口点。你将看到此 API 非常直观且易于使用。</p>
 <p>本教程首先询问 <a class="TutorialLink" target="_top" href="path.html">what is a path?</a> 然后，引入 <a class="TutorialLink" target="_top" href="pathClass.html">Path class</a>（包的主要入口点）。解释了与 <a class="TutorialLink" target="_top" href="pathOps.html">syntactic operations</a> 相关的 <code>Path</code> 类中的方法。然后，本教程将转到包中的另一个主类 <code>Files</code> 类，其中包含处理文件操作的方法。首先，介绍了许多 <a class="TutorialLink" target="_top" href="fileOps.html">file operations</a> 共有的一些概念。然后，本教程将介绍 <a class="TutorialLink" target="_top" href="check.html">checking</a>，<a class="TutorialLink" target="_top" href="delete.html">deleting</a>，<a class="TutorialLink" target="_top" href="copy.html">copying</a> 和 <a class="TutorialLink" target="_top" href="move.html">moving</a> 文件的方法。</p>
 <p>本教程介绍如何管理 <a class="TutorialLink" target="_top" href="fileAttr.html">metadata</a>，然后再转到 <a class="TutorialLink" target="_top" href="file.html">file I/O</a> 和 <a class="TutorialLink" target="_top" href="dirs.html">directory I/O</a>。解释 <a class="TutorialLink" target="_top" href="rafs.html">Random access files</a>，并检查特定于 <a class="TutorialLink" target="_top" href="links.html">symbolic and hard links</a> 的问题。</p>
 <p>接下来，介绍一些非常强大但更高级的主题。首先，演示了 <a class="TutorialLink" target="_top" href="walk.html">recursively walk the file tree</a> 的功能，然后是有关如何 <a class="TutorialLink" target="_top" href="find.html">search for files using wild cards</a> 的信息。接下来，解释和演示如何 <a class="TutorialLink" target="_top" href="notification.html">watch a directory for changes</a>。然后， <a class="TutorialLink" target="_top" href="misc.html">methods that didn't fit elsewhere</a> 得到了一些关注。</p>
-<p>最后，如果您在 Java SE 7 发行版之前编写了文件 I/O 代码，那么从旧 API 到新 API 的 <a class="TutorialLink" target="_top" href="legacy.html#mapping">map from the old API to the new API</a>，以及有关 <code>File.toPath</code> 方法适用于希望 <a class="TutorialLink" target="_top" href="legacy.html#interop">leverage the new API without rewriting existing code</a>。</p>
+<p>最后，如果你在 Java SE 7 发行版之前编写了文件 I/O 代码，那么从旧 API 到新 API 的 <a class="TutorialLink" target="_top" href="legacy.html#mapping">map from the old API to the new API</a>，以及有关 <code>File.toPath</code> 方法适用于希望 <a class="TutorialLink" target="_top" href="legacy.html#interop">leverage the new API without rewriting existing code</a>。</p>
 
 
         </div>

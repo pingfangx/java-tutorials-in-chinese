@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>关于 ResourceBundle 类(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;隔离特定于区域设置的数据)
+        <title>关于 ResourceBundle 类(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;隔离特定于语言环境的数据)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
@@ -471,7 +471,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">隔离特定于区域设置的数据</a></div>
+            <div class="linkLESSON"><a href="index.html">隔离特定于语言环境的数据</a></div>
 <div class="nolinkAHEAD">关于 ResourceBundle 类</div>
 <div class="linkAHEAD"><a href="prepare.html">准备使用 ResourceBundle</a></div>
 <div class="linkAHEAD"><a href="propfile.html">使用属性文件支持 ResourceBundle</a></div>
@@ -485,16 +485,16 @@
         <br /><b>Lesson:</b> Isolating Locale-Specific Data
     </div>
             <div id="BreadCrumbs">
-                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">隔离特定于区域设置的数据</a>
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">隔离特定于语言环境的数据</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="prepare.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="prepare.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>关于 ResourceBundle 类</h1></div>
             <div id="PageContent">
 
-<h2>ResourceBundle 如何与区域设置相关联</h2>
+<h2>ResourceBundle 如何与语言环境相关联</h2>
 <p>从概念上讲，每个 <code>ResourceBundle</code> 是一组共享相同基本名称的相关子类。下面的列表显示了一组相关的子类。<code>ButtonLabel</code> 是基本名称。基本名称后面的字符表示 <code>Locale</code> 的语言代码，国家/地区代码和变体。例如，<code>ButtonLabel_en_GB</code> 匹配由英语语言代码(<code>en</code>)和英国国家代码(<code>GB</code>)指定的 <code>Locale</code>。</p>
 <div class="codeblock"><pre>
 ButtonLabel
@@ -520,9 +520,9 @@ ButtonLabel
 <p>请注意，<code>getBundle</code> 在选择基类(<code>ButtonLabel)</code> 之前，会根据默认的 <code>Locale</code> 查找类。如果 <code>getBundle</code> 无法在前面的类列表中找到匹配项，则会抛出 <code>MissingResourceException</code>。为避免抛出此异常，应始终提供不带后缀的基类。</p>
 <h2>ListResourceBundle 和 PropertyResourceBundle 子类</h2>
 <p>抽象类 <code>ResourceBundle</code> 有两个子类：<code>PropertyResourceBundle</code> 和 <code>ListResourceBundle</code>。</p>
-<p><code>PropertyResourceBundle</code> 由属性文件支持。属性文件是包含可翻译文本的纯文本文件。属性文件不是 Java 源代码的一部分，它们只能包含 <code>String</code> 对象的值。如果需要存储其他类型的对象，请改用 <code>ListResourceBundle</code>。<a href="propfile.html">Backing a ResourceBundle with Properties Files</a> 部分向您展示了如何使用 <code>PropertyResourceBundle</code>。</p>
-<p><code>ListResourceBundle</code> 类使用方便的列表管理资源。每个 <code>ListResourceBundle</code> 都由类文件支持。您可以将任何特定于语言环境的对象存储在 <code>ListResourceBundle</code> 中。要添加对其他 <code>Locale</code> 的支持，请创建另一个源文件并将其编译为类文件。<a href="list.html">Using a ListResource Bundle</a> 部分有一个您可能会觉得有用的编码示例。</p>
-<p><code>ResourceBundle</code> 类非常灵活。如果您首先将特定于语言环境的 <code>String</code> 对象放在 <code>PropertyResourceBundle</code> 中，然后决定使用 <code>ListResourceBundle</code>，那么对您的代码没有任何影响。例如，以下对 <code>getBundle</code> 的调用将为相应的 <code>Locale</code> 获取 <code>ResourceBundle</code>，无论 <code>ButtonLabel</code> 是由类或属性文件支持：</p>
+<p><code>PropertyResourceBundle</code> 由属性文件支持。属性文件是包含可翻译文本的纯文本文件。属性文件不是 Java 源代码的一部分，它们只能包含 <code>String</code> 对象的值。如果需要存储其他类型的对象，请改用 <code>ListResourceBundle</code>。<a href="propfile.html">Backing a ResourceBundle with Properties Files</a> 部分向你展示了如何使用 <code>PropertyResourceBundle</code>。</p>
+<p><code>ListResourceBundle</code> 类使用方便的列表管理资源。每个 <code>ListResourceBundle</code> 都由类文件支持。你可以将任何特定于语言环境的对象存储在 <code>ListResourceBundle</code> 中。要添加对其他 <code>Locale</code> 的支持，请创建另一个源文件并将其编译为类文件。<a href="list.html">Using a ListResource Bundle</a> 部分有一个你可能会觉得有用的编码示例。</p>
+<p><code>ResourceBundle</code> 类非常灵活。如果你首先将特定于语言环境的 <code>String</code> 对象放在 <code>PropertyResourceBundle</code> 中，然后决定使用 <code>ListResourceBundle</code>，那么对你的代码没有任何影响。例如，以下对 <code>getBundle</code> 的调用将为相应的 <code>Locale</code> 获取 <code>ResourceBundle</code>，无论 <code>ButtonLabel</code> 是由类或属性文件支持：</p>
 <div class="codeblock"><pre>
 ResourceBundle introLabels = ResourceBundle.getBundle(
                                  "ButtonLabel", currentLocale);
@@ -541,7 +541,7 @@ class ButtonLabel_en extends ListResourceBundle {
     };
 }
 </pre></div>
-<p>要从 <code>ResourceBundle</code> 中获取 <code>OK</code> <code>String</code>，您可以在调用 <code>getString</code> 时指定相应的键：</p>
+<p>要从 <code>ResourceBundle</code> 中获取 <code>OK</code> <code>String</code>，你可以在调用 <code>getString</code> 时指定相应的键：</p>
 <div class="codeblock"><pre>
 String okLabel = ButtonLabel.getString(&quot;OkKey&quot;);
 </pre></div>

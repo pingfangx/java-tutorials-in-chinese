@@ -515,14 +515,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="charstreams.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="scanfor.html">Next&nbsp;»</a>
+                <a target="_top" href="charstreams.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="scanfor.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>缓冲流</h1></div>
             <div id="PageContent">
 
-<p>到目前为止，我们看到的大多数示例都使用 <i>unbuffered</i> I/O。这意味着每个读取或写入请求都由底层操作系统直接处理。这可以使程序效率低得多，因为每个这样的请求经常触发磁盘访问，网络活动或一些相对昂贵的其他操作。</p>
-<p>为了减少这种开销，Java 平台实现了 <i>buffered (缓冲的)</i> I/O 流。缓冲输入流从称为 <i>buffer</i> 的存储区读取数据；仅当缓冲区为空时才调用原生输入 API。类似地，缓冲输出流将数据写入缓冲区，并且仅在缓冲区已满时才调用原生输出 API。</p>
+<p>到目前为止，我们看到的大多数示例都使用 <i>unbuffered (无缓冲)</i> I/O。这意味着每个读取或写入请求都由底层操作系统直接处理。这可以使程序效率低得多，因为每个这样的请求经常触发磁盘访问，网络活动或一些相对昂贵的其他操作。</p>
+<p>为了减少这种开销，Java 平台实现了 <i>buffered (缓冲)</i> I/O 流。缓冲输入流从称为 <i>buffer</i> 的存储区读取数据；仅当缓冲区为空时才调用原生输入 API。类似地，缓冲输出流将数据写入缓冲区，并且仅在缓冲区已满时才调用原生输出 API。</p>
 <p>程序可以使用我们现在多次使用的包装习惯用法将无缓冲的流转换为缓冲流，其中无缓冲的流对象被传递给缓冲流类的构造函数。以下是如何修改 <code>CopyCharacters</code> 示例中的构造函数调用以使用缓冲 I/O：</p>
 <div class="codeblock"><pre>
 inputStream = new BufferedReader(new FileReader("xanadu.txt"));
@@ -531,7 +531,7 @@ outputStream = new BufferedWriter(new FileWriter("characteroutput.txt"));
 <p>有四个用于包装无缓冲流的缓冲流类：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedInputStream.html"><code>BufferedInputStream</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedOutputStream.html"><code>BufferedOutputStream</code></a> 创建缓冲字节流，而 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html"><code>BufferedReader</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWriter.html"><code>BufferedWriter</code></a> 创建缓冲字符流。</p>
 <h2>刷新缓冲流</h2>
 <p>在关键点写出缓冲区通常是有意义的，而无需等待它填充。这被称为 <i>flushing (刷新)</i> 缓冲区。</p>
-<p>一些缓冲的输出类支持 <i>autoflush (自动刷新)</i>，由可选的构造函数参数指定。启用自动刷新时，某些键事件会导致刷新缓冲区。例如，自动刷新的 <code>PrintWriter</code> 对象在每次调用 <code>println</code> 或 <code>format</code> 时刷新缓冲区。有关这些方法的更多信息，请参见 <a href="formatting.html">Formatting</a>。</p>
+<p>一些缓冲的输出类支持 <i>autoflush (自动刷新)</i>，由可选的构造函数参数指定。启用自动刷新时，某些关键事件会导致刷新缓冲区。例如，自动刷新的 <code>PrintWriter</code> 对象在每次调用 <code>println</code> 或 <code>format</code> 时刷新缓冲区。有关这些方法的更多信息，请参见 <a href="formatting.html">Formatting</a>。</p>
 <p>要手动刷新流，请调用其 <code>flush</code> 方法。<code>flush</code> 方法在任何输出流上都有效，但除非流是缓冲流，否则无效。</p>
 
 

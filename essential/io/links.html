@@ -515,14 +515,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="dirs.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="walk.html">Next&nbsp;»</a>
+                <a target="_top" href="dirs.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="walk.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>链接，符号或其他</h1></div>
             <div id="PageContent"><!-- Links, Symbolic or Otherwise -->
 
 
-<p>如前所述，<code>java.nio.file</code> 包，特别是 <code>Path</code> 类是“链接感知的”。每个 <code>Path</code> 方法都会检测遇到符号链接时要执行的操作，或者它提供了一个选项，使您可以在遇到符号链接时配置行为。</p>
+<p>如前所述，<code>java.nio.file</code> 包，特别是 <code>Path</code> 类是“链接感知的”。每个 <code>Path</code> 方法都会检测遇到符号链接时要执行的操作，或者它提供了一个选项，使你可以配置在遇到符号链接时行为。</p>
 <p>到目前为止的讨论是关于 <a class="TutorialLink" target="_top" href="path.html#symlink">symbolic or <em>soft</em> links</a>，但有些文件系统也支持硬链接。<em>Hard links</em> 比符号链接更具限制性，如下所示：</p>
 <ul>
 <li>链接的目标必须存在。</li>
@@ -555,7 +555,7 @@ try {
 </pre></div>
 <p>使用 <code>FileAttributes</code> vararg 可以指定在创建链接时以原子方式设置的初始文件属性。但是，此参数仅供将来使用，目前尚未实现。</p>
 <h2><a name="hardLink" id="hardLink">创建硬链接</a></h2>
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createLink-java.nio.file.Path-java.nio.file.Path-"><code>createLink(Path, Path)</code></a> 方法创建指向现有文件的硬(或 <em>regular</em>)链接。第二个 <code>Path</code> 参数定位现有文件，它必须存在否则会抛出 <code>NoSuchFileException</code>。以下代码段显示了如何创建链接：</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createLink-java.nio.file.Path-java.nio.file.Path-"><code>createLink(Path, Path)</code></a> 方法创建指向现有文件的硬(或 <em>regular</em>)链接。第二个 <code>Path</code> 参数定位现有文件，它必须存在否则会抛出 <code>NoSuchFileException</code>。以下代码段显示了如何创建链接：</p>
 <div class="codeblock"><pre>
 Path newLink = ...;
 Path existingFile = ...;
@@ -579,7 +579,7 @@ boolean isSymbolicLink =
 </pre></div>
 <p>有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="fileAttr.html">Managing Metadata</a>。</p>
 <h2><a name="read" id="read">寻找链接的目标</a></h2>
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readSymbolicLink-java.nio.file.Path-"><code>readSymbolicLink(Path)</code></a> 方法获取符号链接的目标，如下所示：</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readSymbolicLink-java.nio.file.Path-"><code>readSymbolicLink(Path)</code></a> 方法获取符号链接的目标，如下所示：</p>
 <div class="codeblock"><pre>
 Path link = ...;
 try {

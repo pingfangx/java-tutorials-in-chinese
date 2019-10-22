@@ -491,7 +491,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">包</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="usepkgs.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summary-package.html">Next&nbsp;»</a>
+                <a target="_top" href="usepkgs.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summary-package.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>管理源文件和类文件</h1></div>
@@ -517,7 +517,7 @@ public class Rectangle {
 <li><strong>pathname to file</strong> – <code>graphics\Rectangle.java</code></li>
 </ul>
 
-<p>您应该记得，按照惯例，公司使用其反向的互联网域名作为其包名。示例公司的 Internet 域名为 <code>example.com</code>，它的所有包名都以 <code>com.example</code> 开头。包名称的每个组件对应一个子目录。因此，如果 Example 公司有一个包含 <code>Rectangle.java</code> 源文件的 <code>com.example.graphics</code> 包，它将包含在一系列子目录中，如下所示：</p>
+<p>你应该记得，按照规范，公司使用其反向的互联网域名作为其包名。示例公司的 Internet 域名为 <code>example.com</code>，它的所有包名都以 <code>com.example</code> 开头。包名称的每个组件对应一个子目录。因此，如果 Example 公司有一个包含 <code>Rectangle.java</code> 源文件的 <code>com.example.graphics</code> 包，它将包含在一系列子目录中，如下所示：</p>
 <div class="codeblock"><pre>
 ....\com\example\graphics\Rectangle.java
 </pre></div>
@@ -538,18 +538,18 @@ class Helper{
 &lt;path to the parent directory of the output files&gt;\com\example\graphics\Rectangle.class
 &lt;path to the parent directory of the output files&gt;\com\example\graphics\Helper.class
 </pre></div>
-<p>与 <code>.java</code> 源文件一样，已编译的 <code>.class</code> 文件应位于一系列反映包名称的目录中。但是，<code>.class</code> 文件的路径不必与 <code>.java</code> 源文件的路径相同。您可以单独排列源目录和类目录，如下所示：</p>
+<p>与 <code>.java</code> 源文件一样，已编译的 <code>.class</code> 文件应位于一系列反映包名称的目录中。但是，<code>.class</code> 文件的路径不必与 <code>.java</code> 源文件的路径相同。你可以单独排列源目录和类目录，如下所示：</p>
 <div class="codeblock"><pre>
 &lt;path_one&gt;\sources\com\example\graphics\Rectangle.java
 
 &lt;path_two&gt;\classes\com\example\graphics\Rectangle.class
 </pre></div>
-<p>通过这样做，您可以将 <code>classes</code> 目录提供给其他程序员而不会泄露您的源。您还需要以这种方式管理源文件和类文件，以便编译器和 Java 虚拟机(JVM)可以找到程序使用的所有类型。</p>
+<p>通过这样做，你可以将 <code>classes</code> 目录提供给其他程序员而不会泄露你的源。你还需要以这种方式管理源文件和类文件，以便编译器和 Java 虚拟机(JVM)可以找到程序使用的所有类型。</p>
 <p><code>classes</code> 目录的完整路径 <code>&lt;path_two&gt;\classes</code> 称为 <i>class path</i>，并使用 <code>CLASSPATH</code> 系统变量设置。编译器和 JVM 都通过将包名称添加到类路径来构造 <code>.class</code> 文件的路径。例如，如果</p>
 <div class="codeblock"><pre>
 &lt;path_two&gt;\classes
 </pre></div>
-<p>是您的类路径，包名是</p>
+<p>是你的类路径，包名是</p>
 <div class="codeblock"><pre>
 com.example.graphics,
 </pre></div>

@@ -474,7 +474,7 @@
             <div class="linkLESSON"><a href="index.html">使用文本</a></div>
 <div class="linkAHEAD"><a href="charintro.html">检查字符属性</a></div>
 <div class="linkAHEAD"><a href="collationintro.html">比较字符串</a></div>
-<div class="linkBHEAD"><a href="locale.html">执行与区域设置无关的比较</a></div>
+<div class="linkBHEAD"><a href="locale.html">执行与语言环境无关的比较</a></div>
 <div class="linkBHEAD"><a href="rule.html">自定义排序规则</a></div>
 <div class="linkBHEAD"><a href="perform.html">提高排序性能</a></div>
 <div class="linkAHEAD"><a href="unicode.html">Unicode</a></div>
@@ -507,14 +507,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">使用文本</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="line.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="convertintro.html">Next&nbsp;»</a>
+                <a target="_top" href="line.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="convertintro.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>将拉丁数字转换为其他 Unicode 数字</h1></div>
             <div id="PageContent"><!-- Converting Latin Digits to Other Unicode Digits -->
 
 
-<p>默认情况下，当文本包含数字值时，将使用拉丁(欧洲)数字显示这些值。如果首选其他 Unicode 数字形状，请使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.html"><code>java.awt.font.NumericShaper</code></a> 类。<code>NumericShaper</code> API 使您可以显示数值，其在内部表示为任何 Unicode 数字形状的 ASCII 值。</p>
+<p>默认情况下，当文本包含数字值时，将使用拉丁(欧洲)数字显示这些值。如果首选其他 Unicode 数字形状，请使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.html"><code>java.awt.font.NumericShaper</code></a> 类。<code>NumericShaper</code> API 使你可以显示数值，其在内部表示为任何 Unicode 数字形状的 ASCII 值。</p>
 <p>以下代码片段，来自 <a class="SourceLink" target="_blank" href="examples/ArabicDigits.java" onclick="showCode('../../displayCode.html', 'examples/ArabicDigits.java'); return false;"><code>ArabicDigits</code></a> 示例，显示了如何使用 <code>NumericShaper</code> 实例将拉丁数字转换为阿拉伯数字。确定转换操作的行是粗体。</p>
 <div class="codeblock"><pre>
 ArabicDigitsPanel(String fontname) {
@@ -535,7 +535,7 @@ public void paint(Graphics g) {
     layout.draw(g2d, 10, 50);
 }
 </pre></div>
-<p>获取阿拉伯文数字的 <code>NumericShaper</code> 实例，并将其放入 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextAttribute.html#NUMERIC_SHAPING"><code>TextLayout.NUMERIC_SHAPING （译注：应该是 TextAttribute.NUMERIC_SHAPING）</code></a> 属性键的 <code>HashMap</code> 中。hash map 将传递给 <code>TextLayout</code> 实例。在 <code>paint</code> 方法中渲染文本后，数字将显示在所需的脚本中。在此示例中，拉丁数字 0 到 9 绘制为阿拉伯文数字。</p>
+<p>获取阿拉伯文数字的 <code>NumericShaper</code> 实例，并将其放入 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextAttribute.html#NUMERIC_SHAPING"><code>TextLayout.NUMERIC_SHAPING </code></a>（译注：应该是 TextAttribute.NUMERIC_SHAPING） 属性键的 <code>HashMap</code> 中。hash map 将传递给 <code>TextLayout</code> 实例。在 <code>paint</code> 方法中渲染文本后，数字将显示在所需的脚本中。在此示例中，拉丁数字 0 到 9 绘制为阿拉伯文数字。</p>
 <center><img src="../../figures/i18n/ArabicDigits.png" width="589" height="102" align="bottom" alt="ArabicDigits 示例输出显示从 0 到 9 的阿拉伯文数字" /></center><p>前面的示例使用 <code>NumericShaper.ARABIC</code> 常量来获取所需的形状器，但 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.html#field_summary"><code>NumericShaper</code></a> 类为许多语言提供常量。这些常量被定义为位掩码，并被称为 <code>NumericShaper</code> <em>bit mask-based constants (位掩码的常量)</em>。</p>
 <h2>基于枚举的范围常量</h2>
 <p>指定特定数字集的另一种方法是使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.Range.html"><code>NumericShaper.Range</code></a> 枚举类型(枚举)。在 Java SE 7 发行版中引入的这个枚举也提供了一组 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.Range.html#field_summary">constants</a>。虽然这些常量是使用不同的机制定义的，但 <code>NumericShaper.ARABIC</code> 位掩码在功能上等同于 <code>NumericShaper.Range.ARABIC</code> 枚举，并且每种常量类型有一个相应的 <code>getShaper</code> 方法：</p>
@@ -557,7 +557,7 @@ ArabicDigitsEnumPanel(String fontname) {
     layout = new TextLayout(text, map, frc);
 }
 </pre></div>
-<p>两个 <code>getShaper</code> 方法都接受 <code>singleRange</code> 参数。使用常量类型，您可以指定一系列特定于脚本的数字。可以使用 <code>OR</code> 操作数组合基于位掩码的常量，也可以创建一组 <code>NumericShaper.Range</code> 枚举。以下显示如何使用每个常量类型定义范围：</p>
+<p>两个 <code>getShaper</code> 方法都接受 <code>singleRange</code> 参数。使用常量类型，你可以指定一系列特定于脚本的数字。可以使用 <code>OR</code> 操作数组合基于位掩码的常量，也可以创建一组 <code>NumericShaper.Range</code> 枚举。以下显示如何使用每个常量类型定义范围：</p>
 <div class="codeblock"><pre>
 NumericShaper.MONGOLIAN | NumericShaper.THAI |
 NumericShaper.TIBETAN
@@ -566,8 +566,8 @@ EnumSet.of(
     NumericShaper.Range.THAI,
     NumericShaper.Range.TIBETAN)
 </pre></div>
-<p>您可以请求 <code>NumericShaper</code> 对象以确定它支持，使用基于位掩码的形状器的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.html#getRanges--"><code>getRanges</code></a> 方法或基于枚举的形状器的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.html#getRangeSet--"><code>getRangeSet</code></a> 方法。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>您可以使用传统的基于位掩码的常量或基于 <code>Range</code> 枚举的常量。在决定使用哪个时，请考虑以下几点：</p>
+<p>你可以请求 <code>NumericShaper</code> 对象以确定它支持，使用基于位掩码的形状器的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.html#getRanges--"><code>getRanges</code></a> 方法或基于枚举的形状器的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.html#getRangeSet--"><code>getRangeSet</code></a> 方法。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>你可以使用传统的基于位掩码的常量或基于 <code>Range</code> 枚举的常量。在决定使用哪个时，请考虑以下几点：</p>
 <ul>
 <li><code>Range</code> API 需要 JDK 7 或更高版本。</li>
 <li><code>Range</code> API 涵盖了比位掩码 API 更多的 Unicode 范围。</li>
@@ -576,7 +576,7 @@ EnumSet.of(
 <hr /></div>
 <h2>根据语言上下文呈现数字</h2>
 <p><a class="SourceLink" target="_blank" href="examples/ArabicDigits.java" onclick="showCode('../../displayCode.html', 'examples/ArabicDigits.java'); return false;"><code>ArabicDigits</code></a> 示例旨在将形状器用于特定语言，但有时必须根据语言上下文呈现数字。例如，如果数字前面的文本使用泰语脚本，则首选泰语数字。如果文本以藏文显示，则首选藏文数字。</p>
-<p>您可以使用 <code>getContextualShaper</code> 方法之一完成此操作：</p>
+<p>你可以使用 <code>getContextualShaper</code> 方法之一完成此操作：</p>
 <ul>
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.html#getContextualShaper-int-">getContextualShaper(int ranges)</a></li>
@@ -587,7 +587,7 @@ EnumSet.of(
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.html#getContextualShaper-java.util.Set-java.awt.font.NumericShaper.Range-">getContextualShaper(Set&lt;NumericShaper.Range&gt; ranges, NumericShaper.Range defaultContext)</a></li>
 </ul>
-<p>前两个方法使用位掩码常量，后两个使用枚举常量。接受 <code>defaultContext</code> 参数的方法使您可以指定在文本之前显示数值时使用的初始形状器。如果未定义默认上下文，则任何前导数字使用拉丁形状显示。</p>
+<p>前两个方法使用位掩码常量，后两个使用枚举常量。接受 <code>defaultContext</code> 参数的方法使你可以指定在文本之前显示数值时使用的初始形状器。如果未定义默认上下文，则任何前导数字使用拉丁形状显示。</p>
 <p><a class="SourceLink" target="_blank" href="examples/ShapedDigits.java" onclick="showCode('../../displayCode.html', 'examples/ShapedDigits.java'); return false;"><code>ShapedDigits</code></a> 示例显示了形状器的工作方式。显示五个文本布局：</p>
 <ol>
 <li>第一种布局不使用形状器；所有数字均显示为拉丁文。</li>

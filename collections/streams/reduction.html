@@ -486,7 +486,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">聚合操作</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="parallelism.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="parallelism.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>缩减</h1></div>
@@ -502,7 +502,7 @@
     .average()
     .getAsDouble();</pre>
     
-<p>JDK 包含许多终端操作(例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html#average--java/lang/reflect/Executable.html"><code>average</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html#sum--"><code>sum</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#min-java.util.Comparator-"><code>min</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#max-java.util.Comparator-"><code>max</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#count--"><code>count</code></a>)通过组合流的内容返回一个值。这些操作称为 <em>reduction operations (缩减操作)</em>。JDK 还包含返回集合而不是单个值的缩减操作。许多缩减操作执行特定任务，例如查找值的平均值或将元素分组到类别中。但是，JDK 为您提供了通用的缩减操作 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#reduce-T-java.util.function.BinaryOperator-"><code>reduce</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#collect-java.util.function.Supplier-java.util.function.BiConsumer-java.util.function.BiConsumer-"><code>collect</code></a>，本节将详细介绍。</p>
+<p>JDK 包含许多终端操作(例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html#average--java/lang/reflect/Executable.html"><code>average</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html#sum--"><code>sum</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#min-java.util.Comparator-"><code>min</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#max-java.util.Comparator-"><code>max</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#count--"><code>count</code></a>)通过组合流的内容返回一个值。这些操作称为 <em>reduction operations (缩减操作)</em>。JDK 还包含返回集合而不是单个值的缩减操作。许多缩减操作执行特定任务，例如查找值的平均值或将元素分组到类别中。但是，JDK 为你提供了通用的缩减操作 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#reduce-T-java.util.function.BinaryOperator-"><code>reduce</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#collect-java.util.function.Supplier-java.util.function.BiConsumer-java.util.function.BiConsumer-"><code>collect</code></a>，本节将详细介绍。</p>
 
 <p>本节包括以下主题：</p>
 
@@ -511,7 +511,7 @@
   <li><a href="#collect">Stream.collect 方法</a></li>
 </ul>
 
-<p>您可以在示例 <a class="SourceLink" target="_blank" href="examples/ReductionExamples.java" onclick="showCode('../../displayCode.html', 'examples/ReductionExamples.java'); return false;"><code>ReductionExamples</code></a> 中找到本节中描述的代码片段。</p>
+<p>你可以在示例 <a class="SourceLink" target="_blank" href="examples/ReductionExamples.java" onclick="showCode('../../displayCode.html', 'examples/ReductionExamples.java'); return false;"><code>ReductionExamples</code></a> 中找到本节中描述的代码片段。</p>
 
 <h2><a name="reduce">Stream.reduce 方法</a></h2>
 
@@ -543,13 +543,13 @@
 
 </ul>
 
-<p><code>reduce</code> 操作始终返回新值。但是，累加器函数每次处理流的元素时也会返回一个新值。假设您要将流的元素减少为更复杂的对象，例如集合。这可能会妨碍您的应用程序的性能。如果 <code>reduce</code> 操作涉及向集合添加元素，那么每次累加器函数处理元素时，它都会创建一个包含元素的新集合，这是低效的。相反，更新现有集合会更有效。您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#collect-java.util.function.Supplier-java.util.function.BiConsumer-java.util.function.BiConsumer-"><code>Stream.collect</code></a> 方法执行此操作，下一节将介绍该方法。</p>
+<p><code>reduce</code> 操作始终返回新值。但是，累加器函数每次处理流的元素时也会返回一个新值。假设你要将流的元素减少为更复杂的对象，例如集合。这可能会妨碍你的应用程序的性能。如果 <code>reduce</code> 操作涉及向集合添加元素，那么每次累加器函数处理元素时，它都会创建一个包含元素的新集合，这是低效的。相反，更新现有集合会更有效。你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#collect-java.util.function.Supplier-java.util.function.BiConsumer-java.util.function.BiConsumer-"><code>Stream.collect</code></a> 方法执行此操作，下一节将介绍该方法。</p>
 
 <h2><a name="collect">Stream.collect 方法</a></h2>
 
 <p>与 <code>reduce</code> 方法(在处理元素时始终创建新值)不同，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#collect-java.util.function.Supplier-java.util.function.BiConsumer-java.util.function.BiConsumer-"><code>collect</code></a> 方法修改或改变现有值。</p>
 
-<p>考虑如何在流中查找值的平均值。您需要两个数据：值的总数和这些值的总和。但是，与 <code>reduce</code> 方法和所有其他缩减方法一样，<code>collect</code> 方法只返回一个值。您可以创建一个包含成员变量的新数据类型，这些成员变量跟踪值的总数以及这些值的总和，例如以下类 <a class="SourceLink" target="_blank" href="examples/Averager.java" onclick="showCode('../../displayCode.html', 'examples/Averager.java'); return false;"><code>Averager</code></a>：</p>
+<p>考虑如何在流中查找值的平均值。你需要两个数据：值的总数和这些值的总和。但是，与 <code>reduce</code> 方法和所有其他缩减方法一样，<code>collect</code> 方法只返回一个值。你可以创建一个包含成员变量的新数据类型，这些成员变量跟踪值的总数以及这些值的总和，例如以下类 <a class="SourceLink" target="_blank" href="examples/Averager.java" onclick="showCode('../../displayCode.html', 'examples/Averager.java'); return false;"><code>Averager</code></a>：</p>
 
 <pre class="codeblock">class Averager implements IntConsumer
 {
@@ -593,11 +593,11 @@ System.out.println("Average age of male members: " +
   
   <li>累加器和组合器函数不返回值。</li>
   
-  <li>您可以对并行流使用 <code>collect</code> 操作；有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/streams/parallelism.html">Parallelism</a> 部分。(如果使用并行流运行 <code>collect</code> 方法，则每当组合器函数创建新对象时，JDK 都会创建一个新线程，例如本例中的 <code>Averager</code> 对象。因此，您不必担心同步。)</li>  
+  <li>你可以对并行流使用 <code>collect</code> 操作；有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/streams/parallelism.html">Parallelism</a> 部分。(如果使用并行流运行 <code>collect</code> 方法，则每当组合器函数创建新对象时，JDK 都会创建一个新线程，例如本例中的 <code>Averager</code> 对象。因此，你不必担心同步。)</li>  
   
 </ul>
 
-<p>虽然 JDK 为您提供了 <code>average</code> 操作来计算流中元素的平均值，但是如果需要计算几个来自流的元素的值，可以使用 <code>collect</code> 操作和自定义类。</p>
+<p>虽然 JDK 为你提供了 <code>average</code> 操作来计算流中元素的平均值，但是如果需要计算几个来自流的元素的值，可以使用 <code>collect</code> 操作和自定义类。</p>
 
 <p><code>collect</code> 操作最适合集合。以下示例使用 <code>collect</code> 操作将男性成员的名称放在集合中：</p>
 
@@ -609,7 +609,7 @@ System.out.println("Average age of male members: " +
     
 <p>此版本的 <code>collect</code> 操作采用一个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html"><code>Collector</code></a> 类型的参数。此类封装了在 <code>collect</code> 操作中用作参数的函数，该函数需要三个参数(supplier，accumulator 和 combiner 函数)。</p>
 
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html"><code>Collectors</code></a> 类包含许多有用的缩减操作，例如将元素累积到集合中以及根据各种标准汇总元素。这些缩减操作返回类 <code>Collector</code> 的实例，因此您可以将它们用作 <code>collect</code> 操作的参数。</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html"><code>Collectors</code></a> 类包含许多有用的缩减操作，例如将元素累积到集合中以及根据各种标准汇总元素。这些缩减操作返回类 <code>Collector</code> 的实例，因此你可以将它们用作 <code>collect</code> 操作的参数。</p>
 
 <p>此示例使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#toList--"><code>Collectors.toList</code></a> 操作，该操作将流元素累积到 <code>List</code> 的新实例中。与 <code>Collectors</code> 类中的大多数操作一样，<code>toList</code> 运算符返回 <code>Collector</code> 的实例，而不是集合。</p>
 
@@ -635,7 +635,7 @@ System.out.println("Average age of male members: " +
                     Person::getName,
                     Collectors.toList())));</pre>
                     
-<p>此示例中的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#groupingBy-java.util.function.Function-java.util.stream.Collector-"><code>groupingBy</code></a> 操作采用两个参数，分类函数和 <code>Collector</code> 的实例。<code>Collector</code> 参数称为 <em>downstream collector (下游收集器)</em>。这是 Java 运行时应用于另一个收集器的结果的收集器。因此，通过此 <code>groupingBy</code> 操作，您可以将 <code>collect</code> 方法应用于 <code>groupingBy</code> 运算符创建的 <code>List</code> 值。此示例应用收集器 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#mapping-java.util.function.Function-java.util.stream.Collector-java.util.stream.Collector-"><code>mapping</code></a>，它将映射函数 <code>Person::getName</code> 应用于流的每个元素。因此，生成的流只包含成员的名称。包含一个或多个下游收集器的管道(如此示例)称为 <em>multilevel reduction (多级缩减)</em>。</p>
+<p>此示例中的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#groupingBy-java.util.function.Function-java.util.stream.Collector-"><code>groupingBy</code></a> 操作采用两个参数，分类函数和 <code>Collector</code> 的实例。<code>Collector</code> 参数称为 <em>downstream collector (下游收集器)</em>。这是 Java 运行时应用于另一个收集器的结果的收集器。因此，通过此 <code>groupingBy</code> 操作，你可以将 <code>collect</code> 方法应用于 <code>groupingBy</code> 运算符创建的 <code>List</code> 值。此示例应用收集器 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#mapping-java.util.function.Function-java.util.stream.Collector-java.util.stream.Collector-"><code>mapping</code></a>，它将映射函数 <code>Person::getName</code> 应用于流的每个元素。因此，生成的流只包含成员的名称。包含一个或多个下游收集器的管道(如此示例)称为 <em>multilevel reduction (多级缩减)</em>。</p>
 
 <p>以下示例获取每个性别的成员的总年龄：</p>
 

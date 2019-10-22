@@ -484,14 +484,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">国际化服务提供者</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../end.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../end.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>将自定义资源包安装为扩展</h1></div>
             <div id="PageContent">
 
 
-<p><a class="TutorialLink" target="_top" href="../../i18n/resbundle/control.html">Customizing Resource Bundle Loading</a> 部分向您展示了如何更改资源包的加载方式。这涉及从类 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.Control.html"><code>ResourceBundle.Control</code></a> 派生一个新类，然后通过调用以下方法获取资源包：</p>
+<p><a class="TutorialLink" target="_top" href="../../i18n/resbundle/control.html">Customizing Resource Bundle Loading</a> 部分向你展示了如何更改资源包的加载方式。这涉及从类 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.Control.html"><code>ResourceBundle.Control</code></a> 派生一个新类，然后通过调用以下方法获取资源包：</p>
 
 <div class="codeblock"><pre>
 ResourceBundle getBundle(
@@ -502,7 +502,7 @@ ResourceBundle getBundle(
 
 <p>参数 <code>control</code> 是 <code>ResourceBundle.Control</code> 的实现。</p>
                        
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/spi/ResourceBundleControlProvider.html"><code>java.util.spi.ResourceBundleControlProvider</code></a> 接口使您可以更改以下方法加载资源包的方式：</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/spi/ResourceBundleControlProvider.html"><code>java.util.spi.ResourceBundleControlProvider</code></a> 接口使你可以更改以下方法加载资源包的方式：</p>
 
 <div class="codeblock"><pre>
 ResourceBundle getBundle(
@@ -510,12 +510,12 @@ ResourceBundle getBundle(
   Locale targetLocale)
 </pre></div>
 
-<p>请注意，此版本的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.html#getBundle-java.lang.String-java.util.Locale-"><code>ResourceBundle.getBundle</code></a> 方法不需要 <code>ResourceBundle.Control</code> 类的实例。<code>ResourceBundleControlProvider</code> 是服务提供者接口(SPI)。SPI 使您能够创建可扩展的应用程序，这些应用程序可以轻松扩展而无需修改其原始代码源。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../../ext/basics/spi.html">Creating Extensible Applications</a>。</p>
+<p>请注意，此版本的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.html#getBundle-java.lang.String-java.util.Locale-"><code>ResourceBundle.getBundle</code></a> 方法不需要 <code>ResourceBundle.Control</code> 类的实例。<code>ResourceBundleControlProvider</code> 是服务提供者接口(SPI)。SPI 使你能够创建可扩展的应用程序，这些应用程序可以轻松扩展而无需修改其原始代码源。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../../ext/basics/spi.html">Creating Extensible Applications</a>。</p>
  
 <p>要使用 SPI，首先要通过实现类似 <code>ResourceBundleControlProvider</code> 的 SPI 来创建服务提供者。实现 SPI 时，指定它将如何提供服务。<code>ResourceBundleControlProvider</code> SPI 提供的服务是在应用程序调用方法 <code>ResourceBundle.getBundle(String baseName, Locale targetLocale)</code> 方法时获取适当的 <code>ResourceBundle.Control</code> 实例。使用 <a class="TutorialLink" target="_top" href="../../ext/index.html">Java Extension Mechanism</a> 将服务提供程序打包为安装型扩展。运行应用程序时，不要在类路径中命名扩展名；运行时环境查找并加载这些扩展。</p>
  
  
-<p>安装型的 <code>ResourceBundleControlProvider</code> SPI 实现替换了默认的 <code>ResourceBundle.Control</code> 类(定义了默认的 bundle 加载过程)。因此，<code>ResourceBundleControlProvider</code> 接口使您可以使用任何自定义 <code>ResourceBundle.Control</code> 类，而无需对应用程序的源代码进行任何其他更改。此外，此接口使您可以编写应用程序，而无需引用任何自定义 <code>ResourceBundle.Control</code> 类。</p> 
+<p>安装型的 <code>ResourceBundleControlProvider</code> SPI 实现替换了默认的 <code>ResourceBundle.Control</code> 类(定义了默认的 bundle 加载过程)。因此，<code>ResourceBundleControlProvider</code> 接口使你可以使用任何自定义 <code>ResourceBundle.Control</code> 类，而无需对应用程序的源代码进行任何其他更改。此外，此接口使你可以编写应用程序，而无需引用任何自定义 <code>ResourceBundle.Control</code> 类。</p> 
  
 <p><a class="SourceLink" target="_blank" href="examples/rbcpsample/src/RBCPTest.java" onclick="showCode('../../displayCode.html', 'examples/rbcpsample/src/RBCPTest.java'); return false;"><code><code>RBCPTest.java</code></code></a> 示例显示了如何实现 <code>ResourceBundleControlProvider</code> 接口以及如何将其打包为安装型扩展。此示例包装在 zip 文件 <code><a href="examples/rbcpsample/RBCPTest.zip">RBCPTest.zip</a></code> 中，包含以下文件：</p>
 
@@ -576,7 +576,7 @@ ResourceBundle getBundle(
 <ol>
   <li><a href="#create-implementations-of-resourcebundle.control">创建 ResourceBundle.Control 类的实现。</a></li>
   <li><a href="#implement-resourcebundlecontrolprovider">实现 ResourceBundleControlProvider 接口。</a></li>
-  <li><a href="#invoke-resourcebundle.getbundle">在您的应用程序中，调用 ResourceBundle.getBundle 方法。</a></li>
+  <li><a href="#invoke-resourcebundle.getbundle">在你的应用程序中，调用 ResourceBundle.getBundle 方法。</a></li>
   <li><a href="#register-service-provider">通过创建配置文件注册服务提供者。</a></li>
   <li><a href="#package-provider">将提供程序，其必需的类和配置文件打包在 JAR 文件中。</a></li>
   <li><a href="#run-rbcptest">运行 RBCPTest 程序。</a></li>
@@ -630,7 +630,7 @@ type = XML
 <p>所有 XML 属性文本文件都具有相同的结构：</p>
 
 <ul>
-  <li><p>指定文档类型定义(DTD)的 DOCTYPE 声明：DTD 定义 XML 文件的结构。<strong>注意</strong>:您可以在 XML 属性文件中使用以下 DOCTYPE 声明：</p>
+  <li><p>指定文档类型定义(DTD)的 DOCTYPE 声明：DTD 定义 XML 文件的结构。<strong>注意</strong>:你可以在 XML 属性文件中使用以下 DOCTYPE 声明：</p>
 
 <pre class="codeblock">
 &lt;!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd"&gt;  
@@ -686,11 +686,11 @@ public class PropertiesResourceBundleControlProvider
 
 <p>类似地，如果资源包的基本名称以 <code>resources.Xml</code> 开头，则方法 <code>XMLResourceBundleControlProvider.getControl</code> 将返回 <code>XMLResourceBundleControl</code> 的实例。</p>
 
-<p><strong>注意</strong>:您可以创建 <code>ResourceBundleControlProvider</code> 接口的一个实现，该实现返回 <code>PropertiesResourceBundleControl</code> 或 <code>XMLResourceBundleControl</code> 的实例，具体取决于基本名称。</p><!-- ********************************************************************* -->
+<p><strong>注意</strong>:你可以创建 <code>ResourceBundleControlProvider</code> 接口的一个实现，该实现返回 <code>PropertiesResourceBundleControl</code> 或 <code>XMLResourceBundleControl</code> 的实例，具体取决于基本名称。</p><!-- ********************************************************************* -->
 
 
 
-<h2><a name="invoke-resourcebundle.getbundle">3. 在您的应用程序中，调用 ResourceBundle.getBundle 方法。</a></h2>
+<h2><a name="invoke-resourcebundle.getbundle">3. 在你的应用程序中，调用 ResourceBundle.getBundle 方法。</a></h2>
 
 <p>类 <code>RBCPTest</code> 使用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.html#getBundle-java.lang.String-java.util.Locale-"><code>ResourceBundle.getBundle</code></a> 获取资源包：</p>  
 
@@ -730,7 +730,7 @@ public class RBCPTest {
 }
 </pre>
 
-<p>请注意，此类中不会出现 <code>ResourceBundle.Control</code> 或 <code>ResourceBundleControlProvider</code> 的实现。由于 <code>ResourceBundleControlProvider</code> 接口使用 Java 扩展机制，因此运行时环境会查找并加载这些实现。但是，使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html"><code>ServiceLoader</code></a> 类加载 <code>ResourceBundleControlProvider</code> 实现和使用 Java 扩展机制安装的其他服务提供程序。使用此类意味着您必须使用配置文件注册服务提供程序，这将在下一步中介绍。</p><!-- ********************************************************************* -->
+<p>请注意，此类中不会出现 <code>ResourceBundle.Control</code> 或 <code>ResourceBundleControlProvider</code> 的实现。由于 <code>ResourceBundleControlProvider</code> 接口使用 Java 扩展机制，因此运行时环境会查找并加载这些实现。但是，使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html"><code>ServiceLoader</code></a> 类加载 <code>ResourceBundleControlProvider</code> 实现和使用 Java 扩展机制安装的其他服务提供程序。使用此类意味着你必须使用配置文件注册服务提供程序，这将在下一步中介绍。</p><!-- ********************************************************************* -->
 
 
 
@@ -790,7 +790,7 @@ rbcp.PropertiesResourceBundleControlProvider
 
 <p>有关创建 JAR 文件的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../deployment/jar/index.html">Packaging Programs in JAR Files</a>。</p>  
 
-<p>或者，下载并安装 <a href="http://ant.apache.org/">Apache Ant</a>，这是一个使您能够自动化构建过程的工具，例如编译 Java 文件和创建 JAR 文件。确保 Apache Ant 可执行文件位于 <code>PATH</code> 环境变量中，以便您可以从任何目录运行它。安装 Apache Ant 后，请按照下列步骤操作：</p>
+<p>或者，下载并安装 <a href="http://ant.apache.org/">Apache Ant</a>，这是一个使你能够自动化构建过程的工具，例如编译 Java 文件和创建 JAR 文件。确保 Apache Ant 可执行文件位于 <code>PATH</code> 环境变量中，以便你可以从任何目录运行它。安装 Apache Ant 后，请按照下列步骤操作：</p>
 
 <ol>
   <li><p>编辑文 <a class="SourceLink" target="_blank" href="examples/rbcpsample/build.xml" onclick="showCode('../../displayCode.html', 'examples/rbcpsample/build.xml'); return false;"><code><code>build.xml</code></code></a> 并将 <code>${JAVAC}</code> 更改为 Java 编译器，<code>javac</code>，的完整路径名，将 <code>${JAVA}</code> 更改为 Java 运行时可执行文件，<code>java</code>，的完整路径名。</p></li>
@@ -822,7 +822,7 @@ rbcp.PropertiesResourceBundleControlProvider
 
 <p>安装 Java 扩展时，通常将扩展的 JAR 文件放在 JRE 的 <code>lib/ext</code> 目录中。但是，此命令指定包含 Java 扩展的目录，使用系统属性 <code>java.ext.dirs</code>。</p>
 
-<p><code>RBCPTest</code> 程序首先尝试获取基本名称为 <code>resources.XmlRB</code> 的资源包，并且区域设置 <code>Locale.ROOT</code> 和 <code>Local.JAPAN</code>。获取这些资源包的程序输出类似于以下内容：</p>
+<p><code>RBCPTest</code> 程序首先尝试获取基本名称为 <code>resources.XmlRB</code> 的资源包，并且语言环境 <code>Locale.ROOT</code> 和 <code>Local.JAPAN</code>。获取这些资源包的程序输出类似于以下内容：</p>
 
 <pre class="codeblock">
 Class: rbcp.XMLResourceBundleControlProvider.getControl
@@ -838,7 +838,7 @@ Japan locale. Key, type: Value from Japan locale
 
 <p>程序成功获取 <code>XMLResourceBundleControl</code> 的实例，并访问属性文件 <code>XmlRB.xml</code> 和 <code>XmlRB_ja.xml</code>。</p>
 
-<p>当 <code>RBCPTest</code> 程序尝试获取资源包时，它会调用配置文件 <code>java.util.spi.ResourceBundleControlProvider</code> 中定义的所有类。例如，当程序获取具有基本名称 <code>resources.RBControl</code> 和区域设置 <code>Locale.CHINA</code> 的资源包时，它将打印以下输出：</p>   
+<p>当 <code>RBCPTest</code> 程序尝试获取资源包时，它会调用配置文件 <code>java.util.spi.ResourceBundleControlProvider</code> 中定义的所有类。例如，当程序获取具有基本名称 <code>resources.RBControl</code> 和语言环境 <code>Locale.CHINA</code> 的资源包时，它将打印以下输出：</p>   
 
 <pre class="codeblock">
 Class: rbcp.XMLResourceBundleControlProvider.getControl

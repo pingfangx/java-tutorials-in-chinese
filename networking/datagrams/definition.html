@@ -486,7 +486,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">关于数据报</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="clientServer.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="clientServer.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>什么是数据报？</h1></div>
@@ -494,9 +494,9 @@
 
 <p>通过可靠通道(例如 TCP 套接字)进行通信的客户端和服务器之间有一个专用的点对点通道，或者至少是一个通道。要进行通信，它们会建立连接，传输数据，然后关闭连接。通过信道发送的所有数据的接收顺序与发送的顺序相同。这是由通道保证的。</p>
 <p>相反，通过数据报通信的应用程序发送和接收完全独立的信息包。这些客户端和服务器没有也不需要专用的点对点通道。无法保证将数据报传送到目的地。他们到达的顺序也不保证。</p>
-<div class="note"><hr /><strong>定义：</strong>&nbsp;<p><em>datagram (数据报)</em> 是通过网络发送的独立，自包含的消息，其到达，到达时间和内容不能得到保证。</p>
+<div class="note"><hr /><strong>定义:</strong>&nbsp;<p><em>datagram (数据报)</em> 是通过网络发送的独立，自包含的消息，其到达，到达时间和内容不能得到保证。</p>
 <hr /></div>
-<p><code>java.net</code> 包中包含三个类，可帮助您编写使用数据报通过网络发送和接收数据包的 Java 程序：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/DatagramSocket.html"><code>DatagramSocket</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/DatagramPacket.html"><code>DatagramPacket</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/MulticastSocket.html"><code>MulticastSocket</code></a> 应用程序可以通过 <code>DatagramSocket</code> 发送和接收 <code>DatagramPacket</code>。此外，<code>DatagramPacket</code> 可以广播给所有收听 <code>MulticastSocket</code> 的收件人。</p>
+<p><code>java.net</code> 包中包含三个类，可帮助你编写使用数据报通过网络发送和接收数据包的 Java 程序：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/DatagramSocket.html"><code>DatagramSocket</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/DatagramPacket.html"><code>DatagramPacket</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/MulticastSocket.html"><code>MulticastSocket</code></a> 应用程序可以通过 <code>DatagramSocket</code> 发送和接收 <code>DatagramPacket</code>。此外，<code>DatagramPacket</code> 可以广播给所有收听 <code>MulticastSocket</code> 的收件人。</p>
 
 
         </div>

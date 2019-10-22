@@ -489,30 +489,30 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">注解</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="type_annotations.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">Next&nbsp;»</a>
+                <a target="_top" href="type_annotations.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>重复注解</h1></div>
             <div id="PageContent">
 
 <p>
-在某些情况下，您希望将相同的注解应用于声明或类型用途。从 Java SE 8 发行版开始，<em>repeating annotations</em> 使您能够执行此操作。</p>
+在某些情况下，你希望将相同的注解应用于声明或类型用途。从 Java SE 8 发行版开始，<em>repeating annotations (重复注解)</em> 使你能够执行此操作。</p>
 <p>
-例如，您正在编写代码以使用计时器服务，该服务使您能够在给定时间或某个计划上运行方法，类似于 UNIX <tt>cron</tt> 服务。现在，您要设置计时器以在该月的最后一天以及每周五的晚上 11 点运行方法 <tt>doPeriodicCleanup</tt>。要将计时器设置为运行，请创建 <code>@Schedule</code> 注解并将其应用于 <tt>doPeriodicCleanup</tt> 方法两次。第一次使用指定月份的最后一天，第二次使用指定星期五晚上 11 点，如下面的代码示例所示：</p>
+例如，你正在编写代码以使用计时器服务，该服务使你能够在给定时间或某个计划上运行方法，类似于 UNIX <tt>cron</tt> 服务。现在，你要设置计时器以在该月的最后一天以及每周五的晚上 11 点运行方法 <tt>doPeriodicCleanup</tt>。要将计时器设置为运行，请创建 <code>@Schedule</code> 注解并将其应用于 <tt>doPeriodicCleanup</tt> 方法两次。第一次使用指定月份的最后一天，第二次使用指定星期五晚上 11 点，如下面的代码示例所示：</p>
 <div class="codeblock"><pre>
 @Schedule(dayOfMonth="last")
 @Schedule(dayOfWeek="Fri", hour="23")
 public void doPeriodicCleanup() { ... }
 </pre></div>
 <p>
-前面的示例将注解应用于方法。您可以在使用标准注解的任何位置重复注解。例如，您有一个用于处理未授权访问异常的类。您使用一个 <code>@Alert</code> 注解为管理员注解该类，为管理员注解另一个注解：</p>
+前面的示例将注解应用于方法。你可以在使用标准注解的任何位置重复注解。例如，你有一个用于处理未授权访问异常的类。你使用一个 <code>@Alert</code> 注解为管理员和其他管理者注解该类：</p>
 <div class="codeblock"><pre>
 @Alert(role="Manager")
 @Alert(role="Administrator")
 public class UnauthorizedAccessException extends SecurityException { ... }
 </pre></div>
 <p>
-出于兼容性原因，重复注解存储在由 Java 编译器自动生成的 <em>container annotation</em> 中。为了使编译器执行此操作，代码中需要两个声明。</p>
+出于兼容性原因，重复注解存储在由 Java 编译器自动生成的 <em>container annotation (容器注解)</em> 中。为了使编译器执行此操作，代码中需要两个声明。</p>
 
 <h2>第 1 步：声明可重复的注解类型</h2>
 <p>
@@ -533,9 +533,9 @@ public @interface Schedule {
 <p>
 将相同的注解应用于声明而不首先声明它是可重复的，这会导致编译时错误。</p>
 
-<h2>第 2 步：声明包含注解类型</h2>
+<h2>第 2 步：声明容器注解类型</h2>
 <p>
-包含注解类型必须具有带有数组类型的 <code>value</code> 元素。数组类型的组件类型必须是可重复的注解类型。包含注解类型的 <code>Schedules</code> 的声明如下：</p>
+容器注解类型必须具有带有数组类型的 <code>value</code> 元素。数组类型的组件类型必须是可重复的注解类型。容器注解类型的 <code>Schedules</code> 的声明如下：</p>
 
 <div class="codeblock"><pre>
 public @interface Schedules {
@@ -545,11 +545,11 @@ public @interface Schedules {
 
 <h2>获取注解</h2>
 <p>
-反射 API 中有几种可用于获取注解的方法。返回单个注解的方法（例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html#getAnnotation-java.lang.Class-">AnnotatedElement.getAnnotation(Class&lt;T&gt;)</a>）的行为未更改，因为如果 <em>one</em> 注解，它们只返回单个注解请求的类型存在。如果存在多个所请求类型的注解，则可以通过首先获取其容器注解来获取它们。通过这种方式，遗留代码继续工作。Java SE 8 中引入了其他方法，它们扫描容器注解以一次返回多个注解，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html#getAnnotationsByType-java.lang.Class-">AnnotatedElement.getAnnotationsByType(Class&lt;T&gt;)</a>。有关所有可用方法的信息，请参阅 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html">AnnotatedElement</a> 类规范。</p>
+反射 API 中有几种可用于获取注解的方法。返回单个注解的方法（例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html#getAnnotation-java.lang.Class-">AnnotatedElement.getAnnotation(Class&lt;T&gt;)</a>）的行为未更改，如果请求的类型只存在 <em>一个</em> 注解，则只返回单个注解。如果存在多个所请求类型的注解，则可以通过首先获取其容器注解来获取它们。通过这种方式，遗留代码继续工作。Java SE 8 中引入了其他方法，它们扫描容器注解以一次返回多个注解，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html#getAnnotationsByType-java.lang.Class-">AnnotatedElement.getAnnotationsByType(Class&lt;T&gt;)</a>。有关所有可用方法的信息，请参阅 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html">AnnotatedElement</a> 类规范。</p>
 
 <h2>设计注意事项</h2>
 <p>
-设计注解类型时，必须考虑该类型注解的 <em>cardinality</em>。现在可以使用注解零次，一次，或者，如果注解的类型标记为 <code>@Repeatable</code>，则不止一次。也可以通过使用 <code>@Target</code> 元注解来限制可以使用注解类型的位置。例如，您可以创建只能在方法和字段上使用的可重复注解类型。仔细设计注解类型非常重要，以确保程序员 <em>using</em> 注解发现它尽可能灵活和强大。</p>
+设计注解类型时，必须考虑该类型注解的 <em>cardinality (基数)</em>。现在可以使用注解零次，一次，或者，如果注解的类型标记为 <code>@Repeatable</code>，则不止一次。也可以通过使用 <code>@Target</code> 元注解来限制可以使用注解类型的位置。例如，你可以创建只能在方法和字段上使用的可重复注解类型。仔细设计注解类型非常重要，以确保程序员 <em>使用</em> 注解发现它尽可能灵活和强大。</p>
 
         </div>
         <div class="NavBit">

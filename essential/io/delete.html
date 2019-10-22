@@ -515,16 +515,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="check.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="copy.html">Next&nbsp;»</a>
+                <a target="_top" href="check.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="copy.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>删除文件或目录</h1></div>
             <div id="PageContent"><!-- Deleting a File or Directory -->
 
 
-<p>您可以删除文件，目录或链接。对于符号链接，链接将被删除，而不是链接的目标。对于目录，目录必须为空，否则删除失败。</p>
+<p>你可以删除文件，目录或链接。对于符号链接，链接将被删除，而不是链接的目标。对于目录，目录必须为空，否则删除失败。</p>
 <p><code>Files</code> 类提供了两种删除方法。</p>
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#delete-java.nio.file.Path-"><code>delete(Path)</code></a> 方法将删除该文件，或者如果删除失败抛出异常。例如，如果文件不存在，则抛出 <code>NoSuchFileException</code>。您可以捕获异常以确定删除失败的原因，如下所示：</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#delete-java.nio.file.Path-"><code>delete(Path)</code></a> 方法将删除该文件，或者如果删除失败抛出异常。例如，如果文件不存在，则抛出 <code>NoSuchFileException</code>。你可以捕获异常以确定删除失败的原因，如下所示：</p>
 <div class="codeblock"><pre>
 try {
     Files.delete(path);
@@ -537,7 +537,7 @@ try {
     System.err.println(x);
 }
 </pre></div>
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#deleteIfExists-java.nio.file.Path-"><code>deleteIfExists(Path)</code></a> 方法也会删除该文件，但如果该文件不存在，则不会抛出任何异常。如果有多个线程删除文件并且您不想仅因为一个线程首先执行此操作而导致异常，则静默失败非常有用。</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#deleteIfExists-java.nio.file.Path-"><code>deleteIfExists(Path)</code></a> 方法也会删除该文件，但如果该文件不存在，则不会抛出任何异常。如果有多个线程删除文件并且你不想仅因为一个线程首先执行此操作而导致异常，则静默失败非常有用。</p>
 
 
         </div>

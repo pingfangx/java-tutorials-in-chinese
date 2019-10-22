@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="nolinkBHEAD">创建对象</div>
@@ -512,7 +512,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="objects.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="usingobject.html">Next&nbsp;»</a>
+                <a target="_top" href="objects.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="usingobject.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>创建对象</h1></div>
@@ -528,22 +528,22 @@
 <p>第一行创建 <a class="SourceLink" target="_blank" href="examples/Point.java" onclick="showCode('../../displayCode.html', 'examples/Point.java'); return false;"><code>Point</code></a> 类的对象，第二行和第三行每个都创建一个 <a class="SourceLink" target="_blank" href="examples/Rectangle.java" onclick="showCode('../../displayCode.html', 'examples/Rectangle.java'); return false;"><code>Rectangle</code></a> 类的对象。</p>
 <p>这些语句中的每一个都有三个部分(下面详细讨论)：</p>
 <ol>
-<li><strong>Declaration（声明）</strong>：<strong>加粗</strong> 中设置的代码都是将变量名与对象类型相关联的变量声明。</li>
-<li><strong>Instantiation（实例化）</strong>：<tt>new</tt> 关键字是创建该对象的 Java 运算符。</li>
-<li><strong>Initialization（初始化）</strong>：<tt>new</tt> 操作符后面是对构造函数的调用，该构造函数初始化新对象。</li>
+<li><strong>Declaration (声明)</strong>：<strong>加粗</strong> 中设置的代码都是将变量名与对象类型相关联的变量声明。</li>
+<li><strong>Instantiation (实例化)</strong>：<tt>new</tt> 关键字是创建该对象的 Java 运算符。</li>
+<li><strong>Initialization (初始化)</strong>：<tt>new</tt> 操作符后面是对构造函数的调用，该构造函数初始化新对象。</li>
 </ol>
 <p><a name="declaring" id="declaring"></a></p>
 <h2>声明一个变量来引用一个对象</h2>
-<p>以前，您了解到要声明一个变量，您可以这样写：</p>
+<p>以前，你了解到要声明一个变量，你可以这样写：</p>
 <div class="codeblock"><pre>
 <em>type name</em>;
 </pre></div>
-<p>这会通知编译器您将使用 <em>name</em> 来引用类型为 <em>type</em> 的数据。使用基本变量时，该声明也为变量保留适当的内存量。</p>
+<p>这会通知编译器你将使用 <em>name</em> 来引用类型为 <em>type</em> 的数据。使用基本变量时，该声明也为变量保留适当的内存量。</p>
 <p>你也可以自己声明一个引用变量。例如：</p>
 <div class="codeblock"><pre>
 Point originOne;
 </pre></div>
-<p>如果您像这样声明 <code>originOne</code>，那么在实际创建并分配对象之前，其值不确定。简单地声明一个引用变量不会创建一个对象。为此，您需要使用 <code>new</code> 运算符，如下一节所述。在您的代码中使用它之前，您必须将一个对象分配给 <code>originOne</code>。否则，你会得到一个编译器错误。</p>
+<p>如果你像这样声明 <code>originOne</code>，那么在实际创建并分配对象之前，其值不确定。简单地声明一个引用变量不会创建一个对象。为此，你需要使用 <code>new</code> 运算符，如下一节所述。在你的代码中使用它之前，你必须将一个对象分配给 <code>originOne</code>。否则，你会得到一个编译器错误。</p>
 <p>这个状态下的一个变量，当前没有引用任何对象，可以如下所示(变量名称，<code>originOne</code>，加上一个指向空白的引用)：</p>
 <center><img src="../../figures/java/objects-null.gif" width="122" height="39" align="bottom" alt="originOne 为 null。" /></center><p><a name="instantiating" id="instantiating"></a></p>
 <h2>实例化一个类</h2>
@@ -573,7 +573,7 @@ public class Point {
     }</b>
 }
 </pre></div>
-<p>这个类包含一个构造函数。您可以识别构造函数，因为它的声明使用与该类相同的名称，并且它没有返回类型。<tt>Point</tt> 类中的构造函数接受两个整数参数，如代码 <tt>(int a, int b)</tt> 所声明的。以下语句提供了 23 和 94 作为这些参数的值：</p>
+<p>这个类包含一个构造函数。你可以识别构造函数，因为它的声明使用与该类相同的名称，并且它没有返回类型。<tt>Point</tt> 类中的构造函数接受两个整数参数，如代码 <tt>(int a, int b)</tt> 所声明的。以下语句提供了 23 和 94 作为这些参数的值：</p>
 <div class="codeblock"><pre>
 Point originOne = new Point(23, 94);
 </pre></div>
@@ -620,16 +620,16 @@ public class Rectangle {
 <div class="codeblock"><pre> 
 Rectangle rectOne = new Rectangle(originOne, 100, 200);
 </pre></div>
-<p>这会调用将 <code>origin</code> 初始化为 <code>originOne</code> 的 <code>Rectangle</code> 构造函数。此外，构造函数将 <code>width</code> 设置为 100，将 <code>height</code> 设置为 200。现在有两个对同一个 <tt>Point object</tt> 对象可以有多个引用，如下图所示：</p>
-<center><img src="../../figures/java/objects-multipleRefs.gif" width="396" height="350" align="bottom" alt="现在矩形的原点变量也指向 Point。" /></center><p>以下代码行调用需要两个整数参数的 <code>Rectangle</code> 构造函数，它们提供了 <tt>width</tt> 和 <tt>height</tt> 的初始值。如果您检查构造函数中的代码，您将看到它创建了一个新的 <tt>Point</tt> 对象，其 <tt>x</tt> 和 <tt>y</tt> 值被初始化为 0：</p>
+<p>这会调用将 <code>origin</code> 初始化为 <code>originOne</code> 的 <code>Rectangle</code> 构造函数。此外，构造函数将 <code>width</code> 设置为 100，将 <code>height</code> 设置为 200。现在有两个对同一个 <tt>Point object</tt> 对象的引用  一个对象可以有多个对它的引用，如下图所示：</p>
+<center><img src="../../figures/java/objects-multipleRefs.gif" width="396" height="350" align="bottom" alt="现在矩形的原点变量也指向 Point。" /></center><p>以下代码行调用需要两个整数参数的 <code>Rectangle</code> 构造函数，它们提供了 <tt>width</tt> 和 <tt>height</tt> 的初始值。如果你检查构造函数中的代码，你将看到它创建了一个新的 <tt>Point</tt> 对象，其 <tt>x</tt> 和 <tt>y</tt> 值被初始化为 0：</p>
 <div class="codeblock"><pre>
 Rectangle rectTwo = new Rectangle(50, 100);
 </pre></div>
-<p>以下语句中使用的 <tt>Rectangle</tt> 构造函数不带任何参数，因此称为 <em>no-argument constructor（无参构造函数）</em>：</p>
+<p>以下语句中使用的 <tt>Rectangle</tt> 构造函数不带任何参数，因此称为 <em>no-argument constructor (无参构造函数)</em>：</p>
 <div class="codeblock"><pre>
 Rectangle rect = new Rectangle();
 </pre></div> 
-<p>所有类都至少有一个构造函数。如果一个类没有显式声明任何构造函数，那么 Java 编译器会自动提供一个无参数构造函数，称为 <em>default constructor（默认构造函数）</em>。此默认构造函数调用父类的无参数构造函数，或者如果该类没有父类，则调用 <code>Object</code> 构造函数。如果父类没有构造函数(<code>Object</code> 确实有一个)，编译器将拒绝该程序。</p>
+<p>所有类都至少有一个构造函数。如果一个类没有显式声明任何构造函数，那么 Java 编译器会自动提供一个无参构造函数，称为 <em>default constructor (默认构造函数)</em>。此默认构造函数调用父类的无参构造函数，或者如果该类没有父类，则调用 <code>Object</code> 的构造函数。如果父类没有构造函数(<code>Object</code> 确实有一个)，编译器将拒绝该程序。</p>
 
 
         </div>

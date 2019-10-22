@@ -491,7 +491,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Java 命名和目录接口</a>&gt;<a href="index.html" target="_top">JDK 5.0 和 JDK 6 中的新功能</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="sort.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="ldapname.html">Next&nbsp;»</a>
+                <a target="_top" href="sort.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="ldapname.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>管理推荐控制</h1></div>
@@ -528,11 +528,10 @@
 <p>The complete example can be found 
 <a class="SourceLink" target="_blank" href="examples/ManageReferral.java" onclick="showCode('../../displayCode.html', 'examples/ManageReferral.java'); return false;"><code>here</code></a>.</p>
 <hr />
-<p><strong>Note 1:</strong> The above example will require you to set up a second server using the configuration file 
-<a class="SourceLink" target="_blank" href="../software/config/refserver.ldif" onclick="showCode('../../displayCode.html', '../software/config/refserver.ldif'); return false;"><code>refserver.ldif</code></a>. The server must support LDAP v3 and RFC 3296. If the server does not support referrals in this way, then the example won't work as shown. The configuration file contains referrals that point to the original server that you've set up. It assumes that the original server is on port 389 on the local machine. If you have set up the server on another machine or port, then you need to edit the "ref" entries in the refserver.ldif file and replace "localhost:389" with the appropriate setting. The second server is to be set up on port 489 on the local machine. If you set up the second server on another machine or port, then you need to adjust the setting of the Context.PROVIDER_URL environment property for the initial context accordingly.</p>
+<p><strong>Note 1:</strong>The above example will require you to set up a second server using the configuration file <a class="SourceLink" target="_blank" href="../software/config/refserver.ldif" onclick="showCode('../../displayCode.html', '../software/config/refserver.ldif'); return false;"><code>refserver.ldif</code></a>. The server must support LDAP v3 and RFC 3296. If the server does not support referrals in this way, then the example won't work as shown. The configuration file contains referrals that point to the original server that you've set up. It assumes that the original server is on port 389 on the local machine. If you have set up the server on another machine or port, then you need to edit the "ref" entries in the refserver.ldif file and replace "localhost:389" with the appropriate setting. The second server is to be set up on port 489 on the local machine. If you set up the second server on another machine or port, then you need to adjust the setting of the Context.PROVIDER_URL environment property for the initial context accordingly.</p>
 <p>Setting up a directory server is typically performed by the directory or system administrator. See the 
 <a class="TutorialLink" target="_top" href="../software/index.html">Software Setup</a> lesson for more information.</p>
-<p><strong>Note 2:</strong> Windows Active Directory: Because Active Directory does not support the Manage Referral control, none of the examples in this lesson will work against Active Directory.</p>
+<p><strong>Note 2:</strong>Windows Active Directory: Because Active Directory does not support the Manage Referral control, none of the examples in this lesson will work against Active Directory.</p>
 <hr />
 
 

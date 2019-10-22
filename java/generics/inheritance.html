@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="nolinkAHEAD">泛型，继承和子类型</div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -505,21 +505,21 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="boundedTypeParams.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="genTypeInference.html">Next&nbsp;»</a>
+                <a target="_top" href="boundedTypeParams.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="genTypeInference.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>泛型，继承和子类型</h1></div>
             <div id="PageContent">
 
 <p>
-如您所知，只要类型兼容，就可以将一种类型的对象分配给另一种类型的对象。例如，您可以将 <tt>Integer</tt> 分配给 <tt>Object</tt>，因为 <tt>Object</tt> 是 <tt>Integer</tt> 的超类型之一：</p>
+如你所知，只要类型兼容，就可以将一种类型的对象分配给另一种类型的对象。例如，你可以将 <tt>Integer</tt> 分配给 <tt>Object</tt>，因为 <tt>Object</tt> 是 <tt>Integer</tt> 的超类型之一：</p>
 <div class="codeblock"><pre>
 Object someObject = new Object();
 Integer someInteger = new Integer(10);
 someObject = someInteger;   // OK
 </pre></div>
 <p>
-在面向对象的术语中，这被称为 "是一种（is a）" 关系。由于 <tt>Integer</tt> <em>是一种（is a）</em><tt>Object</tt>，因此允许赋值。但是 <tt>Integer</tt> 也是一种 <tt>Number</tt>，因此以下代码也是有效的：</p>
+在面向对象的术语中，这被称为 "是一个（is a）" 关系。由于 <tt>Integer</tt> <em>is a (是一个)</em><tt>Object</tt>，因此允许赋值。但是 <tt>Integer</tt> 也是一个 <tt>Number</tt>，因此以下代码也是有效的：</p>
 <div class="codeblock"><pre>
 public void someMethod(Number n) { /* ... */ }
 
@@ -527,7 +527,7 @@ someMethod(new Integer(10));   // OK
 someMethod(new Double(10.1));   // OK
 </pre></div>
 <p>
-泛型也是如此。您可以执行泛型类型调用，将 <tt>Number</tt> 作为其类型参数传递，如果参数与 <tt>Number</tt> 兼容，则任何后续的 <tt>add</tt> 调用都是允许：</p>
+泛型也是如此。你可以执行泛型类型调用，将 <tt>Number</tt> 作为其类型实参传递，如果参数与 <tt>Number</tt> 兼容，则任何后续的 <tt>add</tt> 调用都是允许：</p>
 <div class="codeblock"><pre>
 Box&lt;Number&gt; box = new Box&lt;Number&gt;();
 box.add(new Integer(10));   // OK
@@ -539,19 +539,19 @@ box.add(new Double(10.1));  // OK
 public void boxTest(Box&lt;Number&gt; n) { /* ... */ }
 </pre></div>
 <p>
-它接受什么类型的参数？通过查看其签名，您可以看到它接受一个类型为 <tt>Box&lt;Number&gt;</tt> 的参数。但是，这是什么意思？您是否可以按照预期传递 <tt>Box&lt;Integer&gt;</tt> 或 <tt>Box&lt;Double&gt;</tt>？答案是 "否"，因为 <tt>Box&lt;Integer&gt;</tt> 和 <tt>Box&lt;Double&gt;</tt> 不是 <tt>Box&lt;Number&gt;</tt> 的子类型。</p>
+它接受什么类型的参数？通过查看其签名，你可以看到它接受一个类型为 <tt>Box&lt;Number&gt;</tt> 的参数。但是，这是什么意思？你是否可以按照预期传递 <tt>Box&lt;Integer&gt;</tt> 或 <tt>Box&lt;Double&gt;</tt>？答案是 "否"，因为 <tt>Box&lt;Integer&gt;</tt> 和 <tt>Box&lt;Double&gt;</tt> 不是 <tt>Box&lt;Number&gt;</tt> 的子类型。</p>
 <p>
 在使用泛型编程时，这是一个常见的误解，但这是一个重要的学习概念。</p>
 <center><img src="../../figures/java/generics-subtypeRelationship.gif" width="338" height="225" align="bottom" alt="显示 Box&lt;Integer&gt; 不是 Box&lt;Number&gt; 的子类型的图表" /></center><center><tt>Box&lt;Integer&gt;</tt> 不是 <tt>Box&lt;Number&gt;</tt> 的子类型，即使 <tt>Integer</tt> 是 <tt>Number</tt> 的子类型。</center>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;给定两种具体类型 <tt>A</tt> 和 <tt>B</tt>(例如，<tt>Number</tt> 和 <tt>Integer</tt>)，<tt>MyClass&lt;A&gt;</tt> 与 <tt>MyClass&lt;B&gt;</tt> 没有任何关系，无论 <tt>A</tt> 与 <tt>B</tt> 是否相关。<tt>MyClass&lt;A&gt;</tt> 和 <tt>MyClass&lt;B&gt;</tt> 的公共父类是 <tt>Object</tt>。<br /><br />
-有关如何在类型参数相关时在两个泛型类之间创建类似子类型关系的信息，请参阅 <a class="TutorialLink" target="_top" href="subtyping.html">Wildcards and Subtyping</a>。
+有关如何在类型形参相关时在两个泛型类之间创建类似子类型关系的信息，请参阅 <a class="TutorialLink" target="_top" href="subtyping.html">Wildcards and Subtyping</a>。
 <hr /></div>
 
 <h2><a name="subtypes" id="subtypes">泛型类和子类型</a></h2>
 <p>
-您可以通过继承或实现泛型类或泛型接口来对其进行子类型化。一个类或接口的类型参数与另一个的类型参数之间的关系由 <tt>extends</tt> 和 <tt>implements</tt> 子句确定。</p>
+你可以通过继承泛型类或实现泛型接口来对其进行子类型化。一个类或接口的类型形参与另一个的类型形参之间的关系由 <tt>extends</tt> 和 <tt>implements</tt> 子句确定。</p>
 <p>
-以 <tt>Collections</tt> 类为例，<tt>ArrayList&lt;E&gt;</tt> 实现 <tt>List&lt;E&gt;</tt>，<tt>List&lt;E&gt; extends Collection&lt;E&gt;</tt>。所以 <tt>ArrayList&lt;String&gt;</tt> 是 <tt>List&lt;String&gt;</tt> 的子类型，它是 <tt>Collection&lt;String&gt;</tt> 的子类型。只要不改变类型参数，就会在类型之间保留子类型关系。</p>
+以 <tt>Collections</tt> 类为例，<tt>ArrayList&lt;E&gt;</tt> 实现 <tt>List&lt;E&gt;</tt>，<tt>List&lt;E&gt; extends Collection&lt;E&gt;</tt>。所以 <tt>ArrayList&lt;String&gt;</tt> 是 <tt>List&lt;String&gt;</tt> 的子类型，它是 <tt>Collection&lt;String&gt;</tt> 的子类型。只要不改变类型实参，就会在类型之间保留子类型关系。</p>
 <center><img src="../../figures/java/generics-sampleHierarchy.gif" width="147" height="116" align="bottom" alt="显示样本集合层次结构的图表：ArrayList&lt;String&gt; 是 List&lt;String&gt; 的子类型，它是 Collection&lt;String&gt;的子类型。" /></center><center><tt>Collections</tt> 示例的层次结构</center>
 
 <p>

@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="creating.html">创建异常类</a></div>
-<div class="linkAHEAD"><a href="runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="summary.html">总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -500,16 +500,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="catch.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="tryResourceClose.html">Next&nbsp;»</a>
+                <a target="_top" href="catch.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="tryResourceClose.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>finally 块</h1></div>
             <div id="PageContent">
 
-<p>当 <code>try</code> 块退出时，<code>finally</code> 块 <i>总是</i> 执行。这确保即使发生意外异常也会执行 <code>finally</code> 块。但 <code>finally</code> 不仅仅是对异常处理有用它允许程序员避免通过 <code>return</code>，<code>continue</code> 或 <code>break</code> 意外绕过清理代码。将清理代码放在 <code>finally</code> 块中总是一种很好的做法，即使没有预期的异常情况也是如此。</p>
+<p>当 <code>try</code> 块退出时，<code>finally</code> 块 <i>总是</i> 执行。这确保即使发生意外异常也会执行 <code>finally</code> 块。但 <code>finally</code> 不仅仅是对异常处理有用  它允许程序员避免通过 <code>return</code>，<code>continue</code> 或 <code>break</code> 意外绕过清理代码。将清理代码放在 <code>finally</code> 块中总是一种很好的做法，即使没有预期的异常情况也是如此。</p>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;如果在执行 <code>try</code> 或 <code>catch</code> 代码时 JVM 退出，则 <code>finally</code> 块可能不会执行。同样，如果执行 <code>try</code> 或 <code>catch</code> 代码的线程被中断或终止，即使整个应用程序继续，<code>finally</code> 块也可能无法执行。
 <hr /></div>
-<p>您在此处使用的 <code>writeList</code> 方法的 <code>try</code> 块将打开 <code>PrintWriter</code>。程序应该在退出 <code>writeList</code> 方法之前关闭该流。这造成了一个有点复杂的问题，因为 <code>writeList</code> 的 <code>try</code> 块可以以三种方式之一退出。</p>
+<p>你在此处使用的 <code>writeList</code> 方法的 <code>try</code> 块将打开 <code>PrintWriter</code>。程序应该在退出 <code>writeList</code> 方法之前关闭该流。这造成了一个有点复杂的问题，因为 <code>writeList</code> 的 <code>try</code> 块可以以三种方式之一退出。</p>
 <ol>
 <li><code>new FileWriter</code> 语句失败并抛出 <code>IOException</code>。</li>
 <li><code>list.get(i)</code> 语句失败并抛出 <code>IndexOutOfBoundsException</code>。</li>
@@ -530,7 +530,7 @@ finally {
 
 
 
-<div class="note"><hr /><strong>Important:</strong> <code>finally</code> 块是防止资源泄漏的关键工具。关闭文件或以其他方式恢复资源时，将代码放在 <code>finally</code> 块中，以确保资源 <i>总是</i> 恢复。<br /><br />
+<div class="note"><hr /><strong>重要:</strong>&nbsp;<code>finally</code> 块是防止资源泄漏的关键工具。关闭文件或以其他方式恢复资源时，将代码放在 <code>finally</code> 块中，以确保资源 <i>总是</i> 恢复。<br /><br />
 在这些情况下，请考虑使用 <code>try-</code>with-resources 语句，这会在不再需要时自动释放系统资源。<a class="TutorialLink" target="_top" href="tryResourceClose.html">The try-with-resources Statement</a> 部分包含更多信息。
 <hr /></div>
 

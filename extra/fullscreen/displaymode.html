@@ -489,25 +489,25 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">全屏独占模式 API</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="exclusivemode.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="rendering.html">Next&nbsp;»</a>
+                <a target="_top" href="exclusivemode.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="rendering.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>显示模式</h1></div>
             <div id="PageContent"><!--The Display Mode-->
 
 
-<p>一旦应用程序处于全屏独占模式，它就可以利用主动设置 <i>display mode (显示模式)</i>。显示模式（<tt>java.awt.DisplayMode</tt>）由大小（显示器的宽度和高度，以像素为单位），位深度（每像素的位数）和刷新率（显示器自动更新频率）组成）。某些操作系统允许您同时使用多个位深度，在这种情况下，特殊值 <tt>BIT_DEPTH_MULTI</tt> 用于位深度值。此外，某些操作系统可能无法控制刷新率(或者您可能不关心刷新率设置)。在这种情况下，特殊值 <tt>REFRESH_RATE_UNKNOWN</tt> 用于刷新率值。</p>
+<p>一旦应用程序处于全屏独占模式，它就可以利用主动设置 <i>display mode (显示模式)</i>。显示模式（<tt>java.awt.DisplayMode</tt>）由大小（显示器的宽度和高度，以像素为单位），位深度（每像素的位数）和刷新率（显示器自动更新频率）组成）。某些操作系统允许你同时使用多个位深度，在这种情况下，特殊值 <tt>BIT_DEPTH_MULTI</tt> 用于位深度值。此外，某些操作系统可能无法控制刷新率(或者你可能不关心刷新率设置)。在这种情况下，特殊值 <tt>REFRESH_RATE_UNKNOWN</tt> 用于刷新率值。</p>
 <h2>如何设置显示模式</h2>
-<p>要获得当前显示模式，只需在图形设备上调用 <tt>getDisplayMode</tt> 方法即可。要获取所有可能的显示模式的列表，请调用 <tt>getDisplayModes</tt> 方法。无论您是否处于全屏独占模式，都可以随时调用 <tt>getDisplayMode</tt> 和 <tt>getDisplayModes</tt>。</p>
+<p>要获得当前显示模式，只需在图形设备上调用 <tt>getDisplayMode</tt> 方法即可。要获取所有可能的显示模式的列表，请调用 <tt>getDisplayModes</tt> 方法。无论你是否处于全屏独占模式，都可以随时调用 <tt>getDisplayMode</tt> 和 <tt>getDisplayModes</tt>。</p>
 <p>在尝试更改显示模式之前，应首先调用 <tt>isDisplayChangeSupported</tt> 方法。如果此方法返回 <tt>false</tt>，则操作系统不支持更改显示模式。</p>
 <p>只有在全屏独占模式下才能更改显示模式。要更改显示模式，请使用所需的显示模式调用 <tt>setDisplayMode</tt> 方法。如果显示模式不可用，不支持显示模式更改，或者未以全屏独占模式运行，则将引发运行时异常。</p>
 <h2>更改显示模式的原因</h2>
-<p>设置显示模式的主要原因是 <i>performance (性能)</i>。如果应用程序显示的图像与屏幕共享相同的位深度，则应用程序可以更快地运行。此外，如果您可以将显示器指定为特定尺寸，则可以使绘图更加简单，因为您无需根据用户设置显示的方式向下或向上缩放。</p>
+<p>设置显示模式的主要原因是 <i>performance (性能)</i>。如果应用程序显示的图像与屏幕共享相同的位深度，则应用程序可以更快地运行。此外，如果你可以将显示器指定为特定尺寸，则可以使绘图更加简单，因为你无需根据用户设置显示的方式向下或向上缩放。</p>
 <h2>编程提示</h2>
 <p>以下是选择和设置显示模式的一些提示：</p>
 <ul>
 <li>在尝试更改图形设备上的显示模式之前，请检查 <tt>isDisplayChangeSupported</tt> 方法返回的值。</li>
-<li>在尝试更改显示模式之前，请确保您处于全屏独占模式。</li>
+<li>在尝试更改显示模式之前，请确保你处于全屏独占模式。</li>
 <li>与使用全屏模式一样，在 <code>try...finally</code> 子句中设置显示模式更加健壮：
 <div class="codeblock"><pre>
 GraphicsDevice myDevice;
@@ -526,8 +526,8 @@ try {
 }
 </pre></div>
 </li>
-<li>为应用程序选择显示模式时，您可能希望保留首选显示模式列表，然后从可用显示模式列表中选择最佳显示模式。</li>
-<li>作为后备，如果您想要的显示模式不可用，您可能只想以固定大小在窗口模式下运行。</li>
+<li>为应用程序选择显示模式时，你可能希望保留首选显示模式列表，然后从可用显示模式列表中选择最佳显示模式。</li>
+<li>作为后备，如果你想要的显示模式不可用，你可能只想以固定大小在窗口模式下运行。</li>
 </ul>
 
 

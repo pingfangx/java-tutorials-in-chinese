@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="nolinkBHEAD">原始类型</div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -506,14 +506,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="types.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methods.html">Next&nbsp;»</a>
+                <a target="_top" href="types.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methods.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>原始类型</h1></div>
             <div id="PageContent">
 
 <p>
-<em>原始类型（raw type）</em> 是没有任何类型参数的泛型类或接口的名称。例如，给定泛型 <tt>Box</tt> 类：</p>
+<em>raw type (原始类型)</em> 是没有任何类型实参的泛型类或接口的名称。例如，给定泛型 <tt>Box</tt> 类：</p>
 <div class="codeblock"><pre>
 public class Box&lt;T&gt; {
     public void set(T t) { /* ... */ }
@@ -521,19 +521,19 @@ public class Box&lt;T&gt; {
 }
 </pre></div>
 <p>
-要创建 <tt>Box&lt;T&gt;</tt> 的参数化类型，需要为形式类型参数 <tt>T</tt> 提供实际类型参数：</p>
+要创建 <tt>Box&lt;T&gt;</tt> 的参数化类型，需要为形式类型形参 <tt>T</tt> 提供实际类型实参：</p>
 <div class="codeblock"><pre>
 Box&lt;Integer&gt; intBox = new Box&lt;&gt;();
 </pre></div>
 <p>
-如果省略实际的类型参数，则创建 <tt>Box&lt;T&gt;</tt> 的原始类型：</p>
+如果省略实际类型实参，则创建 <tt>Box&lt;T&gt;</tt> 的原始类型：</p>
 <div class="codeblock"><pre>
 Box rawBox = new Box();
 </pre></div>
 <p>
 因此，<tt>Box</tt> 是泛型类型 <tt>Box&lt;T&gt;</tt> 的原始类型。但是，非泛型类或接口类型 <em>不是</em> 原始类型。</p>
 <p>
-原始类型显示在遗留代码中，因为许多 API 类(例如 <tt>Collections</tt> 类)在 JDK 5.0 之前不是泛型的。使用原始类型时，基本上可以获得 pre-generics 行为 -  <tt>Box</tt> 为您提供 <tt>Object</tt>。为了向后兼容，允许将参数化类型赋值给其原始类型：</p>
+原始类型显示在遗留代码中，因为许多 API 类(例如 <tt>Collections</tt> 类)在 JDK 5.0 之前不是泛型的。使用原始类型时，基本上可以获得 pre-generics 行为 -  <tt>Box</tt> 为你提供 <tt>Object</tt>。为了向后兼容，允许将参数化类型赋值给其原始类型：</p>
 <div class="codeblock"><pre>
 Box&lt;String&gt; stringBox = new Box&lt;&gt;();
 Box rawBox = stringBox;               // OK
@@ -552,13 +552,13 @@ Box rawBox = stringBox;
 rawBox.set(8);  // warning: unchecked invocation to set(T)
 </pre></div>
 <p>
-警告显示原始类型绕过了泛型类型检查，将不安全代码的捕获推迟到运行时。因此，您应该避免使用原始类型。</p>
+警告显示原始类型绕过了泛型类型检查，将不安全代码的捕获推迟到运行时。因此，你应该避免使用原始类型。</p>
 <p>
 <a class="TutorialLink" target="_top" href="erasure.html">Type Erasure</a> 部分提供了有关 Java 编译器如何使用原始类型的更多信息。</p>
 
 <h2>未经检查的错误信息</h2>
 <p>
-如前所述，在将遗留代码与泛型代码混合时，您可能会遇到类似于以下内容的警告消息：</p>
+如前所述，在将遗留代码与泛型代码混合时，你可能会遇到类似于以下内容的警告消息：</p>
 <div class="codeblock"><pre>
 Note: Example.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
@@ -578,7 +578,7 @@ public class WarningDemo {
 }
 </pre></div>
 <p>
-术语 "未经检查的（unchecked）" 表示编译器没有足够的类型信息来执行确保类型安全所必需的所有类型检查。默认情况下，"unchecked" 警告被禁用，尽管编译器会提示。要查看所有 "未经检查的" 警告，请使用 <tt>-Xlint:unchecked</tt> 重新编译。</p>
+术语 "unchecked (未经检查的)" 表示编译器没有足够的类型信息来执行确保类型安全所必需的所有类型检查。默认情况下，"unchecked" 警告被禁用，尽管编译器会提示。要查看所有 "未经检查的" 警告，请使用 <tt>-Xlint:unchecked</tt> 重新编译。</p>
 <p>
 使用 <tt>-Xlint:unchecked</tt> 重新编译前一个示例会显示以下附加信息：</p>
 <div class="codeblock"><pre>
@@ -591,7 +591,7 @@ required: Box&lt;java.lang.Integer&gt;
 </pre></div>
 
 <p>
-要完全禁用未经检查的警告，请使用 <tt>-Xlint:-unchecked</tt> 标志。<tt>@SuppressWarnings("unchecked")</tt> 注释会抑制未经检查的警告。如果您不熟悉 <code>@SuppressWarnings</code> 语法，请参阅 <a class="TutorialLink" target="_top" href="../../java/annotations/index.html">Annotations</a>。</p>
+要完全禁用未经检查的警告，请使用 <tt>-Xlint:-unchecked</tt> 标志。<tt>@SuppressWarnings("unchecked")</tt> 注解会抑制未经检查的警告。如果你不熟悉 <code>@SuppressWarnings</code> 语法，请参阅 <a class="TutorialLink" target="_top" href="../../java/annotations/index.html">Annotations</a>。</p>
 
         </div>
         <div class="NavBit">

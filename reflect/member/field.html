@@ -499,26 +499,26 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">成员</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="fieldTypes.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="fieldTypes.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>字段</h1></div>
             <div id="PageContent">
 
-<p><em>field (字段)</em> 是具有关联值的类，接口或枚举。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html"><code>java.lang.reflect.Field</code></a> 类中的方法可以获取有关字段的信息，例如其名称，类型，修饰符和注解。(<a class="OutsideLink" target="_blank" href="../class/index.html">Classes</a> 类中的 <a class="OutsideLink" target="_blank" href="../class/classModifiers.html">Examining Class Modifiers and Types</a> 部分描述了如何获取注解。)还有一些方法可以动态访问和修改字段的值。以下各节介绍了这些任务：</p>
+<p><em>field (字段)</em> 是与类、接口或枚举相关联的值。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html"><code>java.lang.reflect.Field</code></a> 类中的方法可以获取有关字段的信息，例如其名称，类型，修饰符和注解。(<a class="OutsideLink" target="_blank" href="../class/index.html">Classes</a> 类中的 <a class="OutsideLink" target="_blank" href="../class/classModifiers.html">Examining Class Modifiers and Types</a> 部分描述了如何获取注解。)还有一些方法可以动态访问和修改字段的值。以下各节介绍了这些任务：</p>
 <ul>
 <li><a href="fieldTypes.html">获取字段类型</a>描述了如何获取字段的声明类型和泛型类型</li>
 <li><a href="fieldModifiers.html">获取和解析字段修饰符</a>显示如何获取字段声明的部分，例如 <code>public</code> 或 <code>transient</code></li>
 <li><a href="fieldValues.html">获取和设置字段值</a>说明了如何访问字段值</li>
 <li><a href="fieldTrouble.html">故障排除</a>描述了一些可能导致混淆的常见编码错误</li>
 </ul>
-<p>在编写类浏览器等应用程序时，找出属于特定类的字段可能很有用。通过调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getFields--"><code>Class.getFields()</code></a> 来标识类的字段。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getFields--"><code>getFields()</code></a> 方法返回一个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html"><code>Field</code></a> 对象的数组，其包含的每个对象表示一个可访问的公共字段。</p>
+<p>在编写类浏览器等应用程序时，可能很需要找出属于特定类的字段。通过调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getFields--"><code>Class.getFields()</code></a> 来识别类的字段。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getFields--"><code>getFields()</code></a> 方法返回一个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html"><code>Field</code></a> 对象的数组，其包含的每个对象表示一个可访问的公共字段。</p>
 <p>如果公共字段是以下任何一个的成员，则可以访问该字段：</p>
 <ul>
 <li>这个类</li>
 <li>这个类的超类</li>
 <li>这个类实现的接口</li>
-<li>从此类实现的接口继承的接口</li>
+<li>这个类实现的接口继承的接口</li>
 </ul>
 <p>字段可以是类(实例)字段，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Reader.html#lock"><code>java.io.Reader.lock</code></a>，静态字段，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#MAX_VALUE"><code>java.lang.Integer.MAX_VALUE</code></a>，或枚举常量，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.State.html#WAITING"><code>java.lang.Thread.State.WAITING</code></a>。</p>
 

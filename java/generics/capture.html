@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -506,16 +506,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="subtyping.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="wildcardGuidelines.html">Next&nbsp;»</a>
+                <a target="_top" href="subtyping.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="wildcardGuidelines.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>通配符捕获和辅助方法</h1></div>
             <div id="PageContent">
 
 <p>
-在某些情况下，编译器会推断出通配符的类型。例如，列表可以定义为 <tt>List&lt;?&gt;</tt> 但是，在计算表达式时，编译器会从代码中推断出特定类型。此方案称为 <em>通配符捕获（wildcard capture）</em>。</p>
+在某些情况下，编译器会推断出通配符的类型。例如，列表可以定义为 <tt>List&lt;?&gt;</tt> 但是，在计算表达式时，编译器会从代码中推断出特定类型。此方案称为 <em>wildcard capture (通配符捕获)</em>。</p>
 <p>
-在大多数情况下，您不必担心通配符捕获，除非您看到包含短语 "capture of" 的错误消息。</p>
+在大多数情况下，你不必担心通配符捕获，除非你看到包含短语 "capture of" 的错误消息。</p>
 <p>
 <a class="SourceLink" target="_blank" href="examples/WildcardError.java" onclick="showCode('../../displayCode.html', 'examples/WildcardError.java'); return false;"><code>WildcardError</code></a> 示例在编译时产生捕获错误：</p>
 <div class="codeblock"><pre>
@@ -530,7 +530,7 @@ public class WildcardError {
 </pre></div>
 
 <p>
-在此示例中，编译器将 <tt>i</tt> 输入参数处理为 <tt>Object</tt> 类型。当 <tt>foo</tt> 方法调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html#set-int-E-">List.set(int, E)</a> 时，编译器无法确认插入到列表中的对象类型，并生成错误。发生此类错误时，通常意味着编译器认为您为变量分配了错误的类型。出于这个原因，泛型被添加到 Java 语言中 - 在编译时强制类型安全。</p>
+在此示例中，编译器将 <tt>i</tt> 输入参数处理为 <tt>Object</tt> 类型。当 <tt>foo</tt> 方法调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html#set-int-E-">List.set(int, E)</a> 时，编译器无法确认插入到列表中的对象类型，并生成错误。发生此类错误时，通常意味着编译器认为你为变量分配了错误的类型。出于这个原因，泛型被添加到 Java 语言中 - 在编译时强制类型安全。</p>
 <p>
 当由 Oracle 的 JDK 7 <tt>javac</tt> 实现编译时，<tt>WildcardError</tt> 示例生成以下错误：</p>
 <div class="codeblock"><pre>
@@ -547,7 +547,7 @@ WildcardError.java:6: error: method set in interface List&lt;E&gt; cannot be app
 1 error
 </pre></div>
 <p>
-在此示例中，代码尝试执行安全操作，那么如何解决编译器错误？您可以通过编写捕获通配符的 <em>private helper method</em> 来修复它。在这种情况下，您可以通过创建私有辅助方法 <tt>fooHelper</tt> 来解决此问题，如 <a class="SourceLink" target="_blank" href="examples/WildcardFixed.java" onclick="showCode('../../displayCode.html', 'examples/WildcardFixed.java'); return false;"><code>WildcardFixed</code></a> 中所示：</p>
+在此示例中，代码尝试执行安全操作，那么如何解决编译器错误？你可以通过编写捕获通配符的 <em>private helper method</em> 来修复它。在这种情况下，你可以通过创建私有辅助方法 <tt>fooHelper</tt> 来解决此问题，如 <a class="SourceLink" target="_blank" href="examples/WildcardFixed.java" onclick="showCode('../../displayCode.html', 'examples/WildcardFixed.java'); return false;"><code>WildcardFixed</code></a> 中所示：</p>
 <div class="codeblock"><pre>
 public class WildcardFixed {
 
@@ -567,7 +567,7 @@ public class WildcardFixed {
 <p>
 由于辅助方法，编译器使用推断来确定调用中 <tt>T</tt> 是 <tt>CAP#1</tt>（捕获变量）。该示例现在成功编译。</p>
 <p>
-按照惯例，辅助方法通常命名为 <tt><em>originalMethodName</em>Helper</tt>。</p>
+按照规范，辅助方法通常命名为 <tt><em>originalMethodName</em>Helper</tt>。</p>
 <p>
 现在考虑一个更复杂的例子，<a class="SourceLink" target="_blank" href="examples/WildcardErrorBad.java" onclick="showCode('../../displayCode.html', 'examples/WildcardErrorBad.java'); return false;"><code>WildcardErrorBad</code></a>：</p>
 

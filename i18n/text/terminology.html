@@ -474,7 +474,7 @@
             <div class="linkLESSON"><a href="index.html">使用文本</a></div>
 <div class="linkAHEAD"><a href="charintro.html">检查字符属性</a></div>
 <div class="linkAHEAD"><a href="collationintro.html">比较字符串</a></div>
-<div class="linkBHEAD"><a href="locale.html">执行与区域设置无关的比较</a></div>
+<div class="linkBHEAD"><a href="locale.html">执行与语言环境无关的比较</a></div>
 <div class="linkBHEAD"><a href="rule.html">自定义排序规则</a></div>
 <div class="linkBHEAD"><a href="perform.html">提高排序性能</a></div>
 <div class="linkAHEAD"><a href="unicode.html">Unicode</a></div>
@@ -508,7 +508,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">使用文本</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="unicode.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="supplementaryChars.html">Next&nbsp;»</a>
+                <a target="_top" href="unicode.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="supplementaryChars.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>术语</h1></div>
@@ -518,8 +518,8 @@
 <p><em>character (字符)</em> 是具有语义值的最小文本单位。</p>
 <p><em>character set (字符集)</em> 是可能由多种语言使用的字符集合。例如，拉丁字符集由英语和大多数欧洲语言使用，而希腊语字符集仅由希腊语使用。</p>
 <p><em>coded character set (编码字符集)</em> 是字符集，其中每个字符被分配唯一编号。</p>
-<p><em>code point (代码点)（译注：码位）</em> 是可以在编码字符集中使用的值（。代码点是 32 位 <code>int</code> 数据类型，其中低 21 位表示有效代码点值，高 11 位表示 0。</p>
-<p>Unicode <em>code unit (代码单元)（译注：码元）</em> 是 16 位 <code>char</code> 值。例如，想象一个 <code>String</code>，其中包含字母“abc”，后跟 Deseret LONG I，后者用两个 <code>char</code> 值表示。该字符串包含四个字符，四个代码点，但包含五个代码单元。</p>
+<p><em>code point (代码点)</em>（译注：码位） 是可以在编码字符集中使用的值（。代码点是 32 位 <code>int</code> 数据类型，其中低 21 位表示有效代码点值，高 11 位表示 0。</p>
+<p>Unicode <em>code unit (代码单元)</em>（译注：码元） 是 16 位 <code>char</code> 值。例如，想象一个 <code>String</code>，其中包含字母“abc”，后跟 Deseret LONG I，后者用两个 <code>char</code> 值表示。该字符串包含四个字符，四个代码点，但包含五个代码单元。</p>
 <p>要以 Unicode 表示字符，十六进制值以字符串 U+ 为前缀。Unicode 标准的有效代码点范围是 U+0000 到 U+10FFFF，包括端点。拉丁字符 A 的代码点值是 U+0041。代表欧元货币的字符 € 具有代码点值 U+20AC。Deseret 字母表中的第一个字母 LONG I 的代码点值为 U+10400。</p>
 <p>下表显示了几个字符的代码点值：</p>
 <table border="1" cellspacing="0" cellpadding="2" summary="表列出了几个代码点">

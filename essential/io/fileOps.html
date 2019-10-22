@@ -515,14 +515,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="pathOps.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="check.html">Next&nbsp;»</a>
+                <a target="_top" href="pathOps.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="check.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>文件操作</h1></div>
             <div id="PageContent"><!-- File Operations -->
 
 
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html"><code>Files</code></a> 类是 <code>java.nio.file</code> 包的另一个主要入口点。该类提供了一组丰富的静态方法，用于读取，写入和操作文件和目录。<code>Files</code> 方法适用于 <code>Path</code> 对象的实例。在继续讨论其余部分之前，您应该熟悉以下常见概念：</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html"><code>Files</code></a> 类是 <code>java.nio.file</code> 包的另一个主要入口点。该类提供了一组丰富的静态方法，用于读取、写入和操作文件和目录。<code>Files</code> 方法适用于 <code>Path</code> 对象的实例。在继续讨论其余部分之前，你应该熟悉以下常见概念：</p>
 <ul>
 <li><a href="#resources">释放系统资源</a></li>
 <li><a href="#exception">捕捉异常</a></li>
@@ -533,7 +533,7 @@
 <li><a href="#linkaware">链路感知</a></li>
 </ul>
 <h2><a name="resources" id="resources">释放系统资源</a></h2>
-<p>此 API 中使用的许多资源（例如流或通道）实现或继承 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html"><code>java.io.Closeable</code></a> 接口。<code>Closeable</code> 资源的要求是必须调用 <code>close</code> 方法以在不再需要时释放资源。忽略关闭资源可能会对应用程序的性能产生负面影响。<code>try-</code>with-resources 语句（将在下一节中介绍）为您处理此步骤。</p>
+<p>此 API 中使用的许多资源（例如流或通道）实现或继承 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html"><code>java.io.Closeable</code></a> 接口。<code>Closeable</code> 资源的要求是必须调用 <code>close</code> 方法以在不再需要时释放资源。忽略关闭资源可能会对应用程序的性能产生负面影响。<code>try-</code>with-resources 语句（将在下一节中介绍）为你处理此步骤。</p>
 <h2><a name="exception" id="exception">捕捉异常</a></h2>
 <p>对于文件 I/O，意外情况是生活中的事实：文件在预期的时候存在(或不存在)，程序无法访问文件系统，默认文件系统实现不支持特定功能， 等等。可能遇到许多错误。</p>
 <p>访问文件系统的所有方法都可以抛出 <code>IOException</code>。最佳实践是通过将这些方法嵌入 Java SE 7 发行版中引入的 <code>try-</code>with-resources 语句来捕获这些异常。<code>try-</code>with-resources 语句的优点是编译器会在不再需要时自动生成关闭资源的代码。以下代码显示了它的可能外观：</p>
@@ -547,7 +547,7 @@ try (BufferedWriter writer = Files.newBufferedWriter(file, charset)) {
 }
 </pre></div>
 <p>有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../essential/exceptions/tryResourceClose.html">The try-with-resources Statement</a>。</p>
-<p>或者，您可以将文件 I/O 方法嵌入 <code>try</code> 块中，然后捕获 <code>catch</code> 块中的任何异常。如果您的代码已打开任何流或通道，则应在 <code>finally</code> 块中关闭它们。前面的示例使用 try-catch-finally 方法看起来如下所示：</p>
+<p>或者，你可以将文件 I/O 方法嵌入 <code>try</code> 块中，然后捕获 <code>catch</code> 块中的任何异常。如果你的代码已打开任何流或通道，则应在 <code>finally</code> 块中关闭它们。前面的示例使用 try-catch-finally 方法看起来如下所示：</p>
 <div class="codeblock"><pre>
 Charset charset = Charset.forName("US-ASCII");
 String s = ...;
@@ -571,13 +571,13 @@ try (...) {
     System.err.format("%s does not exist\n", x.getFile());
 }
 </pre></div>
-<p>为清楚起见，本课程中的文件 I/O 示例可能不会显示异常处理，但您的代码应始终包含它。</p>
+<p>为清楚起见，本课程中的文件 I/O 示例可能不会显示异常处理，但你的代码应始终包含它。</p>
 <h2><a name="varargs" id="varargs">可变参数</a></h2>
 <p>指定标志时，有几个 <code>Files</code> 方法接受任意数量的参数。例如，在以下方法签名中，<code>CopyOption</code> 参数后面的省略号表示该方法接受可变数量的参数，它们通常被称为 <em>varargs</em>：</p>
 <div class="codeblock"><pre>
 Path Files.move(Path, Path, <b>CopyOption...</b>)
 </pre></div>
-<p>当方法接受 varargs 参数时，您可以传递一个以逗号分隔的值列表或值的数组(<code>CopyOption[]</code>)。</p>
+<p>当方法接受 varargs 参数时，你可以传递一个以逗号分隔的值列表或值的数组(<code>CopyOption[]</code>)。</p>
 <p>在 <code>move</code> 示例中，可以按如下方式调用该方法：</p>
 <div class="codeblock"><pre>
 import static java.nio.file.StandardCopyOption.*;
@@ -592,20 +592,20 @@ Files.move(source,
 <p>有关 varargs 语法的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../java/javaOO/arguments.html#varargs">Arbitrary Number of Arguments</a>。</p>
 <h2><a name="atomic" id="atomic">原子操作</a></h2>
 <p>一些 <code>Files</code> 方法（例如 <code>move</code>）可以在某些文件系统中以原子方式执行某些操作。</p>
-<p><em>atomic file operation</em> 是不能被中断或“部分”执行的操作。要么执行整个操作，要么操作失败。当您在文件系统的同一区域上运行多个进程时，这很重要，并且您需要保证每个进程都访问一个完整的文件。</p>
+<p><em>atomic file operation (原子文件操作)</em> 是不能被中断或“部分”执行的操作。要么执行整个操作，要么操作失败。当你在文件系统的同一区域上运行多个进程时，这很重要，并且你需要保证每个进程都访问一个完整的文件。</p>
 <h2><a name="chaining" id="chaining">方法涟</a></h2>
-<p>许多文件 I/O 方法支持 <em>method chaining</em> 的概念。</p>
-<p>您首先调用返回对象的方法。然后立即在 <em>that (那个)</em> 对象上执行方法，该方法返回另一个对象，依此类推。许多 I/O 示例使用以下技术：</p>
+<p>许多文件 I/O 方法支持 <em>method chaining (方法链)</em> 的概念。</p>
+<p>你首先调用返回对象的方法。然后立即在 <em>that (那个)</em> 对象上执行方法，该方法返回另一个对象，依此类推。许多 I/O 示例使用以下技术：</p>
 <div class="codeblock"><pre>
 String value = Charset.defaultCharset().decode(buf).toString();
 UserPrincipal group =
     file.getFileSystem().getUserPrincipalLookupService().
          lookupPrincipalByName("me");
 </pre></div>
-<p>此技术生成紧凑的代码，使您可以避免声明不需要的临时变量。</p>
+<p>此技术生成紧凑的代码，使你可以避免声明不需要的临时变量。</p>
 <h2><a name="glob" id="glob">什么 <em>Is (是)</em> Glob？</a></h2>
 <p><code>Files</code> 类中的两个方法接受 glob 参数，但什么是 <em>glob</em>？</p>
-<p>您可以使用 glob 语法指定模式匹配行为。</p>
+<p>你可以使用 glob 语法指定模式匹配行为。</p>
 <p>glob 模式被指定为字符串，并与其他字符串匹配，例如目录或文件名。Glob 语法遵循几个简单的规则：</p>
 <ul>
 <li>星号 <code>*</code> 匹配任意数量的字符(包括零个)。</li>
@@ -637,12 +637,12 @@ UserPrincipal group =
 <li><code>a?*.java</code>  - 匹配以 <code>a</code> 开头，后跟至少一个字母或数字，以 <em>.java</em> 结尾的任何字符串</li>
 <li><code>{foo*,*[0-9]*}</code>  - 匹配以 <em>foo</em> 开头的任何字符串或包含数值的任何字符串</li>
 </ul>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;如果您在键盘上键入 glob 模式并且它包含一个特殊字符，则必须将模式放在引号(<code>"*"</code>)中，使用反斜杠(<code>\*</code>)，或使用命令行支持的任何转义机制。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;如果你在键盘上键入 glob 模式并且它包含一个特殊字符，则必须将模式放在引号(<code>"*"</code>)中，使用反斜杠(<code>\*</code>)，或使用命令行支持的任何转义机制。
 <hr /></div>
-<p>glob 语法功能强大且易于使用。但是，如果它不足以满足您的需求，您还可以使用正则表达式。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../essential/regex/index.html">Regular Expressions</a> 课程。</p>
+<p>glob 语法功能强大且易于使用。但是，如果它不足以满足你的需求，你还可以使用正则表达式。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../essential/regex/index.html">Regular Expressions</a> 课程。</p>
 <p>有关 glob 语法的更多信息，请参阅 <code>FileSystem</code> 类中 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getPathMatcher-java.lang.String-"><code>getPathMatcher</code></a> 方法的 API 规范。</p>
 <h2><a name="linkaware" id="linkaware">链路感知</a></h2>
-<p><code>Files</code> 类是“链接感知”。每个 <code>Files</code> 方法都会检测遇到符号链接时要执行的操作，或者它提供了一个选项，使您可以在遇到符号链接时配置行为。</p>
+<p><code>Files</code> 类是“链接感知”。每个 <code>Files</code> 方法都会检测遇到符号链接时要执行的操作，或者它提供了一个选项，使你可以在遇到符号链接时配置行为。</p>
 
 
         </div>

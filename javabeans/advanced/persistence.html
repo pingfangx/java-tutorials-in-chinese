@@ -486,7 +486,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">JavaBeans(TM)</a>&gt;<a href="index.html" target="_top">高级 JavaBeans 主题</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="longpersistence.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="longpersistence.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Bean 持久性</h1></div>
@@ -496,21 +496,21 @@
 <p>使持久化成为可能的机制称为 <em class="Emphasis">serialization (序列化)</em>。对象序列化意味着将对象转换为数据流并将其写入存储。任何使用该 bean 的 applet，应用程序或工具都可以通过反序列化“重新构建”它。然后该对象恢复到其原始状态。</p>
 <p>例如，Java 应用程序可以序列化 Microsoft Windows 机器上的 Frame 窗口，序列化文件可以通过电子邮件发送到 Solaris 机器，然后 Java 应用程序可以将 Frame 窗口恢复到存在于 Microsoft Windows 机器上的确切状态。</p>
 <p>任何使用该 bean 的 applet，应用程序或工具都可以通过 <i>deserialization (反序列化)</i>“重新构建”它。</p>
-<p>所有 bean 必须可持久化。要可持久化，bean 必须通过实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html"><code>java.io.Serializable</code></a>(在 API 参考文档中)接口或 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Externalizable.html"><code>java.io.Externalizable</code></a>(在 API 参考文档中)接口。这些接口为您提供自动序列化和自定义序列化的选择。如果类的继承层次结构中的任何类实现 <code>Serializable</code> 或 <code>Externalizable</code>，则该类是可序列化的。</p>
+<p>所有 bean 必须可持久化。要可持久化，bean 必须通过实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html"><code>java.io.Serializable</code></a>(在 API 参考文档中)接口或 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Externalizable.html"><code>java.io.Externalizable</code></a>(在 API 参考文档中)接口。这些接口为你提供自动序列化和自定义序列化的选择。如果类的继承层次结构中的任何类实现 <code>Serializable</code> 或 <code>Externalizable</code>，则该类是可序列化的。</p>
 <h2>可序列化的类</h2>
 <p>只要该类或父类实现 <code>java.io.Serializable</code> 接口，任何类都是可序列化的。可序列化类的示例包括 <code>Component</code>，<code>String</code>，<code>Date</code>，<code>Vector</code> 和 <code>Hashtable</code>。因此，可以序列化 <code>Component</code> 类的任何子类，包括 <code>Applet</code>。不支持序列化的值得注意的类包括 <code>Image</code>，<code>Thread</code>，<code>Socket</code> 和 <code>InputStream</code>。尝试序列化这些类型的对象将导致 <code>NotSerializableException</code>。</p>
 <p>Java Object Serialization API 自动将 Serializable 对象的大多数字段序列化为存储流。这包括基本类型，数组和字符串。API 不会序列化或反序列化标记为 transient (瞬态)或 static (静态)的字段。</p>
 <h2>控制序列化</h2>
-<p>您可以控制 Bean 所经历的序列化级别。控制系列化的三种方法是：</p>
+<p>你可以控制 Bean 所经历的序列化级别。控制系列化的三种方法是：</p>
 <ul>
 <li>自动序列化，由 <code>Serializable</code> 接口实现。Java 序列化软件序列化整个对象，瞬态和静态字段除外。</li>
 <li>自定义序列化。通过使用 <code>transient</code>(或 <code>static</code>)修饰符进行标记，有选择地排除不希望序列化的字段。</li>
 <li>自定义文件格式，由 <code>Externalizable</code> 接口及其两个方法实现。Bean 以特定的文件格式编写。</li>
 </ul>
 <h2>默认序列化：Serializable 接口</h2>
-<p><code>Serializable</code> 接口通过使用 Java 对象序列化工具提供自动序列化。<code>Serializable</code> 声明没有方法；它充当标记，告诉对象序列化工具您的 bean 类是可序列化的。标记您的类 <code>Serializable</code> 意味着您告诉 Java 虚拟机(JVM)您确保您的类可以使用默认序列化。以下是使用 <code>Serializable</code> 接口的一些重要要点：</p>
+<p><code>Serializable</code> 接口通过使用 Java 对象序列化工具提供自动序列化。<code>Serializable</code> 声明没有方法；它充当标记，告诉对象序列化工具你的 bean 类是可序列化的。标记你的类 <code>Serializable</code> 意味着你告诉 Java 虚拟机(JVM)你确保你的类可以使用默认序列化。以下是使用 <code>Serializable</code> 接口的一些重要要点：</p>
 <ul>
-<li>实现 <code>Serializable</code> 的类必须能够访问超类型的 <em>no-argument constructor (无参数构造函数)</em>。当从 <code>.ser</code> 文件“重构”对象时，将调用此构造函数。</li>
+<li>实现 <code>Serializable</code> 的类必须能够访问超类型的 <em>no-argument constructor (无参构造函数)</em>。当从 <code>.ser</code> 文件“重构”对象时，将调用此构造函数。</li>
 <li>如果已经在超类中实现，则不需要在类中实现 <code>Serializable</code>。</li>
 <li>除静态和瞬态字段外的所有字段都是序列化的。使用 <code>transient</code> 修饰符指定不希望序列化的字段，并指定不可序列化的类。</li>
 </ul>
@@ -528,9 +528,9 @@ private void writeObject(java.io.ObjectOutputStream out)
 private void readObject(java.io.ObjectInputStream in)
     throws IOException, ClassNotFoundException;
 </pre></div>
-<p>您可以通过编写自己的 <code>writeObject</code> 和 <code>readObject</code> 方法的实现来控制更复杂对象的序列化。当需要序列化默认序列化无法处理的对象时，或者需要将数据添加到不是对象数据成员的序列化流时，需要对需要序列化的内容进行更好的控制时，实现 <code>writeObject</code>。实现 <code>readObject</code> 以重建使用 <code>writeObject</code> 编写的数据流。</p>
+<p>你可以通过编写自己的 <code>writeObject</code> 和 <code>readObject</code> 方法的实现来控制更复杂对象的序列化。当需要序列化默认序列化无法处理的对象时，或者需要将数据添加到不是对象数据成员的序列化流时，需要对需要序列化的内容进行更好的控制时，实现 <code>writeObject</code>。实现 <code>readObject</code> 以重建使用 <code>writeObject</code> 编写的数据流。</p>
 <h2>Externalizable 接口</h2>
-<p>当您需要完全控制 bean 的序列化时(例如，在编写和读取特定文件格式时)，请使用 <code>Externalizable</code> 接口。要使用 <code>Externalizable</code> 接口，您需要实现两个方法：<code>readExternal</code> 和 <code>writeExternal</code>。实现 <code>Externalizable</code> 的类必须具有无参数构造函数。</p>
+<p>当你需要完全控制 bean 的序列化时(例如，在编写和读取特定文件格式时)，请使用 <code>Externalizable</code> 接口。要使用 <code>Externalizable</code> 接口，你需要实现两个方法：<code>readExternal</code> 和 <code>writeExternal</code>。实现 <code>Externalizable</code> 的类必须具有无参构造函数。</p>
 
 
         </div>

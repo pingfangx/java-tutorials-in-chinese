@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">泛型</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="fineprint.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="morefun.html">Next&nbsp;»</a>
+                <a target="_top" href="fineprint.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="morefun.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>类字面量作为运行时类型标记</h1></div>
@@ -502,10 +502,10 @@
 
 
 <p>JDK 5.0 中的一个变化是类 <code>java.lang.Class</code> 是泛型的。这是一个有趣的例子，它将泛化用于容器类以外的东西。</p>
-<p>既然 <code>Class</code> 有一个类型参数 <code>T</code>，您可能会问，<code>T</code> 代表什么？它代表 <code>Class</code> 对象所代表的类型。</p>
+<p>既然 <code>Class</code> 有一个类型形参 <code>T</code>，你可能会问，<code>T</code> 代表什么？它代表 <code>Class</code> 对象所代表的类型。</p>
 <p>例如，<code>String.class</code> 的类型是 <code>Class&lt;String&gt;</code>，<code>Serializable.class</code> 的类型是 <code>Class&lt;Serializable&gt;</code>。这可用于改善反射代码的类型安全性。</p>
 <p>特别是，由于 <code>Class</code> 中的 <code>newInstance()</code> 方法现在返回 <code>T</code>，因此在反射创建对象时可以获得更精确的类型。</p>
-<p>例如，假设您需要编写一个执行数据库查询的实用程序方法，以字符串形式给出 SQL ，并返回数据库中与该查询匹配的对象集合。</p>
+<p>例如，假设你需要编写一个执行数据库查询的实用程序方法，以字符串形式给出 SQL ，并返回数据库中与该查询匹配的对象集合。</p>
 <p>一种方法是显式传入工厂对象，编写如下代码：</p>
 <div class="codeblock"><pre>
 <b>interface</b> Factory&lt;T&gt; { T make();} 
@@ -524,14 +524,14 @@
     <b>return</b> result; 
 }
 </pre></div>
-<p>您可以这样调用</p>
+<p>你可以这样调用</p>
 <div class="codeblock"><pre>
 select(new Factory&lt;EmpInfo&gt;(){ 
     <b>public</b> EmpInfo make() {
         <b>return</b> new EmpInfo();
     }}, "selection string");
 </pre></div>
-<p>或者您可以声明一个类 <code>EmpInfoFactory</code> 来支持 <code>Factory</code> 接口</p>
+<p>或者你可以声明一个类 <code>EmpInfoFactory</code> 来支持 <code>Factory</code> 接口</p>
 <div class="codeblock"><pre>
 <b>class</b> EmpInfoFactory <b>implements</b> Factory&lt;EmpInfo&gt; {
     ...

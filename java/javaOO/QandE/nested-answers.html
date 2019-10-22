@@ -401,31 +401,31 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p><strong>Question</strong>：程序 <a class="SourceLink" target="_blank" href="Problem.java" onclick="showCode('../../../displayCode.html', 'Problem.java'); return false;"><code>Problem.java</code></a> 无法编译。你需要做什么才能编译？为什么？</p>
-<p><strong>Answer</strong>：删除 <code>Inner</code> 类声明前面的 <code>static</code>。静态内部类无权访问外部类的实例字段。参见 <a class="SourceLink" target="_blank" href="ProblemSolved.java" onclick="showCode('../../../displayCode.html', 'ProblemSolved.java'); return false;"><code>ProblemSolved.java</code></a>。</p>
+<p><strong>问题</strong>:程序 <a class="SourceLink" target="_blank" href="Problem.java" onclick="showCode('../../../displayCode.html', 'Problem.java'); return false;"><code>Problem.java</code></a> 无法编译。你需要做什么才能编译？为什么？</p>
+<p><strong>答案</strong>:删除 <code>Inner</code> 类声明前面的 <code>static</code>。静态内部类无权访问外部类的实例字段。参见 <a class="SourceLink" target="_blank" href="ProblemSolved.java" onclick="showCode('../../../displayCode.html', 'ProblemSolved.java'); return false;"><code>ProblemSolved.java</code></a>。</p>
 </li>
 <li>
-<p>使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Box.html"><code>Box</code></a> 类的 Java API 文档(在 <code>javax.swing</code> 包中)可帮助您回答以下问题。</p>
+<p>使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Box.html"><code>Box</code></a> 类的 Java API 文档(在 <code>javax.swing</code> 包中)可帮助你回答以下问题。</p>
 <ol type="a">
 <li>
-<p><strong>Question</strong>：<code>Box</code> 定义了什么静态嵌套类？</p>
-<p><strong>Answer</strong>：<code>Box.Filler</code></p>
+<p><strong>问题</strong>:<code>Box</code> 定义了什么静态嵌套类？</p>
+<p><strong>答案</strong>:<code>Box.Filler</code></p>
 </li>
 <li>
-<p><strong>Question</strong>：<code>Box</code> 定义的内部类是什么？</p>
-<p><strong>Answer</strong>：<code>Box.AccessibleBox</code></p>
+<p><strong>问题</strong>:<code>Box</code> 定义的内部类是什么？</p>
+<p><strong>答案</strong>:<code>Box.AccessibleBox</code></p>
 </li>
 <li>
-<p><strong>Question</strong>：<code>Box</code> 的内部类的超类是什么？</p>
-<p><strong>Answer</strong>：<code>[java.awt.]Container.AccessibleAWTContainer</code></p>
+<p><strong>问题</strong>:<code>Box</code> 的内部类的超类是什么？</p>
+<p><strong>答案</strong>:<code>[java.awt.]Container.AccessibleAWTContainer</code></p>
 </li>
 <li>
-<p><strong>Question</strong>：您可以在任何类中使用 <code>Box</code> 的嵌套类中的哪一个？</p>
-<p><strong>Answer</strong>：<code>Box.Filler</code></p>
+<p><strong>问题</strong>:你可以在任何类中使用 <code>Box</code> 的嵌套类中的哪一个？</p>
+<p><strong>答案</strong>:<code>Box.Filler</code></p>
 </li>
 <li>
-<p><strong>Question</strong>：如何创建 <code>Box</code> 的 <code>Filler</code> 类的实例？</p>
-<p><strong>Answer</strong>：<code>new Box.Filler(minDimension, prefDimension, maxDimension)</code></p>
+<p><strong>问题</strong>:如何创建 <code>Box</code> 的 <code>Filler</code> 类的实例？</p>
+<p><strong>答案</strong>:<code>new Box.Filler(minDimension, prefDimension, maxDimension)</code></p>
 </li>
 </ol>
 </li>
@@ -434,37 +434,37 @@
 <ol>
 <li>
 <p><strong>Exercise</strong>：获取文件 <a class="SourceLink" target="_blank" href="Class1.java" onclick="showCode('../../../displayCode.html', 'Class1.java'); return false;"><code>Class1.java</code></a>。编译并运行 <code>Class1</code>。输出是什么？</p>
-<p><strong>Answer</strong>：<code> InnerClass1：调用了 getString。<br />
+<p><strong>答案</strong>:<code> InnerClass1：调用了 getString。<br />
 
 InnerClass1: getAnotherString invoked.</code></p>
 </li>
 <li><p><strong>Exercise</strong>：以下练习涉及修改类 <a class="SourceLink" target="_blank" href="../examples/DataStructure.java" onclick="showCode('../../../displayCode.html', '../examples/DataStructure.java'); return false;"><code>DataStructure.java</code></a>，<a class="TutorialLink" target="_top" href="../../../java/javaOO/innerclasses.html">Inner Class Example</a> 讨论。</p>
     <ol type="a">
     
-      <li><p>定义名为 <code>print(DataStructureIterator iterator)</code> 的方法。使用类 <code>EvenIterator</code> 的实例调用此方法，以便它执行与方法 <code>printEven</code> 相同的函数式。</p>
+      <li><p>定义名为 <code>print(DataStructureIterator iterator)</code> 的方法。使用类 <code>EvenIterator</code> 的实例调用此方法，以便它执行与方法 <code>printEven</code> 相同的功能。</p>
       
       <p><strong>Hint</strong>：如果在 <code>main</code> 方法中指定它们，则不会编译这些语句：</p>
       
       <pre class="codeblock">DataStructure ds = new DataStructure();
 ds.print(new EvenIterator());</pre>
 
-      <p>当遇到表达式 <code>new EvenIterator()</code> 时，编译器会生成错误消息 "非静态变量，这不能从静态上下文引用"。类 <code>EvenIterator</code> 是一个内部的非静态类。这意味着您只能在外部类的实例 <code>DataStructure</code> 中创建 <code>EvenIterator</code> 的实例。</p>
+      <p>当遇到表达式 <code>new EvenIterator()</code> 时，编译器会生成错误消息 "非静态变量，这不能从静态上下文引用"。类 <code>EvenIterator</code> 是一个内部的非静态类。这意味着你只能在外部类的实例 <code>DataStructure</code> 中创建 <code>EvenIterator</code> 的实例。</p>
       
-      <p>您可以在 <code>DataStructure</code> 中定义一个方法，该方法创建并返回 <code>EvenIterator</code> 的新实例。</p> 
+      <p>你可以在 <code>DataStructure</code> 中定义一个方法，该方法创建并返回 <code>EvenIterator</code> 的新实例。</p> 
 
       </li>
       
       <li><p>调用方法 <code>print(DataStructureIterator iterator)</code>，以便打印具有奇数索引值的元素。使用匿名类作为方法的参数，而不是接口 <code>DataStructureIterator</code> 的实例。</p>
       
-      <p><strong>Hint</strong>：您无法访问类 <code>DataStructure</code> 之外的私有成员 <code>SIZE</code> 和 <code>arrayOfInts</code>，这意味着您无法访问这些私有成员来自 <code>DataStructure</code> 之外定义的匿名类。</p>
+      <p><strong>Hint</strong>：你无法访问类 <code>DataStructure</code> 之外的私有成员 <code>SIZE</code> 和 <code>arrayOfInts</code>，这意味着你无法访问这些私有成员来自 <code>DataStructure</code> 之外定义的匿名类。</p>
       
-      <p>您可以定义访问私有成员 <code>SIZE</code> 和 <code>arrayOfInts</code> 的方法，然后在匿名类中使用它们。</p>
+      <p>你可以定义访问私有成员 <code>SIZE</code> 和 <code>arrayOfInts</code> 的方法，然后在匿名类中使用它们。</p>
       
       </li>
       
-      <li><p>定义名为 <code>print(java.util.Function&lt;Integer, Boolean&gt; iterator)</code> 的方法，该方法执行与 <code>print(DataStructureIterator iterator)</code> 相同的函数式。使用 lambda 表达式调用此方法以打印具有偶数索引值的元素。使用 lambda 表达式再次调用此方法以打印具有奇数索引值的元素。</p>
+      <li><p>定义名为 <code>print(java.util.Function&lt;Integer, Boolean&gt; iterator)</code> 的方法，该方法执行与 <code>print(DataStructureIterator iterator)</code> 相同的功能。使用 lambda 表达式调用此方法以打印具有偶数索引值的元素。使用 lambda 表达式再次调用此方法以打印具有奇数索引值的元素。</p>
       
-      <p><strong>Hint</strong>：在此 <code>print</code> 方法中，您可以使用 <code>for</code> 表达式逐步执行数组 <code>arrayOfInts</code> 中包含的元素。对于每个索引值，调用方法 <code>function.apply</code>。如果此方法返回特定索引值的 true 值，则打印该索引值中包含的元素。</p>
+      <p><strong>Hint</strong>：在此 <code>print</code> 方法中，你可以使用 <code>for</code> 表达式逐步执行数组 <code>arrayOfInts</code> 中包含的元素。对于每个索引值，调用方法 <code>function.apply</code>。如果此方法返回特定索引值的 true 值，则打印该索引值中包含的元素。</p>
       
       <p>要调用此 <code>print</code> 方法来打印具有偶数索引值的元素，可以指定实现方法 <code>Boolean Function.apply(Integer t)</code> 的 lambda 表达式。此 lambda 表达式采用一个 <code>Integer</code> 参数(索引)并返回 <code>Boolean</code> 值(如果索引值为偶数返回 <code>Boolean.TRUE</code>，否则 <code>Boolean.FALSE</code>)。</p>
       
@@ -480,7 +480,7 @@ ds.print(DataStructure::isOddIndex);</pre>
       
       </li>
     </ol>
-    <p><strong>Answer</strong>：参见文件 <a class="SourceLink" target="_blank" href="DataStructure.java" onclick="showCode('../../../displayCode.html', 'DataStructure.java'); return false;"><code>DataStructure.java</code></a>。</p>
+    <p><strong>答案</strong>:参见文件 <a class="SourceLink" target="_blank" href="DataStructure.java" onclick="showCode('../../../displayCode.html', 'DataStructure.java'); return false;"><code>DataStructure.java</code></a>。</p>
   </li>
 </ol>
 

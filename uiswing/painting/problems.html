@@ -490,23 +490,23 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">执行自定义绘画</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="summary.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../QandE/questions-ch6.html">Next&nbsp;»</a>
+                <a target="_top" href="summary.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../QandE/questions-ch6.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>解决常见的绘画问题</h1></div>
             <div id="PageContent">
 
-<p><strong>Problem:</strong> I don't know where to put my painting code.</p>
+<p><strong>Problem:</strong>I don't know where to put my painting code.</p>
 <ul>
 <li>Painting code belongs in the <code>paintComponent</code> method of any component descended from <code>JComponent</code>.</li>
 </ul>
-<p><strong>Problem:</strong> The stuff I paint doesn't show up.</p>
+<p><strong>Problem:</strong>The stuff I paint doesn't show up.</p>
 <ul>
 <li>Check whether your component is showing up at all. 
 <a class="TutorialLink" target="_top" href="../components/problems.html">Solving Common Component Problems</a> should help you with this.</li>
 <li>Check whether <code>repaint</code> is invoked on your component whenever its appearance needs to be updated.</li>
 </ul>
-<p><strong>Problem:</strong> My component's foreground shows up, but its background is invisible. The result is that one or more components directly behind my component are unexpectedly visible.</p>
+<p><strong>Problem:</strong>My component's foreground shows up, but its background is invisible. The result is that one or more components directly behind my component are unexpectedly visible.</p>
 <ul>
 <li>Make sure your component is opaque. <code>JPanel</code>s, for example, are opaque by default in many but not all look and feels. To make components such as <code>JLabel</code>s and GTK+ <code>JPanel</code>s opaque, you must invoke <code>setOpaque(true)</code> on them.</li>
 <li>If your custom component extends <code>JPanel</code> or a more specialized <code>JComponent</code> descendant, then you can paint the background by invoking <code>super.paintComponent</code> before painting the contents of your component.</li>
@@ -519,39 +519,39 @@ g.setColor(getForeground());
 </pre></div>
 </li>
 </ul>
-<p><strong>Problem:</strong> I used <code>setBackground</code> to set my component's background color, but it seemed to have no effect.</p>
+<p><strong>Problem:</strong>I used <code>setBackground</code> to set my component's background color, but it seemed to have no effect.</p>
 <ul>
 <li>Most likely, your component isn't painting its background, either because it's not opaque or your custom painting code doesn't paint the background. If you set the background color for a <code>JLabel</code>, for example, you must also invoke <code>setOpaque(true)</code> on the label to make the label's background be painted.</li>
 </ul>
-<p><strong>Problem:</strong> I'm using the exact same code as a tutorial example, but it doesn't work. 为什么？</p>
+<p><strong>Problem:</strong>I'm using the exact same code as a tutorial example, but it doesn't work. 为什么？</p>
 <ul>
 <li>Is the code executed in the exact same method as the tutorial example? For example, if the tutorial example has the code in the example's <code>paintComponent</code> method, then this method might be the only place where the code is guaranteed to work.</li>
 </ul>
-<p><strong>Problem:</strong> How do I paint thick lines? patterns?</p>
+<p><strong>Problem:</strong>How do I paint thick lines?patterns?</p>
 <ul>
 <li>The Java™ 2D API provides extensive support for implementing line widths and styles, as well as patterns for use in filling and stroking shapes. See the 
 <a class="TutorialLink" target="_top" href="../../2d/index.html">2D Graphics</a> trail for more information on using the Java 2D API.</li>
 </ul>
-<p><strong>Problem:</strong> The edges of a particular component look odd.</p>
+<p><strong>Problem:</strong>The edges of a particular component look odd.</p>
 <ul>
 <li>Because components often update their borders to reflect component state, you generally should avoid invoking <code>setBorder</code> except on <code>JPanel</code>s and custom subclasses of <code>JComponent</code>.</li>
 <li>Is the component painted by a look and feel such as GTK+ or Windows XP that uses UI-painted borders instead of <code>Border</code> objects? If so, don't invoke <code>setBorder</code> on the component.</li>
 <li>Does the component have custom painting code? If so, does the painting code take the component's insets into account?</li>
 </ul>
-<p><strong>Problem:</strong> Visual artifacts appear in my GUI.</p>
+<p><strong>Problem:</strong>Visual artifacts appear in my GUI.</p>
 <ul>
 <li>If you set the background color of a component, be sure the color has no transparency if the component is supposed to be opaque.</li>
 <li>Use the <code>setOpaque</code> method to set component opacity if necessary. For example, the content pane must be opaque, but components with transparent backgrounds must not be opaque.</li>
 <li>Make sure your custom component fills its painting area completely if it's opaque.</li>
 </ul>
-<p><strong>Problem:</strong> The performance of my custom painting code is poor.</p>
+<p><strong>Problem:</strong>The performance of my custom painting code is poor.</p>
 <ul>
 <li>If you can paint part of your component, use the <code>getClip</code> or <code>getClipBounds</code> method of <code>Graphics</code> to determine which area you need to paint. The less you paint, the faster it will be.</li>
 <li>If only part of your component needs to be updated, make paint requests using a version of <code>repaint</code> that specifies the painting region.</li>
 <li>For help on choosing efficient painting techniques, look for the string "performance" in the 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/tech/media-141984.html">Java Media APIs home page</a>.</li>
 </ul>
-<p><strong>Problem:</strong> The same transforms applied to seemingly identical <code>Graphics</code> objects sometimes have slightly different effects.</p>
+<p><strong>Problem:</strong>The same transforms applied to seemingly identical <code>Graphics</code> objects sometimes have slightly different effects.</p>
 <ul>
 <li>Because the Swing painting code sets the transform (using the <code>Graphics</code> method <code>translate</code>) before invoking <code>paintComponent</code>, any transforms that you apply have a cumulative effect. This doesn't matter when doing a simple translation, but a more complex <code>AffineTransform</code>, for example, might have unexpected results.</li>
 </ul>

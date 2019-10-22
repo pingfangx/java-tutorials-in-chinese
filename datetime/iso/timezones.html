@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>&gt;<a href="index.html" target="_top">标准日历</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="datetime.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="instant.html">Next&nbsp;»</a>
+                <a target="_top" href="datetime.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="instant.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>时区和偏移类</h1></div>
@@ -587,7 +587,7 @@ Date-Time API 提供了三个适用于时区的基于时间的类：</p>
 <li><tt>OffsetTime</tt> 处理时间，带有相应的格林威治/ UTC 时区偏移，没有时区 ID。</li>
 </ul>
 <p>
-您何时使用 <tt>OffsetDateTime</tt> 而不是 <tt>ZonedDateTime</tt>？如果您正在编写复杂的软件，根据地理位置为自己的日期和时间计算规则建模，或者如果您将时间戳存储在仅跟踪格林威治/ UTC 时间的绝对偏移的数据库中，那么您可能希望使用 <tt>OffsetDateTime</tt>。此外，XML 和其他网络格式将日期时间传输定义为 <tt>OffsetDateTime</tt> 或 <tt>OffsetTime</tt>。</p>
+你何时使用 <tt>OffsetDateTime</tt> 而不是 <tt>ZonedDateTime</tt>？如果你正在编写复杂的软件，根据地理位置为自己的日期和时间计算规则建模，或者如果你将时间戳存储在仅跟踪格林威治/ UTC 时间的绝对偏移的数据库中，那么你可能希望使用 <tt>OffsetDateTime</tt>。此外，XML 和其他网络格式将日期时间传输定义为 <tt>OffsetDateTime</tt> 或 <tt>OffsetTime</tt>。</p>
 <p>
 虽然所有三个类都保持与格林威治/ UTC 时间的偏移，但只有 <tt>ZonedDateTime</tt> 使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/zone/ZoneRules.html"><tt>ZoneRules</tt></a>，这是 <tt>java.time.zone</tt> 包的一部分，用于确定特定时区的偏移量的变化情况。例如，当将时钟向前移动到夏令时时，大多数时区经历间隙(通常为 1 小时)，并且当将时钟移回标准时间时也经历一个间隙，重复在转换之前的最后一小时（译注：即夏令时的解释）。<tt>ZonedDateTime</tt> 类适用于此场景，而 <tt>OffsetDateTime</tt> 和 <tt>OffsetTime</tt> 类无法访问 <tt>ZoneRules</tt>，它们不适用。</p>
 

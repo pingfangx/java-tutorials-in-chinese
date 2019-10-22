@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="creating.html">创建异常类</a></div>
-<div class="linkAHEAD"><a href="runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="summary.html">总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -500,7 +500,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="handling.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="catch.html">Next&nbsp;»</a>
+                <a target="_top" href="handling.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="catch.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>try 块</h1></div>
@@ -515,7 +515,7 @@ try {
 <em>catch and finally blocks . . .</em>
 </pre></div>
 <p>标记为 <code><em>code</em></code> 的示例中的段包含一个或多个可能引发异常的合法代码行。(接下来的两个小节将解释 <code>catch</code> 和 <code>finally</code> 块。)</p>
-<p>要为 <code>ListOfNumbers</code> 类中的 <code>writeList</code> 方法的构造异常处理程序，请用 <code>try</code> 块括住 <code>writeList</code> 方法的异常抛出语句。有不止一种方法可以做到这一点。您可以将可能引发异常的每行代码放在其自己的 <code>try</code> 块中，并为每个代码提供单独的异常处理程序。或者，您可以将所有 <code>writeList</code> 代码放在单个 <code>try</code> 块中，并将多个处理程序与其关联。以下列表对整个方法使用一个 <code>try</code> 块，因为相关代码非常短。</p>
+<p>要为 <code>ListOfNumbers</code> 类中的 <code>writeList</code> 方法的构造异常处理程序，请用 <code>try</code> 块括住 <code>writeList</code> 方法的异常抛出语句。有不止一种方法可以做到这一点。你可以将可能引发异常的每行代码放在其自己的 <code>try</code> 块中，并为每个代码提供单独的异常处理程序。或者，你可以将所有 <code>writeList</code> 代码放在单个 <code>try</code> 块中，并将多个处理程序与其关联。以下列表对整个方法使用一个 <code>try</code> 块，因为相关代码非常短。</p>
 <div class="codeblock"><pre>
 private List&lt;Integer&gt; list;
 private static final int SIZE = 10;
@@ -532,7 +532,7 @@ public void writeList() {
     catch and finally blocks  . . .
 }
 </pre></div>
-<p>如果 <code>try</code> 块中发生异常，则该异常由与之关联的异常处理程序处理。要将异常处理程序与 <code>try</code> 块关联，必须在其后面放置一个 <code>catch</code> 块;下一节 <a class="TutorialLink" target="_top" href="catch.html">The catch Blocks</a>，向您展示如何操作。</p>
+<p>如果 <code>try</code> 块中发生异常，则该异常由与之关联的异常处理程序处理。要将异常处理程序与 <code>try</code> 块关联，必须在其后面放置一个 <code>catch</code> 块；下一节 <a class="TutorialLink" target="_top" href="catch.html">The catch Blocks</a>，向你展示如何操作。</p>
 
 
         </div>

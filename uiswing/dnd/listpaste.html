@@ -506,7 +506,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">拖放和数据传输</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="textpaste.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="dataflavor.html">Next&nbsp;»</a>
+                <a target="_top" href="textpaste.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="dataflavor.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>非文本组件中的 CCP</h1></div>
@@ -582,7 +582,7 @@ public class TransferActionListener implements ActionListener,
 </pre></div>
 <p>Finally, you have to decide how to handle the paste. In the case of a drag and drop, you insert the data at the drop location. In the case of a paste, you do not have the benefit of the user pointing to the desired paste location. You need to decide what makes sense for your application — inserting the data before or after the current selection might be the best solution.</p>
 <p>The following demo, ListCutPaste, shows how to implement CCP in an instance of <code>JList</code>. As you can see in the screen shot there are three lists and you can cut, copy, and paste to or from any of these lists. They also support drag and drop. For this demo, the pasted data is inserted after the current selection. If there is no current selection, the data is appended to the end of the list.</p>
-<center><img src="../../figures/uiswing/dnd/ListCutPaste.png" width="508" height="257" align="bottom" alt="A snapshot of the ListCutPaste demo." /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<center><img src="../../figures/uiswing/dnd/ListCutPaste.png" width="508" height="257" align="bottom" alt="A snapshot of the ListCutPaste demo." /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run ListCutPaste using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/dnd/index.html#ListCutPaste">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ListCutPasteProject/ListCutPaste.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the ListCutPaste example" /></a><br /></li>
 <li>Select an item in one of the lists. Use the Edit menu or the keyboard equivalent to cut or copy the list item from the source.</li>

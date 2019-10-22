@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="nolinkBHEAD">定义方法</div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,7 +512,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="variables.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="constructors.html">Next&nbsp;»</a>
+                <a target="_top" href="variables.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="constructors.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>定义方法</h1></div>
@@ -526,26 +526,26 @@ public double calculateAnswer(double wingSpan, int numberOfEngines,
     //do the calculation here
 }
 </pre></div>
-<p>方法声明的唯一必需元素是方法的返回类型，名称，一对括号，<code>()</code> 以及大括号 <code>{}</code> 之间的主体。</p>
+<p>方法声明的唯一必需元素是方法的返回类型，名称，一对括号 <code>()</code>， 以及在大括号 <code>{}</code> 之间的方法主体。</p>
 <p>更一般地说，方法声明有六个组件，依次为：</p>
 <ol>
 <li>修饰符（如 <code>public</code>，<code>private</code>）以及稍后将会学到的其他修饰符。</li>
-<li>返回类型方法返回的值的数据类型，如果该方法没有返回值，则返回 <code>void</code>。</li>
-<li>方法名称字段名称的规则也适用于方法名称，但约定有点不同。</li>
-<li>括号中的参数列表输入参数的逗号分隔列表，以它们的数据类型开头，由括号括起来 <code>()</code>。如果没有参数，则必须使用空括号。</li>
-<li>一个异常列表将在稍后讨论。</li>
+<li>返回类型  方法返回的值的数据类型，如果该方法没有返回值，则返回 <code>void</code>。</li>
+<li>方法名称  字段名称的规则也适用于方法名称，但规范有点不同。</li>
+<li>括号中的参数列表  输入参数的逗号分隔列表，以它们的数据类型开头，由括号括起来 <code>()</code>。如果没有参数，则必须使用空括号。</li>
+<li>一个异常列表  将在稍后讨论。</li>
 <li>方法体，包含在括号之间的方法的代码，包括局部变量的声明，都在这里。</li>
 </ol>
 <p>修饰符，返回类型和参数将在本课稍后部分讨论。例外情况在后面的课程中讨论。 
 </p>
-<div class="note"><hr /><strong>定义：</strong> 方法声明的两个组件构成 <i>method signature（方法签名）</i>方法名称和参数类型。
+<div class="note"><hr /><strong>定义:</strong>&nbsp;<strong>定义：</strong> 方法声明的两个组件构成 <i>method signature (方法签名)</i>  方法名称和参数类型。
 <hr /></div>
 <p>上面声明的方法的签名是：</p>
 <div class="codeblock"><pre>
 calculateAnswer(double, int, double, double)
 </pre></div>
 <h2>命名方法</h2>
-<p>虽然方法名称可以是任何合法的标识符，但代码约定会限制方法名称。按照惯例，方法名应该是小写的动词或多个词的名称，以小写的动词开头，后面跟着形容词，名词等。在多词的名称中，第二个单词和后面的单词的首字母应该大写。这里有些例子：</p>
+<p>虽然方法名称可以是任何合法的标识符，但代码规范会限制方法名称。按照规范，方法名应该是小写的动词或多个词的名称，多个词以小写的动词开头，后面跟形容词，名词等。在多词的名称中，第二个单词和后面的单词的首字母应该大写。这里有些例子：</p>
 <div class="codeblock"><pre>
 run
 runFast
@@ -555,10 +555,10 @@ compareTo
 setX
 isEmpty
 </pre></div>
-<p>通常，方法在其类中具有唯一的名称。但是，由于 <i>method overloading（方法重载）</i>，方法可能与其他方法具有相同的名称。</p>
+<p>通常，方法在其类中具有唯一的名称。但是，由于 <i>method overloading (方法重载)</i>，方法可能与其他方法具有相同的名称。</p>
 <h2>重载方法</h2>
-<p>Java 编程语言支持 <i>overloading（重载）</i> 方法，Java 可以区分具有不同 <i>method signatures（方法签名）</i> 的方法。这意味着如果一个类中的方法具有不同的参数列表，那么类中的方法可以具有相同的名称(这有一些限制，将在标题为 "接口和继承" 的课程中讨论)。</p>
-<p>假设您有一个可以使用书法绘制各种类型的数据(字符串，整数等)并包含绘制每种数据类型方法的类。使用每个方法的新名称很麻烦，例如 <code>drawString</code>，<code>drawInteger</code>，<code>drawFloat</code> 等等。在 Java 编程语言中，可以对所有绘图方法使用相同的名称，但将不同的参数列表传递给每个方法。因此，数据绘图类可能会声明四个名为 <code>draw</code> 的方法，每个方法都有不同的参数列表。</p>
+<p>Java 编程语言支持 <i>overloading (重载)</i> 方法，Java 可以区分具有不同 <i>method signatures (方法签名)</i> 的方法。这意味着如果一个类中的方法具有不同的参数列表，那么类中的方法可以具有相同的名称(这有一些限制，将在标题为 "接口和继承" 的课程中讨论)。</p>
+<p>假设你有一个可以使用书法绘制各种类型的数据(字符串，整数等)并包含绘制每种数据类型方法的类。使用每个方法的新名称很麻烦，例如 <code>drawString</code>，<code>drawInteger</code>，<code>drawFloat</code> 等等。在 Java 编程语言中，可以对所有绘图方法使用相同的名称，但将不同的参数列表传递给每个方法。因此，数据绘图类可能会声明四个名为 <code>draw</code> 的方法，每个方法都有不同的参数列表。</p>
 <div class="codeblock"><pre>
 public class DataArtist {
     ...
@@ -577,7 +577,7 @@ public class DataArtist {
 }
 </pre></div>
 <p>重载的方法通过传递给方法的参数的数量和类型来区分。在代码示例中，<code>draw(String s)</code> 和 <code>draw(int i)</code> 是截然不同且唯一的方法，因为它们需要不同的参数类型。</p>
-<p>您不能声明多个具有相同名称和相同数量和类型参数的方法，因为编译器无法区分它们。</p>
+<p>你不能声明多个具有相同名称和相同数量和类型的参数的方法，因为编译器无法区分它们。</p>
 <p>编译器在区分方法时不考虑返回类型，所以即使它们具有不同的返回类型，也不能声明具有相同签名的两个方法。</p>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;应该谨慎使用重载的方法，因为它们会使代码更不易读。
 <hr /></div>

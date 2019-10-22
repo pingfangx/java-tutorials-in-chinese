@@ -485,7 +485,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">扩展机制</a>&gt;<a href="index.html" target="_top">使扩展安全</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="sealing.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="sealing.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>设置扩展的权限</h1></div>
@@ -498,9 +498,9 @@
 </ul>
 <p>让我们通过一些例子更详细地看一下这些条件。</p>
 <h2>使用 PrivilegedAction 类</h2>
-<p>假设您要修改上一课的扩展示例中的 <code>RectangleArea</code> 类，以将矩形面积写入文件而不是 stdout。但是，写入文件是一项对安全性敏感的操作，因此如果您的软件将在安全管理器下运行，则需要将您的代码标记为特权。您需要执行以下两个步骤：</p>
+<p>假设你要修改上一课的扩展示例中的 <code>RectangleArea</code> 类，以将矩形面积写入文件而不是 stdout。但是，写入文件是一项对安全性敏感的操作，因此如果你的软件将在安全管理器下运行，则需要将你的代码标记为特权。你需要执行以下两个步骤：</p>
 <ol>
-<li>您需要在 <code>java.security.PrivilegedAction</code> 类型的对象的 <code>run</code> 方法中放置执行安全敏感操作的代码。</li>
+<li>你需要在 <code>java.security.PrivilegedAction</code> 类型的对象的 <code>run</code> 方法中放置执行安全敏感操作的代码。</li>
 <li>必须使用 <code>PrivilegedAction</code> 对象作为调用 <code>java.security.AccessController</code> 的 <code>doPrivileged</code> 方法的参数。</li>
 </ol>
 <p>如果我们将这些指南应用于 <code>RectangleArea</code> 类，我们的类定义将如下所示：</p>
@@ -545,8 +545,8 @@ grant codeBase "file:${{java.ext.dirs}}/*" {
 </pre></div>
 <p>此条目指定由 <code>file:${{java.ext.dirs}}/*</code> 指定的目录中的文件被授予名为 <code>java.security.AllPermission</code> 的权限。(注意，从 Java 6 开始，<code>java.ext.dirs</code> 指的是一个 <tt>classpath</tt> 类似的目录路径，每个目录都可以保存安装型扩展。)这不是太难猜测 <code>java.security.AllPermission</code> 授予安装型扩展可以授予的所有安全权限。</p>
 <p>默认情况下，安装型扩展没有安全限制。扩展软件可以执行安全敏感操作，就好像没有安装安全管理器一样，前提是安全敏感代码包含在作为调用 <code>doPrivileged</code> 的参数传递的 <code>PrivilegedAction</code> 的实例中。</p>
-<p>要限制授予扩展的权限，您需要修改策略文件。要拒绝所有扩展的所有权限，您只需移除上述授权条目即可。</p>
-<p>并非所有权限都与默认授予的 <code>java.security.AllPermission</code> 一样全面。删除默认授权条目后，您可以输入特定权限的新授权条目，包括：</p>
+<p>要限制授予扩展的权限，你需要修改策略文件。要拒绝所有扩展的所有权限，你只需移除上述授权条目即可。</p>
+<p>并非所有权限都与默认授予的 <code>java.security.AllPermission</code> 一样全面。删除默认授权条目后，你可以输入特定权限的新授权条目，包括：</p>
 <ul>
 <li><code>java.awt.<b>AWTPermission</b></code></li>
 <li><code>java.io.<b>FilePermission</b></code></li>
@@ -559,7 +559,7 @@ grant codeBase "file:${{java.ext.dirs}}/*" {
 <li><code>java.net.<b>SocketPermission</b></code></li>
 </ul>
 <p><a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/permissions.html">Permissions in the JDK</a> 文档提供了有关每个权限的详细信息。让我们看一下使用 RectangleArea 作为扩展所需的那些。</p>
-<p><code>RectangleArea.writeArea</code> 方法需要两个权限：一个用于确定用户主目录的路径，另一个用于写入文件。假设 <code>RectangleArea</code> 类捆绑在文件 <code>area.jar</code> 中，您可以通过将此条目添加到策略文件来授予写入权限：</p>
+<p><code>RectangleArea.writeArea</code> 方法需要两个权限：一个用于确定用户主目录的路径，另一个用于写入文件。假设 <code>RectangleArea</code> 类打包在文件 <code>area.jar</code> 中，你可以通过将此条目添加到策略文件来授予写入权限：</p>
 <div class="codeblock"><pre>
 grant codeBase "file:${java.home}/lib/ext/area.jar" {
     permission java.io.PropertyPermission "user.home",
@@ -571,7 +571,7 @@ grant codeBase "file:${java.home}/lib/ext/area.jar" {
 <p>此条目的 <code>codeBase&nbsp;"file:${java.home}/lib/ext/area.jar"</code> 部分保证此条目指定的任何权限仅适用于 <code>area.jar</code>。<code>java.io.PropertyPermission</code> 允许访问属性。第一个参数 <code>"user.home"</code> 命名属性，第二个参数 <code>"read"</code> 表示可以读取属性。(另一种选择是 <code>"write"</code>。)</p>
 <p><code>java.io.FilePermission</code> 允许访问文件。第一个参数 <code>"${user.home}${/}test${/}*"</code>，表示 <code>area.jar</code> 被授予访问在用户主目录中的 <code>test</code> 目录中所有文件的权限。(请注意，<code>${/}</code> 是与平台无关的文件分隔符。)第二个参数表示授予的文件访问权限仅用于写入。(第二个参数的其他选择是 <code>"read"</code>，<code>"delete"</code> 和 <code>"execute"</code>。)</p>
 <h2>签名扩展</h2>
-<p>您可以使用策略文件对授予扩展的权限设置其他限制，方法是要求它们由可信实体签名。(有关签名和验证 JAR 文件的回顾，请参见本教程中的 <a class="TutorialLink" target="_top" href="../../deployment/jar/signing.html">Signing JAR Files</a> 课程。)</p>
+<p>你可以使用策略文件对授予扩展的权限设置其他限制，方法是要求它们由可信实体签名。(有关签名和验证 JAR 文件的回顾，请参见本教程中的 <a class="TutorialLink" target="_top" href="../../deployment/jar/signing.html">Signing JAR Files</a> 课程。)</p>
 <p>要允许签名验证扩展或其他软件以及授予权限，策略文件必须包含 <em>keystore entry (密钥库条目)</em>。keystore 条目指定在验证中使用哪个密钥库。密钥库条目具有表单</p>
 <div class="codeblock"><pre>
 keystore "<i>keystore_url</i>";

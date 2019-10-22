@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">泛型</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="morefun.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="acknowledgements.html">Next&nbsp;»</a>
+                <a target="_top" href="morefun.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="acknowledgements.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>将旧版代码转换为使用泛型</h1></div>
@@ -502,15 +502,15 @@
 
 
 <p>之前，我们展示了新旧代码如何互操作。现在，是时候看看“泛化”旧代码的难题了。</p>
-<p>如果您决定将旧代码转换为使用泛型，则需要仔细考虑如何修改 API。</p>
-<p>您需要确保泛型 API 不会过度限制；它必须继续支持 API 的原始合同。再次考虑 <code>java.util.Collection</code> 中的一些示例。泛型之前的 API 如下所示：</p>
+<p>如果你决定将旧代码转换为使用泛型，则需要仔细考虑如何修改 API。</p>
+<p>你需要确保泛型 API 不会过度限制；它必须继续支持 API 的原始合同。再次考虑 <code>java.util.Collection</code> 中的一些示例。泛型之前的 API 如下所示：</p>
 <div class="codeblock"><pre>
 <b>interface</b> Collection {
     <b>public boolean</b> containsAll(Collection c);
     <b>public boolean</b> addAll(Collection c);
 }
 </pre></div>
-<p>一个天真的尝试，它将如下：</p>
+<p>一个简单的尝试，它将如下：</p>
 <div class="codeblock"><pre>
 <b>interface</b> Collection&lt;E&gt; {
 
@@ -524,7 +524,7 @@
 <li>使用不同类型的集合调用 <code>containsAll()</code> 是完全合法的。例程应该有效，返回 <code>false</code>。</li>
 </ul>
 <p>在 <code>addAll()</code> 的情况下，我们应该能够添加由 <code>E</code> 子类型的实例组成的任何集合。我们在 <a class="TutorialLink" target="_top" href="methods.html">Generic Methods</a> 部分中看到了如何正确处理这种情况。</p>
-<p>您还需要确保修订后的 API 保留与旧客户端的二进制兼容性。这意味着 API 的擦除必须与原始的，未经过授权的 API 相同。在大多数情况下，这自然会失败，但有一些微妙的情况。我们将检查我们遇到的最细微的案例之一，方法 <code>Collections.max()</code>。正如我们在 <a class="TutorialLink" target="_top" href="morefun.html">More Fun with Wildcards</a> 中所看到的，<code>max()</code> 的合理签名是：</p>
+<p>你还需要确保修订后的 API 保留与旧客户端的二进制兼容性。这意味着 API 的擦除必须与原始的，未经过授权的 API 相同。在大多数情况下，这自然会失败，但有一些微妙的情况。我们将检查我们遇到的最细微的案例之一，方法 <code>Collections.max()</code>。正如我们在 <a class="TutorialLink" target="_top" href="morefun.html">More Fun with Wildcards</a> 中所看到的，<code>max()</code> 的合理签名是：</p>
 <div class="codeblock"><pre>
 <b>public static</b> &lt;T <b>extends</b> Comparable&lt;? <b>super</b> T&gt;&gt; 
         T max(Collection&lt;T&gt; coll)
@@ -538,12 +538,12 @@
 <b>public static</b> Object max(Collection coll)
 </pre></div>
 <p>当然可以为 <code>max()</code> 指定此签名，但它没有完成，并且所有调用 <code>Collections.max()</code> 的旧二进制类文件都依赖于签名返回 <code>Object</code>。</p>
-<p>我们可以通过在形式类型参数 <code>T</code> 的边界中显式指定超类来强制擦除不同。</p>
+<p>我们可以通过在形式类型形参 <code>T</code> 的边界中显式指定超类来强制擦除不同。</p>
 <div class="codeblock"><pre>
 <b>public static</b> &lt;T <b>extends</b> Object &amp; Comparable&lt;? <b>super</b> T&gt;&gt; 
         T max(Collection&lt;T&gt; coll)
 </pre></div>
-<p>这是使用语法 <code>T1 &amp; T2 ... &amp; Tn</code> 为类型参数提供 <i>multiple bounds (多个边界)</i> 的示例。已知具有多个边界的类型变量是边界中列出的所有类型的子类型。当使用多个边界时，边界中提到的第一种类型用作类型变量的擦除。</p>
+<p>这是使用语法 <code>T1 &amp; T2 ... &amp; Tn</code> 为类型形参提供 <i>multiple bounds (多个边界)</i> 的示例。已知具有多个边界的类型变量是边界中列出的所有类型的子类型。当使用多个边界时，边界中提到的第一种类型用作类型变量的擦除。</p>
 <p>最后，我们应该记得 <code>max</code> 仅从其输入集合中读取，因此适用于 <code>T</code> 的任何子类型的集合。</p>
 <p>这将我们带到 JDK 中使用的实际签名：</p>
 <div class="codeblock"><pre>
@@ -551,8 +551,8 @@
         T max(Collection&lt;? <b>extends</b> T&gt; coll)
 </pre></div>
 <p>在实践中出现任何如此复杂的事情是非常罕见的，但专家库设计师应该准备好在转换现有 API 时仔细考虑。</p>
-<p>需要注意的另一个问题是 <i>covariant returns (协变返回)</i>，即改进子类中方法的返回类型。您不应该在旧 API 中利用此功能。为了了解原因，让我们看一个例子。</p>
-<p>假设您的原始 API 具有以下形式：</p>
+<p>需要注意的另一个问题是 <i>covariant returns (协变返回)</i>，即改进子类中方法的返回类型。你不应该在旧 API 中利用此功能。为了了解原因，让我们看一个例子。</p>
+<p>假设你的原始 API 具有以下形式：</p>
 <div class="codeblock"><pre>
 <b>public class</b> Foo {
     // <i>Factory. Should create an instance of</i> 
@@ -569,7 +569,7 @@
     }
 }
 </pre></div>
-<p>利用协变返回，您可以将其修改为：</p>
+<p>利用协变返回，你可以将其修改为：</p>
 <div class="codeblock"><pre>
 <b>public class</b> Foo {
     // <i>Factory. Should create an instance of</i> 
@@ -586,7 +586,7 @@
     }
 }
 </pre></div>
-<p>现在，假设您的代码的第三方客户端编写了以下内容：</p>
+<p>现在，假设你的代码的第三方客户端编写了以下内容：</p>
 <div class="codeblock"><pre>
 <b>public class</b> Baz <b>extends</b> Bar {
     // <i>Actually creates a Baz.</i>

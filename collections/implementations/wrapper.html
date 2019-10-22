@@ -492,7 +492,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">实现</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="deque.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="convenience.html">Next&nbsp;»</a>
+                <a target="_top" href="deque.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="convenience.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>包装器实现</h1></div>
@@ -501,7 +501,7 @@
 <p>包装器实现将所有实际工作委托给指定的集合，但在此集合提供的功能之上添加额外的功能。对于设计模式的粉丝，这是 <em>decorator (装饰器)</em> 模式的示例。虽然它看起来有点奇特，但它真的非常简单。</p>
 <p>这些实现是匿名的；该库提供静态工厂方法，而不是提供公共类。所有这些实现都可以在 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html"><code>Collections</code></a> 类中找到，它只包含静态方法。</p>
 <h2>同步包装器</h2>
-<p>同步包装器将自动同步(线程安全性)添加到任意集合。六个核心集合接口中的每一个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html"><code>Collection</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html"><code>Set</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html"><code>List</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html"><code>Map</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html"><code>SortedSet</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/SortedMap.html"><code>SortedMap</code></a> 有一个静态工厂方法。</p>
+<p>同步包装器将自动同步(线程安全性)添加到任意集合。六个核心集合接口中的每一个  <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html"><code>Collection</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html"><code>Set</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html"><code>List</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html"><code>Map</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html"><code>SortedSet</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/SortedMap.html"><code>SortedMap</code></a>  有一个静态工厂方法。</p>
 <div class="codeblock"><pre>
 public static &lt;T&gt; Collection&lt;T&gt; synchronizedCollection(Collection&lt;T&gt; c);
 public static &lt;T&gt; Set&lt;T&gt; synchronizedSet(Set&lt;T&gt; s);
@@ -535,12 +535,12 @@ synchronized(m) {
         foo(k);
 }
 </pre></div>
-<p>使用包装器实现的一个小缺点是您无法执行包装实现的任何 <em>noninterface (非接口)</em> 操作。因此，例如，在前面的 <code>List</code> 示例中，您无法在包装上调用 <code>ArrayList</code> 的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html#ensureCapacity-int-"><code>ensureCapacity</code></a> 操作 <code>ArrayList</code>。</p>
+<p>使用包装器实现的一个小缺点是你无法执行包装实现的任何 <em>noninterface (非接口)</em> 操作。因此，例如，在前面的 <code>List</code> 示例中，你无法在包装上调用 <code>ArrayList</code> 的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html#ensureCapacity-int-"><code>ensureCapacity</code></a> 操作 <code>ArrayList</code>。</p>
 <h2>不可修改包装器</h2>
 <p>与为包装集合添加功能的同步包装器不同，不可修改的包装器可以消除功能。特别是，它们通过拦截将修改集合的所有操作并抛出 <code>UnsupportedOperationException</code> 来取消修改集合的能力。不可修改包装器有两个主要用途，如下所示：</p>
 <ul>
 <li>在构建集合后使集合不可变。在这种情况下，最好不要维护对支持集合的引用。这绝对保证了不变性。</li>
-<li>允许某些客户端以只读方式访问您的数据结构。您保留对支持集合的引用，但分发对包装器的引用。通过这种方式，客户可以查看但不能修改，同时您保持完全访问权限。</li>
+<li>允许某些客户端以只读方式访问你的数据结构。你保留对支持集合的引用，但分发对包装器的引用。通过这种方式，客户可以查看但不能修改，同时你保持完全访问权限。</li>
 </ul>
 <p>与同步包装器一样，六个核心 <code>Collection</code> 接口中的每一个都有一个静态工厂方法。</p>
 <div class="codeblock"><pre>
@@ -552,7 +552,7 @@ public static &lt;T&gt; SortedSet&lt;T&gt; unmodifiableSortedSet(SortedSet&lt;? 
 public static &lt;K,V&gt; SortedMap&lt;K, V&gt; unmodifiableSortedMap(SortedMap&lt;K, ? extends V&gt; m);
 </pre></div>
 <h2>检查接口包装器</h2>
-<p>提供了 <code>Collections.checked</code> <em>interface (接口？)</em> 包装器以用于泛型集合。这些实现返回指定集合的​​<em>dynamically (动态)</em> 类型安全视图，如果客户端尝试添加错误类型的元素，则会抛出 <code>ClassCastException</code>。该语言中的泛型机制提供了编译时(静态)类型检查，但有可能打败这种机制。动态类型安全的视图完全消除了这种可能性。</p>
+<p>提供了 <code>Collections.checked</code> <em>interface (接口)</em> 包装器以用于泛型集合。这些实现返回指定集合的​​<em>dynamically (动态)</em> 类型安全视图，如果客户端尝试添加错误类型的元素，则会抛出 <code>ClassCastException</code>。该语言中的泛型机制提供了编译时(静态)类型检查，但有可能打败这种机制。动态类型安全的视图完全消除了这种可能性。</p>
 
 
         </div>

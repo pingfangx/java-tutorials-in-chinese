@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -511,15 +511,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="QandE/nested-questions.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/enum-questions.html">Next&nbsp;»</a>
+                <a target="_top" href="QandE/nested-questions.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/enum-questions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>枚举类型</h1></div>
             <div id="PageContent">
 
-<p><i>enum type</i> 是一种特殊数据类型，它使变量成为一组预定义常量。变量必须等于为其预定义的值之一。常见示例包括罗盘方向(NORTH，SOUTH，EAST 和 WEST 的值)和星期几。</p>
+<p><i>enum type (枚举类型)</i> 是一种特殊数据类型，它使变量成为一组预定义常量。变量必须等于为其预定义的值之一。常见示例包括罗盘方向(NORTH，SOUTH，EAST 和 WEST 的值)和星期几。</p>
 <p>因为它们是常量，所以枚举类型字段的名称是大写字母。</p>
-<p>在 Java 编程语言中，使用 <code>enum</code> 关键字定义枚举类型。例如，您可以将星期几的枚举类型指定为：</p>
+<p>在 Java 编程语言中，使用 <code>enum</code> 关键字定义枚举类型。例如，你可以将星期几的枚举类型指定为：</p>
 <div class="codeblock"><pre>
 
 public enum Day {
@@ -527,8 +527,8 @@ public enum Day {
     THURSDAY, FRIDAY, SATURDAY 
 }
 </pre></div>
-<p>您需要在需要表示一组固定常量时使用枚举类型。这包括自然枚举类型，例如我们太阳系中的行星和数据集，您可以在编译时知道所有可能的值，例如，菜单上的选项，命令行标志等。</p>
-<p>以下是一些代码，向您展示如何使用上面定义的 <code>Day</code> 枚举：</p>
+<p>你需要在需要表示一组固定常量时使用枚举类型。这包括自然枚举类型，例如我们太阳系中的行星和数据集，你可以在编译时知道所有可能的值，例如，菜单上的选项，命令行标志等。</p>
+<p>以下是一些代码，向你展示如何使用上面定义的 <code>Day</code> 枚举：</p>
 <div class="codeblock"><pre>
 
 public class EnumTest {
@@ -589,9 +589,9 @@ for (Planet p : Planet.values()) {
 </pre></div>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;<i>所有</i> 枚举隐式继承 <code>java.lang.Enum</code>。因为一个类只能继承一个父类(参见 <a class="TutorialLink" target="_top" href="classdecl.html">Declaring Classes</a>)，所以 Java 语言不支持多重继承状态(参见 <a class="TutorialLink" target="_top" href="../IandI/multipleinheritance.html">Multiple Inheritance of State, Implementation, and Type</a>)因此，枚举不能继承任何其他内容。
 <hr /></div>
-<p>在以下示例中，<code>Planet</code> 是枚举类型，表示太阳系中的行星。它们具有恒定的质量和半径属性。</p>
+<p>在以下示例中，<code>Planet</code> 是枚举类型，表示太阳系中的行星。它们具有常量的质量和半径属性。</p>
 <p>每个枚举常量都声明为质量和半径参数的值。创建常量时，这些值将传递给构造函数。Java 要求在任何字段或方法之前首先定义常量。此外，当存在字段和方法时，枚举常量列表必须以分号结尾。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;枚举类型的构造函数必须是包私有或私有访问。它会自动创建在枚举主体开头定义的常量。您不能自己调用​​枚举构造函数。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;枚举类型的构造函数必须是包私有或私有访问。它会自动创建在枚举主体开头定义的常量。你不能自己调用​​枚举构造函数。
 <hr /></div>
 <p>除了它的属性和构造函数之外，<code>Planet</code> 还有一些方法可以让你获取每个行星上物体的表面重力和重量。这是一个示例程序，它可以将你的重量放在地球上(在任何单位)并计算和打印所有行星上的重量(在同一单位)：</p>
 <div class="codeblock"><pre>

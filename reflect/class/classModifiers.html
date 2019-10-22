@@ -472,7 +472,7 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">类</a></div>
-<div class="linkAHEAD"><a href="classNew.html">获取类对象</a></div>
+<div class="linkAHEAD"><a href="classNew.html">获取 Class 对象</a></div>
 <div class="nolinkAHEAD">检查类修饰符和类型</div>
 <div class="linkAHEAD"><a href="classMembers.html">发现类成员</a></div>
 <div class="linkAHEAD"><a href="classTrouble.html">故障排除</a></div>
@@ -487,7 +487,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">类</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="classNew.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="classMembers.html">Next&nbsp;»</a>
+                <a target="_top" href="classNew.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="classMembers.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>检查类修饰符和类型</h1></div>
@@ -503,7 +503,7 @@
 <li>注解</li>
 </ul>
 <p>并非所有类都允许使用所有修饰符，例如，接口不能是 <code>final</code>，并且枚举不能是 <code>abstract</code>。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Modifier.html"><code>java.lang.reflect.Modifier</code></a> 包含所有可能修饰符的声明。它还包含可用于解码由 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getModifiers--"><code>Class.getModifiers()</code></a> 返回的修饰符集的方法。</p>
-<p><a class="SourceLink" target="_blank" href="example/ClassDeclarationSpy.java" onclick="showCode('../../displayCode.html', 'example/ClassDeclarationSpy.java'); return false;"><code><code>ClassDeclarationSpy</code></code></a> 示例显示了如何获取类的声明组件，包括修饰符，泛型类型参数，实现的接口和继承路径。由于 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a> 实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html"><code>java.lang.reflect.AnnotatedElement</code></a> 接口，因此还可以查询运行时注释。</p>
+<p><a class="SourceLink" target="_blank" href="example/ClassDeclarationSpy.java" onclick="showCode('../../displayCode.html', 'example/ClassDeclarationSpy.java'); return false;"><code><code>ClassDeclarationSpy</code></code></a> 示例显示了如何获取类的声明组件，包括修饰符，泛型类型形参，实现的接口和继承路径。由于 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a> 实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html"><code>java.lang.reflect.AnnotatedElement</code></a> 接口，因此还可以查询运行时注解。</p>
 <div class="codeblock"><pre>
 
 import java.lang.annotation.Annotation;
@@ -607,7 +607,7 @@ Annotations:
 public interface ConcurrentNavigableMap&lt;K,V&gt;
     extends ConcurrentMap&lt;K,V&gt;, NavigableMap&lt;K,V&gt;
 </pre></div>
-请注意，由于这是一个接口，因此隐式 <code>abstract</code>。编译器为每个接口添加此修饰符。此外，此声明包含两个泛型类型参数，<code>K</code> 和 <code>V</code>。示例代码只是打印这些参数的名称，但是可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/TypeVariable.html"><code>java.lang.reflect.TypeVariable</code></a> 中的方法获取有关它们的其他信息。接口还可以实现如上所示的其他接口。
+请注意，由于这是一个接口，因此隐式 <code>abstract</code>。编译器为每个接口添加此修饰符。此外，此声明包含两个泛型类型形参，<code>K</code> 和 <code>V</code>。示例代码只是打印这些参数的名称，但是可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/TypeVariable.html"><code>java.lang.reflect.TypeVariable</code></a> 中的方法获取有关它们的其他信息。接口还可以实现如上所示的其他接口。
 <div class="codeblock"><pre>
 &#36; <em>java ClassDeclarationSpy "[Ljava.lang.String;"</em>
 Class:
@@ -653,7 +653,7 @@ Inheritance Path:
 Annotations:
   -- No Annotations --
 </pre></div>
-<p>从继承路径可以推断，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/InterruptedIOException.html"><code>java.io.InterruptedIOException</code></a> 是一个检查型异常，因为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html"><code>RuntimeException</code></a> 是不存在。</p>
+<p>从继承路径可以推断，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/InterruptedIOException.html"><code>java.io.InterruptedIOException</code></a> 是一个检查型异常，因为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html"><code>RuntimeException</code></a> 不存在（译注：指未继承 RuntimeException，RuntimeException 和 Error 是非检查型异常）。</p>
 <div class="codeblock"><pre>
 &#36; <em>java ClassDeclarationSpy java.security.Identity</em>
 Class:
@@ -675,7 +675,7 @@ Inheritance Path:
 Annotations:
   @java.lang.Deprecated()
 </pre></div>
-<p>此输出显示 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/security/Identity.html"><code>java.security.Identity</code></a>，一个已弃用的 API，拥有注释 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html"><code>java.lang.Deprecated</code></a>。反射代码可以使用它来检测已弃用的 API。</p>
+<p>此输出显示 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/security/Identity.html"><code>java.security.Identity</code></a>，一个已弃用的 API，拥有注解 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html"><code>java.lang.Deprecated</code></a>。反射代码可以使用它来检测已弃用的 API。</p>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;并非所有注解都可通过反射获得。只有那些 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html"><code>java.lang.annotation.RetentionPolicy</code></a> 为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME"><code>RUNTIME</code></a> 的才可以访问。在语言中预先定义的三个注解中， <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html"><code>@Deprecated</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Override.html"><code>@Override</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/SuppressWarnings.html"><code>@SuppressWarnings</code></a> ，只有 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html"><code>@Deprecated</code></a> 在运行时可用。
 <hr /></div>
 

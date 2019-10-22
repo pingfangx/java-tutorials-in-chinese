@@ -494,18 +494,18 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">接口</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="sorted-map.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">Next&nbsp;»</a>
+                <a target="_top" href="sorted-map.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>接口总结</h1></div>
             <div id="PageContent">
 
 <p>核心集合接口是 Java 集合框架的基础。</p>
-<p>Java Collections Framework 层次结构由两个不同的接口树组成：</p>
+<p>Java 集合框架层次结构由两个不同的接口树组成：</p>
 <ul>
-<li>第一个树以 <code>Collection</code> 接口开始，该接口提供所有集合使用的基本功能，例如 <code>add</code> 和 <code>remove</code> 方法。它的子接口 <code>Set</code>，<code>List</code> 和 <code>Queue</code> 提供更专业的集合。</li>
+<li>第一个树以 <code>Collection</code> 接口开始，该接口提供所有集合使用的基本功能，例如 <code>add</code> 和 <code>remove</code> 方法。它的子接口  <code>Set</code>，<code>List</code> 和 <code>Queue</code>  提供更专业的集合。</li>
 <li><p><code>Set</code> 接口不允许重复元素。这对于存储诸如一副纸牌或学生记录之类的集合非常有用。<code>Set</code> 接口有一个子接口 <code>SortedSet</code>，它提供了对集合中元素的排序。</p></li>
-<li><p><code>List</code> 接口提供有序集合，适用于需要精确控制每个元素插入位置的情况。您可以按照其确切位置从 <code>List</code> 中获取元素。</p></li>
+<li><p><code>List</code> 接口提供有序集合，适用于需要精确控制每个元素插入位置的情况。你可以按照其确切位置从 <code>List</code> 中获取元素。</p></li>
 <li><p><code>Queue</code> 接口可启用其他插入，提取和检查操作。<code>Queue</code> 中的元素通常以 FIFO 为基础进行排序。</p></li>
 <li><p><code>Deque</code> 接口可在两端启用插入，删除和检查操作。<code>Deque</code> 中的元素可用于 LIFO 和 FIFO。</p></li>
 <li><p>第二个树以 <code>Map</code> 接口开始，该接口映射类似于 <code>Hashtable</code> 的键和值。</p></li>

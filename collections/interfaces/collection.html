@@ -494,20 +494,20 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">接口</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="set.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="set.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Collection 接口</h1></div>
             <div id="PageContent">
 
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html"><code>Collection</code></a> 表示一组称为其元素的对象。<code>Collection</code> 接口用于传递需要最大泛型性的对象集合。例如，按照惯例，所有泛型集合实现都有一个带有 <code>Collection</code> 参数的构造函数。此构造函数(称为 <i>conversion constructor (转换构造函数)</i>)初始化新集合以包含指定集合中的所有元素，无论给定集合的子接口或实现类型如何。换句话说，它允许您 <i>convert (转换)</i> 集合的类型。</p>
-<p>例如，假设您有一个 <code>Collection&lt;String&gt; c</code>，它可能是 <code>List</code>，<code>Set</code>，或者是另一种 <code>Collection</code>。这个习惯用法创建一个新的 <code>ArrayList</code>(<code>List</code> 接口的实现)，最初包含 <code>c</code> 中的所有元素。</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html"><code>Collection</code></a> 表示一组称为其元素的对象。<code>Collection</code> 接口用于传递需要最大泛型性的对象集合。例如，按照规范，所有泛型集合实现都有一个带有 <code>Collection</code> 参数的构造函数。此构造函数(称为 <i>conversion constructor (转换构造函数)</i>)初始化新集合以包含指定集合中的所有元素，无论给定集合的子接口或实现类型如何。换句话说，它允许你 <i>convert (转换)</i> 集合的类型。</p>
+<p>例如，假设你有一个 <code>Collection&lt;String&gt; c</code>，它可能是 <code>List</code>，<code>Set</code>，或者是另一种 <code>Collection</code>。这个习惯用法创建一个新的 <code>ArrayList</code>(<code>List</code> 接口的实现)，最初包含 <code>c</code> 中的所有元素。</p>
 
 <div class="codeblock"><pre>
 List&lt;String&gt; list = new ArrayList&lt;String&gt;(c);
 </pre></div>
 
-或者 - 如果您使用的是 JDK 7 或更高版本 - 您可以使用菱形运算符：
+或者 - 如果你使用的是 JDK 7 或更高版本 - 你可以使用钻石运算符：
 
 
 <div class="codeblock"><pre>
@@ -567,8 +567,8 @@ public interface Collection&lt;E&gt; extends Iterable&lt;E&gt; {
 </p>
 
 
-<p>如果 <code>Collection</code> 表示一组对象，<code>Collection</code> 接口会执行您的预期。它有方法告诉您集合中有多少元素(<code>size</code>，<code>isEmpty</code>)，有方法检查给定对象是否在集合中(<code>contains</code>)，有从集合中添加和移除元素的方法(<code>add</code>，<code>remove</code>)，以及在集合上提供迭代器的方法(<code>iterator</code>)。</p>
-<p><code>add</code> 方法的定义足够通用，因此对于允许重复的集合以及不重复的集合都有意义。它保证在调用完成后 <code>Collection</code> 将包含指定的元素，并且如果 <code>Collection</code> 因调用而发生更改，则返回 <code>true</code>。类似地，<code>remove</code> 方法旨在从 <code>Collection</code> 中移除指定元素的单个实例，假设它包含要开始的元素，并返回 <code>true</code> 如果 <code>Collection</code> 被修改。 <a name="Traversing" id="Traversing"></a></p>
+<p>如果 <code>Collection</code> 表示一组对象，<code>Collection</code> 接口会执行你的预期。它有方法告诉你集合中有多少元素(<code>size</code>，<code>isEmpty</code>)，有方法检查给定对象是否在集合中(<code>contains</code>)，有从集合中添加和移除元素的方法(<code>add</code>，<code>remove</code>)，以及在集合上提供迭代器的方法(<code>iterator</code>)。</p>
+<p><code>add</code> 方法的定义足够通用，因此对于允许重复的集合以及不重复的集合都有意义。它保证在调用完成后 <code>Collection</code> 将包含指定的元素，并且如果 <code>Collection</code> 因调用而发生更改，则返回 <code>true</code>。类似地，<code>remove</code> 方法旨在从 <code>Collection</code> 中移除指定元素的单个实例，假设它包含要开始的元素，并且如果 <code>Collection</code> 被修改了，则返回 <code>true</code> 。 <a name="Traversing" id="Traversing"></a></p>
 
 
 <h2>遍历集合</h2>
@@ -587,7 +587,7 @@ myShapesCollection.stream()
 
 
 <p>
-同样，您可以轻松地请求并行流，如果集合足够大并且您的计算机具有足够的核心，这可能是有意义的：
+同样，你可以轻松地请求并行流，如果集合足够大并且你的计算机具有足够的核心，这可能是有意义的：
 </p>
 
 
@@ -598,7 +598,7 @@ myShapesCollection.parallelStream()
 </pre></div>
 
 <p>
-使用此 API 收集数据的方法有很多种。例如，您可能希望将 <code>Collection</code> 的元素转换为 <code>String</code> 对象，然后将它们连接起来，用逗号分隔：
+使用此 API 收集数据的方法有很多种。例如，你可能希望将 <code>Collection</code> 的元素转换为 <code>String</code> 对象，然后将它们连接起来，用逗号分隔：
 </p>
 <pre>
     String joined = elements.stream()
@@ -616,10 +616,10 @@ int total = employees.stream()
 </pre></div>
 
 <p>
-这些只是您可以使用流和聚合操作执行的一些示例。有关更多信息和示例，请参阅标题为 <a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> 的课程。
+这些只是你可以使用流和聚合操作执行的一些示例。有关更多信息和示例，请参阅标题为 <a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> 的课程。
 </p>
 <p>
-Collections 框架一直提供许多所谓的“批量操作”作为其 API 的一部分。这些包括对整个集合进行操作的方法，例如 <code>containsAll</code>，<code>addAll</code>，<code>removeAll</code> 等。不要将这些方法与 JDK 8 中引入的聚合操作混淆。新聚合操作与现有批量操作(<code>containsAll</code>，<code>addAll</code> 等)之间的主要区别在于旧版本都是 <em>mutative (变化的)</em>，意味着它们都修改了底层集合。相反，新的聚合操作 <em>不会</em> 修改底层集合。使用新的聚合操作和 lambda 表达式时，必须注意避免突变，以免将来引入问题，如果您的代码稍后从并行流运行。
+Collections 框架一直提供许多所谓的“批量操作”作为其 API 的一部分。这些包括对整个集合进行操作的方法，例如 <code>containsAll</code>，<code>addAll</code>，<code>removeAll</code> 等。不要将这些方法与 JDK 8 中引入的聚合操作混淆。新聚合操作与现有批量操作(<code>containsAll</code>，<code>addAll</code> 等)之间的主要区别在于旧版本都是 <em>mutative (变化的)</em>，意味着它们都修改了底层集合。相反，新的聚合操作 <em>不会</em> 修改底层集合。使用新的聚合操作和 lambda 表达式时，必须注意避免突变，以免将来引入问题，如果你的代码稍后从并行流运行。
 
 
 
@@ -628,13 +628,13 @@ Collections 框架一直提供许多所谓的“批量操作”作为其 API 的
 
 
 <h3>for-each 结构</h3>
-<p><code>for-each</code> 结构允许您使用 <code>for</code> 循环简洁地遍历集合或数组参见 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/for.html">The for Statement</a>。以下代码使用 <code>for-each</code> 结构在单独的行上打印出集合的每个元素。</p>
+<p><code>for-each</code> 结构允许你使用 <code>for</code> 循环简洁地遍历集合或数组  参见 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/for.html">The for Statement</a>。以下代码使用 <code>for-each</code> 结构在单独的行上打印出集合的每个元素。</p>
 <div class="codeblock"><pre>
 for (Object o : collection)
     System.out.println(o);
 </pre></div>
 <h3><a name="Iterator" id="Iterator">迭代器</a></h3>
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html"><code>Iterator</code></a> 是一个对象，使您可以遍历集合并有选择地从集合中移除元素(如果需要)。通过调用 <code>iterator</code> 方法，您可以获得集合的 <code>Iterator</code>。以下是 <code>Iterator</code> 接口。</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html"><code>Iterator</code></a> 是一个对象，使你可以遍历集合并有选择地从集合中移除元素(如果需要)。通过调用 <code>iterator</code> 方法，你可以获得集合的 <code>Iterator</code>。以下是 <code>Iterator</code> 接口。</p>
 <div class="codeblock"><pre>
 public interface Iterator&lt;E&gt; {
     boolean hasNext();
@@ -644,12 +644,12 @@ public interface Iterator&lt;E&gt; {
 </pre></div>
 <p>如果迭代对象具有更多元素，则 <code>hasNext</code> 方法返回 <code>true</code>，<code>next</code> 方法返回迭代中的下一个元素。<code>remove</code> 方法从基础 <code>Collection</code> 中移除 <code>next</code> 返回的最后一个元素。每次调用 <code>next</code> 时，只能调用一次 <code>remove</code> 方法，如果违反此规则，则会抛出异常。</p>
 <p>请注意，<code>Iterator.remove</code> 是在迭代期间修改集合的 <i>only (唯一)</i> 安全方式；如果在迭代进行过程中以任何其他方式修改基础集合，则行为未指定。</p>
-<p>当您需要完成以下操作时，请使用 <code>Iterator</code> 而不是 <code>for-each</code> 构造：</p>
+<p>当你需要完成以下操作时，请使用 <code>Iterator</code> 而不是 <code>for-each</code> 构造：</p>
 <ul>
-<li>移除当前元素。<code>for-each</code> 构造隐藏了迭代器，因此您无法调用 <code>remove</code>。因此，<code>for-each</code> 结构不可用于过滤。</li>
+<li>移除当前元素。<code>for-each</code> 构造隐藏了迭代器，因此你无法调用 <code>remove</code>。因此，<code>for-each</code> 结构不可用于过滤。</li>
 <li>并行迭代多个集合。</li>
 </ul>
-<p>以下方法介绍如何使用 <code>Iterator</code> 过滤任意 <code>Collection</code> 也就是说，遍历集合移除特定元素。</p>
+<p>以下方法介绍如何使用 <code>Iterator</code> 过滤任意 <code>Collection</code>  也就是说，遍历集合移除特定元素。</p>
 <div class="codeblock"><pre>
 static void filter(Collection&lt;?&gt; c) {
     for (Iterator&lt;?&gt; it = c.iterator(); it.hasNext(); )
@@ -657,22 +657,22 @@ static void filter(Collection&lt;?&gt; c) {
             it.remove();
 }
 </pre></div>
-<p>这段简单的代码是多态的，这意味着无论实现如何，它都适用于 <i>any (任何)</i> <code>Collection</code>。此示例演示了使用 Java Collections Framework 编写多态算法是多么容易。</p>
+<p>这段简单的代码是多态的，这意味着无论实现如何，它都适用于 <i>any (任何)</i> <code>Collection</code>。此示例演示了使用 Java 集合框架编写多态算法是多么容易。</p>
 <h2>集合接口批量操作</h2>
-<p><i>Bulk operations (批量操作)</i> 对整个 <code>Collection</code> 执行操作。您可以使用基本操作实现这些速记操作，但在大多数情况下，此类实现效率较低。以下是批量操作：</p>
+<p><i>Bulk operations (批量操作)</i> 对整个 <code>Collection</code> 执行操作。你可以使用基本操作实现这些速记（译注：shorthand）操作，但在大多数情况下，此类实现效率较低。以下是批量操作：</p>
 <ul>
-<li><code>containsAll</code> 如果目标 <code>Collection</code> 包含指定 <code>Collection</code> 中的所有元素，则返回 <code>true</code>。</li>
-<li><code>addAll</code> 将指定的 <code>Collection</code> 中的所有元素添加到目标 <code>Collection</code>。</li>
-<li><code>removeAll</code> 从目标 <code>Collection</code> 中移除也包含在指定的 <code>Collection</code> 中的所有元素。</li>
-<li><code>retainAll</code> 从目标 <code>Collection</code> 中移除 <i>不</i> 包含在指定的 <code>Collection</code> 中的所有元素。也就是说，它仅保留目标 <code>Collection</code> 中也包含在指定的 <code>Collection</code> 中的那些元素。</li>
-<li><code>clear</code> 从 <code>Collection</code> 中移除所有元素。</li>
+<li><code>containsAll</code>  如果目标 <code>Collection</code> 包含指定 <code>Collection</code> 中的所有元素，则返回 <code>true</code>。</li>
+<li><code>addAll</code>  将指定的 <code>Collection</code> 中的所有元素添加到目标 <code>Collection</code>。</li>
+<li><code>removeAll</code>  从目标 <code>Collection</code> 中移除也包含在指定的 <code>Collection</code> 中的所有元素。</li>
+<li><code>retainAll</code>  从目标 <code>Collection</code> 中移除 <i>不</i> 包含在指定的 <code>Collection</code> 中的所有元素。也就是说，它仅保留目标 <code>Collection</code> 中也包含在指定的 <code>Collection</code> 中的那些元素。</li>
+<li><code>clear</code>  从 <code>Collection</code> 中移除所有元素。</li>
 </ul>
 <p>如果目标 <code>Collection</code> 在 <code>addAll</code>，<code>removeAll</code> 和 <code>retainAll</code> 方法执行操作的进程中被修改，则这些方法都返回 <code>true</code>。</p>
 <p>作为批量操作功能的一个简单示例，请考虑以下习惯用法从 <code>Collection</code> <code>c</code> 中移除指定元素 <code>e</code> 的 <i>所有</i> 实例。</p>
 <div class="codeblock"><pre>
 c.removeAll(Collections.singleton(e));
 </pre></div>
-<p>更具体地说，假设您要从 <code>Collection</code> 中移除所有 <code>null</code> 元素。</p>
+<p>更具体地说，假设你要从 <code>Collection</code> 中移除所有 <code>null</code> 元素。</p>
 <div class="codeblock"><pre>
 c.removeAll(Collections.singleton(null));
 </pre></div>

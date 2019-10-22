@@ -506,14 +506,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="intro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="verify.html">Next&nbsp;»</a>
+                <a target="_top" href="intro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="verify.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>签名 JAR 文件</h1></div>
             <div id="PageContent">
 
-<p>您可以使用 JAR 签名和验证工具对 JAR 文件进行签名并为签名添加时间戳。您可以使用 <tt>jarsigner</tt> 命令调用 JAR 签名和验证工具，因此我们将其简称为“Jarsigner”。</p>
-<p>要签署 JAR 文件，您必须首先拥有私钥。私钥及其关联的公钥证书存储在名为 <em>keystores</em> 的受密码保护的数据库中。密钥库可以容纳许多潜在签名者的密钥。密钥库中的每个密钥都可以通过 <em>alias (别名)</em> 来标识，该别名通常是拥有密钥的签名者的名称。例如，属于  Rita Jones 的密钥可能具有别名“rita”。</p>
+<p>你可以使用 JAR 签名和验证工具对 JAR 文件进行签名并为签名添加时间戳。你可以使用 <tt>jarsigner</tt> 命令调用 JAR 签名和验证工具，因此我们将其简称为“Jarsigner”。</p>
+<p>要签署 JAR 文件，你必须首先拥有私钥。私钥及其关联的公钥证书存储在名为 <em>keystores</em> 的受密码保护的数据库中。密钥库可以容纳许多潜在签名者的密钥。密钥库中的每个密钥都可以通过 <em>alias (别名)</em> 来标识，该别名通常是拥有密钥的签名者的名称。例如，属于  Rita Jones 的密钥可能具有别名“rita”。</p>
 <p>用于签名 JAR 文件的命令的基本形式是</p>
 <div class="codeblock"><pre>
 jarsigner <i>jar-file alias</i>
@@ -523,9 +523,9 @@ jarsigner <i>jar-file alias</i>
 <li><tt>jar-file</tt> 是要签名的 JAR 文件的路径名。</li>
 <li><tt>alias</tt> 是标识要用于对 JAR 文件进行签名的私钥的别名，以及密钥的关联证书。</li>
 </ul>
-<p>Jarsigner 工具将提示您输入密钥库和别名的密码。</p>
+<p>Jarsigner 工具将提示你输入密钥库和别名的密码。</p>
 <p>此命令的这种基本形式假定要使用的密钥库位于主目录中名为 <tt>.keystore</tt> 的文件中。它将分别创建名称为 <tt>x.SF</tt> 和 <tt>x.DSA</tt> 的签名和签名块文件，其中 <tt>x</tt> 是别名的前八个字母，全部转换为大写。此基本命令将使用签名的 JAR 文件 <em>overwrite (覆盖)</em> 原始 JAR 文件。</p>
-<p>实际上，您可能希望使用一个或多个可用的命令选项。例如，鼓励为签名添加时间戳，以便用于部署应用程序的任何工具都可以验证用于签署 JAR 文件的证书在签名文件时是否有效。如果未包含时间戳，则 Jarsigner 工具会发出警告。</p>
+<p>实际上，你可能希望使用一个或多个可用的命令选项。例如，鼓励为签名添加时间戳，以便用于部署应用程序的任何工具都可以验证用于签署 JAR 文件的证书在签名文件时是否有效。如果未包含时间戳，则 Jarsigner 工具会发出警告。</p>
 <p>选项位于 <tt>jar-file</tt> 路径名之前。下表介绍了可用的选项：<br />
 <br /></p>
 <table summary="Jarsigner 命令选项" cellspacing="3" border="1">
@@ -536,11 +536,11 @@ jarsigner <i>jar-file alias</i>
 </tr>
 <tr>
 <td><tt>-keystore</tt>&nbsp;<i>url</i></td>
-<td>如果您不想使用 <tt>.keystore</tt> 默认数据库，则指定要使用的密钥库。</td>
+<td>如果你不想使用 <tt>.keystore</tt> 默认数据库，则指定要使用的密钥库。</td>
 </tr>
 <tr>
 <td><tt>-sigfile</tt>&nbsp;<i>file</i></td>
-<td>如果您不希望从别名中获取基本名称，请指定 .SF 和 .DSA 文件的基本名称。<i>file</i> 必须仅由大写字母(A-Z)，数字(0-9)，连字符( - )和下划线(_)组成。</td>
+<td>如果你不希望从别名中获取基本名称，请指定 .SF 和 .DSA 文件的基本名称。<i>file</i> 必须仅由大写字母(A-Z)，数字(0-9)，连字符( - )和下划线(_)组成。</td>
 </tr>
 <tr>
 <td><tt>-signedjar</tt>&nbsp;<i>file</i></td>
@@ -567,18 +567,18 @@ jarsigner <i>jar-file alias</i>
 <p>让我们看一下使用 Jarsigner 工具签名 JAR 文件的几个示例。在这些示例中，我们将假设以下内容：</p>
 
 <ul>
-  <li>您的别名是“johndoe”。</li>
+  <li>你的别名是“johndoe”。</li>
   <li>要使用的密钥库位于当前工作目录中名为“mykeys”的文件中。</li>
   <li>要用于为签名添加时间戳的 TSA 位于 <code>http://tsa.url.example.com</code>。</li>
 </ul>
 
-<p>在这些假设下，您可以使用此命令对名为 <tt>app.jar</tt> 的 JAR 文件进行签名：</p>
+<p>在这些假设下，你可以使用此命令对名为 <tt>app.jar</tt> 的 JAR 文件进行签名：</p>
 
 <div class="codeblock"><pre>
 jarsigner -keystore mykeys -tsa http://tsa.url.example.com app.jar johndoe
 </pre></div>
 
-<p>系统将提示您输入密钥库和别名的密码。由于此命令不使用 <tt>-sigfile</tt> 选项，因此它创建的 .SF 和 .DSA 文件将命名为 <tt>JOHNDOE.SF</tt> 和 <tt>JOHNDOE.DSA</tt>。由于该命令不使用 <tt>-signedjar</tt> 选项，因此生成的签名文件将覆盖 <tt>app.jar</tt> 的原始版本。</p>
+<p>系统将提示你输入密钥库和别名的密码。由于此命令不使用 <tt>-sigfile</tt> 选项，因此它创建的 .SF 和 .DSA 文件将命名为 <tt>JOHNDOE.SF</tt> 和 <tt>JOHNDOE.DSA</tt>。由于该命令不使用 <tt>-signedjar</tt> 选项，因此生成的签名文件将覆盖 <tt>app.jar</tt> 的原始版本。</p>
 
 <p>让我们来看看如果使用不同的选项组合会发生什么：</p>
 

@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">接口</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="map.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="sorted-set.html">Next&nbsp;»</a>
+                <a target="_top" href="map.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="sorted-set.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>对象排序</h1></div>
@@ -565,12 +565,12 @@ Collections.sort(l);
 </tr>
 <tr>
 <td><code>CollationKey</code></td>
-<td>特定于区域设置的词典</td>
+<td>特定于语言环境的词典</td>
 </tr>
 </table>
 <br />
-<p>如果您尝试对列表进行排序，其中的元素未实现 <code>Comparable</code>，<code>Collections.sort(list)</code> 将抛出 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassCastException.html"><code>ClassCastException</code></a>。类似地，如果您尝试使用 <code>comparator</code> 对其元素无法相互比较的列表进行排序，<code>Collections.sort(list, comparator)</code> 将抛出 <code>ClassCastException</code>。可以相互比较的元素被称为 <i>mutually comparable (相互比较)</i>。虽然不同类型的元素可以相互比较，但这里不列出的允许进行类间比较的类。</p>
-<p>如果您只想对可比较元素的列表进行排序或创建它们的已排序集合，那么您真正需要了解 <code>Comparable</code> 接口。如果要实现自己的 <code>Comparable</code> 类型，下一部分将是您感兴趣的。</p>
+<p>如果你尝试对列表进行排序，其中的元素未实现 <code>Comparable</code>，<code>Collections.sort(list)</code> 将抛出 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassCastException.html"><code>ClassCastException</code></a>。类似地，如果你尝试使用 <code>comparator</code> 对其元素无法相互比较的列表进行排序，<code>Collections.sort(list, comparator)</code> 将抛出 <code>ClassCastException</code>。可以相互比较的元素被称为 <i>mutually comparable (相互比较)</i>。虽然不同类型的元素可以相互比较，但这里没有列出允许进行类之间比较的类。</p>
+<p>如果你只想对可比较元素的列表进行排序或创建它们的有序集合，那么你真正需要了解 <code>Comparable</code> 接口。如果要实现自己的 <code>Comparable</code> 类型，下一部分将是你感兴趣的。</p>
 <h2>编写自己的可比类型</h2>
 <p><code>Comparable</code> 接口包含以下方法。</p>
 <div class="codeblock"><pre>
@@ -619,14 +619,14 @@ public class Name implements Comparable&lt;Name&gt; {
 </pre></div>
 <p>为了保持前面的例子简短，这个类有点受限：它不支持中间名，它既需要名字也要求姓，并且不以任何方式国际化。尽管如此，它还说明了以下要点：</p>
 <ul>
-<li><code>Name</code> 对象是 <i>immutable (不可变)</i>。在所有其他条件相同的情况下，不可变类型是可行的方法，特别是对于将用作 <code>Set</code> 中的元素或 <code>Map</code> 中的键的对象。如果您在集合中修改元素或键，这些集合将会中断。</li>
+<li><code>Name</code> 对象是 <i>immutable (不可变)</i>。在所有其他条件相同的情况下，不可变类型是可行的方法，特别是对于将用作 <code>Set</code> 中的元素或 <code>Map</code> 中的键的对象。如果你在集合中修改元素或键，这些集合将会中断。</li>
 <li>构造函数检查 <code>null</code> 的参数。这可以确保所有 <code>Name</code> 对象格式正确，这样其他任何方法都不会抛出 <code>NullPointerException</code>。</li>
 <li>重新定义 <code>hashCode</code> 方法。这对于重新定义 <code>equals</code> 方法的任何类都是必不可少的。(相等的对象必须具有相等的哈希码。)</li>
 <li>如果指定的对象是 <code>null</code> 或类型不合适，<code>equals</code> 方法将返回 <code>false</code>。在这些情况下，<code>compareTo</code> 方法会抛出运行时异常。这些行为都是各方法的一般合同所要求的。</li>
 <li><code>toString</code> 方法已重新定义，因此它以人类可读的形式打印 <code>Name</code>。这总是一个好主意，特别是对于要放入集合的对象。各种集合类型的 <code>toString</code> 方法依赖于其元素，键和值的 <code>toString</code> 方法。</li>
 </ul>
-<p>由于本节涉及元素排序，让我们再谈谈 <code>Name</code> 的 <code>compareTo</code> 方法。它实现了标准的名称排序算法，其中姓氏优先于名字。这正是您想要的自然顺序。如果自然顺序不自然，那将会非常混乱！</p>
-<p>看看如何实现 <code>compareTo</code>，因为它非常典型。首先，比较对象的最重要部分(在本例中为姓氏)。通常，您可以使用零件类型的自然顺序。在这种情况下，该部分是 <code>String</code>，自然(词典)排序正是所要求的。如果比较结果不是表示相等的零，那么您就完成了：您只需返回结果。如果最重要的部分相同，则继续比较下一个最重要的部分。在这种情况下，只有两个部分名字和姓氏。如果有更多的零件，您会以明显的方式进行，比较零件，直到您发现两个不相等或您正在比较最不重要的零件，此时您将返回比较的结果。</p>
+<p>由于本节涉及元素排序，让我们再谈谈 <code>Name</code> 的 <code>compareTo</code> 方法。它实现了标准的名称排序算法，其中姓氏优先于名字。这正是你想要的自然顺序。如果自然顺序不自然，那将会非常混乱！</p>
+<p>看看如何实现 <code>compareTo</code>，因为它非常典型。首先，比较对象的最重要部分(在本例中为姓氏)。通常，你可以使用零件类型的自然顺序。在这种情况下，该部分是 <code>String</code>，自然(词典)排序正是所要求的。如果比较结果不是表示相等的零，那么你就完成了：你只需返回结果。如果最重要的部分相同，则继续比较下一个最重要的部分。在这种情况下，只有两个部分  名字和姓氏。如果有更多的零件，你会以明显的方式进行，比较零件，直到你发现两个不相等或你正在比较最不重要的零件，此时你将返回比较的结果。</p>
 <p>只是为了表明一切正常，这里是 <a class="SourceLink" target="_blank" href="examples/NameSort.java" onclick="showCode('../../displayCode.html', 'examples/NameSort.java'); return false;"><code>一个构建名称列表并对其排序的程序</code></a>。</p>
 <div class="codeblock"><pre>
 import java.util.*;
@@ -646,21 +646,21 @@ public class NameSort {
     }
 }
 </pre></div>
-<p>如果您运行这个程序，这是它打印的内容。</p>
+<p>如果你运行这个程序，这是它打印的内容。</p>
 <div class="codeblock"><pre>
 [Karl Ng, Tom Rich, Jeff Smith, John Smith]
 </pre></div>
-<p><code>compareTo</code> 方法的行为有四个限制，我们现在不会讨论它们，因为它们技术性很差，很无聊，最好留在 API 文档中。实现 <code>Comparable</code> 的所有类都遵守这些限制非常重要，因此如果您正在编写实现它的类，请阅读 <code>Comparable</code> 的文档。尝试对违反限制的对象列表进行排序具有未定义的行为。从技术上讲，这些限制确保了自然排序是实现它的类的对象的 <i>total order (总顺序)</i>;这对于确保明确定义排序是必要的。</p>
+<p><code>compareTo</code> 方法的行为有四个限制，我们现在不会讨论它们，因为它们技术性很差，很无聊，最好留在 API 文档中。实现 <code>Comparable</code> 的所有类都遵守这些限制非常重要，因此如果你正在编写实现它的类，请阅读 <code>Comparable</code> 的文档。尝试对违反限制的对象列表进行排序具有未定义的行为。从技术上讲，这些限制确保了自然排序是实现它的类的对象的 <i>total order (总顺序)</i>;这对于确保明确定义排序是必要的。</p>
 <h2>比较器</h2>
-<p>如果您想按照一些对象的自然顺序以外的顺序对它们排序呢？或者，如果要对某些未实现 <code>Comparable</code> 的对象进行排序，该怎么办？要做这些事情中的任何一个，您需要提供一个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html"><code>Comparator</code></a> 封装排序的对象。与 <code>Comparable</code> 接口类似，<code>Comparator</code> 接口由单个方法组成。</p>
+<p>如果你想按照一些对象的自然顺序以外的顺序对它们排序呢？或者，如果要对某些未实现 <code>Comparable</code> 的对象进行排序，该怎么办？要做这些事情中的任何一个，你需要提供一个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html"><code>Comparator</code></a>  封装排序的对象。与 <code>Comparable</code> 接口类似，<code>Comparator</code> 接口由单个方法组成。</p>
 <div class="codeblock"><pre>
 public interface Comparator&lt;T&gt; {
     int compare(T o1, T o2);
 }
 </pre></div>
 <p><code>compare</code> 方法比较其两个参数，返回负整数，0 或正整数，具体取决于第一个参数是小于，等于还是大于第二个参数。如果任一参数的 <code>Comparator</code> 类型不合适，<code>compare</code> 方法将抛出 <code>ClassCastException</code>。</p>
-<p>关于 <code>Comparable</code> 的大部分内容也适用于 <code>Comparator</code>。编写 <code>compare</code> 方法与编写 <code>compareTo</code> 方法几乎相同，只是前者将两个对象作为参数传入。由于同样的原因，<code>compare</code> 方法必须遵守与 <code>Comparable</code> 的 <code>compareTo</code> 方法相同的四个技术限制 a <code>Comparator</code> 必须对它所比较的​​对象产生总排序。</p>
-<p>假设您有一个名为 <code>Employee</code> 的类，如下所示。</p>
+<p>关于 <code>Comparable</code> 的大部分内容也适用于 <code>Comparator</code>。编写 <code>compare</code> 方法与编写 <code>compareTo</code> 方法几乎相同，只是前者将两个对象作为参数传入。由于同样的原因，<code>compare</code> 方法必须遵守与 <code>Comparable</code> 的 <code>compareTo</code> 方法相同的四个技术限制  <code>Comparator</code> 必须对它所比较的​​对象产生总排序。</p>
+<p>假设你有一个名为 <code>Employee</code> 的类，如下所示。</p>
 <div class="codeblock"><pre>
 public class Employee implements Comparable&lt;Employee&gt; {
     public Name name()     { ... }
@@ -695,12 +695,12 @@ public class EmpSort {
 // Don't do this!!
 return -r1.hireDate().compareTo(r2.hireDate());
 </pre></div>
-<p>您应该总是使用前一种技术来支持后者，因为后者不能保证工作。原因是 <code>compareTo</code> 方法可以返回任何负 <code>int</code>，如果它的参数小于调用它的对象。有一个负的 <code>int</code> 在被否定时仍然是负的，看起来很奇怪。</p>
+<p>你应该总是使用前一种技术来支持后者，因为后者不能保证工作。原因是 <code>compareTo</code> 方法可以返回任何负 <code>int</code>，如果它的参数小于调用它的对象。有一个负的 <code>int</code> 在被否定时仍然是负的，看起来很奇怪。</p>
 <div class="codeblock"><pre>
 -Integer.MIN_VALUE == Integer.MIN_VALUE
 </pre></div>
-<p>前面程序中的 <code>Comparator</code> 可以很好地排序 <code>List</code>，但它有一个缺陷：它不能用于排序已排序的集合，例如 <code>TreeSet</code>，因为它生成的排序是与 equals <i>不兼容的</i>。这意味着此 <code>Comparator</code> 认为对象相等但 <code>equals</code> 方法却不。特别是，在同一天雇佣的任何两名员工将相同。当您对 <code>List</code> 进行排序时，这无关紧要；但是当您使用 <code>Comparator</code> 排序一个有序的集合时，它是致命的。如果您使用此 <code>Comparator</code> 将在同一日期雇用的多名员工插入 <code>TreeSet</code>，则只会将第一个员工添加到该集合中；第二个将被视为重复元素，将被忽略。</p>
-<p>要解决此问题，只需调整 <code>Comparator</code>，使其生成 <i>兼容于</i> <code>equals</code> 的排序。换句话说，调整它以便在使用 <code>compare</code> 时看到相同的唯一元素是那些在使用 <code>equals</code> 进行比较时也被视为相等的元素。执行此操作的方法是执行两部分比较(对于 <code>Name</code>)，其中第一部分是我们感兴趣的部分在这种情况下，雇用日期第二部分是唯一标识对象的属性。员工编号在这里是明显的属性。这是 <code>Comparator</code> 的结果。</p>
+<p>前面程序中的 <code>Comparator</code> 可以很好地排序 <code>List</code>，但它有一个缺陷：它不能用于排序已排序的集合，例如 <code>TreeSet</code>，因为它生成的排序是与 equals <i>不兼容的</i>。这意味着此 <code>Comparator</code> 认为对象相等但 <code>equals</code> 方法却不。特别是，在同一天雇佣的任何两名员工将相同。当你对 <code>List</code> 进行排序时，这无关紧要；但是当你使用 <code>Comparator</code> 排序一个有序的集合时，它是致命的。如果你使用此 <code>Comparator</code> 将在同一日期雇用的多名员工插入 <code>TreeSet</code>，则只会将第一个员工添加到该集合中；第二个将被视为重复元素，将被忽略。</p>
+<p>要解决此问题，只需调整 <code>Comparator</code>，使其生成 <i>兼容于</i> <code>equals</code> 的排序。换句话说，调整它以便在使用 <code>compare</code> 时看到相同的唯一元素是那些在使用 <code>equals</code> 进行比较时也被视为相等的元素。执行此操作的方法是执行两部分比较(对于 <code>Name</code>)，其中第一部分是我们感兴趣的部分  在这种情况下，雇用日期  第二部分是唯一标识对象的属性。员工编号在这里是明显的属性。这是 <code>Comparator</code> 的结果。</p>
 <div class="codeblock"><pre>
 static final Comparator&lt;Employee&gt; SENIORITY_ORDER = 
                                         new Comparator&lt;Employee&gt;() {
@@ -714,11 +714,11 @@ static final Comparator&lt;Employee&gt; SENIORITY_ORDER =
     }
 };
 </pre></div>
-<p>最后一点：您可能想要用更简单的方法替换 <code>Comparator</code> 中的最终 <code>return</code> 语句：</p>
+<p>最后一点：你可能想要用更简单的方法替换 <code>Comparator</code> 中的最终 <code>return</code> 语句：</p>
 <div class="codeblock"><pre>
 return e1.number() - e2.number();
 </pre></div>
-<p>不要这样做，除非您 <i>absolutely sure (绝对确定)</i> 没有人会有负的员工编号！这个技巧一般不起作用，因为有符号整数类型不足以表示两个任意有符号整数的差异。如果 <code>i</code> 是一个大的正整数且 <code>j</code> 是一个大的负整数，<code>i - j</code> 将溢出并返回一个负整数。由此产生的 <code>comparator</code> 违反了我们一直在谈论的四个技术限制之一(传递性)并产生可怕的，微妙的错误。这不是纯粹的理论问题；人们吃过它的苦头。</p>
+<p>不要这样做，除非你 <i>absolutely sure (绝对确定)</i> 没有人会有负的员工编号！这个技巧一般不起作用，因为有符号整数类型不足以表示两个任意有符号整数的差异。如果 <code>i</code> 是一个大的正整数且 <code>j</code> 是一个大的负整数，<code>i - j</code> 将溢出并返回一个负整数。由此产生的 <code>comparator</code> 违反了我们一直在谈论的四个技术限制之一(传递性)并产生可怕的，微妙的错误。这不是纯粹的理论问题；人们吃过它的苦头。</p>
 
 
         </div>

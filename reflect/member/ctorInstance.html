@@ -500,7 +500,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">成员</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="ctorModifiers.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="ctorTrouble.html">Next&nbsp;»</a>
+                <a target="_top" href="ctorModifiers.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="ctorTrouble.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>创建新的类实例</h1></div>
@@ -515,7 +515,7 @@
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#newInstance--"><code>Class.newInstance()</code></a>要求构造函数可见；在某些情况下，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html#newInstance-java.lang.Object...-"><code>Constructor.newInstance()</code></a> 可能会调用 <code>private</code> 构造函数。</li>
 </ul>
-<p>有时可能需要从仅在构造之后设置的对象获取内部状态。考虑一种情况，需要获取 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Console.html"><code>java.io.Console</code></a> 使用的内部字符集。(<code>Console</code> 字符集存储在私有字段中，不一定与 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html#defaultCharset--"><code>java.nio.charset.Charset.defaultCharset()</code></a> 返回的 Java 虚拟机默认字符集相同)。<a class="SourceLink" target="_blank" href="example/ConsoleCharset.java" onclick="showCode('../../displayCode.html', 'example/ConsoleCharset.java'); return false;"><code><code>ConsoleCharset</code></code></a> 示例显示了如何实现：</p>
+<p>有时可能需要从对象中获取仅在构造之后设置的内部状态。考虑一种情况，需要获取 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Console.html"><code>java.io.Console</code></a> 使用的内部字符集。(<code>Console</code> 字符集存储在私有字段中，不一定与 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html#defaultCharset--"><code>java.nio.charset.Charset.defaultCharset()</code></a> 返回的 Java 虚拟机默认字符集相同)。<a class="SourceLink" target="_blank" href="example/ConsoleCharset.java" onclick="showCode('../../displayCode.html', 'example/ConsoleCharset.java'); return false;"><code><code>ConsoleCharset</code></code></a> 示例显示了如何实现：</p>
 <div class="codeblock"><pre>
 
 import java.io.Console;

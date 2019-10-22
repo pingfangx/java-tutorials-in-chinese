@@ -403,7 +403,7 @@
 <li>Java 编程语言支持的最基本的控制流语句是 <strong>if-then</strong> 语句。</li>
 <li><strong>switch</strong> 语句允许任意数量的可能执行路径。</li>
 <li><strong>do-while</strong> 语句类似于 <code>while</code> 语句，但是会在循环的 <strong>bottom</strong> 处计算其表达式。</li>
-<li><strong>Question:</strong> 你如何使用 <code>for</code> 语句编写无限循环？
+<li><strong>问题:</strong>你如何使用 <code>for</code> 语句编写无限循环？
 <p><strong>答案：</strong></p>
 <div class="codeblock"><pre>
 for ( ; ; ) {
@@ -411,7 +411,7 @@ for ( ; ; ) {
 }
 </pre></div>
 </li>
-<li><strong>Question:</strong> 如何使用 <code>while</code> 语句编写无限循环？
+<li><strong>问题:</strong>如何使用 <code>while</code> 语句编写无限循环？
 <p><strong>答案：</strong></p>
 <div class="codeblock"><pre>
 while (true) {
@@ -432,22 +432,21 @@ else
 System.out.println("third string");
 </pre></div>
 <ol type="a">
-<li><strong>Exercise:</strong> 如果 <code>aNumber</code> 是 3，您认为代码会产生什么输出？
+<li><strong>练习:</strong>如果 <code>aNumber</code> 是 3，你认为代码会产生什么输出？
 <p><strong>解答：</strong></p>
 <div class="codeblock"><pre>
 second string
 third string
 </pre></div>
 </li>
-<li><strong>Exercise:</strong> 编写一个包含前面代码片段的测试程序; 使 <code>aNumber</code> 为3。该程序的输出是什么？这是你预测的吗？解释为什么输出结果如此。换句话说，代码片段的控制流程是什么？
-<p><strong>Solution:</strong> 
-<a class="SourceLink" target="_blank" href="NestedIf.java" onclick="showCode('../../../displayCode.html', 'NestedIf.java'); return false;"><code>NestedIf</code></a></p>
+<li><strong>练习:</strong>编写一个包含前面代码片段的测试程序; 使 <code>aNumber</code> 为3。该程序的输出是什么？这是你预测的吗？解释为什么输出结果如此。换句话说，代码片段的控制流程是什么？
+<p><strong>解答:</strong><a class="SourceLink" target="_blank" href="NestedIf.java" onclick="showCode('../../../displayCode.html', 'NestedIf.java'); return false;"><code>NestedIf</code></a></p>
 <div class="codeblock"><pre>
 second string
 third string
 </pre></div>
 3 大于或等于 0，因此执行进行到第二个 <code>if</code> 语句。第二个 <code>if</code> 语句的测试失败，因为 3 不等于 0。因此，执行 <code>else</code> 子句(因为它连接到第二个 <code>if</code> 语句)。因此，显示 <code>second string</code>。最后的 <code>println</code> 完全在 <code>if</code> 语句之外，所以它总是被执行，因此总是显示 <code>third string</code>。</li>
-<li><strong>Exercise:</strong> 仅使用空格和换行符，重新设置代码片段的格式以使控制流程更易于理解。
+<li><strong>练习:</strong>只使用空格和换行符，重新设置代码片段的格式，使控制流程更易于理解。
 <p><strong>解答：</strong></p>
 <div class="codeblock"><pre>
 if (aNumber &gt;= 0)
@@ -459,7 +458,7 @@ if (aNumber &gt;= 0)
 System.out.println("third string");
 </pre></div>
 </li>
-<li><strong>Exercise:</strong> 使用大括号 <code>{</code> 和 <code>}</code> 来进一步阐明代码并减少未来代码维护人员发生错误的可能性。
+<li><strong>练习:</strong>使用大括号 <code>{</code> 和 <code>}</code> 来进一步阐明代码并减少未来代码维护人员发生错误的可能性。
 <p><strong>解答：</strong></p>
 <div class="codeblock"><pre>
 if (aNumber &gt;= 0) {

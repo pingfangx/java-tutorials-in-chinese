@@ -401,13 +401,13 @@
 <h2>问题</h2>
 
 <ol>
-<li>问题：在本课程开始时，您了解到核心集合接口被组织为两个不同的继承树。特别是一个接口不被认为是真正的 <code>Collection</code>，因此位于其自己的树的顶部。这个接口的名称是什么？ <br />
+<li>问题：在本课程开始时，你了解到核心集合接口被组织为两个不同的继承树。特别是一个接口不被认为是真正的 <code>Collection</code>，因此位于其自己的树的顶部。这个接口的名称是什么？ <br />
 答案：<code>Map</code><br /><br />
 </li>
 
 
 <li>
-问题：集合框架中的每个接口都使用 <code>&lt;E&gt;</code> 语法声明，该语法告诉您它是泛型的。声明 <code>Collection</code> 实例时，指定它将包含的对象类型有什么好处？ <br />
+问题：集合框架中的每个接口都使用 <code>&lt;E&gt;</code> 语法声明，该语法告诉你它是泛型的。声明 <code>Collection</code> 实例时，指定它将包含的对象类型有什么好处？ <br />
 答案：指定类型允许编译器(在编译时)验证放入集合中的对象类型是否正确，从而减少运行时的错误。
  <br /><br />
 </li>
@@ -458,14 +458,14 @@
 
 <li>问题：列举三种不同的方法来迭代 <code>List</code> 的元素。
 <br />
-答案：您可以使用流，增强的 <code>for</code> 语句或迭代器迭代 <code>List</code>。
+答案：你可以使用流，增强的 <code>for</code> 语句或迭代器迭代 <code>List</code>。
 
 <br /><br />
 </li>
 
-<li>问题：对或错：聚合操作是修改基础集合的可变型操作。
+<li>问题：对或错:聚合操作是修改基础集合的可变型操作。
 <br />
-答案：假。聚合操作不会改变底层集合。实际上，在调用其聚合操作时，必须小心不要改变集合。如果在将来的某个时刻将流更改为并行流，这样做可能会导致并发问题。
+答案：错。聚合操作不会改变底层集合。实际上，在调用其聚合操作时，必须小心不要改变集合。如果在将来的某个时刻将流更改为并行流，这样做可能会导致并发问题。
 <br />
 </li>
 </ol>
@@ -519,7 +519,7 @@ public class FindDups {
 <li>练习：编写一个方法，该方法采用 <code>List&lt;String&gt;</code> 并将 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#trim--"><code>String.trim</code></a> 应用于每个元素。 
  <br />
  答案： <br />
- 增强的 <code>for</code> 语句不允许您修改 <code>List</code>。使用 <code>Iterator</code> 类的实例可以删除元素，但不能替换现有元素或添加新元素。这留下了 <code>ListIterator</code>：
+ 增强的 <code>for</code> 语句不允许你修改 <code>List</code>。使用 <code>Iterator</code> 类的实例可以删除元素，但不能替换现有元素或添加新元素。这留下了 <code>ListIterator</code>：
 <div class="codeblock"><pre>
 import java.util.*;
 
@@ -546,7 +546,7 @@ public class ListTrim {
 <ul>
 <li>异想天开的玩具公司(WTI)需要记录其所有员工的姓名。每个月，将从这些记录中随机选择一名员工以获得免费玩具。<br />
 使用 <code>List</code>。通过选择 <code>0</code> 和 <code>size()-1</code> 之间的数字来选择随机员工。</li>
-<li>WTI 决定每个新产品都以员工命名但只会使用名字，每个名字只能使用一次。准备一个唯一名字的列表。<br />
+<li>WTI 决定每个新产品都以员工命名  但只会使用名字，每个名字只能使用一次。准备一个唯一名字的列表。<br />
 使用 <code>Set</code>。实现此接口的集合不允许多次输入相同的元素。</li>
 <li>WTI 决定只想使用最受欢迎的玩具名称。计算拥有每个名字的员工数量。<br />
 使用 <code>Map</code>，其中键是名字，每个值是具有该名字的员工数量。</li>

@@ -489,29 +489,29 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">注解</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="predefined.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="repeating.html">Next&nbsp;»</a>
+                <a target="_top" href="predefined.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="repeating.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>类型注解和可插入类系统</h1></div>
             <div id="PageContent">
 
 <p>
-在 Java SE 8 发行版之前，注解只能应用于声明。从 Java SE 8 发行版开始，注解也可以应用于任何 <em>类型使用</em>。这意味着可以在任何使用类型的地方使用注解。使用类型的一些示例是类实例创建表达式(<code>new</code>)，强制转换，<code>implements</code> 子句和 <code>throws</code> 子句。这种形式的注解称为 <em>type annotation</em>，并在 <a class="TutorialLink" target="_top" href="basics.html">Annotations Basics</a> 中提供了几个示例。</p>
+在 Java SE 8 发行版之前，注解只能应用于声明。从 Java SE 8 发行版开始，注解也可以应用于任何 <em>类型使用</em>。这意味着可以在任何使用类型的地方使用注解。使用类型的一些示例是类实例创建表达式(<code>new</code>)，类型转换，<code>implements</code> 子句和 <code>throws</code> 子句。这种形式的注解称为 <em>type annotation (类型注解)</em>，并在 <a class="TutorialLink" target="_top" href="basics.html">Annotations Basics</a> 中提供了几个示例。</p>
 <p>
-创建类型注解是为了支持改进的 Java 程序分析，以确保更强的类型检查。Java SE 8 版本不提供类型检查框架，但它允许您编写(或下载)类型检查框架，该框架实现为与 Java 编译器结合使用的一个或多个可插入模块。</p>
+创建类型注解是为了支持改进的 Java 程序分析，以确保更强的类型检查。Java SE 8 版本不提供类型检查框架，但它允许你编写(或下载)类型检查框架，该框架实现为与 Java 编译器结合使用的一个或多个可插入模块。</p>
 <p>
-例如，您希望确保程序中的特定变量永远不会分配给 null;你想避免触发 <code>NullPointerException</code>。您可以编写自定义插件来检查此问题。然后，您将修改代码以注解该特定变量，表明它从未分配给 null。变量声明可能如下所示：</p>
+例如，你希望确保程序中的特定变量永远不会分配给 null;你想避免触发 <code>NullPointerException</code>。你可以编写自定义插件来检查此问题。然后，你将修改代码以注解该特定变量，表明它从未分配给 null。变量声明可能如下所示：</p>
 <pre>
 <strong>@NonNull</strong> String str;
 </pre>
 <p>
-当您在命令行编译代码（包括 <code>NonNull</code> 模块）时，编译器会在检测到潜在问题时输出警告，允许您修改代码以避免错误。在更正代码以移除所有警告后，程序运行时不会发生此特定错误。</p>
+当你在命令行编译代码（包括 <code>NonNull</code> 模块）时，编译器会在检测到潜在问题时输出警告，允许你修改代码以避免错误。在更正代码以移除所有警告后，程序运行时不会发生此特定错误。</p>
 <p>
-您可以使用多个类型检查模块，其中每个模块检查不同类型的错误。这样，您可以在 Java 类型系统的顶部构建，并在需要的时候和特定的地方添加特定的检查。</p>
+你可以使用多个类型检查模块，其中每个模块检查不同类型的错误。这样，你可以在 Java 类型系统的顶部构建，并在需要的时候和特定的地方添加特定的检查。</p>
 <p>
-通过明智地使用类型注解和可插入类型检查器的存在，您可以编写更强大且更不容易出错的代码。</p>
+通过明智地使用类型注解和可插入类型检查器的存在，你可以编写更强大且更不容易出错的代码。</p>
 <p>
-在许多情况下，您不必编写自己的类型检查模块。有第三方为你完成了这项工作。例如，您可能希望利用华盛顿大学创建的 Checker Framework。该框架包括 <code>NonNull</code> 模块，以及正则表达式模块和互斥锁模块。有关更多信息，请参阅 <a class="OutsideLink" target="_blank" href="http://types.cs.washington.edu/checker-framework/">Checker Framework</a>。</p>
+在许多情况下，你不必编写自己的类型检查模块。有第三方为你完成了这项工作。例如，你可能希望利用华盛顿大学创建的 Checker Framework。该框架包括 <code>NonNull</code> 模块，以及正则表达式模块和互斥锁模块。有关更多信息，请参阅 <a class="OutsideLink" target="_blank" href="http://types.cs.washington.edu/checker-framework/">Checker Framework</a>。</p>
 
         </div>
         <div class="NavBit">

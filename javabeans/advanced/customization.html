@@ -486,13 +486,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">JavaBeans(TM)</a>&gt;<a href="index.html" target="_top">高级 JavaBeans 主题</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="longpersistence.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../end.html">Next&nbsp;»</a>
+                <a target="_top" href="longpersistence.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../end.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Bean 自定义</h1></div>
             <div id="PageContent">
 
-<p><em class="Emphasis">Customization (自定义)</em> 提供了一种在应用程序构建器中修改 bean 的外观和行为的方法，以满足您的特定需求。bean 开发人员可以使用多个级别的自定义，以允许其他开发人员从 bean 的潜在功能中获得最大收益。</p>
+<p><em class="Emphasis">Customization (自定义)</em> 提供了一种在应用程序构建器中修改 bean 的外观和行为的方法，以满足你的特定需求。bean 开发人员可以使用多个级别的自定义，以允许其他开发人员从 bean 的潜在功能中获得最大收益。</p>
 <hr />
 <p>以下链接对于了解属性编辑器和定制器非常有用：</p>
 <ul>
@@ -511,13 +511,13 @@
 <p>可以在符合 Bean 的构建器工具中的设计时自定义 bean 的外观和行为。有两种方法可以自定义 bean：</p>
 <ul>
 <li>使用 <em class="Emphasis">property editor (属性编辑器)</em>。每个 bean 属性都有自己的属性编辑器。NetBeans GUI Builder 通常在“属性”窗口中显示 bean 的属性编辑器。与特定属性类型关联的属性编辑器编辑该属性类型。</li>
-<li>使用 <em class="Emphasis">customizers (自定义程序)</em>。自定义程序为您提供了对 bean 自定义的完整 GUI 控制。在属性编辑器不实用或不适用的情况下使用定制器。与属性关联的属性编辑器不同，自定义程序与 bean 关联。</li>
+<li>使用 <em class="Emphasis">customizers (自定义程序)</em>。自定义程序为你提供了对 bean 自定义的完整 GUI 控制。在属性编辑器不实用或不适用的情况下使用定制器。与属性关联的属性编辑器不同，自定义程序与 bean 关联。</li>
 </ul>
 <h2>属性编辑器</h2>
 <p>属性编辑器是用于自定义特定属性类型的工具。属性编辑器在“属性”窗口中激活。此窗口确定属性的类型，搜索相关的属性编辑器，并以相关方式显示属性的当前值。</p>
 <p>属性编辑器必须实现 <code>PropertyEditor</code> 接口，该接口提供了指定属性如何在属性表中显示的方法。下图表示包含 <code>myBean1</code> 属性的“属性”窗口：</p>
-<center><img src="../../figures/javabeans/customization.gif" width="260" height="332" align="bottom" alt="此图表示“属性”窗口中的 myBean1 属性" /></center><p>您可以通过单击属性条目开始编辑这些属性的过程。单击大多数这些条目将显示单独的面板。例如，要设置 <code>foreground</code> 或 <code>background</code>，请使用带有颜色选择的选择框，或按“...”按钮以使用标准 ColorEditor 窗口。单击 <code>toolTipText</code> 属性将打开 StringEditor 窗口。</p>
-<p>支持类 <code>PropertyEditorSupport</code> 提供 <code>PropertyEditor</code> 接口的默认实现。通过从 <code>PropertyEditorSupport</code> 继承属性编辑器，您可以简单地覆盖所需的方法。</p>
+<center><img src="../../figures/javabeans/customization.gif" width="260" height="332" align="bottom" alt="此图表示“属性”窗口中的 myBean1 属性" /></center><p>你可以通过单击属性条目开始编辑这些属性的过程。单击大多数这些条目将显示单独的面板。例如，要设置 <code>foreground</code> 或 <code>background</code>，请使用带有颜色选择的选择框，或按“...”按钮以使用标准 ColorEditor 窗口。单击 <code>toolTipText</code> 属性将打开 StringEditor 窗口。</p>
+<p>支持类 <code>PropertyEditorSupport</code> 提供 <code>PropertyEditor</code> 接口的默认实现。通过从 <code>PropertyEditorSupport</code> 继承属性编辑器，你可以简单地覆盖所需的方法。</p>
 <p>要在“属性”窗口中显示当前属性值“sample”，需要覆盖 <code>isPaintable</code> 以返回 <code>true</code>。然后，必须覆盖 <code>paintValue</code> 以在属性表中的矩形中绘制当前属性值。以下是 <code>ColorEditor</code> 实现 <code>paintValue</code> 的方式：</p>
 <div class="codeblock"><pre>
 public void paintValue(java.awt.Graphics gfx, java.awt.Rectangle box) {
@@ -548,8 +548,8 @@ pd.setPropertyEditorClass(TitleEditor.class);
 </li>
 </ul>
 <h2><a name="customizer" id="customizer">自定义</a></h2>
-<p>您了解到构建器工具为您提供了创建自己的属性编辑器的支持。对于复杂的工业强度的 bean，可视化构建器还应该满足哪些其他需求？通常不希望在单个(有时是巨大的)属性表上显示 bean 的所有属性。如果关于 bean 类型的一个单一根选择使得一半属性无关紧要怎么办？JavaBeans 规范提供了用户定义的定制器，通过它可以为 bean 属性定义比属性编辑器更高级别的定制。</p>
-<p>使用 bean <i>Customizer</i> 时，您可以完全控制如何配置或编辑 bean。Customizer 是专门针对 bean 定制的应用程序。有时属性不足以表示 bean 的可配置属性。定制器用于需要复杂指令来更改 bean，以及属性编辑器过于基本而无法实现 bean 定制的情况。</p>
+<p>你了解到构建器工具为你提供了创建自己的属性编辑器的支持。对于复杂的工业强度的 bean，可视化构建器还应该满足哪些其他需求？通常不希望在单个(有时是巨大的)属性表上显示 bean 的所有属性。如果关于 bean 类型的一个单一根选择使得一半属性无关紧要怎么办？JavaBeans 规范提供了用户定义的定制器，通过它可以为 bean 属性定义比属性编辑器更高级别的定制。</p>
+<p>使用 bean <i>Customizer</i> 时，你可以完全控制如何配置或编辑 bean。Customizer 是专门针对 bean 定制的应用程序。有时属性不足以表示 bean 的可配置属性。定制器用于需要复杂指令来更改 bean，以及属性编辑器过于基本而无法实现 bean 定制的情况。</p>
 <p>所有定制者必须：</p>
 <ul>
 <li>扩展 <code>java.awt.Component</code> 或其子类之一。</li>

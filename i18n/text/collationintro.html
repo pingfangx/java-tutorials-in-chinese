@@ -474,7 +474,7 @@
             <div class="linkLESSON"><a href="index.html">使用文本</a></div>
 <div class="linkAHEAD"><a href="charintro.html">检查字符属性</a></div>
 <div class="nolinkAHEAD">比较字符串</div>
-<div class="linkBHEAD"><a href="locale.html">执行与区域设置无关的比较</a></div>
+<div class="linkBHEAD"><a href="locale.html">执行与语言环境无关的比较</a></div>
 <div class="linkBHEAD"><a href="rule.html">自定义排序规则</a></div>
 <div class="linkBHEAD"><a href="perform.html">提高排序性能</a></div>
 <div class="linkAHEAD"><a href="unicode.html">Unicode</a></div>
@@ -507,19 +507,19 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">使用文本</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="charintro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="locale.html">Next&nbsp;»</a>
+                <a target="_top" href="charintro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="locale.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>比较字符串</h1></div>
             <div id="PageContent">
 
 <p>通过文本排序的应用程序执行频繁的字符串比较。例如，报表生成器在按字母顺序对字符串列表进行排序时执行字符串比较。</p>
-<p>如果您的应用程序受众仅限于说英语的人，则可以使用 <code>String.compareTo</code> 方法执行字符串比较。<code>String.compareTo</code> 方法对两个字符串中的 Unicode 字符执行二进制比较。（译注：这里的二进制比较或许应该翻译为二元比较？后面的 CollationKey 才说是按位比较）但是，对于大多数语言，不能依赖此二进制比较来对字符串进行排序，因为 Unicode 值与字符的相对顺序不对应。</p>
-<p>幸运的是，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/Collator.html"><code>Collator</code></a> 类允许您的应用程序对不同语言执行字符串比较。在本节中，您将学习如何在排序文本时使用 <code>Collator</code> 类。</p>
-<h2><a href="locale.html">执行与区域设置无关的比较</a></h2>
-<p>排序规则定义字符串的排序顺序。这些规则因区域设置而异，因为各种自然语言对单词的排序方式不同。使用 <code>Collator</code> 类提供的预定义排序规则，您可以以与区域设置无关的方式对字符串进行排序。</p>
+<p>如果你的应用程序受众仅限于说英语的人，则可以使用 <code>String.compareTo</code> 方法执行字符串比较。<code>String.compareTo</code> 方法对两个字符串中的 Unicode 字符执行二进制比较。（译注：这里的二进制比较或许应该翻译为二元比较？后面的 CollationKey 才说是按位比较）但是，对于大多数语言，不能依赖此二进制比较来对字符串进行排序，因为 Unicode 值与字符的相对顺序不对应。</p>
+<p>幸运的是，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/Collator.html"><code>Collator</code></a> 类允许你的应用程序对不同语言执行字符串比较。在本节中，你将学习如何在排序文本时使用 <code>Collator</code> 类。</p>
+<h2><a href="locale.html">执行与语言环境无关的比较</a></h2>
+<p>排序规则定义字符串的排序顺序。这些规则因语言环境而异，因为各种自然语言对单词的排序方式不同。使用 <code>Collator</code> 类提供的预定义排序规则，你可以以与语言环境无关的方式对字符串进行排序。</p>
 <h2><a href="rule.html">自定义排序规则</a></h2>
-<p>在某些情况下，<code>Collator</code> 类提供的预定义排序规则可能不适合您。例如，您可能希望使用 <code>Collator</code> 不支持其区域设置的语言对字符串进行排序。在这种情况下，您可以定义自己的排序规则，并将它们分配给 <code>RuleBasedCollator</code> 对象。</p>
+<p>在某些情况下，<code>Collator</code> 类提供的预定义排序规则可能不适合你。例如，你可能希望使用 <code>Collator</code> 不支持其语言环境的语言对字符串进行排序。在这种情况下，你可以定义自己的排序规则，并将它们分配给 <code>RuleBasedCollator</code> 对象。</p>
 <h2><a href="perform.html">提高排序性能</a></h2>
 <p>使用 <code>CollationKey</code> 类，可以提高字符串比较的效率。此类将 <code>String</code> 对象转换为符合给定 <code>Collator</code> 规则的排序键。</p>
 

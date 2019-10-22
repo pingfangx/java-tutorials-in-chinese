@@ -485,16 +485,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">互操作性</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="api-design.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="api-design.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>兼容性</h1></div>
             <div id="PageContent">
 
-<p>Java Collections Framework 旨在确保核心 <a class="TutorialLink" target="_top" href="../interfaces/index.html">集合接口</a> 与用于在 Java 平台早期版本中表示集合的类型之间的完全互操作性：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html"><code>Vector</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html"><code>Hashtable</code></a>，<a class="TutorialLink" target="_top" href="../../java/nutsandbolts/arrays.html">array</a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Enumeration.html"><code>Enumeration</code></a>。在本节中，您将学习如何将旧集合转换为 Java 集合框架集合，反之亦然。</p>
+<p>Java 集合框架旨在确保核心 <a class="TutorialLink" target="_top" href="../interfaces/index.html">集合接口</a> 与用于在 Java 平台早期版本中表示集合的类型之间的完全互操作性：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html"><code>Vector</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html"><code>Hashtable</code></a>，<a class="TutorialLink" target="_top" href="../../java/nutsandbolts/arrays.html">array</a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Enumeration.html"><code>Enumeration</code></a>。在本节中，你将学习如何将旧集合转换为 Java 集合框架集合，反之亦然。</p>
 <h2>向上兼容性</h2>
-<p>假设您正在使用一个返回旧集合 API，该 API 与另一个需要实现集合接口的对象的 API 一起使用。为了使两个 API 顺利地互操作，您必须将旧版集合转换为现代集合。幸运的是，Java Collections Framework 使这很容易。</p>
-<p>假设旧 API 返回一个对象数组，新 API 需要 <code>Collection</code>。Collections Framework 有一个便利实现，允许将数组对象视为 <code>List</code>。使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#asList-T...-"><code>Arrays.asList</code></a> 将数组传递给需要 <code>Collection</code> 或 <code>List</code> 的任何方法。</p>
+<p>假设你正在使用一个返回旧集合 API，该 API 与另一个需要实现集合接口的对象的 API 一起使用。为了使两个 API 顺利地互操作，你必须将旧版集合转换为现代集合。幸运的是，Java 集合框架使这很容易。</p>
+<p>假设旧 API 返回一个对象数组，新 API 需要 <code>Collection</code>。集合框架有一个便利实现，允许将数组对象视为 <code>List</code>。使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#asList-T...-"><code>Arrays.asList</code></a> 将数组传递给需要 <code>Collection</code> 或 <code>List</code> 的任何方法。</p>
 <div class="codeblock"><pre>
 Foo[] result = oldMethod(arg);
 newMethod(Arrays.asList(result));
@@ -515,13 +515,13 @@ Enumeration e = oldMethod(arg);
 newMethod(Collections.list(e));
 </pre></div>
 <h2>向后兼容性</h2>
-<p>假设您正在使用一个返回现代集合 API，该 API 与另一个要求您传入旧集合的 API 一起使用。要使两个 API 平滑地互操作，您必须将现代集合转换为旧集合。同样，Java Collections Framework 使这一过程变得简单。</p>
-<p>假设新 API 返回 <code>Collection</code>，旧 API 需要 <code>Object</code> 数组。您可能知道，<code>Collection</code> 接口包含为此情况明确设计的 <code>toArray</code> 方法。</p>
+<p>假设你正在使用一个返回现代集合 API，该 API 与另一个要求你传入旧集合的 API 一起使用。要使两个 API 平滑地互操作，你必须将现代集合转换为旧集合。同样，Java 集合框架使这一过程变得简单。</p>
+<p>假设新 API 返回 <code>Collection</code>，旧 API 需要 <code>Object</code> 数组。你可能知道，<code>Collection</code> 接口包含为此情况明确设计的 <code>toArray</code> 方法。</p>
 <div class="codeblock"><pre>
 Collection c = newMethod();
 oldMethod(c.toArray());
 </pre></div>
-<p>如果旧 API 需要 <code>String</code>(或其他类型)数组而不是 <code>Object</code> 数组，该怎么办？您只需使用另一种形式的 <code>toArray</code> 在输入上采用数组的那个。</p>
+<p>如果旧 API 需要 <code>String</code>(或其他类型)数组而不是 <code>Object</code> 数组，该怎么办？你只需使用另一种形式的 <code>toArray</code>  在输入上采用数组的那个。</p>
 <div class="codeblock"><pre>
 Collection c = newMethod();
 oldMethod((String[]) c.toArray(new String[0]));
@@ -536,7 +536,7 @@ oldMethod(new Vector(c));
 Map m = newMethod();
 oldMethod(new Hashtable(m));
 </pre></div>
-<p>最后，如果旧 API 需要 <code>Enumeration</code>，您会怎么做？这种情况并不常见，但它确实经常发生，并且提供了 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#enumeration-java.util.Collection-"><code>Collections.enumeration</code></a> 方法来处理它。这是一个静态工厂方法，它接受 <code>Collection</code> 并在 <code>Collection</code> 的元素上返回 <code>Enumeration</code>。</p>
+<p>最后，如果旧 API 需要 <code>Enumeration</code>，你会怎么做？这种情况并不常见，但它确实经常发生，并且提供了 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#enumeration-java.util.Collection-"><code>Collections.enumeration</code></a> 方法来处理它。这是一个静态工厂方法，它接受 <code>Collection</code> 并在 <code>Collection</code> 的元素上返回 <code>Enumeration</code>。</p>
 <div class="codeblock"><pre>
 Collection c = newMethod();
 oldMethod(Collections.enumeration(c));

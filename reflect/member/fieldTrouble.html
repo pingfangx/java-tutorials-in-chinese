@@ -500,7 +500,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">成员</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="fieldValues.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="method.html">Next&nbsp;»</a>
+                <a target="_top" href="fieldValues.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="method.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>故障排除</h1></div>
@@ -508,7 +508,7 @@
 
 <p>以下是开发人员遇到的一些常见问题，解释了为什么会发生以及如何解决这些问题。</p>
 <h2>由于不可转换类型导致的 IllegalArgumentException</h2>
-<p><a class="SourceLink" target="_blank" href="example/FieldTrouble.java" onclick="showCode('../../displayCode.html', 'example/FieldTrouble.java'); return false;"><code><code>FieldTrouble</code></code></a> 示例将生成 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html"><code>IllegalArgumentException</code></a>。调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#setInt-java.lang.Object-int-"><code>Field.setInt()</code></a> 以设置具有基本类型值的引用类型 <code>Integer</code> 的字段。在非反射等价物 <code>Integer val = 42</code> 中，编译器将基本类型 <code>42</code> 转换为(或 <em>box</em>)为引用类型为 <code>new Integer(42)</code>，以便其类型检查将接受该语句。使用反射时，类型检查仅在运行时进行，因此无法对值进行装箱。</p>
+<p><a class="SourceLink" target="_blank" href="example/FieldTrouble.java" onclick="showCode('../../displayCode.html', 'example/FieldTrouble.java'); return false;"><code><code>FieldTrouble</code></code></a> 示例将生成 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html"><code>IllegalArgumentException</code></a>。调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#setInt-java.lang.Object-int-"><code>Field.setInt()</code></a> 将基本类型值，赋值给引用类型 <code>Integer</code> 的字段。在非反射等价物 <code>Integer val = 42</code> 中，编译器将基本类型 <code>42</code> 转换为(或者称为 <em>box (装箱)</em>)为引用类型为 <code>new Integer(42)</code>，以便其类型检查将接受该语句。使用反射时，类型检查仅在运行时发生，因此无法对值进行装箱。</p>
 <div class="codeblock"><pre>
 
 import java.lang.reflect.Field;
@@ -566,7 +566,7 @@ java.lang.NoSuchFieldException: count
         at java.lang.Class.getField(Class.java:1519)
         at FieldSpy.main(FieldSpy.java:12)
 </pre></div>
-<div class="note"><hr /><strong>提示:</strong>&nbsp;<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getField-java.lang.String-"><code>Class.getField()</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getFields--"><code>Class.getFields()</code></a> 方法返回由 <code>Class</code> 对象表示的类，枚举或接口的 <em>public</em> 成员字段。要获取 <code>Class</code> 中声明(但未继承)的所有字段，请使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getDeclaredFields--"><code>Class.getDeclaredFields()</code></a> 方法。
+<div class="note"><hr /><strong>提示:</strong>&nbsp;<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getField-java.lang.String-"><code>Class.getField()</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getFields--"><code>Class.getFields()</code></a> 方法返回由 <code>Class</code> 对象表示的类、枚举或接口的 <em>public</em> 成员字段。要获取 <code>Class</code> 中声明(但未继承)的所有字段，请使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getDeclaredFields--"><code>Class.getDeclaredFields()</code></a> 方法。
 <hr /></div>
 <h2>修改 final 字段时出现 IllegalAccessException</h2>
 <p>如果尝试获取或设置 <code>private</code> 或其他不可访问字段的值，或设置 <code>final</code> 字段(无论其访问修饰符如何)的值，则可能抛出 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalAccessException.html"><code>IllegalAccessException</code></a>。</p>

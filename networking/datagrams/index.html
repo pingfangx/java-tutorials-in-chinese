@@ -476,21 +476,21 @@
             <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>
         </div>
         <div class="NavBit">
-                <a target="_top" href="../sockets/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="definition.html">Next&nbsp;»</a>
+                <a target="_top" href="../sockets/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="definition.html">下一页&nbsp;»</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
         <div id="PageTitle"><h1>课程：关于数据报</h1></div>
         <div id="PageContent">
 
-<p>您编写为通过网络进行通信的某些应用程序不需要 TCP 提供的可靠的点对点通道。相反，您的应用程序可能会受益于一种通信模式，该模式提供独立的信息包，其到达和到达顺序无法保证。</p>
+<p>你编写为通过网络进行通信的某些应用程序不需要 TCP 提供的可靠的点对点通道。相反，你的应用程序可能会受益于一种通信模式，该模式提供独立的信息包，其到达和到达顺序无法保证。</p>
 <p>UDP 协议提供了一种网络通信模式，由此应用程序将数据包(称为数据报)彼此发送。数据报是通过网络发送的独立，自包含的消息，其到达，到达时间和内容不能得到保证。<code>java.net</code> 包中的 <code>DatagramPacket</code> 和 <code>DatagramSocket</code> 类使用 UDP 实现与系统无关的数据报通信。</p>
 <h2><a href="definition.html">什么是数据报？</a></h2>
 <p>数据报是通过网络发送的独立，自包含的消息，其到达，到达时间和内容不能得到保证。</p>
 <h2><a href="clientServer.html">编写数据报客户端和服务器</a></h2>
-<p>本节将向您介绍一个示例，其中包含两个使用数据报进行通信的 Java 程序。服务器端是一个引语服务器，它监听其 <code>DatagramSocket</code>，并在客户端请求时向客户端发送引语。（译注：此处使用的 quote，可以理解为类似名人名言，但是不都是名言，内容来自 one-liners.txt，后文统一译为“引语”）客户端是一个简单的程序，它只是发出服务器的请求。</p>
+<p>本节将向你介绍一个示例，其中包含两个使用数据报进行通信的 Java 程序。服务器端是一个引语服务器，它监听其 <code>DatagramSocket</code>，并在客户端请求时向客户端发送引语。（译注：此处使用的 quote，可以理解为类似名人名言，但是不都是名言，内容来自 one-liners.txt，后文统一译为“引语”）客户端是一个简单的程序，它只是发出服务器的请求。</p>
 <h2><a href="broadcasting.html">广播给多个收件人</a></h2>
 <p>此部分修改引语服务器，以便引语服务器不会在请求时向单个客户端发送引语，而是每分钟向正在收听的客户端广播引语。必须相应地修改客户端程序。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>许多防火墙和路由器配置为不允许 UDP 数据包。如果连接到防火墙外的服务时遇到问题，或者客户端无法连接到您的服务，请询问系统管理员是否允许 UDP。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>许多防火墙和路由器配置为不允许 UDP 数据包。如果连接到防火墙外的服务时遇到问题，或者客户端无法连接到你的服务，请询问系统管理员是否允许 UDP。</p>
 <hr /></div>
 
 

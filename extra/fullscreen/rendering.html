@@ -489,7 +489,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">全屏独占模式 API</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="displaymode.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="doublebuf.html">Next&nbsp;»</a>
+                <a target="_top" href="displaymode.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="doublebuf.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>被动与主动渲染</h1></div>
@@ -506,7 +506,7 @@ public void paint(Graphics g) {
 }
 </pre></div>
 <p>这有时被称为 <i>passive rendering (被动渲染)</i>。可以想象，这样的系统会产生很多开销，这对很多对性能敏感的 AWT 和 Swing 程序员来说都很烦人。</p>
-<p>在全屏独占模式下，您不必再担心窗口被调整大小，移动，暴露或遮挡(除非您忽略了我关闭调整大小的建议)。而是将应用程序窗口直接绘制到屏幕上(<i>active rendering (主动渲染)</i>)。这简化了绘画，因为您不需要担心绘画事件。实际上，当处于全屏独占模式时，操作系统提供的绘制事件甚至可能在不适当或不可预测的时间传递。</p>
+<p>在全屏独占模式下，你不必再担心窗口被调整大小，移动，暴露或遮挡(除非你忽略了我关闭调整大小的建议)。而是将应用程序窗口直接绘制到屏幕上(<i>active rendering (主动渲染)</i>)。这简化了绘画，因为你不需要担心绘画事件。实际上，当处于全屏独占模式时，操作系统提供的绘制事件甚至可能在不适当或不可预测的时间传递。</p>
 <p>在全屏独占模式下，绘图代码通常更适合在 <i>rendering loop (渲染循环)</i> 中完成，而不是依赖于 <tt>paint</tt> 方法：</p>
 <div class="codeblock"><pre>
 public void myRenderingLoop() {
@@ -521,14 +521,14 @@ public void myRenderingLoop() {
 <h2>编程提示</h2>
 <p>有关使用主动渲染的一些提示：</p>
 <ul>
-<li>不要将绘图代码放在 <tt>paint</tt> 例程中。您可能永远不知道什么时候可以调用这个例程！相反，使用另一个方法名称，例如 <tt>render(Graphics g)</tt>，可以在窗口模式下操作时从 <tt>paint</tt> 方法调用，或者使用自己的图形调用来自渲染循环。</li>
+<li>不要将绘图代码放在 <tt>paint</tt> 例程中。你可能永远不知道什么时候可以调用这个例程！相反，使用另一个方法名称，例如 <tt>render(Graphics g)</tt>，可以在窗口模式下操作时从 <tt>paint</tt> 方法调用，或者使用自己的图形调用来自渲染循环。</li>
 <li>在应用程序窗口和组件上使用 <tt>setIgnoreRepaint</tt> 方法可以完全关闭从操作系统调度的所有绘制事件，因为这些事件可能在不适当的时间被调用，或者更糟糕的是，最终调用 <tt>paint</tt>，这可能导致 AWT 事件线程和渲染循环之间的竞争条件。</li>
-<li>将绘图代码与渲染循环分开，以便您可以在全屏独占和窗口模式下完全操作。</li>
-<li>优化渲染，以便您不会一直在屏幕上绘制所有内容(除非您使用页面翻转或双缓冲，两者都在下面讨论)。</li>
+<li>将绘图代码与渲染循环分开，以便你可以在全屏独占和窗口模式下完全操作。</li>
+<li>优化渲染，以便你不会一直在屏幕上绘制所有内容(除非你使用页面翻转或双缓冲，两者都在下面讨论)。</li>
 <li>不要依赖 <tt>update</tt> 或 <tt>repaint</tt> 方法来传递绘制事件。</li>
 <li>不要使用重量级组件，因为这些组件仍会产生涉及 AWT 和平台窗口系统的开销。</li>
 <li>如果使用轻量级组件，例如 Swing 组件，则可能需要稍微调整它们以便使用 <tt>Graphics</tt> 进行绘制，而不是直接调用 <tt>paint</tt> 方法。请随意从渲染循环中直接调用 Swing 方法，如 <tt>paintComponents</tt>，<tt>paintComponent</tt>，<tt>paintBorder</tt> 和 <tt>paintChildren</tt>。</li>
-<li>如果您只想要一个简单的全屏 Swing 或 AWT 应用程序，请随意使用被动渲染，但请记住，在全屏独占模式下，绘制事件可能有些不可靠或不必要。此外，如果您使用被动渲染，您将无法使用更高级的技术，如页面翻转。最后，如果您决定同时使用主动和被动渲染，请务必小心避免死锁 - 不建议使用此方法。</li>
+<li>如果你只想要一个简单的全屏 Swing 或 AWT 应用程序，请随意使用被动渲染，但请记住，在全屏独占模式下，绘制事件可能有些不可靠或不必要。此外，如果你使用被动渲染，你将无法使用更高级的技术，如页面翻转。最后，如果你决定同时使用主动和被动渲染，请务必小心避免死锁 - 不建议使用此方法。</li>
 </ul>
 
 

@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="creating.html">创建异常类</a></div>
-<div class="linkAHEAD"><a href="runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="summary.html">总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -499,13 +499,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="definition.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="handling.html">Next&nbsp;»</a>
+                <a target="_top" href="definition.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="handling.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>The Catch or Specify Requirement</h1></div>
             <div id="PageContent">
 
-<p>有效的 Java 编程语言代码必须遵守 <i>捕获或指定要求（The Catch or Specify Requirement)</i>。这意味着可能抛出某些异常的代码必须包含以下任一项：</p>
+<p>有效的 Java 编程语言代码必须遵守 <i>the Catch or Specify Requirement (捕获或指定要求)</i> （译注：后文统一不翻译）。这意味着可能抛出某些异常的代码必须包含以下任一项：</p>
 <ul>
 <li>捕获异常的 <code>try</code> 语句。<code>try</code> 必须为异常提供处理程序，如 <a class="TutorialLink" target="_top" href="handling.html">捕获和处理异常</a> 中所述。</li>
 <li>一个方法，指定它可以抛出的异常。该方法必须提供列出异常的 <code>throws</code> 子句，如 <a class="TutorialLink" target="_top" href="declaring.html">指定方法抛出的异常</a> 中所述。</li>
@@ -513,13 +513,13 @@
 <p>不符合 the Catch or Specify Requirement 的代码将无法编译。</p>
 <p>并非所有异常都受 the Catch or Specify Requirement 的约束。为了理解原因，我们需要了解三个基本类别的异常，其中只有一个受要求限制。</p>
 <h2>三种异常</h2>
-<p>第一种异常是 <i>检查型异常（checked exception）</i>。这些是编写良好的应用程序应该预期和恢复的特殊状态。例如，假设应用程序提示用户输入文件名，然后通过将名称传递给 <code>java.io.FileReader</code> 的构造函数来打开该文件。通常，用户提供存在的，可读的文件的名称，因此 <code>FileReader</code> 对象的构造成功，并且应用程序的执行正常进行。但有时用户提供不存在的文件的名称，构造函数抛出 <code>java.io.FileNotFoundException</code>。一个编写良好的程序将捕获此异常并通知用户该错误，可能提示更正的文件名。</p>
-<p>检查型异常<i>受限于</i> the Catch or Specify Requirement。所有异常都是检查型异常，但 <code>Error</code>，<code>RuntimeException</code> 及它们的子类指示的异常除外。</p>
-<p>第二种异常是 <i>错误（error）</i>。这些是应用程序外部的特殊状态，应用程序通常无法预测或恢复。例如，假设应用程序成功打开文件以进行输入，但由于硬件或系统故障而无法读取文件。不成功的读取将抛出 <code>java.io.IOError</code>。应用程序可能会选择捕获此异常，以便通知用户该问题但是程序打印堆栈跟踪并退出也可能有意义。</p>
-<p>Errors <i>不受限于</i> the Catch or Specify Requirement. Errors 是 <code>Error</code> 及其子类指示的异常。</p>
-<p>第三种异常是 <i>运行时异常（runtime exception）</i>。这些是应用程序内部的特殊情况，应用程序通常无法预测或恢复。这些通常表示编程错误，例如逻辑错误或 API 的不当使用。例如，考虑前面描述的将文件名传递给 <code>FileReader</code> 的构造函数的应用程序。如果逻辑错误导致 <code>null</code> 传递给构造函数，则构造函数将抛出 <code>NullPointerException</code>。应用程序可以捕获此异常，但消除导致异常发生的错误可能更有意义。</p>
-<p>运行时异常 <i>不受限于</i> the Catch or Specify Requirement. 运行时异常是 <code>RuntimeException</code> 及其子类指示的异常。</p>
-<p>错误和运行时异常统称为 <i>非检查型异常（unchecked exceptions）</i>。</p>
+<p>第一种异常是 <i>checked exception (检查型异常)</i>。这些是编写良好的应用程序应该预期和恢复的特殊状态。例如，假设应用程序提示用户输入文件名，然后通过将名称传递给 <code>java.io.FileReader</code> 的构造函数来打开该文件。通常，用户提供存在的，可读的文件的名称，因此 <code>FileReader</code> 对象的构造成功，并且应用程序的执行正常进行。但有时用户提供不存在的文件的名称，构造函数抛出 <code>java.io.FileNotFoundException</code>。一个编写良好的程序将捕获此异常并通知用户该错误，可能会提示输入正确的文件名。</p>
+<p>检查型异常<i>受限于</i> the Catch or Specify Requirement。除 <code>Error</code>，<code>RuntimeException</code> 及它们的子类指示的异常外，所有异常都是检查型异常。</p>
+<p>第二种异常是 <i>error (错误)</i>。这些是应用程序外部的特殊状态，应用程序通常无法预测或恢复。例如，假设应用程序成功打开文件以进行输入，但由于硬件或系统故障而无法读取文件。不成功的读取将抛出 <code>java.io.IOError</code>。应用程序可能会选择捕获此异常，以便通知用户该问题  但是程序打印堆栈跟踪并退出也可能有意义。</p>
+<p>错误 <i>不受限于</i> the Catch or Specify Requirement. 错误是 <code>Error</code> 及其子类指示的异常。</p>
+<p>第三种异常是 <i>runtime exception (运行时异常)</i>。这些是应用程序内部的特殊情况，应用程序通常无法预测或恢复。这些通常表示编程错误，例如逻辑错误或 API 的不当使用。例如，考虑前面描述的将文件名传递给 <code>FileReader</code> 的构造函数的应用程序。如果逻辑错误导致 <code>null</code> 传递给构造函数，则构造函数将抛出 <code>NullPointerException</code>。应用程序可以捕获此异常，但消除导致异常发生的错误可能更有意义。</p>
+<p>运行时异常 <i>不受限于</i> the Catch or Specify Requirement。运行时异常是 <code>RuntimeException</code> 及其子类指示的异常。</p>
+<p>错误和运行时异常统称为 <i>unchecked exceptions (非检查型异常)</i>。</p>
 <h2>绕过 Catch or Specify</h2>
 <p>一些程序员认为 the Catch or Specify Requirement 是异常机制中的一个严重缺陷，并通过使用非检查型异常代替检查型异常来绕过它。一般情况下，不建议这样做。<a class="TutorialLink" target="_top" href="runtime.html">Unchecked Exceptions  The Controversy</a> 部分讨论何时适合使用非检查型异常。</p>
 

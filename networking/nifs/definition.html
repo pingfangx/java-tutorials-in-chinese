@@ -487,7 +487,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">编程访问网络参数</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="retrieving.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="retrieving.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>什么是网络接口？</h1></div>
@@ -496,12 +496,12 @@
 <p><i>network interface (网络接口)</i> 是计算机与私有或公共网络之间的互连点。网络接口通常是网络接口卡(NIC)，但不必具有物理形式。相反，网络接口可以用软件实现。例如，环回接口(IPv4 的 <tt>127.0.0.1</tt> 和 IPv6 的 <tt>::1</tt>)不是物理设备，而是模拟网络接口的软件。环回接口通常用于测试环境。</p>
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/NetworkInterface.html"><code>java.net.NetworkInterface</code></a> 类表示两种类型的接口。</p>
 <p><tt>NetworkInterface</tt> 对于多宿主系统很有用，该系统是具有多个 NIC 的系统。使用 <code>NetworkInterface</code>，可以指定用于特定网络活动的 NIC。</p>
-<p>例如，假设您的计算机具有两个已配置的 NIC，并且您希望将数据发送到服务器。您创建一个这样的套接字：</p>
+<p>例如，假设你的计算机具有两个已配置的 NIC，并且你希望将数据发送到服务器。你创建一个这样的套接字：</p>
 <div class="codeblock"><pre>
 Socket soc = new java.net.Socket();
 soc.connect(new InetSocketAddress(address, port));
 </pre></div>
-<p>为了发送数据，系统确定使用哪个接口。但是，如果您有首选项或需要指定要使用的 NIC，则可以在系统中查询相应的接口，并在要使用的接口上查找地址。创建套接字并将其绑定到该地址时，系统将使用关联的接口。例如：</p>
+<p>为了发送数据，系统确定使用哪个接口。但是，如果你有首选项或需要指定要使用的 NIC，则可以在系统中查询相应的接口，并在要使用的接口上查找地址。创建套接字并将其绑定到该地址时，系统将使用关联的接口。例如：</p>
 <div class="codeblock"><pre>
 NetworkInterface nif = NetworkInterface.getByName("bge0");
 Enumeration&lt;InetAddress&gt; nifAddresses = nif.getInetAddresses();
@@ -510,7 +510,7 @@ Socket soc = new java.net.Socket();
 soc.bind(new InetSocketAddress(nifAddresses.nextElement(), 0));
 soc.connect(new InetSocketAddress(address, port));
 </pre></div>
-<p>您还可以使用 <code>NetworkInterface</code> 来标识要加入多播组的本地接口。例如：</p>
+<p>你还可以使用 <code>NetworkInterface</code> 来标识要加入多播组的本地接口。例如：</p>
 <div class="codeblock"><pre>
 NetworkInterface nif = NetworkInterface.getByName("bge0");
 MulticastSocket ms = new MulticastSocket();

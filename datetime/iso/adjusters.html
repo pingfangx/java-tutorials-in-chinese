@@ -500,7 +500,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>&gt;<a href="index.html" target="_top">标准日历</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="temporal.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="queries.html">Next&nbsp;»</a>
+                <a target="_top" href="temporal.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="queries.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Temporal Adjuster</h1></div>
@@ -549,7 +549,7 @@ first day of Year: 2000-01-01
 
 <h2>自定义调节器</h2>
 <p>
-您还可以创建自己的自定义调节器。为此，您将创建一个使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAdjuster.html#adjustInto-java.time.temporal.Temporal-"><tt>adjustInto(Temporal)</tt></a> 方法实现 <tt>TemporalAdjuster</tt> 接口的类。<a class="SourceLink" target="_blank" href="examples/NextPayday.java" onclick="showCode('../../displayCode.html', 'examples/NextPayday.java'); return false;"><code><tt>NextPayday</tt></code></a> 示例中的 <a class="SourceLink" target="_blank" href="examples/PaydayAdjuster.java" onclick="showCode('../../displayCode.html', 'examples/PaydayAdjuster.java'); return false;"><code><tt>PaydayAdjuster</tt></code></a> 类是自定义调整器。<tt>PaydayAdjuster</tt> 计算传入日期并返回下一个发薪日，假设发薪日每月发生两次：在 15 日，再次在该月的最后一天。如果计算的日期发生在周末，则使用上一个星期五。假设当前日历年。</p>
+你还可以创建自己的自定义调节器。为此，你将创建一个使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAdjuster.html#adjustInto-java.time.temporal.Temporal-"><tt>adjustInto(Temporal)</tt></a> 方法实现 <tt>TemporalAdjuster</tt> 接口的类。<a class="SourceLink" target="_blank" href="examples/NextPayday.java" onclick="showCode('../../displayCode.html', 'examples/NextPayday.java'); return false;"><code><tt>NextPayday</tt></code></a> 示例中的 <a class="SourceLink" target="_blank" href="examples/PaydayAdjuster.java" onclick="showCode('../../displayCode.html', 'examples/PaydayAdjuster.java'); return false;"><code><tt>PaydayAdjuster</tt></code></a> 类是自定义调整器。<tt>PaydayAdjuster</tt> 计算传入日期并返回下一个发薪日，假设发薪日每月发生两次：在 15 日，再次在该月的最后一天。如果计算的日期发生在周末，则使用上一个星期五。假设当前日历年。</p>
 <div class="codeblock"><pre>
 /**
  * The adjustInto method accepts a Temporal instance 

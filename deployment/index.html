@@ -404,10 +404,10 @@
 <h2><a name="componentBasedArch" id="componentBasedArch">基于组件的 RIA 架构</a></h2>
 <p>过去，决定是将 Java 富 Internet 应用程序在浏览器中部署为 applet，还是在浏览器之外部署为 Java Web Start 应用程序，这可能会对应用程序的设计产生重大影响。使用最新的 Java Plug-in，这个决定已经大大简化了。</p>
 <p>传统上，应用程序在 <code>main</code> 方法中构建其用户接口，包括顶级 <code>Frame</code>。这种编程风格阻止了在浏览器中轻松重新部署应用程序，因为它假定应用程序创建自己的 <code>Frame</code>。当在浏览器中作为 applet 运行时，applet 是应该保存应用程序用户接口的顶级容器。不需要顶级 <code>Frame</code>。</p>
-<p>在设计 Java 富 Internet 应用程序时，请使用 <i>component-based architecture (基于组件的体系结构)</i>。尝试将其功能组织到一个或多个可以组合在一起的组件中。在此上下文中，术语“组件”是指 GUI 元素，它是 AWT <code>Component</code> 类的子类，Swing <code>JComponent</code> 类或另一个子类。例如，您可以拥有顶级 <code>JPanel</code>，其中包含其他 UI 组件(如更多嵌套 JPanel 和文本字段，组合框等的组合)。通过这种设计，将核心功能部署为 applet 或 Java Web Start 应用程序变得相对容易。</p>
+<p>在设计 Java 富 Internet 应用程序时，请使用 <i>component-based architecture (基于组件的体系结构)</i>。尝试将其功能组织到一个或多个可以组合在一起的组件中。在此上下文中，术语“组件”是指 GUI 元素，它是 AWT <code>Component</code> 类的子类，Swing <code>JComponent</code> 类或另一个子类。例如，你可以拥有顶级 <code>JPanel</code>，其中包含其他 UI 组件(如更多嵌套 JPanel 和文本框，组合框等的组合)。通过这种设计，将核心功能部署为 applet 或 Java Web Start 应用程序变得相对容易。</p>
 <p>要部署为 Java applet，只需将核心功能包装在 <code>Applet</code> 或 <code>JApplet</code> 中，并根据需要添加特定于浏览器的功能。要部署为 Java Web Start 应用程序，请将功能包装在 <code>JFrame</code> 中。</p>
 <h2>在 Java Applet 和 Java Web Start 应用程序之间进行选择</h2>
-<p><a class="TutorialLink" target="_top" href="./_riaDecisionGuide.html">Rich Internet Applications Decision Guide</a> 包含详细信息，可帮助您决定是将代码部署为 Java applet 还是 Java Web Start 应用程序。</p>
+<p><a class="TutorialLink" target="_top" href="./_riaDecisionGuide.html">Rich Internet Applications Decision Guide</a> 包含详细信息，可帮助你决定是将代码部署为 Java applet 还是 Java Web Start 应用程序。</p>
  
 <h2>自包含的应用程序替代方案</h2>
 <p>自包含应用程序提供不需要浏览器的部署选项。用户在本地安装应用程序并运行它类似于本机应用程序。自包含应用程序包括运行应用程序所需的 JRE，因此用户始终拥有正确的 JRE。</p>

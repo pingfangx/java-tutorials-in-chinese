@@ -472,7 +472,7 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">类</a></div>
-<div class="linkAHEAD"><a href="classNew.html">获取类对象</a></div>
+<div class="linkAHEAD"><a href="classNew.html">获取 Class 对象</a></div>
 <div class="linkAHEAD"><a href="classModifiers.html">检查类修饰符和类型</a></div>
 <div class="nolinkAHEAD">发现类成员</div>
 <div class="linkAHEAD"><a href="classTrouble.html">故障排除</a></div>
@@ -487,7 +487,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">类</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="classModifiers.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="classTrouble.html">Next&nbsp;»</a>
+                <a target="_top" href="classModifiers.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="classTrouble.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>发现类成员</h1></div>
@@ -613,7 +613,7 @@
 <td align="center">no</td>
 </tr>
 </table>
-<p><sup>1</sup> 构造函数不是继承的。</p>
+<p><sup>1</sup> 构造函数是不能继承的。</p>
 <p>给定一个类名并指示哪些成员感兴趣，<a class="SourceLink" target="_blank" href="example/ClassSpy.java" onclick="showCode('../../displayCode.html', 'example/ClassSpy.java'); return false;"><code><code>ClassSpy</code></code></a> 示例使用 <code>get*s()</code> 确定所有公共元素列表的方法，包括任何继承的公共元素。</p>
 <div class="codeblock"><pre>
 
@@ -706,7 +706,7 @@ Constructor:
   public java.lang.ClassCastException()
   public java.lang.ClassCastException(java.lang.String)
 </pre></div>
-<p>由于构造函数不是继承的，因此在直接超类 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html"><code>RuntimeException</code></a> 和其他超类中定义的异常链接机制构造函数（具有 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html"><code>Throwable</code></a> 参数）没有找到。</p>
+<p>由于构造函数是不能继承的，因此在直接超类 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html"><code>RuntimeException</code></a> 和其他超类中定义的异常链接机制构造函数（具有 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html"><code>Throwable</code></a> 参数）没有找到。</p>
 <div class="codeblock"><pre>
 &#36; <em>java ClassSpy java.nio.channels.ReadableByteChannel METHOD</em>
 Class:

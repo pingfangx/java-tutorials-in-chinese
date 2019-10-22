@@ -503,14 +503,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="super.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="final.html">Next&nbsp;»</a>
+                <a target="_top" href="super.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="final.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Object 作为超类</h1></div>
             <div id="PageContent"><!-- Being a Descendent of Object -->
 
 
-<p><code>java.lang</code> 包中的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html"><code>Object</code></a> 类位于类层次结构树的顶部。每个类都是 <code>Object</code> 类的后代，直接或间接的。您使用或编写的每个类都继承 <code>Object</code> 的实例方法。您不需要使用任何这些方法，但是，如果您选择这样做，则可能需要使用特定于您的类的代码覆盖它们。本节中讨论的继承自 <code>Object</code> 的方法是：</p>
+<p><code>java.lang</code> 包中的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html"><code>Object</code></a> 类位于类层次结构树的顶部。每个类都是 <code>Object</code> 类的后代，直接或间接的。你使用或编写的每个类都继承 <code>Object</code> 的实例方法。你不需要使用任何这些方法，但是，如果你选择这样做，则可能需要使用特定于你的类的代码覆盖它们。本节中讨论的继承自 <code>Object</code> 的方法是：</p>
 <ul>
 <li><code>protected Object clone() throws CloneNotSupportedException</code><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 创建并返回此对象的副本。</li>
@@ -541,7 +541,7 @@
 <div class="codeblock"><pre>
 <i>aCloneableObject</i>.clone();
 </pre></div>
-<p><code>Object</code> 的此方法的实现检查以查看调用 <code>clone()</code> 的对象是否实现 <code>Cloneable</code> 接口。如果对象没有，则该方法抛出 <code>CloneNotSupportedException</code> 异常。稍后的课程将介绍异常处理。目前，您需要知道 <code>clone()</code> 必须声明为</p>
+<p><code>Object</code> 的此方法的实现检查以查看调用 <code>clone()</code> 的对象是否实现 <code>Cloneable</code> 接口。如果对象没有，则该方法抛出 <code>CloneNotSupportedException</code> 异常。稍后的课程将介绍异常处理。目前，你需要知道 <code>clone()</code> 必须声明为</p>
 <div class="codeblock"><pre>
 protected Object clone() throws CloneNotSupportedException
 </pre></div>
@@ -554,8 +554,8 @@ public Object clone() throws CloneNotSupportedException
 <p>使类可克隆的最简单方法是将 <code>implements Cloneable</code> 添加到类的声明中。那么你的对象可以调用 <code>clone()</code> 方法。</p>
 <p>对于某些类，<code>Object</code> 的 <code>clone()</code> 方法的默认行为可以正常工作。但是，如果对象包含对外部对象的引用，例如 <code>ObjExternal</code>，则可能需要覆盖 <code>clone()</code> 以获得正确的行为。否则，一个对象所做的关于 <code>ObjExternal</code> 的更改也将在其克隆中可见。这意味着原始对象及其克隆不是独立的 - 要解耦它们，必须覆盖 <code>clone()</code> 以便克隆对象 <i>和</i> <code>ObjExternal</code>。然后原始对象引用 <code>ObjExternal</code>，并且克隆引用 <code>ObjExternal</code> 的克隆，以便对象及其克隆真正独立。</p>
 <h2>equals() 方法</h2>
-<p><code>equals()</code> 方法比较两个对象是否相等，如果它们相等则返回 <code>true</code>。<code>Object</code> 类中提供的 <code>equals()</code> 方法使用相等运算符(<code>==</code>)来确定两个对象是否相等。对于基本数据类型，这会给出正确的结果。但是，对于对象，它没有。<code>Object</code> 提供的 <code>equals()</code> 方法测试对象 <i>references</i> 是否相等也就是说，比较的对象是否是完全相同的对象。</p>
-<p>要测试两个对象在 <i>等价（equivalency）</i>(包含相同信息)的意义上是否相等，必须覆盖 <code>equals()</code> 方法。以下是覆盖 <code>equals()</code> 的 <code>Book</code> 类的示例：</p>
+<p><code>equals()</code> 方法比较两个对象是否相等，如果它们相等则返回 <code>true</code>。<code>Object</code> 类中提供的 <code>equals()</code> 方法使用相等运算符(<code>==</code>)来确定两个对象是否相等。对于基本数据类型，这会给出正确的结果。但是，对于对象，它没有。<code>Object</code> 提供的 <code>equals()</code> 方法测试对象 <i>references (引用)</i> 是否相等  也就是说，比较的对象是否是完全相同的对象。</p>
+<p>要测试两个对象在 <i>equivalency (等价)</i>(包含相同信息)的意义上是否相等，必须覆盖 <code>equals()</code> 方法。以下是覆盖 <code>equals()</code> 的 <code>Book</code> 类的示例：</p>
 <div class="codeblock"><pre>
 public class Book {
     ...
@@ -579,14 +579,14 @@ if (firstBook.equals(secondBook)) {
 }
 </pre></div>
 <p>即使 <code>firstBook</code> 和 <code>secondBook</code> 引用两个不同的对象，此程序仍显示 <code>objects are equal</code>。它们被认为是相同的，因为比较的对象包含相同的 ISBN 号。</p>
-<p>如果相等运算符不适合您的类，则应始终覆盖 <code>equals()</code> 方法。</p>
+<p>如果相等运算符不适合你的类，则应始终覆盖 <code>equals()</code> 方法。</p>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;如果覆盖 <code>equals()</code>，则还必须覆盖 <code>hashCode()</code>。
 <hr /></div>
 <h2>finalize() 方法</h2>
-<p><code>Object</code> 类提供了一个回调方法 <code>finalize()</code>，当对象变为垃圾时，<i>可能</i> 调用。<code>Object</code> 的 <code>finalize()</code> 的实现什么都没做你可以覆盖 <code>finalize()</code> 进行清理，例如释放资源。</p>
-<p><code>finalize()</code> 方法 <em>可能</em>由系统自动调用，但是它何时被调用，或者它是否被调用，是不确定的。因此，您不应该依赖此方法为您进行清理。例如，如果在执行 I/O 后未在代码中关闭文件描述符，并且希望 <code>finalize()</code> 为您关闭它们，则可能会 run out of 文件描述符。</p>
+<p><code>Object</code> 类提供了一个回调方法 <code>finalize()</code>，当对象变为垃圾时，<i>可能</i> 调用。<code>Object</code> 的 <code>finalize()</code> 的实现什么都没做  你可以覆盖 <code>finalize()</code> 进行清理，例如释放资源。</p>
+<p><code>finalize()</code> 方法 <em>可能</em>由系统自动调用，但是它何时被调用，或者它是否被调用，是不确定的。因此，你不应该依赖此方法为你进行清理。例如，如果在执行 I/O 后未在代码中关闭文件描述符，并且希望 <code>finalize()</code> 为你关闭它们，则可能会 run out of 文件描述符。</p>
 <h2>getClass() 方法</h2>
-<p>您无法覆盖 <code>getClass</code>。</p>
+<p>你无法覆盖 <code>getClass</code>。</p>
 <p><code>getClass()</code> 方法返回一个 <code>Class</code> 对象，该对象具有可用于获取有关类的信息的方法，例如其名称（<code>getSimpleName()</code>），它的超类（<code>getSuperclass()</code>），以及它实现的接口（<code>getInterfaces()</code>）。例如，以下方法获取并显示对象的类名：</p>
 <div class="codeblock"><pre>
 void printClassName(Object obj) {
@@ -594,14 +594,14 @@ void printClassName(Object obj) {
         obj.getClass().getSimpleName());
 }
 </pre></div>
-<p><code>java.lang</code> 包中的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a> 类具有大量方法(超过 50 个)。例如，您可以测试该类是否为注解（<code>isAnnotation()</code>），接口（<code>isInterface()</code>）或枚举（<code>isEnum()</code>）。您可以看到对象的字段是什么（<code>getFields()</code>）或其方法是什么（<code>getMethods()</code>）等等。</p>
+<p><code>java.lang</code> 包中的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a> 类具有大量方法(超过 50 个)。例如，你可以测试该类是否为注解（<code>isAnnotation()</code>），接口（<code>isInterface()</code>）或枚举（<code>isEnum()</code>）。你可以看到对象的字段是什么（<code>getFields()</code>）或其方法是什么（<code>getMethods()</code>）等等。</p>
 <h2>hashCode() 方法</h2>
 <p><code>hashCode()</code> 返回的值是对象的哈希码，它是十六进制的对象的内存地址。</p>
 <p>根据定义，如果两个对象相等，则它们的哈希码 <i>必须也</i> 相等。如果覆盖 <code>equals()</code> 方法，更改两个对象的等效方式，则 <code>Object</code> 的 <code>hashCode()</code> 的实现不再有效。因此，如果覆盖 <code>equals()</code> 方法，则还必须覆盖 <code>hashCode()</code> 方法。</p>
 <h2>toString() 方法</h2>
-<p>您应该始终考虑覆盖类中的 <code>toString()</code> 方法。</p>
-<p><code>Object</code> 的 <code>toString()</code> 方法返回对象的 <code>String</code> 表示，这对于调试非常有用。对象的 <code>String</code> 表示完全取决于对象，这就是您需要在类中覆盖 <code>toString()</code> 的原因。</p>
-<p>您可以使用 <code>toString()</code> 以及 <code>System.out.println()</code> 来显示对象的文本表示形式，例如<code> Book </code> 的实例：</p>
+<p>你应该始终考虑覆盖类中的 <code>toString()</code> 方法。</p>
+<p><code>Object</code> 的 <code>toString()</code> 方法返回对象的 <code>String</code> 表示，这对于调试非常有用。对象的 <code>String</code> 表示完全取决于对象，这就是你需要在类中覆盖 <code>toString()</code> 的原因。</p>
+<p>你可以使用 <code>toString()</code> 以及 <code>System.out.println()</code> 来显示对象的文本表示形式，例如<code> Book </code> 的实例：</p>
 <div class="codeblock"><pre>
 System.out.println(firstBook.toString());
 </pre></div>

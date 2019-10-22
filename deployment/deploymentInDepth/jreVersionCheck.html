@@ -500,7 +500,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">深入部署</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="deployingWithoutCodebase.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="jnlp.html">Next&nbsp;»</a>
+                <a target="_top" href="deployingWithoutCodebase.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="jnlp.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>检查客户端 JRE 软件版本</h1></div>
@@ -508,12 +508,12 @@
 
 <p>There are many reasons to check if a particular version of the Java Runtime Environment (JRE) software is available on a client machine. For example, you might want to launch a different version of your rich Internet application (RIA) or redirect the user to a different page depending on the client's JRE software version.</p>
 <p>Use the Deployment Toolkit script's <code>versionCheck</code> function to check if a particular version or range of JRE versions is installed on the client.</p>
-<p><b>Function signature:</b> <code>versionCheck: function(versionPattern)</code></p>
+<p><b>Function signature:</b><code>versionCheck: function(versionPattern)</code></p>
 <p style="font-weight: bold">Parameters:</p>
 <ul>
 <li><code>versionPattern</code> – String specifying the version or range of versions to check for, such as such as "1.4", "1.5.0*" (1.5.x family), and "1.6.0_02+" (any version greater than or equal to 1.6.0_02).</li>
 </ul>
-<p><b>Usage:</b> Creating a different user experience depending on the client's JRE software version</p>
+<p><b>Usage:</b>Creating a different user experience depending on the client's JRE software version</p>
 <p>In this example, a Launch button is created for the Notepad application only if the version of JRE software on the client is greater than or equal to 1.6. If not, the browser is redirected to <code>oracle.com</code>.</p>
 <div class="codeblock"><pre>   
 &lt;script src=&quot;https://www.java.com/js/deployJava.js&quot;&gt;&lt;/script&gt;

@@ -489,13 +489,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">使用 URL</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="creatingUrls.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="readingURL.html">Next&nbsp;»</a>
+                <a target="_top" href="creatingUrls.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="readingURL.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>解析 URL</h1></div>
             <div id="PageContent">
 
-<p><code>URL</code> 类提供了几种方法，可用于查询 <code>URL</code> 对象。您可以使用以下访问器方法从 URL 获取协议，权限，主机名，端口号，路径，查询，文件名和引用：</p>
+<p><code>URL</code> 类提供了几种方法，可用于查询 <code>URL</code> 对象。你可以使用以下访问器方法从 URL 获取协议，权限，主机名，端口号，路径，查询，文件名和引用：</p>
 <dl>
 <dt><strong><code>getProtocol</code></strong></dt>
 <dd>返回 URL 的协议标识符组件。</dd>
@@ -517,7 +517,7 @@
 <div class="note"><hr /><strong>注意:</strong>&nbsp;<p>请记住，并非所有 URL 地址都包含这些组件。URL 类提供了这些方法，因为 HTTP URL 确实包含这些组件，并且可能是最常用的 URL。URL 类有点以 HTTP 为中心。</p>
 <hr /></div>
 <p>无论用于创建 URL 对象的构造函数如何，都可以使用这些 <code>get<em>XXX</em></code> 方法获取有关 URL 的信息。</p>
-<p>URL 类以及这些访问器方法使您不必再次解析 URL！给定 URL 的任何字符串规范，只需创建一个新的 URL 对象并调用任何访问器方法以获取所需的信息。这个小示例程序从字符串规范创建一个 URL，然后使用 URL 对象的访问器方法来解析 URL：</p>
+<p>URL 类以及这些访问器方法使你不必再次解析 URL！给定 URL 的任何字符串规范，只需创建一个新的 URL 对象并调用任何访问器方法以获取所需的信息。这个小示例程序从字符串规范创建一个 URL，然后使用 URL 对象的访问器方法来解析 URL：</p>
 <div class="codeblock"><pre>
 import java.net.*;
 import java.io.*;

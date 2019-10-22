@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="../throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="../chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="../creating.html">创建异常类</a></div>
-<div class="linkAHEAD"><a href="../runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="../runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="../advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="../summary.html">总结</a></div>
 <div class="nolinkQUESTIONS">问题和练习</div>
@@ -499,7 +499,7 @@
                 <a href="../../../index.html" target="_top">主页</a>&gt;<a href="../../index.html" target="_top">必要类</a>&gt;<a href="../index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="../summary.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../../io/index.html">Next&nbsp;»</a>
+                <a target="_top" href="../summary.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../../io/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>问题和练习</h1></div>
@@ -539,7 +539,7 @@ try {
 <li><code>int[] A;<br />
 
 A[0] = 0;</code></li>
-<li>JVM 开始运行您的程序，但 JVM 找不到 Java 平台类。(Java 平台类位于 <code>classes.zip</code> 或 <code>rt.jar</code>。)</li>
+<li>JVM 开始运行你的程序，但 JVM 找不到 Java 平台类。(Java 平台类位于 <code>classes.zip</code> 或 <code>rt.jar</code>。)</li>
 <li>程序正在读取流并到达 <code>end of stream</code> 标记的末尾。</li>
 <li>在关闭流之前和到达 <code>end of stream</code> 标记之后，程序尝试再次读取流。</li>
 </ol>
@@ -551,7 +551,7 @@ A[0] = 0;</code></li>
 </ol>
 <h2>练习</h2>
 <ol>
-<li>将 <code>readList</code> 方法添加到 <a class="SourceLink" target="_blank" href="../examples/ListOfNumbers.java" onclick="showCode('../../../displayCode.html', '../examples/ListOfNumbers.java'); return false;"><code><code>ListOfNumbers.java</code></code></a>。此方法应从文件中读取 <code>int</code> 值，打印每个值，并将它们附加到 vector 的末尾。你应该抓住所有适当的错误。您还需要一个包含要读入的数字的文本文件。</li>
+<li>将 <code>readList</code> 方法添加到 <a class="SourceLink" target="_blank" href="../examples/ListOfNumbers.java" onclick="showCode('../../../displayCode.html', '../examples/ListOfNumbers.java'); return false;"><code><code>ListOfNumbers.java</code></code></a>。此方法应从文件中读取 <code>int</code> 值，打印每个值，并将它们附加到 vector 的末尾。你应该捕获所有适当的错误。你还需要一个包含要读入的数字的文本文件。</li>
 <li>修改以下 <code>cat</code> 方法，以便进行编译。
 <div class="codeblock"><pre>
 public static void cat(File file) {

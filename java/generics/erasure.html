@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -505,7 +505,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="wildcardGuidelines.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="genTypes.html">Next&nbsp;»</a>
+                <a target="_top" href="wildcardGuidelines.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="genTypes.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>类型擦除</h1></div>
@@ -514,7 +514,7 @@
 <p>
 泛型被引入到 Java 语言中，以便在编译时提供更严格的类型检查并支持泛型编程。为了实现泛型，Java 编译器将类型擦除应用于：</p>
 <ul>
-<li>将泛型类型中的所有类型参数替换为其边界或 <tt>Object</tt>（如果类型参数是无界的）。因此，生成的字节码仅包含普通的类，接口和方法。</li>
+<li>将泛型类型中的所有类型形参替换为其边界或 <tt>Object</tt>（如果类型形参是无界的）。因此，生成的字节码仅包含普通的类，接口和方法。</li>
 <li>如有必要，插入类型转换以保持类型安全。</li>
 <li>生成桥接方法以保留继承泛型类型中的多态性。</li>
 </ul>

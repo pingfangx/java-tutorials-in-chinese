@@ -474,7 +474,7 @@
             <div class="linkLESSON"><a href="index.html">使用文本</a></div>
 <div class="linkAHEAD"><a href="charintro.html">检查字符属性</a></div>
 <div class="linkAHEAD"><a href="collationintro.html">比较字符串</a></div>
-<div class="linkBHEAD"><a href="locale.html">执行与区域设置无关的比较</a></div>
+<div class="linkBHEAD"><a href="locale.html">执行与语言环境无关的比较</a></div>
 <div class="linkBHEAD"><a href="rule.html">自定义排序规则</a></div>
 <div class="linkBHEAD"><a href="perform.html">提高排序性能</a></div>
 <div class="linkAHEAD"><a href="unicode.html">Unicode</a></div>
@@ -508,7 +508,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">使用文本</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="usage.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="info.html">Next&nbsp;»</a>
+                <a target="_top" href="usage.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="info.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>设计注意事项</h1></div>
@@ -524,11 +524,11 @@
 </tr>
 <tr>
 <td>避免使用 <code>char</code> 数据类型的方法。</td>
-<td>避免使用 <code>char</code> 基本数据类型或使用 <code>char</code> 数据类型的方法，因为使用该数据类型的代码不适用于补充字符。对于采用 <code>char</code> 类型参数的方法，请使用相应的 <code>int</code> 方法(如果可用)。例如，使用 <code>Character.isDigit(int)</code> 方法而不是 <code>Character.isDigit(char)</code> 方法。</td>
+<td>避免使用 <code>char</code> 基本数据类型或使用 <code>char</code> 数据类型的方法，因为使用该数据类型的代码不适用于补充字符。对于采用 <code>char</code> 类型形参的方法，请使用相应的 <code>int</code> 方法(如果可用)。例如，使用 <code>Character.isDigit(int)</code> 方法而不是 <code>Character.isDigit(char)</code> 方法。</td>
 </tr>
 <tr>
 <td>使用 <code>isValidCodePoint</code> 方法验证代码点值。</td>
-<td>代码点定义为 <code>int</code> 数据类型，它允许超出代码点值有效范围的值从 0x0000 到 0x10FFFF。出于性能原因，将代码点值作为参数的方法不会检查参数的有效性，但您可以使用 <code>isValidCodePoint</code> 方法来检查该值。</td>
+<td>代码点定义为 <code>int</code> 数据类型，它允许超出代码点值有效范围的值从 0x0000 到 0x10FFFF。出于性能原因，将代码点值作为参数的方法不会检查参数的有效性，但你可以使用 <code>isValidCodePoint</code> 方法来检查该值。</td>
 </tr>
 <tr>
 <td>使用 <code>codePointCount</code> 方法计算字符数。</td>

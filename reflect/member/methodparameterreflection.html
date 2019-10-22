@@ -500,14 +500,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">成员</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="methodType.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methodModifiers.html">Next&nbsp;»</a>
+                <a target="_top" href="methodType.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methodModifiers.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>获取方法参数的名称</h1></div>
             <div id="PageContent">
 
 
-<p>您可以使用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html#getParameters--"><code>java.lang.reflect.Executable.getParameters</code></a> 获取任何方法或构造函数的形式参数的名称。(类 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html"><code>Method</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html"><code>Constructor</code></a> 继承类 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html"><code>Executable</code></a> 因此继承方法 <code>Executable.getParameters</code>。)但是，<code>.class</code> 文件默认不存储形式参数名。这是因为许多生成和使用类文件的工具可能不会期望包含参数名称的 <code>.class</code> 文件的较大静态和动态占用空间。特别是，这些工具必须处理较大的 <code>.class</code> 文件，Java 虚拟机(JVM)将使用更多内存。此外，某些参数名称(如 <code>secret</code> 或 <code>password</code>)可能会公开有关安全性敏感方法的信息。</p>
+<p>你可以使用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html#getParameters--"><code>java.lang.reflect.Executable.getParameters</code></a> 获取任何方法或构造函数的形式参数的名称。(类 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html"><code>Method</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html"><code>Constructor</code></a> 继承类 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html"><code>Executable</code></a> 因此继承方法 <code>Executable.getParameters</code>。)但是，<code>.class</code> 文件默认不存储形式参数名。这是因为许多生成和使用类文件的工具可能不会期望包含参数名称的 <code>.class</code> 文件的较大静态和动态占用空间。特别是，这些工具必须处理较大的 <code>.class</code> 文件，Java 虚拟机(JVM)将使用更多内存。此外，某些参数名称(如 <code>secret</code> 或 <code>password</code>)可能会公开有关安全性敏感方法的信息。</p>
 
 <p>要将形式参数名称存储在特定的 <code>.class</code> 文件中，从而使反射 API 能够获取形式参数名称，请带 <code>-parameters</code> 选项使用 <code>javac</code> 编译器编译源文件 。</p>
 
@@ -597,7 +597,7 @@ public &lt;T&gt; void ExampleMethods.genericMethod(T[],java.util.Collection&lt;T
   <li><p>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html#getName--"><code>getName</code></a>:返回参数的名称。如果参数的名称存在，则此方法返回 <code>.class</code> 文件提供的名称。否则，此方法合成一个名称 <code>arg<em>N</em></code>，其中 <code><em>N</em></code> 是声明参数的方法的描述符中的参数的索引。</p>
   
-  <p>例如，假设您编译了类 <code>ExampleMethods</code> 而未指定 <code>-parameters</code> 编译器选项。示例 <code>MethodParameterSpy</code> 将为方法 <code>ExampleMethods.simpleMethod</code> 打印以下内容：</p>
+  <p>例如，假设你编译了类 <code>ExampleMethods</code> 而未指定 <code>-parameters</code> 编译器选项。示例 <code>MethodParameterSpy</code> 将为方法 <code>ExampleMethods.simpleMethod</code> 打印以下内容：</p>
   
   <pre class="codeblock">public boolean ExampleMethods.simpleMethod(java.lang.String,int)
              Return type: boolean
@@ -632,12 +632,12 @@ public &lt;T&gt; void ExampleMethods.genericMethod(T[],java.util.Collection&lt;T
       <tr>
           <td>4096</td>
           <td>0x1000</td>
-          <td>形式参数是合成的。或者，您可以调用方法 <code>isSynthetic</code>。</td>
+          <td>形式参数是合成的。或者，你可以调用方法 <code>isSynthetic</code>。</td>
       </tr>
       <tr>
           <td>32768</td>
           <td>0x8000</td>
-          <td>该参数在源代码中隐式声明。或者，您可以调用方法 <code>isImplicit</code></td>
+          <td>该参数在源代码中隐式声明。或者，你可以调用方法 <code>isImplicit</code></td>
       </tr>
   </table>
   </li>  
@@ -691,12 +691,12 @@ public ExampleMethods()</pre>
 <p><strong>注意</strong>:</p>
 
 <ul>
-  <li>Java 编译器为内部类的构造函数创建形式参数，以使编译器能够将创建表达式中的引用(表示立即封闭的实例)传递给成员类的构造函数。</li>
+  <li>Java 编译器为内部类的构造函数创建形式参数，以使编译器能够将创建表达式中的引用(表示紧密封闭的实例)传递给成员类的构造函数。</li>
   <li>值 32784 表示 <code>InnerClass</code> 构造函数的参数既是 final(16)，也是隐式(32768)。</li>
-  <li>Java 编程语言允许带有美元符号的变量名(<code>$</code>)；但是，按照惯例，美元符号不会用于变量名称。</li> 
+  <li>Java 编程语言允许带有美元符号的变量名(<code>$</code>)；但是，按照规范，美元符号不会用于变量名称。</li> 
 </ul>
 
-<p>如果 Java 编译器发出的构造函数与源代码中显式或隐式声明的构造函数不对应，则将其标记为 <em>synthetic</em>，除非它们是类初始化方法。合成构造是由编译器生成的工件，这些工件在不同的实现之间变化。请考虑以下 <a class="SourceLink" target="_blank" href="example/MethodParameterExamples.java" onclick="showCode('../../displayCode.html', 'example/MethodParameterExamples.java'); return false;"><code><code>MethodParameterExamples</code></code></a> 的片段：</p>
+<p>如果 Java 编译器产生的构造函数与源代码中显式或隐式声明的构造函数不对应，则将其标记为 <em>synthetic</em>，除非它们是类初始化方法。合成构造函数是由编译器生成的工件，这些工件在不同的实现之间变化。请考虑以下 <a class="SourceLink" target="_blank" href="example/MethodParameterExamples.java" onclick="showCode('../../displayCode.html', 'example/MethodParameterExamples.java'); return false;"><code><code>MethodParameterExamples</code></code></a> 的片段：</p>
 
 <pre class="codeblock">public class MethodParameterExamples {
     enum Colors {

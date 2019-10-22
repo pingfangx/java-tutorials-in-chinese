@@ -497,7 +497,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">使用其他 Swing 功能</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="splashscreen.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="problems.html">Next&nbsp;»</a>
+                <a target="_top" href="splashscreen.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="problems.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>如何使用系统托盘</h1></div>
@@ -518,7 +518,7 @@
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/TrayIcon.html"><code>TrayIcon</code></a> class functionality goes beyond the icon that is displayed in the tray. It also includes a text tooltip, a pop-up menu, ballon messages, and a set of listeners associated with it. A <code>TrayIcon</code> object generates various mouse events and supports the addition of corresponding listeners to receive notification of these events. The <code>TrayIcon</code> class processes some of the events itself. For example, by default, when a right-click is performed on the tray icon, it displays the specified pop-up menu. When a double-click is performed, the <code>TrayIcon</code> object generates an <code>ActionEvent</code> to launch an application. When the mouse pointer hovers over the tray icon, the tooltip is displayed. The icon image is automatically resized to fit the space allocated for the image on the tray.</p>
 <p>The following demo, developed using the AWT package, demonstrates the features of SystemTray and TrayIcon classes.</p>
 <center><img src="../../figures/uiswing/misc/systemtray.gif" width="302" height="161" align="bottom" alt="System Tray with opened pop-up menu" /></center><p>Unfortunately, the current implementation of the <code>TrayIcon</code> class provides limited support of the Swing pop-up menu (the <code>JPopupMenu</code> class) and does not enable an application to use all of the capabilities of the <code>javax.swing</code> package. The workaround proposal for this issue is described in the Bug Database, see Bug ID <a href="http://bugs.java.com/bugdatabase/view_bug.do?bug_id=6285881">6285881</a>.</p>
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Place the 
 <a class="SourceLink" target="_blank" href="../examples/misc/TrayIconDemoProject/src/misc/images/bulb.gif" onclick="showCode('../../displayCode.html', '../examples/misc/TrayIconDemoProject/src/misc/images/bulb.gif'); return false;"><code>bulb.gif</code></a> image file in the <code>image</code> directory. Compile and run the example, consult the <a href="../examples/misc/index.html#TrayIconDemo">example index</a>.</li>
 <li>The tray icon will appear in the system tray.

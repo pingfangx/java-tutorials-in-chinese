@@ -480,7 +480,7 @@
 <div class="linkAHEAD"><a href="operators.html">运算符</a></div>
 <div class="nolinkBHEAD">赋值，算术和一元运算符</div>
 <div class="linkBHEAD"><a href="op2.html">相等性，关系和条件运算符 </a></div>
-<div class="linkBHEAD"><a href="op3.html">按位和位移运算符</a></div>
+<div class="linkBHEAD"><a href="op3.html">位运算和移位运算符</a></div>
 <div class="linkBHEAD"><a href="opsummary.html">运算符总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_operators.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="expressions.html">表达式，语句和块</a></div>
@@ -505,20 +505,20 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">语言基础</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="operators.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="op2.html">Next&nbsp;»</a>
+                <a target="_top" href="operators.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="op2.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>赋值，算术和一元运算符</h1></div>
             <div id="PageContent">
 
 <h2>简单赋值运算符</h2>
-<p>您将遇到的最常见的运算符之一是简单赋值运算符 "<code>=</code>"。你在 Bicycle 类中看到了这个运算符;它将右边的值赋给左边的操作数：</p>
+<p>你将遇到的最常见的运算符之一是简单赋值运算符 "<code>=</code>"。你在 Bicycle 类中看到了这个运算符;它将右边的值赋给左边的操作数：</p>
 <div class="codeblock"><pre>
  int cadence = 0;
  int speed = 0;
  int gear = 1;
 </pre></div>
-<p>如 <a class="TutorialLink" target="_top" href="../javaOO/objectcreation.html">Creating Objects</a> 中所述，此运算符也可用于对象以分配 <i>object references</i>。</p>
+<p>如 <a class="TutorialLink" target="_top" href="../javaOO/objectcreation.html">Creating Objects</a> 中所述，此运算符也可用于对象以分配 <i>object references (对象引用)</i>。</p>
 <h2>算术运算符</h2>
 <p>Java 编程语言提供了执行加法，减法，乘法和除法的运算符。很有可能你会在基础数学中认识他们。唯一可能看起来很新的符号是 "<code>%</code>"，它将一个操作数除以另一个操作数，并返回余数作为结果。</p>
 
@@ -595,7 +595,7 @@ class ArithmeticDemo {
 </pre></div>
 
 
-<p>您还可以将算术运算符与简单赋值运算符组合以创建 <i>compound assignments（复合运算符）</i>。例如，<code>x+=1;</code> 和 <code>x=x+1;</code> 都会将 <code>x</code> 的值递增 1。</p>
+<p>你还可以将算术运算符与简单赋值运算符组合以创建 <i>compound assignments (复合赋值)</i>。例如，<code>x+=1;</code> 和 <code>x=x+1;</code> 都会将 <code>x</code> 的值递增 1。</p>
 <p><code>+</code> 运算符也可用于串连(连接)两个字符串，如下面的 <a class="SourceLink" target="_blank" href="examples/ConcatDemo.java" onclick="showCode('../../displayCode.html', 'examples/ConcatDemo.java'); return false;"><code>ConcatDemo</code></a> 程序所示：</p>
 <div class="codeblock"><pre>
 
@@ -618,19 +618,19 @@ class ConcatDemo {
     <th>描述</th>
   </tr>
   <tr>
-    <td><code>+</code></td><td>一元加运算符；表示正值(但没有这个数字是正数)</td>
+    <td><code>+</code></td><td>一元加运算符；表示正值(但是，如果没有这个符号数字也是正数)</td>
   </tr>
   <tr>
-    <td><code>-</code></td><td>一元减运算符；否定一个表达</td>
+    <td><code>-</code></td><td>一元减运算符；对表达式求反</td>
   </tr>
   <tr>
-    <td><code>++</code></td><td>递增运算符；将值增加 1</td>
+    <td><code>++</code></td><td>递增运算符；将值加 1</td>
   </tr>
   <tr>
     <td><code>--</code></td><td>递减运算符；将值减 1</td>
   </tr>
   <tr>
-    <td><code>!</code></td><td>逻辑补码运算符；颠倒布尔值</td>
+    <td><code>!</code></td><td>逻辑非运算符；反转布尔值</td>
   </tr>
 </table>
 
@@ -665,7 +665,7 @@ class UnaryDemo {
     }
 }
 </pre></div>
-<p>递增/递减运算符可以在操作数之前(前缀)或之后(后缀)应用。代码 <code>result++;</code> 和 <code>++result;</code> 结束时 <code>result</code> 都将加 1。唯一的区别是前缀版本(<code>++result</code>)计算为递增值，而后缀版本(<code>result++</code>)计算为原始值。如果您只是执行简单的递增/递减操作，则选择哪个版本无关紧要。但是如果你在更大的表达式中使用这个运算符，那么你选择的运算符可能会有很大的不同。</p>
+<p>递增/递减运算符可以在操作数之前(前缀)或之后(后缀)应用。代码 <code>result++;</code> 和 <code>++result;</code> 结束时 <code>result</code> 都将加 1。唯一的区别是前缀版本(<code>++result</code>)计算为递增值，而后缀版本(<code>result++</code>)计算为原始值。如果你只是执行简单的递增/递减操作，则选择哪个版本无关紧要。但是如果你在更大的表达式中使用这个运算符，那么你选择的运算符可能会有很大的不同。</p>
 <p>以下程序 <a class="SourceLink" target="_blank" href="examples/PrePostDemo.java" onclick="showCode('../../displayCode.html', 'examples/PrePostDemo.java'); return false;"><code>PrePostDemo</code></a> 演示了前缀/后缀一元递增运算符：</p>
 <div class="codeblock"><pre>
 

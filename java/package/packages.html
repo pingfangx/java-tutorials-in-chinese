@@ -490,7 +490,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">包</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="createpkgs.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="createpkgs.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>创建和使用包</h1></div>
@@ -498,10 +498,10 @@
 
 
 <p>为了使类型更易于查找和使用，避免命名冲突，以及控制访问，程序员将相关类型的组组织到包中。</p>
-<div class="note"><hr /><strong>Definition:</strong> <i>package</i> 是一组提供访问保护和名称空间管理的相关类型。请注意，<i>types</i> 指的是类，接口，枚举和注解类型。枚举和注解类型分别是特殊类型的类和接口，因此 <i>types</i> 在本类中通常简称为 <i>类和接口（classes and interfaces）</i>。
+<div class="note"><hr /><strong>定义:</strong>&nbsp;<i>package</i> 是一组提供访问保护和名称空间管理的相关类型。请注意，<i>types</i> 指的是类，接口，枚举和注解类型。枚举和注解类型分别是特殊类型的类和接口，因此 <i>types</i> 在本类中通常简称为 <i>classes and interfaces (类和接口)</i>。
 <hr /></div>
-<p>作为 Java 平台一部分的类型是按功能组织类的各种包的成员：基本类在 <code>java.lang</code> 中，用于读写(输入和输出)的类在 <code>java.io</code> 中等等。您也可以将您的类型放入包中。</p>
-<p>假设您编写了一组表示图形对象的类，例如圆形，矩形，线和点。您还可以编写一个接口 <code>Draggable</code>，如果可以使用鼠标拖动它们，那么这些类就可实现该接口。</p>
+<p>作为 Java 平台一部分的类型是按功能组织类的各种包的成员：基本类在 <code>java.lang</code> 中，用于读写(输入和输出)的类在 <code>java.io</code> 中等等。你也可以将你的类型放入包中。</p>
+<p>假设你编写了一组表示图形对象的类，例如圆形，矩形，线和点。你还可以编写一个接口 <code>Draggable</code>，如果可以使用鼠标拖动它们，那么这些类就可实现该接口。</p>
 <div class="codeblock"><pre>
 //<em>in the Draggable.java file</em>
 public interface Draggable {
@@ -537,12 +537,12 @@ public class Line extends Graphic
     . . .
 }
 </pre></div>
-<p>您应该将这些类和接口组织在一个包中，原因有多种，包括：<br /></p>
+<p>你应该将这些类和接口组织在一个包中，原因有多种，包括：<br /></p>
 <ul>
-<li>您和其他程序员可以轻松确定这些类型是否相关。</li>
-<li>您和其他程序员知道在哪里可以找到可以提供与图形相关的功能的类型。</li>
+<li>你和其他程序员可以轻松确定这些类型是否相关。</li>
+<li>你和其他程序员知道在哪里可以找到可以提供与图形相关的功能的类型。</li>
 <li>类型的名称不会与其他包中的类型名称冲突，因为包会创建新的命名空间。</li>
-<li>您可以允许程序包中的类型对彼此具有不受限制的访问权限，但仍限制程序包外部类型的访问。</li>
+<li>你可以允许程序包中的类型对彼此具有不受限制的访问权限，但仍限制程序包外部类型的访问。</li>
 </ul>
 
 

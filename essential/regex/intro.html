@@ -479,7 +479,7 @@
 <div class="linkAHEAD"><a href="pre_char_classes.html">预定义的字符类</a></div>
 <div class="linkAHEAD"><a href="quant.html">量词</a></div>
 <div class="linkAHEAD"><a href="groups.html">捕获组</a></div>
-<div class="linkAHEAD"><a href="bounds.html">边界匹配器</a></div>
+<div class="linkAHEAD"><a href="bounds.html">边界匹配</a></div>
 <div class="linkAHEAD"><a href="pattern.html">Pattern 类的方法</a></div>
 <div class="linkAHEAD"><a href="matcher.html">Matcher 类的方法</a></div>
 <div class="linkAHEAD"><a href="pse.html">PatternSyntaxException 类的方法</a></div>
@@ -497,7 +497,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">正则表达式</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="test_harness.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="test_harness.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>介绍</h1></div>
@@ -505,16 +505,16 @@
 
 
 <h2>什么是正则表达式？</h2>
-<p><i>Regular expressions (正则表达式)</i> 是一种基于集合中每个字符串共享的共同特征来描述一组字符串的方法。它们可用于搜索，编辑或操作文本和数据。您必须学习一种特定的语法来创建正则表达式超出 Java 编程语言的正则语法。正则表达式的复杂程度各不相同，但是一旦你理解了它们的构造基础，你就能够解密(或创建)任何正则表达式。</p>
+<p><i>Regular expressions (正则表达式)</i> 是一种基于集合中每个字符串共享的共同特征来描述一组字符串的方法。它们可用于搜索，编辑或操作文本和数据。你必须学习一种特定的语法来创建正则表达式  超出 Java 编程语言的正则语法。正则表达式的复杂程度各不相同，但是一旦你理解了它们的构造基础，你就能够解密(或创建)任何正则表达式。</p>
 <p>该路径教授 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/package-summary.html"><code>java.util.regex</code></a> API 支持的正则表达式语法，并提供了几个工作示例来说明各种对象如何交互。在正则表达式的世界中，有许多不同的风格可供选择，例如 grep，Perl，Tcl，Python，PHP 和 awk。<code>java.util.regex</code> API 中的正则表达式语法与 Perl 中的类似。</p>
 <h2>如何在此包中表示正则表达式？</h2>
 <p><code>java.util.regex</code> 包主要由三个类组成：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html"><code>Pattern</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html"><code>Matcher</code></a>，和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/PatternSyntaxException.html"><code>PatternSyntaxException</code></a>。</p>
 <ul>
-<li><code>Pattern</code> 对象是正则表达式的编译表示。<code>Pattern</code> 类不提供公共构造函数。要创建模式，必须首先调用其中一个 <code>public static compile</code> 方法，然后返回 <code>Pattern</code> 对象。这些方法接受正则表达式作为第一个参数；该路径的前几课将教您所需的语法。</li>
+<li><code>Pattern</code> 对象是正则表达式的编译表示。<code>Pattern</code> 类不提供公共构造函数。要创建模式，必须首先调用其中一个 <code>public static compile</code> 方法，然后返回 <code>Pattern</code> 对象。这些方法接受正则表达式作为第一个参数；该路径的前几课将教你所需的语法。</li>
 <li><code>Matcher</code> 对象是解释模式并对输入字符串执行匹配操作的引擎。与 <code>Pattern</code> 类一样，<code>Matcher</code> 不定义公共构造函数。通过在 <code>Pattern</code> 对象上调用 <code>matcher</code> 方法获得 <code>Matcher</code> 对象。</li>
 <li><code>PatternSyntaxException</code> 对象是非检查型异常，表示正则表达式模式中的语法错误。</li>
 </ul>
-<p>该路径的最后几课详细探讨了每个类。但首先，您必须了解实际构造正则表达式的方式。因此，下一节将介绍一个简单的测试工具，将重复使用它来探索其语法。</p>
+<p>该路径的最后几课详细探讨了每个类。但首先，你必须了解实际构造正则表达式的方式。因此，下一节将介绍一个简单的测试工具，将重复使用它来探索其语法。</p>
 
 
         </div>

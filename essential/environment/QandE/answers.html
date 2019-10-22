@@ -404,7 +404,7 @@
 <b>java Hello</b>
 Exception in thread "main" java.lang.NoClassDefFoundError: Hello
 </pre></div>
-<p>在这种情况下，<code>Hello</code> 类被编译成当前目录中的 .class 文件然而 <code>java</code> 命令似乎找不到它。出了什么问题？</p>
+<p>在这种情况下，<code>Hello</code> 类被编译成当前目录中的 .class 文件  然而 <code>java</code> 命令似乎找不到它。出了什么问题？</p>
 <p><strong>答案1.</strong>仅当类出现在类路径中时才会找到该类。默认情况下，类路径由当前目录组成。如果设置了 CLASSPATH 环境变量，并且不包含当前目录，则启动程序将无法再在当前目录中找到类。解决方案是更改 CLASSPATH 变量以包含当前目录。例如，如果 CLASSPATH 值为 <code>c:\java\newLibrary.jar</code>(Windows)或 <code>/home/me/newLibrary.jar</code>(UNIX 或 Linux)，则需要更改为 <code>.;c:\java\newLibrary.jar</code> 或 <code>.:/home/me/newLibrary.jar</code>。</p>
 <h2>练习</h2>
 <p><strong>练习1.</strong></p>

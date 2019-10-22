@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="nolinkAHEAD">泛型方法</div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -505,15 +505,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="rawTypes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="bounded.html">Next&nbsp;»</a>
+                <a target="_top" href="rawTypes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="bounded.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>泛型方法</h1></div>
             <div id="PageContent">
 
 <p>
-<em>泛型方法（Generic methods）</em> 是引入自己的类型参数的方法。这类似于声明泛型类型，但类型参数的范围仅限于声明它的方法。允许使用静态和非静态泛型方法，以及泛型类构造函数。</p>
-<p>泛型方法的语法包括类型参数列表，在尖括号内，它出现在方法的返回类型之前。对于静态泛型方法，类型参数部分必须出现在方法的返回类型之前。</p>
+<em>Generic methods (泛型方法)</em> 是引入自己的类型形参的方法。这类似于声明泛型类型，但类型形参的范围仅限于声明它的方法。允许使用静态和非静态泛型方法，以及泛型类构造函数。</p>
+<p>泛型方法的语法包括类型形参列表，在尖括号内，它出现在方法的返回类型之前。对于静态泛型方法，类型形参部分必须出现在方法的返回类型之前。</p>
 <p>
 <tt>Util</tt> 类包含一个泛型方法 <tt>compare</tt>，它比较两个 <tt>Pair</tt> 对象：</p>
 <div class="codeblock"><pre>
@@ -556,7 +556,7 @@ Pair&lt;Integer, String&gt; p2 = new Pair&lt;&gt;(2, "pear");
 boolean same = Util.compare(p1, p2);
 </pre></div>
 <p>
-此功能称为 <em>类型推断（type inference）</em>，允许您将泛型方法作为普通方法调用，而无需在尖括号之间指定类型。以下部分将进一步讨论此主题，<a class="TutorialLink" target="_top" href="genTypeInference.html">Type Inference</a>。</p>
+此功能称为 <em>type inference (类型推断)</em>，允许你将泛型方法作为普通方法调用，而无需在尖括号之间指定类型。以下部分将进一步讨论此主题，<a class="TutorialLink" target="_top" href="genTypeInference.html">Type Inference</a>。</p>
 
         </div>
         <div class="NavBit">

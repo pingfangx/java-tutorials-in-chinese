@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="creating.html">创建异常类</a></div>
-<div class="linkAHEAD"><a href="runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="summary.html">总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -499,13 +499,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="catchOrDeclare.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="try.html">Next&nbsp;»</a>
+                <a target="_top" href="catchOrDeclare.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="try.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>捕获和处理异常</h1></div>
             <div id="PageContent">
 
-<p>本节介绍如何使用三个异常处理程序组件 <code>try</code>，<code>catch</code>，<code>finally</code> 块来编写异常处理程序。然后，解释了 Java SE 7 中引入的 <code>try-</code>with-resources 语句。<code>try-</code>with-resources 语句特别适合使用 <code>Closeable</code> 资源的情况，例如流。</p>
+<p>本节介绍如何使用三个异常处理程序组件  <code>try</code>，<code>catch</code>，<code>finally</code> 块  来编写异常处理程序。然后，解释了 Java SE 7 中引入的 <code>try-</code>with-resources 语句。<code>try-</code>with-resources 语句特别适合使用 <code>Closeable</code> 资源的情况，例如流。</p>
 <p>本节的最后一部分将介绍一个示例，并分析各种情况下发生的情况。</p>
 <p>以下示例定义并实现名为 <code>ListOfNumbers</code> 的类。构造时，<code>ListOfNumbers</code> 创建一个 <code>ArrayList</code>，其中包含 10 个 <code>Integer</code> 元素，其序列值为 0 到 9。<code>ListOfNumbers</code> 类还定义了一个名为 <code>writeList</code> 的方法，该方法将数字列表写入名为 <code>OutFile.txt</code> 的文本文件中。此示例使用 <code>java.io</code> 中定义的输出类，它们包含在 <a class="TutorialLink" target="_top" href="../io/index.html">Basic I/O</a> 中。</p>
 <div class="codeblock"><pre>
@@ -539,8 +539,8 @@ public class ListOfNumbers {
 }
 </pre></div>
 <p>第一粗体行是对构造函数的调用。构造函数初始化文件上的输出流。如果无法打开文件，构造函数将抛出 <code>IOException</code>。第二个粗体行是对 <code>ArrayList</code> 类的 <code>get</code> 方法的调用，如果其参数的值太小（比 0 小）或太大（超过 <code>ArrayList</code> 当前包含的元素数量），则抛出 <code>IndexOutOfBoundsException</code> 。</p>
-<p>如果您尝试编译 <a class="SourceLink" target="_blank" href="examples/ListOfNumbers.java" onclick="showCode('../../displayCode.html', 'examples/ListOfNumbers.java'); return false;"><code><code>ListOfNumbers</code></code></a> 类，编译器将输出有关 <code>FileWriter</code> 抛出的异常的错误消息构造函数。但是，它不会显示有关 <code>get</code> 引发的异常的错误消息。原因是构造函数 <code>IOException</code> 抛出的异常是一个检查型异常，而是由 <code>get</code> 方法抛出的异常，<code>IndexOutOfBoundsException</code>，是一个非检查型异常。</p>
-<p>现在您已熟悉 <code>ListOfNumbers</code> 类以及可以在其中抛出异常的位置，您已准备好编写异常处理程序来捕获和处理这些异常。</p>
+<p>如果你尝试编译 <a class="SourceLink" target="_blank" href="examples/ListOfNumbers.java" onclick="showCode('../../displayCode.html', 'examples/ListOfNumbers.java'); return false;"><code><code>ListOfNumbers</code></code></a> 类，编译器将输出有关 <code>FileWriter</code> 抛出的异常的错误消息构造函数。但是，它不会显示有关 <code>get</code> 引发的异常的错误消息。原因是构造函数 <code>IOException</code> 抛出的异常是一个检查型异常，而是由 <code>get</code> 方法抛出的异常，<code>IndexOutOfBoundsException</code>，是一个非检查型异常。</p>
+<p>现在你已熟悉 <code>ListOfNumbers</code> 类以及可以在其中抛出异常的位置，你已准备好编写异常处理程序来捕获和处理这些异常。</p>
 
 
         </div>

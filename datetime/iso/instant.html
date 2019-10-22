@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>&gt;<a href="index.html" target="_top">标准日历</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="timezones.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="format.html">Next&nbsp;»</a>
+                <a target="_top" href="timezones.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="format.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Instant 类</h1></div>
@@ -542,7 +542,7 @@ long secondsFromEpoch = Instant.ofEpochSecond(0L).until(Instant.now(),
 </pre></div>
 
 <p>
-<tt>Instant</tt> 类不适用于人类时间单位，例如年，月或日。如果要在这些单位中执行计算，可以通过绑定 <tt>Instant</tt> 和时区将 <tt>Instant</tt> 转换为其他类，例如 <tt>LocalDateTime</tt> 或 <tt>ZonedDateTime</tt>。然后，您可以按所需的单位访问该值。以下代码使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html#ofInstant-java.time.Instant-java.time.ZoneId-"><tt>ofInstant</tt></a> 方法和默认时区将 <tt>Instant</tt> 转换为 <tt>LocalDateTime</tt> 对象，然后以更易读的形式打印出日期和时间：</p>
+<tt>Instant</tt> 类不适用于人类时间单位，例如年，月或日。如果要在这些单位中执行计算，可以通过绑定 <tt>Instant</tt> 和时区将 <tt>Instant</tt> 转换为其他类，例如 <tt>LocalDateTime</tt> 或 <tt>ZonedDateTime</tt>。然后，你可以按所需的单位访问该值。以下代码使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html#ofInstant-java.time.Instant-java.time.ZoneId-"><tt>ofInstant</tt></a> 方法和默认时区将 <tt>Instant</tt> 转换为 <tt>LocalDateTime</tt> 对象，然后以更易读的形式打印出日期和时间：</p>
 <div class="codeblock"><pre>
 Instant timestamp;
 ...

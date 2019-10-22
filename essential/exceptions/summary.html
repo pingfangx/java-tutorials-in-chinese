@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="creating.html">创建异常类</a></div>
-<div class="linkAHEAD"><a href="runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="nolinkAHEAD">总结</div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -499,18 +499,18 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="advantages.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">Next&nbsp;»</a>
+                <a target="_top" href="advantages.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>总结</h1></div>
             <div id="PageContent">
 
-<p>程序可以使用异常来指示发生了错误。要抛出异常，请使用 <code>throw</code> 语句并为其提供异常对象 <code>Throwable</code> 的后代来提供有关发生的特定错误的信息。抛出未捕获的检查型异常的方法必须在其声明中包含 <code>throws</code> 子句。</p>
+<p>程序可以使用异常来指示发生了错误。要抛出异常，请使用 <code>throw</code> 语句并为其提供异常对象  <code>Throwable</code> 的后代  来提供有关发生的特定错误的信息。抛出未捕获的检查型异常的方法必须在其声明中包含 <code>throws</code> 子句。</p>
 <p>程序可以通过结合使用 <code>try</code>，<code>catch</code> 和 <code>finally</code> 块来捕获异常。</p>
 <ul>
 <li><code>try</code> 块标识可能发生异常的代码块。</li>
 <li><code>catch</code> 块标识了一个代码块，称为异常处理程序，可以处理特定类型的异常。</li>
-<li><code>finally</code> 块标识了一个保证执行的代码块，并且是在 <code>try</code> 中包含的代码之后关闭文件，恢复资源和其他清理的正确位置。</li>
+<li><code>finally</code> 块标识了一个在 <code>try</code> 中包含的代码之后，保证执行的代码块，并且是关闭文件、恢复资源和其他清理的正确位置。</li>
 </ul>
 <p><code>try</code> 语句应包含至少一个 <code>catch</code> 块或 <code>finally</code> 块，并且可能包含多个 <code>catch</code> 块。</p>
 <p>异常对象的类指示抛出的异常类型。异常对象可以包含有关错误的更多信息，包括错误消息。使用链式异常，异常可以指向导致异常的异常，该异常又可以指向导致 <em>它</em> 的异常，依此类推。</p>

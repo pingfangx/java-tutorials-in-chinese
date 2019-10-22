@@ -514,18 +514,18 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="bytestreams.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="bytestreams.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>I/O 流</h1></div>
             <div id="PageContent">
 
-<p><em>I/O Stream</em> 表示输入源或输出目的地。流可以表示许多不同类型的源和目标，包括磁盘文件，设备，其他程序和内存阵列。</p>
-<p>Streams 支持许多不同类型的数据，包括简单字节，基本数据类型，本地化字符和对象。有些流只传递数据;其他人以有用的方式操纵和转换数据。</p>
-<p>无论它们如何在内部工作，所有流都为使用它们的程序提供相同的简单模型：流是一系列数据。程序使用 <i>input stream</i> 从源读取数据，一次一个项：</p>
-<center><img src="../../figures/essential/io-ins.gif" width="488" height="155" align="bottom" alt="将信息读入程序。" /></p><p class="FigureCaption">将信息读入程序。</p></center><p>程序使用 <i>output stream</i> 将数据写入目标，一次一项：</p>
+<p><em>I/O Stream ( I/O 流)</em> 表示输入源或输出目的地。流可以表示许多不同类型的源和目标，包括磁盘文件、设备、其他程序和内存阵列。</p>
+<p>Streams 支持许多不同类型的数据，包括简单字节、基本数据类型、本地化字符和对象。有些流只传递数据;其他人以有用的方式操纵和转换数据。</p>
+<p>无论它们如何在内部工作，所有流都为使用它们的程序提供相同的简单模型：流是一系列数据。程序使用 <i>input stream (输入流)</i> 从源读取数据，一次一个项：</p>
+<center><img src="../../figures/essential/io-ins.gif" width="488" height="155" align="bottom" alt="将信息读入程序。" /></p><p class="FigureCaption">将信息读入程序。</p></center><p>程序使用 <i>output stream (输出流)</i> 将数据写入目标，一次一项：</p>
 <center><img src="../../figures/essential/io-outs.gif" width="494" height="157" align="bottom" alt="从程序中写入信息。" /></p><p class="FigureCaption">从程序中写入信息。</p></center><p>在本课中，我们将看到可以处理各种数据的流，从基本类型值到高级对象。</p>
-<p>上图所示的数据源和数据目的地可以是保存，生成或使用数据的任何内容。显然这包括磁盘文件，但源或目标也可以是另一个程序，外围设备，网络套接字或阵列。</p>
+<p>上图所示的数据源和数据目的地可以是保存、生成或使用数据的任何内容。显然这包括磁盘文件，但源或目标也可以是另一个程序、外围设备、网络套接字或阵列。</p>
 <p>在下一节中，我们将使用最基本的流类型——字节流来演示流 I/O 的常见操作。对于示例输入，我们将使用示例文件 <a class="SourceLink" target="_blank" href="examples/xanadu.txt" onclick="showCode('../../displayCode.html', 'examples/xanadu.txt'); return false;"><code>xanadu.txt</code></a>，其中包含以下诗文：</p>
 <div class="codeblock"><pre>
 In Xanadu did Kubla Khan

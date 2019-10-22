@@ -507,7 +507,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">拖放和数据传输</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="export.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="transfersupport.html">Next&nbsp;»</a>
+                <a target="_top" href="export.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="transfersupport.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>导入方法</h1></div>
@@ -525,7 +525,7 @@
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/TransferHandler.html#importData-javax.swing.TransferHandler.TransferSupport-"><code>importData(TransferHandler.TransferSupport)</code></a>—This method is called on a successful drop (or paste) and initiates the transfer of data to the target component. This method returns true if the import was successful and false otherwise.</p>
 </li>
 </ul>
-<div class="note"><hr /><strong>Version note:</strong>&nbsp;<p>These methods replace older versions that do not use the <code>TransferSupport</code> class. Unlike its replacement method, <code>canImport(JComponent, DataFlavor[])</code> is not called continuously.</p>
+<div class="note"><hr /><strong>版本说明:</strong>&nbsp;<p>These methods replace older versions that do not use the <code>TransferSupport</code> class. Unlike its replacement method, <code>canImport(JComponent, DataFlavor[])</code> is not called continuously.</p>
 <hr /></div>
 <p>You will notice that these import methods take a <code>TransferHandler.TransferSupport</code> argument. Next we look at the <code>TransferSupport</code> class and then some sample import methods.</p>
 

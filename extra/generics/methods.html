@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">泛型</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="wildcards.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="legacy.html">Next&nbsp;»</a>
+                <a target="_top" href="wildcards.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="legacy.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>泛型方法</h1></div>
@@ -509,8 +509,8 @@
     }
 }
 </pre></div>
-<p>到目前为止，您将学会避免初学者错误地尝试使用 <code>Collection&lt;Object&gt;</code> 作为集合参数的类型。您可能已经或可能没有认识到使用 <code>Collection&lt;?&gt;</code> 也无法正常工作。回想一下，不能将对象推送到未知类型的集合中。</p>
-<p>处理这些问题的方法是使用 <i>generic methods (泛型方法)</i>。就像类型声明一样，方法声明可以是泛型的，即由一个或多个类型参数参数化。</p>
+<p>到目前为止，你将学会避免初学者错误地尝试使用 <code>Collection&lt;Object&gt;</code> 作为集合参数的类型。你可能已经或可能没有认识到使用 <code>Collection&lt;?&gt;</code> 也无法正常工作。回想一下，不能将对象推送到未知类型的集合中。</p>
+<p>处理这些问题的方法是使用 <i>generic methods (泛型方法)</i>。就像类型声明一样，方法声明可以是泛型的，即由一个或多个类型形参参数化。</p>
 <div class="codeblock"><pre>
 <b>static</b> &lt;T&gt; <b>void</b> fromArrayToCollection(T[] a, Collection&lt;T&gt; c) {
     <b>for</b> (T o : a) {
@@ -555,7 +555,7 @@ fromArrayToCollection(na, co);
 // <i>compile-time error</i>
 fromArrayToCollection(na, cs);
 </pre></div>
-<p>请注意，我们不必将实际类型参数传递给泛型方法。编译器根据实际参数的类型为我们推断类型参数。它通常会推断出使调用类型正确的最具体的类型参数。 <!--
+<p>请注意，我们不必将实际类型实参传递给泛型方法。编译器根据实际参数的类型为我们推断类型实参。它通常会推断出使调用类型正确的最特定的类型实参。 <!--
 % show examples from library
 
 % show wildcard examples and show how they could be done using
@@ -576,8 +576,8 @@ fromArrayToCollection(na, cs);
     // <i>Hey, type variables can have bounds too!</i>
 }
 </pre></div>
-<p>但是，在 <code>containsAll</code> 和 <code>addAll</code> 中，类型参数 <code>T</code> 仅使用一次。返回类型不依赖于类型参数，也不依赖于方法的任何其他参数(在这种情况下，只有一个参数)。这告诉我们类型参数用于多态；它唯一的作用是允许在不同的调用点使用各种实际的参数类型。如果是这种情况，则应使用通配符。通配符旨在支持灵活的子类型，这是我们在此尝试表达的内容。</p>
-<p>泛型方法允许使用类型参数来表示方法和/或其返回类型的一个或多个参数的类型之间的依赖关系。如果没有这种依赖关系，则不应使用泛型方法。</p>
+<p>但是，在 <code>containsAll</code> 和 <code>addAll</code> 中，类型形参 <code>T</code> 仅使用一次。返回类型不依赖于类型形参，也不依赖于方法的任何其他参数(在这种情况下，只有一个参数)。这告诉我们类型实参用于多态；它唯一的作用是允许在不同的调用点使用各种实际的参数类型。如果是这种情况，则应使用通配符。通配符旨在支持灵活的子类型，这是我们在此尝试表达的内容。</p>
+<p>泛型方法允许使用类型形参来表示方法和/或其返回类型的一个或多个参数的类型之间的依赖关系。如果没有这种依赖关系，则不应使用泛型方法。</p>
 <p>可以串联使用泛型方法和通配符。这是方法 <code>Collections.copy()</code>：</p>
 <div class="codeblock"><pre>
 <b>class</b> Collections {
@@ -585,7 +585,7 @@ fromArrayToCollection(na, cs);
     ...
 }
 </pre></div>
-<p>注意两个参数类型之间的依赖关系。从源列表 <code>src</code> 复制的任何对象必须可分配给目标列表 <code>dst</code> 的元素类型 <code>T</code>。所以 <code>src</code> 的元素类型可以是 <code>T</code> 的任何子类型，我们不在乎哪个。<code>copy</code> 的签名使用类型参数表示依赖关系，但对第二个参数的元素类型使用通配符。</p>
+<p>注意两个参数类型之间的依赖关系。从源列表 <code>src</code> 复制的任何对象必须可分配给目标列表 <code>dst</code> 的元素类型 <code>T</code>。所以 <code>src</code> 的元素类型可以是 <code>T</code> 的任何子类型，我们不关心是哪一个。<code>copy</code> 的签名使用类型形参表示依赖关系，但对第二个参数的元素类型使用通配符。</p>
 <p>我们可以用另一种方式为这种方法编写签名，而不使用通配符：</p>
 <div class="codeblock"><pre>
 <b>class</b> Collections {
@@ -593,7 +593,7 @@ fromArrayToCollection(na, cs);
     ...
 }
 </pre></div>
-<p>这很好，但是第一个类型参数既用于 <code>dst</code> 的类型，也用于第二个类型参数的边界 <code>S</code>，但 <code>S</code> 本身只使用一次，在 <code>src</code> 的类型中没有别的依赖它。这表明我们可以用通配符替换 <code>S</code>。使用通配符比声明显式类型参数更清晰，更简洁，因此应尽可能优先使用通配符。</p>
+<p>这很好，但是第一个类型形参既用于 <code>dst</code> 的类型，也用于第二个类型形参的边界 <code>S</code>，但 <code>S</code> 本身只使用一次，在 <code>src</code> 的类型中没有别的依赖它。这表明我们可以用通配符替换 <code>S</code>。使用通配符比声明显式类型形参更清晰，更简洁，因此应尽可能优先使用通配符。</p>
 <p>通配符还具有以下优点：它们可以在方法签名之外使用，如字段类型，局部变量和数组。这是一个例子。</p>
 <p>回到我们的形状绘制问题，假设我们想要保留绘图请求的历史记录。我们可以在类 <code>Shape</code> 中的静态变量中维护历史记录，并让 <code>drawAll()</code> 将其传入的参数存储到历史记录字段中。</p>
 <div class="codeblock"><pre>
@@ -607,7 +607,7 @@ fromArrayToCollection(na, cs);
     }
 }
 </pre></div>
-<p>最后，再次让我们注意用于类型参数的命名约定。我们使用 <code>T</code> 作为类型，只要没有更具体的类型来区分它。泛型方法通常就是这种情况。如果有多个类型参数，我们可能会使用字母表中与 <code>T</code> 相邻的字母，例如 <code>S</code>。如果泛型方法出现在泛型类中，最好避免对方法和类的类型参数使用相同的名称，以避免混淆。这同样适用于嵌套泛型类。 <!--
+<p>最后，再次让我们注意用于类型形参的命名规范。我们使用 <code>T</code> 作为类型，只要没有更具体的类型来区分它。泛型方法通常就是这种情况。如果有多个类型形参，我们可能会使用字母表中与 <code>T</code> 相邻的字母，例如 <code>S</code>。如果泛型方法出现在泛型类中，最好避免对方法和类的类型形参使用相同的名称，以避免混淆。这同样适用于嵌套泛型类。 <!--
 % somewhere figure out how to explain ``any'' and ``some'' -
 % subtlety between taking any type and some unknown type, why each 
 % occurence of ? is different.

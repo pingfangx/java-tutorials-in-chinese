@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>操纵字符串中的字符(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;数字和字符串)
+        <title>操作字符串中的字符(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;数字和字符串)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,13 +475,13 @@
 <div class="linkAHEAD"><a href="numbers.html">数字</a></div>
 <div class="linkBHEAD"><a href="numberclasses.html">数字类</a></div>
 <div class="linkBHEAD"><a href="numberformat.html">格式化数字打印输出</a></div>
-<div class="linkBHEAD"><a href="beyondmath.html">基础算法之外的补充</a></div>
+<div class="linkBHEAD"><a href="beyondmath.html">基础算术之外的补充</a></div>
 <div class="linkBHEAD"><a href="numbersummary.html">数字总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/numbers-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="characters.html">Characters</a></div>
-<div class="linkAHEAD"><a href="strings.html">Strings</a></div>
+<div class="linkAHEAD"><a href="characters.html">字符</a></div>
+<div class="linkAHEAD"><a href="strings.html">字符串</a></div>
 <div class="linkBHEAD"><a href="converting.html">在数字和字符串之间转换</a></div>
-<div class="nolinkBHEAD">操纵字符串中的字符</div>
+<div class="nolinkBHEAD">操作字符串中的字符</div>
 <div class="linkBHEAD"><a href="comparestrings.html">比较字符串和字符串的部分</a></div>
 <div class="linkBHEAD"><a href="buffers.html">StringBuilder 类</a></div>
 <div class="linkBHEAD"><a href="stringsummary.html">字符和字符串总结</a></div>
@@ -499,16 +499,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">数字和字符串</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="converting.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="comparestrings.html">Next&nbsp;»</a>
+                <a target="_top" href="converting.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="comparestrings.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>操纵字符串中的字符</h1></div>
+            <div id="PageTitle"><h1>操作字符串中的字符</h1></div>
             <div id="PageContent"><!-- Manipulating Characters in a String -->
 
 
 <p><code>String</code> 类有许多方法可用于检查字符串的内容，查找字符串中的字符或获取子字符串，更改大小写以及其他任务。</p>
 <h2>按索引获取字符和子字符串</h2>
-<p>您可以通过调用 <code>charAt()</code> 访问器方法获取字符串中特定索引处的字符。第一个字符的索引是 0，而最后一个字符的索引是 <code>length()-1</code>。例如，以下代码获取字符串中索引 9 处的字符：</p>
+<p>你可以通过调用 <code>charAt()</code> 访问器方法获取字符串中特定索引处的字符。第一个字符的索引是 0，而最后一个字符的索引是 <code>length()-1</code>。例如，以下代码获取字符串中索引 9 处的字符：</p>
 <div class="codeblock"><pre>
 String anotherPalindrome = "Niagara. O roar again!"; 
 char aChar = anotherPalindrome.charAt(9);
@@ -536,7 +536,7 @@ String anotherPalindrome = "Niagara. O roar again!";
 String roar = anotherPalindrome.substring(11, 15); 
 </pre></div><!-- figure -->
 
-<center><img src="../../figures/java/objects-substring.gif" width="482" height="90" align="bottom" alt="使用 substring 方法获取字符串的一部分。" /></center><h2>操纵字符串的其他方法</h2>
+<center><img src="../../figures/java/objects-substring.gif" width="482" height="90" align="bottom" alt="使用 substring 方法获取字符串的一部分。" /></center><h2>操作字符串的其他方法</h2>
 <p>以下是几个用于操作字符串的 <code>String</code> 方法：</p>
 <table width="100%" border="1" cellpadding="4" cellspacing="3" summary="此表列出了 String 类中用于操作字符串的其他方法">
 <caption style="font-weight: bold">用于操作字符串的 <code>String</code> 类中的其他方法</caption>
@@ -565,8 +565,8 @@ String toUpperCase()</code></td>
 </tr>
 </table>
 <h2>在字符串中搜索字符和子字符串</h2>
-<p>以下是一些用于查找字符串中的字符或子字符串的其他 <code>String</code> 方法。<code>String</code> 类提供了访问器方法，这些方法返回特定字符或子字符串在字符串中的位置：<code>indexOf()</code> 和 <code>lastIndexOf()</code>。<code>indexOf()</code> 方法从字符串的开头向前搜索，<code>lastIndexOf()</code> 方法从字符串的末尾向后搜索。如果未找到字符或子字符串，<code>indexOf()</code> 和 <code>lastIndexOf()</code> 将返回-1。</p>
-<p><code>String</code> 类还提供了一个搜索方法 <code>contains</code>，如果字符串包含特定字符序列，则返回 true。当您只需知道字符串是否包含字符序列，但精确位置并不重要时，请使用此方法。</p>
+<p>以下是一些用于查找字符串中的字符或子字符串的其他 <code>String</code> 方法。<code>String</code> 类提供了访问器方法，这些方法返回特定字符或子字符串在字符串中的位置：<code>indexOf()</code> 和 <code>lastIndexOf()</code>。<code>indexOf()</code> 方法从字符串的开头向前搜索，<code>lastIndexOf()</code> 方法从字符串的末尾向后搜索。如果未找到字符或子字符串，<code>indexOf()</code> 和 <code>lastIndexOf()</code> 将返回 -1。</p>
+<p><code>String</code> 类还提供了一个搜索方法 <code>contains</code>，如果字符串包含特定字符序列，则返回 true。当你只需知道字符串是否包含字符序列，但精确位置并不重要时，请使用此方法。</p>
 <p>下表描述了各种字符串搜索方法。</p>
 <table width="100%" border="1" cellpadding="4" cellspacing="3" summary="此表列出了 String 类中的搜索方法">
 <caption style="font-weight: bold"><code>String</code> 类中的搜索方法</caption>
@@ -603,11 +603,11 @@ int lastIndexOf(String str, int fromIndex)</code></td>
 <td>如果字符串包含指定的字符序列，则返回 true。</td>
 </tr>
 </table>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;<code>CharSequence</code> 是由 <code>String</code> 类实现的接口。因此，您可以使用字符串作为 <code>contains()</code> 方法的参数。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<code>CharSequence</code> 是由 <code>String</code> 类实现的接口。因此，你可以使用字符串作为 <code>contains()</code> 方法的参数。
 <hr /></div>
 <h2>将字符和子字符串替换为字符串</h2>
-<p><code>String</code> 类只有很少的方法可以将字符或子字符串插入到字符串中。通常，它们不是必需的：您可以通过连接要 <i>移除</i> 的源字符的子字符串和要插入的子字符串，来创建一个新字符串。</p>
-<p>但是，<code>String</code> 类有 <i>replacing</i> 找到的字符或子字符串的四种方法。他们是：</p>
+<p><code>String</code> 类只有很少的方法可以将字符或子字符串插入到字符串中。通常，它们不是必需的：你可以通过连接要 <i>移除</i> 的源字符的子字符串和要插入的子字符串，来创建一个新字符串。</p>
+<p>但是，<code>String</code> 类有 <i>replacing (替换)</i> 找到的字符或子字符串的四种方法。他们是：</p>
 <table width="100%" border="1" cellpadding="4" cellspacing="3" summary="此表列出了用于操作字符串的 String 方法">
 <caption style="font-weight: bold">用于操作字符串的 <code>String</code> 类中的方法</caption>
 <tr>
@@ -685,7 +685,7 @@ Extension = html
 Filename = index
 Path = /home/user
 </pre></div>
-<p>如下图所示，我们的 <code>extension</code> 方法使用 <code>lastIndexOf</code> 来查找文件名中最后一个匹配项的句点(.)。然后 <code>substring</code> 使用 <code>lastIndexOf</code> 的返回值来提取文件扩展名也就是说，从字符串的句点到结尾的子字符串。此代码假定文件名中包含句点;如果文件名没有句点，则 <code>lastIndexOf</code> 返回-1，并且 substring 方法抛出 <code>StringIndexOutOfBoundsException</code>。</p>
+<p>如下图所示，我们的 <code>extension</code> 方法使用 <code>lastIndexOf</code> 来查找文件名中最后一个匹配项的句点(.)。然后 <code>substring</code> 使用 <code>lastIndexOf</code> 的返回值来提取文件扩展名  也就是说，从字符串的句点到结尾的子字符串。此代码假定文件名中包含句点;如果文件名没有句点，则 <code>lastIndexOf</code> 返回-1，并且 substring 方法抛出 <code>StringIndexOutOfBoundsException</code>。</p>
 <center><img src="../../figures/java/objects-lastIndexOf.gif" width="325" height="127" align="bottom" alt="在 Filename 类的扩展方法中使用 lastIndexOf 和 substring。" /></center><p>另请注意，<code>extension</code> 方法使用 <code>dot + 1</code> 作为 <code>substring</code> 的参数。如果句点字符(.)是字符串的最后一个字符，则 <code>dot + 1</code> 等于字符串的长度，该字符串大于字符串中的最大索引(因为索引从 0 开始)。这是 <code>substring</code> 的合法参数，因为该方法接受的索引等于但不大于字符串的长度，并将其解释为 "字符串的结尾"。</p>
 
         </div>

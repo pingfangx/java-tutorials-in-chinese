@@ -491,17 +491,17 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">包</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="packages.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="namingpkgs.html">Next&nbsp;»</a>
+                <a target="_top" href="packages.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="namingpkgs.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>创建一个包</h1></div>
             <div id="PageContent"><!--Creating a Package-->
 
 
-<p>要创建包，请选择包的名称(命名约定将在下一节中讨论)，并将带有该名称的 <code>package</code> 语句放在 <i>每一个源码文件</i> 的顶部，源文件包含要包含在包中的类型(类，接口，枚举和注解类型)。</p>
+<p>要创建包，请选择包的名称(命名规范将在下一节中讨论)，并将带有该名称的 <code>package</code> 语句放在 <i>每一个源码文件</i> 的顶部，源文件包含要包含在包中的类型(类，接口，枚举和注解类型)。</p>
 <p>package 语句(例如，<code>package graphics;</code>)必须是源文件中的第一行。每个源文件中只能有一个 package 语句，它适用于文件中的所有类型。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;如果在单个源文件中放置多个类型，则只能有一个为 <code>public</code>，并且它必须与源文件具有相同的名称。例如，您可以在文件 <code>Circle.java</code> 中定义 <code>public class Circle</code>，在文件 <code>Draggable.java</code> 中定义 <code>public interface Draggable</code> ，在文件 <code>Day.java</code> 中定义 <code>public enum Day</code>等等。<br /><br />
-您可以将非公共类型作为公共类型包含在同一文件中(强烈建议不要这样做，除非非公共类型很小且与公共类型密切相关)，但只有公共类型可以从包外部访问。所有顶级非公共类型都将是 <i>package private</i>。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;如果在单个源文件中放置多个类型，则只能有一个为 <code>public</code>，并且它必须与源文件具有相同的名称。例如，你可以在文件 <code>Circle.java</code> 中定义 <code>public class Circle</code>，在文件 <code>Draggable.java</code> 中定义 <code>public interface Draggable</code> ，在文件 <code>Day.java</code> 中定义 <code>public enum Day</code>等等。<br /><br />
+你可以将非公共类型作为公共类型包含在同一文件中(强烈建议不要这样做，除非非公共类型很小且与公共类型密切相关)，但只有公共类型可以从包外部访问。所有顶级非公共类型都将是 <i>package private  (包私有的)</i>。
 <hr /></div>
 <p>如果将上一节中列出的图形接口和类放在名为 <code>graphics</code> 的包中，则需要六个源文件，如下所示：</p>
 <div class="codeblock"><pre>

@@ -489,7 +489,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">注解</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="declaring.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="type_annotations.html">Next&nbsp;»</a>
+                <a target="_top" href="declaring.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="type_annotations.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>预定义的注解类型</h1></div>
@@ -501,7 +501,7 @@ Java SE API 中预定义了一组注解类型。Java 编译器使用某些注解
 
 <h2>Java 语言使用的注解类型</h2>
 <p><code>java.lang</code> 中定义的预定义注解类型是 <code>@Deprecated</code>，<code>@Override</code> 和 <code>@SuppressWarnings</code>。</p>
-<p><b>@Deprecated</b> <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html"><code>@Deprecated</code></a> 注解表示标记的元素 <i>deprecated</i> 且不应再使用。只要程序使用带有 <code>@Deprecated</code> 注解的方法，类或字段，编译器就会生成警告。不推荐使用元素时，还应使用 Javadoc <code>@deprecated</code> 标记对其进行记录，如以下示例所示。在 Javadoc 注解和注释中使用 at 符号(<code>@</code>)并非巧合：它们在概念上是相关的。另请注意，Javadoc 标记以小写 <em>d</em> 开头，注解以大写 <em>D</em> 开头。</p>
+<p><b>@Deprecated</b> <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html"><code>@Deprecated</code></a> 注解表示标记的元素 <i>deprecated (弃用)</i> 且不应再使用。只要程序使用带有 <code>@Deprecated</code> 注解的方法，类或字段，编译器就会生成警告。不推荐使用元素时，还应使用 Javadoc <code>@deprecated</code> 标记对其进行记录，如以下示例所示。在 Javadoc 注解和注释中使用 at 符号(<code>@</code>)并非巧合：它们在概念上是相关的。另请注意，Javadoc 标记以小写 <em>d</em> 开头，注解以大写 <em>D</em> 开头。</p>
 <div class="codeblock"><pre>
    // Javadoc comment follows
     /**
@@ -512,16 +512,16 @@ Java SE API 中预定义了一组注解类型。Java 编译器使用某些注解
     static void deprecatedMethod() { }
 }
 </pre></div>
-<p><b>@Override</b> <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Override.html"><code>@Override</code></a> 注解通知编译器该元素是要覆盖超类中声明的元素。覆盖方法将在 <a class="TutorialLink" target="_top" href="../IandI/index.html">Interfaces and Inheritance</a> 中讨论。</p>
+<p><b>@Override</b> <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Override.html"><code>@Override</code></a> 注解通知编译器该元素是用来覆盖超类中声明的元素。覆盖方法将在 <a class="TutorialLink" target="_top" href="../IandI/index.html">Interfaces and Inheritance</a> 中讨论。</p>
 <div class="codeblock"><pre>
    // <i>mark method as a superclass method</i>
    // <i>that has been overridden</i>
    <b>@Override</b> 
    int overriddenMethod() { }
 </pre></div>
-<p>虽然在重写方法时不需要使用此批注，但它有助于防止出错。如果标有 <code>@Override</code> 的方法无法正确覆盖其某个超类中的方法，则编译器会生成错误。</p>
+<p>虽然在重写方法时不需要使用此注解，但它有助于防止出错。如果标有 <code>@Override</code> 的方法无法正确覆盖其某个超类中的方法，则编译器会生成错误。</p>
 
-<p><b>@SuppressWarnings</b> <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/SuppressWarnings.html"><code>@SuppressWarnings</code></a> 注解告诉编译器抑制否则会生成的特定警告。在以下示例中，使用了不推荐使用的方法，编译器通常会生成警告。但是，在这种情况下，注解会导致警告被抑制。</p>
+<p><b>@SuppressWarnings</b> <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/SuppressWarnings.html"><code>@SuppressWarnings</code></a> 注解告诉编译器抑制将会生成的特定警告。在以下示例中，使用了不推荐使用的方法，编译器通常会生成警告。但是，在这种情况下，注解会导致警告被抑制。</p>
 <div class="codeblock"><pre>
    // <i>use a deprecated method and tell</i> 
    // <i>compiler not to generate a warning</i>
@@ -539,10 +539,10 @@ Java SE API 中预定义了一组注解类型。Java 编译器使用某些注解
 
 <p><b>@SafeVarargs</b> <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/SafeVarargs.html"><code>@SafeVarargs</code></a> 注解，当应用于方法或构造函数时，断言代码不会对其 <code>varargs</code> 参数执行潜在的不安全操作。使用此注解类型时，将禁止与 <code>varargs</code> 用法相关的未经检查的警告。</p>
 
-<p><b>@FunctionalInterface</b> Java SE 8 中引入的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html"><code>@FunctionalInterface</code></a> 注解表明类型声明旨在成为一个函数式接口，由 Java 语言规范。</p>
+<p><b>@FunctionalInterface</b> Java SE 8 中引入的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html"><code>@FunctionalInterface</code></a> 注解表明类型声明旨在成为一个函数式接口，由 Java 语言规范定义。</p>
 
 <h2>适用于其他注解的注解</h2>
-<p>适用于其他注解的注解称为 <em>元注解（meta-annotations）</em>。在 <code>java.lang.annotation</code> 中定义了几种元注解类型。</p>
+<p>适用于其他注解的注解称为 <em>meta-annotations (元注解)</em>。在 <code>java.lang.annotation</code> 中定义了几种元注解类型。</p>
 
 <p><b>@Retention</b> <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html"><code>@Retention</code></a> 注解指定标记注解的存储方式：</p>
 <ul>

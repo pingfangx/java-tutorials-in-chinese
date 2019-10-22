@@ -486,7 +486,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">入门</a>&gt;<a href="index.html" target="_top">"Hello World!" 应用</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="netbeans.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="unix.html">Next&nbsp;»</a>
+                <a target="_top" href="netbeans.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="unix.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>"Hello World!" for Microsoft Windows</h1></div>
@@ -494,7 +494,7 @@
 
 <p><a name="win32-top" id="win32-top"></a></p>
 <p>现在是编写第一个应用程序的时候了！以下说明适用于 Windows Vista，Windows 7 和 Windows 8 的用户。其他平台的说明位于 <a class="TutorialLink" target="_top" href="unix.html">"Hello World!" for Solaris OS and Linux</a> 和 <a class="TutorialLink" target="_top" href="netbeans.html">"Hello World!" for the NetBeans IDE</a>。</p>
-<p>如果您在本页面上遇到问题，请参阅 <a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>。 
+<p>如果你在本页面上遇到问题，请参阅 <a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>。 
 <ul>
   <li><a href="#win32-1">检查清单</a></li>
   <li><a href="#win32-2">创建你的第一个应用</a>
@@ -509,50 +509,50 @@
 </p>
 <h2><a name="win32-1" id="win32-1"></a> 检查清单&nbsp; 
 <img src="../../figures/getStarted/check.gif" width="56" height="68" alt="a checkmark" /></h2>
-<p>要编写第一个程序，您需要：</p>
+<p>要编写第一个程序，你需要：</p>
 <ol>
 <li>
 <p style="font-weight: bold">The Java SE Development Kit 8 (JDK 8)</p>
-<p>您现在可以 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download the Windows version now</a>。(请确保您下载 <b>JDK</b>，<i>不是</i> JRE。)请参阅 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html">installation instructions</a>。</p>
+<p>你现在可以 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download the Windows version now</a>。(请确保你下载 <b>JDK</b>，<i>不是</i> JRE。)请参阅 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html">installation instructions</a>。</p>
 </li>
 <li>
 <p style="font-weight: bold">一个文本编辑器</p>
-<p>在这个例子中，我们将使用记事本，这是 Windows 平台附带的一个简单的编辑器。如果您使用不同的文本编辑器，则可以轻松地修改这些说明。</p>
+<p>在这个例子中，我们将使用记事本，这是 Windows 平台附带的一个简单的编辑器。如果你使用不同的文本编辑器，则可以轻松地修改这些说明。</p>
 </li>
 </ol>
-<p>这两项是您编写第一个应用程序所需的全部内容。</p>
+<p>这两项是你编写第一个应用程序所需的全部内容。</p>
 <p>
           <hr />
 </p>
 <h2><a name="win32-2" id="win32-2"></a> 创建你的第一个应用</h2>
 <p>
 </p>
-<p>您的第一个应用程序 <code>HelloWorldApp</code> 将只显示问候语 "Hello world！"。要创建此程序，您将：&nbsp;</p>
+<p>你的第一个应用程序 <code>HelloWorldApp</code> 将只显示问候语 "Hello world！"。要创建此程序，你将：&nbsp;</p>
 <ul>
 <li>
 <p style="font-weight: bold">创建一个源文件</p>
-<p>源文件包含用 Java 编程语言编写的代码，您和其他程序员都可以理解。您可以使用任何文本编辑器来创建和编辑源文件。</p>
+<p>源文件包含用 Java 编程语言编写的代码，你和其他程序员都可以理解。你可以使用任何文本编辑器来创建和编辑源文件。</p>
 </li>
 <li>
 <p style="font-weight: bold">将源文件编译成.class 文件</p>
-<p>Java 编程语言 <i>compiler</i>(<code>javac</code>)会将您的源文件转换为 Java 虚拟机可以理解的指令。该文件中包含的指令称为 <i>bytecodes</i>。</p>
+<p>Java 编程语言 <i>compiler</i>(<code>javac</code>)会将你的源文件转换为 Java 虚拟机可以理解的指令。该文件中包含的指令称为 <i>bytecodes</i>。</p>
 </li>
 <li>
 <p style="font-weight: bold">运行该程序</p>
-<p>Java 应用程序 <i>launcher tool</i>(<code>java</code>)使用 Java 虚拟机来运行您的应用程序。</p>
+<p>Java 应用程序 <i>launcher tool</i>(<code>java</code>)使用 Java 虚拟机来运行你的应用程序。</p>
 </li>
 </ul>
 <h3><a name="win32-2a" id="win32-2a"></a> 创建一个源文件</h3>
-<p>要创建源文件，您有两个选择：</p>
+<p>要创建源文件，你有两个选择：</p>
 <ul>
 <li>
-<p>您可以在计算机上保存文件 <code> <a class="SourceLink" target="_blank" href="../application/examples/HelloWorldApp.java" onclick="showCode('../../displayCode.html', '../application/examples/HelloWorldApp.java'); return false;"><code>HelloWorldApp.java</code></a></code>，并避免大量输入。然后，您可以直接转到 <a href="#win32-2b">Compile the Source File into a <code>.class</code> File</a>。</p>
+<p>你可以在计算机上保存文件 <code> <a class="SourceLink" target="_blank" href="../application/examples/HelloWorldApp.java" onclick="showCode('../../displayCode.html', '../application/examples/HelloWorldApp.java'); return false;"><code>HelloWorldApp.java</code></a></code>，并避免大量输入。然后，你可以直接转到 <a href="#win32-2b">Compile the Source File into a <code>.class</code> File</a>。</p>
 </li>
 <li>
-<p>或者，您可以使用以下(较长)的说明。</p>
+<p>或者，你可以使用以下(较长)的说明。</p>
 </li>
 </ul>
-<p>首先，启动你的编辑器。您可以通过启动记事本编辑器，通过从 <b> Start</b> 菜单选择 <b> Programs&gt;Accessories&gt;Notepad</b>. 在新文档中，输入以下代码：</p>
+<p>首先，启动你的编辑器。你可以通过启动记事本编辑器，通过从 <b> Start</b> 菜单选择 <b> Programs&gt;Accessories&gt;Notepad</b>. 在新文档中，输入以下代码：</p>
 <div class="codeblock"><pre>
 /**
 &nbsp;* The HelloWorldApp class implements an application that
@@ -567,22 +567,22 @@ class HelloWorldApp {
 <p><b>Be Careful When You Type</b>
 <img src="../../figures/getStarted/typeA.gif" width="51" height="36" alt="uppercase letter A" />&nbsp;&nbsp;
 <img src="../../figures/getStarted/typea2.gif" width="51" height="36" alt="lowercase letter A" /></p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;完全按照所示键入所有代码，命令和文件名。编译器(<code>javac</code>)和启动器(<code>java</code>)都是 <em>case-sensitive</em>，因此您必须一致地大写。<br /><br />
+<div class="note"><hr /><strong>注意:</strong>&nbsp;完全按照所示键入所有代码，命令和文件名。编译器(<code>javac</code>)和启动器(<code>java</code>)都是 <em>case-sensitive</em>，因此你必须一致地大写。<br /><br />
 <code>HelloWorldApp</code> 与 <code>helloworldapp</code> <em>不</em>相同。
 <hr /></div>
 <p>将代码保存在名为 <code>HelloWorldApp.java</code> 的文件中。要在记事本中执行此操作，请先选择 <b> File&gt;Save As</b> 菜单项。然后，在 <b> Save As</b> 对话框中：</p>
 <ol>
 <li>使用 <b> Save in</b> 组合框中，指定要保存文件的文件夹(目录)。在此示例中，目录是 <code>C</code> 驱动器上的 <code>myapplication</code>。</li>
-<li>在 <b> File name</b> 文本字段中，键入 <code>"HelloWorldApp.java"</code>，包括引号。</li>
+<li>在 <b> File name</b> 文本框中，键入 <code>"HelloWorldApp.java"</code>，包括引号。</li>
 <li>从 <b> Save as type</b> 组合框中，选择 <b> Text Documents (*.txt)</b>。</li>
 <li>在 <b> Encoding</b> 组合框中，将编码保留为 ANSI。</li>
 </ol>
 <p>完成后，对话框应该看起来像 <span id="figure:saveas.png">this</span>。</p>
 <center><img src="../../figures/getStarted/saveas.png" width="781" height="241" align="bottom" alt="TEXT 另存为对话框，如文中所述。" /></p><p class="FigureCaption">单击 <b> Save</b> 之前的另存为对话框。</p></center><p>现在点击 <b> Save</b>，然后退出记事本。</p>
 <h3><a name="win32-2b" id="win32-2b"></a>将源文件编译为.class 文件</h3>
-<p>调出一个 shell 或 "命令" 窗口。您可以从 <b> Start</b> 菜单中选择 <b> Run...</b>，然后输入 <code>cmd</code> 来完成此操作。shell 窗口应该类似于 <span id="figure:dos.png">the following figure</span>。</p>
-<center><img src="../../figures/getStarted/dos.png" width="992" height="542" align="bottom" alt="一个可以输入 DOS 命令的窗口" /></p><p class="FigureCaption">一个 shell 窗口。</p></center><p>提示符显示您的 <i>current directory</i>。当出现提示时，当前目录通常是 Windows XP 的主目录（如上图所示。</p>
-<p>要编译源文件，请将当前目录更改为文件所在的目录。例如，如果您的源目录是 <code>C</code> 驱动器上的 <code>myapplication</code>，请在提示符下键入以下命令并按 <b> Enter</b>：</p>
+<p>调出一个 shell 或 "命令" 窗口。你可以从 <b> Start</b> 菜单中选择 <b> Run...</b>，然后输入 <code>cmd</code> 来完成此操作。shell 窗口应该类似于 <span id="figure:dos.png">the following figure</span>。</p>
+<center><img src="../../figures/getStarted/dos.png" width="992" height="542" align="bottom" alt="一个可以输入 DOS 命令的窗口" /></p><p class="FigureCaption">一个 shell 窗口。</p></center><p>提示符显示你的 <i>current directory</i>。当出现提示时，当前目录通常是 Windows XP 的主目录（如上图所示。</p>
+<p>要编译源文件，请将当前目录更改为文件所在的目录。例如，如果你的源目录是 <code>C</code> 驱动器上的 <code>myapplication</code>，请在提示符下键入以下命令并按 <b> Enter</b>：</p>
 <div class="codeblock"><pre>
 cd C:\myapplication
 </pre></div>
@@ -597,7 +597,7 @@ D:\myapplication&gt;</pre>
 
 <hr /></div>
 
-<p>如果在提示中输入 <code>dir</code>，则应该看到您的源文件，如下所示：</p>
+<p>如果在提示中输入 <code>dir</code>，则应该看到你的源文件，如下所示：</p>
 
 <pre class="codeblock">C:\&gt;<strong>cd myapplication</strong>
 
@@ -639,14 +639,14 @@ C:\myapplication&gt;<strong>dir</strong>
 C:\myapplication&gt;</pre>
 
 <p>既然你有一个 <code>.class</code> 文件，你可以运行你的程序。</p>
-<p>如果您在此步骤中遇到问题，请参阅 <a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>。</p>
+<p>如果你在此步骤中遇到问题，请参阅 <a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>。</p>
 <h3><a name="win32-2c" id="win32-2c"></a> 运行程序</h3>
 <p>在相同的目录中，在提示符处输入以下命令：</p>
 <div class="codeblock"><pre>
 java -cp . HelloWorldApp
 </pre></div>
 
-<p>您应该在屏幕上看到以下内容：</p>
+<p>你应该在屏幕上看到以下内容：</p>
 
 <pre class="codeblock">C:\myapplication&gt;<strong>java -cp . HelloWorldApp</strong>
 Hello World!
@@ -655,7 +655,7 @@ C:\myapplication&gt;</pre>
 
 <p>恭喜！你的程序有效！</p>
 
-<p>如果您在此步骤中遇到问题，请参阅 <a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>。</p>
+<p>如果你在此步骤中遇到问题，请参阅 <a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>。</p>
 
         </div>
         <div class="NavBit">

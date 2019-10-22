@@ -400,13 +400,13 @@
 
 <h2>问题</h2>
 <ol>
-<li><b>Question:</b> 您可以将 <code>Thread</code> 对象传递给 <code>Executor.execute</code> 吗？这样的调用会有意义吗？为什么或者为什么不？
-<p><b>Answer:</b> <code>Thread</code> 实现 <code>Runnable</code> 接口，因此您可以将 <code>Thread</code> 的实例传递给 <code>Executor.execute</code>。但是以这种方式使用 <code>Thread</code> 对象没有意义。如果对象直接从 <code>Thread</code> 实例化，则其 <code>run</code> 方法不会执行任何操作。您可以使用有用的 <code>run</code> 方法定义 <code>Thread</code> 的子类但是这样的类会实现执行器不使用的功能。</p>
+<li><b>问题:</b>你可以将 <code>Thread</code> 对象传递给 <code>Executor.execute</code> 吗？这样的调用会有意义吗？为什么或者为什么不？
+<p><b>答案:</b><code>Thread</code> 实现 <code>Runnable</code> 接口，因此你可以将 <code>Thread</code> 的实例传递给 <code>Executor.execute</code>。但是以这种方式使用 <code>Thread</code> 对象没有意义。如果对象直接从 <code>Thread</code> 实例化，则其 <code>run</code> 方法不会执行任何操作。你可以使用有用的 <code>run</code> 方法定义 <code>Thread</code> 的子类  但是这样的类会实现执行器不使用的功能。</p>
 </li>
 </ol>
 <h2>练习</h2>
 <ol>
-<li><b>Exercise:</b> 编译并运行 <a class="SourceLink" target="_blank" href="BadThreads.java" onclick="showCode('../../../displayCode.html', 'BadThreads.java'); return false;"><code><code>BadThreads.java</code></code></a>：
+<li><b>练习:</b>编译并运行 <a class="SourceLink" target="_blank" href="BadThreads.java" onclick="showCode('../../../displayCode.html', 'BadThreads.java'); return false;"><code><code>BadThreads.java</code></code></a>：
 <div class="codeblock"><pre>
 
 public class BadThreads {
@@ -436,8 +436,8 @@ public class BadThreads {
     }
 }
 </pre></div>
-<p>应用程序应打印出“Mares do eat oat”。是否保证始终这样做？如果没有，为什么不呢？更改 <code>Sleep</code> 的两次调用的参数会有帮助吗？您如何保证主线程可以看到 <code>message</code> 的所有更改？</p>
-<p><b>Solution:</b> 该程序几乎总是打印出“Mares do eat oat”。但是，由于 "Key statement 1" 和 "Key statment 2" 之间没有happens-before 关系，因此无法保证此结果。即使 "Key statement 1" 实际上在 "Key statement 2" 之前执行，这也是如此。记住，happens-before 关系是关于可见性，而不是序列。</p>
+<p>应用程序应打印出“Mares do eat oat”。是否保证始终这样做？如果不是，为什么不是呢？更改 <code>Sleep</code> 的两次调用的参数会有帮助吗？你如何保证主线程可以看到 <code>message</code> 的所有更改？</p>
+<p><b>解答:</b>该程序几乎总是打印出“Mares do eat oat”。但是，由于 "Key statement 1" 和 "Key statment 2" 之间没有happens-before 关系，因此无法保证此结果。即使 "Key statement 1" 实际上在 "Key statement 2" 之前执行，这也是如此。记住，happens-before 关系是关于可见性，而不是序列。</p>
 <p>有两种方法可以保证主线程可以看到 <code>message</code> 的所有更改：</p>
 <ul>
 <li>在主线程中，保留对 <code>CorrectorThread</code> 实例的引用。然后在引用 <code>message</code> 之前在该实例上调用 <code>join</code></li>
@@ -447,8 +447,8 @@ public class BadThreads {
 <p>第三种技术是简单地将 <code>message</code> 声明为 <code>volatile</code>。这保证了对 <code>message</code>（如 "Key statement 1" 中）将与 <code>message</code> 的任何后续读取具有 happens-before 关系（如 "Key statement 2" 中所示）。但它并不能保证 "Key statement 1" 将 <i>literally (字面上)</i> 发生在 "Key statement 2" 之前。它们 <i>可能</i> 按顺序发生，但由于调度不确定性和 <code>sleep</code> 的未知粒度，这不能保证。</p>
 <p>更改两个 <code>sleep</code> 调用的参数也无济于事，因为这不会保证 happens-before 关系。</p>
 </li>
-<li><b>Exercise:</b> 修改 <a href="../guardmeth.html">Guarded Blocks</a> 中的 producer-consumer 示例，以使用标准库类而不是 <code>Drop</code> 类。
-<p><b>Solution:</b> <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/BlockingQueue.html"><code>java.util.concurrent.BlockingQueue</code></a> 接口定义了一个队列为空时阻塞的 <code>get</code> 方法，以及队列已满时阻塞的 <code>put</code> 方法。这些实际上是由 <code>Drop</code> 定义的相同操作。除了 <code>Drop</code> 不是队列！但是，还有另一种查看 Drop 的方法：它是一个容量为零的队列。由于 <i>any (任何)</i> 元素在队列中都没有空间，每个 <code>get</code> 会阻塞直到相应的 <code>take</code> ，并且每个 <code>take</code> 阻塞直到相应的 <code>get</code>。有一个 <code>BlockingQueue</code> 的实现正是这种行为：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/SynchronousQueue.html"><code>java.util.concurrent.SynchronousQueue</code></a>。</p>
+<li><b>练习:</b>修改 <a href="../guardmeth.html">Guarded Blocks</a> 中的 producer-consumer 示例，以使用标准库类而不是 <code>Drop</code> 类。
+<p><b>解答:</b><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/BlockingQueue.html"><code>java.util.concurrent.BlockingQueue</code></a> 接口定义了一个队列为空时阻塞的 <code>get</code> 方法，以及队列已满时阻塞的 <code>put</code> 方法。这些实际上是由 <code>Drop</code> 定义的相同操作。除了 <code>Drop</code> 不是队列！但是，还有另一种查看 Drop 的方法：它是一个容量为零的队列。由于 <i>any (任何)</i> 元素在队列中都没有空间，每个 <code>get</code> 会阻塞直到相应的 <code>take</code> ，并且每个 <code>take</code> 阻塞直到相应的 <code>get</code>。有一个 <code>BlockingQueue</code> 的实现正是这种行为：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/SynchronousQueue.html"><code>java.util.concurrent.SynchronousQueue</code></a>。</p>
 <p><code>BlockingQueue</code> 几乎是 <code>Drop</code> 的直接替代品。<a class="SourceLink" target="_blank" href="Producer.java" onclick="showCode('../../../displayCode.html', 'Producer.java'); return false;"><code><code>Producer</code></code></a> 中使用 <code>BlockingQueue</code> 的主要问题是，<code>put</code> 和 <code>get</code> 方法会抛出 <code>InterruptedException</code>。这意味着现有的 <code>try</code> 必须向上移动一个级别：</p>
 <div class="codeblock"><pre>
 

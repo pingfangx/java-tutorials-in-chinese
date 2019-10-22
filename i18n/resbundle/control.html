@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>自定义资源包加载(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;隔离特定于区域设置的数据)
+        <title>自定义资源包加载(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;隔离特定于语言环境的数据)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
@@ -471,7 +471,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">隔离特定于区域设置的数据</a></div>
+            <div class="linkLESSON"><a href="index.html">隔离特定于语言环境的数据</a></div>
 <div class="linkAHEAD"><a href="concept.html">关于 ResourceBundle 类</a></div>
 <div class="linkAHEAD"><a href="prepare.html">准备使用 ResourceBundle</a></div>
 <div class="linkAHEAD"><a href="propfile.html">使用属性文件支持 ResourceBundle</a></div>
@@ -485,17 +485,17 @@
         <br /><b>Lesson:</b> Isolating Locale-Specific Data
     </div>
             <div id="BreadCrumbs">
-                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">隔离特定于区域设置的数据</a>
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">隔离特定于语言环境的数据</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="list.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../format/index.html">Next&nbsp;»</a>
+                <a target="_top" href="list.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../format/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>自定义资源包加载</h1></div>
             <div id="PageContent">
 
-<p>在本课程的前面部分，您已学习如何创建和访问 <code>ResourceBundle</code> 类的对象。本节将扩展您的知识并解释如何利用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.Control.html"><code>ResourceBundle.Control</code></a> 类功能。</p>
-<p>创建了 <code>ResourceBundle.Control</code> 以指定如何查找和实例化资源包。它定义了一组回调方法，这些方法在捆绑加载过程中由 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.html#getBundle-java.lang.String-java.util.Locale-java.util.ResourceBundle.Control-"><code>ResourceBundle.getBundle</code></a> 工厂方法调用。</p>
+<p>在本课程的前面部分，你已学习如何创建和访问 <code>ResourceBundle</code> 类的对象。本节将扩展你的知识并解释如何利用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.Control.html"><code>ResourceBundle.Control</code></a> 类功能。</p>
+<p>创建了 <code>ResourceBundle.Control</code> 以指定如何查找和实例化资源包。它定义了一组回调方法，这些方法在打包加载过程中由 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.html#getBundle-java.lang.String-java.util.Locale-java.util.ResourceBundle.Control-"><code>ResourceBundle.getBundle</code></a> 工厂方法调用。</p>
 <p>与前面描述的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.html#getBundle-java.lang.String-java.util.Locale-"><code>ResourceBundle.getBundle</code></a> 方法不同，此 <code>ResourceBundle.getBundle</code> 方法使用指定的基本名称，默认语言环境和指定的控制。</p>
 <div class="codeblock"><pre>
 public static final ResourceBundle getBundle(
@@ -506,7 +506,7 @@ public static final ResourceBundle getBundle(
 <p>指定的控制提供资源包加载过程的信息。</p>
 <p>以下示例程序 <a class="SourceLink" target="_blank" href="examples/RBControl.java" onclick="showCode('../../displayCode.html', 'examples/RBControl.java'); return false;"><code>RBControl.java</code></a> 说明了如何为中文语言环境定义自己的搜索路径。</p>
 <h2>1. 创建 <code>properties</code> 文件。</h2>
-<p>如前所述，您可以从类或 <code>properties</code> 文件加载资源。这些文件包含以下语言环境的说明：</p>
+<p>如前所述，你可以从类或 <code>properties</code> 文件加载资源。这些文件包含以下语言环境的说明：</p>
 <ul>
 <li><code> <a class="SourceLink" target="_blank" href="examples/RBControl.properties" onclick="showCode('../../displayCode.html', 'examples/RBControl.properties'); return false;"><code>RBControl.properties</code></a></code>  全局</li>
 <li><code> <a class="SourceLink" target="_blank" href="examples/RBControl_zh.properties" onclick="showCode('../../displayCode.html', 'examples/RBControl_zh.properties'); return false;"><code>RBControl_zh.properties</code></a></code>  仅限语言：简体中文</li>
@@ -514,7 +514,7 @@ public static final ResourceBundle getBundle(
 <li><code> <a class="SourceLink" target="_blank" href="examples/RBControl_zh_HK.properties" onclick="showCode('../../displayCode.html', 'examples/RBControl_zh_HK.properties'); return false;"><code>RBControl_zh_hk.properties</code></a></code>  仅限地区：香港</li>
 <li><code> <a class="SourceLink" target="_blank" href="examples/RBControl_zh_TW.properties" onclick="showCode('../../displayCode.html', 'examples/RBControl_zh_TW.properties'); return false;"><code>RBControl_zh_tw.properties</code></a></code>  台湾</li>
 </ul>
-<p>在此示例中，应用程序为香港地区创建新的区域设置。</p>
+<p>在此示例中，应用程序为香港地区创建新的语言环境。</p>
 <h2>2. 创建 <code>ResourceBundle</code> 实例。</h2>
 <p>与上一节中的示例一样，此应用程序通过调用 <code>getBundle</code> 方法创建 <code>ResourceBundle</code> 实例：</p>
 <div class="codeblock"><pre>
@@ -527,7 +527,7 @@ private static void test(Locale locale) {
                             }
                         );
 </pre></div>
-<p><code>getBundle</code> 方法使用 RBControl 前缀搜索 <code>properties</code> 文件。但是，此方法包含 <code>Control</code> 参数，该参数驱动搜索 Chineese 区域设置的过程。</p>
+<p><code>getBundle</code> 方法使用 RBControl 前缀搜索 <code>properties</code> 文件。但是，此方法包含 <code>Control</code> 参数，该参数驱动搜索 Chineese 语言环境的过程。</p>
 <h2>3. 调用 <code>getCandidateLocales</code> 方法</h2>
 <p><code>getCandidateLocales</code> 方法返回 <code>Locales</code> 对象的列表，作为基本名称和语言环境的候选语言环境。</p>
 <div class="codeblock"><pre>
@@ -559,7 +559,7 @@ if (locale.equals(new Locale("zh", "HK"))) {
                Locale.ROOT);
 }
 </pre></div>
-<p>请注意，候选语言环境序列的最后一个元素必须是根区域设置。</p>
+<p>请注意，候选语言环境序列的最后一个元素必须是根语言环境。</p>
 <h2>4. 调用 <code>test</code> 类</h2>
 <p>为以下四种不同的语言环境调用 <code>test</code> 类：</p>
 <div class="codeblock"><pre>
@@ -571,7 +571,7 @@ public static void main(String[] args) {
 }
 </pre></div>
 <h2>5. 运行示例程序</h2>
-<p>您将看到程序输出如下：</p>
+<p>你将看到程序输出如下：</p>
 <div class="codeblock"><pre>
 locale: zh_CN
         region: China
@@ -586,7 +586,7 @@ locale: en_CA
         region: global
         language: English
 </pre></div>
-<p>请注意，新创建的分配了香港地区，因为它是在适当的 <code>properties</code> 文件中指定的。繁体中文被指定为台湾区域设置的语言。</p>
+<p>请注意，新创建的分配了香港地区，因为它是在适当的 <code>properties</code> 文件中指定的。繁体中文被指定为台湾语言环境的语言。</p>
 <p>在 <code>RBControl</code> 示例中没有使用 <code>ResourceBundle.Control</code> 类的另外两个有趣的方法，但它们值得提及。<code>getTimeToLive</code> 方法用于确定资源包在缓存中可以存在多长时间。如果缓存中资源束的时间限制已过期，则调用 <code>needsReload</code> 方法以确定是否需要重新加载资源束。</p>
 
 

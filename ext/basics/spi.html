@@ -487,7 +487,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">扩展机制</a>&gt;<a href="index.html" target="_top">创建和使用扩展</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="load.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../security/index.html">Next&nbsp;»</a>
+                <a target="_top" href="load.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../security/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>创建可扩展的应用程序</h1></div>
@@ -529,11 +529,11 @@
 
 <h2><a name="introduction">介绍</a></h2>
 
-<p><i>extensible (可扩展)</i> 应用程序是您可以在不修改其原始代码库的情况下扩展的应用程序。您可以使用新的插件或模块增强其功能。开发人员，软件供应商和客户可以通过将新的 Java Archive(JAR)文件添加到应用程序类路径或特定于应用程序的扩展目录中来添加新功能或应用程序编程接口(API)。 </p>
+<p><i>extensible (可扩展)</i> 应用程序是你可以在不修改其原始代码库的情况下扩展的应用程序。你可以使用新的插件或模块增强其功能。开发人员，软件供应商和客户可以通过将新的 Java Archive(JAR)文件添加到应用程序类路径或特定于应用程序的扩展目录中来添加新功能或应用程序编程接口(API)。 </p>
 
-<p>本节介绍如何使用可扩展服务创建应用程序，使您或其他人能够提供不需要修改原始应用程序的服务实现。通过设计可扩展的应用程序，您可以在不更改核心应用程序的情况下提供升级或增强产品特定部分的方法。 </p>
+<p>本节介绍如何使用可扩展服务创建应用程序，使你或其他人能够提供不需要修改原始应用程序的服务实现。通过设计可扩展的应用程序，你可以在不更改核心应用程序的情况下提供升级或增强产品特定部分的方法。 </p>
 
-<p>可扩展应用程序的一个示例是允许终端用户添加新词典或拼写检查器的单词处理器。在此示例中，单词处理器提供字典或拼写功能，其他开发人员甚至客户可以通过提供他们自己的功能实现来扩展。</p>
+<p>可扩展应用程序的一个示例是允许终端用户添加新字典或拼写检查器的单词处理器。在此示例中，单词处理器提供字典或拼写功能，其他开发人员甚至客户可以通过提供他们自己的功能实现来扩展。</p>
 
 <p>以下是了解可扩展应用程序的重要术语和定义：</p>
 
@@ -546,21 +546,21 @@
   <dd>服务定义的公共接口和抽象类的集合。SPI 定义了应用程序可用的类和方法。</dd>
   
   <dt>服务提供者</dt>
-  <dd>实现 SPI。具有可扩展服务的应用程序使您，供应商和客户能够在不修改原始应用程序的情况下添加服务提供者。</dd>
+  <dd>实现 SPI。具有可扩展服务的应用程序使你，供应商和客户能够在不修改原始应用程序的情况下添加服务提供者。</dd>
   
 </dl>
 
 
 <h2><a name="dictionary-service-example">字典服务示例</a></h2>
 
-<p>考虑如何在单词处理器或编辑器中设计字典服务。一种方法是定义由名为 <code>DictionaryService</code> 的类和名为 <code>Dictionary</code> 的服务提供者接口表示的服务。<code>DictionaryService</code> 提供单例 <code>DictionaryService</code> 对象。(有关详细信息，请参阅 <a href="#singleton">The Singleton Design Pattern</a> 一节。)此对象从 <code>Dictionary</code> 提供者中获取单词的定义。字典服务客户端 - 您的应用程序代码 - 获取此服务的实例，该服务将搜索，实例化和使用 <code>Dictionary</code> 服务提供者。</p>
+<p>考虑如何在单词处理器或编辑器中设计字典服务。一种方法是定义由名为 <code>DictionaryService</code> 的类和名为 <code>Dictionary</code> 的服务提供者接口表示的服务。<code>DictionaryService</code> 提供单例 <code>DictionaryService</code> 对象。(有关详细信息，请参阅 <a href="#singleton">The Singleton Design Pattern</a> 一节。)此对象从 <code>Dictionary</code> 提供者中获取单词的定义。字典服务客户端 - 你的应用程序代码 - 获取此服务的实例，该服务将搜索，实例化和使用 <code>Dictionary</code> 服务提供者。</p>
 
-<p>虽然单词处理开发人员很可能会提供原始产品的基本通用字典，但客户可能需要专门的字典，可能包含法律或技术术语。理想情况下，客户可以创建或购买新词典并将其添加到现有应用程序中。</p>
+<p>虽然单词处理开发人员很可能会提供原始产品的基本通用字典，但客户可能需要专门的字典，可能包含法律或技术术语。理想情况下，客户可以创建或购买新字典并将其添加到现有应用程序中。</p>
 
 
 
 <p>
-<code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo</a></code> 示例演示如何实现 <code>Dictionary</code> 服务，创建添加其他词典的 <code>Dictionary</code> 服务提供者，以及创建一个简单的 <code>Dictionary</code> 服务客户端来测试服务。此示例包装在 zip 文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 中，包含以下文件：
+<code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo</a></code> 示例演示如何实现 <code>Dictionary</code> 服务，创建添加其他字典的 <code>Dictionary</code> 服务提供者，以及创建一个简单的 <code>Dictionary</code> 服务客户端来测试服务。此示例包装在 zip 文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 中，包含以下文件：
 
 </p>
 
@@ -689,12 +689,12 @@
 
 <h2><a name="running-the-dictionaryservicedemo-sample">运行 DictionaryServiceDemo 示例</a></h2>
 
-<p>由于 zip 文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 包含已编译的类文件，因此您可以通过以下步骤将此文件解压缩到您的计算机并运行示例而不用编译它：</p>
+<p>由于 zip 文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 包含已编译的类文件，因此你可以通过以下步骤将此文件解压缩到你的计算机并运行示例而不用编译它：</p>
 
 <ol>
   <li>                 
     <p>
-    下载并解压缩示例代码：将文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 下载并解压缩到您的计算机。这些步骤假设您将此文件的内容解压缩到目录 <code>C:\DictionaryServiceDemo</code> 中。
+    下载并解压缩示例代码：将文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 下载并解压缩到你的计算机。这些步骤假设你将此文件的内容解压缩到目录 <code>C:\DictionaryServiceDemo</code> 中。
 
     </p>
   </li>
@@ -718,11 +718,11 @@
   
   <p><code><a href="http://ant.apache.org/">http://ant.apache.org/</a></code></p>
   
-  <p>确保包含 Apache Ant 可执行文件的目录位于 <code>PATH</code> 环境变量中，以便可以从任何目录运行它。此外，确保您的 JDK 的 <code>bin</code> 目录，其中包含 <code>java</code> 和 <code>javac</code> 可执行文件(<code>java.exe</code> 和 <code>javac.exe</code> 用于 Microsoft Windows)。在您的 <code>PATH</code> 环境变量中。有关设置 <code>PATH</code> 环境变量的信息，请参见 <a class="TutorialLink" target="_top" href="../../essential/environment/paths.html">PATH and CLASSPATH</a>。</p></li>
+  <p>确保包含 Apache Ant 可执行文件的目录位于 <code>PATH</code> 环境变量中，以便可以从任何目录运行它。此外，确保你的 JDK 的 <code>bin</code> 目录，其中包含 <code>java</code> 和 <code>javac</code> 可执行文件(<code>java.exe</code> 和 <code>javac.exe</code> 用于 Microsoft Windows)。在你的 <code>PATH</code> 环境变量中。有关设置 <code>PATH</code> 环境变量的信息，请参见 <a class="TutorialLink" target="_top" href="../../essential/environment/paths.html">PATH and CLASSPATH</a>。</p></li>
   
   <li>
     <p>
-    下载并解压缩示例代码：将文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 下载并解压缩到您的计算机。这些步骤假定您将此文件的内容解压缩到目录 <code>C:\DictionaryServiceDemo</code> 中。
+    下载并解压缩示例代码：将文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 下载并解压缩到你的计算机。这些步骤假定你将此文件的内容解压缩到目录 <code>C:\DictionaryServiceDemo</code> 中。
   
     </p>
   </li>
@@ -767,7 +767,7 @@
 <h2><a name="understanding-the-dictionaryservicedemo-sample">理解 DictionaryServiceDemo 示例</a></h2>
 
 <p>
-    以下步骤说明如何重新创建文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 的内容。这些步骤向您展示了示例的工作原理以及如何运行它。
+    以下步骤说明如何重新创建文件 <code><a href="examples/DictionaryServiceDemo/DictionaryServiceDemo.zip">DictionaryServiceDemo.zip</a></code> 的内容。这些步骤向你展示了示例的工作原理以及如何运行它。
  
 </p>
 
@@ -845,9 +845,9 @@ public class DictionaryService {
 
 <p>字典服务使用 <code>ServiceLoader.load</code> 方法来查找目标类。SPI 由接口 <code>dictionary.spi.Dictionary</code> 定义，因此该示例使用此类作为加载方法的参数。默认的 load 方法使用默认的类加载器搜索应用程序类路径。</p>
 
-<p>但是，如果您愿意，可以使用此方法的重载版本来指定自定义类加载器。这使您可以进行更复杂的类搜索。例如，一个特别热心的程序员可能会创建一个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html"><code>ClassLoader</code></a> 实例，该实例可以在特定于应用程序的子目录中搜索，该子目录包含在运行时添加的提供程序 JAR。结果是一个不需要重新启动来访问新提供程序类的应用程序。</p>
+<p>但是，如果你愿意，可以使用此方法的重载版本来指定自定义类加载器。这使你可以进行更复杂的类搜索。例如，一个特别热心的程序员可能会创建一个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html"><code>ClassLoader</code></a> 实例，该实例可以在特定于应用程序的子目录中搜索，该子目录包含在运行时添加的提供程序 JAR。结果是一个不需要重新启动来访问新提供程序类的应用程序。</p>
 
-<p>存在此类的加载器后，您可以使用其迭代器方法来访问和使用它找到的每个提供程序。<code>getDefinition</code> 方法使用 <code>Dictionary</code> 迭代器遍历提供程序，直到找到指定单词的定义。迭代器方法缓存 <code>Dictionary</code> 实例，因此连续调用几乎不需要额外的处理时间。如果自上次调用以来已将新提供程序置于服务中，则迭代器方法会将它们添加到列表中。</p>
+<p>存在此类的加载器后，你可以使用其迭代器方法来访问和使用它找到的每个提供程序。<code>getDefinition</code> 方法使用 <code>Dictionary</code> 迭代器遍历提供程序，直到找到指定单词的定义。迭代器方法缓存 <code>Dictionary</code> 实例，因此连续调用几乎不需要额外的处理时间。如果自上次调用以来已将新提供程序置于服务中，则迭代器方法会将它们添加到列表中。</p>
 
 <p><a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryDemo/src/dictionary/DictionaryDemo.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryDemo/src/dictionary/DictionaryDemo.java'); return false;"><code><code>DictionaryDemo.java</code></code></a> 类使用此服务。要使用该服务，应用程序将获取 <code>DictionaryService</code> 实例并调用 <code>getDefinition</code> 方法。如果定义可用，应用程序将打印它。如果定义不可用，应用程序将打印一条消息，指出没有可用的字典包含该单词。</p>
 
@@ -869,9 +869,9 @@ public class DictionaryService {
 
 <h3><a name="implement-the-service-provider">3. 实现服务提供者</a></h3>
 
-<p>要提供此服务，您必须创建 <a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/spi/Dictionary.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/spi/Dictionary.java'); return false;"><code><code>Dictionary.java</code></code></a> 实现。为了简单起见，创建一个只定义几个单词的通用字典。您可以使用数据库，一组属性文件或任何其他技术来实现字典。演示提供者模式的最简单方法是在单个文件中包含所有单词和定义。 </p>
+<p>要提供此服务，你必须创建 <a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/spi/Dictionary.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/DictionaryServiceProvider/src/dictionary/spi/Dictionary.java'); return false;"><code><code>Dictionary.java</code></code></a> 实现。为了简单起见，创建一个只定义几个单词的通用字典。你可以使用数据库，一组属性文件或任何其他技术来实现字典。演示提供者模式的最简单方法是在单个文件中包含所有单词和定义。 </p>
 
-<p>以下代码显示了 <code>Dictionary</code> SPI 的实现，<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/GeneralDictionary/src/dictionary/GeneralDictionary.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/GeneralDictionary/src/dictionary/GeneralDictionary.java'); return false;"><code><code>GeneralDictionary.java</code></code></a> 类。请注意，它提供了无参数构造函数，并实现了 SPI 定义的 <code>getDefinition</code> 方法。</p>
+<p>以下代码显示了 <code>Dictionary</code> SPI 的实现，<a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/GeneralDictionary/src/dictionary/GeneralDictionary.java" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/GeneralDictionary/src/dictionary/GeneralDictionary.java'); return false;"><code><code>GeneralDictionary.java</code></code></a> 类。请注意，它提供了无参构造函数，并实现了 SPI 定义的 <code>getDefinition</code> 方法。</p>
 
 <pre class="codeblock">
 
@@ -904,7 +904,7 @@ public class GeneralDictionary implements Dictionary {
 }
 </pre>
 
-<p>该示例将已编译的类文件存储在目录 <code>GeneralDictionary/build</code> 中。<strong>注意</strong>:您必须在类 <code>GeneralDictionary</code> 之前编译类 <code>dictionary.DictionaryService</code> 和 <code>dictionary.spi.Dictionary</code>。</p>
+<p>该示例将已编译的类文件存储在目录 <code>GeneralDictionary/build</code> 中。<strong>注意</strong>:你必须在类 <code>GeneralDictionary</code> 之前编译类 <code>dictionary.DictionaryService</code> 和 <code>dictionary.spi.Dictionary</code>。</p>
 
 <p>此示例的 <code>GeneralDictionary</code> 提供者仅定义了两个单词：<i>book</i> 和 <i>editor</i>。显然，更可用的字典将提供更实质的常用词汇表。</p>
 
@@ -944,15 +944,15 @@ public class ExtendedDictionary implements Dictionary {
 }
 </pre>
 
-<p>该示例将已编译的类文件存储在目录 <code>ExtendedDictionary/build</code> 中。<strong>注意</strong>:您必须在类 <code>ExtendedDictionary</code> 之前编译类 <code>dictionary.DictionaryService</code> 和 <code>dictionary.spi.Dictionary</code>。</p>
+<p>该示例将已编译的类文件存储在目录 <code>ExtendedDictionary/build</code> 中。<strong>注意</strong>:你必须在类 <code>ExtendedDictionary</code> 之前编译类 <code>dictionary.DictionaryService</code> 和 <code>dictionary.spi.Dictionary</code>。</p>
 
-<p>很容易想象客户使用一整套 <code>Dictionary</code> 提供者来满足他们自己的特殊需求。服务加载器 API 使他们能够根据需要或首选项更改为其应用程序添加新词典。由于底层单词处理器应用程序是可扩展的，因此客户无需额外编码即可使用新提供者。</p>
+<p>很容易想象客户使用一整套 <code>Dictionary</code> 提供者来满足他们自己的特殊需求。服务加载器 API 使他们能够根据需要或首选项更改为其应用程序添加新字典。由于底层单词处理器应用程序是可扩展的，因此客户无需额外编码即可使用新提供者。</p>
 
 <h3><a name="register-service-providers">4. 注册服务提供者</a></h3>
 
 <p>要注册服务提供者，请创建提供者配置文件，该文件存储在服务提供者的 JAR 文件的 <code>META-INF/services</code> 目录中。配置文件的名称是服务提供者的完全限定类名，其中名称的每个组件用句点(<code>.</code>)分隔，嵌套类用美元符号分隔(<code>$</code>)。</p>
 
-<p>提供者配置文件包含服务提供者的完全限定类名，每行一个名称。该文件必须是 UTF-8 编码的。此外，您可以在文件中包含注释，通过在行首使用数字符号(<code>#</code>)注释行。</p> 
+<p>提供者配置文件包含服务提供者的完全限定类名，每行一个名称。该文件必须是 UTF-8 编码的。此外，你可以在文件中包含注释，通过在行首使用数字符号(<code>#</code>)注释行。</p> 
 
 <p>例如，要注册服务提供者 <code>GeneralDictionary</code>，请创建名为 <a class="SourceLink" target="_blank" href="examples/DictionaryServiceDemo/GeneralDictionary/src/META-INF/services/dictionary.spi.Dictionary" onclick="showCode('../../displayCode.html', 'examples/DictionaryServiceDemo/GeneralDictionary/src/META-INF/services/dictionary.spi.Dictionary'); return false;"><code><code>dictionary.spi.Dictionary</code></code></a> 的文本文件。该文件包含一行：</p>
 
@@ -1001,7 +1001,7 @@ public class DictionaryDemo {
 }
 </pre>
 
-<p>该示例将已编译的类文件存储在目录 <code>DictionaryDemo/build</code> 中。<strong>注意</strong>:您必须在类 <code>DictionaryDemo</code> 之前编译类 <code>dictionary.DictionaryService</code> 和 <code>dictionary.spi.Dictionary</code>。</p>
+<p>该示例将已编译的类文件存储在目录 <code>DictionaryDemo/build</code> 中。<strong>注意</strong>:你必须在类 <code>DictionaryDemo</code> 之前编译类 <code>dictionary.DictionaryService</code> 和 <code>dictionary.spi.Dictionary</code>。</p>
 
 <h3><a name="package-in-jar-files">6. 在 JAR 文件中打包服务提供者，服务和服务客户​​端</a></h3>
 
@@ -1111,7 +1111,7 @@ xml: Cannot find definition for this word.
 REST: Cannot find definition for this word.
 </pre>
 
-<p>假设您运行以下命令并且 <code>ExtendedDictionary/dist/ExtendedDictionary.jar</code> 存在：</p> 
+<p>假设你运行以下命令并且 <code>ExtendedDictionary/dist/ExtendedDictionary.jar</code> 存在：</p> 
 
 <p><strong>Linux 和 Solaris：</strong></p>
 <p><code>java -Djava.ext.dirs=../DictionaryServiceProvider/dist:../ExtendedDictionary/dist -cp dist/DictionaryDemo.jar dictionary.DictionaryDemo</code></p>
@@ -1130,21 +1130,21 @@ REST: an architecture style for creating, reading, updating, and deleting data t
 
 <h2><a name="the-serviceloader-class">ServiceLoader 类</a></h2>
 
-<p><code>java.util.ServiceLoader</code> 类可帮助您查找，加载和使用服务提供者。它在应用程序的类路径或运行时环境的扩展目录中搜索服务提供者。它加载它们并使您的应用程序能够使用提供者的 API。如果将新提供者添加到类路径或运行时扩展目录，则 <code>ServiceLoader</code> 类将找到它们。如果您的应用程序知道提供者接口，则可以找到并使用该接口的不同实现。您可以使用接口的第一个可加载实例，也可以遍历所有可用接口。</p>
+<p><code>java.util.ServiceLoader</code> 类可帮助你查找，加载和使用服务提供者。它在应用程序的类路径或运行时环境的扩展目录中搜索服务提供者。它加载它们并使你的应用程序能够使用提供者的 API。如果将新提供者添加到类路径或运行时扩展目录，则 <code>ServiceLoader</code> 类将找到它们。如果你的应用程序知道提供者接口，则可以找到并使用该接口的不同实现。你可以使用接口的第一个可加载实例，也可以遍历所有可用接口。</p>
 
-<p><code>ServiceLoader</code> 类是 final，这意味着您不能将其作为子类或覆盖其加载算法。例如，您无法更改其算法以从其他位置搜索服务。</p>
+<p><code>ServiceLoader</code> 类是 final，这意味着你不能将其作为子类或覆盖其加载算法。例如，你无法更改其算法以从其他位置搜索服务。</p>
 
 <p>从 <code>ServiceLoader</code> 类的角度来看，所有服务都有一个类型，通常是单个接口或抽象类。提供者本身包含一个或多个具体类，这些类使用特定于其目的的实现来扩展服务类型。<code>ServiceLoader</code> 类要求单个公开的提供者类型具有默认构造函数，该构造函数不需要参数。这使 <code>ServiceLoader</code> 类可以轻松实例化它找到的服务提供者。</p>
 
-<p>提供者按需定位和实例化。服务加载程序维护已加载的提供者的缓存。每次调用加载器的 <code>iterator</code> 方法都会返回一个迭代器，该迭代器首先以实例化的顺序生成缓存的所有元素。然后，服务加载器定位并实例化任何新提供者，依次将每个提供者添加到缓存中。您可以使用 <code>reload</code> 方法清除提供者缓存。</p>
+<p>提供者按需定位和实例化。服务加载程序维护已加载的提供者的缓存。每次调用加载器的 <code>iterator</code> 方法都会返回一个迭代器，该迭代器首先以实例化的顺序生成缓存的所有元素。然后，服务加载器定位并实例化任何新提供者，依次将每个提供者添加到缓存中。你可以使用 <code>reload</code> 方法清除提供者缓存。</p>
 
-<p>要为特定类创建加载器，请将类本身提供给 <code>load</code> 或 <code>loadInstalled</code> 方法。您可以使用默认的类加载器或提供您自己的 <code>ClassLoader</code> 子类。</p>
+<p>要为特定类创建加载器，请将类本身提供给 <code>load</code> 或 <code>loadInstalled</code> 方法。你可以使用默认的类加载器或提供你自己的 <code>ClassLoader</code> 子类。</p>
 
-<p><code>loadInstalled</code> 方法搜索运行时环境的已安装运行时提供者的扩展目录。默认扩展位置是运行时环境的 <code>jre/lib/ext</code> 目录。您应该仅将扩展位置用于众所周知的受信任提供者，因为此位置将成为所有应用程序的类路径的一部分。在本文中，提供者不使用扩展目录，而是依赖于特定于应用程序的类路径。</p>
+<p><code>loadInstalled</code> 方法搜索运行时环境的已安装运行时提供者的扩展目录。默认扩展位置是运行时环境的 <code>jre/lib/ext</code> 目录。你应该仅将扩展位置用于众所周知的受信任提供者，因为此位置将成为所有应用程序的类路径的一部分。在本文中，提供者不使用扩展目录，而是依赖于特定于应用程序的类路径。</p>
 
 <h2><a name="limitations-of-the-service-loader-api">ServiceLoader API 的局限性</a></h2>
 
-<p><code>ServiceLoader</code> API 很有用，但它有局限性。例如，无法从 <code>ServiceLoader</code> 类派生类，因此您无法修改其行为。您可以使用自定义 <code>ClassLoader</code> 子类来更改类的查找方式，但无法扩展 <code>ServiceLoader</code> 本身。此外，当运行时新的提供者可用时，当前的 <code>ServiceLoader</code> 类无法告诉您的应用程序。此外，您无法将更改监听器添加到加载程序以查明是否将新提供者放入特定于应用程序的扩展目录中。 </p>
+<p><code>ServiceLoader</code> API 很有用，但它有局限性。例如，无法从 <code>ServiceLoader</code> 类派生类，因此你无法修改其行为。你可以使用自定义 <code>ClassLoader</code> 子类来更改类的查找方式，但无法扩展 <code>ServiceLoader</code> 本身。此外，当运行时新的提供者可用时，当前的 <code>ServiceLoader</code> 类无法告诉你的应用程序。此外，你无法将更改监听器添加到加载程序以查明是否将新提供者放入特定于应用程序的扩展目录中。 </p>
 
 
 <p>Java SE 6 中提供了公共 <code>ServiceLoader</code> API。虽然加载器服务早在 JDK 1.3 中就已存在，但 API 是私有的，仅适用于内部 Java 运行时代码。 </p>
@@ -1152,7 +1152,7 @@ REST: an architecture style for creating, reading, updating, and deleting data t
 
 <h2><a name="summary">总结</a></h2>
 
-<p>可扩展应用程序提供可由服务提供者扩展的服务点。创建可扩展应用程序的最简单方法是使用 <code>ServiceLoader</code>，它可用于 Java SE 6 及更高版本。使用此类，您可以将提供者实现添加到应用程序类路径以使新功能可用。<code>ServiceLoader</code> 类是 final，因此您无法修改其功能。</p>
+<p>可扩展应用程序提供可由服务提供者扩展的服务点。创建可扩展应用程序的最简单方法是使用 <code>ServiceLoader</code>，它可用于 Java SE 6 及更高版本。使用此类，你可以将提供者实现添加到应用程序类路径以使新功能可用。<code>ServiceLoader</code> 类是 final，因此你无法修改其功能。</p>
 
         </div>
         <div class="NavBit">

@@ -485,26 +485,26 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">互操作性</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="compatibility.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../end.html">Next&nbsp;»</a>
+                <a target="_top" href="compatibility.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../end.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>API 设计</h1></div>
             <div id="PageContent">
 
-<p>在这个简短但重要的部分中，您将学习一些简单的指导原则，使您的 API 能够与遵循这些指南的所有其他 API 无缝地互操作。从本质上讲，这些规则定义了在集合世界中成为一个好的“公民”需要什么。</p>
+<p>在这个简短但重要的部分中，你将学习一些简单的指导原则，使你的 API 能够与遵循这些指南的所有其他 API 无缝地互操作。从本质上讲，这些规则定义了在集合世界中成为一个好的“公民”需要什么。</p>
 <h2>参数</h2>
-<p>如果您的 API 包含需要输入集合的方法，则将相关参数类型声明为集合 <a class="TutorialLink" target="_top" href="../interfaces/index.html">接口</a> 类型之一至关重要。<b>永远不要</b> 使用 <a class="TutorialLink" target="_top" href="../implementations/index.html">实现</a> 类型，因为这会破坏基于接口的集合框架的目的，即允许在不考虑实现细节的情况下操纵集合。</p>
-<p>此外，您应该始终使用最不具体的类型。例如，不要请求 <a class="TutorialLink" target="_top" href="../interfaces/list.html"><code>List</code></a> 或 <a class="TutorialLink" target="_top" href="../interfaces/set.html"><code>Set</code></a> 如果 <a class="TutorialLink" target="_top" href="../interfaces/collection.html"><code>Collection</code></a> 就可以实现。这不是您不应该在输入上要求 <code>List</code> 或 <code>Set</code>;如果方法依赖于其中一个接口的属性，则这样做是正确的。例如，Java 平台提供的许多算法在输入时需要 <code>List</code>，因为它们取决于列表是有序的事实。但是，作为一般规则，在输入中使用的最佳类型是最常用的：<code>Collection</code> 和 <code>Map</code>。</p>
-<div class="note"><hr /><strong>Caution:</strong> 从不定义您自己的特设的 <code>collection</code> 类，并且在输入时要求此类的对象。通过这样做，您将失去 <a class="TutorialLink" target="_top" href="../intro/index.html">Java Collections Framework 提供的所有优势</a>。
+<p>如果你的 API 包含需要输入集合的方法，则将相关参数类型声明为集合 <a class="TutorialLink" target="_top" href="../interfaces/index.html">接口</a> 类型之一至关重要。<b>永远不要</b> 使用 <a class="TutorialLink" target="_top" href="../implementations/index.html">实现</a> 类型，因为这会破坏基于接口的集合框架的目的，即允许在不考虑实现细节的情况下操纵集合。</p>
+<p>此外，你应该始终使用最不具体的类型。例如，不要请求 <a class="TutorialLink" target="_top" href="../interfaces/list.html"><code>List</code></a> 或 <a class="TutorialLink" target="_top" href="../interfaces/set.html"><code>Set</code></a> 如果 <a class="TutorialLink" target="_top" href="../interfaces/collection.html"><code>Collection</code></a> 就可以实现。这不是你不应该在输入上要求 <code>List</code> 或 <code>Set</code>;如果方法依赖于其中一个接口的属性，则这样做是正确的。例如，Java 平台提供的许多算法在输入时需要 <code>List</code>，因为它们取决于列表是有序的事实。但是，作为一般规则，在输入中使用的最佳类型是最常用的：<code>Collection</code> 和 <code>Map</code>。</p>
+<div class="note"><hr /><strong>警告:</strong>&nbsp;从不定义你自己的专用的的 <code>collection</code> 类，并且在输入时要求此类的对象。通过这样做，你将失去 <a class="TutorialLink" target="_top" href="../intro/index.html">Java 集合框架提供的所有优势</a>。
 <hr /></div>
 <h2>返回值</h2>
 <p>使用返回值比使用输入参数更灵活。返回实现或继承其中一个集合接口的任何类型的对象都可以。这可以是接口之一，也可以是继承或实现这些接口之一的专用类型。</p>
 <p>例如，可以设想一个名为 <code>ImageList</code> 的图像处理包，它返回实现 <code>List</code> 的新类的对象。除了 <code>List</code> 操作之外，<code>ImageList</code> 还可以支持任何特定于应用程序似乎很可取的操作。例如，它可能提供 <code>indexImage</code> 操作，该操作返回一个图像包含 <code>ImageList</code> 中每个图形的缩略图图像。值得注意的是，即使 API 在输出上提供了 <code>ImageList</code> 实例，它也应该在输入上接受任意 <code>Collection</code>(或者可能是 <code>List</code>)实例。</p>
-<p>从某种意义上说，返回值应该具有输入参数的相反行为：最好返回最具体的适用集合接口，而不是最一般的。例如，如果您确定将始终返回 <code>SortedMap</code>，则应该为相关方法提供 <code>SortedMap</code> 的返回类型，而不是 <code>Map</code>。<code>SortedMap</code> 实例比普通的 <code>Map</code> 实例构建起来更耗时，而且功能也更强大。鉴于您的模块已投入时间来构建 <code>SortedMap</code>，因此让用户访问其增强的功能是很有意义的。此外，用户将能够将返回的对象传递给需要 <code>SortedMap</code> 的方法，以及任何接受 <code>Map</code> 的方法。</p>
+<p>从某种意义上说，返回值应该具有输入参数的相反行为：最好返回最特定的适用集合接口，而不是最一般的。例如，如果你确定将始终返回 <code>SortedMap</code>，则应该为相关方法提供 <code>SortedMap</code> 的返回类型，而不是 <code>Map</code>。<code>SortedMap</code> 实例比普通的 <code>Map</code> 实例构建起来更耗时，而且功能也更强大。鉴于你的模块已投入时间来构建 <code>SortedMap</code>，因此让用户访问其增强的功能是很有意义的。此外，用户将能够将返回的对象传递给需要 <code>SortedMap</code> 的方法，以及任何接受 <code>Map</code> 的方法。</p>
 <h2>旧版 API</h2>
-<p>目前有很多 API 可以定义自己的特设集合类型。虽然这很不幸，但鉴于 Java 平台的前两个主要版本中没有 Collections Framework，这是生活中的事实。假设您拥有这些 API 中的一个；下面是您可以做的事情。</p>
-<p>如果可能，请改进旧版集合类型以实现其中一个标准集合接口。然后，您返回的所有集合将与其他基于集合的 API 平滑地互操作。如果这是不可能的(例如，因为一个或多个预先存在的类型签名与标准集合接口冲突)，请定义一个 <em>adapter class (适配器类)</em>，它包装一个旧的集合对象，允许它作为标准集合。(<code>Adapter</code> 类是 <a class="TutorialLink" target="_top" href="../custom-implementations/index.html"><em>custom implementation</em></a> 的示例。)</p>
-<p>如果可能，使用遵循输入准则的新调用来改进 API，以接受标准集合接口的对象。此类调用可以与采用旧版集合类型的调用共存。如果这是不可能的，请为遗留类型提供构造函数或静态工厂，该构造函数或静态工厂接受其中一个标准接口的对象，并返回包含相同元素(或映射)的旧集合。这些方法中的任何一种都允许用户将任意集合传递到您的 API 中。</p>
+<p>目前有很多 API 可以定义自己的专用的集合类型。虽然这很不幸，但鉴于 Java 平台的前两个主要版本中没有集合框架，这是生活中的事实。假设你拥有这些 API 中的一个；下面是你可以做的事情。</p>
+<p>如果可能，请改进旧版集合类型以实现其中一个标准集合接口。然后，你返回的所有集合将与其他基于集合的 API 平滑地互操作。如果这是不可能的(例如，因为一个或多个预先存在的类型签名与标准集合接口冲突)，请定义一个 <em>adapter class (适配器类)</em>，它包装一个旧的集合对象，允许它作为标准集合。(<code>Adapter</code> 类是 <a class="TutorialLink" target="_top" href="../custom-implementations/index.html"><em>custom implementation</em></a> 的示例。)</p>
+<p>如果可能，使用遵循输入准则的新调用来改进 API，以接受标准集合接口的对象。此类调用可以与采用旧版集合类型的调用共存。如果这是不可能的，请为遗留类型提供构造函数或静态工厂，该构造函数或静态工厂接受其中一个标准接口的对象，并返回包含相同元素(或映射)的旧集合。这些方法中的任何一种都允许用户将任意集合传递到你的 API 中。</p>
 
 
         </div>

@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>&gt;<a href="index.html" target="_top">标准日历</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="clock.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="legacy.html">Next&nbsp;»</a>
+                <a target="_top" href="clock.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="legacy.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>非 ISO 日期转换</h1></div>
@@ -507,13 +507,13 @@
 
 
 <p>
-本教程不会详细讨论 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/chrono/package-summary.html"><tt>java.time.chrono</tt></a> 包。但是，知道此软件包提供了几个基于非 ISO 的预定义年表可能会很有用，例如 Japanese，Hijrah，Minguo 和 Thai Buddhist。您也可以使用此包创建自己的年表。</p>
+本教程不会详细讨论 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/chrono/package-summary.html"><tt>java.time.chrono</tt></a> 包。但是，知道此软件包提供了几个基于非 ISO 的预定义年表可能会很有用，例如 Japanese，Hijrah，Minguo 和 Thai Buddhist。你也可以使用此包创建自己的年表。</p>
 <p>
 本节介绍如何在其中一个预定义的年表和基于 ISO 的日期和日期间转换。</p>
 
 <h2>转换为基于非 ISO 的日期</h2>
 <p>
-您可以使用 <tt>from(TemporalAccessor)</tt> 方法将基于 ISO 的日期转换为另一个年代表中的日期，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/chrono/JapaneseDate.html#from-java.time.temporal.TemporalAccessor-"><tt>JapaneseDate.from(TemporalAccessor)</tt></a>。如果此方法无法将日期转换为有效实例，则抛出 <tt>DateTimeException</tt>。以下代码将 <tt>LocalDateTime</tt> 实例转换为若干预定义的非 ISO 日历日期：</p>
+你可以使用 <tt>from(TemporalAccessor)</tt> 方法将基于 ISO 的日期转换为另一个年代表中的日期，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/chrono/JapaneseDate.html#from-java.time.temporal.TemporalAccessor-"><tt>JapaneseDate.from(TemporalAccessor)</tt></a>。如果此方法无法将日期转换为有效实例，则抛出 <tt>DateTimeException</tt>。以下代码将 <tt>LocalDateTime</tt> 实例转换为若干预定义的非 ISO 日历日期：</p>
 <div class="codeblock"><pre>
 LocalDateTime date = LocalDateTime.of(2013, Month.JULY, 20, 19, 30);
 JapaneseDate jdate     = JapaneseDate.from(date);
@@ -584,7 +584,7 @@ System.out.printf("%s%n",
 
 <h2>转换为基于 ISO 的日期</h2>
 <p>
-您可以使用静态 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html#from-java.time.temporal.TemporalAccessor-"><tt>LocalDate.from</tt></a> 方法从非 ISO 日期转换为 <tt>LocalDate</tt> 实例，如以下示例所示：</p>
+你可以使用静态 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html#from-java.time.temporal.TemporalAccessor-"><tt>LocalDate.from</tt></a> 方法从非 ISO 日期转换为 <tt>LocalDate</tt> 实例，如以下示例所示：</p>
 <div class="codeblock"><pre>
 LocalDate date = LocalDate.from(JapaneseDate.now());
 </pre></div>

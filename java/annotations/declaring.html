@@ -489,7 +489,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">注解</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="basics.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="predefined.html">Next&nbsp;»</a>
+                <a target="_top" href="basics.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="predefined.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>声明一个注解类型</h1></div>
@@ -511,7 +511,7 @@ public class Generation3List extends Generation2List {
 
 }
 </pre></div>
-<p>要使用注解添加此相同元数据，必须先定义 <i>annotation type</i>。这样做的语法是：</p>
+<p>要使用注解添加此相同元数据，必须先定义 <i>annotation type (注解类型)</i>。这样做的语法是：</p>
 <div class="codeblock"><pre>
 @interface ClassPreamble {
    String author();
@@ -523,9 +523,9 @@ public class Generation3List extends Generation2List {
    String[] reviewers();
 }
 </pre></div>
-<p>注解类型定义类似于接口定义，其中关键字 <code>interface</code> 前面带有 at 符号(<code>@</code>)(@ = AT，如注解类型)。注解类型是 <i>接口（interface）</i> 的一种形式，将在后面的课程中介绍。目前，您不需要了解接口。</p>
-<p>前一个注解定义的主体包含 <i>注解类型元素（annotation type element）</i> 声明，它们看起来很像方法。请注意，他们可以定义可选的默认值。</p>
-<p>定义注解类型后，您可以使用该类型的注解，并填入值，如下所示：</p>
+<p>注解类型定义类似于接口定义，其中关键字 <code>interface</code> 前面带有 at 符号(<code>@</code>)(@ = AT，如注解类型)。注解类型是 <i>interface (接口)</i> 的一种形式，将在后面的课程中介绍。目前，你不需要了解接口。</p>
+<p>前一个注解定义的主体包含 <i>annotation type element (注解类型元素)</i> 声明，它们看起来很像方法。请注意，他们可以定义可选的默认值。</p>
+<p>定义注解类型后，你可以使用该类型的注解，并填入值，如下所示：</p>
 <div class="codeblock"><pre>
 @ClassPreamble (
    author = "John Doe",
@@ -542,7 +542,7 @@ public class Generation3List extends Generation2List {
 
 }
 </pre></div>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;要使 <code>@ClassPreamble</code> 中的信息出现在 Javadoc 生成的文档中，您必须使用 <code>@Documented</code> 来注解 <code>@ClassPreamble</code> 的定义：
+<div class="note"><hr /><strong>注意:</strong>&nbsp;要使 <code>@ClassPreamble</code> 中的信息出现在 Javadoc 生成的文档中，你必须使用 <code>@Documented</code> 来注解 <code>@ClassPreamble</code> 的定义：
 <div class="codeblock"><pre>
 // import this to use <code>@Documented</code>
 import java.lang.annotation.*;

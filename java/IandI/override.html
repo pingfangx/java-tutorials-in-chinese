@@ -503,7 +503,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="multipleinheritance.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="polymorphism.html">Next&nbsp;»</a>
+                <a target="_top" href="multipleinheritance.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="polymorphism.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>覆盖和隐藏方法</h1></div>
@@ -513,17 +513,17 @@
 
 <h2>实例方法</h2>
 
-<p>具有相同签名(名称，加上其参数的数量和类型)和返回值的子类中的实例方法 <i>覆盖（overrides）</i> 超类的方法。</p>
+<p>具有相同签名(名称，加上其参数的数量和类型)和返回值的子类中的实例方法 <i>overrides (覆盖)</i> 超类的方法。</p>
 
-<p>子类覆盖方法的能力允许类从行为 "足够接近" 的超类继承，然后根据需要修改行为。覆盖方法与它覆盖的方法具有相同的名称，参数的数量和类型，和返回类型。覆盖方法还可以返回由覆盖方法返回的类型的子类型。此子类型称为 <i>协变返回类型（covariant return type）</i>。</p>
+<p>子类覆盖方法的能力允许类从行为 "足够接近" 的超类继承，然后根据需要修改行为。覆盖方法与它覆盖的方法具有相同的名称，参数的数量和类型，和返回类型。覆盖方法还可以返回由覆盖方法返回的类型的子类型。此子类型称为 <i>covariant return type (协变返回类型)</i>。</p>
 
-<p>覆盖方法时，您可能希望使用 <code>@Override</code> 注解来指示编译器您要覆盖超类中的方法。如果由于某种原因，编译器检测到该方法在其中一个超类中不存在，那么它将生成错误。有关 <code>@Override</code> 的详细信息，请参阅 <a class="TutorialLink" target="_top" href="../annotations/index.html"><code>Annotations</code></a>。</p>
+<p>覆盖方法时，你可能希望使用 <code>@Override</code> 注解来指示编译器你要覆盖超类中的方法。如果由于某种原因，编译器检测到该方法在其中一个超类中不存在，那么它将生成错误。有关 <code>@Override</code> 的详细信息，请参阅 <a class="TutorialLink" target="_top" href="../annotations/index.html"><code>Annotations</code></a>。</p>
 
 <h2>静态方法</h2>
 
-<p>如果子类定义的静态方法与超类中的静态方法具有相同的签名，则子类方法 <i>隐藏（hides）</i> 超类中的方法。</p>
+<p>如果子类定义的静态方法与超类中的静态方法具有相同的签名，则子类方法 <i>hides (隐藏)</i> 超类中的方法。</p>
 
-<p>隐藏静态方法和覆盖实例方法之间的区别具有重要意义：</p>
+<p>隐藏静态方法和覆盖实例方法之间有显著区别：</p>
 
 <ul>
   <li>被调用的重写实例方法的版本是子类中的版本。</li>
@@ -613,7 +613,7 @@ The instance method in Cat
     <p>方法 <code>Pegasus.identifyMyself</code> 返回字符串 <code>I am a horse.</code></p>
   </li>
   
-  <li><p>其他候选项覆盖的方法将被忽略。当超类型共享共同的祖先时，可能会出现这种情况。</p>
+  <li><p>已被其他候选覆盖的方法将被忽略。当超类型共享共同的祖先时，可能会出现这种情况。</p>
   
   <p>考虑以下接口和类：</p>
 
@@ -642,9 +642,9 @@ The instance method in Cat
 </li>
 </ul>
 
-<p>如果两个或多个独立定义的默认方法冲突，或者默认方法与抽象方法冲突，则 Java 编译器会产生编译器错误。您必须显式覆盖超类型方法。</p>
+<p>如果两个或多个独立定义的默认方法冲突，或者默认方法与抽象方法冲突，则 Java 编译器会产生编译器错误。你必须显式覆盖超类型方法。</p>
 
-<p>考虑一下现在可以飞行的计算机控制汽车的例子。您有两个接口(<code>OperateCar</code> 和 <code>FlyCar</code>)，它们为同一方法提供默认实现(<code>startEngine</code>)：</p>
+<p>考虑一下现在可以飞行的计算机控制汽车的例子。你有两个接口(<code>OperateCar</code> 和 <code>FlyCar</code>)，它们为同一方法提供默认实现(<code>startEngine</code>)：</p>
 
 <pre class="codeblock">public interface OperateCar {
     // ...
@@ -660,7 +660,7 @@ The instance method in Cat
     }
 }</pre>
 
-<p>实现 <code>OperateCar</code> 和 <code>FlyCar</code> 的类必须覆盖方法 <code>startEngine</code>。您可以使用 <code>super</code> 关键字调用任何默认实现。</p> 
+<p>实现 <code>OperateCar</code> 和 <code>FlyCar</code> 的类必须覆盖方法 <code>startEngine</code>。你可以使用 <code>super</code> 关键字调用任何默认实现。</p> 
 
 <pre class="codeblock">public class FlyingCar implements OperateCar, FlyCar {
     // ...
@@ -670,7 +670,7 @@ The instance method in Cat
     }
 }</pre>
 
-<p><code>super</code> 之前的名称(在此示例中，<code>FlyCar</code> 或 <code>OperateCar</code>)必须引用直接超接口，该接口用于定义或继承调用方法的默认值。这种形式的方法调用不限于区分包含具有相同签名的默认方法的多个已实现接口。您可以使用 <code>super</code> 关键字在类和接口中调用默认方法。</p>
+<p><code>super</code> 之前的名称(在此示例中，<code>FlyCar</code> 或 <code>OperateCar</code>)必须引用直接超接口，该接口用于定义或继承调用方法的默认值。这种形式的方法调用不限于区分包含具有相同签名的默认方法的多个已实现接口。你可以使用 <code>super</code> 关键字在类和接口中调用默认方法。</p>
 
 <p>类中的继承实例方法可以覆盖抽象接口方法。考虑以下接口和类：</p>
   
@@ -709,7 +709,7 @@ public class Mustang extends Horse implements Mammal {
 <p>如果尝试将超类中的实例方法更改为子类中的静态方法，则会出现编译时错误，反之亦然。</p>
 <h2>总结</h2>
 <p>
-<span id="table:override-method">The following table</span> 总结了在定义与超类中的方法具有相同签名的方法时会发生什么。</p>
+<span id="table:override-method">下表</span> 总结了在定义与超类中的方法具有相同签名的方法时会发生什么。</p>
 <table border="1" summary="此表总结了在定义具有与超类中的方法相同的签名的方法时发生的情况">
 <caption style="font-weight: bold" id="override-method">定义与超类的方法具有相同签名的方法</caption>
 <tr>
@@ -728,7 +728,7 @@ public class Mustang extends Horse implements Mammal {
 <td>Hides</td>
 </tr>
 </table>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;在子类中，您可以重载从超类继承的方法。这样的重载方法既不隐藏也不覆盖超类实例方法 - 它们是新方法，对于子类是唯一的。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;在子类中，你可以重载从超类继承的方法。这样的重载方法既不隐藏也不覆盖超类实例方法 - 它们是新方法，对于子类是唯一的。
 <hr /></div>
 
         </div>

@@ -515,14 +515,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="runthread.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="interrupt.html">Next&nbsp;»</a>
+                <a target="_top" href="runthread.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="interrupt.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>用 Sleep 来暂停执行</h1></div>
             <div id="PageContent">
 
 <p><code>Thread.sleep</code> 导致当前线程暂停执行指定的时间段。这是使处理器时间可用的有效方法，处理器时间可用于应用程序的其他线程或可能在计算机系统上运行的其他应用程序。<code>sleep</code> 方法也可以用于放慢执行（pacing），如下面的示例所示，并等待另一个线程（线程执行具有时间要求的任务），如稍后部分的 <code>SimpleThreads</code> 示例。</p>
-<p>提供了两个重载版本的 <code>sleep</code>：一个指定睡眠时间为毫秒，另一个指定睡眠时间为纳秒。但是，这些睡眠时间并不能保证精确，因为它们受到底层操作系统提供的设施的限制。此外，睡眠周期可以通过中断终止，我们将在后面的部分中看到。在任何情况下，您都不能假设调用 <code>sleep</code> 将在指定的时间段内暂停该线程。</p>
+<p>提供了两个重载版本的 <code>sleep</code>：一个指定睡眠时间为毫秒，另一个指定睡眠时间为纳秒。但是，这些睡眠时间并不能保证精确，因为它们受到底层操作系统提供的设施的限制。此外，睡眠周期可以通过中断终止，我们将在后面的部分中看到。在任何情况下，你都不能假设调用 <code>sleep</code> 将在指定的时间段内暂停该线程。</p>
 <p><a class="SourceLink" target="_blank" href="examples/SleepMessages.java" onclick="showCode('../../displayCode.html', 'examples/SleepMessages.java'); return false;"><code><code>SleepMessages</code></code></a> 示例使用 <code>sleep</code> 以四秒为间隔打印消息：</p>
 <div class="codeblock"><pre>
 

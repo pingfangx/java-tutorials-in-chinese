@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Strings(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;数字和字符串)
+        <title>字符串(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;数字和字符串)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,13 +475,13 @@
 <div class="linkAHEAD"><a href="numbers.html">数字</a></div>
 <div class="linkBHEAD"><a href="numberclasses.html">数字类</a></div>
 <div class="linkBHEAD"><a href="numberformat.html">格式化数字打印输出</a></div>
-<div class="linkBHEAD"><a href="beyondmath.html">基础算法之外的补充</a></div>
+<div class="linkBHEAD"><a href="beyondmath.html">基础算术之外的补充</a></div>
 <div class="linkBHEAD"><a href="numbersummary.html">数字总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/numbers-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="characters.html">Characters</a></div>
-<div class="nolinkAHEAD">Strings</div>
+<div class="linkAHEAD"><a href="characters.html">字符</a></div>
+<div class="nolinkAHEAD">字符串</div>
 <div class="linkBHEAD"><a href="converting.html">在数字和字符串之间转换</a></div>
-<div class="linkBHEAD"><a href="manipstrings.html">操纵字符串中的字符</a></div>
+<div class="linkBHEAD"><a href="manipstrings.html">操作字符串中的字符</a></div>
 <div class="linkBHEAD"><a href="comparestrings.html">比较字符串和字符串的部分</a></div>
 <div class="linkBHEAD"><a href="buffers.html">StringBuilder 类</a></div>
 <div class="linkBHEAD"><a href="stringsummary.html">字符和字符串总结</a></div>
@@ -498,10 +498,10 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">数字和字符串</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="characters.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="converting.html">Next&nbsp;»</a>
+                <a target="_top" href="characters.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="converting.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>Strings</h1></div>
+            <div id="PageTitle"><h1>字符串</h1></div>
             <div id="PageContent"><!-- Strings -->
 
 
@@ -512,8 +512,8 @@
 <div class="codeblock"><pre>
 String greeting = "Hello world!";
 </pre></div>
-<p>在这种情况下，"Hello world!" 是一个 <i>string literal</i> 代码中的一系列字符，用双引号括起来。每当它在代码中遇到 string literal 时，编译器就会创建一个 <code>String</code> 对象包含其值，在这种情况下其值为 <code>Hello world!</code>。</p>
-<p>与任何其他对象一样，您可以使用 <code>new</code> 关键字和构造函数创建 <code>String</code> 对象。<code>String</code> 类有 13 个构造函数，允许您使用不同的源提供字符串的初始值，例如字符数组：</p>
+<p>在这种情况下，"Hello world!" 是一个 <i>string literal (字符串字面量)</i>  代码中的一系列字符，用双引号括起来。每当它在代码中遇到字符串字面量时，编译器就会创建一个 <code>String</code> 对象包含其值，在这种情况下其值为 <code>Hello world!</code>。</p>
+<p>与任何其他对象一样，你可以使用 <code>new</code> 关键字和构造函数创建 <code>String</code> 对象。<code>String</code> 类有 13 个构造函数，允许你使用不同的源提供字符串的初始值，例如字符数组：</p>
 <div class="codeblock"><pre>
 char[] helloArray = { 'h', 'e', 'l', 'l', 'o', '.' };
 String helloString = new String(helloArray);
@@ -523,12 +523,12 @@ System.out.println(helloString);
 <div class="note"><hr /><strong>注意:</strong>&nbsp;<code>String</code> 类是不可变的，因此一旦创建，就无法更改 <code>String</code> 对象。<code>String</code> 类有许多方法，其中一些将在下面讨论，似乎可以修改字符串。由于字符串是不可变的，因此这些方法真正做的是创建并返回包含操作结果的新字符串。
 <hr /></div>
 <h2>字符串长度</h2>
-<p>用于获取对象信息的方法称为 <em>访问器方法（accessor methods）</em>。可以与字符串一起使用的一种访问器方法是 <code>length()</code> 方法，该方法返回字符串对象中包含的字符数。执行以下两行代码后，<code>len</code> 等于 17：</p>
+<p>用于获取对象信息的方法称为 <em>accessor methods (访问器方法)</em>。可以与字符串一起使用的一种访问器方法是 <code>length()</code> 方法，该方法返回字符串对象中包含的字符数。执行以下两行代码后，<code>len</code> 等于 17：</p>
 <div class="codeblock"><pre>
 String palindrome = "Dot saw I was Tod";
 int len = palindrome.length();
 </pre></div>
-<p><i>回文（palindrome）</i> 是一个对称的单词或句子 - 它向前和向后的拼写相同（忽略大小写和标点符号）。这是一个简短而低效的程序来反转回文串。它调用 <code>String</code> 方法 <code>charAt(i)</code>，它返回字符串中的第 i 个字符，从 0 开始计数。<sup></sup></p>
+<p><i>palindrome (回文)</i> 是一个对称的单词或句子 - 它向前和向后的拼写相同（忽略大小写和标点符号）。这是一个简短而低效的程序来反转回文串。它调用 <code>String</code> 方法 <code>charAt(i)</code>，它返回字符串中的第 i 个字符，从 0 开始计数。<sup></sup></p>
 <div class="codeblock"><pre>
 
 public class StringDemo {
@@ -571,11 +571,11 @@ palindrome.getChars(0, len, tempCharArray, 0);
 string1.concat(string2); 
 </pre></div>
 <p>这将返回一个新的字符串，该字符串为 string1，并在结尾处添加了 string2。</p>
-<p>您还可以将 <code>concat()</code> 方法与字符串文字一起使用，如下所示：</p>
+<p>你还可以将 <code>concat()</code> 方法与字符串文字一起使用，如下所示：</p>
 <div class="codeblock"><pre>
 "My name is ".concat("Rumplestiltskin");
 </pre></div>
-<p>字符串通常与 <code style="font-weight: bold">+</code> 运算符连接，如</p>
+<p>字符串通常用 <code style="font-weight: bold">+</code> 运算符连接，如</p>
 <div class="codeblock"><pre>
 "Hello," + " world" + "!"
 </pre></div>
@@ -602,7 +602,7 @@ String quote =
 <p>使用 <code>+</code> 连接运算符在行之间断开字符串在 <code>print</code> 语句中再次非常常见。</p>
 <hr /></div>
 <h2>创建格式字符串</h2>
-<p>您已经看到使用 <code>printf()</code> 和 <code>format()</code> 方法来打印带格式化数字的输出。<code>String</code> 类具有等效的类方法 <code>format()</code>，它返回 <code>String</code> 对象而不是 <code>PrintStream</code> 对象。</p>
+<p>你已经看到使用 <code>printf()</code> 和 <code>format()</code> 方法来打印带格式化数字的输出。<code>String</code> 类具有等效的类方法 <code>format()</code>，它返回 <code>String</code> 对象而不是 <code>PrintStream</code> 对象。</p>
 <p>使用 <code>String</code> 的静态 <code>format()</code> 方法可以创建可以重复使用的格式化字符串，而不是一次性打印语句。例如，不使用</p>
 <div class="codeblock"><pre>
 System.out.printf("The value of the float " +

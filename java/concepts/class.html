@@ -489,13 +489,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">面向对象的编程概念</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="object.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="inheritance.html">Next&nbsp;»</a>
+                <a target="_top" href="object.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="inheritance.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>什么是类？</h1></div>
             <div id="PageContent">
 
-<p>在现实世界中，你会经常发现很多单独的物体都是同一种物体。可能有成千上万的其他自行车存在，但有所有相同的品牌和型号。每辆自行车都由同一套蓝图构成，因此包含相同的部件。在面向对象的术语中，我们说你的自行车是称为自行车的 <i>class of objects（对象的类）</i>的 <i>instance（实例）</i> 。一个 <i>class（类）</i> 是创建单个对象的蓝图。</p>
+<p>在现实世界中，你会经常发现很多单独的物体都是同一种物体。有成千上万的其他自行车的，可能都是一样的品牌和型号。每辆自行车都由同一套蓝图构成，因此包含相同的部件。在面向对象的术语中，我们说你的自行车是称为自行车的 <i>class of objects (对象的类)</i>的 <i>instance (实例)</i> 。一个 <i>class (类)</i> 是创建单个对象的蓝图。</p>
 <p>下面的 <a class="SourceLink" target="_blank" href="examples/Bicycle.java" onclick="showCode('../../displayCode.html', 'examples/Bicycle.java'); return false;"><code>Bicycle</code></a> 类是自行车的一种可能的实现方式：</p>
 <div class="codeblock"><pre>
 
@@ -529,7 +529,7 @@ class Bicycle {
 }
 </pre></div>
 <p>Java 编程语言的语法对你来说看起来很新，但这个类的设计是基于前面对自行车对象的讨论。<code>cadence</code>，<code>speed</code> 和 <code>gear</code> 代表对象的状态，方法(<code>changeCadence</code>，<code>changeGear</code>，<code>speedUp</code> 等)定义其与外界的交互。</p>
-<p>您可能已经注意到 <code>Bicycle</code> 类不包含 <code>main</code> 方法。那是因为它不是一个完整的应用程序;这只是在应用程序中可能被 <i>使用</i> 的自行车蓝图。创建和使用新的 <code>Bicycle</code> 对象的责任属于您应用程序中的某个其他类。</p>
+<p>你可能已经注意到 <code>Bicycle</code> 类不包含 <code>main</code> 方法。那是因为它不是一个完整的应用程序;这只是在应用程序中可能被 <i>使用</i> 的自行车蓝图。创建和使用新的 <code>Bicycle</code> 对象的责任属于你应用程序中的某个其他类。</p>
 <p>这是一个 <a class="SourceLink" target="_blank" href="examples/BicycleDemo.java" onclick="showCode('../../displayCode.html', 'examples/BicycleDemo.java'); return false;"><code>BicycleDemo</code></a> 类，它创建两个独立的 <code>Bicycle</code> 对象并调用它们的方法：</p>
 <div class="codeblock"><pre>
 

@@ -485,7 +485,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Java 命名和目录接口</a>&gt;<a href="index.html" target="_top">目录中的 Java 对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="serial.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="serial.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>存储和读取对象</h1></div>
@@ -537,14 +537,8 @@ The bind() examples in the
 </ul>
 <p><a name="REQ" id="REQ"></a></p>
 <hr />
-<p><strong>Before you go on:</strong> To run these examples successfully, you must either turn off schema-checking in the server or add 
-<a class="SourceLink" target="_blank" href="../software/config/java.schema" onclick="showCode('../../displayCode.html', '../software/config/java.schema'); return false;"><code>the Java schema</code></a> that accompany this tutorial to the server. This task is typically performed by the directory server's administrator. See the 
-<a class="TutorialLink" target="_top" href="../software/content.html#SCHEMA">Software Setup</a> lesson for more information.</p>
-<p><strong>Windows Active Directory:</strong> 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#rebind-javax.naming.Name-java.lang.Object-"><tt>Context.rebind()</tt></a> and 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html#rebind-javax.naming.Name-java.lang.Object-javax.naming.directory.Attributes-"><tt>DirContext.rebind()</tt></a> do not work against Active Directory because these methods work by reading the attributes of the entry to be updated, removing the entry, and then adding a new entry that contains the modified attributes. Active Directory returns some attributes that cannot be set by the user, causing the final addition step to fail. The workaround for this problem is to use 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html#getAttributes-javax.naming.Name-"><tt>DirContext.getAttributes()</tt></a> to obtain and save the attributes that you want to keep. Then, remove the entry and add it back with the saved attributes (and any others that you want to add) using 
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html#bind-javax.naming.Name-java.lang.Object-javax.naming.directory.Attributes-"><tt>DirContext.bind()</tt></a>.</p>
+<p><strong>Before you go on:</strong>To run these examples successfully, you must either turn off schema-checking in the server or add <a class="SourceLink" target="_blank" href="../software/config/java.schema" onclick="showCode('../../displayCode.html', '../software/config/java.schema'); return false;"><code>the Java schema</code></a> that accompany this tutorial to the server. This task is typically performed by the directory server's administrator. See the <a class="TutorialLink" target="_top" href="../software/content.html#SCHEMA">Software Setup</a> lesson for more information.</p>
+<p><strong>Windows Active Directory:</strong><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#rebind-javax.naming.Name-java.lang.Object-"><tt>Context.rebind()</tt></a> and <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html#rebind-javax.naming.Name-java.lang.Object-javax.naming.directory.Attributes-"><tt>DirContext.rebind()</tt></a> do not work against Active Directory because these methods work by reading the attributes of the entry to be updated, removing the entry, and then adding a new entry that contains the modified attributes. Active Directory returns some attributes that cannot be set by the user, causing the final addition step to fail. The workaround for this problem is to use <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html#getAttributes-javax.naming.Name-"><tt>DirContext.getAttributes()</tt></a> to obtain and save the attributes that you want to keep. Then, remove the entry and add it back with the saved attributes (and any others that you want to add) using <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html#bind-javax.naming.Name-java.lang.Object-javax.naming.directory.Attributes-"><tt>DirContext.bind()</tt></a>.</p>
 
 
         </div>

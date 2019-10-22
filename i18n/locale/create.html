@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>创建区域设置(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置区域设置)
+        <title>创建语言环境(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置语言环境)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
@@ -471,12 +471,12 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">设置区域设置</a></div>
-<div class="nolinkAHEAD">创建区域设置</div>
+            <div class="linkLESSON"><a href="index.html">设置语言环境</a></div>
+<div class="nolinkAHEAD">创建语言环境</div>
 <div class="linkAHEAD"><a href="extensions.html">BCP 47 扩展</a></div>
-<div class="linkAHEAD"><a href="identify.html">识别可用的区域设置</a></div>
+<div class="linkAHEAD"><a href="identify.html">识别可用的语言环境</a></div>
 <div class="linkAHEAD"><a href="matching.html">语言标签过滤和查找</a></div>
-<div class="linkAHEAD"><a href="scope.html">区域设置的范围</a></div>
+<div class="linkAHEAD"><a href="scope.html">语言环境的范围</a></div>
 <div class="linkAHEAD"><a href="services.html">区域敏感服务 SPI</a></div>
 </div>
     </div>
@@ -486,17 +486,17 @@
         <br /><b>Lesson:</b> Setting the Locale
     </div>
             <div id="BreadCrumbs">
-                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置区域设置</a>
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置语言环境</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="extensions.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="extensions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>创建区域设置</h1></div>
+            <div id="PageTitle"><h1>创建语言环境</h1></div>
             <div id="PageContent"><!-- Creating a Locale -->
 
 
-<p>有几种方法可以创建 <code>Locale</code> 对象。无论使用何种技术，创建都可以像指定语言代码一样简单。但是，您可以通过设置区域(也称为“国家/地区”)和变体代码来进一步区分区域设置。如果您使用的是 JDK 7 或更高版本，则还可以指定脚本代码和 Unicode 区域设置扩展。</p>
+<p>有几种方法可以创建 <code>Locale</code> 对象。无论使用何种技术，创建都可以像指定语言代码一样简单。但是，你可以通过设置区域(也称为“国家/地区”)和变体代码来进一步区分语言环境。如果你使用的是 JDK 7 或更高版本，则还可以指定脚本代码和 Unicode 语言环境扩展。</p>
 <p>创建 <code>Locale</code> 对象的四种方法是：</p>
 <ul>
 <li><a href="#builder"><code>Locale.Builder</code> 类</a></li>
@@ -504,7 +504,7 @@
 <li><a href="#factory"><code>Locale.forLanguageTag</code> 工厂方法</a></li>
 <li><a href="#constants"><code>Locale</code> 常量</a></li>
 </ul>
-<div class="note"><hr /><strong>Version Note:</strong> 在 Java SE 7 发行版中添加了 <code>Locale.Builder</code> 类和 <code>forLanguageTag</code> 方法。
+<div class="note"><hr /><strong>版本说明:</strong>&nbsp;在 Java SE 7 发行版中添加了 <code>Locale.Builder</code> 类和 <code>forLanguageTag</code> 方法。
 <hr /></div>
 <h2><a name="builder" id="builder"><code>LocaleBuilder</code> 类</a></h2>
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.Builder.html"><code>Locale.Builder</code></a> 实用程序类可用于构造符合 IETF BCP 47 语法的 <code>Locale</code> 对象。例如，要指定法语和加拿大的国家/地区，可以调用 <code>Locale.Builder</code> 构造函数，然后按如下方式链接 setter 方法：</p>
@@ -539,7 +539,7 @@ dLocale = new Locale("ru");
 </pre></div>
 <p>在 JDK 7 之前的版本中，无法在 <code>Locale</code> 对象上设置脚本代码。</p>
 <h2><a name="factory" id="factory"><code>forLanguageTag</code> 工厂方法</a></h2>
-<p>如果您的语言标记字符串符合 IETF BCP 47 标准，则可以使用 Java SE 7 发行版中引入的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-"><code>forLanguageTag(String)</code></a> 工厂方法。例如：</p>
+<p>如果你的语言标记字符串符合 IETF BCP 47 标准，则可以使用 Java SE 7 发行版中引入的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-"><code>forLanguageTag(String)</code></a> 工厂方法。例如：</p>
 <div class="codeblock"><pre>
 Locale aLocale = Locale.forLanguageTag("en-US");
 Locale bLocale = Locale.forLanguageTag("ja-JP-u-ca-japanese");
@@ -565,7 +565,7 @@ j6Locale = new Locale("ja", "JP");
 <h2>代码</h2>
 <p>以下部分讨论语言代码和可选脚本，区域和变体代码。</p>
 <h3>语言代码</h3>
-<p>语言代码是符合 ISO 639 标准的两个或三个小写字母。您可以在 <a class="OutsideLink" target="_blank" href="http://www.loc.gov/standards/iso639-2/php/code_list.php">http://www.loc.gov/standards/iso639-2/php/code_list.php</a> 找到 ISO 639 代码的完整列表。</p>
+<p>语言代码是符合 ISO 639 标准的两个或三个小写字母。你可以在 <a class="OutsideLink" target="_blank" href="http://www.loc.gov/standards/iso639-2/php/code_list.php">http://www.loc.gov/standards/iso639-2/php/code_list.php</a> 找到 ISO 639 代码的完整列表。</p>
 <p>下表列出了一些语言代码。</p>
 <table border="1" summary="此表列出了一些示例语言代码">
 <caption>示例语言代码</caption>
@@ -609,7 +609,7 @@ j6Locale = new Locale("ja", "JP");
 </tr>
 </table>
 <h3>脚本代码</h3>
-<p>脚本代码以大写字母开头，后跟三个小写字母，符合 ISO 15924 标准。您可以在 <a class="OutsideLink" target="_blank" href="http://unicode.org/iso15924/iso15924-codes.html">http://unicode.org/iso15924/iso15924-codes.html</a> 找到 ISO 15924 代码的完整列表。</p>
+<p>脚本代码以大写字母开头，后跟三个小写字母，符合 ISO 15924 标准。你可以在 <a class="OutsideLink" target="_blank" href="http://unicode.org/iso15924/iso15924-codes.html">http://unicode.org/iso15924/iso15924-codes.html</a> 找到 ISO 15924 代码的完整列表。</p>
 <p>下表列出了一些脚本代码。</p>
 <table border="1" summary="此表列出了一些示例脚本代码">
 <caption>示例脚本代码</caption>
@@ -716,13 +716,13 @@ j6Locale = new Locale("ja", "JP");
 
 <p>可选的 <code>variant</code> 代码可用于进一步区分 <code>Locale</code>。例如，变体代码可用于指示区域代码未涵盖的辩证差异。</p>
 
-<div class="note"><hr /><strong>Version Note:</strong> 在 Java SE 7 发行版之前，变体代码有时用于识别不是特定于语言或区域的差异。例如，它可能已被用于识别计算平台之间的差异，例如 Windows 或 UNIX。根据 IETF BCP 47 标准，不鼓励这种使用。<br /><br />
-要定义与您的环境相关的非语言特定变体，请使用扩展机制，如 <a class="TutorialLink" target="_top" href="extensions.html">BCP 47 Extensions</a> 中所述。
+<div class="note"><hr /><strong>版本说明:</strong>&nbsp;在 Java SE 7 发行版之前，变体代码有时用于识别不是特定于语言或区域的差异。例如，它可能已被用于识别计算平台之间的差异，例如 Windows 或 UNIX。根据 IETF BCP 47 标准，不鼓励这种使用。<br /><br />
+要定义与你的环境相关的非语言特定变体，请使用扩展机制，如 <a class="TutorialLink" target="_top" href="extensions.html">BCP 47 Extensions</a> 中所述。
 <hr /></div>
 
-<p>从符合 IETF BCP 47 标准的 Java SE 7 版本开始，变体代码专门用于指示定义语言或其方言的其他变体。IETF BCP 47 标准对变体子标签强加了语法限制。您可以在 <a class="OutsideLink" target="_blank" href="http://www.iana.org/assignments/language-subtag-registry">http://www.iana.org/assignments/language-subtag-registry</a> 上查看变体代码列表(搜索 <em>variant</em>)。</p>
+<p>从符合 IETF BCP 47 标准的 Java SE 7 版本开始，变体代码专门用于指示定义语言或其方言的其他变体。IETF BCP 47 标准对变体子标签强加了语法限制。你可以在 <a class="OutsideLink" target="_blank" href="http://www.iana.org/assignments/language-subtag-registry">http://www.iana.org/assignments/language-subtag-registry</a> 上查看变体代码列表(搜索 <em>variant</em>)。</p>
 
-<p>例如，Java SE 使用变体代码来支持泰语。按照惯例，<code>NumberFormat</code> 对象用于 <code>th</code> 和 <code>th_TH</code> 语言环境的将使用常见的阿拉伯数字形状，或阿拉伯数字来格式化泰语数字。但是，<code>th_TH_TH</code> 区域设置的 <code>NumberFormat</code> 使用泰国数字形状。<a class="SourceLink" target="_blank" href="examples/ThaiDigits.java" onclick="showCode('../../displayCode.html', 'examples/ThaiDigits.java'); return false;"><code>ThaiDigits.java</code></a> 的片段演示了这一点：</p>
+<p>例如，Java SE 使用变体代码来支持泰语。按照规范，<code>NumberFormat</code> 对象用于 <code>th</code> 和 <code>th_TH</code> 语言环境的将使用常见的阿拉伯数字形状，或阿拉伯数字来格式化泰语数字。但是，<code>th_TH_TH</code> 语言环境的 <code>NumberFormat</code> 使用泰国数字形状。<a class="SourceLink" target="_blank" href="examples/ThaiDigits.java" onclick="showCode('../../displayCode.html', 'examples/ThaiDigits.java'); return false;"><code>ThaiDigits.java</code></a> 的片段演示了这一点：</p>
 
 <div class="codeblock"><pre>
 String outputString = new String();

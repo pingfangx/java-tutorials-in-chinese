@@ -487,7 +487,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">扩展机制</a>&gt;<a href="index.html" target="_top">创建和使用扩展</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="install.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="load.html">Next&nbsp;»</a>
+                <a target="_top" href="install.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="load.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>下载型扩展</h1></div>
@@ -507,7 +507,7 @@ Class-Path: b.jar
 <p>正在扮演下载型扩展的角色的类没有什么特别之处。它们被视为扩展，仅仅因为它们被其他 JAR 文件的清单引用。</p>
 <p>为了更好地理解下载型扩展如何工作，让我们创建一个并将其用于使用。</p>
 <h2>一个例子</h2>
-<p>假设您要创建一个使用上一节的 <code>RectangleArea</code> 类的 applet：</p>
+<p>假设你要创建一个使用上一节的 <code>RectangleArea</code> 类的 applet：</p>
 <div class="codeblock"><pre>
 public final class RectangleArea {  
     public static int area(java.awt.Rectangle r) {
@@ -515,8 +515,8 @@ public final class RectangleArea {
     }
 }
 </pre></div>
-<p>在上一节中，您将 <tt>RectangleArea</tt> 类放入安装型扩展中，方法是将包含它的 JAR 文件放入 JRE 的 <tt>lib/ext</tt> 目录中。通过使它成为一个安装型扩展，您可以让任何应用程序使用 <tt>RectangleArea</tt> 类，就像它是 Java 平台的一部分一样。</p>
-<p>如果您希望能够从 applet 使用 <tt>RectangleArea</tt> 类，情况会有所不同。例如，假设您有一个小程序 <code>AreaApplet</code>，它使用了类 <tt>RectangleArea</tt>：</p>
+<p>在上一节中，你将 <tt>RectangleArea</tt> 类放入安装型扩展中，方法是将包含它的 JAR 文件放入 JRE 的 <tt>lib/ext</tt> 目录中。通过使它成为一个安装型扩展，你可以让任何应用程序使用 <tt>RectangleArea</tt> 类，就像它是 Java 平台的一部分一样。</p>
+<p>如果你希望能够从 applet 使用 <tt>RectangleArea</tt> 类，情况会有所不同。例如，假设你有一个小程序 <code>AreaApplet</code>，它使用了类 <tt>RectangleArea</tt>：</p>
 <div class="codeblock"><pre>
 import java.applet.Applet;
 import java.awt.*;
@@ -538,15 +538,15 @@ public class AreaApplet extends Applet {
 }
 </pre></div>
 <p>此 applet 实例化一个 10 <var>x</var> 5 矩形，然后使用 <tt>RectangleArea.area</tt> 方法显示矩形面积。</p>
-<p>但是，您不能假设下载和使用您的 applet 的每个人都将在其系统上提供 <tt>RectangleArea</tt> 类，作为安装型扩展或其他方式。解决该问题的一种方法是从服务器端提供 <tt>RectangleArea</tt> 类，并且可以通过将其用作下载型扩展来实现。</p>
-<p>为了了解它是如何完成的，我们假设您已将 <code>AreaApplet</code> 打包在名为 <tt>AreaApplet.jar</tt> 的 JAR 文件中，并且打包了 <tt>RectangleArea</tt> 类在 <tt>RectangleArea.jar</tt> 中。为了将 <tt>RectangleArea.jar</tt> 视为下载型扩展，<tt>RectangleArea.jar</tt> 必须在 <tt>AreaApplet.jar</tt> 的清单中列出 <tt>Class-Path</tt> 头。<tt>AreaApplet.jar</tt> 的清单可能如下所示，例如：</p>
+<p>但是，你不能假设下载和使用你的 applet 的每个人都将在其系统上提供 <tt>RectangleArea</tt> 类，作为安装型扩展或其他方式。解决该问题的一种方法是从服务器端提供 <tt>RectangleArea</tt> 类，并且可以通过将其用作下载型扩展来实现。</p>
+<p>为了了解它是如何完成的，我们假设你已将 <code>AreaApplet</code> 打包在名为 <tt>AreaApplet.jar</tt> 的 JAR 文件中，并且打包了 <tt>RectangleArea</tt> 类在 <tt>RectangleArea.jar</tt> 中。为了将 <tt>RectangleArea.jar</tt> 视为下载型扩展，<tt>RectangleArea.jar</tt> 必须在 <tt>AreaApplet.jar</tt> 的清单中列出 <tt>Class-Path</tt> 头。<tt>AreaApplet.jar</tt> 的清单可能如下所示，例如：</p>
 <div class="codeblock"><pre>
 Manifest-Version: 1.0
 Class-Path: RectangleArea.jar
 </pre></div>
 <p>此清单中 <tt>Class-Path</tt> 头的值为 <tt>RectangleArea.jar</tt>，未指定路径，表示 <tt>RectangleArea.jar</tt> 位于与 applet 的 JAR 文件相同的目录。</p>
 <h2>有关 Class-Path 头的更多信息</h2>
-<p>如果 applet 或应用程序使用多个扩展，您可以在清单中列出多个 URL。例如，以下是有效的头：</p>
+<p>如果 applet 或应用程序使用多个扩展，你可以在清单中列出多个 URL。例如，以下是有效的头：</p>
 <div class="codeblock"><pre>
 Class-Path: area.jar servlet.jar images/
 </pre></div>
@@ -560,7 +560,7 @@ Class-Path: area.jar servlet.jar monitor.jar datasource.jar
 <p>下载型扩展可以是“菊花链的”，这意味着一个下载型扩展的清单可以有一个 <tt>Class-Path</tt> 头，其引用第二个扩展，其引用第三个扩展，依此类推。</p>
 <h2>安装下载型扩展</h2>
 <p>在上面的示例中，applet 下载型扩展只有在加载 applet 的浏览器仍在运行时才可用。但是，如果 applet 和扩展程序的清单中包含其他信息，则 applet 可以触发扩展程序的安装。</p>
-<p>由于此机制扩展了平台的核心 API，因此应明智地应用它。它很少适用于单个或一小组应用程序使用的接口。所有可见符号应遵循反向域名和类层次结构约定。</p>
+<p>由于此机制扩展了平台的核心 API，因此应明智地应用它。它很少适用于单个或一小组应用程序使用的接口。所有可见符号应遵循反向域名和类层次结构规范。</p>
 <p>基本要求是 applet 和它使用的扩展都在其清单中提供版本信息，并且它们是签名的。版本信息允许 Java Plug-in 确保扩展代码具有 applet 期望的版本。例如，<tt>AreaApplet</tt> 可以在其清单中指定 <tt>areatest</tt> 扩展：</p>
 <div class="codeblock"><pre>
 Manifest-Version: 1.0
@@ -585,12 +585,12 @@ Implementation-Version: 1.1.2
 <div class="codeblock"><pre>
 keytool -genkey -dname "cn=Fred" -alias test  -validity 180
 </pre></div>
-<p>系统将提示您输入密钥库和密钥密码。生成密钥后，可以对 jar 文件进行签名：</p>
+<p>系统将提示你输入密钥库和密钥密码。生成密钥后，可以对 jar 文件进行签名：</p>
 <div class="codeblock"><pre>
 jarsigner AreaApplet.jar test
 jarsigner area.jar test
 </pre></div>
-<p>系统将提示您输入密钥库和密钥密码。有关 <tt>keytool</tt>，<tt>jarsigner</tt> 和其他安全工具的更多信息，请参阅 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/SecurityToolsSummary.html">Summary of Tools for the Java 2 Platform Security</a>。</p>
+<p>系统将提示你输入密钥库和密钥密码。有关 <tt>keytool</tt>，<tt>jarsigner</tt> 和其他安全工具的更多信息，请参阅 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/SecurityToolsSummary.html">Summary of Tools for the Java 2 Platform Security</a>。</p>
 <p>这是 <tt>AreaDemo.html</tt>，它加载 applet 并导致下载和安装扩展代码：</p>
 <div class="codeblock"><pre>
 &lt;html&gt;

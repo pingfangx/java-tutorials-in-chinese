@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="nolinkBHEAD">将信息传递给方法或构造函数</div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,7 +512,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="constructors.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="objects.html">Next&nbsp;»</a>
+                <a target="_top" href="constructors.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="objects.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>将信息传递给方法或构造函数</h1></div>
@@ -536,10 +536,10 @@ public double computePayment(
 }
 </pre></div>
 <p>该方法有四个参数：贷款金额，利率，未来价值和期数。前三个是双精度浮点数，第四个是整数。这些参数在方法主体中使用，并且在运行时将采用传入的参数的值。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;<i>Parameters（形参）</i> 是指方法声明中的变量列表。<i>Arguments（实参）</i> 是调用方法时传入的实际值。当你调用一个方法时，使用的实参必须与形参的类型和顺序相匹配。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<i>Parameters (形参)</i> 是指方法声明中的变量列表。<i>Arguments (实参)</i> 是调用方法时传入的实际值。当你调用一个方法时，使用的实参必须与形参的类型和顺序相匹配。
 <hr /></div>
 <h2>参数类型</h2>
-<p>您可以将任何数据类型用于方法或构造函数的参数。这包括像 <code>computePayment</code> 方法中所看到的双精度浮点数和整数等基本数据类型以及对象和数组等引用数据类型。</p>
+<p>你可以将任何数据类型用于方法或构造函数的参数。这包括像 <code>computePayment</code> 方法中所看到的双精度浮点数和整数等基本数据类型以及对象和数组等引用数据类型。</p>
 <p>下面是一个接受数组作为参数的方法的示例。在此示例中，该方法创建一个新的 <code>Polygon</code> 对象并从 <code>Point</code> 对象的数组中初始化它(假设 <code>Point</code> 是一个表示一个 x，y 坐标的类)：</p>
 <div class="codeblock"><pre>
 public Polygon polygonFrom(Point[] corners) {
@@ -549,8 +549,8 @@ public Polygon polygonFrom(Point[] corners) {
 <div class="note"><hr /><strong>注意:</strong>&nbsp;如果要将方法传递给方法，请使用 <a class="TutorialLink" target="_top" href="lambdaexpressions.html">lambda expression</a> 或 <a class="TutorialLink" target="_top" href="methodreferences.html">method reference</a>。 
 <hr /></div>
 <h2><a name="varargs" id="varargs">任意数量的参数</a></h2>
-<p>您可以使用名为 <em>varargs</em> 的构造将任意数量的值传递给方法。当您不知道将有多少特定类型的参数传递给该方法时，您可以使用可变参数。这是手动创建数组的快捷方式(之前的方法可以使用可变参数而不是数组)。</p>
-<p>要使用可变参数，在最后一个参数的类型后面加上省略号(三个点，...)，空格和参数名称。然后可以用任意数量的该参数调用该方法，包括无。</p>
+<p>你可以使用名为 <em>varargs</em> 的构造将任意数量的值传递给方法。当你不知道将有多少特定类型的参数传递给该方法时，你可以使用可变参数。这是手动创建数组的快捷方式(之前的方法可以使用可变参数而不是数组)。</p>
+<p>要使用可变参数，在最后一个参数的类型后面加上省略号(三个点，...)，空格和参数名称。然后可以用任意数量的该参数调用该方法，包括零个。</p>
 <div class="codeblock"><pre>
 public Polygon polygonFrom(Point... corners) {
     int numberOfSides = corners.length;
@@ -566,11 +566,11 @@ public Polygon polygonFrom(Point... corners) {
 }
 </pre></div>
 <p>你可以看到，在该方法中，<code>corners</code> 被视为一个数组。该方法可以通过一个数组或一系列参数来调用。在任何一种情况下，方法主体中的代码都会将参数视为数组。</p>
-<p>打印方法的可变参数是你会最常见的;例如，这个 <code>printf</code> 方法：</p>
+<p>打印方法的可变参数是你最常见的;例如，这个 <code>printf</code> 方法：</p>
 <div class="codeblock"><pre>
 public PrintStream printf(String format, Object... args)
 </pre></div>
-<p>允许您打印任意数量的对象。它可以这样调用：</p>
+<p>允许你打印任意数量的对象。它可以这样调用：</p>
 <div class="codeblock"><pre>
 System.out.printf("%s: %d, %s%n", name, idnum, address);
 </pre></div>
@@ -582,7 +582,7 @@ System.out.printf("%s: %d, %s, %s, %s%n", name, idnum, address, phone, email);
 <h2>参数名称</h2>
 <p>向方法或构造函数声明参数时，要为该参数提供一个名称。该名称在方法体内用于引用传入的参数。</p>
 <p>参数的名称在其范围内必须是唯一的。它不能与同一方法或构造函数的另一个参数的名称相同，也不能是方法或构造函数内的局部变量的名称。</p>
-<p>一个参数可以和一个类的字段名称相同。如果是这种情况，则该参数被称为 <i>shadow</i> 该字段。阴影字段可能会使您的代码难以阅读，并且通常仅用于设置特定字段的构造函数和方法中。例如，请考虑以下 <code>Circle</code> 类及其 <code>setOrigin</code> 方法：</p>
+<p>一个参数可以和一个类的字段名称相同。如果是这种情况，则该参数被称为 <i>shadow</i> 该字段。阴影字段可能会使你的代码难以阅读，并且通常仅用于设置特定字段的构造函数和方法中。例如，请考虑以下 <code>Circle</code> 类及其 <code>setOrigin</code> 方法：</p>
 <div class="codeblock"><pre>
 public class Circle {
     private int x, y, radius;
@@ -591,9 +591,9 @@ public class Circle {
     }
 }
 </pre></div>
-<p><code>Circle</code> 类有三个字段：<code>x</code>，<code>y</code> 和 <code>radius</code>。<code>setOrigin</code> 方法有两个参数，每个参数都与其中一个字段具有相同的名称。每个方法参数都会隐藏共享其名称的字段。因此，在方法体内使用简单名称 <code>x</code> 或 <code>y</code> 是指该字段的参数 <i>而不是</i>字段。要访问该字段，您必须使用限定名称。这将在本课稍后的标题为 "使用 <code>this</code> 关键字" 部分进行讨论。</p>
-<h2>传递基本数据类型参数</h2>
-<p>基本参数（如 <code>int</code> 或 <code>double</code>）<i>通过值</i>传递到方法中。这意味着对参数值的任何更改仅存在于该方法的范围内。当该方法返回时，参数将消失，对其进行的任何更改都将丢失。这里是一个例子：</p>
+<p><code>Circle</code> 类有三个字段：<code>x</code>，<code>y</code> 和 <code>radius</code>。<code>setOrigin</code> 方法有两个参数，每个参数都与其中一个字段具有相同的名称。每个方法参数都会隐藏共享其名称的字段。因此，在方法体内使用简单名称 <code>x</code> 或 <code>y</code> 会引用参数 <i>而不是</i>字段。要访问该字段，你必须使用限定名称。这将在本课稍后的标题为 "使用 <code>this</code> 关键字" 部分进行讨论。</p>
+<h2>传递基本数据类型实参</h2>
+<p>基本参数（如 <code>int</code> 或 <code>double</code>）<i>通过值</i> 传递到方法中。这意味着对参数值的任何更改仅存在于该方法的范围内。当该方法返回时，参数将消失，对其进行的任何更改都将丢失。这里是一个例子：</p>
 <div class="codeblock"><pre>
 public class PassPrimitiveByValue {
 
@@ -621,8 +621,8 @@ public class PassPrimitiveByValue {
 <div class="codeblock"><pre>
 After invoking passMethod, x = 3
 </pre></div>
-<h2>传递引用数据类型参数</h2>
-<p>引用数据类型的参数（如对象）也<i>通过值</i>传递到方法中。这意味着当方法返回时，传入的引用仍然引用与之前相同的对象。<i>然而</i>，如果对象的字段的值具有适当的访问级别，则<i>可以</i>在该方法中更改该字段。</p>
+<h2>传递引用数据类型实参</h2>
+<p>引用数据的类型形参（如对象）也 <i>通过值</i> 传递到方法中。这意味着当方法返回时，传入的引用仍然引用与之前相同的对象。<i>然而</i>，如果对象的字段的值具有适当的访问级别，则 <i>可以</i> 在该方法中更改该字段。</p>
 <p>例如，考虑任意类中的移动 <code>Circle</code> 对象的方法：</p>
 <div class="codeblock"><pre>
 public void moveCircle(Circle circle, int deltaX, int deltaY) {

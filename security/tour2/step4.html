@@ -490,7 +490,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Java SE 中的安全功能</a>&gt;<a href="index.html" target="_top">快速浏览控制应用程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="wstep3.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../sigcert/index.html">Next&nbsp;»</a>
+                <a target="_top" href="wstep3.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../sigcert/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>查看策略文件效果</h1></div>
@@ -504,7 +504,7 @@
 <ul><li><b>Windows</b>: <code><i>java.home</i>\lib\security\java.security</code></li>
 <li><b>UNIX</b>: <code><i>java.home</i>/lib/security/java.security</code></li></ul>
 
-<p><b>Note:</b>&nbsp;&nbsp; The <tt>java.home</tt> environment variable names the directory into which the JRE was installed.</p>
+<p><b>注意:</b>&nbsp;&nbsp; The <tt>java.home</tt> environment variable names the directory into which the JRE was installed.</p>
 <p>The policy file locations are specified as the values of properties whose names take the form:</p>
 <div class="codeblock"><pre>
 policy.url.<i>n</i>
@@ -534,8 +534,7 @@ policy.url.2=file:${user.home}/.java.policy
 <h2><a name="Approach2" id="Approach2">Approach 2</a></h2>
 <p>You can specify a number of URLs in <code>policy.url.n</code> properties in the security properties file, and all the designated policy files will get loaded. So one way to have your <code>examplepolicy</code> file's policy entries considered by the <code>java</code> interpreter is to add an entry specifying that policy file in the security properties file.</p>
 
-<div class="note"><hr /><strong>Important:</strong>&nbsp;If you are running your own copy of the JDK, you can easily edit your security properties file. If you are running a version shared with other users, you may only be able to modify the system-wide security properties file if you have write access to it or if you ask your system administrator to modify the file when appropriate. However, it's probably not appropriate for you to make modifications to a system-wide policy file for this tutorial test. We suggest that you just read the following to see how it is done or that you install your own private version of the JDK to use for the tutorial lessons.
-
+<div class="note"><hr /><strong>重要:</strong>&nbsp;If you are running your own copy of the JDK, you can easily edit your security properties file. If you are running a version shared with other users, you may only be able to modify the system-wide security properties file if you have write access to it or if you ask your system administrator to modify the file when appropriate. However, it's probably not appropriate for you to make modifications to a system-wide policy file for this tutorial test. We suggest that you just read the following to see how it is done or that you install your own private version of the JDK to use for the tutorial lessons.
 <hr /></div>
 
 <p>To modify the security properties file, open it in an editor suitable for editing an ASCII text file. Then add the following line after the line containing <code>policy.url.2</code>: If you're on a Windows system, add</p>
@@ -557,7 +556,7 @@ policy.url.2=file:${user.home}/.java.policy
 </pre></div>
 <p>As with approach 1, if you still get a security exception, something is wrong in the policy file. Use the Policy Tool to check the policy entry you just created in the <a href="step3.html">Set up the Policy File to Grant the Required Permissions</a>&nbsp; step. Then fix any typos or other errors.</p>
 <hr />
-<div class="note"><hr /><strong>Important:</strong>&nbsp;You do not need to include the <code>examplepolicy</code> file unless you are running this Tutorial lesson. To exclude this file, open the security properties file and delete the line you just added.<br /><br />
+<div class="note"><hr /><strong>重要:</strong>&nbsp;You do not need to include the <code>examplepolicy</code> file unless you are running this Tutorial lesson. To exclude this file, open the security properties file and delete the line you just added.<br /><br />
 
 Before continuing, you may want to delete the line you just added in the security properties file (or comment it out), since you probably do not want the <code>examplepolicy</code> file included when you are not running the tutorial lessons.
 

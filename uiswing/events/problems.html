@@ -512,25 +512,25 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">编写事件监听器</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="api.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../QandE/questions-ch5.html">Next&nbsp;»</a>
+                <a target="_top" href="api.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../QandE/questions-ch5.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>解决常见的事件处理问题</h1></div>
             <div id="PageContent">
 
 <p>This section discusses problems that you might encounter while handling events.</p>
-<p><strong>Problem:</strong> I'm trying to handle certain events from a component, but the component isn't generating the events it should.</p>
+<p><strong>Problem:</strong>I'm trying to handle certain events from a component, but the component isn't generating the events it should.</p>
 <ul>
 <li>First, make sure you registered the right kind of listener to detect the events. See whether another kind of listener might detect the kind of events you need.</li>
 <li>Make sure you registered the listener on the right object.</li>
 <li>Did you implement the event handler correctly? For example, if you extended an adapter class, then make sure you used the right method signature. Make sure each event-handling method is <code>public void</code>, that the name spelled right and that the argument is of the right type.</li>
 </ul>
-<p><strong>Problem:</strong> My combo box isn't generating low-level events such as focus events.</p>
+<p><strong>Problem:</strong>My combo box isn't generating low-level events such as focus events.</p>
 <ul>
 <li>Combo boxes are compound components — components implemented using multiple components. For this reason, combo boxes don't fire the low-level events that simple components fire. For more information, see 
 <a class="TutorialLink" target="_top" href="../components/combobox.html#listeners">Handling Events on a Combo Box</a>.</li>
 </ul>
-<p><strong>Problem:</strong> The document for an editor pane (or text pane) isn't firing document events.</p>
+<p><strong>Problem:</strong>The document for an editor pane (or text pane) isn't firing document events.</p>
 <ul>
 <li>The document instance for an editor pane or text pane might change when loading text from a URL. Thus, your listeners might be listening for events on an unused document. For example, if you load an editor pane or text pane with HTML that was previously loaded with plain text, the document will change to an <code>HTMLDocument</code> instance. If your program dynamically loads text into an editor pane or text pane, make sure the code adjusts for possible changes to the document (re-register document listeners on the new document, and so on).</li>
 </ul>

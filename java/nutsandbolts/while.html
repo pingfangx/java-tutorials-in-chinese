@@ -480,7 +480,7 @@
 <div class="linkAHEAD"><a href="operators.html">运算符</a></div>
 <div class="linkBHEAD"><a href="op1.html">赋值，算术和一元运算符</a></div>
 <div class="linkBHEAD"><a href="op2.html">相等性，关系和条件运算符 </a></div>
-<div class="linkBHEAD"><a href="op3.html">按位和位移运算符</a></div>
+<div class="linkBHEAD"><a href="op3.html">位运算和移位运算符</a></div>
 <div class="linkBHEAD"><a href="opsummary.html">运算符总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_operators.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="expressions.html">表达式，语句和块</a></div>
@@ -505,7 +505,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">语言基础</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="switch.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="for.html">Next&nbsp;»</a>
+                <a target="_top" href="switch.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="for.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>while 和 do-while 语句</h1></div>
@@ -517,7 +517,7 @@ while (expression) {
      statement(s)
 }
 </pre></div>
-<p><code>while</code> 语句计算 <i>expression</i> 时，必须返回 <code>boolean</code> 值。如果表达式的计算结果为 <code>true</code>，则 <code>while</code> 语句在 <code>while</code> 块中执行 <em>statement</em>(s)。<code>while</code> 语句继续测试表达式并执行其块，直到表达式计算为 <code>false</code>。使用 <code>while</code> 语句打印 1 到 10 的值可以按照以下 <a class="SourceLink" target="_blank" href="examples/WhileDemo.java" onclick="showCode('../../displayCode.html', 'examples/WhileDemo.java'); return false;"><code>WhileDemo</code></a> 程序完成：</p>
+<p><code>while</code> 语句计算 <i>expression (表达式)</i> 时，必须返回 <code>boolean</code> 值。如果表达式的计算结果为 <code>true</code>，则 <code>while</code> 语句在 <code>while</code> 块中执行 <em>statement</em>(s)。<code>while</code> 语句继续测试表达式并执行其块，直到表达式计算为 <code>false</code>。使用 <code>while</code> 语句打印 1 到 10 的值可以按照以下 <a class="SourceLink" target="_blank" href="examples/WhileDemo.java" onclick="showCode('../../displayCode.html', 'examples/WhileDemo.java'); return false;"><code>WhileDemo</code></a> 程序完成：</p>
 <div class="codeblock"><pre>
 
 class WhileDemo {
@@ -530,7 +530,7 @@ class WhileDemo {
     }
 }
 </pre></div>
-<p>您可以使用 <code>while</code> 语句中实现无限循环，如下所示：</p>
+<p>你可以使用 <code>while</code> 语句中实现无限循环，如下所示：</p>
 <div class="codeblock"><pre>
 while (true){
     // your code goes here

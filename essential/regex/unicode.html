@@ -479,7 +479,7 @@
 <div class="linkAHEAD"><a href="pre_char_classes.html">预定义的字符类</a></div>
 <div class="linkAHEAD"><a href="quant.html">量词</a></div>
 <div class="linkAHEAD"><a href="groups.html">捕获组</a></div>
-<div class="linkAHEAD"><a href="bounds.html">边界匹配器</a></div>
+<div class="linkAHEAD"><a href="bounds.html">边界匹配</a></div>
 <div class="linkAHEAD"><a href="pattern.html">Pattern 类的方法</a></div>
 <div class="linkAHEAD"><a href="matcher.html">Matcher 类的方法</a></div>
 <div class="linkAHEAD"><a href="pse.html">PatternSyntaxException 类的方法</a></div>
@@ -497,7 +497,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">正则表达式</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="pse.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="resources.html">Next&nbsp;»</a>
+                <a target="_top" href="pse.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="resources.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Unicode 支持</h1></div>
@@ -509,19 +509,19 @@
 <li><a href="#properties">Unicode 字符属性</a></li>
 </ul>
 <h2><a name="matchingSpecific" id="matchingSpecific">匹配特定的代码点</a></h2>
-<p>您可以使用格式 <code>\uFFFF</code> 的转义序列匹配特定的 Unicode 代码点，其中 <code>FFFF</code> 是要匹配的代码点的十六进制值。例如，<code>\u6771</code> 匹配东方的汉字符。</p>
-<p>或者，您可以使用 Perl 样式的十六进制表示法 <code>\x{...}</code> 指定代码点。例如：</p>
+<p>你可以使用格式 <code>\uFFFF</code> 的转义序列匹配特定的 Unicode 代码点，其中 <code>FFFF</code> 是要匹配的代码点的十六进制值。例如，<code>\u6771</code> 匹配东方的汉字符。</p>
+<p>或者，你可以使用 Perl 样式的十六进制表示法 <code>\x{...}</code> 指定代码点。例如：</p>
 <div class="codeblock"><pre>
 String hexPattern = "\x{" + Integer.toHexString(codePoint) + "}";
 </pre></div>
 <h2><a name="properties" id="properties">Unicode 字符属性</a></h2>
-<p>除了其值之外，每个 Unicode 字符都具有某些属性（attributes）或属性（properties）。您可以将属于特定类别的单个字符与表达式 <code>\p{<em>prop</em>}</code> 进行匹配。您可以使用表达式 <code>\P{<em>prop</em>}</code> 匹配 <em>不</em> 属于特定类别的单个字符。</p>
+<p>除了其值之外，每个 Unicode 字符都具有某些属性（attributes）或属性（properties）。你可以将属于特定类别的单个字符与表达式 <code>\p{<em>prop</em>}</code> 进行匹配。你可以使用表达式 <code>\P{<em>prop</em>}</code> 匹配 <em>不</em> 属于特定类别的单个字符。</p>
 <p>支持的三种属性类型是脚本，块和“常规”类别。</p>
 <h3>脚本</h3>
-<p>要确定代码点是否属于特定脚本，可以使用 <code>script</code> 关键字或 <code>sc</code> 简短格式，例如 <code>\p{script=Hiragana}</code>。或者，您可以在脚本名称前加上字符串 <code>Is</code>，例如 <code>\p{IsHiragana}</code>。</p>
+<p>要确定代码点是否属于特定脚本，可以使用 <code>script</code> 关键字或 <code>sc</code> 简短格式，例如 <code>\p{script=Hiragana}</code>。或者，你可以在脚本名称前加上字符串 <code>Is</code>，例如 <code>\p{IsHiragana}</code>。</p>
 <p><code>Pattern</code> 支持的有效脚本名称是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.UnicodeScript.html#forName-java.lang.String-"><code>UnicodeScript.forName</code></a> 接受的名称。</p>
 <h3>块</h3>
-<p>可以使用 <code>block</code> 关键字或 <code>blk</code> 短格式指定块，例如 <code>\p{block=Mongolian}</code>。或者，您可以在块名称前加上字符串 <code>In</code>，例如 <code>\p{InMongolian}</code>。</p>
+<p>可以使用 <code>block</code> 关键字或 <code>blk</code> 短格式指定块，例如 <code>\p{block=Mongolian}</code>。或者，你可以在块名称前加上字符串 <code>In</code>，例如 <code>\p{InMongolian}</code>。</p>
 <p><code>Pattern</code> 支持的有效块名称是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.UnicodeBlock.html#forName-java.lang.String-"><code>UnicodeBlock.forName</code></a> 接受的名称。</p>
 <h3>常规类别</h3>
 <p>可以使用可选前缀 <code>Is</code> 指定类别。例如，<code>IsL</code> 与 Unicode 字母的类别匹配。也可以使用 <code>general_category</code> 关键字或短格式 <code>gc</code> 指定类别。例如，可以使用 <code>general_category=Lu</code> 或 <code>gc=Lu</code> 匹配大写字母。</p>

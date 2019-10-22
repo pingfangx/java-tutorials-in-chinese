@@ -401,11 +401,11 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p><strong>Question:</strong> 以下字符串生成器的初始容量是多少？</p>
+<p><strong>问题:</strong>以下 string builder 的初始容量是多少？</p>
 <div class="codeblock"><pre>
 StringBuilder sb = new StringBuilder("Able was I ere I saw Elba.");
 </pre></div>
-<p><strong>Answer:</strong> 初始字符串的长度+ 16：26 + 16 = 42。</p>
+<p><strong>答案:</strong>初始字符串的长度+ 16：26 + 16 = 42。</p>
 </li>
 <li>
 <p>请考虑以下字符串：</p>
@@ -414,28 +414,28 @@ String hannah = "Did Hannah see bees? Hannah did.";
 </pre></div>
 <ol type="a">
 <li>
-<p><strong>Question:</strong> 表达式 <code>hannah.length()</code> 显示的值是多少？</p>
-<p><strong>Answer:</strong> 32.</p>
+<p><strong>问题:</strong>表达式 <code>hannah.length()</code> 显示的值是多少？</p>
+<p><strong>答案:</strong>32.</p>
 </li>
 <li>
-<p><strong>Question:</strong> 方法调用 <code>hannah.charAt(12)</code> 返回的值是多少？</p>
-<p><strong>Answer:</strong> <code>e</code>.</p>
+<p><strong>问题:</strong>方法调用 <code>hannah.charAt(12)</code> 返回的值是多少？</p>
+<p><strong>答案:</strong><code>e</code>.</p>
 </li>
 <li>
-<p><strong>Question:</strong> 写一个表达式，引用 <code>hannah</code> 引用的字符串中的字母 <code>b</code>。</p>
-<p><strong>Answer:</strong> <code>hannah.charAt(15)</code>.</p>
+<p><strong>问题:</strong>写一个表达式，引用 <code>hannah</code> 引用的字符串中的字母 <code>b</code>。</p>
+<p><strong>答案:</strong><code>hannah.charAt(15)</code>.</p>
 </li>
 </ol>
 </li>
 <li>
-<p><strong>Question:</strong> 以下表达式返回的字符串有多长？什么是 string？</p>
+<p><strong>问题:</strong>下面的表达式返回的字符串有多长？该字符串是什么？</p>
 <div class="codeblock"><pre>
 "Was it a car or a cat I saw?".substring(9, 12)
 </pre></div>
-<p><strong>Answer:</strong> 长度为 3 个字符：<code>car</code>。它不包括 car 后的空间。</p>
+<p><strong>答案:</strong>长度为 3 个字符：<code>car</code>。它不包括 car 后的空间。</p>
 </li>
 <li>
-<p><strong>Question:</strong> 在以下程序中，名为 <a class="SourceLink" target="_blank" href="ComputeResult.java" onclick="showCode('../../../displayCode.html', 'ComputeResult.java'); return false;"><code>ComputeResult</code></a>，每个编号行执行后 <code>result</code> 的值是多少？</p>
+<p><strong>问题:</strong>在以下程序中，名为 <a class="SourceLink" target="_blank" href="ComputeResult.java" onclick="showCode('../../../displayCode.html', 'ComputeResult.java'); return false;"><code>ComputeResult</code></a>，每个编号行执行后 <code>result</code> 的值是多少？</p>
 <div class="codeblock"><pre>
 public class ComputeResult {
     public static void main(String[] args) {
@@ -466,17 +466,16 @@ public class ComputeResult {
 <h2>练习</h2>
 <ol>
 <li>
-<p><strong>Exercise:</strong> 显示两种方法将以下两个字符串连接在一起以获取字符串 <code>"Hi, mom."</code>：</p>
+<p><strong>练习:</strong>显示两种方法将以下两个字符串连接在一起以获取字符串 <code>"Hi, mom."</code>：</p>
 <div class="codeblock"><pre>
 String hi = "Hi, ";
 String mom = "mom.";
 </pre></div>
-<p><strong>Answer:</strong> <code>hi.concat(mom)</code> 和 <code>hi + mom</code>。</p>
+<p><strong>答案:</strong><code>hi.concat(mom)</code> 和 <code>hi + mom</code>。</p>
 </li>
 <li>
-<p><strong>Exercise:</strong> 编写一个程序，用您的全名计算首字母并显示它们。</p>
-<p><strong>Answer:</strong> 
-<a class="SourceLink" target="_blank" href="ComputeInitials.java" onclick="showCode('../../../displayCode.html', 'ComputeInitials.java'); return false;"><code>ComputeInitials</code></a></p>
+<p><strong>练习:</strong>编写一个程序，用你的全名计算首字母并显示它们。</p>
+<p><strong>答案:</strong><a class="SourceLink" target="_blank" href="ComputeInitials.java" onclick="showCode('../../../displayCode.html', 'ComputeInitials.java'); return false;"><code>ComputeInitials</code></a></p>
 <div class="codeblock"><pre>
 
 public class ComputeInitials {
@@ -496,9 +495,8 @@ public class ComputeInitials {
 </pre></div>
 </li>
 <li>
-<p><strong>Exercise:</strong> 变位词（anagram）是通过转换另一个单词或短语的字母而形成的单词或短语;例如，"parliament" 是 "partial men" 的变位词，"software" 是 "swear oft" 的变位词。编写一个程序，确定一个字符串是否是另一个字符串的变位词。该程序应忽略空格和标点符号。</p>
-<p><strong>Answer:</strong> 
-<a class="SourceLink" target="_blank" href="Anagram.java" onclick="showCode('../../../displayCode.html', 'Anagram.java'); return false;"><code>Anagram</code></a></p>
+<p><strong>练习:</strong>变位词（anagram）是通过转换另一个单词或短语的字母而形成的单词或短语;例如，"parliament" 是 "partial men" 的变位词，"software" 是 "swear oft" 的变位词。编写一个程序，确定一个字符串是否是另一个字符串的变位词。该程序应忽略空格和标点符号。</p>
+<p><strong>答案:</strong><a class="SourceLink" target="_blank" href="Anagram.java" onclick="showCode('../../../displayCode.html', 'Anagram.java'); return false;"><code>Anagram</code></a></p>
 <div class="codeblock"><pre> 
 
 public class Anagram {

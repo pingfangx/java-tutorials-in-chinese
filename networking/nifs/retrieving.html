@@ -487,13 +487,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">编程访问网络参数</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="definition.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="listing.html">Next&nbsp;»</a>
+                <a target="_top" href="definition.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="listing.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>获取网络接口</h1></div>
             <div id="PageContent">
 
-<p><code>NetworkInterface</code> 类没有公共构造函数。因此，您不能仅使用 <code>new</code> 运算符创建此类的新实例。相反，以下静态方法可用，以便您可以从系统中获取接口详细信息：<code>getByInetAddress()</code>，<code>getByName()</code> 和 <code>getNetworkInterfaces()</code>。当您已经知道 IP 地址或特定接口的名称时，将使用前两种方法。第三种方法 <code>getNetworkInterfaces()</code> 返回机器上的完整接口列表。</p>
+<p><code>NetworkInterface</code> 类没有公共构造函数。因此，你不能仅使用 <code>new</code> 运算符创建此类的新实例。相反，以下静态方法可用，以便你可以从系统中获取接口详细信息：<code>getByInetAddress()</code>，<code>getByName()</code> 和 <code>getNetworkInterfaces()</code>。当你已经知道 IP 地址或特定接口的名称时，将使用前两种方法。第三种方法 <code>getNetworkInterfaces()</code> 返回机器上的完整接口列表。</p>
 <p>网络接口可以按层次结构组织。<code>NetworkInterface</code> 类包括两个与网络接口层次结构相关的方法，<code>getParent()</code> 和 <code>getSubInterfaces()</code>。<code>getParent()</code> 方法返回接口的父 <code>NetworkInterface</code>。如果网络接口是子接口，则 <code>getParent()</code> 将返回非空值。<code>getSubInterfaces()</code> 方法返回网络接口的所有子接口。</p>
 <p>以下示例程序列出了计算机上所有网络接口和子接口(如果存在)的名称。</p>
 <div class="codeblock"><pre>

@@ -500,7 +500,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>&gt;<a href="index.html" target="_top">标准日历</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="adjusters.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="period.html">Next&nbsp;»</a>
+                <a target="_top" href="adjusters.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="period.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Temporal Query</h1></div>
@@ -539,7 +539,7 @@ Instant precision is Nanos
 
 <h2>自定义查询</h2>
 <p>
-您还可以创建自己的自定义查询。一种方法是使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalQuery.html#queryFrom-java.time.temporal.TemporalAccessor-"><tt>queryFrom(TemporalAccessor)</tt></a> 方法创建一个实现 <tt>TemporalQuery</tt> 接口的类。<a class="SourceLink" target="_blank" href="examples/CheckDate.java" onclick="showCode('../../displayCode.html', 'examples/CheckDate.java'); return false;"><code><tt>CheckDate</tt></code></a> 示例实现了两个自定义查询。第一个自定义查询可以在 <a class="SourceLink" target="_blank" href="examples/FamilyVacations.java" onclick="showCode('../../displayCode.html', 'examples/FamilyVacations.java'); return false;"><code><tt>FamilyVacations</tt></code></a> 类中找到，该类实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalQuery.html"><tt>TemporalQuery</tt></a> 接口。<tt>queryFrom</tt> 方法将传入的日期与预定的休假日期进行比较，如果它落在这些日期范围内，则返回 <tt>TRUE</tt>。</p>
+你还可以创建自己的自定义查询。一种方法是使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalQuery.html#queryFrom-java.time.temporal.TemporalAccessor-"><tt>queryFrom(TemporalAccessor)</tt></a> 方法创建一个实现 <tt>TemporalQuery</tt> 接口的类。<a class="SourceLink" target="_blank" href="examples/CheckDate.java" onclick="showCode('../../displayCode.html', 'examples/CheckDate.java'); return false;"><code><tt>CheckDate</tt></code></a> 示例实现了两个自定义查询。第一个自定义查询可以在 <a class="SourceLink" target="_blank" href="examples/FamilyVacations.java" onclick="showCode('../../displayCode.html', 'examples/FamilyVacations.java'); return false;"><code><tt>FamilyVacations</tt></code></a> 类中找到，该类实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalQuery.html"><tt>TemporalQuery</tt></a> 接口。<tt>queryFrom</tt> 方法将传入的日期与预定的休假日期进行比较，如果它落在这些日期范围内，则返回 <tt>TRUE</tt>。</p>
 <div class="codeblock"><pre>
 // Returns true if the passed-in date occurs during one of the
 // family vacations. Because the query compares the month and day only,

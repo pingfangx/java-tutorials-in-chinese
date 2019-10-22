@@ -489,7 +489,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">注解</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="declaring.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="declaring.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>注解基础</h1></div>
@@ -502,14 +502,14 @@
 @Entity
 </pre></div>
 <p>
-at 符号字符(<code>@</code>)向编译器指示后面的内容是注解。在以下示例中，注解的名称为 <code>Override</code>：</p>
+at 字符(<code>@</code>)向编译器指示后面的内容是注解。在以下示例中，注解的名称为 <code>Override</code>：</p>
 <div class="codeblock"><pre>
 @Override
 void mySuperMethod() { ... }
 </pre></div>
 
 <p>
-注解可以包含 <em>elements</em>，可以是命名或未命名，并且这些元素有值：</p>
+注解可以包括 <em>elements (元素)</em>，这些元素可以命名或未命名，并且这些元素有值：</p>
 <div class="codeblock"><pre>
 @Author(
    name = "Benjamin Franklin",
@@ -550,9 +550,9 @@ class MyClass { ... }
 
 <h2>可以使用注解的位置</h2>
 <p>
-注解可以应用于声明：类，字段，方法和其他程序元素的声明。当在声明中使用时，每个注解通常按照惯例出现在它自己的行上。</p>
+注解可以应用于声明：类，字段，方法和其他程序元素的声明。当在声明中使用时，按照规范，每个注解通常出现在它自己的行上。</p>
 <p>
-从 Java SE 8 发行版开始，注解也可以应用于类型的 <em>使用（use）</em>。这里有些例子：</p>
+从 Java SE 8 发行版开始，注解也可以应用于类型的 <em>use (使用)</em>。这里有些例子：</p>
 <ul>
 <li>类实例创建表达式：
 <pre>
@@ -579,7 +579,7 @@ class MyClass { ... }
 </ul>
 
 <p>
-这种形式的注解称为 <em>type annotation</em>。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="type_annotations.html">Type Annotations and Pluggable Type Systems</a>。</p>
+这种形式的注解称为 <em>type annotation (类型注解)</em>。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="type_annotations.html">Type Annotations and Pluggable Type Systems</a>。</p>
 
         </div>
         <div class="NavBit">

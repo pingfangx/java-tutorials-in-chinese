@@ -487,7 +487,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">扩展机制</a>&gt;<a href="index.html" target="_top">创建和使用扩展</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="download.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="spi.html">Next&nbsp;»</a>
+                <a target="_top" href="download.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="spi.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>理解扩展类加载</h1></div>
@@ -497,15 +497,15 @@
 <ol>
 <li><b>Bootstrap classes (引导类)</b>：<tt>rt.jar</tt> 中的运行时类，<tt>i18n.jar</tt> 中的国际化类等。</li>
 <li><b>Installed extensions (安装型扩展)</b>：JRE 的 <tt>lib/ext</tt> 目录中的 JAR 文件中的类，以及系统范围内特定于平台的扩展目录（例如 Solaris 操作系统中的 <tt>/usr/jdk/packages/lib/ext</tt>，但请注意，此目录的使用仅适用于 Java™ 6 及更高版本。</li>
-<li><b>The class path (类路径)</b>：类，包括 JAR 文件中的类，由系统属性 <tt>java.class.path</tt> 指定的路径。如果类路径上的 JAR 文件具有带有 <code>Class-Path</code> 属性的清单，则还将搜索由 <code>Class-Path</code> 属性指定的 JAR 文件。默认情况下，<code>java.class.path</code> 属性的值为 <code>.</code>，即当前目录。您可以使用 <tt>-classpath</tt> 或 <tt>-cp</tt> 命令行选项或设置 <code>CLASSPATH</code> 环境变量来更改该值。命令行选项会覆盖 <code>CLASSPATH</code> 环境变量的设置。</li>
+<li><b>The class path (类路径)</b>：类，包括 JAR 文件中的类，由系统属性 <tt>java.class.path</tt> 指定的路径。如果类路径上的 JAR 文件具有带有 <code>Class-Path</code> 属性的清单，则还将搜索由 <code>Class-Path</code> 属性指定的 JAR 文件。默认情况下，<code>java.class.path</code> 属性的值为 <code>.</code>，即当前目录。你可以使用 <tt>-classpath</tt> 或 <tt>-cp</tt> 命令行选项或设置 <code>CLASSPATH</code> 环境变量来更改该值。命令行选项会覆盖 <code>CLASSPATH</code> 环境变量的设置。</li>
 </ol>
-<p>优先级列表告诉您，例如，只有在 <tt>rt.jar</tt>，<tt>i18n.jar</tt> 或安装型扩展未找到要加载的类时，才会搜索类路径。。</p>
-<p>除非您的软件出于特殊目的而实例化其自己的类加载器，否则您实际上并不需要了解更多信息，只需记住此优先级列表。特别是，您应该知道可能存在的任何类名冲突。例如，如果在类路径上列出一个类，如果运行时环境改为加载在安装型扩展中找到的同名的另一个类，则会得到意外的结果。</p>
+<p>优先级列表告诉你，例如，只有在 <tt>rt.jar</tt>，<tt>i18n.jar</tt> 或安装型扩展未找到要加载的类时，才会搜索类路径。。</p>
+<p>除非你的软件出于特殊目的而实例化其自己的类加载器，否则你实际上并不需要了解更多信息，只需记住此优先级列表。特别是，你应该知道可能存在的任何类名冲突。例如，如果在类路径上列出一个类，如果运行时环境改为加载在安装型扩展中找到的同名的另一个类，则会得到意外的结果。</p>
 <h2>Java 类加载机制</h2>
 <p>Java 平台使用委托模型来加载类。基本思想是每个类加载器都有一个“父”类加载器。在加载类时，类加载器首先将对类的搜索“委托”到其父类加载器，然后再尝试查找类本身。</p>
 <p>以下是类加载 API 的一些要点：</p>
 <ul>
-<li><tt>java.lang.ClassLoader</tt> 中的构造函数及其子类允许您在实例化新的类加载器时指定父级。如果未明确指定父级，则将将虚拟机的系统类加载器指定为默认父级。</li>
+<li><tt>java.lang.ClassLoader</tt> 中的构造函数及其子类允许你在实例化新的类加载器时指定父级。如果未明确指定父级，则将将虚拟机的系统类加载器指定为默认父级。</li>
 <li><tt>ClassLoader</tt> 中的 <tt>loadClass</tt> 方法在调用加载类时按顺序执行这些任务：
 <ol>
 <li>如果一个类已经加载了，则返回它。</li>
@@ -513,7 +513,7 @@
 <li>如果父类加载器未找到该类，则 <tt>loadClass</tt> 调用方法 <tt>findClass</tt> 以查找并加载该类。</li>
 </ol>
 </li>
-<li>如果父类加载器找不到类，<tt>ClassLoader</tt> 的 <tt>findClass</tt> 方法将在当前类加载器中搜索该类。在应用程序中实例化类加载器子类时，您可能希望覆盖此方法。</li>
+<li>如果父类加载器找不到类，<tt>ClassLoader</tt> 的 <tt>findClass</tt> 方法将在当前类加载器中搜索该类。在应用程序中实例化类加载器子类时，你可能希望覆盖此方法。</li>
 <li>类 <tt>java.net.URLClassLoader</tt> 用作扩展和其他 JAR 文件的基本类加载器，覆盖 <tt>java.lang.ClassLoader</tt> 的 <tt>findClass</tt> 方法搜索一个或多个指定的 URL 以查找类和资源。</li>
 </ul>
 <p>要查看使用与 JAR 文件相关的某些 API 的示例应用程序，请参阅本教程中的 <a class="TutorialLink" target="_top" href="../../deployment/jar/apiindex.html">Using JAR-related APIs</a> 课程。</p>

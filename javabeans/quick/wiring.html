@@ -487,7 +487,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">JavaBeans(TM)</a>&gt;<a href="index.html" target="_top">快速开始</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="button.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="addbean.html">Next&nbsp;»</a>
+                <a target="_top" href="button.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="addbean.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>连接应用程序</h1></div>
@@ -495,13 +495,13 @@
 
 <p>要将按钮和标签连接在一起，请单击可视设计器工具栏中的 <b>Connection Mode</b> 按钮。</p>
 <center><img src="../../figures/javabeans/connection-mode.png" width="301" height="212" align="bottom" alt="可视设计器工具栏中的连接模式按钮" /></center><p>单击 <code>SnapFrame</code> 表单中的按钮。Netbeans 用红色勾勒出按钮的轮廓，以表明它是将生成事件的组件。</p>
-<center><img src="../../figures/javabeans/SnapFrame-button-red.png" width="236" height="194" align="bottom" alt="NetBeans 勾勒出事件生成组件" /></center><p>单击标签。弹出 NetBeans 的 <b>Connection Wizard</b>。首先，您将选择要响应的事件。对于按钮，这是 <b>action</b> 事件。单击 <b>action</b> 旁边的 <b>+</b>，然后选择 <b>actionPerformed</b>。单击 <b>Next &gt;</b>。</p>
-<center><img src="../../figures/javabeans/SnapFrame-connection-1.png" width="500" height="338" align="bottom" alt="选择源事件" /></center><p>现在，您可以选择按钮触发 <b>action</b> 事件时会发生什么。<b>Connection Wizard</b> 列出标签 bean 中的所有属性。在列表中选择 <b>text</b>，然后单击 <b>Next</b>。</p>
+<center><img src="../../figures/javabeans/SnapFrame-button-red.png" width="236" height="194" align="bottom" alt="NetBeans 勾勒出事件生成组件" /></center><p>单击标签。弹出 NetBeans 的 <b>Connection Wizard</b>。首先，你将选择要响应的事件。对于按钮，这是 <b>action</b> 事件。单击 <b>action</b> 旁边的 <b>+</b>，然后选择 <b>actionPerformed</b>。单击 <b>Next &gt;</b>。</p>
+<center><img src="../../figures/javabeans/SnapFrame-connection-1.png" width="500" height="338" align="bottom" alt="选择源事件" /></center><p>现在，你可以选择按钮触发 <b>action</b> 事件时会发生什么。<b>Connection Wizard</b> 列出标签 bean 中的所有属性。在列表中选择 <b>text</b>，然后单击 <b>Next</b>。</p>
 <center><img src="../../figures/javabeans/SnapFrame-connection-2.png" width="500" height="338" align="bottom" alt="选择目标属性" /></center><p>在 <b>Connection Wizard</b> 的最后一个屏幕中，填写要为 <b>text</b> 属性设置的值。单击 <b>Value</b>，然后键入 <b>You pressed the button!</b> 或其他同样雄辩的内容。单击 <b>Finish</b>。</p>
-<center><img src="../../figures/javabeans/SnapFrame-connection-3.png" width="500" height="338" align="bottom" alt="填写一个值" /></center><p>Netbeans 将组件连接在一起，并在源代码编辑器中向您展示它的手工操作。</p>
+<center><img src="../../figures/javabeans/SnapFrame-connection-3.png" width="500" height="338" align="bottom" alt="填写一个值" /></center><p>Netbeans 将组件连接在一起，并在源代码编辑器中向你展示它的手工操作。</p>
 <center><img src="../../figures/javabeans/SnapFrame-wired-code.png" width="500" height="110" align="bottom" alt="连接的代码" /></center><p>单击源代码工具栏中的 <b>Design</b> 按钮返回 UI 设计器。单击 <b>Run Main Project</b> 或按 <b>F6</b> 构建并运行项目。</p>
-<center><img src="../../figures/javabeans/run-main-project.png" width="346" height="284" align="bottom" alt="运行主项目按钮" /></center><p>NetBeans 构建并运行项目。它要求您标识主类，即 <code>SnapFrame</code>。弹出应用程序窗口时，单击按钮。您会在标签上看到您不朽的散文。</p>
-<center><img src="../../figures/javabeans/SnapFrame.png" width="422" height="340" align="bottom" alt="看哪，没有代码！" /></center><p>请注意，您没有编写任何代码。这是 JavaBeans 的真正强大功能 - 使用像 NetBeans 这样的良好构建器工具，您可以快速将组件连接在一起以创建正在运行的应用程序。</p>
+<center><img src="../../figures/javabeans/run-main-project.png" width="346" height="284" align="bottom" alt="运行主项目按钮" /></center><p>NetBeans 构建并运行项目。它要求你标识主类，即 <code>SnapFrame</code>。弹出应用程序窗口时，单击按钮。你会在标签上看到你不朽的散文。</p>
+<center><img src="../../figures/javabeans/SnapFrame.png" width="422" height="340" align="bottom" alt="看哪，没有代码！" /></center><p>请注意，你没有编写任何代码。这是 JavaBeans 的真正强大功能 - 使用像 NetBeans 这样的良好构建器工具，你可以快速将组件连接在一起以创建正在运行的应用程序。</p>
 
 
         </div>

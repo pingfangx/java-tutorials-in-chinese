@@ -494,14 +494,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">泛型</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="subtype.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methods.html">Next&nbsp;»</a>
+                <a target="_top" href="subtype.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methods.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>通配符</h1></div>
             <div id="PageContent"><!--Wildcards-->
 
 
-<p>考虑编写打印出集合中所有元素的例程的问题。以下是您可以使用旧版本的语言(即 5.0 之前的版本)编写它的方法：</p>
+<p>考虑编写打印出集合中所有元素的例程的问题。以下是你可以使用旧版本的语言(即 5.0 之前的版本)编写它的方法：</p>
 <div class="codeblock"><pre>
 <b>void</b> printCollection(Collection c) {
     Iterator i = c.iterator();
@@ -510,7 +510,7 @@
     }
 }
 </pre></div>
-<p>这是一个天真的尝试使用泛型(和新的 <code>for</code> 循环语法)编写它：</p>
+<p>这是一个简单的尝试使用泛型(和新的 <code>for</code> 循环语法)编写它：</p>
 <div class="codeblock"><pre>
 <b>void</b> printCollection(Collection&lt;Object&gt; c) {
     <b>for</b> (Object e : c) {
@@ -518,7 +518,7 @@
     }
 }
 </pre></div>
-<p>问题是这个新版本比旧版本的用处小得多。虽然可以使用任何类型的集合作为参数调用旧代码，但新代码仅可以采用 <code>Collection&lt;Object&gt;</code>，正如我们刚才演示的那样，它 <b>不是</b> 各种集全的超类型！</p>
+<p>问题是这个新版本比旧版本的用处小得多。虽然可以使用任何类型的集合作为参数调用旧代码，但新代码仅可以采用 <code>Collection&lt;Object&gt;</code>，正如我们刚才演示的那样，它 <b>不是</b> 各种集合的超类型！</p>
 <p>那么什么 <b>是</b> 各类集合的超类型？它写成 <code>Collection&lt;?&gt;</code>(读作“collection of unknown”)，即元素类型与任何东西匹配的集合。出于显而易见的原因，它被称为 <b>wildcard type (通配符类型)</b>。我们可以写：</p>
 <div class="codeblock"><pre>
 <b>void</b> printCollection(Collection&lt;?&gt; c) {
@@ -532,10 +532,10 @@
 Collection&lt;?&gt; c = new ArrayList&lt;String&gt;();
 c.add(new Object()); // Compile time error
 </pre></div>
-<p>由于我们不知道 <code>c</code> 的元素类型代表什么，我们无法向其添加对象。<code>add()</code> 方法接受类型 <code>E</code> 的参数，即集合的元素类型。当实际类型参数是 <code>?</code> 时，它代表某种未知类型。我们传递给 <code>add</code> 的任何参数都必须是这种未知类型的子类型。既然我们不知道那是什么类型，我们就无法传递任何东西。唯一的例外是 <code>null</code>，它是每种类型的成员。</p>
+<p>由于我们不知道 <code>c</code> 的元素类型代表什么，我们无法向其添加对象。<code>add()</code> 方法接受类型 <code>E</code> 的参数，即集合的元素类型。当实际类型形参是 <code>?</code> 时，它代表某种未知类型。我们传递给 <code>add</code> 的任何参数都必须是这种未知类型的子类型。既然我们不知道那是什么类型，我们就无法传递任何东西。唯一的例外是 <code>null</code>，它是每种类型的成员。</p>
 <p>另一方面，给定 <code>List&lt;?&gt;</code>，我们 <b>可以</b> 调用 <code>get()</code> 并使用结果。结果类型是未知类型，但我们始终知道它是一个对象。因此，将 <code>get()</code> 的结果赋值给 <code>Object</code> 类型的变量，或者将其传递以作为预期 <code>Object</code> 类型的参数是安全的。</p>
 <h2>有界通配符</h2>
-<p>考虑一个简单的绘图应用程序，可以绘制矩形和圆形等形状。要在程序中表示这些形状，您可以定义类层次结构，例如：</p>
+<p>考虑一个简单的绘图应用程序，可以绘制矩形和圆形等形状。要在程序中表示这些形状，你可以定义类层次结构，例如：</p>
 <div class="codeblock"><pre>
 <b>public abstract class</b> Shape {
     <b>public abstract void</b> draw(Canvas c);
@@ -586,9 +586,9 @@ c.add(new Object()); // Compile time error
     shapes.add(0, <b>new</b> Rectangle());
 }
 </pre></div>
-<p>您应该能够弄清楚为什么不允许上面的代码。<code>shapes.add()</code> 的第二个参数的类型是 <code>? <b>extends</b> Shape</code>  -  <code>Shape</code> 的未知子类型。由于我们不知道它是什么类型，我们不知道它是否是 <code>Rectangle</code> 的超类型；它可能是也可能不是这样的超类型，因此在那里传递 <code>Rectangle</code> 是不安全的。</p>
-<p>有界通配符正是人们需要处理 DMV 将其数据传递给人口普查局的例子。我们的示例假定数据通过从名称(表示为字符串)到人(由引用类型表示，例如 <code>Person</code> 或其子类型，例如 <code>Driver</code>)的映射来表示。<code>Map&lt;K,V&gt;</code> 是一个泛型类型的示例，它采用两个类型参数，表示 map 的键和值。</p>
-<p>再次，请注意形式类型参数的命名约定 - <code>K</code> 表示 keys 且 <code>V</code> 表示 values。</p>
+<p>你应该能够弄清楚为什么不允许上面的代码。<code>shapes.add()</code> 的第二个参数的类型是 <code>? <b>extends</b> Shape</code>  -  <code>Shape</code> 的未知子类型。由于我们不知道它是什么类型，我们不知道它是否是 <code>Rectangle</code> 的超类型；它可能是也可能不是这样的超类型，因此在那里传递 <code>Rectangle</code> 是不安全的。</p>
+<p>有界通配符正是人们需要处理 DMV 将其数据传递给人口普查局的例子。我们的示例假定数据通过从名称(表示为字符串)到人(由引用类型表示，例如 <code>Person</code> 或其子类型，例如 <code>Driver</code>)的映射来表示。<code>Map&lt;K,V&gt;</code> 是一个泛型类型的示例，它采用两个类型实参，表示 map 的键和值。</p>
+<p>再次，请注意形式类型形参的命名规范 - <code>K</code> 表示 keys 且 <code>V</code> 表示 values。</p>
 <div class="codeblock"><pre>
 <b>public class</b> Census {
     <b>public static void</b> addRegistry(Map&lt;String, ? <b>extends</b> Person&gt; registry) {

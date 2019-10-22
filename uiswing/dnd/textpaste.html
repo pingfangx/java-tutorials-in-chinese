@@ -506,7 +506,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">拖放和数据传输</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="cutpaste.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="listpaste.html">Next&nbsp;»</a>
+                <a target="_top" href="cutpaste.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="listpaste.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>文本组件中的 CCP</h1></div>
@@ -516,7 +516,7 @@
 <p>If you are implementing cut, copy and paste using one of the Swing text components (text field, password field, formatted text field, or text area) your work is very straightforward. These text components utilize the 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/DefaultEditorKit.html"><code>DefaultEditorKit</code></a> which provides built-in actions for cut, copy and paste. The default editor kit also handles the work of remembering which component last had the focus. This means that if the user initiates one of these actions using the menu or a keyboard equivalent, the correct component receives the action — no additional code is required.</p>
 <p>The following demo, <code>TextCutPaste</code>, contains three text fields. As you can see in the screen shot, you can cut, copy, and paste to or from any of these text fields. They also support drag and drop.</p>
-<center><img src="../../figures/uiswing/dnd/TextCutPaste.png" width="382" height="157" align="bottom" alt="A snapshot of the TextCutPaste demo." /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<center><img src="../../figures/uiswing/dnd/TextCutPaste.png" width="382" height="157" align="bottom" alt="A snapshot of the TextCutPaste demo." /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run <code>TextCutPaste</code> using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/dnd/index.html#TextCutPaste">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TextCutPasteProject/TextCutPaste.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the TextCutPaste example" /></a><br /></li>
 <li>Select text in one of the text fields. Use the Edit menu or the keyboard equivalent to cut or copy the text from the source.</li>

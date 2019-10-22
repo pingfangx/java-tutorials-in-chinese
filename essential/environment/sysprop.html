@@ -496,7 +496,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">平台环境</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="cl.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="security.html">Next&nbsp;»</a>
+                <a target="_top" href="cl.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="security.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>系统属性</h1></div>
@@ -566,7 +566,7 @@
 <td>用户帐户名称</td>
 </tr>
 </table>
-<div class="note"><hr /><strong>Security consideration:</strong> <a href="security.html">Security Manager</a> 可以限制对系统属性的访问。这通常是 applet 中的一个问题，它无法读取某些系统属性，也无法编写 <i>any (任何)</i> 系统属性。有关访问 applet 中的系统属性的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../deployment/doingMoreWithRIA/index.html">Doing More With Java Rich Internet Applications</a> 课程中的 <a class="TutorialLink" target="_top" href="../../deployment/doingMoreWithRIA/properties.html">System Properties</a>。
+<div class="note"><hr /><strong>安全考虑:</strong>&nbsp;<a href="security.html">Security Manager</a> 可以限制对系统属性的访问。这通常是 applet 中的一个问题，它无法读取某些系统属性，也无法编写 <i>any (任何)</i> 系统属性。有关访问 applet 中的系统属性的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../deployment/doingMoreWithRIA/index.html">Doing More With Java Rich Internet Applications</a> 课程中的 <a class="TutorialLink" target="_top" href="../../deployment/doingMoreWithRIA/properties.html">System Properties</a>。
 <hr /></div>
 <h2>读取系统属性</h2>
 <p><code>System</code> 类有两种用于读取系统属性的方法：<code>getProperty</code> 和 <code>getProperties</code>。</p>
@@ -582,7 +582,7 @@ System.getProperty("subliminal.message", "Buy StayPuft Marshmallows!");
 <p><code>System</code> 类提供的访问属性值的最后一种方法是 <code>getProperties</code> 方法，该方法返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html"><code>Properties</code></a> 对象。该对象包含一组完整的系统属性定义。</p>
 <h2>写入系统属性</h2>
 <p>要修改现有的系统属性集，请使用 <code>System.setProperties</code>。此方法采用已初始化为包含要设置的属性的 <code>Properties</code> 对象。此方法使用 <code>Properties</code> 对象表示的新集替换整个系统属性集。</p>
-<div class="note"><hr /><strong>Warning:</strong> 更改系统属性具有潜在危险，应谨慎处理。许多系统属性在启动后不会重新读取，它们只是为了提供信息。更改某些属性可能会产生意外的副作用。
+<div class="note"><hr /><strong>警告:</strong>&nbsp;更改系统属性具有潜在危险，应谨慎处理。许多系统属性在启动后不会重新读取，它们只是为了提供信息。更改某些属性可能会产生意外的副作用。
 <hr /></div>
 <p>下一个示例 <a class="SourceLink" target="_blank" href="examples/PropertiesTest.java" onclick="showCode('../../displayCode.html', 'examples/PropertiesTest.java'); return false;"><code>PropertiesTest</code></a>，创建一个 <code>Properties</code> 对象，并从 <a class="SourceLink" target="_blank" href="examples/myProperties.txt" onclick="showCode('../../displayCode.html', 'examples/myProperties.txt'); return false;"><code>myProperties.txt</code></a> 初始化它。</p>
 <div class="codeblock"><pre>

@@ -506,7 +506,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="basicsindex.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="view.html">Next&nbsp;»</a>
+                <a target="_top" href="basicsindex.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="view.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>创建 JAR 文件</h1></div>
@@ -518,16 +518,16 @@ jar cf <i>jar-file input-file(s)</i>
 </pre></div>
 <p>此命令中使用的选项和参数是：</p>
 <ul>
-<li><tt>c</tt> 选项表示您要 <em>create (创建)</em> 一个 JAR 文件。</li>
-<li><tt>f</tt> 选项表示您希望输出转到 <em>file (文件)</em> 而不是 <tt>stdout</tt>。</li>
-<li><tt>jar-file</tt> 是您希望生成的 JAR 文件具有的名称。您可以使用任何文件名作为 JAR 文件。按照惯例，JAR 文件名的扩展名为 <tt>.jar</tt>，但这不是必需的。</li>
+<li><tt>c</tt> 选项表示你要 <em>create (创建)</em> 一个 JAR 文件。</li>
+<li><tt>f</tt> 选项表示你希望输出转到 <em>file (文件)</em> 而不是 <tt>stdout</tt>。</li>
+<li><tt>jar-file</tt> 是你希望生成的 JAR 文件具有的名称。你可以使用任何文件名作为 JAR 文件。按照规范，JAR 文件名的扩展名为 <tt>.jar</tt>，但这不是必需的。</li>
 <li><tt>input-file(s)</tt> 参数是一个以空格分隔的列表，其中包含要包含在 JAR 文件中的一个或多个文件。<tt>input-file(s)</tt> 参数可以包含通配符 <tt>*</tt> 符号。如果任何“输入文件”是目录，则这些目录的内容将以递归方式添加到 JAR 存档中。</li>
 </ul>
 <p><tt>c</tt> 和 <tt>f</tt> 选项可以按任意顺序出现，但它们之间不能有任何空格。</p>
 <p>此命令将生成压缩的 JAR 文件并将其放在当前目录中。该命令还将为 JAR 存档生成 <a class="TutorialLink" target="_top" href="defman.html">默认清单文件</a>。</p>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;<p>JAR 文件中的元数据(例如清单的条目名称，注释和内容)必须以 UTF8 编码。</p>
 <hr /></div>
-<p>您可以将以下任何附加选项添加到基本命令的 <tt>cf</tt> 选项中：</p>
+<p>你可以将以下任何附加选项添加到基本命令的 <tt>cf</tt> 选项中：</p>
 <table border="1" cellpadding="3" summary="jar 命令选项">
 <caption><strong>jar 命令选项</strong></caption>
 <tr>
@@ -536,11 +536,11 @@ jar cf <i>jar-file input-file(s)</i>
 </tr>
 <tr>
 <td align="center"><tt>v</tt></td>
-<td>在构建 JAR 文件时，在 <tt>stdout</tt> 上生成 <em>verbose (详细)</em> 输出。详细输出告诉您添加到 JAR 文件中的每个文件的名称。</td>
+<td>在构建 JAR 文件时，在 <tt>stdout</tt> 上生成 <em>verbose (详细)</em> 输出。详细输出告诉你添加到 JAR 文件中的每个文件的名称。</td>
 </tr>
 <tr>
 <td align="center"><tt>0</tt> (zero)</td>
-<td>表示您不希望压缩 JAR 文件。</td>
+<td>表示你不希望压缩 JAR 文件。</td>
 </tr>
 <tr>
 <td align="center"><tt>M</tt></td>
@@ -553,7 +553,7 @@ jar cf <i>jar-file input-file(s)</i>
 jar cmf <em>jar-file</em> <em>existing-manifest</em> <em>input-file(s)</em>
 </pre></div>
 有关此选项的更多信息，请参见 <a class="TutorialLink" target="_top" href="modman.html">Modifying a Manifest File</a>。
-<div class="note"><hr /><strong>Warning:</strong> 清单必须以新行或回车结束。如果不以新行或回车结束，则不会正确解析最后一行。
+<div class="note"><hr /><strong>警告:</strong>&nbsp;清单必须以新行或回车结束。如果不以新行或回车结束，则不会正确解析最后一行。
 <hr /></div>
 </td>
 </tr>
@@ -562,13 +562,13 @@ jar cmf <em>jar-file</em> <em>existing-manifest</em> <em>input-file(s)</em>
 <td>在执行命令期间更改目录。请参阅下面的示例。</td>
 </tr>
 </table>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>创建 JAR 文件时，创建时间存储在 JAR 文件中。因此，即使 JAR 文件的内容没有更改，当您多次创建 JAR 文件时，生成的文件也不完全相同。在构建环境中使用 JAR 文件时，应该注意这一点。建议您使用清单文件中的版本控制信息而不是创建时间来控制 JAR 文件的版本。请参阅 <a class="TutorialLink" target="_top" href="packageman.html">Setting Package Version Information</a> 部分。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>创建 JAR 文件时，创建时间存储在 JAR 文件中。因此，即使 JAR 文件的内容没有更改，当你多次创建 JAR 文件时，生成的文件也不完全相同。在构建环境中使用 JAR 文件时，应该注意这一点。建议你使用清单文件中的版本控制信息而不是创建时间来控制 JAR 文件的版本。请参阅 <a class="TutorialLink" target="_top" href="packageman.html">Setting Package Version Information</a> 部分。</p>
 <hr /></div>
 <p><a name="example" id="example"></a></p>
 <h2>一个例子</h2>
-<p>我们来看一个例子。一个简单的 <tt>TicTacToe</tt> 小程序。您可以通过从 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Downloads</a> 下载 JDK 演示和示例包来查看此 applet 的源代码。此演示包含具有以下结构的类文件，音频文件和图像：</p>
+<p>我们来看一个例子。一个简单的 <tt>TicTacToe</tt> 小程序。你可以通过从 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Downloads</a> 下载 JDK 演示和示例包来查看此 applet 的源代码。此演示包含具有以下结构的类文件，音频文件和图像：</p>
 <center><img src="../../figures/deployment/jar/ticTacToeJar.gif" width="254" height="98" align="bottom" alt="TicTacToe 文件夹层次结构" /></p><p class="FigureCaption"><center><strong>TicTacToe 文件夹层次结构</strong></center></p></center><p><tt>audio</tt> 和 <tt>images</tt> 子目录包含 applet 使用的声音文件和 GIF 图像。</p>
-<p>在线下载整个教程时，您可以从 <i>jar/examples</i> 目录中获取所有这些文件。要将此演示打包到名为 <tt>TicTacToe.jar</tt> 的单个 JAR 文件中，您可以从 <tt>TicTacToe</tt> 目录中运行此命令：</p>
+<p>在线下载整个教程时，你可以从 <i>jar/examples</i> 目录中获取所有这些文件。要将此演示打包到名为 <tt>TicTacToe.jar</tt> 的单个 JAR 文件中，你可以从 <tt>TicTacToe</tt> 目录中运行此命令：</p>
 <div class="codeblock"><pre>
 jar cvf TicTacToe.jar TicTacToe.class audio images
 </pre></div>
@@ -585,18 +585,18 @@ adding: images/ (in=0) (out=0) (stored 0%)
 adding: images/cross.gif (in=157) (out=160) (deflated -1%)
 adding: images/not.gif (in=158) (out=161) (deflated -1%)
 </pre></div>
-<p>您可以从此输出中看到压缩了 JAR 文件 <tt>TicTacToe.jar</tt>。Jar 工具默认压缩文件。您可以使用 <tt>0</tt>(零)选项关闭压缩功能，以便命令如下所示：</p>
+<p>你可以从此输出中看到压缩了 JAR 文件 <tt>TicTacToe.jar</tt>。Jar 工具默认压缩文件。你可以使用 <tt>0</tt>(零)选项关闭压缩功能，以便命令如下所示：</p>
 <div class="codeblock"><pre>
 jar cvf0 TicTacToe.jar TicTacToe.class audio images
 </pre></div>
-<p>例如，您可能希望避免压缩，以提高浏览器加载 JAR 文件的速度。通常可以比压缩文件更快地加载未压缩的 JAR 文件，因为消除了在加载期间解压缩文件的需要。但是，需要权衡的是，对于较大的未压缩文件，网络上的下载时间可能会更长。</p>
-<p>Jar 工具将接受使用通配符 <tt>*</tt> 符号的参数。只要 <tt>TicTacToe</tt> 目录中没有任何不需要的文件，您就可以使用此替代命令来构造 JAR 文件：</p>
+<p>例如，你可能希望避免压缩，以提高浏览器加载 JAR 文件的速度。通常可以比压缩文件更快地加载未压缩的 JAR 文件，因为消除了在加载期间解压缩文件的需要。但是，需要权衡的是，对于较大的未压缩文件，网络上的下载时间可能会更长。</p>
+<p>Jar 工具将接受使用通配符 <tt>*</tt> 符号的参数。只要 <tt>TicTacToe</tt> 目录中没有任何不需要的文件，你就可以使用此替代命令来构造 JAR 文件：</p>
 <div class="codeblock"><pre>
 jar cvf TicTacToe.jar *
 </pre></div>
 <p>虽然详细输出未指示它，但 Jar 工具会自动将清单文件以路径名为 <tt>META-INF/MANIFEST.MF</tt> 添加到 JAR 存档中。有关清单文件的信息，请参阅 <a class="TutorialLink" target="_top" href="manifestindex.html">Working with Manifest Files: The Basics</a> 部分。</p>
-<p>在上面的示例中，归档中的文件保留了它们的相对路径名和目录结构。Jar 工具提供 <tt>-C</tt> 选项，您可以使用该选项创建 JAR 文件，其中不保留已归档文件的相对路径。它是仿照 TAR 的 <tt>-C</tt> 选项。</p>
-<p>例如，假设您想将 TicTacToe 演示使用的音频文件和 gif 图像放入 JAR 文件中，并且您希望所有文件都位于顶层，没有目录层次结构。您可以通过从 <tt>images</tt> 和 <tt>audio</tt> 目录的父目录发出此命令来完成此操作：</p>
+<p>在上面的示例中，归档中的文件保留了它们的相对路径名和目录结构。Jar 工具提供 <tt>-C</tt> 选项，你可以使用该选项创建 JAR 文件，其中不保留已归档文件的相对路径。它是仿照 TAR 的 <tt>-C</tt> 选项。</p>
+<p>例如，假设你想将 TicTacToe 演示使用的音频文件和 gif 图像放入 JAR 文件中，并且你希望所有文件都位于顶层，没有目录层次结构。你可以通过从 <tt>images</tt> 和 <tt>audio</tt> 目录的父目录发出此命令来完成此操作：</p>
 <div class="codeblock"><pre>
 jar cf ImageAudio.jar -C images . -C audio .
 </pre></div>
@@ -611,7 +611,7 @@ return.au
 yahoo1.au
 yahoo2.au
 </pre></div>
-<p>相反，假设您使用的命令未使用 <tt>-C</tt> 选项：</p>
+<p>相反，假设你使用的命令未使用 <tt>-C</tt> 选项：</p>
 <div class="codeblock"><pre>
 jar cf ImageAudio.jar images audio
 </pre></div>

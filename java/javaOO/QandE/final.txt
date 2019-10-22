@@ -9,7 +9,7 @@
 	final, local variables in scope."
 
 2. 使用 Box 类的 1.3 API 文档（在
-   javax.swing 包）帮助您回答以下问题。
+   javax.swing 包）帮助你回答以下问题。
 
    a. Box 定义了什么静态嵌套类？
 答案：Box.Filler
@@ -20,7 +20,7 @@
    c. Box 的内部类的超类是什么？
 ANSWER: [java.awt.]Container.AccessibleAWTContainer
   
-   d. 您可以在任何类中使用 Box 的嵌套类中的哪一个？
+   d. 你可以在任何类中使用 Box 的嵌套类中的哪一个？
 答案：Box.Filler
 
    e. 你如何创建 Box 的填充类的实例？
@@ -68,7 +68,7 @@ ANSWER: E
 1. 首先，获取源文件 InnerClassDemo.java。  
    [.../tutorial/java/javaOO/QandE-1dot2/InnerClassDemo.java]
 
-   a. 编译并运行 InnerClassDemo。如果您有问题，请参阅
+   a. 编译并运行 InnerClassDemo。如果你有问题，请参阅
       编译和运行 Swing 程序
       [http://docs.oracle.com/javase/javatutorials/tutorialJWS/uiswing/start/swingStart.html].
    

@@ -489,7 +489,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">全屏独占模式 API</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="displaymode.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="displaymode.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>全屏独占模式</h1></div>
@@ -499,8 +499,8 @@
 <p>使用 Microsoft DirectX API 的程序员可能已经熟悉全屏独占模式。其他程序员可能对这个概念有些新意。在任何一种情况下，全屏独占模式都是 J2SE™ 1.4 版的强大功能，它允许程序员暂停窗口系统，以便可以直接在屏幕上完成绘图。</p>
 <p>这在很多方面都与通常的 GUI 程序略有不同。在传统的 Java GUI 程序中，AWT 负责从操作系统，<i>event dispatch thread (事件调度线程)</i> 传播 <i>paint events (绘制事件)</i>，并调用 AWT 的 <tt>Component.paint</tt> 适当的方法。在全屏独占应用中，绘画通常由程序本身主动完成。另外，传统的 GUI 应用程序仅限于用户选择的屏幕的位深度和大小。在全屏独占应用程序中，程序可以控制屏幕的位深度和大小(<i>display mode (显示模式)</i>)。最后，在某些平台上，许多更高级的技术，例如 <i>page flipping (页面翻转)</i>(下面讨论)和立体缓冲(利用为每只眼睛使用一组单独的帧的系统)，首先需要应用程序在全屏独占模式。</p>
 <h2>硬件加速图像基础</h2>
-<p>要了解全屏独占模式 API，您需要了解硬件加速图像的一些基本原理。<tt>VolatileImage</tt> 接口封装了可能利用或不利用硬件加速的 surface。这些 surface 可能在操作系统的命令下失去其硬件加速或其内存(因此，名称为“volatile”)。有关易失性图像的更多信息，请参阅 <code>VolatileImage</code> <em>Tutorial</em>(即将推出)。</p>
-<p>全屏独占模式通过 <tt>java.awt.GraphicsDevice</tt> 对象处理。有关所有可用屏幕图形设备的列表(在单显示器系统或多显示器系统中)，可以在本地 <tt>java.awt.GraphicsEnvironment</tt> 上调用方法 <tt>getScreenDevices</tt>;对于默认(主)屏幕(单显示器系统上的唯一屏幕)，您可以调用方法 <tt>getDefaultScreenDevice</tt>。</p>
+<p>要了解全屏独占模式 API，你需要了解硬件加速图像的一些基本原理。<tt>VolatileImage</tt> 接口封装了可能利用或不利用硬件加速的 surface。这些 surface 可能在操作系统的命令下失去其硬件加速或其内存(因此，名称为“volatile”)。有关易失性图像的更多信息，请参阅 <code>VolatileImage</code> <em>Tutorial</em>(即将推出)。</p>
+<p>全屏独占模式通过 <tt>java.awt.GraphicsDevice</tt> 对象处理。有关所有可用屏幕图形设备的列表(在单显示器系统或多显示器系统中)，可以在本地 <tt>java.awt.GraphicsEnvironment</tt> 上调用方法 <tt>getScreenDevices</tt>;对于默认(主)屏幕(单显示器系统上的唯一屏幕)，你可以调用方法 <tt>getDefaultScreenDevice</tt>。</p>
 <p>拥有图形设备后，可以调用以下方法之一：</p><!--
 <dl>
 <dt><tt>public boolean isFullScreenSupported()</tt></dt>
@@ -522,7 +522,7 @@
 <p>以下是有关使用全屏独占模式进行编程的一些提示：</p>
 <ul>
 <li>在进入全屏独占模式之前，请检查 <tt>isFullScreenSupported</tt>。如果不支持，性能可能会降低。</li>
-<li>使用 <tt>try...finally</tt> 子句时，进入和退出全屏模式更加健壮。这不仅是良好的编码实践，而且还会阻止您的程序保持全屏独占模式的时间超过它应该：
+<li>使用 <tt>try...finally</tt> 子句时，进入和退出全屏模式更加健壮。这不仅是良好的编码实践，而且还会阻止你的程序保持全屏独占模式的时间超过它应该：
 <div class="codeblock"><pre>
 GraphicsDevice myDevice;
 Window myWindow;

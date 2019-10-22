@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,13 +512,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="localclasses.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="lambdaexpressions.html">Next&nbsp;»</a>
+                <a target="_top" href="localclasses.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="lambdaexpressions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>匿名类</h1></div>
             <div id="PageContent">
    
-<p>匿名类使您可以使代码更简洁。它们使您能够同时声明和实例化一个类。它们就像局部类，除了它们没有名称。如果您只需要使用局部类一次，请使用它们。</p>
+<p>匿名类使你可以使代码更简洁。它们使你能够同时声明和实例化一个类。它们就像局部类，除了它们没有名称。如果你只需要使用局部类一次，请使用它们。</p>
 <p>本节包括以下主题：</p>
 
 <ul>
@@ -530,7 +530,7 @@
 
 <h2><a name="declaring-anonymous-classes">声明匿名类</a></h2>
 
-<p>虽然局部类是类声明，但匿名类是表达式，这意味着您在另一个表达式中定义该类。以下示例 <a class="SourceLink" target="_blank" href="examples/HelloWorldAnonymousClasses.java" onclick="showCode('../../displayCode.html', 'examples/HelloWorldAnonymousClasses.java'); return false;"><code>HelloWorldAnonymousClasses</code></a> 在局部变量 <code>frenchGreeting</code> 和 <code>spanishGreeting</code> 的初始化语句中使用匿名类，但是使用局部类初始化变量 <code>englishGreeting</code> <code>:</code></p>
+<p>虽然局部类是类声明，但匿名类是表达式，这意味着你在另一个表达式中定义该类。以下示例 <a class="SourceLink" target="_blank" href="examples/HelloWorldAnonymousClasses.java" onclick="showCode('../../displayCode.html', 'examples/HelloWorldAnonymousClasses.java'); return false;"><code>HelloWorldAnonymousClasses</code></a> 在局部变量 <code>frenchGreeting</code> 和 <code>spanishGreeting</code> 的初始化语句中使用匿名类，但是使用局部类初始化变量 <code>englishGreeting</code> <code>:</code></p>
 
 <pre class="codeblock">
 
@@ -612,7 +612,7 @@ public class HelloWorldAnonymousClasses {
 <ul>
   <li><p><code>new</code> 运算符</p></li>
   <li><p>要实现的接口的名称或要继承的类。在此示例中，匿名类实现接口 <code>HelloWorld</code>。</p></li>
-  <li><p>包含构造函数参数的圆括号，就像普通的类实例创建表达式一样。<strong>注意</strong>:实现接口时，没有构造函数，因此您使用一对空括号，如本例所示。</p></li>
+  <li><p>包含构造函数参数的圆括号，就像普通的类实例创建表达式一样。<strong>注意</strong>:实现接口时，没有构造函数，因此你使用一对空括号，如本例所示。</p></li>
   <li><p>类主体，是一个类声明体。更具体地说，在主体中，方法申明是允许的，但语句不允许。</p></li>
 </ul>
 
@@ -620,7 +620,7 @@ public class HelloWorldAnonymousClasses {
 
 <h2><a name="accessing">访问封闭范围的局部变量，以及声明和访问匿名类的成员</a></h2>
 
-<p>像局部类一样，匿名类可以 <a class="TutorialLink" target="_top" href="localclasses.html#accessing-members-of-an-enclosing-class">capture variables（捕获变量）</a>;它们对封闭范围的局部变量具有相同的访问权限：</p>
+<p>像局部类一样，匿名类可以 <a class="TutorialLink" target="_top" href="localclasses.html#accessing-members-of-an-enclosing-class">capture variables (捕获变量)</a>;它们对封闭范围的局部变量具有相同的访问权限：</p>
 
 <ul>
   <li><p>匿名类可以访问其封闭类的成员。</p></li>
@@ -632,11 +632,11 @@ public class HelloWorldAnonymousClasses {
 <p>匿名类对其成员也具有与局部类相同的限制：</p>
 
 <ul>
-  <li><p>您不能在匿名类中声明静态初始化程序或成员接口。</p></li>
+  <li><p>你不能在匿名类中声明静态初始化程序或成员接口。</p></li>
   <li><p>匿名类可以具有静态成员，前提是它们是常量变量。</p></li>
 </ul>
 
-<p>请注意，您可以在匿名类中声明以下内容：</p>
+<p>请注意，你可以在匿名类中声明以下内容：</p>
 
 <ul>
   <li><p>字段</p></li>
@@ -645,7 +645,7 @@ public class HelloWorldAnonymousClasses {
   <li><p>局部类</p></li>
 </ul>
 
-<p>但是，您不能在匿名类中声明构造函数。</p>
+<p>但是，你不能在匿名类中声明构造函数。</p>
 
 <h2><a name="examples-of-anonymous-classes">匿名类的示例</a></h2>
 
@@ -688,11 +688,11 @@ public class HelloWorld extends Application {
     }
 }</pre>
 
-<p>在此示例中，方法调用 <code>btn.setOnAction</code> 指定当您选择 <b>Say 'Hello World'</b> 按钮时会发生什么。此方法需要类型为 <code>EventHandler&lt;ActionEvent&gt;</code> 的对象。<code>EventHandler&lt;ActionEvent&gt;</code> 接口只包含一个方法 handle。该示例使用匿名类表达式，而不是使用新类实现此方法。请注意，此表达式是传递给 <code>btn.setOnAction</code> 方法的参数。</p>
+<p>在此示例中，方法调用 <code>btn.setOnAction</code> 指定当你选择 <b>Say 'Hello World'</b> 按钮时会发生什么。此方法需要类型为 <code>EventHandler&lt;ActionEvent&gt;</code> 的对象。<code>EventHandler&lt;ActionEvent&gt;</code> 接口只包含一个方法 handle。该示例使用匿名类表达式，而不是使用新类实现此方法。请注意，此表达式是传递给 <code>btn.setOnAction</code> 方法的参数。</p>
 
 <p>因为 <code>EventHandler&lt;ActionEvent&gt;</code> 接口只包含一个方法，所以可以使用 lambda 表达式而不是匿名类表达式。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="lambdaexpressions.html">Lambda Expressions</a> 部分。</p>
 
-<p>匿名类是实现包含两个或更多方法的接口的理想选择。以下 JavaFX 示例来自 <a href="https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/custom.htm"> Customization of UI Controls</a> 部分。高亮的代码创建一个只接受数值的文本字段。它通过使用匿名类重写从 <code>TextInputControl</code> 继承的 <code>replaceText</code> 和 <code>replaceSelection</code> 方法，重新定义了<code>TextField</code> 类的默认实现。</p>
+<p>匿名类是实现包含两个或更多方法的接口的理想选择。以下 JavaFX 示例来自 <a href="https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/custom.htm"> Customization of UI Controls</a> 部分。高亮的代码创建一个只接受数值的文本框。它通过使用匿名类重写从 <code>TextInputControl</code> 继承的 <code>replaceText</code> 和 <code>replaceSelection</code> 方法，重新定义了<code>TextField</code> 类的默认实现。</p>
 
 <pre class="codeblock">import javafx.application.Application;
 import javafx.event.ActionEvent;

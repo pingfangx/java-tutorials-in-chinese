@@ -486,7 +486,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">入门</a>&gt;<a href="index.html" target="_top">"Hello World!" 应用</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="win32.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../application/index.html">Next&nbsp;»</a>
+                <a target="_top" href="win32.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../application/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>"Hello World!" for Solaris OS and Linux</h1></div>
@@ -494,7 +494,7 @@
 
 <p><a name="unix-top" id="unix-top"></a></p>
 <p>现在是编写第一个应用程序的时候了！These detailed instructions are for users of Solaris OS and Linux. Instructions for other platforms are in <a class="TutorialLink" target="_top" href="win32.html">"Hello World!" for Microsoft Windows</a> and <a class="TutorialLink" target="_top" href="netbeans.html">"Hello World!" for the NetBeans IDE</a>.</p>
-<p>如果您在本页面上遇到问题，请参阅 <a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>。 
+<p>如果你在本页面上遇到问题，请参阅 <a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>。 
 
 <ul>
 <li><a href="#unix-1">检查清单</a></li>
@@ -511,45 +511,45 @@
 </p>
 <h2><a name="unix-1" id="unix-1"></a> 检查清单&nbsp; 
 <img src="../../figures/getStarted/check.gif" width="56" height="68" alt="a checkmark" /></h2>
-<p>要编写第一个程序，您需要：</p>
+<p>要编写第一个程序，你需要：</p>
 <ol>
 <li>
 <p style="font-weight: bold">The Java SE Development Kit 8 (JDK 8)</p>
-<p>You can <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download the Solaris OS or Linux version now</a>. (请确保您下载 <b>JDK</b>，<i>不是</i> JRE。)请参阅 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html">installation instructions</a>。</p>
+<p>You can <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download the Solaris OS or Linux version now</a>. (请确保你下载 <b>JDK</b>，<i>不是</i> JRE。)请参阅 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html">installation instructions</a>。</p>
 </li>
 <li>
 <p style="font-weight: bold">一个文本编辑器</p>
 <p>In this example, we'll use Pico, an editor available for many UNIX-based platforms. You can easily adapt these instructions if you use a different text editor, such as <code>vi</code> or <code>emacs</code>.</p>
 </li>
 </ol>
-<p>这两项是您编写第一个应用程序所需的全部内容。</p>
+<p>这两项是你编写第一个应用程序所需的全部内容。</p>
 <p>
           <hr />
 </p>
 <h2><a name="unix-2" id="unix-2"></a> 创建你的第一个应用</h2>
-<p>您的第一个应用程序 <code>HelloWorldApp</code> 将只显示问候语 "Hello world！"。要创建此程序，您将：</p>
+<p>你的第一个应用程序 <code>HelloWorldApp</code> 将只显示问候语 "Hello world！"。要创建此程序，你将：</p>
 <ul>
 <li>
 <p style="font-weight: bold">创建一个源文件</p>
-<p>源文件包含用 Java 编程语言编写的代码，您和其他程序员都可以理解。您可以使用任何文本编辑器来创建和编辑源文件。</p>
+<p>源文件包含用 Java 编程语言编写的代码，你和其他程序员都可以理解。你可以使用任何文本编辑器来创建和编辑源文件。</p>
 </li>
 <li>
 <p style="font-weight: bold">将源文件编译成.class 文件</p>
-<p>Java 编程语言 <i>compiler</i>(<code>javac</code>)会将您的源文件转换为 Java 虚拟机可以理解的指令。The instructions contained within this <code>.class</code> file are known as <em>bytecodes</em>.</p>
+<p>Java 编程语言 <i>compiler</i>(<code>javac</code>)会将你的源文件转换为 Java 虚拟机可以理解的指令。The instructions contained within this <code>.class</code> file are known as <em>bytecodes</em>.</p>
 </li>
 <li>
 <p style="font-weight: bold">运行该程序</p>
-<p>Java 应用程序 <i>launcher tool</i>(<code>java</code>)使用 Java 虚拟机来运行您的应用程序。</p>
+<p>Java 应用程序 <i>launcher tool</i>(<code>java</code>)使用 Java 虚拟机来运行你的应用程序。</p>
 </li>
 </ul>
 <h3><a name="unix-2a" id="unix-2a"></a> 创建一个源文件</h3>
-<p>要创建源文件，您有两个选择：</p>
+<p>要创建源文件，你有两个选择：</p>
 <ul>
 <li>
-<p>您可以在计算机上保存文件 <code> <a class="SourceLink" target="_blank" href="../application/examples/HelloWorldApp.java" onclick="showCode('../../displayCode.html', '../application/examples/HelloWorldApp.java'); return false;"><code>HelloWorldApp.java</code></a></code>，并避免大量输入。Then, you can go straight to <a href="#unix-2b">Compile the Source File</a>.</p>
+<p>你可以在计算机上保存文件 <code> <a class="SourceLink" target="_blank" href="../application/examples/HelloWorldApp.java" onclick="showCode('../../displayCode.html', '../application/examples/HelloWorldApp.java'); return false;"><code>HelloWorldApp.java</code></a></code>，并避免大量输入。Then, you can go straight to <a href="#unix-2b">Compile the Source File</a>.</p>
 </li>
 <li>
-<p>或者，您可以使用以下(较长)的说明。</p>
+<p>或者，你可以使用以下(较长)的说明。</p>
 </li>
 </ul>
 <p>First, open a shell, or "terminal," window.</p>
@@ -585,7 +585,7 @@ class HelloWorldApp {
 <p><b>Be Careful When You Type</b>
 <img src="../../figures/getStarted/typeA.gif" width="51" height="36" alt="uppercase letter A" />&nbsp;&nbsp;
 <img src="../../figures/getStarted/typea2.gif" width="51" height="36" alt="lowercase letter A" /></p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;完全按照所示键入所有代码，命令和文件名。编译器(<code>javac</code>)和启动器(<code>java</code>)都是 <em>case-sensitive</em>，因此您必须一致地大写。<br /><br />
+<div class="note"><hr /><strong>注意:</strong>&nbsp;完全按照所示键入所有代码，命令和文件名。编译器(<code>javac</code>)和启动器(<code>java</code>)都是 <em>case-sensitive</em>，因此你必须一致地大写。<br /><br />
 <code>HelloWorldApp</code> 与 <code>helloworldapp</code> <em>不</em>相同。
 <hr /></div>
 <p>将代码保存在名为 <code>HelloWorldApp.java</code> 的文件中。In the Pico editor, you do this by typing <b> Ctrl-O</b> and then, at the bottom where you see the prompt <code>File Name to write:</code>, entering the directory in which you wish to create the file, followed by <code>HelloWorldApp.java</code>. For example, if you wish to save <code>HelloWorldApp.java</code> in the directory <code>/tmp/examples/java</code>, then you type <code>/tmp/examples/java/HelloWorldApp.java</code> and press <b> Return</b>.</p>
@@ -603,7 +603,7 @@ javac HelloWorldApp.java
 </pre></div>
 <p>编译器生成了一个字节码文件 <code>HelloWorldApp.class</code>。At the prompt, type <code>ls</code> to see the new file that was generated: <span id="figure:secondls.gif">the following figure</span>.</p>
 <center><img src="../../figures/getStarted/secondls.gif" width="754" height="453" align="bottom" alt="Results of the ls command, showing the generated .class file." /></p><p class="FigureCaption">Results of the <code>ls</code> command, showing the generated <code>.class</code> file.</p></center><p>既然你有一个 <code>.class</code> 文件，你可以运行你的程序。</p>
-<p>如果您在此步骤中遇到问题，请参阅 <a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>。</p>
+<p>如果你在此步骤中遇到问题，请参阅 <a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>。</p>
 <h3><a name="unix-2c" id="unix-2c"></a> 运行程序</h3>
 <p>In the same directory, enter at the prompt:</p>
 <div class="codeblock"><pre>
@@ -612,7 +612,7 @@ java HelloWorldApp
 <p>
 <span id="figure:result.gif">The next figure</span> shows what you should now see.</p>
 <center><img src="../../figures/getStarted/result.gif" width="754" height="453" align="bottom" alt="The output prints Hello World! to the screen." /></p><p class="FigureCaption">The output prints "Hello World!" to the screen.</p></center><p>恭喜！你的程序有效！</p>
-<p>如果您在此步骤中遇到问题，请参阅 <a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>。</p>
+<p>如果你在此步骤中遇到问题，请参阅 <a class="TutorialLink" target="_top" href="../problems/index.html">Common Problems (and Their Solutions)</a>。</p>
 
 
         </div>

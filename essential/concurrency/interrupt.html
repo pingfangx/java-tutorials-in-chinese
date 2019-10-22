@@ -515,7 +515,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="sleep.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="join.html">Next&nbsp;»</a>
+                <a target="_top" href="sleep.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="join.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Interrupts (中断)</h1></div>
@@ -558,7 +558,7 @@ if (Thread.interrupted()) {
 <p>这允许中断处理代码集中在 <code>catch</code> 子句中。</p>
 <h2>中断状态标志</h2>
 <p>中断机制使用称为 <i>interrupt status (中断状态)</i> 的内部标志实现。调用 <code>Thread.interrupt</code> 设置此标志。当线程通过调用静态方法 <code>Thread.interrupted</code> 检查中断时，将清除中断状态。非静态 <code>isInterrupted</code> 方法，它是一个线程用于查询另一个线程的中断状态，不会更改中断状态标志。</p>
-<p>按照惯例，任何通过抛出 <code>InterruptedException</code> 退出的方法都会在执行此操作时清除中断状态。但是，通过另一个调用 <code>interrupt</code> 的线程，总是可以立即再次设置中断状态。</p>
+<p>按照规范，任何通过抛出 <code>InterruptedException</code> 退出的方法都会在执行此操作时清除中断状态。但是，通过另一个调用 <code>interrupt</code> 的线程，总是可以立即再次设置中断状态。</p>
 
         </div>
         <div class="NavBit">

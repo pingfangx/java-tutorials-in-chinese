@@ -515,15 +515,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="bytestreams.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="buffers.html">Next&nbsp;»</a>
+                <a target="_top" href="bytestreams.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="buffers.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>字符流</h1></div>
             <div id="PageContent">
 
-<p>Java 平台使用 Unicode 约定存储字符值。字符流 I/O 自动将此内部格式转换为本地字符集。在 Western 语言环境中，本地字符集通常是 ASCII 的 8 位超集。</p>
+<p>Java 平台使用 Unicode 规范存储字符值。字符流 I/O 自动将此内部格式转换为本地字符集。在西方的语言环境中，本地字符集通常是 ASCII 的 8 位超集。</p>
 <p>对于大多数应用程序，具有字符流的 I/O 并不比具有字节流的 I/O 复杂。使用流类完成的输入和输出会自动转换为本地字符集和从本地字符集转换。使用字符流代替字节流的程序会自动适应本地字符集并准备好进行国际化  一切都没有程序员的额外努力。</p>
-<p>如果国际化不是优先考虑事项，您可以简单地使用字符流类而不必过多关注字符集问题。之后，如果国际化成为优先事项，您的程序可以进行调整而无需进行大量重新编码。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../../i18n/index.html">Internationalization</a> 跟踪。</p>
+<p>如果国际化不是优先考虑事项，你可以简单地使用字符流类而不必过多关注字符集问题。之后，如果国际化成为优先事项，你的程序可以进行调整而无需进行大量重新编码。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../../i18n/index.html">Internationalization</a> 路径。</p>
 <h2>使用字符流</h2>
 <p>所有字符流类都继承自 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Reader.html"><code>Reader</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Writer.html"><code>Writer</code></a>。与字节流一样，有专门用于文件 I/O 的字符流类：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/FileReader.html"><code>FileReader</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/FileWriter.html"><code>FileWriter</code></a>。<a class="SourceLink" target="_blank" href="examples/CopyCharacters.java" onclick="showCode('../../displayCode.html', 'examples/CopyCharacters.java'); return false;"><code>CopyCharacters</code></a> 示例说明了这些类。</p>
 <div class="codeblock"><pre>
@@ -559,7 +559,7 @@ public class CopyCharacters {
 <p><code>CopyCharacters</code> 与 <code>CopyBytes</code> 非常相似。最重要的区别是 <code>CopyCharacters</code> 使用 <code>FileReader</code> 和 <code>FileWriter</code> 代替 <code>FileInputStream</code> 和 <code>FileOutputStream</code> 进行输入和输出。请注意，<code>CopyBytes</code> 和 <code>CopyCharacters</code> 都使用 <code>int</code> 变量来读取和写入。但是，在 <code>CopyCharacters</code> 中，<code>int</code> 变量在其最后 16 位中保存一个字符值;在 <code>CopyBytes</code> 中，<code>int</code> 变量在其最后 8 位中保存 <code>byte</code> 值。</p>
 <h3>使用字节流的字符流</h3>
 <p>字符流通常是字节流的 "包装器"。字符流使用字节流来执行物理 I/O，而字符流处理字符和字节之间的转换。例如，<code>FileReader</code> 使用 <code>FileInputStream</code>，而 <code>FileWriter</code> 使用 <code>FileOutputStream</code>。</p>
-<p>有两个通用的字节到字符 "桥" 流：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStreamReader.html"><code>InputStreamReader</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStreamWriter.html"><code>OutputStreamWriter</code></a>。当没有符合您需求的预打包字符流类时，使用它们来创建字符流。<a class="TutorialLink" target="_top" href="../../networking/index.html">networking trail</a> 中的 <a class="TutorialLink" target="_top" href="../../networking/sockets/readingWriting.html">sockets lesson</a> 显示了如何从套接字类提供的字节流创建字符流。</p>
+<p>有两个通用的字节到字符 "桥" 流：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStreamReader.html"><code>InputStreamReader</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStreamWriter.html"><code>OutputStreamWriter</code></a>。当没有符合你需求的预打包字符流类时，使用它们来创建字符流。<a class="TutorialLink" target="_top" href="../../networking/index.html">networking trail</a> 中的 <a class="TutorialLink" target="_top" href="../../networking/sockets/readingWriting.html">sockets lesson</a> 显示了如何从套接字类提供的字节流创建字符流。</p>
 <h2>面向行的 I/O.</h2>
 <p>字符 I/O 通常以比单个字符更大的单位出现。一个常见的单位是行：即一串字符，末尾有一个行终止符。行终止符可以是回车/换行序列(<code>"\r\n"</code>)，单个回车符(<code>"\r"</code>)，或者单个换行(<code>"\n"</code>)。支持所有可能的行终止符允许程序读取在任何广泛使用的操作系统上创建的文本文件。</p>
 <p>让我们修改 <code>CopyCharacters</code> 示例以使用面向行的 I/O. 为此，我们必须使用前面没有见过的两个类，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html"><code>BufferedReader</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html"><code>PrintWriter</code></a>。我们将在 <a href="buffers.html">Buffered I/O</a> 和 <a href="formatting.html">Formatting</a> 中更深入地探索这些类。现在，我们只对他们对面向行的 I/O 的支持感兴趣。</p>

@@ -486,7 +486,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">关于套接字</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="readingWriting.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../datagrams/index.html">Next&nbsp;»</a>
+                <a target="_top" href="readingWriting.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../datagrams/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>编写套接字的服务器端</h1></div>
@@ -501,7 +501,7 @@
 <strong>Client</strong>: "Groan."</p>
 <p>该示例包含两个独立运行的 Java 程序：客户端程序和服务器程序。客户端程序由单个类 <a class="SourceLink" target="_blank" href="examples/KnockKnockClient.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockClient.java'); return false;"><code>KnockKnockClient</code></a> 实现，并且非常类似于 <a class="SourceLink" target="_blank" href="examples/EchoClient.java" onclick="showCode('../../displayCode.html', 'examples/EchoClient.java'); return false;"><code>EchoClient</code></a> 示例上一节。服务器程序由两个类实现：<a class="SourceLink" target="_blank" href="examples/KnockKnockServer.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockServer.java'); return false;"><code>KnockKnockServer</code></a> 和 <a class="SourceLink" target="_blank" href="examples/KnockKnockProtocol.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockProtocol.java'); return false;"><code>KnockKnockProtocol</code></a>。<code>KnockKnockServer</code>，类似于 <a class="SourceLink" target="_blank" href="examples/EchoServer.java" onclick="showCode('../../displayCode.html', 'examples/EchoServer.java'); return false;"><code>EchoServer</code></a>，包含服务器程序的 <code>main</code> 方法并执行监听端口，建立连接，读取和写入套接字的工作。类 <a class="SourceLink" target="_blank" href="examples/KnockKnockProtocol.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockProtocol.java'); return false;"><code>KnockKnockProtocol</code></a> 提供了笑话。它跟踪当前的笑话，当前状态(发送 knock knock，发送线索等)，并根据当前状态返回笑话的各种文本片段。此对象实现协议 - 客户端和服务器已同意用于通信的语言。</p>
 
-<p>以下部分详细介绍了客户端和服务器中的每个类，然后向您展示了如何运行它们。</p>
+<p>以下部分详细介绍了客户端和服务器中的每个类，然后向你展示了如何运行它们。</p>
 
 <h2>Knock Knock 服务器</h2>
 
@@ -536,7 +536,7 @@ try (
 clientSocket = serverSocket.accept();
 </pre></div>
 
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html#accept--"><code>accept</code></a> 方法等待，直到客户端启动并请求此服务器的主机和端口上的连接。(假设您在名为 <code>knockknockserver.example.com</code> 的计算机上运行了服务器程序 <code>KnockKnockServer</code>。)在此示例中，服务器运行在由第一个命令行参数指定端口号上。请求并成功建立连接时，accept 方法返回一个新的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html"><code>Socket</code></a> 对象，该对象绑定到同一本地端口并将其远程地址和远程端口设置为客户端。服务器可以通过这个新的 <code>Socket</code> 与客户端通信，并继续监听原始 <code>ServerSocket</code> 上的客户端连接请求。该程序的特定版本不会监听更多客户端连接请求。但是，在 <a href="#later">Supporting Multiple Clients</a> 中提供了该程序的修改版本。</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html#accept--"><code>accept</code></a> 方法等待，直到客户端启动并请求此服务器的主机和端口上的连接。(假设你在名为 <code>knockknockserver.example.com</code> 的计算机上运行了服务器程序 <code>KnockKnockServer</code>。)在此示例中，服务器运行在由第一个命令行参数指定端口号上。请求并成功建立连接时，accept 方法返回一个新的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html"><code>Socket</code></a> 对象，该对象绑定到同一本地端口并将其远程地址和远程端口设置为客户端。服务器可以通过这个新的 <code>Socket</code> 与客户端通信，并继续监听原始 <code>ServerSocket</code> 上的客户端连接请求。该程序的特定版本不会监听更多客户端连接请求。但是，在 <a href="#later">Supporting Multiple Clients</a> 中提供了该程序的修改版本。</p>
 
 <p>服务器成功建立与客户端的连接后，它使用以下代码与客户端通信：</p>
 <div class="codeblock"><pre>
@@ -582,11 +582,11 @@ try (
 <h2>Knock Knock 协议</h2>
 <p><a class="SourceLink" target="_blank" href="examples/KnockKnockProtocol.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockProtocol.java'); return false;"><code>KnockKnockProtocol</code></a> 类实现客户端和服务器用于通信的协议。该类跟踪客户端和服务器在对话中的位置，并提供服务器对客户端语句的响应。<code>KnockKnockProtocol</code> 对象包含所有笑话的文本，并确保客户端对服务器的语句给出正确的响应。让客户说“Dexter who?”是不行的。当服务器说"Knock!Knock!"</p>
  
-<p>所有客户端/服务器对必须具有一些协议，通过它们相互通信；否则，来回传递的数据将毫无意义。您自己的客户端和服务器使用的协议完全取决于它们完成任务所需的通信。</p>
+<p>所有客户端/服务器对必须具有一些协议，通过它们相互通信；否则，来回传递的数据将毫无意义。你自己的客户端和服务器使用的协议完全取决于它们完成任务所需的通信。</p>
 
 <h2>Knock Knock 客户端</h2>
 
-<p><a class="SourceLink" target="_blank" href="examples/KnockKnockClient.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockClient.java'); return false;"><code>KnockKnockClient</code></a> 类实现了与 <code>KnockKnockServer</code> 对话的客户端程序。<code>KnockKnockClient</code> 基于上一节中的 <code>EchoClient</code> 程序，<a class="TutorialLink" target="_top" href="readingWriting.html">Reading from and Writing to a Socket</a>，对您来说应该有些熟悉。但是我们还是会检查程序，然后根据服务器中发生的情况来查看客户端中发生的情况。</p>
+<p><a class="SourceLink" target="_blank" href="examples/KnockKnockClient.java" onclick="showCode('../../displayCode.html', 'examples/KnockKnockClient.java'); return false;"><code>KnockKnockClient</code></a> 类实现了与 <code>KnockKnockServer</code> 对话的客户端程序。<code>KnockKnockClient</code> 基于上一节中的 <code>EchoClient</code> 程序，<a class="TutorialLink" target="_top" href="readingWriting.html">Reading from and Writing to a Socket</a>，对你来说应该有些熟悉。但是我们还是会检查程序，然后根据服务器中发生的情况来查看客户端中发生的情况。</p>
 
  <p>启动客户端程序时，服务器应该已经在运行并监听端口，等待客户端请求连接。因此，客户端程序所做的第一件事就是打开一个连接到运行在指定主机名和端口上的服务器的套接字：</p>
 <div class="codeblock"><pre>
@@ -631,32 +631,32 @@ while ((fromServer = in.readLine()) != null) {
 
 <h2>运行程序</h2>
 
-<p>您必须首先启动服务器程序。为此，请使用 Java 解释器运行服务器程序，就像使用任何其他 Java 应用程序一样。指定服务器程序侦听的端口号作为命令行参数：</p>
+<p>你必须首先启动服务器程序。为此，请使用 Java 解释器运行服务器程序，就像使用任何其他 Java 应用程序一样。指定服务器程序侦听的端口号作为命令行参数：</p>
 
 <div class="codeblock"><pre>
 java KnockKnockServer 4444
 </pre></div>
 
-<p>接下来，运行客户端程序。请注意，您可以在网络上的任何计算机上运行客户端；它不必与服务器在同一台计算机上运行。指定运行 <code>KnockKnockServer</code> 服务器程序的计算机的主机名和端口号作为命令行参数：</p>
+<p>接下来，运行客户端程序。请注意，你可以在网络上的任何计算机上运行客户端；它不必与服务器在同一台计算机上运行。指定运行 <code>KnockKnockServer</code> 服务器程序的计算机的主机名和端口号作为命令行参数：</p>
 
 <div class="codeblock"><pre>
 java KnockKnockClient knockknockserver.example.com 4444
 </pre></div>
 
-<p>如果您太快，可以在服务器有机会初始化并开始侦听端口之前启动客户端。如果发生这种情况，您将看到来自客户端的堆栈跟踪。如果发生这种情况，请重启客户端。</p>
+<p>如果你太快，可以在服务器有机会初始化并开始侦听端口之前启动客户端。如果发生这种情况，你将看到来自客户端的堆栈跟踪。如果发生这种情况，请重启客户端。</p>
 
 <p>如果在第一个客户端连接到服务器时尝试启动第二个客户端，则第二个客户端将挂起。下一节 <a href="#later">Supporting Multiple Clients</a>，讨论支持多个客户端。</p>
 
-<p>当您成功获得客户端和服务器之间的连接后，您将在屏幕上看到以下文本：</p>
+<p>当你成功获得客户端和服务器之间的连接后，你将在屏幕上看到以下文本：</p>
 <div class="codeblock"><pre>
 Server: Knock! Knock!
 </pre></div>
-<p>现在，您必须回复：</p>
+<p>现在，你必须回复：</p>
 <div class="codeblock"><pre>
 <strong>Who's there?</strong>
 </pre></div>
 
-<p>客户端回显您键入的内容并将文本发送到服务器。服务器响应其剧目中众多 Knock Knock 笑话中的第一行。现在您的屏幕应该包含这个(您输入的文字是粗体)：</p>
+<p>客户端回显你键入的内容并将文本发送到服务器。服务器响应其剧目中众多 Knock Knock 笑话中的第一行。现在你的屏幕应该包含这个(你输入的文字是粗体)：</p>
 
 <div class="codeblock"><pre>
 Server: Knock! Knock!
@@ -665,11 +665,11 @@ Client: Who's there?
 Server: Turnip
 </pre></div>
 
-<p>现在，您回复：</p>
+<p>现在，你回复：</p>
 <div class="codeblock"><pre>
 Turnip who?
 </pre></div>
-<p>同样，客户端回应您键入的内容并将文本发送到服务器。服务器响应妙语。现在您的屏幕应该包含这个：</p>
+<p>同样，客户端回应你键入的内容并将文本发送到服务器。服务器响应妙语。现在你的屏幕应该包含这个：</p>
 <div class="codeblock"><pre>
 Server: Knock! Knock!
 <strong>Who's there?</strong>
@@ -680,8 +680,8 @@ Client: Turnip who?
 Server: Turnip the heat, it's cold in here! Want another? (y/n)   
 </pre></div>
 
-<p>如果您想听另一个笑话，请输入 <strong>y</strong>;如果不想，请键入 <strong>n</strong>。如果您键入 <strong>y</strong>，服务器将再次启动 "Knock!Knock!" 如果输入 <strong>n</strong>，服务器会说 "Bye."，从而导致客户端和服务器都退出。</p>
-<p>如果在任何时候您输入错误，<code>KnockKnockServer</code> 对象会捕获它，服务器会响应类似这样的消息：</p>
+<p>如果你想听另一个笑话，请输入 <strong>y</strong>;如果不想，请键入 <strong>n</strong>。如果你键入 <strong>y</strong>，服务器将再次启动 "Knock!Knock!" 如果输入 <strong>n</strong>，服务器会说 "Bye."，从而导致客户端和服务器都退出。</p>
+<p>如果在任何时候你输入错误，<code>KnockKnockServer</code> 对象会捕获它，服务器会响应类似这样的消息：</p>
 
 <div class="codeblock"><pre>
 Server: You're supposed to say "Who's there?"!
@@ -703,7 +703,7 @@ while (true) {
 }
 </pre></div>
 <p>线程根据需要读取和写入客户端连接。</p>
-<div class="note"><hr /><strong>Try This:</strong>&nbsp;<p>修改 <code>KnockKnockServer</code>，以便它可以同时为多个客户端提供服务。两个类构成了我们的解决方案：<a class="SourceLink" target="_blank" href="examples/KKMultiServer.java" onclick="showCode('../../displayCode.html', 'examples/KKMultiServer.java'); return false;"><code>KKMultiServer</code></a> 和 <a class="SourceLink" target="_blank" href="examples/KKMultiServerThread.java" onclick="showCode('../../displayCode.html', 'examples/KKMultiServerThread.java'); return false;"><code>KKMultiServerThread</code></a>。<code>KKMultiServer</code> 永远循环，在 <code>ServerSocket</code> 上侦听客户端连接请求。当请求进入时，<code>KKMultiServer</code> 接受连接，创建一个新的 <code>KKMultiServerThread</code> 对象来处理它，将它从 accept 返回的套接字交给它，然后启动该线程。然后服务器返回监听连接请求。<code>KKMultiServerThread</code> 对象通过读取和写入套接字与客户端进行通信。运行新的 Knock Knock 服务器 <code>KKMultiServer</code>，然后连续运行多个客户端。</p>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<p>修改 <code>KnockKnockServer</code>，以便它可以同时为多个客户端提供服务。两个类构成了我们的解决方案：<a class="SourceLink" target="_blank" href="examples/KKMultiServer.java" onclick="showCode('../../displayCode.html', 'examples/KKMultiServer.java'); return false;"><code>KKMultiServer</code></a> 和 <a class="SourceLink" target="_blank" href="examples/KKMultiServerThread.java" onclick="showCode('../../displayCode.html', 'examples/KKMultiServerThread.java'); return false;"><code>KKMultiServerThread</code></a>。<code>KKMultiServer</code> 永远循环，在 <code>ServerSocket</code> 上侦听客户端连接请求。当请求进入时，<code>KKMultiServer</code> 接受连接，创建一个新的 <code>KKMultiServerThread</code> 对象来处理它，将它从 accept 返回的套接字交给它，然后启动该线程。然后服务器返回监听连接请求。<code>KKMultiServerThread</code> 对象通过读取和写入套接字与客户端进行通信。运行新的 Knock Knock 服务器 <code>KKMultiServer</code>，然后连续运行多个客户端。</p>
 <hr /></div>
 
 

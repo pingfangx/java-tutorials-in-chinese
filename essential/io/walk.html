@@ -515,14 +515,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="links.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="find.html">Next&nbsp;»</a>
+                <a target="_top" href="links.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="find.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>遍历文件树</h1></div>
             <div id="PageContent"><!-- Walking the File Tree -->
 
 
-<p>您是否需要创建一个递归访问文件树中所有文件的应用程序？也许您需要删除树中的每个 <code>.class</code> 文件，或查找去年未访问过的每个文件。您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html"><code>FileVisitor</code></a> 接口执行此操作。</p>
+<p>你是否需要创建一个递归访问文件树中所有文件的应用程序？也许你需要删除树中的每个 <code>.class</code> 文件，或查找去年未访问过的每个文件。你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html"><code>FileVisitor</code></a> 接口执行此操作。</p>
 <p>本节包括以下内容：</p>
 <ul>
 <li><a href="#filevisitor">FileVisitor 接口</a></li>
@@ -539,11 +539,11 @@
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html#postVisitDirectory-T-java.io.IOException-"><code>postVisitDirectory</code></a>–访问目录中的所有条目后调用。如果遇到任何错误，则将特定异常传递给该方法。</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html#visitFile-T-java.nio.file.attribute.BasicFileAttributes-"><code>visitFile</code></a>–在被访问的文件上调用。文件的 <code>BasicFileAttributes</code> 将传递给方法，或者您可以使用 <a class="TutorialLink" target="_top" href="fileAttr.html">file attributes</a> 包来读取一组特定的属性。例如，您可以选择读取文件的 <code>DosFileAttributeView</code> 以确定文件是否设置了“隐藏”位。</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html#visitFile-T-java.nio.file.attribute.BasicFileAttributes-"><code>visitFile</code></a>–在被访问的文件上调用。文件的 <code>BasicFileAttributes</code> 将传递给方法，或者你可以使用 <a class="TutorialLink" target="_top" href="fileAttr.html">file attributes</a> 包来读取一组特定的属性。例如，你可以选择读取文件的 <code>DosFileAttributeView</code> 以确定文件是否设置了“隐藏”位。</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html#visitFileFailedy-T-java.io.IOException-"><code>visitFileFailed</code></a>–无法访问文件时调用。特定异常传递给该方法。您可以选择是抛出异常，将其打印到控制台或日志文件，等等。</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html#visitFileFailedy-T-java.io.IOException-"><code>visitFileFailed</code></a>–无法访问文件时调用。特定异常传递给该方法。你可以选择是抛出异常，将其打印到控制台或日志文件，等等。</li>
 </ul>
-<p>如果您不需要实现所有四个 <code>FileVisitor</code> 方法，则不需要实现 <code>FileVisitor</code> 接口，可以继承 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/SimpleFileVisitor.html"><code>SimpleFileVisitor</code></a> 类。此类实现 <code>FileVisitor</code> 接口，访问树中的所有文件，并在遇到错误时抛出 <code>IOError</code>。您可以继承此类并仅覆盖所需的方法。</p>
+<p>如果你不需要实现所有四个 <code>FileVisitor</code> 方法，则不需要实现 <code>FileVisitor</code> 接口，可以继承 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/SimpleFileVisitor.html"><code>SimpleFileVisitor</code></a> 类。此类实现 <code>FileVisitor</code> 接口，访问树中的所有文件，并在遇到错误时抛出 <code>IOError</code>。你可以继承此类并仅覆盖所需的方法。</p>
 <p>下面是一个继承 <code>SimpleFileVisitor</code> 的示例，用于打印文件树中的所有条目。它打印条目不管条目是常规文件，符号链接，目录还是其他“未指定”类型的文件。它还会打印每个文件的大小（以字节为单位）。遇到的任何异常都会打印到控制台。</p>
 <p><code>FileVisitor</code> 方法以粗体显示：</p>
 <div class="codeblock"><pre>
@@ -597,14 +597,14 @@ public static class PrintFiles
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#walkFileTree-java.nio.file.Path-java.util.Set-int-java.nio.file.FileVisitor-"><code>walkFileTree(Path, Set&lt;FileVisitOption&gt;, int, FileVisitor)</code></a></li>
 </ul>
-<p>第一种方法只需要一个起点和 <code>FileVisitor</code> 的实例。您可以按如下方式调用 <code>PrintFiles</code> 文件访问者：</p>
+<p>第一种方法只需要一个起点和 <code>FileVisitor</code> 的实例。你可以按如下方式调用 <code>PrintFiles</code> 文件访问者：</p>
 <div class="codeblock"><pre>
 Path startingDir = ...;
 PrintFiles pf = new PrintFiles();
 Files.walkFileTree(startingDir, pf);
 </pre></div>
-<p>第二个 <code>walkFileTree</code> 方法允许您另外指定访问级别数限制和一组 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitOption.html"><code>FileVisitOption</code></a> 枚举。如果要确保此方法遍历整个文件树，可以为最大深度参数指定 <code>Integer.MAX_VALUE</code>。</p>
-<p>您可以指定 <code>FileVisitOption</code> 枚举，<code>FOLLOW_LINKS</code>，表示应遵循符号链接。</p>
+<p>第二个 <code>walkFileTree</code> 方法允许你另外指定访问级别数限制和一组 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitOption.html"><code>FileVisitOption</code></a> 枚举。如果要确保此方法遍历整个文件树，可以为最大深度参数指定 <code>Integer.MAX_VALUE</code>。</p>
+<p>你可以指定 <code>FileVisitOption</code> 枚举，<code>FOLLOW_LINKS</code>，表示应遵循符号链接。</p>
 <p>此代码段显示了如何调用四参数方法：</p>
 <div class="codeblock"><pre>
 import static java.nio.file.FileVisitResult.*;
@@ -617,12 +617,12 @@ Finder finder = new Finder(pattern);
 Files.walkFileTree(startingDir, opts, Integer.MAX_VALUE, finder);
 </pre></div>
 <h2><a name="order" id="order">创建 FileVisitor 时的注意事项</a></h2>
-<p>首先深度遍历文件树，但是您不能对访问子目录的迭代顺序做出任何假设。</p>
-<p>如果您的程序将更改文件系统，则需要仔细考虑如何实现 <code>FileVisitor</code>。</p>
-<p>例如，如果您正在编写递归删除，则首先删除目录中的文件，然后再删除目录本身。在这种情况下，您在 <code>postVisitDirectory</code> 中删除目录。</p>
-<p>如果您正在编写递归复制，则在 <code>preVisitDirectory</code> 中创建新目录，然后将文件复制到目录中（在 <code>visitFiles</code> 方法中）。如果要保留源目录的属性(类似于 UNIX <code>cp -p</code> 命令)，则需要在复制文件之 <em>后</em> 的 <code>postvisitdirectory</code> 中执行该操作。<a class="SourceLink" target="_blank" href="examples/Copy.java" onclick="showCode('../../displayCode.html', 'examples/Copy.java'); return false;"><code><code>Copy</code></code></a> 示例显示了如何执行此操作。</p>
-<p>如果您正在编写文件搜索，则在 <code>visitFile</code> 方法中执行比较。此方法查找符合条件的所有文件，但不查找目录。如果要查找文件和目录，还必须在 <code>preVisitDirectory</code> 或 <code>postVisitDirectory</code> 方法中执行比较。<a class="SourceLink" target="_blank" href="examples/Find.java" onclick="showCode('../../displayCode.html', 'examples/Find.java'); return false;"><code><code>Find</code></code></a> 示例显示了如何执行此操作。</p>
-<p>您需要决定是否要遵循符号链接。例如，如果要删除文件，则可能不建议遵循符号链接。如果要复制文件树，则可能需要遵循它。默认情况下，<code>walkFileTree</code> 不遵循符号链接。</p>
+<p>首先深度遍历文件树，但是你不能对访问子目录的迭代顺序做出任何假设。</p>
+<p>如果你的程序将更改文件系统，则需要仔细考虑如何实现 <code>FileVisitor</code>。</p>
+<p>例如，如果你正在编写递归删除，则首先删除目录中的文件，然后再删除目录本身。在这种情况下，你在 <code>postVisitDirectory</code> 中删除目录。</p>
+<p>如果你正在编写递归复制，则在 <code>preVisitDirectory</code> 中创建新目录，然后将文件复制到目录中（在 <code>visitFiles</code> 方法中）。如果要保留源目录的属性(类似于 UNIX <code>cp -p</code> 命令)，则需要在复制文件之 <em>后</em> 的 <code>postvisitdirectory</code> 中执行该操作。<a class="SourceLink" target="_blank" href="examples/Copy.java" onclick="showCode('../../displayCode.html', 'examples/Copy.java'); return false;"><code><code>Copy</code></code></a> 示例显示了如何执行此操作。</p>
+<p>如果你正在编写文件搜索，则在 <code>visitFile</code> 方法中执行比较。此方法查找符合条件的所有文件，但不查找目录。如果要查找文件和目录，还必须在 <code>preVisitDirectory</code> 或 <code>postVisitDirectory</code> 方法中执行比较。<a class="SourceLink" target="_blank" href="examples/Find.java" onclick="showCode('../../displayCode.html', 'examples/Find.java'); return false;"><code><code>Find</code></code></a> 示例显示了如何执行此操作。</p>
+<p>你需要决定是否要遵循符号链接。例如，如果要删除文件，则可能不建议遵循符号链接。如果要复制文件树，则可能需要遵循它。默认情况下，<code>walkFileTree</code> 不遵循符号链接。</p>
 <p>为文件调用 <code>visitFile</code> 方法。如果已指定 <code>FOLLOW_LINKS</code> 选项，并且文件树具有指向父目录的循环链接，则循环目录将在 <code>visitFileFailed</code> 方法中被报告，通过 <code>FileSystemLoopException</code>。以下代码段显示了如何捕获循环链接，并且来自 <a class="SourceLink" target="_blank" href="examples/Copy.java" onclick="showCode('../../displayCode.html', 'examples/Copy.java'); return false;"><code><code>Copy</code></code></a> 示例：</p>
 <div class="codeblock"><pre>
 @Override
@@ -639,8 +639,8 @@ public FileVisitResult
 </pre></div>
 <p>仅当程序遵循符号链接时才会出现这种情况。</p>
 <h2><a name="return" id="return">控制流</a></h2>
-<p>也许您想要遍历文件树以查找特定目录，并且在找到时，您希望该过程终止。也许您想跳过特定的目录。</p>
-<p><code>FileVisitor</code> 方法返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitResult.html"><code>FileVisitResult</code></a> 值。您可以中止文件遍历过程或控制是否访问目录，通过 <code>FileVisitor</code> 方法中返回的值：</p>
+<p>也许你想要遍历文件树以查找特定目录，并且在找到时，你希望该过程终止。也许你想跳过特定的目录。</p>
+<p><code>FileVisitor</code> 方法返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitResult.html"><code>FileVisitResult</code></a> 值。你可以中止文件遍历过程或控制是否访问目录，通过 <code>FileVisitor</code> 方法中返回的值：</p>
 <ul>
 <li><code>CONTINUE</code>  - 表示文件遍历应继续。如果 <code>preVisitDirectory</code> 方法返回 <code>CONTINUE</code>，则访问该目录。</li>
 <li><code>TERMINATE</code>  - 立即中止文件遍历。返回此值后，不会调用其他文件遍历方法。</li>

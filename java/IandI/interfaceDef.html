@@ -503,7 +503,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="createinterface.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="usinginterface.html">Next&nbsp;»</a>
+                <a target="_top" href="createinterface.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="usinginterface.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>定义一个接口</h1></div>
@@ -524,14 +524,14 @@ public interface GroupedInterface extends Interface1, Interface2, Interface3 {
     int doSomethingElse(String s);
 }
 </pre></div>
-<p><code>public</code> 访问说明符表示该接口可以被任何包中的任何类使用。如果未指定接口是公共接口，则只能在与接口相同的程序包中定义的类上访问您的接口。</p>
-<p>接口可以继承其他接口，就像类子类或继承另一个类一样。但是，虽然类只能继承另一个类，但接口可以继承任意数量的接口。接口声明包括它继承的所有接口的逗号分隔列表。</p>
+<p><code>public</code> 访问说明符表示该接口可以被任何包中的任何类使用。如果未指定接口是 public 接口，则只能在与接口相同的程序包中定义的类上访问你的接口。</p>
+<p>接口可以继承其他接口，就像类子类化(subclass)或继承(extend)另一个类一样。然而，虽然类只能继承一个类，但接口可以继承任意数量的接口。接口声明包括它继承的所有接口的逗号分隔列表。</p>
 
 <h2>接口主体</h2>
 
-<p>接口主体可以包含 <a class="TutorialLink" target="_top" href="../../java/IandI/abstract.html">abstract methods</a>，<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">default methods</a> 和 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html#static">static methods</a>。接口中的抽象方法后跟分号，但没有大括号(抽象方法不包含实现)。默认方法使用 <code>default</code> 修饰符定义，静态方法使用 <code>static</code> 关键字定义。接口中的所有抽象，默认和静态方法都隐式 <code>public</code>，因此您可以省略 <code>public</code> 修饰符。</p>
+<p>接口主体可以包含 <a class="TutorialLink" target="_top" href="../../java/IandI/abstract.html">abstract methods</a>，<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">default methods</a> 和 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html#static">static methods</a>。接口中的抽象方法后跟分号，但没有大括号(抽象方法不包含实现)。默认方法使用 <code>default</code> 修饰符定义，静态方法使用 <code>static</code> 关键字定义。接口中的所有抽象，默认和静态方法都隐式 <code>public</code>，因此你可以省略 <code>public</code> 修饰符。</p>
 
-<p>此外，接口可以包含常量声明。接口中定义的所有常量值都隐式为 <code>public</code>，<code>static</code> 和 <code>final</code>。再一次，您可以省略这些修饰符。</p> 
+<p>此外，接口可以包含常量声明。接口中定义的所有常量值都隐式为 <code>public</code>，<code>static</code> 和 <code>final</code>。再一次，你可以省略这些修饰符。</p> 
  
 
         </div>

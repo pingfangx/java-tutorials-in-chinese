@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -505,7 +505,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="nonReifiableVarargsType.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/generics-questions.html">Next&nbsp;»</a>
+                <a target="_top" href="nonReifiableVarargsType.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/generics-questions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>对泛型的限制</h1></div>
@@ -517,9 +517,9 @@
 <li>
 <a class="TutorialLink" target="_top" href="#instantiate">无法使用基本类型实例化泛型类型</a></li>
 <li>
-<a class="TutorialLink" target="_top" href="#createObjects">无法创建类型参数的实例</a></li>
+<a class="TutorialLink" target="_top" href="#createObjects">无法创建类型形参的实例</a></li>
 <li>
-<a class="TutorialLink" target="_top" href="#createStatic">无法声明类型为类型参数的静态字段</a></li>
+<a class="TutorialLink" target="_top" href="#createStatic">无法声明类型为类型形参的静态字段</a></li>
 <li>
 <a class="TutorialLink" target="_top" href="#cannotCast">不能使用参数化类型进行类型转换或使用 <tt>instanceof</tt></a></li>
 <li>
@@ -548,12 +548,12 @@ class Pair&lt;K, V&gt; {
 }
 </pre></div>
 <p>
-创建 <tt>Pair</tt> 对象时，不能用基本类型替换类型参数 <tt>K</tt> 或 <tt>V</tt>：</p>
+创建 <tt>Pair</tt> 对象时，不能用基本类型替换类型形参 <tt>K</tt> 或 <tt>V</tt>：</p>
 <div class="codeblock"><pre>
 Pair&lt;<strong>int, char</strong>&gt; p = new Pair&lt;&gt;(8, 'a');  // compile-time error
 </pre></div>
 <p>
-您只能用非基本类型替换类型参数 <tt>K</tt> 和 <tt>V</tt>：</p>
+你只能用非基本类型替换类型形参 <tt>K</tt> 和 <tt>V</tt>：</p>
 <div class="codeblock"><pre>
 Pair&lt;<strong>Integer, Character</strong>&gt; p = new Pair&lt;&gt;(8, 'a');
 </pre></div>
@@ -564,9 +564,9 @@ Pair&lt;Integer, Character&gt; p = new Pair&lt;&gt;(Integer.valueOf(8), new Char
 </pre></div>
 <p>有关自动装箱的详细信息，请参阅 <a class="TutorialLink" target="_top" href="../data/index.html">Numbers and Strings</a> 课程中的 <a class="TutorialLink" target="_top" href="../data/autoboxing.html">Autoboxing and Unboxing</a>。</p>
 
-<h2><a name="createObjects">无法创建类型参数的实例</a></h2>
+<h2><a name="createObjects">无法创建类型形参的实例</a></h2>
 <p>
-您无法创建类型参数的实例。例如，以下代码导致编译时错误：</p>
+你无法创建类型形参的实例。例如，以下代码导致编译时错误：</p>
 <div class="codeblock"><pre>
 public static &lt;E&gt; void append(List&lt;E&gt; list) {
     E elem = new E();  // compile-time error
@@ -574,7 +574,7 @@ public static &lt;E&gt; void append(List&lt;E&gt; list) {
 }
 </pre></div>
 <p>
-作为解决方法，您可以通过反射创建类型参数的对象：</p>
+作为解决方法，你可以通过反射创建类型形参的对象：</p>
 <div class="codeblock"><pre>
 public static &lt;E&gt; void append(List&lt;E&gt; list, Class&lt;E&gt; cls) throws Exception {
     E elem = cls.newInstance();   // OK
@@ -582,16 +582,16 @@ public static &lt;E&gt; void append(List&lt;E&gt; list, Class&lt;E&gt; cls) thro
 }
 </pre></div>
 <p>
-您可以按如下方式调用 <tt>append</tt> 方法：</p>
+你可以按如下方式调用 <tt>append</tt> 方法：</p>
 <div class="codeblock"><pre>
 List&lt;String&gt; ls = new ArrayList&lt;&gt;();
 append(ls, String.class);
 </pre></div>
 
 
-<h2><a name="createStatic">无法声明类型为类型参数的静态字段</a></h2>
+<h2><a name="createStatic">无法声明类型为类型形参的静态字段</a></h2>
 <p>
-类的静态字段是类的所有非静态对象共享的类级变量。因此，不允许使用类型参数的静态字段。考虑以下类：</p>
+类的静态字段是类的所有非静态对象共享的类级变量。因此，不允许使用类型形参的静态字段。考虑以下类：</p>
 <div class="codeblock"><pre>
 public class MobileDevice&lt;T&gt; {
     private static T os;
@@ -600,18 +600,18 @@ public class MobileDevice&lt;T&gt; {
 }
 </pre></div>
 <p>
-如果允许类型参数的静态字段，则以下代码将混淆：</p>
+如果允许类型形参的静态字段，则以下代码将混淆：</p>
 <div class="codeblock"><pre>
 MobileDevice&lt;Smartphone&gt; phone = new MobileDevice&lt;&gt;();
 MobileDevice&lt;Pager&gt; pager = new MobileDevice&lt;&gt;();
 MobileDevice&lt;TabletPC&gt; pc = new MobileDevice&lt;&gt;();
 </pre></div>
 <p>
-因为静态字段 <tt>os</tt> 由 <tt>phone</tt>，<tt>pager</tt> 和 <tt>pc</tt> 共享，所以 <tt>os</tt> 的实际类型是什么？它不能同时为 <tt>Smartphone</tt>，<tt>Pager</tt> 和 <tt>TabletPC</tt>。因此，您无法创建类型参数的静态字段。</p>
+因为静态字段 <tt>os</tt> 由 <tt>phone</tt>，<tt>pager</tt> 和 <tt>pc</tt> 共享，所以 <tt>os</tt> 的实际类型是什么？它不能同时为 <tt>Smartphone</tt>，<tt>Pager</tt> 和 <tt>TabletPC</tt>。因此，你无法创建类型形参的静态字段。</p>
 
 <h2><a name="cannotCast">不能使用参数化类型进行类型转换或使用 <tt>instanceof</tt></a></h2>
 <p>
-因为 Java 编译器会擦除泛型代码中的所有类型参数，所以在运行时无法验证使用泛型类型的参数化类型：</p>
+因为 Java 编译器会擦除泛型代码中的所有类型形参，所以在运行时无法验证使用泛型类型的参数化类型：</p>
 <div class="codeblock"><pre>
 public static &lt;E&gt; void rtti(List&lt;E&gt; list) {
     if (list instanceof ArrayList&lt;Integer&gt;) {  // compile-time error
@@ -625,7 +625,7 @@ public static &lt;E&gt; void rtti(List&lt;E&gt; list) {
 S = { ArrayList&lt;Integer&gt;, ArrayList&lt;String&gt; LinkedList&lt;Character&gt;, ... }
 </pre></div>
 <p>
-运行时不跟踪类型参数，因此它无法区分 <tt>ArrayList&lt;Integer&gt;</tt> 和 <tt>ArrayList&lt;String&gt;</tt> 之间的区别。您可以做的最多是使用无界通配符来验证列表是 <tt>ArrayList</tt>：</p>
+运行时不跟踪类型形参，因此它无法区分 <tt>ArrayList&lt;Integer&gt;</tt> 和 <tt>ArrayList&lt;String&gt;</tt> 之间的区别。你可以做的最多是使用无界通配符来验证列表是 <tt>ArrayList</tt>：</p>
 <div class="codeblock"><pre>
 public static void rtti(List&lt;?&gt; list) {
     if (list instanceof ArrayList&lt;?&gt;) {  // OK; instanceof requires a reifiable type
@@ -641,7 +641,7 @@ List&lt;Number&gt;  ln = (List&lt;Number&gt;) li;  // compile-time error
 </pre></div>
 
 <p>
-但是，在某些情况下，编译器知道类型参数始终有效并允许强制转换。例如：</p>
+但是，在某些情况下，编译器知道类型形参始终有效并允许强制转换。例如：</p>
 <div class="codeblock"><pre>
 List&lt;String&gt; l1 = ...;
 ArrayList&lt;String&gt; l2 = (ArrayList&lt;String&gt;)l1;  // OK
@@ -649,7 +649,7 @@ ArrayList&lt;String&gt; l2 = (ArrayList&lt;String&gt;)l1;  // OK
 
 <h2><a name="createArrays">无法创建参数化类型的数组</a></h2>
 <p>
-您无法创建参数化类型的数组。例如，以下代码无法编译：</p>
+你无法创建参数化类型的数组。例如，以下代码无法编译：</p>
 <div class="codeblock"><pre>
 List&lt;Integer&gt;[] arrayOfLists = new List&lt;Integer&gt;[2];  // compile-time error
 </pre></div>
@@ -661,7 +661,7 @@ strings[0] = "hi";   // OK
 strings[1] = 100;    // An ArrayStoreException is thrown.
 </pre></div>
 <p>
-如果您使用泛型列表尝试相同的操作，则会出现问题：</p>
+如果你使用泛型列表尝试相同的操作，则会出现问题：</p>
 <div class="codeblock"><pre>
 Object[] stringLists = new List&lt;String&gt;[];  // compiler error, but pretend it's allowed
 stringLists[0] = new ArrayList&lt;String&gt;();   // OK
@@ -682,7 +682,7 @@ class MathException&lt;T&gt; extends Exception { /* ... */ }    // compile-time 
 class QueueFullException&lt;T&gt; extends Throwable { /* ... */ // compile-time error
 </pre></div>
 <p>
-方法无法捕获类型参数的实例：</p>
+方法无法捕获类型形参的实例：</p>
 <div class="codeblock"><pre>
 public static &lt;T extends Exception, J&gt; void execute(List&lt;J&gt; jobs) {
     try {
@@ -694,7 +694,7 @@ public static &lt;T extends Exception, J&gt; void execute(List&lt;J&gt; jobs) {
 }
 </pre></div>
 <p>
-但是，您可以在 <tt>throws</tt> 子句中使用类型参数：</p>
+但是，你可以在 <tt>throws</tt> 子句中使用类型形参：</p>
 <div class="codeblock"><pre>
 class Parser&lt;T extends Exception&gt; {
     public void parse(File file) throws T {     // OK

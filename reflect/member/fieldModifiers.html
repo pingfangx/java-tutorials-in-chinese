@@ -500,7 +500,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">成员</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="fieldTypes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="fieldValues.html">Next&nbsp;»</a>
+                <a target="_top" href="fieldTypes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="fieldValues.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>获取和解析字段修饰符</h1></div>
@@ -595,7 +595,7 @@ this&#36;0   [ synthetic=true  enum_constant=false ]
 Fields in Class 'Spy' containing modifiers:  private static final
 &#36;VALUES  [ synthetic=true  enum_constant=false ]
 </pre></div>
-<p>请注意，即使它们未在原始代码中声明，也会报告某些字段。这是因为编译器将生成运行时所需的一些 <em>synthetic fields (合成字段)</em>。要测试字段是否为合成字段，示例将调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#isSynthetic--"><code>Field.isSynthetic()</code></a>。合成字段集依赖于编译器；但是常用的字段包括 <code>this$0</code>，用于内部类（即非静态成员类的嵌套类）引用最外层的封闭类，和枚举使用的 <code>$VALUES</code> ，用来实现隐式定义的静态方法  <code>values()</code>。类的合成成员的名称未指定，并且在所有编译器实现或发行版中可能不相同。这些和其他合成字段将包含在由 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getDeclaredFields--"><code>Class.getDeclaredFields()</code></a> 返回的数组中，但不会被 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getField-java.lang.String-"><code>Class.getField()</code></a> 标识，因为合成成员通常不是 <code>public</code>。</p>
+<p>请注意，即使它们未在原始代码中声明，也会报告某些字段。这是因为编译器将生成运行时所需的一些 <em>synthetic fields (合成字段)</em>。要测试字段是否为合成字段，示例将调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#isSynthetic--"><code>Field.isSynthetic()</code></a>。合成字段集依赖于编译器；但是常用的字段包括 <code>this$0</code>，用于内部类（即非静态成员类的嵌套类）引用最外层的封闭类，和枚举使用的 <code>$VALUES</code> ，其用来实现隐式定义的静态方法  <code>values()</code>。类的合成成员的名称未指定，并且在所有编译器实现或发行版中可能不相同。这些和其他合成字段将包含在由 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getDeclaredFields--"><code>Class.getDeclaredFields()</code></a> 返回的数组中，但不会被 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getField-java.lang.String-"><code>Class.getField()</code></a> 标识，因为合成成员通常不是 <code>public</code>。</p>
 <p>因为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html"><code>Field</code></a> 实现了接口 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html"><code>java.lang.reflect.AnnotatedElement</code></a>，所以可以获取任何使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME"><code>java.lang.annotation.RetentionPolicy.RUNTIME</code></a> 的运行时注解。有关获取注解的示例，请参阅 <a href="../class/classModifiers.html">Examining Class Modifiers and Types</a> 部分。</p>
 
 

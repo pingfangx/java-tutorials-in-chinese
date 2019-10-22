@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>获取类对象(Java™ 教程-Java Tutorials 中文版&gt;反射 API&gt;类)
+        <title>获取 Class 对象(Java™ 教程-Java Tutorials 中文版&gt;反射 API&gt;类)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This reflection Java tutorial describes using reflection for accessing and manipulating classes, fields, methods, and constructors" />
@@ -472,7 +472,7 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">类</a></div>
-<div class="nolinkAHEAD">获取类对象</div>
+<div class="nolinkAHEAD">获取 Class 对象</div>
 <div class="linkAHEAD"><a href="classModifiers.html">检查类修饰符和类型</a></div>
 <div class="linkAHEAD"><a href="classMembers.html">发现类成员</a></div>
 <div class="linkAHEAD"><a href="classTrouble.html">故障排除</a></div>
@@ -487,10 +487,10 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">类</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="classModifiers.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="classModifiers.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>获取类对象</h1></div>
+            <div id="PageTitle"><h1>获取 Class 对象</h1></div>
             <div id="PageContent">
 
 <p>所有反射操作的入口点是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>java.lang.Class</code></a>。除 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/ReflectPermission.html"><code>java.lang.reflect.ReflectPermission</code></a> 外，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/package-summary.html"><code>java.lang.reflect</code></a> 中的类都没有公共构造函数。要获得这些类，必须在 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a> 上调用适当的方法。有几种方法可以获取 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a>，具体取决于代码是否可以访问对象，类名，类型或现有 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a>。</p>
@@ -521,7 +521,7 @@ import java.util.Set;
 Set&lt;String&gt; s = new HashSet&lt;String&gt;();
 Class c = s.getClass();
 </pre></div>
-<p>在这种情况下，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html"><code>java.util.Set</code></a> 对象是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html"><code>java.util.HashSet</code></a> 的接口。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--"><code>getClass()</code></a> 返回的值是与 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html"><code>java.util.HashSet</code></a> 对应的类。</p>
+<p>在这种情况下，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html"><code>java.util.Set</code></a> 是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html"><code>java.util.HashSet</code></a> 类型的对象的接口。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--"><code>getClass()</code></a> 返回的值是与 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html"><code>java.util.HashSet</code></a> 对应的类。</p>
 <h2>.class 语法</h2>
 <p>如果类型可用但没有实例可用，那么可以通过将 <code>".class"</code> 追加到类型名称后来获得 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a>。这也是获取基本类型的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a> 的最简单方法。</p>
 <div class="codeblock"><pre>
@@ -540,7 +540,7 @@ Class c = int[][][].class;
 </pre></div>
 <p><code>.class</code> 语法可用于获取对应于给定类型的多维数组的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a>。</p>
 <h2>Class.forName()</h2>
-<p>如果类的完全限定名称可用，则可以使用静态方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#forName-java.lang.String-"><code>Class.forName()</code></a> 获取相应的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a>。这不能用于基本类型。数组类名称的语法由 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getName--"><code>Class.getName()</code></a> 描述。此语法适用于引用和基本类型。</p>
+<p>如果类的完全限定名称可用，则可以使用静态方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#forName-java.lang.String-"><code>Class.forName()</code></a> 获取相应的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a>。这不能用于基本类型。数组类名称的语法由 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getName--"><code>Class.getName()</code></a> 描述。此语法适用于引用数组和基本类型数组。</p>
 <div class="codeblock"><pre>
 Class c = Class.forName("com.duke.MyLocaleServiceProvider");
 </pre></div>
@@ -556,7 +556,7 @@ Class cStringArray = Class.forName("[[Ljava.lang.String;");
 <div class="codeblock"><pre>
 Class c = Double.TYPE;
 </pre></div>
-<p>有一个类 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html"><code>java.lang.Double</code></a>，用于在 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html"><code>Object</code></a> 是必需的时，包装基本类型 <code>double</code>。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html#TYPE"><code>Double.TYPE</code></a> 的值与 <code>double.class</code> 的值相同。</p>
+<p>有一个类 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html"><code>java.lang.Double</code></a>，用于在需要 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html"><code>Object</code></a> 时包装基本类型 <code>double</code>。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html#TYPE"><code>Double.TYPE</code></a> 的值与 <code>double.class</code> 的值相同。</p>
 <div class="codeblock"><pre>
 Class c = Void.TYPE;
 </pre></div>

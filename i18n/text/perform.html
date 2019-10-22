@@ -474,7 +474,7 @@
             <div class="linkLESSON"><a href="index.html">使用文本</a></div>
 <div class="linkAHEAD"><a href="charintro.html">检查字符属性</a></div>
 <div class="linkAHEAD"><a href="collationintro.html">比较字符串</a></div>
-<div class="linkBHEAD"><a href="locale.html">执行与区域设置无关的比较</a></div>
+<div class="linkBHEAD"><a href="locale.html">执行与语言环境无关的比较</a></div>
 <div class="linkBHEAD"><a href="rule.html">自定义排序规则</a></div>
 <div class="nolinkBHEAD">提高排序性能</div>
 <div class="linkAHEAD"><a href="unicode.html">Unicode</a></div>
@@ -508,7 +508,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">使用文本</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="rule.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="unicode.html">Next&nbsp;»</a>
+                <a target="_top" href="rule.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="unicode.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>提高排序性能</h1></div>
@@ -517,7 +517,7 @@
 <p>对长字符串列表进行排序通常很耗时。如果排序算法重复比较字符串，则可以使用 <code>CollationKey</code> 类加快进程。</p>
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/CollationKey.html"><code>CollationKey</code></a> 对象表示给定 <code>String</code> 和 <code>Collator</code> 的排序键。比较两个 <code>CollationKey</code> 对象涉及排序键的按位比较，并且比使用 <code>Collator.compare</code> 方法比较 <code>String</code> 对象更快。但是，生成 <code>CollationKey</code> 对象需要时间。因此，如果要仅比较 <code>String</code> 一次，<code>Collator.compare</code> 可提供更好的性能。</p>
 <p>下面的示例使用 <code>CollationKey</code> 对象对单词数组进行排序。此示例的源代码位于 <a class="SourceLink" target="_blank" href="examples/KeysDemo.java" onclick="showCode('../../displayCode.html', 'examples/KeysDemo.java'); return false;"><code>KeysDemo.java</code></a> 中。</p>
-<p><code>KeysDemo</code> 程序在 <code>main</code> 方法中创建 <code>CollationKey</code> 对象的数组。要创建 <code>CollationKey</code>，请在 <code>Collator</code> 对象上调用 <code>getCollationKey</code> 方法。您无法比较两个 <code>CollationKey</code> 对象，除非它们来自相同的 <code>Collator</code>。<code>main</code> 方法如下：</p>
+<p><code>KeysDemo</code> 程序在 <code>main</code> 方法中创建 <code>CollationKey</code> 对象的数组。要创建 <code>CollationKey</code>，请在 <code>Collator</code> 对象上调用 <code>getCollationKey</code> 方法。你无法比较两个 <code>CollationKey</code> 对象，除非它们来自相同的 <code>Collator</code>。<code>main</code> 方法如下：</p>
 <div class="codeblock"><pre>
 static public void main(String[] args) {
     Collator enUSCollator = Collator.getInstance(new Locale("en","US"));

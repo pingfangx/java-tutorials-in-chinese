@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>非检查型异常争议(Java™ 教程-Java Tutorials 中文版&gt;必要类&gt;异常)
+        <title>非检查型异常  争议(Java™ 教程-Java Tutorials 中文版&gt;必要类&gt;异常)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This Java tutorial describes exceptions, basic input/output, concurrency, regular expressions, and the platform environment" />
@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="creating.html">创建异常类</a></div>
-<div class="nolinkAHEAD">非检查型异常争议</div>
+<div class="nolinkAHEAD">非检查型异常  争议</div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="summary.html">总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -499,18 +499,18 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="creating.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="advantages.html">Next&nbsp;»</a>
+                <a target="_top" href="creating.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="advantages.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>非检查型异常争议</h1></div>
+            <div id="PageTitle"><h1>非检查型异常  争议</h1></div>
             <div id="PageContent">
 
-<p>因为 Java 编程语言不要求方法去捕获或指定非检查型异常(<code>RuntimeException</code>，<code>Error</code> 及其子类)，程序员可能会想要编写的代码仅抛出非检查型异常，或使其所有异常子类继承自 <code>RuntimeException</code>。这两个快捷方式都允许程序员编写代码而不必担心编译器错误，也不必费心去指定或捕获任何异常。虽然这对程序员来说似乎很方便，但它会回避 the <code>catch</code> or <code>specify</code> requirement 的意图，并且可能会导致其他人使用您的类时出现问题。</p>
-<p>为什么设计者决定强制一个方法来指定可以在其范围内抛出的所有未捕获的检查型异常？方法抛出的任何 <code>Exception</code> 都是方法的公共编程接口的一部分。那些调用方法的人必须知道方法可以抛出的异常，以便他们可以决定如何处理它们。这些异常与该方法的编程接口的参数和 <code>return</code> 值一样多。</p>
+<p>因为 Java 编程语言不要求方法去捕获或指定非检查型异常(<code>RuntimeException</code>，<code>Error</code> 及其子类)，程序员可能会想要编写的代码仅抛出非检查型异常，或使其所有异常子类继承自 <code>RuntimeException</code>。这两个快捷方式都允许程序员编写代码而不必担心编译器错误，也不必费心去指定或捕获任何异常。虽然这对程序员来说似乎很方便，但它会回避 the <code>catch</code> or <code>specify</code> requirement 的意图，并且可能会导致其他人使用你的类时出现问题。</p>
+<p>为什么设计者决定强制一个方法来指定可以在其范围内抛出的所有未捕获的检查型异常？方法抛出的任何 <code>Exception</code> 都是方法的公共编程接口的一部分。那些调用方法的人必须知道方法可以抛出的异常，以便他们可以决定如何处理它们。这些异常与该方法的参数和 <code>return</code> 值一样，是编程接口的一部分。</p>
 <p>接下来的问题可能是： '如果记录方法的 API 非常好，包括它可以抛出的异常，为什么不指定运行时异常呢？' 运行时异常表示编程问题导致的问题，因此，无法合理地期望 API 客户端代码从它们恢复或以任何方式处理它们。这些问题包括算术异常，例如除以零;指针异常，例如尝试通过空引用访问对象;索引异常，例如尝试通过索引太大或太小来访问数组元素。</p>
-<p>运行时异常可以在程序中的任何地方发生，而在典型的程序中它们可以非常多。必须在每个方法声明中添加运行时异常会降低程序的清晰度。因此，编译器不要求您捕获或指定运行时异常(尽管您可以)。</p>
+<p>运行时异常可以在程序中的任何地方发生，而在典型的程序中它们可以非常多。必须在每个方法声明中添加运行时异常会降低程序的清晰度。因此，编译器不要求你捕获或指定运行时异常(尽管你可以)。</p>
 <p>抛出 <code>RuntimeException</code> 的常见做法之一是用户错误地调用方法。例如，方法可以检查其中一个参数是否错误地为 <code>null</code>。如果参数为 <code>null</code>，则该方法可能抛出 <code>NullPointerException</code>，这是一个 <em>非检查型</em> 异常。</p>
-<p>一般来说，不要抛出 <code>RuntimeException</code> 或创建 <code>RuntimeException</code> 的子类，因为您不希望因为指定方法可以抛出的异常而烦恼。</p>
+<p>一般来说，不要抛出 <code>RuntimeException</code> 或创建 <code>RuntimeException</code> 的子类，因为你不希望因为指定方法可以抛出的异常而烦恼。</p>
 <p>这是底线指南：如果可以合理地期望客户端从异常中恢复，则将其作为检查型异常。如果客户端无法执行任何操作以从异常中恢复，请将其设置为非检查型异常。</p>
 
 

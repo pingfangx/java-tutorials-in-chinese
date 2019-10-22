@@ -503,15 +503,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="objectclass.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="abstract.html">Next&nbsp;»</a>
+                <a target="_top" href="objectclass.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="abstract.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>编写 final 类和方法</h1></div>
             <div id="PageContent"><!-- Writing Final classes and Methods -->
 
 
-<p>您可以声明类的一些或所有方法为 <i>final</i>。在方法声明中使用 <code>final</code> 关键字表示子类不能覆盖该方法。<code>Object</code> 类这样做了它的一些方法是 <code>final</code>。</p>
-<p>如果方法具有不应更改的实现，并且对于对象的一致状态至关重要，则可能希望将方法设为 final。例如，您可能希望在此 <code>ChessAlgorithm</code> 类中的 <code>getFirstPlayer</code> 方法为 final ：</p>
+<p>你可以声明类的一些或所有方法为 <i>final</i>。在方法声明中使用 <code>final</code> 关键字表示子类不能覆盖该方法。<code>Object</code> 类这样做了  它的一些方法是 <code>final</code>。</p>
+<p>如果方法具有不应更改的实现，并且对于对象的一致状态至关重要，则可能希望将方法设为 final。例如，你可能希望在此 <code>ChessAlgorithm</code> 类中的 <code>getFirstPlayer</code> 方法为 final ：</p>
 <div class="codeblock"><pre>
 class ChessAlgorithm {
     enum ChessPlayer { WHITE, BLACK }
@@ -523,7 +523,7 @@ class ChessAlgorithm {
 }
 </pre></div>
 <p>从构造函数调用的方法通常应该声明为 final。如果构造函数调用非 final 方法，则子类可能会重新定义该方法导致令人惊讶或不良的结果。</p>
-<p>请注意，您还可以声明整个类 final。声明为 final 的类不能被子类化。这特别有用，例如，在创建像 <code>String</code> 类这样的不可变类时。</p>
+<p>请注意，你还可以声明整个类 final。声明为 final 的类不能被子类化。这特别有用，例如，在创建像 <code>String</code> 类这样的不可变类时。</p>
 
 
         </div>

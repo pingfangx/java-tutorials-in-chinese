@@ -476,7 +476,7 @@
 <div class="nolinkBHEAD">声明类</div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,7 +512,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="classes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="variables.html">Next&nbsp;»</a>
+                <a target="_top" href="classes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="variables.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>声明类</h1></div>
@@ -526,8 +526,8 @@ class <i>MyClass</i> {
     // method declarations
 }
 </pre></div>
-<p>这是一个 <i>class declaration</i>。<em>class body</em>(大括号之间的区域)包含所有提供从类创建的对象的生命周期的代码：用于初始化新对象的构造函数，申明提供类及其对象的状态的字段，以及实现类及其对象行为的方法。</p>
-<p>前面的类声明是最小的一个。它仅包含需要的类声明的组件。您可以在类声明的开始处提供有关该类的更多信息，例如其超类的名称，它是否实现了任何接口等等。例如，</p>
+<p>这是一个 <i>class declaration (类声明)</i>。<em>class body (类主体)</em>(大括号之间的区域)包含所有提供给从类创建的对象的生命周期的代码：用于初始化新对象的构造函数，申明提供类及其对象的状态的字段，以及实现类及其对象行为的方法。</p>
+<p>前面的类声明是最小的一个。它仅包含需要的类声明的组件。你可以在类声明的开始处提供有关该类的更多信息，例如其超类的名称，它是否实现了任何接口等等。例如，</p>
 <div class="codeblock"><pre>
 class <i>MyClass extends MySuperClass implements YourInterface</i> {
     // field, constructor, and
@@ -535,13 +535,13 @@ class <i>MyClass extends MySuperClass implements YourInterface</i> {
 }
 </pre></div>
 <p>意味着 <code>MyClass</code> 是 <code>MySuperClass</code> 的子类，并且它实现了 <code>YourInterface</code> 接口。</p>
-<p>你还可以在最开始添加修饰符，如 <i>public</i> 或 <i>private</i>，这样你可以看到类声明的开始行可能变得非常复杂。确定其他类可以访问 <code>MyClass</code> 的修饰符 <i>public</i> 和 <i>private</i> 将在本课稍后部分讨论。接口和继承课程将解释在类声明中如何以及为什么要使用 <i>extends</i> 和 <i>implements</i> 关键字。目前，您不必担心这些额外的复杂问题。</p>
+<p>你还可以在最开始添加修饰符，如 <i>public</i> 或 <i>private</i>，这样你可以看到类声明的开始行可能变得非常复杂。确定其他类可以访问 <code>MyClass</code> 的修饰符 <i>public</i> 和 <i>private</i> 将在本课稍后部分讨论。接口和继承课程将解释在类声明中如何以及为什么要使用 <i>extends</i> 和 <i>implements</i> 关键字。目前，你不必担心这些额外的复杂问题。</p>
 <p>通常，类声明可以包含这些组件，依次为：</p>
 <ol>
 <li>诸如 <i>public</i>，<i>private</i> 等修饰符以及稍后将遇到的其他许多修饰符。</li>
 <li>类名称，首字母大写。</li>
-<li>该类的父类（超类）的名称（如果有的话）以关键字 <i>extends</i> 开头。一个类只能 <i>extend</i>(子类)一个父类。</li>
-<li>由类实现的以逗号分隔的接口列表（如果有）以关键字 <i>implements</i> 为前缀。一个类可以 <i>implement</i> 多个接口。</li>
+<li>该类的父类（超类）的名称（如果有的话）以关键字 <i>extends</i> 开头。一个类只能 <i>extend (继承)</i>(subclass (子类))一个父类。</li>
+<li>由类实现的以逗号分隔的接口列表（如果有）以关键字 <i>implements</i> 为前缀。一个类可以 <i>implement (实现)</i> 多个接口。</li>
 <li>类体，由大括号包围，{}。</li>
 </ol>
 

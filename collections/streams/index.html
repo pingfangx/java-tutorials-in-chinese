@@ -476,7 +476,7 @@
             <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>
         </div>
         <div class="NavBit">
-                <a target="_top" href="../interfaces/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="reduction.html">Next&nbsp;»</a>
+                <a target="_top" href="../interfaces/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="reduction.html">下一页&nbsp;»</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
         <div id="PageTitle"><h1>课程：聚合操作</h1></div>
@@ -484,9 +484,9 @@
  
 <p><strong>注意</strong>:要更好地理解本节中的概念，请查看 <a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> 和 <a class="TutorialLink" target="_top" href="../../java/javaOO/methodreferences.html">Method References</a> 部分。</p>
 
-<p>您用什么集合？您不是简单地将对象存储在集合中并将其保留在那里。在大多数情况下，您使用集合来获取存储在其中的项目。</p>
+<p>你用什么集合？你不是简单地将对象存储在集合中并将其保留在那里。在大多数情况下，你使用集合来获取存储在其中的项目。</p>
 
-<p>再次考虑 <a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> 部分中描述的场景。假设您正在创建社交网络应用程序。您希望创建一项功能，使管理员能够对满足特定条件的社交网络应用程序成员执行任何类型的操作，例如发送消息。</p>
+<p>再次考虑 <a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">Lambda Expressions</a> 部分中描述的场景。假设你正在创建社交网络应用程序。你希望创建一项功能，使管理员能够对满足特定条件的社交网络应用程序成员执行任何类型的操作，例如发送消息。</p>
 
 <p>和以前一样，假设此社交网络应用程序的成员由以下 <a class="SourceLink" target="_blank" href="examples/Person.java" onclick="showCode('../../displayCode.html', 'examples/Person.java'); return false;"><code>Person</code></a> 类表示：</p>
 
@@ -524,7 +524,7 @@
     .stream()
     .forEach(e -> System.out.println(e.getName());</pre>
 
-<p>虽然在此示例中，使用聚合操作的版本比使用 for-each 循环的版本长，但您会看到使用批量数据操作的版本对于更复杂的任务将更简洁。</p>
+<p>虽然在此示例中，使用聚合操作的版本比使用 for-each 循环的版本长，但你会看到使用批量数据操作的版本对于更复杂的任务将更简洁。</p>
 
 <p>涵盖以下主题：</p>
 
@@ -576,7 +576,7 @@
     .average()
     .getAsDouble();</pre>
     
-<p><code>mapToInt</code> 操作返回类型为 <code>IntStream</code> 的新流(这是一个仅包含整数值的流)。该操作将其参数中指定的函数应用于特定流中的每个元素。在此示例中，函数是 <code>Person::getAge</code>，它是一个返回成员年龄的方法引用。(或者，您可以使用 lambda 表达式 <code>e -&gt; e.getAge()</code>。)因此，此示例中的 <code>mapToInt</code> 操作返回一个流包含<code>roster</code> 集合中所有男性成员的年龄。</p>
+<p><code>mapToInt</code> 操作返回类型为 <code>IntStream</code> 的新流(这是一个仅包含整数值的流)。该操作将其参数中指定的函数应用于特定流中的每个元素。在此示例中，函数是 <code>Person::getAge</code>，它是一个返回成员年龄的方法引用。(或者，你可以使用 lambda 表达式 <code>e -&gt; e.getAge()</code>。)因此，此示例中的 <code>mapToInt</code> 操作返回一个流包含<code>roster</code> 集合中所有男性成员的年龄。</p>
 
 <p><code>average</code> 操作计算 <code>IntStream</code> 类型流中包含的元素的平均值。它返回一个 <code>OptionalDouble</code> 类型的对象。如果流不包含任何元素，则 <code>average</code> 操作返回 <code>OptionalDouble</code> 的空实例，并且调用方法 <code>getAsDouble</code> 会抛出 <code>NoSuchElementException</code>。JDK 包含许多终端操作，例如 <code>average</code>，它通过组合流的内容返回一个值。这些操作称为 <em>reduction operations (还原操作)</em>;有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/streams/reduction.html">Reduction</a> 部分。</p>
 
@@ -588,7 +588,7 @@
 
   
   
-  <li><p><strong>它们使用内部迭代</strong>：聚合操作不包含 <code>next</code> 之类的方法来指示他们处理集合的下一个元素。使用 <em>内部委托</em>，您的应用程序确定是 <em>什么</em> 集合，但 JDK 确定 <em>如何</em> 迭代集合。使用 <em>外部迭代</em>，您的应用程序将确定它迭代的集合以及迭代它的方式。但是，外部迭代只能按顺序迭代集合的元素。内部迭代没有此限制。它可以更容易地利用并行计算，这涉及将问题分解为子问题，同时解决这些问题，然后组合子问题解决方案的结果。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/streams/parallelism.html">Parallelism</a> 部分。</p></li><!-- ********************* -->
+  <li><p><strong>它们使用内部迭代</strong>：聚合操作不包含 <code>next</code> 之类的方法来指示他们处理集合的下一个元素。使用 <em>内部委托</em>，你的应用程序确定是 <em>什么</em> 集合，但 JDK 确定 <em>如何</em> 迭代集合。使用 <em>外部迭代</em>，你的应用程序将确定它迭代的集合以及迭代它的方式。但是，外部迭代只能按顺序迭代集合的元素。内部迭代没有此限制。它可以更容易地利用并行计算，这涉及将问题分解为子问题，同时解决这些问题，然后组合子问题解决方案的结果。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/streams/parallelism.html">Parallelism</a> 部分。</p></li><!-- ********************* -->
  
   
   
@@ -596,7 +596,7 @@
   
   
   
-  <li><p><strong>它们支持行为作为参数</strong>：您可以将 <a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">lambda expressions</a> 指定为大多数聚合操作的参数。这使您可以自定义特定聚合操作的行为。</p></li>      
+  <li><p><strong>它们支持行为作为参数</strong>：你可以将 <a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html">lambda expressions</a> 指定为大多数聚合操作的参数。这使你可以自定义特定聚合操作的行为。</p></li>      
  
 </ul>
 

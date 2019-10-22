@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Java SE 中的安全功能</a>&gt;<a href="index.html" target="_top">签名代码并授予权限</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="step2.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="step4.html">Next&nbsp;»</a>
+                <a target="_top" href="step2.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="step4.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>生成密钥</h1></div>
@@ -521,7 +521,7 @@
 <li>The <i>storepass</i> value that you are promted for specifies the keystore password.</li>
 <li>The <i>keypass</i> value that you are prompted for specifies a password for the private key about to be generated. You will always need this password in order to access the keystore entry containing that key. The entry doesn't have to have its own password. When you are prompted for the key password, you are given the option of letting it be the same as the keystore password.</li>
 </ul>
-<p><b>Note:</b> For security reasons you should not set your key or keystore passwords on the command line, because they can be intercepted more easily that way.</p>
+<p><b>注意:</b>For security reasons you should not set your key or keystore passwords on the command line, because they can be intercepted more easily that way.</p>
 <h2>Distinguished-Name Information</h2>
 <p>If you use the preceding <code>keystore</code> command, you will be prompted for your distinguished-name information. Following are the prompts; the bold indicates what you should type.</p>
 <div class="codeblock"><pre>
@@ -545,7 +545,7 @@ Is &lt;CN=Susan Jones, OU=Purchasing, O=ExampleCompany,
 <p>The <code>keytool</code> command creates the keystore named <code>examplestore</code> (if it doesn't already exist) in the same directory in which the command is executed. The command generates a public/private key pair for the entity whose distinguished name has a common name of Susan Jones and the organizational unit of Purchasing.</p>
 <p>The command creates a self-signed certificate that includes the public key and the distinguished-name information. (The distinguished name you supply will be used as the "subject" field in the certificate.) This certificate will be valid for 90 days, the default validity period if you don't specify a <i>-validity</i> option. The certificate is associated with the private key in a keystore entry referred to by the alias <code>signFiles</code>.</p>
 <p>Self-signed certificates are useful for developing and testing an application. However, users are warned that the application is signed with an untrusted certificate and asked if they want to run the application. To provide users with more confidence to run your application, use a certificate issued by a recognized certificate authority.  </p>
-<p><b>Note:</b> The command could be shorter if option defaults are accepted or you wish to be prompted for various values. Whenever you execute a <code>keytool</code> command, defaults are used for unspecified options that have default values, and you are prompted for any required values. For the <code>genkey</code> command, options with default values include <i>alias</i> (whose default is <code>mykey</code>), <i>validity</i> (90 days), and <i>keystore</i> (the file named <code>.keystore</code> in your home directory). Required values include <i>dname</i>, <i>storepass</i>, and <i>keypass</i>.</p>
+<p><b>注意:</b>The command could be shorter if option defaults are accepted or you wish to be prompted for various values. Whenever you execute a <code>keytool</code> command, defaults are used for unspecified options that have default values, and you are prompted for any required values. For the <code>genkey</code> command, options with default values include <i>alias</i> (whose default is <code>mykey</code>), <i>validity</i> (90 days), and <i>keystore</i> (the file named <code>.keystore</code> in your home directory). Required values include <i>dname</i>, <i>storepass</i>, and <i>keypass</i>.</p>
 
 
         </div>

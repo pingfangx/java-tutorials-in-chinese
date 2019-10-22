@@ -476,18 +476,18 @@
             <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>
         </div>
         <div class="NavBit">
-                <a target="_top" href="../index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="design.html">Next&nbsp;»</a>
+                <a target="_top" href="../index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="design.html">下一页&nbsp;»</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
         <div id="PageTitle"><h1>课程：日期时间概述</h1></div>
         <div id="PageContent">
 
 <p>
-时间似乎是一个简单的主题；即便是便宜的手表也能提供合理准确的日期和时间。但是，通过仔细研究，您会发现微妙的复杂性和许多影响您理解时间的因素。例如，在 1 月 31 日添加一个月的结果对于闰年而言与其他年份不同。时区也增加了复杂性。例如，一个国家可能会在短时间内进出夏令时，或者一年多次进入夏令时，或者可能在某一年内完全跳过夏令时。</p>
+时间似乎是一个简单的主题；即便是便宜的手表也能提供合理准确的日期和时间。但是，通过仔细研究，你会发现微妙的复杂性和许多影响你理解时间的因素。例如，在 1 月 31 日添加一个月的结果对于闰年而言与其他年份不同。时区也增加了复杂性。例如，一个国家可能会在短时间内进出夏令时，或者一年多次进入夏令时，或者可能在某一年内完全跳过夏令时。</p>
 <p>
-Date-Time API 使用 <a class="OutsideLink" target="_blank" href="http://www.iso.org/iso/home/standards/iso8601.htm">ISO-8601</a> 中定义的日历系统作为默认日历。此日历基于公历系统 (Gregorian calendar system)（译注：根据 wiki ，将 Gregorian calendar 称为格时历，后文译为公历，proleptic Gregorian calendar 称为外推格里历，后文亦译为公历，或标注 proleptic），并在全球范围内用作表示日期和时间的事实标准。Date-Time API 中的核心类具有诸如 <tt>LocalDateTime</tt>，<tt>ZonedDateTime</tt> 和 <tt>OffsetDateTime</tt> 之类的名称。所有这些都使用 ISO 日历系统。如果您想使用其他日历系统，例如 Hijrah 或 Thai Buddhist，则 <tt>java.time.chrono</tt> 包允许您使用其中一个预定义的日历系统。或者您可以创建自己的。</p>
+Date-Time API 使用 <a class="OutsideLink" target="_blank" href="http://www.iso.org/iso/home/standards/iso8601.htm">ISO-8601</a> 中定义的日历系统作为默认日历。此日历基于公历系统 (Gregorian calendar system)（译注：根据 wiki ，将 Gregorian calendar 称为格时历，后文译为公历，proleptic Gregorian calendar 称为外推格里历，后文亦译为公历，或标注 proleptic），并在全球范围内用作表示日期和时间的事实标准。Date-Time API 中的核心类具有诸如 <tt>LocalDateTime</tt>，<tt>ZonedDateTime</tt> 和 <tt>OffsetDateTime</tt> 之类的名称。所有这些都使用 ISO 日历系统。如果你想使用其他日历系统，例如 Hijrah 或 Thai Buddhist，则 <tt>java.time.chrono</tt> 包允许你使用其中一个预定义的日历系统。或者你可以创建自己的。</p>
 <p>
-Date-Time API 使用 <a class="OutsideLink" target="_blank" href="http://cldr.unicode.org">Unicode Common Locale Data Repository (CLDR)</a>。该仓库支持世界上的语言，并包含世界上最大的可用区域设置数据集。此仓库中的信息已本地化为数百种语言。Date-Time API 还使用 <a class="OutsideLink" target="_blank" href="http://www.iana.org/time-zones">Time-Zone Database (TZDB)</a>。该数据库提供了自 1970 年以来全球每个时区变化的信息，以及自引入该概念以来的主要时区的历史记录。</p>
+Date-Time API 使用 <a class="OutsideLink" target="_blank" href="http://cldr.unicode.org">Unicode Common Locale Data Repository (CLDR)</a>。该仓库支持世界上的语言，并包含世界上最大的可用语言环境数据集。此仓库中的信息已本地化为数百种语言。Date-Time API 还使用 <a class="OutsideLink" target="_blank" href="http://www.iana.org/time-zones">Time-Zone Database (TZDB)</a>。该数据库提供了自 1970 年以来全球每个时区变化的信息，以及自引入该概念以来的主要时区的历史记录。</p>
 
         </div>
     <div class="NavBit">

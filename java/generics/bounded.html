@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>有界类型参数(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;泛型(更新))
+        <title>有界类型形参(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;泛型(更新))
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="nolinkAHEAD">有界类型参数</div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="nolinkAHEAD">有界类型形参</div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -505,16 +505,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="methods.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="boundedTypeParams.html">Next&nbsp;»</a>
+                <a target="_top" href="methods.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="boundedTypeParams.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>有界类型参数</h1></div>
+            <div id="PageTitle"><h1>有界类型形参</h1></div>
             <div id="PageContent">
 
 <p>
-有时您可能希望限制可用作参数化类型中的类型参数的类型。例如，对数字进行操作的方法可能只想接受 <code>Number</code> 或其子类的实例。这就是 <i>有界类型参数（bounded type parameters）</i> 的用途。</p>
+有时你可能希望限制可用作参数化类型中的类型实参的类型。例如，对数字进行操作的方法可能只想接受 <code>Number</code> 或其子类的实例。这就是 <i>bounded type parameters (有界类型形参)</i> 的用途。</p>
 <p>
-要声明有界类型参数，请列出类型参数的名称，然后是 <code>extends</code> 关键字，后跟 <i>上界（upper bound）</i>，在此示例中为 <code>Number</code>。请注意，在此上下文中，<code>extends</code> 在一般意义上用于表示 "继承" (如在类中)或 "实现" (如在接口中)。</p>
+要声明有界类型形参，请列出类型形参的名称，然后是 <code>extends</code> 关键字，后跟 <i>upper bound (上界)</i>，在此示例中为 <code>Number</code>。请注意，在此上下文中，<code>extends</code> 在一般意义上用于表示 "继承" (如在类中)或 "实现" (如在接口中)。</p>
 <div class="codeblock"><pre>
 public class Box&lt;T&gt; {
 
@@ -540,7 +540,7 @@ public class Box&lt;T&gt; {
     }
 }
 </pre></div>
-<p>通过修改我们的泛型方法以包含此有界类型参数，编译现在会失败，因为我们调用 <code>inspect</code> 时仍包含 <code>String</code>：</p>
+<p>通过修改我们的泛型方法以包含此有界类型形参，编译现在会失败，因为我们调用 <code>inspect</code> 时仍包含 <code>String</code>：</p>
 <div class="codeblock"><pre>
 Box.java:21: &lt;U&gt;inspect(U) in Box&lt;java.lang.Integer&gt; cannot
   be applied to (java.lang.String)
@@ -549,7 +549,7 @@ Box.java:21: &lt;U&gt;inspect(U) in Box&lt;java.lang.Integer&gt; cannot
 1 error
 </pre></div>
 <p>
-除了限制可用于实例化泛型类型的类型之外，有界类型参数还允许您调用边界中定义的方法：</p>
+除了限制可用于实例化泛型类型的类型之外，有界类型形参还允许你调用边界中定义的方法：</p>
 <div class="codeblock"><pre>
 public class NaturalNumber&lt;T extends Integer&gt; {
 
@@ -569,7 +569,7 @@ public class NaturalNumber&lt;T extends Integer&gt; {
 
 <h2>多重边界</h2>
 <p>
-前面的示例说明了使用带有单个边界的类型参数，但是类型参数可以具有 <em>多重边界（multiple bounds）</em>：</p>
+前面的示例说明了使用带有单个边界的类型形参，但是类型形参可以具有 <em>multiple bounds (多重边界)</em>：</p>
 <div class="codeblock"><pre>
 &lt;T extends B1 &amp; B2 &amp; B3&gt;
 </pre></div>

@@ -526,7 +526,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">使用 Swing 组件</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="tooltip.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="html.html">Next&nbsp;»</a>
+                <a target="_top" href="tooltip.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="html.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>如何使用树</h1></div>
@@ -557,7 +557,7 @@
 <h2><a name="create" id="create">Creating a Tree</a></h2>
 <p>Here is a picture of an application, the top half of which displays a tree in a scroll pane.</p>
 <center><img src="../../figures/uiswing/components/TreeDemo.png" width="508" height="280" align="bottom" alt="TreeDemo" /></center><!-- ***************** boilerplate stuff **************** -->
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run the Tree Demo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#TreeDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TreeDemoProject/TreeDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the TreeDemo example" /></a><br />
 <p><!--  ******* end boilerplate stuff  *******  --><!--
@@ -746,7 +746,7 @@ if (leafIcon != null) {
 </pre></div>
 <p>Here is the screenshot of TreeIconDemo:</p>
 <center><img src="../../figures/uiswing/components/TreeIconDemo.png" width="508" height="243" align="bottom" alt="TreeIconDemo" /></center><!-- ***************** boilerplate stuff **************** -->
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ul>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ul>
 <li>Click the Launch button to run the TreeIconDemo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#TreeIconDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TreeIconDemoProject/TreeIconDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the TreeIconDemo example" /></a><br />
 <p><!--  ******* end boilerplate stuff  *******  --></p>
@@ -756,7 +756,7 @@ if (leafIcon != null) {
 <p>If you want finer control over the node icons or you want to provide tool tips, you can do so by creating a subclass of <code>DefaultTreeCellRenderer</code> and overriding the <code>getTreeCellRendererComponent</code> method. Because <code>DefaultTreeCellRenderer</code> is a subclass of <code>JLabel</code>, you can use any <code>JLabel</code> method  such as <code>setIcon</code>  to customize the <code>DefaultTreeCellRenderer</code>.</p>
 <p>The following code, from 
 <a class="SourceLink" target="_blank" href="../examples/components/TreeIconDemo2Project/src/components/TreeIconDemo2.java" onclick="showCode('../../displayCode.html', '../examples/components/TreeIconDemo2Project/src/components/TreeIconDemo2.java'); return false;"><code>TreeIconDemo2.java</code></a>, creates a cell renderer that varies the leaf icon depending on whether the word "Tutorial" is in the node's text data. The renderer also specifies tool-tip text, as the bold lines show.  <!-- ***************** boilerplate stuff **************** --></p>
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ul>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ul>
 <li>Click the Launch button to run the TreeIconDemo2 using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#TreeIconDemo2">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TreeIconDemo2Project/TreeIconDemo2.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the TreeDemo example" /></a><br />
 <p><!--  ******* end boilerplate stuff  *******  --></p>
@@ -823,7 +823,7 @@ class MyRenderer extends DefaultTreeCellRenderer {
 <h2><a name="dynamic" id="dynamic">Dynamically Changing a Tree</a></h2>
 <p>The following figure shows an application called DynamicTreeDemo that lets you add nodes to and remove nodes from a visible tree. You can also edit the text in each node.</p>
 <center><img src="../../figures/uiswing/components/DynamicTreeDemo.png" width="304" height="304" align="bottom" alt="DynamicTreeDemo" /></center><p>The application is based on an example provided by tutorial reader Richard Stanford.  <!-- ***************** boilerplate stuff **************** --></p>
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ul>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ul>
 <li>Click the Launch button to run the DynamicTreeDemo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#DynamicTreeDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/DynamicTreeDemoProject/DynamicTreeDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the TreeDemo example" /></a><br />
 <p><!--  ******* end boilerplate stuff  *******  --></p>
@@ -919,7 +919,7 @@ public DefaultMutableTreeNode addObject(DefaultMutableTreeNode parent,
 <p>Interestingly, the <code>TreeModel</code> interface accepts any kind of object as a tree node. It does not require that nodes be represented by <code>DefaultMutableTreeNode</code> objects, or even that nodes implement the 
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/tree/TreeNode.html"><code>TreeNode</code></a> interface. Thus, if the <code>TreeNode</code> interface is not suitable for your tree model, feel free to devise your own representation for tree nodes. For example, if you have a pre-existing hierarchical data structure, you do not need to duplicate it or force it into the <code>TreeNode</code> mold. You just need to implement your tree model so that it uses the information in the existing data structure.</p>
 <p>The following figure shows an application called GenealogyExample that displays the descendants or ancestors of a particular person. (Thanks to tutorial reader Olivier Berlanger for providing this example.)  <!-- ***************** boilerplate stuff **************** --></p>
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ul>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ul>
 <li>Click the Launch button to run the Genealogy Example using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#GenealogyExample">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/GenealogyExampleProject/GenealogyExample.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the TreeDemo example" /></a><br />
 <p><!--  ******* end boilerplate stuff  *******  --></p>

@@ -491,15 +491,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">包</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="namingpkgs.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="managingfiles.html">Next&nbsp;»</a>
+                <a target="_top" href="namingpkgs.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="managingfiles.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用包成员</h1></div>
             <div id="PageContent"><!--Using Package Members-->
 
 
-<p>组成包的类型称为 <i>包成员（package members）</i>。</p>
-<p>要从包外部使用 <code>public</code> 包成员，您必须执行以下操作之一：</p>
+<p>组成包的类型称为 <i>package members (包成员)</i>。</p>
+<p>要从包外部使用 <code>public</code> 包成员，你必须执行以下操作之一：</p>
 <ul>
 <li>通过其完全限定名称引用该成员</li>
 <li>导入包成员</li>
@@ -507,32 +507,32 @@
 </ul>
 <p>每种情况都适用于不同的情况，如以下各节所述。</p>
 <h2>用限定名引用包成员</h2>
-<p>到目前为止，本教程中的大多数示例都通过简单名称引用类型，例如 <code>Rectangle</code> 和 <code>StackOfInts</code>。如果您编写的代码与该成员位于同一个包中，或者已导入该成员，则可以使用包成员的简单名称。</p>
-<p>但是，如果您尝试使用其他包中的成员并且尚未导入该包，则必须使用该成员的完全限定名称，该名称包括包名称。以下是上一个示例中 <code>graphics</code> 包中声明的 <code>Rectangle</code> 类的完全限定名称。</p>
+<p>到目前为止，本教程中的大多数示例都通过简单名称引用类型，例如 <code>Rectangle</code> 和 <code>StackOfInts</code>。如果你编写的代码与该成员位于同一个包中，或者已导入该成员，则可以使用包成员的简单名称。</p>
+<p>但是，如果你尝试使用其他包中的成员并且尚未导入该包，则必须使用该成员的完全限定名称，该名称包括包名称。以下是上一个示例中 <code>graphics</code> 包中声明的 <code>Rectangle</code> 类的完全限定名称。</p>
 <div class="codeblock"><pre>
 graphics.Rectangle
 </pre></div>
-<p>您可以使用此限定名称来创建 <code>graphics.Rectangle</code> 的实例：</p>
+<p>你可以使用此限定名称来创建 <code>graphics.Rectangle</code> 的实例：</p>
 <div class="codeblock"><pre>
 graphics.Rectangle myRect = new graphics.Rectangle();
 </pre></div>
-<p>限定名可以不经常使用。但是，重复使用名称时，重复键入名称会变得乏味，且代码变得难以阅读。作为替代方案，您可以 <i>import</i> 成员或其包，然后使用其简单名称。</p>
+<p>限定名可以不经常使用。但是，重复使用名称时，重复键入名称会变得乏味，且代码变得难以阅读。作为替代方案，你可以 <i>import (导入)</i> 成员或其包，然后使用其简单名称。</p>
 <h2>导入包成员</h2>
 <p>要将特定成员导入当前文件，请在任何类型定义之前在文件开头放置 <code>import</code> 语句，但在 <code>package</code> 语句之后（如果有）。以下是从上一节中创建的 <code>graphics</code> 包导入 <code>Rectangle</code> 类的方法。</p>
 <div class="codeblock"><pre>
 import graphics.Rectangle;
 </pre></div>
-<p>现在，您可以通过简单名称引用 <code>Rectangle</code> 类。</p>
+<p>现在，你可以通过简单名称引用 <code>Rectangle</code> 类。</p>
 <div class="codeblock"><pre>
 Rectangle myRectangle = new Rectangle();
 </pre></div>
-<p>如果您只使用 <code>graphics</code> 包中的一些成员，这种方法很有效。但是如果从包中使用多种类型，则应导入整个包。</p>
+<p>如果你只使用 <code>graphics</code> 包中的一些成员，这种方法很有效。但是如果从包中使用多种类型，则应导入整个包。</p>
 <h2>导入整个包</h2>
 <p>要导入特定包中包含的所有类型，请使用带有星号 <code>(*)</code> 通配符的 <code>import</code> 语句。</p>
 <div class="codeblock"><pre>
 import graphics.*;
 </pre></div>
-<p>现在，您可以通过简单名称引用 <code>graphics</code> 包中的任何类或接口。</p>
+<p>现在，你可以通过简单名称引用 <code>graphics</code> 包中的任何类或接口。</p>
 <div class="codeblock"><pre>
 Circle myCircle = new Circle();
 Rectangle myRectangle = new Rectangle();
@@ -543,7 +543,7 @@ Rectangle myRectangle = new Rectangle();
 import graphics.A*;
 </pre></div>
 <p>相反，它会生成编译器错误。使用 <code>import</code> 语句，通常只导入单个包成员或整个包。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;另一种不太常见的 <code>import</code> 形式允许您导入封闭类的公共嵌套类。例如，如果 <code>graphics.Rectangle</code> 类包含有用的嵌套类，例如 <code>Rectangle.DoubleWide</code> 和 <code>Rectangle.Square</code>，则可以导入 <code>Rectangle</code> 及其嵌套类，使用以下 <i>两个</i> 语句。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;另一种不太常见的 <code>import</code> 形式允许你导入封闭类的公共嵌套类。例如，如果 <code>graphics.Rectangle</code> 类包含有用的嵌套类，例如 <code>Rectangle.DoubleWide</code> 和 <code>Rectangle.Square</code>，则可以导入 <code>Rectangle</code> 及其嵌套类，使用以下 <i>两个</i> 语句。
 <div class="codeblock"><pre>
 import graphics.Rectangle;
 import graphics.Rectangle.*;
@@ -552,9 +552,9 @@ import graphics.Rectangle.*;
 另一种不太常见的 <code>import</code> 形式，即 <i>static import statement</i>，将在本节末尾讨论。
 <hr /></div>
 <p>为方便起见，Java 编译器会自动为每个源文件导入两个完整的包：(1) <code>java.lang</code> 包和 (2) 当前包(当前文件的包)。</p>
-<h2>包的表面层次结构</h2>
+<h2>包表面上显示似乎是层次结构</h2>
 <p>首先，包似乎是分层的，但它们不是。例如，Java API 包括 <code>java.awt</code> 包，<code>java.awt.color</code> 包，<code>java.awt.font</code> 包，以及 <code>java.awt</code> 开头的许多其他包。但是，<code>java.awt.color</code> 包，<code>java.awt.font</code> 包和其他 <code>java.awt.xxxx</code> 包 <i>不包含</i> 在 <code>java.awt</code> 中。前缀 <code>java.awt</code>(Java Abstract Window Toolkit) 用于许多相关的包，以使关系明显，但不显示包含。</p>
-<p>导入 <code>java.awt.*</code> 会导入 <code>java.awt</code> 包中的所有类型，但<i>不会导入</i> <code>java.awt.color</code>，<code>java.awt.font</code> 或任何其他 <code>java.awt.xxxx</code> 包。如果您计划使用 <code>java.awt.color</code> 中的类以及 <code>java.awt</code> 中的其他类，则必须导入包含所有文件的包：</p>
+<p>导入 <code>java.awt.*</code> 会导入 <code>java.awt</code> 包中的所有类型，但<i>不会导入</i> <code>java.awt.color</code>，<code>java.awt.font</code> 或任何其他 <code>java.awt.xxxx</code> 包。如果你计划使用 <code>java.awt.color</code> 中的类以及 <code>java.awt</code> 中的其他类，则必须导入包含所有文件的包：</p>
 <div class="codeblock"><pre>
 import java.awt.*;
 import java.awt.color.*;
@@ -564,12 +564,12 @@ import java.awt.color.*;
 <div class="codeblock"><pre>
 Rectangle rect;
 </pre></div>
-<p>在这种情况下，您必须使用成员的完全限定名称来准确指出您想要的 <code>Rectangle</code> 类。例如，</p>
+<p>在这种情况下，你必须使用成员的完全限定名称来准确指出你想要的 <code>Rectangle</code> 类。例如，</p>
 <div class="codeblock"><pre>
 graphics.Rectangle rect;
 </pre></div>
 <h2><a name="staticimport" id="staticimport">静态导入语句</a></h2>
-<p>在某些情况下，您需要频繁访问来自一个或两个类的静态最终字段(常量)和静态方法。反复对这些类的名称进行前缀可能会导致代码混乱。<i>static import</i> 语句为您提供了一种导入要使用的常量和静态方法的方法，这样您就不需要为其类的名称添加前缀。</p>
+<p>在某些情况下，你需要频繁访问来自一个或两个类的静态最终字段(常量)和静态方法。反复对这些类的名称进行前缀可能会导致代码混乱。<i>static import</i> 语句为你提供了一种导入要使用的常量和静态方法的方法，这样你就不需要为其类的名称添加前缀。</p>
 <p><code>java.lang.Math</code> 类定义 <code>PI</code> 常量和许多静态方法，包括计算正弦，余弦，正切，平方根，最大值，最小值，指数等的方法。例如，</p>
 <div class="codeblock"><pre>
 public static final double PI 
@@ -583,7 +583,7 @@ public static double cos(double a)
 <div class="codeblock"><pre>
 double r = Math.cos(Math.PI * theta);
 </pre></div>
-<p>您可以使用 static import 语句导入 java.lang.Math 的静态成员，这样就不需要为类名 <code>Math</code> 添加前缀。<code>Math</code> 的静态成员可以单独导入：</p>
+<p>你可以使用 static import 语句导入 java.lang.Math 的静态成员，这样就不需要为类名 <code>Math</code> 添加前缀。<code>Math</code> 的静态成员可以单独导入：</p>
 <div class="codeblock"><pre>
 import <b>static</b> java.lang.Math.PI;
 </pre></div>
@@ -595,7 +595,7 @@ import <b>static</b> java.lang.Math.*;
 <div class="codeblock"><pre>
 double r = cos(PI * theta);
 </pre></div>
-<p>显然，您可以编写自己的类，包含常用的常量和静态方法，然后使用 static import 语句。例如，</p>
+<p>显然，你可以编写自己的类，包含常用的常量和静态方法，然后使用 static import 语句。例如，</p>
 <div class="codeblock"><pre>
 import <b>static</b> mypackage.MyConstants.*;
 </pre></div> 

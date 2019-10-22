@@ -515,13 +515,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="streams.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="charstreams.html">Next&nbsp;»</a>
+                <a target="_top" href="streams.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="charstreams.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>字节流</h1></div>
             <div id="PageContent">
 
-<p>程序使用 <em>byte streams</em> 执行 8 位字节的输入和输出。所有字节流类都继承自 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><code>InputStream</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html"><code>OutputStream</code></a>。</p>
+<p>程序使用 <em>byte streams (字节流)</em> 执行 8 位字节的输入和输出。所有字节流类都继承自 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><code>InputStream</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html"><code>OutputStream</code></a>。</p>
 <p>有许多字节流类。为了演示字节流的工作原理，我们将重点关注文件 I/O 字节流，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/FileInputStream.html"><code>FileInputStream</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/FileOutputStream.html"><code>FileOutputStream</code></a>。其他种类的字节流的使用方式大致相同;它们的不同之处主要在于它们的构造方式。</p>
 <h2>使用字节流</h2>
 <p>我们将通过检查名为 <a class="SourceLink" target="_blank" href="examples/CopyBytes.java" onclick="showCode('../../displayCode.html', 'examples/CopyBytes.java'); return false;"><code>CopyBytes</code></a> 的示例程序来探索 <code>FileInputStream</code> 和 <code>FileOutputStream</code>，该程序使用字节流来复制 <code>xanadu.txt</code>，一次一个字节。</p>
@@ -555,7 +555,7 @@ public class CopyBytes {
     }
 }
 </pre></div>
-<p><code>CopyBytes</code> 将大部分时间花在一个简单的循环中，该循环读取输入流并一次写入一个字节的输出流，如 <span id="figure:byteStream.gif">the following figure</span> 所示。</p>
+<p><code>CopyBytes</code> 将大部分时间花在一个简单的循环中，该循环读取输入流并一次写入一个字节的输出流，如 <span id="figure:byteStream.gif">下图</span> 所示。</p>
 <center><img src="../../figures/essential/byteStream.gif" width="365" height="299" align="bottom" alt="简单的字节流输入和输出。" /></p><p class="FigureCaption">简单的字节流输入和输出。</p></center>
 <h2>始终关闭流</h2>
 <p>在不再需要流时关闭流是非常重要的  非常重要以至于 <code>CopyBytes</code> 使用 <code>finally</code> 块来保证即使发生错误也会关闭两个流。这种做法有助于避免严重的资源泄漏。</p>

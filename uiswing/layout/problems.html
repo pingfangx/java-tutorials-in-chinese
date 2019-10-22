@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">在容器中布置组件</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="none.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../QandE/questions-ch4.html">Next&nbsp;»</a>
+                <a target="_top" href="none.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../QandE/questions-ch4.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>解决常见布局问题</h1></div>
@@ -513,7 +513,7 @@
 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/javafx/layout-tutorial/index.html">Working With Layouts in JavaFX</a>.</p>
 
 
-<p><strong>Problem:</strong> How do I specify a component's exact size?</p>
+<p><strong>Problem:</strong>How do I specify a component's exact size?</p>
 <ul>
 <li>A handful of the more modern layout managers provide ways to override the size set by the component. Check whether the layout manager you are using allows you to specify component sizes.</li>
 <li>Make sure that you really need to set the component's exact size. Each Swing component has a different preferred size, depending on the font it uses and the look and feel. For this reason, it often does not make sense to specify a Swing component's exact size.</li>
@@ -524,11 +524,11 @@
 </ul>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;No matter how you specify your component's size, be sure that your component's container uses a layout manager that respects the requested size of the component. The <code>FlowLayout</code> and <code>GridBagLayout</code> managers use the component's preferred size (the latter depending on the constraints that you set), but <code>BorderLayout</code> and <code>GridLayout</code> usually do not. The <code>BoxLayout</code> manager generally uses a component's preferred size (although components can be larger), and is one of the few layout managers that respects the component's maximum size.
 <hr /></div>
-<p><strong>Problem:</strong> My component does not appear after I have added it to the container.</p>
+<p><strong>Problem:</strong>My component does not appear after I have added it to the container.</p>
 <ul>
 <li>You need to invoke <code>revalidate</code> and <code>repaint</code> after adding a component before it will show up in your container.</li>
 </ul>
-<p><strong>Problem:</strong> My custom component is being sized too small.</p>
+<p><strong>Problem:</strong>My custom component is being sized too small.</p>
 <ul>
 <li>Does the component implement the <code>getPreferredSize</code> and <code>getMinimumSize</code> methods? If so, do they return the right values?</li>
 <li>Are you using a layout manager that can use as much space as is available? See <a href="using.html#choosing">Tips on Choosing a Layout Manager</a> for some tips on choosing a layout manager and specifying that it use the maximum available space for a particular component.</li>

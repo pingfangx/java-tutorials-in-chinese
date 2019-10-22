@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -506,21 +506,21 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="unboundedWildcards.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="subtyping.html">Next&nbsp;»</a>
+                <a target="_top" href="unboundedWildcards.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="subtyping.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>下界通配符</h1></div>
             <div id="PageContent">
 
 <p>
-<a class="TutorialLink" target="_top" href="upperBounded.html">Upper Bounded Wildcards</a> 部分显示了上界通配符将未知类型限制为特定类型或其子类型，并使用 <tt>extends</tt> 关键字表示。以类似的方式，<em>下界通配符（lower bounded）</em> 通配符将未知类型限制为特定类型或其 <em>超类（super type）</em>。</p>
+<a class="TutorialLink" target="_top" href="upperBounded.html">Upper Bounded Wildcards</a> 部分显示了上界通配符将未知类型限制为特定类型或其子类型，并使用 <tt>extends</tt> 关键字表示。以类似的方式，<em>lower bounded (下界)</em> 通配符将未知类型限制为特定类型或其 <em>super type (超类)</em>。</p>
 <p>
-下界通配符表示为通配符( '<tt>?</tt>' )，后跟 <tt>super</tt> 关键字，后跟 <em>下界（lower bound）</em>：<tt>&lt;? super A&gt;</tt>。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;您可以指定通配符的上界，也可以指定下界，但不能同时指定两者。
+下界通配符表示为通配符( '<tt>?</tt>' )，后跟 <tt>super</tt> 关键字，后跟 <em>lower bound (下界)</em>：<tt>&lt;? super A&gt;</tt>。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;你可以指定通配符的上界，也可以指定下界，但不能同时指定两者。
 <hr /></div>
 
 <p>
-假设您要编写一个将 <tt>Integer</tt> 对象放入列表的方法。为了最大限度地提高灵活性，您希望该方法能够处理 <tt>List&lt;Integer&gt;</tt>，<tt>List&lt;Number&gt;</tt> 和 <tt>List&lt;Object&gt;</tt>  - 任何可以保存 <tt>Integer</tt> 值的列表。</p>
+假设你要编写一个将 <tt>Integer</tt> 对象放入列表的方法。为了最大限度地提高灵活性，你希望该方法能够处理 <tt>List&lt;Integer&gt;</tt>，<tt>List&lt;Number&gt;</tt> 和 <tt>List&lt;Object&gt;</tt>  - 任何可以保存 <tt>Integer</tt> 值的列表。</p>
 <p>
 要编写适用于 <tt>Integer</tt> 列表和 <tt>Integer</tt> 的超类型（例如 <tt>Integer</tt>，<tt>Number</tt>，和 <tt>Object</tt>）列表的方法，你可以指定 <tt>List&lt;? super Integer&gt;</tt>。术语 <tt>List&lt;Integer&gt;</tt> 比 <tt>List&lt;? super Integer&gt;</tt> 更具限制性，因为前者仅匹配类型 <tt>Integer</tt> 的列表，而后者匹配任何 <tt>Integer</tt> 的超类型的列表。</p>
 <p>

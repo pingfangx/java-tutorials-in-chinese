@@ -472,7 +472,7 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">网络概述</a></div>
-<div class="linkAHEAD"><a href="alreadyknow.html">您可能已经知道的 Java 中的网络</a></div>
+<div class="linkAHEAD"><a href="alreadyknow.html">你可能已经知道的 Java 中的网络</a></div>
 <div class="nolinkAHEAD">网络基础知识</div>
 </div>
     </div>
@@ -485,37 +485,37 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">网络概述</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="alreadyknow.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../urls/index.html">Next&nbsp;»</a>
+                <a target="_top" href="alreadyknow.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../urls/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>网络基础知识</h1></div>
             <div id="PageContent">
 
 <p>运行在 Internet 上的计算机使用传输控制协议(TCP)或用户数据报协议(UDP)相互通信，如下图所示：</p>
-<center><img src="../../figures/networking/1netw.gif" width="155" height="180" align="bottom" alt="网络通信示例。" /></center><p>编写通过网络进行通信的 Java 程序时，您正在应用层进行编程。通常，您不需要关心 TCP 和 UDP 层。相反，您可以使用 <code>java.net</code> 包中的类。这些类提供独立于系统的网络通信。但是，要确定程序应使用哪些 Java 类，您需要了解 TCP 和 UDP 的不同之处。</p>
+<center><img src="../../figures/networking/1netw.gif" width="155" height="180" align="bottom" alt="网络通信示例。" /></center><p>编写通过网络进行通信的 Java 程序时，你正在应用层进行编程。通常，你不需要关心 TCP 和 UDP 层。相反，你可以使用 <code>java.net</code> 包中的类。这些类提供独立于系统的网络通信。但是，要确定程序应使用哪些 Java 类，你需要了解 TCP 和 UDP 的不同之处。</p>
 <h2>TCP</h2>
-<p>当两个应用程序想要可靠地相互通信时，它们建立连接并通过该连接来回发送数据。这类似于拨打电话。如果您想和 Kentucky 的 Beatrice 姨妈交谈，当您拨打她的电话号码并建立联系时就建立了联系。您可以通过电话线相互通信，在连接上来回发送数据。与电话公司一样，TCP 保证从连接的一端发送的数据实际上到达了另一端，并且以相同的顺序发送。否则，报告错误。</p>
-<p>TCP 为需要可靠通信的应用程序提供点对点通道。超文本传输​​协议(HTTP)，文件传输协议(FTP)和 Telnet 都是需要可靠通信通道的应用程序的示例。通过网络发送和接收数据的顺序对于这些应用程序的成功至关重要。当使用 HTTP 从 URL 读取时，必须按照发送顺序接收数据。否则，您最终会得到混乱的 HTML 文件，损坏的 zip 文件或其他一些无效信息。</p>
-<div class="note"><hr /><strong>定义：</strong>&nbsp;<p><em>TCP</em>(<em>Transmission Control Protocol (传输控制协议)</em>)是一种基于连接的协议，可在两台计算机之间提供可靠的数据流。</p>
+<p>当两个应用程序想要可靠地相互通信时，它们建立连接并通过该连接来回发送数据。这类似于拨打电话。如果你想和 Kentucky 的 Beatrice 姨妈交谈，当你拨打她的电话号码并建立联系时就建立了联系。你可以通过电话线相互通信，在连接上来回发送数据。与电话公司一样，TCP 保证从连接的一端发送的数据实际上到达了另一端，并且以相同的顺序发送。否则，报告错误。</p>
+<p>TCP 为需要可靠通信的应用程序提供点对点通道。超文本传输​​协议(HTTP)，文件传输协议(FTP)和 Telnet 都是需要可靠通信通道的应用程序的示例。通过网络发送和接收数据的顺序对于这些应用程序的成功至关重要。当使用 HTTP 从 URL 读取时，必须按照发送顺序接收数据。否则，你最终会得到混乱的 HTML 文件，损坏的 zip 文件或其他一些无效信息。</p>
+<div class="note"><hr /><strong>定义:</strong>&nbsp;<p><em>TCP</em>(<em>Transmission Control Protocol (传输控制协议)</em>)是一种基于连接的协议，可在两台计算机之间提供可靠的数据流。</p>
 <hr /></div>
 <h2>UDP</h2>
 <p>UDP 协议提供网络上两个应用程序之间无法保证的通信。UDP 不像 TCP 那样基于连接。相反，它从一个应用程序向另一个应用程序发送称为 <em>datagrams (数据报)</em> 的独立数据包。发送数据报非常类似于通过邮政服务发送信件：交付顺序并不重要且无法保证，并且每条消息都独立于任何其他消息。</p>
-<div class="note"><hr /><strong>定义：</strong>&nbsp;<p><em>UDP</em>（<em>User Datagram Protocol (用户数据报协议)</em>）是一种协议，它将独立的数据包（称为数据报）从一台计算机发送到另一台计算机而不保证到达。UDP 不像 TCP 那样基于连接。</p>
+<div class="note"><hr /><strong>定义:</strong>&nbsp;<p><em>UDP</em>（<em>User Datagram Protocol (用户数据报协议)</em>）是一种协议，它将独立的数据包（称为数据报）从一台计算机发送到另一台计算机而不保证到达。UDP 不像 TCP 那样基于连接。</p>
 <hr /></div>
 <p>对于许多应用而言，可靠性的保证对于从连接的一端到另一端的信息传输的成功至关重要。但是，其他形式的通信不需要这样严格的标准。实际上，它们可能会因额外的开销而变慢，或者可靠的连接可能会使服务无效。</p>
 <p>例如，考虑一个时钟服务器，它在请求时将当前时间发送到其客户端。如果客户端错过了一个数据包，那么重新发送它并没有多大意义，因为当客户端在第二次尝试时接收它时，时间将是不正确的。如果客户端发出两个请求并且无序地从服务器接收数据包，那么这并不重要，因为客户端可以发现数据包发生故障并发出另一个请求。在这种情况下，TCP 的可靠性是不必要的，因为它会导致性能下降并可能妨碍服务的有用性。</p>
 <p>另一个不需要保证可靠信道的服务示例是 ping 命令。ping 命令的目的是测试网络上两个程序之间的通信。事实上，ping 需要知道丢弃或无序数据包，以确定连接的好坏。可靠的渠道会使这项服务无效。</p>
 <p>UDP 协议提供网络上两个应用程序之间无法保证的通信。UDP 不像 TCP 那样基于连接。相反，它从一个应用程序向另一个应用程序发送独立的数据包。发送数据报非常类似于通过邮件服务发送信件：交付顺序并不重要且无法保证，并且每条消息都独立于其他任何消息。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>许多防火墙和路由器已配置为不允许 UDP 数据包。如果您在连接到防火墙外的服务时遇到问题，或者客户端无法连接到您的服务，请询问系统管理员是否允许 UDP。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>许多防火墙和路由器已配置为不允许 UDP 数据包。如果你在连接到防火墙外的服务时遇到问题，或者客户端无法连接到你的服务，请询问系统管理员是否允许 UDP。</p>
 <hr /></div>
 <h2>理解端口</h2>
 <p>一般而言，计算机与网络具有单一物理连接。发往特定计算机的所有数据都通过该连接到达。但是，数据可能适用于在计算机上运行的不同应用程序。那么，计算机如何知道将数据转发到哪个应用程序呢？通过使用 <em>ports (端口)</em>。</p>
 <p>通过因特网传输的数据伴随着寻址信息，该信息识别计算机及其所针对的端口。计算机由其 32 位 IP 地址标识，IP 用于将数据传送到网络上的正确计算机。端口由 16 位数字标识，TCP 和 UDP 用于将数据传递到正确的应用程序。</p>
 <p>在诸如 TCP 的基于连接的通信中，服务器应用程序将套接字绑定到特定端口号。这具有向系统注册服务器以接收发往该端口的所有数据的效果。然后，客户端可以与服务器端口上的服务器会合，如下所示：</p>
-<center><img src="../../figures/networking/2tcp.gif" width="302" height="60" align="bottom" alt="客户端通过其端口与服务器通信" /></center><div class="note"><hr /><strong>定义：</strong>&nbsp;<p>TCP 和 UDP 协议使用端口将传入数据映射到计算机上运行的特定进程。</p>
+<center><img src="../../figures/networking/2tcp.gif" width="302" height="60" align="bottom" alt="客户端通过其端口与服务器通信" /></center><div class="note"><hr /><strong>定义:</strong>&nbsp;<p>TCP 和 UDP 协议使用端口将传入数据映射到计算机上运行的特定进程。</p>
 <hr /></div>
 <p>在基于数据报的通信(如 UDP)中，数据报包包含其目的地的端口号，UDP 将数据包路由到适当的应用程序，如下图所示：</p>
-<center><img src="../../figures/networking/3tcpudp.gif" width="334" height="169" align="bottom" alt="将数据包路由到适当的应用程序。" /></center><p>端口号范围为 0 到 65,535，因为端口由 16 位数字表示。端口号范围从 0 到 1023 是受限制的；它们被保留以供 HTTP、FTP 等知名服务和其他系统服务使用。这些端口称为 <em>well-known ports (众所周知的端口)</em>。您的应用程序不应尝试绑定它们。</p>
+<center><img src="../../figures/networking/3tcpudp.gif" width="334" height="169" align="bottom" alt="将数据包路由到适当的应用程序。" /></center><p>端口号范围为 0 到 65,535，因为端口由 16 位数字表示。端口号范围从 0 到 1023 是受限制的；它们被保留以供 HTTP、FTP 等知名服务和其他系统服务使用。这些端口称为 <em>well-known ports (众所周知的端口)</em>。你的应用程序不应尝试绑定它们。</p>
 <h2>JDK 中的网络类</h2>
 <p>通过 <code>java.net</code> 中的类，Java 程序可以使用 TCP 或 UDP 通过 Internet 进行通信。<code>URL</code>，<code>URLConnection</code>，<code>Socket</code> 和 <code>ServerSocket</code> 类都使用 TCP 通过网络进行通信。<code>DatagramPacket</code>，<code>DatagramSocket</code> 和 <code>MulticastSocket</code> 类用于 UDP。</p>
 

@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -506,7 +506,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="capture.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="erasure.html">Next&nbsp;»</a>
+                <a target="_top" href="capture.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="erasure.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>通配符使用指南</h1></div>
@@ -527,7 +527,7 @@
 
 <p>
 在决定是否使用通配符以及适合使用哪种类型的通配符时，可以使用 "in" 和 "out" 原则。以下列表提供了遵循的准则：</p>
-<div class="note"><hr /><strong>Wildcard Guidelines:</strong>&nbsp;<ul>
+<div class="note"><hr /><strong>通配符指南:</strong>&nbsp;<ul>
 <li>"in" 变量使用上界通配符定义，使用 <tt>extends</tt> 关键字。</li>
 <li>"out" 变量使用下界通配符定义，使用 <tt>super</tt> 关键字。</li>
 <li>如果可以使用 <tt>Object</tt> 类中定义的方法访问 "in" 变量，请使用无界通配符。</li>
@@ -538,7 +538,7 @@
 这些指南不适用于方法的返回类型。应该避免使用通配符作为返回类型，因为它强制程序员使用代码来处理通配符。</p>
 
 <p>
-由 <tt>List&lt;? extends ...&gt;</tt> 可以被非正式地认为是只读的，但这不是一个严格的保证。假设您有以下两个类：</p>
+由 <tt>List&lt;? extends ...&gt;</tt> 可以被非正式地认为是只读的，但这不是一个严格的保证。假设你有以下两个类：</p>
 <div class="codeblock"><pre>
 class NaturalNumber {
 
@@ -562,15 +562,15 @@ List&lt;? extends NaturalNumber&gt; ln = le;
 ln.add(new NaturalNumber(35));  // compile-time error
 </pre></div>
 <p>
-因为 <tt>List&lt;EvenNumber&gt;</tt> 是 <tt>List&lt;? extends NaturalNumber&gt;</tt>，您可以将 <tt>le</tt> 分配给 <tt>ln</tt>。但是你不能使用 <tt>ln</tt> 将自然数添加到偶数列表中。列表中的以下操作是可能的：</p>
+因为 <tt>List&lt;EvenNumber&gt;</tt> 是 <tt>List&lt;? extends NaturalNumber&gt;</tt>，你可以将 <tt>le</tt> 分配给 <tt>ln</tt>。但是你不能使用 <tt>ln</tt> 将自然数添加到偶数列表中。列表中的以下操作是可能的：</p>
 <ul>
-<li>您可以添加 <tt>null</tt>。</li>
-<li>您可以调用 <tt>clear</tt>。</li>
-<li>您可以获取迭代器并调用 <tt>remove</tt>。</li>
-<li>您可以捕获通配符并写入从列表中读取的元素。</li>
+<li>你可以添加 <tt>null</tt>。</li>
+<li>你可以调用 <tt>clear</tt>。</li>
+<li>你可以获取迭代器并调用 <tt>remove</tt>。</li>
+<li>你可以捕获通配符并写入从列表中读取的元素。</li>
 </ul>
 <p>
-你可以看到 <tt>List&lt;? extends NaturalNumber&gt;</tt> 在严格意义上不是只读的，但您可能会这样认为，因为您无法存储新元素或更改列表中的现有元素。</p>
+你可以看到 <tt>List&lt;? extends NaturalNumber&gt;</tt> 在严格意义上不是只读的，但你可能会这样认为，因为你无法存储新元素或更改列表中的现有元素。</p>
 
         </div>
         <div class="NavBit">

@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="creating.html">创建异常类</a></div>
-<div class="linkAHEAD"><a href="runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="summary.html">总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -500,7 +500,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="tryResourceClose.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="declaring.html">Next&nbsp;»</a>
+                <a target="_top" href="tryResourceClose.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="declaring.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>把它们放在一起</h1></div>
@@ -545,8 +545,8 @@ public void writeList() {
 <p>让我们看看在这两种退出可能性期间 <code>writeList</code> 方法中会发生什么。</p>
 <h2>场景 1：发生异常</h2>
 <p>创建 <code>FileWriter</code> 的语句可能由于多种原因而失败。例如，如果程序无法创建或写入指示的文件，<code>FileWriter</code> 的构造函数将抛出 <code>IOException</code>。</p>
-<p>当 <code>FileWriter</code> 抛出 <code>IOException</code> 时，运行时系统立即停止执行 <code>try</code> 块;正在执行的方法调用未完成。然后，运行时系统开始在方法调用堆栈的顶部搜索适当的异常处理程序。在此示例中，当发生 <code>IOException</code> 时，<code>FileWriter</code> 构造函数位于调用堆栈的顶部。但是，<code>FileWriter</code> 构造函数没有适当的异常处理程序，因此运行时系统会在方法调用堆栈中检查下一个方法 <code>writeList</code> 方法。<code>writeList</code> 方法有两个异常处理程序：一个用于 <code>IOException</code>，另一个用于 <code>IndexOutOfBoundsException</code>。</p>
-<p>运行时系统按照它们在 <code>try</code> 语句后出现的顺序检查 <code>writeList</code> 的处理程序。第一个异常处理程序的参数是 <code>IndexOutOfBoundsException</code>。这与抛出的异常类型不匹配，因此运行时系统会检查下一个异常处理程序 <code>IOException</code>。这与抛出的异常类型相匹配，因此运行时系统结束其搜索适当的异常处理程序。现在运行时已找到适当的处理程序，执行 <code>catch</code> 块中的代码。</p>
+<p>当 <code>FileWriter</code> 抛出 <code>IOException</code> 时，运行时系统立即停止执行 <code>try</code> 块;正在执行的方法调用未完成。然后，运行时系统开始在方法调用堆栈的顶部搜索适当的异常处理程序。在此示例中，当发生 <code>IOException</code> 时，<code>FileWriter</code> 构造函数位于调用堆栈的顶部。但是，<code>FileWriter</code> 构造函数没有适当的异常处理程序，因此运行时系统会在方法调用堆栈中检查下一个方法  <code>writeList</code> 方法。<code>writeList</code> 方法有两个异常处理程序：一个用于 <code>IOException</code>，另一个用于 <code>IndexOutOfBoundsException</code>。</p>
+<p>运行时系统按照它们在 <code>try</code> 语句后出现的顺序检查 <code>writeList</code> 的处理程序。第一个异常处理程序的参数是 <code>IndexOutOfBoundsException</code>。这与抛出的异常类型不匹配，因此运行时系统会检查下一个异常处理程序  <code>IOException</code>。这与抛出的异常类型相匹配，因此运行时系统结束其搜索适当的异常处理程序。现在运行时已找到适当的处理程序，执行 <code>catch</code> 块中的代码。</p>
 <p>异常处理程序执行后，运行时系统将控制权传递给 <code>finally</code> 块。无论上面捕获的异常如何，<code>finally</code> 块中的代码都会执行。在这种情况下，<code>FileWriter</code> 从未打开过，不需要关闭。在 <code>finally</code> 块完成执行后，程序继续执行 <code>finally</code> 块之后的第一个语句。</p>
 <p>以下是 <code>ListOfNumbers</code> 程序的完整输出，该程序在抛出 <code>IOException</code> 时出现。</p>
 <div class="codeblock"><pre>

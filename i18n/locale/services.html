@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>区域敏感服务 SPI(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置区域设置)
+        <title>区域敏感服务 SPI(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置语言环境)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
@@ -471,12 +471,12 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">设置区域设置</a></div>
-<div class="linkAHEAD"><a href="create.html">创建区域设置</a></div>
+            <div class="linkLESSON"><a href="index.html">设置语言环境</a></div>
+<div class="linkAHEAD"><a href="create.html">创建语言环境</a></div>
 <div class="linkAHEAD"><a href="extensions.html">BCP 47 扩展</a></div>
-<div class="linkAHEAD"><a href="identify.html">识别可用的区域设置</a></div>
+<div class="linkAHEAD"><a href="identify.html">识别可用的语言环境</a></div>
 <div class="linkAHEAD"><a href="matching.html">语言标签过滤和查找</a></div>
-<div class="linkAHEAD"><a href="scope.html">区域设置的范围</a></div>
+<div class="linkAHEAD"><a href="scope.html">语言环境的范围</a></div>
 <div class="nolinkAHEAD">区域敏感服务 SPI</div>
 </div>
     </div>
@@ -486,18 +486,18 @@
         <br /><b>Lesson:</b> Setting the Locale
     </div>
             <div id="BreadCrumbs">
-                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置区域设置</a>
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置语言环境</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="scope.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../resbundle/index.html">Next&nbsp;»</a>
+                <a target="_top" href="scope.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../resbundle/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>区域敏感服务 SPI</h1></div>
             <div id="PageContent">
 
-<p>此功能启用与区域设置相关的数据和服务的插件。通过这种方式，第三方能够在 <code>java.text</code> 和 <code>java.util</code> 包中提供大多数区域设置敏感类的实现。</p>
+<p>此功能启用与语言环境相关的数据和服务的插件。通过这种方式，第三方能够在 <code>java.text</code> 和 <code>java.util</code> 包中提供大多数语言环境敏感类的实现。</p>
 <p>SPI <em>(Service Provider Interface (服务提供者接口))</em> 的实现基于由服务提供者实现的抽象类和 Java 接口。在运行时，Java 类加载机制用于动态定位和加载实现 SPI 的类。<br /></p>
-<p>您可以使用区域设置敏感服务 SPI 来提供以下区域设置敏感实现：</p>
+<p>你可以使用语言环境敏感服务 SPI 来提供以下语言环境敏感实现：</p>
 <ul>
 <li><code>BreakIterator</code> 对象</li>
 <li><code>Collator</code> 对象</li>
@@ -536,7 +536,7 @@
 </td>
 </tr>
 </table>
-<p>例如，如果要为新语言环境提供 <code>NumberFormat</code> 对象，则必须实现 <code>java.text.spi.NumberFormatProvider</code> 类。您需要继承此类并实现其方法：</p>
+<p>例如，如果要为新语言环境提供 <code>NumberFormat</code> 对象，则必须实现 <code>java.text.spi.NumberFormatProvider</code> 类。你需要继承此类并实现其方法：</p>
 <ul>
 <li><code>getCurrencyInstance(Locale locale)</code></li>
 <li><code>getIntegerInstance(Locale locale)</code></li>
@@ -547,7 +547,7 @@
 Locale loc = new Locale("da", "DK");
 NumberFormat nf = NumberFormatProvider.getNumberInstance(loc);
 </pre></div>
-<p>这些方法首先检查 Java 运行时环境是否支持所请求的语言环境；如果是这样，他们会使用这种支持。否则，这些方法会调用已安装提供程序的 <code>getAvailableLocales()</code> 方法，以找到支持所请求区域设置的提供程序。</p>
+<p>这些方法首先检查 Java 运行时环境是否支持所请求的语言环境；如果是这样，他们会使用这种支持。否则，这些方法会调用已安装提供程序的 <code>getAvailableLocales()</code> 方法，以找到支持所请求语言环境的提供程序。</p>
 
 
         </div>

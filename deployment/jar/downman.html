@@ -506,15 +506,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="appman.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="packageman.html">Next&nbsp;»</a>
+                <a target="_top" href="appman.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="packageman.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>将类添加到 JAR 文件的类路径中</h1></div>
             <div id="PageContent">
 
-<p>您可能需要从 JAR 文件中引用其他 JAR 文件中的类。</p>
-<p>例如，在典型情况下，applet 捆绑在 JAR 文件中，该文件的清单引用不同的 JAR 文件(或几个不同的 JAR 文件)作为该 applet 的实用程序。</p>
-<p>您可以在 applet 或应用程序的清单文件中指定要包含在 <tt>Class-Path</tt> 头字段中的类。<tt>Class-Path</tt> 头采用以下形式：</p>
+<p>你可能需要从 JAR 文件中引用其他 JAR 文件中的类。</p>
+<p>例如，在典型情况下，applet 打包在 JAR 文件中，该文件的清单引用不同的 JAR 文件(或几个不同的 JAR 文件)作为该 applet 的实用程序。</p>
+<p>你可以在 applet 或应用程序的清单文件中指定要包含在 <tt>Class-Path</tt> 头字段中的类。<tt>Class-Path</tt> 头采用以下形式：</p>
 <div class="codeblock"><pre>
 Class-Path: <em>jar1-name jar2-name directory-name/jar3-name</em>
 </pre></div>
@@ -527,7 +527,7 @@ Class-Path: <em>jar1-name jar2-name directory-name/jar3-name</em>
 <div class="codeblock"><pre>
 Class-Path: MyUtils.jar
 </pre></div>
-<div class="note"><hr /><strong>Warning:</strong> 文本文件必须以新行或回车结束。如果不以新行或回车结束，则不会正确解析最后一行。
+<div class="note"><hr /><strong>警告:</strong>&nbsp;文本文件必须以新行或回车结束。如果不以新行或回车结束，则不会正确解析最后一行。
 <hr /></div>
 <p>然后，我们通过输入以下命令创建名为 <tt>MyJar.jar</tt> 的 JAR 文件：</p>
 <div class="codeblock"><pre>
@@ -539,7 +539,7 @@ Manifest-Version: 1.0
 Class-Path: MyUtils.jar
 Created-By: 1.7.0_06 (Oracle Corporation)
 </pre></div>
-<p>现在，当您运行 <tt>MyJar.jar</tt> 时，<tt>MyUtils.jar</tt> 中的类将加载到类路径中。</p>
+<p>现在，当你运行 <tt>MyJar.jar</tt> 时，<tt>MyUtils.jar</tt> 中的类将加载到类路径中。</p>
 
 
         </div>

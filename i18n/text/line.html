@@ -474,7 +474,7 @@
             <div class="linkLESSON"><a href="index.html">使用文本</a></div>
 <div class="linkAHEAD"><a href="charintro.html">检查字符属性</a></div>
 <div class="linkAHEAD"><a href="collationintro.html">比较字符串</a></div>
-<div class="linkBHEAD"><a href="locale.html">执行与区域设置无关的比较</a></div>
+<div class="linkBHEAD"><a href="locale.html">执行与语言环境无关的比较</a></div>
 <div class="linkBHEAD"><a href="rule.html">自定义排序规则</a></div>
 <div class="linkBHEAD"><a href="perform.html">提高排序性能</a></div>
 <div class="linkAHEAD"><a href="unicode.html">Unicode</a></div>
@@ -508,20 +508,20 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">使用文本</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="sentence.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="shapedDigits.html">Next&nbsp;»</a>
+                <a target="_top" href="sentence.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="shapedDigits.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>行边界</h1></div>
             <div id="PageContent">
 
-<p>格式化文本或执行换行的应用程序必须找到潜在的换行符。您可以使用 <code>getLineInstance</code> 方法创建的 <code>BreakIterator</code> 找到这些换行符或边界：</p>
+<p>格式化文本或执行换行的应用程序必须找到潜在的换行符。你可以使用 <code>getLineInstance</code> 方法创建的 <code>BreakIterator</code> 找到这些换行符或边界：</p>
 <div class="codeblock"><pre>
 BreakIterator lineIterator =
     BreakIterator.getLineInstance(currentLocale);
 </pre></div>
 <p>此 <code>BreakIterator</code> 确定字符串中的位置，文本可以在下一行中断开以继续。<code>BreakIterator</code> 检测到的位置是潜在的换行符。屏幕上显示的实际换行符可能不一样。</p>
 <p>以下两个示例使用 <a class="SourceLink" target="_blank" href="examples/BreakIteratorDemo.java" onclick="showCode('../../displayCode.html', 'examples/BreakIteratorDemo.java'); return false;"><code>BreakIteratorDemo.java</code></a> 的 <a href="word.html#markBoundaries"><code>markBoundaries</code></a> 方法来显示检测到的行边界 <code>BreakIterator</code>。<code>markBoundaries</code> 方法通过在目标字符串下打印插入符号(^)来指示行边界。</p>
-<p>根据 <code>BreakIterator</code>，在一系列空白字符(空格，制表符，换行符)终止后出现行边界。在以下示例中，请注意您可以在检测到的任何边界处断开行：</p>
+<p>根据 <code>BreakIterator</code>，在一系列空白字符(空格，制表符，换行符)终止后出现行边界。在以下示例中，请注意你可以在检测到的任何边界处断开行：</p>
 <div class="codeblock"><pre>
 She stopped.  She said, "Hello there," and then went on.
 ^   ^         ^   ^     ^      ^     ^ ^   ^    ^    ^  ^
@@ -531,7 +531,7 @@ She stopped.  She said, "Hello there," and then went on.
 There are twenty-four hours in a day.
 ^     ^   ^      ^    ^     ^  ^ ^   ^
 </pre></div>
-<p>下一个示例使用名为 <code>formatLines</code> 的方法将一长串文本分成固定长度的行。此方法使用 <code>BreakIterator</code> 来定位潜在的换行符。<code>formatLines</code> 方法简短，并且由于 <code>BreakIterator</code>，与区域设置无关。这是源代码：</p>
+<p>下一个示例使用名为 <code>formatLines</code> 的方法将一长串文本分成固定长度的行。此方法使用 <code>BreakIterator</code> 来定位潜在的换行符。<code>formatLines</code> 方法简短，并且由于 <code>BreakIterator</code>，与语言环境无关。这是源代码：</p>
 <div class="codeblock"><pre>
 static void formatLines(
     String target, int maxLength,

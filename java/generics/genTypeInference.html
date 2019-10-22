@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="nolinkAHEAD">类型推断</div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -505,14 +505,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="inheritance.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="wildcards.html">Next&nbsp;»</a>
+                <a target="_top" href="inheritance.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="wildcards.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>类型推断</h1></div>
             <div id="PageContent">
 
 <p>
-<em>类型推断（Type inference）</em> 是 Java 编译器的一项能力，它可以查看每个方法的调用和相应声明以确定使调用适用的类型实参(或形参)。推理算法确定参数的类型，并且如果可用还确定赋值或返回结果的类型。最后，推理算法试图找到适用于所有参数的 <em>most specific</em> 类型。</p>
+<em>Type inference (类型推断)</em> 是 Java 编译器的一项能力，它可以查看每个方法的调用和相应声明以确定使调用适用的类型实参(或形参)。推断算法确定参数的类型，并且如果可用还确定赋值或返回结果的类型。最后，推断算法试图找到适用于所有参数的 <em>most specific (最特定的)</em> 类型。</p>
 
 <p>
 为了说明最后一点，在下面的示例中，推断确定传递给 <tt>pick</tt> 方法的第二个参数的类型为 <tt>Serializable</tt>：</p>
@@ -524,7 +524,7 @@ Serializable s = pick("d", new ArrayList&lt;String&gt;());
 
 <h2><a name="type-inference-methods" id="type-inference-methods">类型推断和泛型方法</a></h2>
 <p>
-<a class="TutorialLink" target="_top" href="methods.html">泛型方法</a>为您引入了类型推断，它使您能够像普通方法一样调用泛型方法，而无需在尖括号之间指定类型。考虑以下示例 <a class="SourceLink" target="_blank" href="examples/BoxDemo.java" onclick="showCode('../../displayCode.html', 'examples/BoxDemo.java'); return false;"><code>BoxDemo</code></a>，它需要 <a class="SourceLink" target="_blank" href="examples/Box.java" onclick="showCode('../../displayCode.html', 'examples/Box.java'); return false;"><code>Box</code></a> 类：</p>
+<a class="TutorialLink" target="_top" href="methods.html">泛型方法</a>为你引入了类型推断，它使你能够像普通方法一样调用泛型方法，而无需在尖括号之间指定类型。考虑以下示例 <a class="SourceLink" target="_blank" href="examples/BoxDemo.java" onclick="showCode('../../displayCode.html', 'examples/BoxDemo.java'); return false;"><code>BoxDemo</code></a>，它需要 <a class="SourceLink" target="_blank" href="examples/Box.java" onclick="showCode('../../displayCode.html', 'examples/Box.java'); return false;"><code>Box</code></a> 类：</p>
 <div class="codeblock"><pre>
 public class BoxDemo {
 
@@ -561,25 +561,25 @@ Box #0 contains [10]
 Box #1 contains [20]
 Box #2 contains [30]
 </pre></div>
-<p>泛型方法 <code>addBox</code> 定义了一个名为 <code>U</code> 的类型参数。通常，Java 编译器可以推断泛型方法调用的类型参数。因此，在大多数情况下，您不必指定它们。例如，要调用泛型方法 <code>addBox</code>，可以使用 <em>type witness</em> 指定类型参数，如下所示：</p>
+<p>泛型方法 <code>addBox</code> 定义了一个名为 <code>U</code> 的类型形参。通常，Java 编译器可以推断泛型方法调用的类型形参。因此，在大多数情况下，你不必指定它们。例如，要调用泛型方法 <code>addBox</code>，可以使用 <em>type witness (类型说明)</em>（译注：witness 是证人、见证人、表明的意思） 指定类型形参，如下所示：</p>
 <div class="codeblock"><pre>
 BoxDemo.<strong>&lt;Integer></strong>addBox(Integer.valueOf(10), listOfIntegerBoxes);
 </pre></div>
-<p>或者，如果省略 type witness，Java 编译器会自动推断(从方法的参数)类型参数 <code>Integer</code>：</p>
+<p>或者，如果省略类型说明，Java 编译器会自动推断(从方法的参数)类型形参 <code>Integer</code>：</p>
 <div class="codeblock"><pre>
 BoxDemo.addBox(Integer.valueOf(20), listOfIntegerBoxes);
 </pre></div><!-- ************************************************* -->
 
 <h2><a name="type-inference-instantiation" id="type-inference-instantiation">类型推断和泛型类的实例化</a></h2>
 <p>
-只要编译器可以从上下文中推断出类型参数，就可以用一组空的类型参数(<code>&lt;&gt;</code>)替换调用泛型类的构造函数所需的类型参数。这对尖括号非正式地称为 <a class="TutorialLink" target="_top" href="types.html#diamond">钻石操作符（the diamond）</a>。</p>
+只要编译器可以从上下文中推断出类型实参，就可以用一组空的类型实参(<code>&lt;&gt;</code>)替换调用泛型类的构造函数所需的类型形参。这对尖括号非正式地称为 <a class="TutorialLink" target="_top" href="types.html#diamond">the diamond (钻石操作符)</a>。</p>
 <p>
 例如，请考虑以下变量声明：</p>
 <div class="codeblock"><pre>
 Map&lt;String, List&lt;String&gt;&gt; myMap = new HashMap&lt;String, List&lt;String&gt;&gt;();
 </pre></div>
 <p>
-您可以使用一组空的类型参数(<tt>&lt;&gt;</tt>)替换构造函数的参数化类型：</p>
+你可以使用一组空的类型形参(<tt>&lt;&gt;</tt>)替换构造函数的参数化类型：</p>
 <div class="codeblock"><pre>
 Map&lt;String, List&lt;String&gt;&gt; myMap = new HashMap&lt;&gt;();
 </pre></div>
@@ -593,7 +593,7 @@ Map&lt;String, List&lt;String&gt;&gt; myMap = new HashMap(); // unchecked conver
 
 
 <h2><a name="type-inference-constructors" id="type-inference-constructors">类型推断和泛型与非泛型类的泛型构造函数</a></h2>
-<p>请注意，构造函数在泛型和非泛型类中都可以是泛型的(换句话说，声明它们自己的形式类型参数)。请考虑以下示例：</p>
+<p>请注意，构造函数在泛型和非泛型类中都可以是泛型的(换句话说，声明它们自己的形式类型形参)。请考虑以下示例：</p>
 <div class="codeblock"><pre>
 class MyClass&lt;X&gt; {
   &lt;T&gt; MyClass(T t) {
@@ -606,23 +606,23 @@ class MyClass&lt;X&gt; {
 new MyClass&lt;Integer&gt;("")
 </pre></div>
 
-<p>该语句创建一个参数化类型 <code>MyClass&lt;Integer&gt;</code> 的实例;该语句显式指定泛型类 <code>MyClass&lt;X&gt;</code> 的形式类型参数 <code>X</code> 的类型 <code>Integer</code>。请注意，此泛型类的构造函数包含形式类型参数 <code>T</code>。编译器为此泛型类的构造函数的形式类型参数 <code>T</code> 推断类型 <code>String</code>(因为此构造函数的实际参数是 <code>String</code> 对象)。</p>
+<p>该语句创建一个参数化类型 <code>MyClass&lt;Integer&gt;</code> 的实例;该语句显式指定泛型类 <code>MyClass&lt;X&gt;</code> 的形式类型形参 <code>X</code> 的类型 <code>Integer</code>。请注意，此泛型类的构造函数包含形式类型形参 <code>T</code>。编译器为此泛型类的构造函数的形式类型形参 <code>T</code> 推断类型 <code>String</code>(因为此构造函数的实际参数是 <code>String</code> 对象)。</p>
 
-<p>Java SE 7 之前版本的编译器能够推断泛型构造函数的实际类型参数，类似于泛型方法。但是，如果使用钻石操作符(<code>&lt;&gt;</code>)，Java SE 7 及更高版本中的编译器可以推断正在实例化的泛型类的实际类型参数。请考虑以下示例：</p>
+<p>Java SE 7 之前版本的编译器能够推断泛型构造函数的实际类型形参，类似于泛型方法。但是，如果使用钻石操作符(<code>&lt;&gt;</code>)，Java SE 7 及更高版本中的编译器可以推断正在实例化的泛型类的实际类型形参。请考虑以下示例：</p>
 <div class="codeblock"><pre>
 MyClass&lt;Integer&gt; myObject = new MyClass&lt;&gt;(&quot;&quot;);
 </pre></div>
-<p>在此示例中，编译器为泛型类 <code>MyClass&lt;X&gt;</code> 的形式类型参数 <code>X</code> 推断类型 <code>Integer</code>。它推断出此泛型类的构造函数的形式类型参数 <code>T</code> 的类型 <code>String</code>。</p>
+<p>在此示例中，编译器为泛型类 <code>MyClass&lt;X&gt;</code> 的形式类型形参 <code>X</code> 推断类型 <code>Integer</code>。它推断出此泛型类的构造函数的形式类型形参 <code>T</code> 的类型 <code>String</code>。</p>
 
 
-<div class="note"><hr /><strong>注意:</strong>&nbsp;重要的是要注意推理算法仅使用调用参数，目标类型以及可能明显的预期返回类型来推断类型。推理算法不使用程序中后续的结果。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;重要的是要注意推断算法仅使用调用参数、目标类型以及可能明显的预期返回类型来推断类型。推断算法不使用程序中后续的结果。
 <hr /></div>
 
 <h2><a name="target_types">目标类型</a></h2><!-- ======================================================================= -->
 
 
 
-<p>Java 编译器利用目标类型来推断泛型方法调用的类型参数。表达式的 <em>目标类型（target type）</em> 是 Java 编译器所期望的数据类型，具体取决于表达式的显示位置。考虑方法 <code>Collections.emptyList</code>，声明如下：</p>
+<p>Java 编译器利用目标类型来推断泛型方法调用的类型形参。表达式的 <em>target type (目标类型)</em> 是 Java 编译器所期望的数据类型，具体取决于表达式的显示位置。考虑方法 <code>Collections.emptyList</code>，声明如下：</p>
 
 <div class="codeblock"><pre>
 static &lt;T&gt; List&lt;T&gt; emptyList();
@@ -634,7 +634,7 @@ static &lt;T&gt; List&lt;T&gt; emptyList();
 List&lt;String&gt; listOne = Collections.emptyList();
 </pre></div>
 
-<p>此语句需要 <code>List&lt;String&gt;</code> 的实例;此数据类型是目标类型。因为方法 <code>emptyList</code> 返回类型 <code>List&lt;T&gt;</code> 的值，编译器会推断类型参数 <code>T</code> 必须是值 <code>String</code>。这适用于 Java SE 7 和 8。或者，您可以使用 type witness 并指定 <code>T</code> 的值，如下所示：</p>
+<p>此语句需要 <code>List&lt;String&gt;</code> 的实例;此数据类型是目标类型。因为方法 <code>emptyList</code> 返回类型 <code>List&lt;T&gt;</code> 的值，编译器会推断类型实参 <code>T</code> 必须是值 <code>String</code>。这适用于 Java SE 7 和 8。或者，你可以使用类型说明并指定 <code>T</code> 的值，如下所示：</p>
 
 <div class="codeblock"><pre>
 List&lt;String&gt; listOne = Collections.&lt;String&gt;emptyList();
@@ -648,7 +648,7 @@ void processStringList(List&lt;String&gt; stringList) {
 }
 </pre></div>
 
-<p>假设您要使用空列表调用方法 <code>processStringList</code>。在 Java SE 7 中，以下语句无法编译：</p>
+<p>假设你要使用空列表调用方法 <code>processStringList</code>。在 Java SE 7 中，以下语句无法编译：</p>
 
 <div class="codeblock"><pre>
 processStringList(Collections.emptyList());
@@ -660,13 +660,13 @@ processStringList(Collections.emptyList());
 List&lt;Object&gt; cannot be converted to List&lt;String&gt;
 </pre></div>
 
-<p>编译器需要类型参数 <code>T</code> 的值，因此它以值 <code>Object</code> 开头。因此，调用 <code>Collections.emptyList</code> 会返回类型 <code>List&lt;Object&gt;</code> 的值，该值与方法 <code>processStringList</code> 不兼容。因此，在 Java SE 7 中，您必须指定 type 参数值的值，如下所示：</p>
+<p>编译器需要类型实参 <code>T</code> 的值，因此它以值 <code>Object</code> 开头。因此，调用 <code>Collections.emptyList</code> 会返回类型 <code>List&lt;Object&gt;</code> 的值，该值与方法 <code>processStringList</code> 不兼容。因此，在 Java SE 7 中，你必须指定类型实参的值，如下所示：</p>
 
 <div class="codeblock"><pre>
 processStringList(Collections.&lt;String&gt;emptyList());
 </pre></div>
 
-<p>Java SE 8 中不再需要这样做。目标类型的概念已经扩展为包括方法参数，例如方法 <code>processStringList</code> 的参数。在这种情况下，<code>processStringList</code> 需要类型为 <code>List&lt;String&gt;</code> 的参数。方法 <code>Collections.emptyList</code> 返回值 <code>List&lt;T&gt;</code>，因此会使用目标类型 <code>List&lt;String&gt;</code>，编译器推断出类型参数 <code>T</code> 的值为 <code>String</code>。因此，在 Java SE 8 中，以下语句可编译：</p>
+<p>Java SE 8 中不再需要这样做。目标类型的概念已经扩展为包括方法参数，例如方法 <code>processStringList</code> 的参数。在这种情况下，<code>processStringList</code> 需要类型为 <code>List&lt;String&gt;</code> 的参数。方法 <code>Collections.emptyList</code> 返回值 <code>List&lt;T&gt;</code>，因此会使用目标类型 <code>List&lt;String&gt;</code>，编译器推断出类型实参 <code>T</code> 的值为 <code>String</code>。因此，在 Java SE 8 中，以下语句可编译：</p>
 
 <div class="codeblock"><pre>
 processStringList(Collections.emptyList());

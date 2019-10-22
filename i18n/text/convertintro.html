@@ -474,7 +474,7 @@
             <div class="linkLESSON"><a href="index.html">使用文本</a></div>
 <div class="linkAHEAD"><a href="charintro.html">检查字符属性</a></div>
 <div class="linkAHEAD"><a href="collationintro.html">比较字符串</a></div>
-<div class="linkBHEAD"><a href="locale.html">执行与区域设置无关的比较</a></div>
+<div class="linkBHEAD"><a href="locale.html">执行与语言环境无关的比较</a></div>
 <div class="linkBHEAD"><a href="rule.html">自定义排序规则</a></div>
 <div class="linkBHEAD"><a href="perform.html">提高排序性能</a></div>
 <div class="linkAHEAD"><a href="unicode.html">Unicode</a></div>
@@ -507,31 +507,31 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">使用文本</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="shapedDigits.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="string.html">Next&nbsp;»</a>
+                <a target="_top" href="shapedDigits.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="string.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>转换非 Unicode 文本</h1></div>
             <div id="PageContent">
 
-<p>在 Java 编程语言中，<code>char</code> 值表示 Unicode 字符。Unicode 是一种支持世界主要语言的 16 位字符编码。您可以在 <a class="OutsideLink" target="_blank" href="http://www.unicode.org/">Unicode Consortium Web site</a> 上了解有关 Unicode 标准的更多信息。</p>
+<p>在 Java 编程语言中，<code>char</code> 值表示 Unicode 字符。Unicode 是一种支持世界主要语言的 16 位字符编码。你可以在 <a class="OutsideLink" target="_blank" href="http://www.unicode.org/">Unicode Consortium Web site</a> 上了解有关 Unicode 标准的更多信息。</p>
 <p>很少有文本编辑器支持 Unicode 文本输入。我们用来编写本节代码示例的文本编辑器仅支持 ASCII 字符，限制为 7 位。要指示无法用 ASCII 表示的 Unicode 字符，例如 ö，我们使用 <code>\uXXXX</code> 转义序列。转义序列中的每个 <code>X</code> 都是十六进制数字。以下示例显示如何使用转义序列指示 ö 字符：</p>
 <div class="codeblock"><pre>
 String str = &quot;\u00F6&quot;;
 char c = '\u00F6';
 Character letter = new Character('\u00F6');
 </pre></div>
-<p>世界各地的系统使用各种字符编码。目前，这些编码很少符合 Unicode。因为您的程序需要 Unicode 中的字符，所以它从系统获取的文本数据必须转换为 Unicode，反之亦然。当文本文件的编码与 Java 虚拟机的默认文件编码匹配时，文本文件中的数据将自动转换为 Unicode。您可以通过创建并使用 <code>OutputStreamWriter</code> 询问其规范名称来标识默认文件编码：</p>
+<p>世界各地的系统使用各种字符编码。目前，这些编码很少符合 Unicode。因为你的程序需要 Unicode 中的字符，所以它从系统获取的文本数据必须转换为 Unicode，反之亦然。当文本文件的编码与 Java 虚拟机的默认文件编码匹配时，文本文件中的数据将自动转换为 Unicode。你可以通过创建并使用 <code>OutputStreamWriter</code> 询问其规范名称来标识默认文件编码：</p>
 <div class="codeblock"><pre>
 OutputStreamWriter out = new OutputStreamWriter(new ByteArrayOutputStream());
 System.out.println(out.getEncoding());
 </pre></div>
-<p>如果默认文件编码与您要处理的文本数据的编码不同，则必须自己执行转换。处理来自其他国家/地区或计算平台的文本时，您可能需要执行此操作。</p>
-<p>本节讨论用于将非 Unicode 文本转换为 Unicode 的 API。在使用这些 API 之前，您应该验证是否支持要转换为 Unicode 的字符编码。支持的字符编码列表不是 Java 编程语言规范的一部分。因此，API 支持的字符编码可能随平台而变化。要查看 Java Development Kit 支持哪些编码，请参阅 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/intl/encoding.doc.html">Supported Encodings</a> 文档。</p>
-<p>下面的材料描述了将非 Unicode 文本转换为 Unicode 的两种技术。您可以将非 Unicode 字节数组转换为 <code>String</code> 对象，反之亦然。或者，您可以在 Unicode 字符流和非 Unicode 文本的字节流之间进行转换。</p>
+<p>如果默认文件编码与你要处理的文本数据的编码不同，则必须自己执行转换。处理来自其他国家/地区或计算平台的文本时，你可能需要执行此操作。</p>
+<p>本节讨论用于将非 Unicode 文本转换为 Unicode 的 API。在使用这些 API 之前，你应该验证是否支持要转换为 Unicode 的字符编码。支持的字符编码列表不是 Java 编程语言规范的一部分。因此，API 支持的字符编码可能随平台而变化。要查看 Java Development Kit 支持哪些编码，请参阅 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/intl/encoding.doc.html">Supported Encodings</a> 文档。</p>
+<p>下面的材料描述了将非 Unicode 文本转换为 Unicode 的两种技术。你可以将非 Unicode 字节数组转换为 <code>String</code> 对象，反之亦然。或者，你可以在 Unicode 字符流和非 Unicode 文本的字节流之间进行转换。</p>
 <h2><a href="string.html">字节编码和字符串</a></h2>
 <p>本节介绍如何将非 Unicode 字节数组转换为 <code>String</code> 对象，反之亦然。</p>
 <h2><a href="stream.html">字符和字节流</a></h2>
-<p>在本节中，您将学习如何在 Unicode 字符流和非 Unicode 文本字节流之间进行转换。</p>
+<p>在本节中，你将学习如何在 Unicode 字符流和非 Unicode 文本字节流之间进行转换。</p>
 
 
         </div>

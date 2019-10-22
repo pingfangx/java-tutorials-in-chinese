@@ -489,48 +489,48 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">使用 URL</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="definition.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="urlInfo.html">Next&nbsp;»</a>
+                <a target="_top" href="definition.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="urlInfo.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>创建 URL</h1></div>
             <div id="PageContent">
 
-<p>创建 <code>URL</code> 对象的最简单方法是来自 <code>String</code>，它表示 URL 地址的人类可读形式。这通常是另一个人将用于 URL 的形式。在 Java 程序中，您可以使用包含此文本的 <code>String</code> 来创建 <code>URL</code> 对象：</p>
+<p>创建 <code>URL</code> 对象的最简单方法是来自 <code>String</code>，它表示 URL 地址的人类可读形式。这通常是另一个人将用于 URL 的形式。在 Java 程序中，你可以使用包含此文本的 <code>String</code> 来创建 <code>URL</code> 对象：</p>
 <div class="codeblock"><pre>
 URL myURL = new URL("http://example.com/");
 </pre></div>
-<p>上面创建的 <code>URL</code> 对象表示 <em>absolute URL (绝对 URL )</em>。绝对 URL 包含到达相关资源所需的所有信息。您还可以从 <em>relative URL (相对 URL )</em> 地址创建 <code>URL</code> 对象。</p>
+<p>上面创建的 <code>URL</code> 对象表示 <em>absolute URL (绝对 URL )</em>。绝对 URL 包含到达相关资源所需的所有信息。你还可以从 <em>relative URL (相对 URL )</em> 地址创建 <code>URL</code> 对象。</p>
 <h2>创建相对于另一个的 URL</h2>
 <p>相对 URL 仅包含足以相对于另一个 URL(或在其上下文中)到达资源的信息。</p>
-<p>相对 URL 规范通常在 HTML 文件中使用。例如，假设您编写了一个名为 <code>JoesHomePage.html</code> 的 HTML 文件。在此页面中，是指向其他页面的链接，<code>PicturesOfMe.html</code> 和 <code>MyKids.html</code>，它们与 <code>JoesHomePage.html</code> 位于同一台计算机上和同一目录中。来自 <code>JoesHomePage.html</code> 的 <code>PicturesOfMe.html</code> 和 <code>MyKids.html</code> 的链接可以像文件名一样指定，如下所示：</p>
+<p>相对 URL 规范通常在 HTML 文件中使用。例如，假设你编写了一个名为 <code>JoesHomePage.html</code> 的 HTML 文件。在此页面中，是指向其他页面的链接，<code>PicturesOfMe.html</code> 和 <code>MyKids.html</code>，它们与 <code>JoesHomePage.html</code> 位于同一台计算机上和同一目录中。来自 <code>JoesHomePage.html</code> 的 <code>PicturesOfMe.html</code> 和 <code>MyKids.html</code> 的链接可以像文件名一样指定，如下所示：</p>
 <div class="codeblock"><pre>
 &lt;a href="PicturesOfMe.html"&gt;Pictures of Me&lt;/a&gt;
 &lt;a href="MyKids.html"&gt;Pictures of My Kids&lt;/a&gt;
 </pre></div>
 <p>这些 URL 地址是 <em>relative URLs (相对 URL )</em>。也就是说，URL 是相对于包含它们的文件指定的 -  <code>JoesHomePage.html</code>。</p>
-<p>在 Java 程序中，您可以从相对 URL 规范创建 <code>URL</code> 对象。例如，假设您在站点 <code>example.com</code> 知道两个 URL：</p>
+<p>在 Java 程序中，你可以从相对 URL 规范创建 <code>URL</code> 对象。例如，假设你在站点 <code>example.com</code> 知道两个 URL：</p>
 <div class="codeblock"><pre>
 http://example.com/pages/page1.html
 http://example.com/pages/page2.html
 </pre></div>
-<p>您可以为这些页面创建相对于其公共基本 URL <code>http://example.com/pages/</code> 的 <code>URL</code> 对象，如下所示：</p>
+<p>你可以为这些页面创建相对于其公共基本 URL <code>http://example.com/pages/</code> 的 <code>URL</code> 对象，如下所示：</p>
 <div class="codeblock"><pre>
 URL myURL = new URL("http://example.com/pages/");
 URL page1URL = new URL(myURL, "page1.html");
 URL page2URL = new URL(myURL, "page2.html");
 </pre></div>
-<p>此代码段使用 <code>URL</code> 构造函数，该构造函数允许您从另一个 <code>URL</code> 对象(基础)和相对 URL 规范创建 <code>URL</code> 对象。这个构造函数的一般形式是：</p>
+<p>此代码段使用 <code>URL</code> 构造函数，该构造函数允许你从另一个 <code>URL</code> 对象(基础)和相对 URL 规范创建 <code>URL</code> 对象。这个构造函数的一般形式是：</p>
 <div class="codeblock"><pre>
 URL(URL <em>baseURL</em>, String <em>relativeURL</em>)
 </pre></div>
 <p>第一个参数是 <code>URL</code> 对象，它指定新 <code>URL</code> 的基础。第二个参数是 <code>String</code>，它指定相对于基础的资源名称的其余部分。如果 <code>baseURL</code> 为 null，则此构造函数将 <code>relativeURL</code> 视为绝对 URL 规范。相反，如果 <code>relativeURL</code> 是绝对 URL 规范，则构造函数会忽略 <code>baseURL</code>。</p>
-<p>此构造函数还可用于为文件中的命名锚点(也称为引用)创建 <code>URL</code> 对象。例如，假设 <code>page1.html</code> 文件在文件底部有一个名为 <code>BOTTOM</code> 的命名锚。您可以使用相对 URL 构造函数为它创建 <code>URL</code> 对象，如下所示：</p>
+<p>此构造函数还可用于为文件中的命名锚点(也称为引用)创建 <code>URL</code> 对象。例如，假设 <code>page1.html</code> 文件在文件底部有一个名为 <code>BOTTOM</code> 的命名锚。你可以使用相对 URL 构造函数为它创建 <code>URL</code> 对象，如下所示：</p>
 <div class="codeblock"><pre>
 URL page1BottomURL = new URL(page1URL,"#BOTTOM");
 </pre></div>
 <h2>其他 URL 构造函数</h2>
-<p><code>URL</code> 类提供了两个用于创建 <code>URL</code> 对象的额外构造函数。当您使用 URL(例如 HTTP URL)时，这些构造函数非常有用，这些 URL 在 URL 的资源名称部分中具有主机名，文件名，端口号和引用组件。这两个构造函数主要用于，当您没有包含完整 URL 规范的 String 时，但您确实知道 URL 的各种组件。</p>
-<p>例如，假设您设计了一个类似于文件浏览面板的网络浏览面板，允许用户选择协议，主机名，端口号和文件名。您可以从面板的组件构造 <code>URL</code>。第一个构造函数根据协议，主机名和文件名创建 <code>URL</code> 对象。以下代码段创建 <code>URL</code> 到 <code>example.com</code> 站点的 <code>page1.html</code> 文件：</p>
+<p><code>URL</code> 类提供了两个用于创建 <code>URL</code> 对象的额外构造函数。当你使用 URL(例如 HTTP URL)时，这些构造函数非常有用，这些 URL 在 URL 的资源名称部分中具有主机名，文件名，端口号和引用组件。这两个构造函数主要用于，当你没有包含完整 URL 规范的 String 时，但你确实知道 URL 的各种组件。</p>
+<p>例如，假设你设计了一个类似于文件浏览面板的网络浏览面板，允许用户选择协议，主机名，端口号和文件名。你可以从面板的组件构造 <code>URL</code>。第一个构造函数根据协议，主机名和文件名创建 <code>URL</code> 对象。以下代码段创建 <code>URL</code> 到 <code>example.com</code> 站点的 <code>page1.html</code> 文件：</p>
 <div class="codeblock"><pre>
 new URL("http", "example.com", "/pages/page1.html");
 </pre></div>
@@ -557,7 +557,7 @@ http://example.com/hello world/
 <div class="codeblock"><pre>
 URL url = new URL("http://example.com/hello%20world");
 </pre></div>
-<p>对此示例中的特殊字符进行编码很容易，因为只有一个字符需要编码，但对于具有多个这些字符的 URL 地址，或者如果您不确定在编写代码时需要访问哪些 URL 地址，您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html"><code>java.net.URI</code></a> 类的多参数构造函数来自动处理编码。</p>
+<p>对此示例中的特殊字符进行编码很容易，因为只有一个字符需要编码，但对于具有多个这些字符的 URL 地址，或者如果你不确定在编写代码时需要访问哪些 URL 地址，你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html"><code>java.net.URI</code></a> 类的多参数构造函数来自动处理编码。</p>
 <div class="codeblock"><pre>
 URI uri = new URI("http", "example.com", "/hello world/", "");
 </pre></div>
@@ -566,7 +566,7 @@ URI uri = new URI("http", "example.com", "/hello world/", "");
 URL url = uri.toURL();
 </pre></div>
 <h2>MalformedURLException</h2>
-<p>如果构造函数的参数引用 <code>null</code> 或未知协议，则四个 <code>URL</code> 构造函数中的每一个都抛出 <code>MalformedURLException</code>。通常，您希望通过在 <code>try</code>/<code>catch</code> 对中嵌入 URL 构造函数语句来捕获并处理此异常，如下所示：</p>
+<p>如果构造函数的参数引用 <code>null</code> 或未知协议，则四个 <code>URL</code> 构造函数中的每一个都抛出 <code>MalformedURLException</code>。通常，你希望通过在 <code>try</code>/<code>catch</code> 对中嵌入 URL 构造函数语句来捕获并处理此异常，如下所示：</p>
 <div class="codeblock"><pre>
 try {
     URL myURL = new URL(...);

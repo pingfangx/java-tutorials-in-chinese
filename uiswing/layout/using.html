@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">在容器中布置组件</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="visual.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="howLayoutWorks.html">Next&nbsp;»</a>
+                <a target="_top" href="visual.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="howLayoutWorks.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用布局管理器</h1></div>
@@ -606,20 +606,20 @@ Right-to-left orientation</p>
 <a class="OutsideLink" target="_blank" href="http://netbeans.org/kb/trails/matisse.html">NetBeans IDE Matisse GUI builder</a>, rather than coding managers by hand. The scenarios listed below are given for information purposes, in case you are curious about which type of manager is used in different situations, or in case you absolutely must code your manager manually.</p>
 <p>If none of the layout managers we discuss is right for your situation and you cannot use a builder tool, feel free to use other layout managers that you may write or find. Also keep in mind that flexible layout managers such as <code>GridBagLayout</code> and <code>SpringLayout</code> can fulfill many layout needs.</p>
 <dl>
-<dt><strong>Scenario:</strong> You need to display a component in as much space as it can get.</dt>
+<dt><strong>Scenario:</strong>You need to display a component in as much space as it can get.</dt>
 <dd>If it is the only component in its container, use <a href="grid.html"><code>GridLayout</code></a> or <a href="border.html"><code>BorderLayout</code></a>. Otherwise, <code>BorderLayout</code> or <a href="gridbag.html"><code>GridBagLayout</code></a> might be a good match.
 
 <p>If you use <code>BorderLayout</code>, you will need to put the space-hungry component in the center. With <code>GridBagLayout</code>, you will need to set the constraints for the component so that <code>fill=GridBagConstraints.BOTH</code>. Another possibility is to use <a href="box.html"><code>BoxLayout</code></a>, making the space-hungry component specify very large preferred and maximum sizes.</p>
 </dd>
-<dt><strong>Scenario:</strong> You need to display a few components in a compact row at their natural size.</dt>
+<dt><strong>Scenario:</strong>You need to display a few components in a compact row at their natural size.</dt>
 <dd>Consider using a <code>JPanel</code> to group the components and using either the <code>JPanel</code>'s default <a href="flow.html"><code>FlowLayout</code></a> manager or the <a href="box.html"><code>BoxLayout</code></a> manager. <a href="spring.html"><code>SpringLayout</code></a> is also good for this.</dd>
-<dt><strong>Scenario:</strong> You need to display a few components of the same size in rows and columns.</dt>
+<dt><strong>Scenario:</strong>You need to display a few components of the same size in rows and columns.</dt>
 <dd><a href="grid.html"><code>GridLayout</code></a>is perfect for this.</dd>
-<dt><strong>Scenario:</strong> You need to display a few components in a row or column, possibly with varying amounts of space between them, custom alignment, or custom component sizes.</dt>
+<dt><strong>Scenario:</strong>You need to display a few components in a row or column, possibly with varying amounts of space between them, custom alignment, or custom component sizes.</dt>
 <dd><a href="box.html"><code>BoxLayout</code></a>is perfect for this.</dd>
-<dt><strong>Scenario:</strong> You need to display aligned columns, as in a form-like interface where a column of labels is used to describe text fields in an adjacent column.</dt>
+<dt><strong>Scenario:</strong>You need to display aligned columns, as in a form-like interface where a column of labels is used to describe text fields in an adjacent column.</dt>
 <dd><a href="spring.html"><code>SpringLayout</code></a>is a natural choice for this. The <code>SpringUtilities</code> class used by several Tutorial examples defines a <code>makeCompactGrid</code> method that lets you easily align multiple rows and columns of components.</dd>
-<dt><strong>Scenario:</strong> You have a complex layout with many components.</dt>
+<dt><strong>Scenario:</strong>You have a complex layout with many components.</dt>
 <dd>Consider either using a very flexible layout manager such as <a href="gridbag.html"><code>GridBagLayout</code></a> or <a href="spring.html"><code>SpringLayout</code></a>, or grouping the components into one or more <code>JPanel</code>s to simplify layout. If you take the latter approach, each <code>JPanel</code> might use a different layout manager.</dd>
 </dl>
 <h2><a name="thirdparty" id="thirdparty">Third Party Layout Managers</a></h2>

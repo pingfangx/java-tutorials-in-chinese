@@ -479,7 +479,7 @@
 <div class="nolinkAHEAD">预定义的字符类</div>
 <div class="linkAHEAD"><a href="quant.html">量词</a></div>
 <div class="linkAHEAD"><a href="groups.html">捕获组</a></div>
-<div class="linkAHEAD"><a href="bounds.html">边界匹配器</a></div>
+<div class="linkAHEAD"><a href="bounds.html">边界匹配</a></div>
 <div class="linkAHEAD"><a href="pattern.html">Pattern 类的方法</a></div>
 <div class="linkAHEAD"><a href="matcher.html">Matcher 类的方法</a></div>
 <div class="linkAHEAD"><a href="pse.html">PatternSyntaxException 类的方法</a></div>
@@ -497,7 +497,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">正则表达式</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="char_classes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="quant.html">Next&nbsp;»</a>
+                <a target="_top" href="char_classes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="quant.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>预定义的字符类</h1></div>
@@ -540,7 +540,7 @@
 <td>非单词字符：<code>[^\w]</code></td>
 </tr>
 </table>
-<p>在上表中，左侧列中的每个构造都是右侧列中字符类的简写。例如，<code>\d</code> 表示数字范围(0-9)，<code>\w</code> 表示单词字符(任何小写字母，任何大写字母，下划线字符，或任何数字)。尽可能使用预定义的类。它们使您的代码更易于阅读，并消除格式错误的字符类引入的错误。</p>
+<p>在上表中，左侧列中的每个构造都是右侧列中字符类的简写。例如，<code>\d</code> 表示数字范围(0-9)，<code>\w</code> 表示单词字符(任何小写字母，任何大写字母，下划线字符，或任何数字)。尽可能使用预定义的类。它们使你的代码更易于阅读，并消除格式错误的字符类引入的错误。</p>
 <p>以反斜杠开头的构造称为 <i>escaped constructs (转义构造)</i>。我们在 <a class="TutorialLink" target="_top" href="literals.html">String Literals</a> 部分中预览了转义结构，其中我们提到使用反斜杠和 <code>\Q</code> 和 <code>\E</code> 作为引用。如果在字符串字面量中使用转义构造，则必须在反斜杠前面加上另一个反斜杠，以便编译字符串。例如：</p>
 <div class="codeblock"><pre> 
 private final String REGEX = "\\d"; // a single digit
@@ -608,7 +608,7 @@ Enter your regex: \W
 Enter input string to search: !
 I found the text "!" starting at index 0 and ending at index 1.
 </pre></div>
-<p>在前三个示例中，正则表达式只是 <code>.</code>(“点”元字符)，表示“任何字符”。因此，在所有三种情况下(随机选择的 <code>@</code> 字符，数字和字母)匹配成功。其余示例均使用 <a href="#CHART">Predefined Character Classes table</a> 中的单个正则表达式构造。您可以参考此表来确定每个匹配背后的逻辑：</p>
+<p>在前三个示例中，正则表达式只是 <code>.</code>(“点”元字符)，表示“任何字符”。因此，在所有三种情况下(随机选择的 <code>@</code> 字符，数字和字母)匹配成功。其余示例均使用 <a href="#CHART">Predefined Character Classes table</a> 中的单个正则表达式构造。你可以参考此表来确定每个匹配背后的逻辑：</p>
 <ul>
 <li><code>\d</code> 匹配所有数字</li>
 <li><code>\s</code> 匹配空白</li>

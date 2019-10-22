@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -511,13 +511,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="QandE/objects-questions.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="innerclasses.html">Next&nbsp;»</a>
+                <a target="_top" href="QandE/objects-questions.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="innerclasses.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>嵌套类</h1></div>
             <div id="PageContent">
 
-<p>Java 编程语言允许您在另一个类中定义类。这样的类称为 <i>nested class（嵌套类）</i>，如下所示：</p>
+<p>Java 编程语言允许你在另一个类中定义类。这样的类称为 <i>nested class (嵌套类)</i>，如下所示：</p>
 <div class="codeblock"><pre>
 class OuterClass {
     ...
@@ -526,7 +526,7 @@ class OuterClass {
     }
 }
 </pre></div>
-<div class="note"><hr /><strong>术语:</strong> 嵌套类分为两类：静态和非静态。声明为 <code>static</code> 的嵌套类称为 <i>static nested classes（静态嵌套类）</i>。非静态嵌套类称为 <i>inner classes（内部类）</i>。
+<div class="note"><hr /><strong>术语:</strong>&nbsp;嵌套类分为两类：静态和非静态。声明为 <code>static</code> 的嵌套类称为 <i>static nested classes (静态嵌套类)</i>。非静态嵌套类称为 <i>inner classes (内部类)</i>。
 <hr /></div>
 <div class="codeblock"><pre>
 class OuterClass {
@@ -557,9 +557,9 @@ class OuterClass {
 <h2>静态嵌套类</h2>
 
 <p>与类方法和变量一样，静态嵌套类与其外部类相关联。和静态类方法一样，静态嵌套类不能直接引用其封闭类中定义的实例变量或方法：它只能通过对象引用来使用它们。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;静态嵌套类与其外部类(和其他类)的实例成员交互，就像任何其他顶级类一样。实际上，静态嵌套类在行为上是一个顶级类，它已嵌套在另一个顶级类中以方便打包。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;静态嵌套类与其外部类(和其他类)的实例成员交互，就像任何其他顶级类一样。实际上，静态嵌套类在行为上是一个顶级类，它嵌套在另一个顶级类中以方便打包。
 <hr /></div>
-<p>使用封闭的类名访问静态嵌套类：</p>
+<p>使用封闭类的类名访问静态嵌套类：</p>
 <div class="codeblock"><pre>
 OuterClass.StaticNestedClass
 </pre></div>
@@ -570,7 +570,7 @@ OuterClass.StaticNestedClass nestedObject =
 </pre></div>
 <h2>内部类</h2>
 <p>与实例方法和变量一样，内部类与其封闭类的实例相关联，并且可以直接访问该对象的方法和字段。此外，由于内部类与实例相关联，因此无法定义任何静态成员本身。</p>
-<p>作为内部类实例的对象在存在于一个外部类的实例<i>中</i>。考虑以下类：</p>
+<p>作为内部类实例的对象，存在于一个外部类的实例<i>中</i>。考虑以下类：</p>
 <div class="codeblock"><pre>
 class OuterClass {
     ...
@@ -586,7 +586,7 @@ class OuterClass {
 <div class="codeblock"><pre>
 OuterClass.InnerClass innerObject = outerObject.new InnerClass();
 </pre></div>
-<p>有两种特殊的内部类：<a class="TutorialLink" target="_top" href="localclasses.html">local classes（局部类）</a> 和 <a class="TutorialLink" target="_top" href="anonymousclasses.html">anonymous classes（匿名类）</a>。</p><!--
+<p>有两种特殊的内部类：<a class="TutorialLink" target="_top" href="localclasses.html">local classes (局部类)</a> 和 <a class="TutorialLink" target="_top" href="anonymousclasses.html">anonymous classes (匿名类)</a>。</p><!--
 
 <div class="note"><hr /><strong>Note:</strong>&nbsp;For more information about the taxonomy of the different kinds of classes in the Java programming language (which can be tricky to describe concisely, clearly, and correctly), see Joseph Darcy&#39;s blog:
 <a class="OutsideLink" target="_blank" href="https://blogs.oracle.com/darcy/entry/nested_inner_member_and_top">Nested, Inner, Member, and Top-Level Classes</a>.
@@ -598,7 +598,7 @@ OuterClass.InnerClass innerObject = outerObject.new InnerClass();
 
 <h2><a name="shadowing">遮蔽</a></h2>
 
-<p>如果特定范围(例如内部类或方法定义)中的类型声明(例如成员变量或参数名称)与封闭范围中的另一个声明具有相同的名称，则声明 <em>shadows</em> 封闭范围的声明。您不能仅通过其名称引用被遮蔽的声明。以下示例 <a class="SourceLink" target="_blank" href="examples/ShadowTest.java" onclick="showCode('../../displayCode.html', 'examples/ShadowTest.java'); return false;"><code>ShadowTest</code></a> 演示了这一点：</p>
+<p>如果特定范围(例如内部类或方法定义)中的类型声明(例如成员变量或参数名称)与封闭范围中的另一个声明具有相同的名称，则声明 <em>shadows (遮蔽)</em> 封闭范围的声明。你不能仅通过其名称引用被遮蔽的声明。以下示例 <a class="SourceLink" target="_blank" href="examples/ShadowTest.java" onclick="showCode('../../displayCode.html', 'examples/ShadowTest.java'); return false;"><code>ShadowTest</code></a> 演示了这一点：</p>
 
 <pre class="codeblock">
  
@@ -631,18 +631,18 @@ public class ShadowTest {
 this.x = 1
 ShadowTest.this.x = 0</pre>
 
-<p>此示例定义了三个名为 <code>x</code> 的变量：类 <code>ShadowTest</code> 的成员变量，内部类 <code>FirstLevel</code> 的成员变量，以及参数在方法 <code>methodInFirstLevel</code>。定义为方法 <code>methodInFirstLevel</code> 的参数的变量 <code>x</code> 会遮蔽内部类 <code>FirstLevel</code> 的变量。因此，当您在方法 <code>methodInFirstLevel</code> 中使用变量 <code>x</code> 时，它引用方法参数。要引用内部类 <code>FirstLevel</code> 的成员变量，请使用关键字 <code>this</code> 来表示封闭范围：</p>
+<p>此示例定义了三个名为 <code>x</code> 的变量：类 <code>ShadowTest</code> 的成员变量，内部类 <code>FirstLevel</code> 的成员变量，以及在方法 <code>methodInFirstLevel</code> 中的参数。定义为方法 <code>methodInFirstLevel</code> 的参数的变量 <code>x</code> 会遮蔽内部类 <code>FirstLevel</code> 的变量。因此，当你在方法 <code>methodInFirstLevel</code> 中使用变量 <code>x</code> 时，它引用方法参数。要引用内部类 <code>FirstLevel</code> 的成员变量，请使用关键字 <code>this</code> 来表示封闭范围：</p>
 
 <pre class="codeblock">System.out.println("this.x = " + this.x);</pre>
 
-<p>请参阅通过它们所属的类名包含较大范围的成员变量。例如，以下语句从方法 <code>methodInFirstLevel</code> 访问类 <code>ShadowTest</code> 的成员变量：</p>
+<p>通过它们所属的类名，来引用包含于更大范围的成员变量。例如，以下语句从方法 <code>methodInFirstLevel</code> 访问类 <code>ShadowTest</code> 的成员变量：</p>
 
 <pre class="codeblock">System.out.println("ShadowTest.this.x = " + ShadowTest.this.x);</pre>
 
 <h2><a name="serialization">序列化</a></h2>
 
 <p>
-<a class="TutorialLink" target="_top" href="../../jndi/objects/serial.html">序列化</a>强烈建议不要使用 内部类，包括 <a class="TutorialLink" target="_top" href="localclasses.html">local（局部类）</a> 和 <a class="TutorialLink" target="_top" href="anonymousclasses.html">anonymous（匿名类）</a> 。当 Java 编译器编译某些构造（如内部类）时，它会创建 <em>synthetic constructs</em>;这些是类，方法，字段和其他在源代码中没有相应构造的构造。合成构造使 Java 编译器能够在不更改 JVM 的情况下实现新的 Java 语言功能。但是，合成构造在不同的 Java 编译器实现中可能不同，这意味着 <code>.class</code> 文件也可以在不同的实现之间变化。因此，如果序列化内部类，然后使用其他 JRE 实现反序列化，则可能存在兼容性问题。有关在编译内部类时生成的合成构造的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../reflect/member/methodparameterreflection.html">获取方法参数名称</a> 部分中的 <a class="TutorialLink" target="_top" href="../../reflect/member/methodparameterreflection.html#implcit_and_synthetic">隐式和合成参数</a> 部分。</p>
+<a class="TutorialLink" target="_top" href="../../jndi/objects/serial.html">序列化</a>强烈建议不要使用 内部类，包括 <a class="TutorialLink" target="_top" href="localclasses.html">local (局部类)</a> 和 <a class="TutorialLink" target="_top" href="anonymousclasses.html">anonymous (匿名类)</a> 。当 Java 编译器编译某些构造（如内部类）时，它会创建 <em>synthetic constructs (合成结构)</em>;这些是在源代码中没有相应结造的类，方法，字段和其他结构。合成构造使 Java 编译器能够在不更改 JVM 的情况下实现新的 Java 语言功能。但是，合成构造在不同的 Java 编译器实现中可能不同，这意味着 <code>.class</code> 文件也可以在不同的实现之间变化。因此，如果序列化内部类，然后使用其他 JRE 实现反序列化，则可能存在兼容性问题。有关在编译内部类时生成的合成结构的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../reflect/member/methodparameterreflection.html">获取方法参数名称</a> 部分中的 <a class="TutorialLink" target="_top" href="../../reflect/member/methodparameterreflection.html#implcit_and_synthetic">隐式和合成参数</a> 部分。</p>
  
 
         </div>

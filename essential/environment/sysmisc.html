@@ -496,7 +496,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">平台环境</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="security.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="paths.html">Next&nbsp;»</a>
+                <a target="_top" href="security.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="paths.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>System 中的其他方法</h1></div>
@@ -507,7 +507,7 @@
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#currentTimeMillis--"><code>currentTimeMillis</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#nanoTime--"><code>nanoTime</code></a> 方法可用于测量应用程序执行期间的时间间隔。要以毫秒为单位测量时间间隔，请在间隔的开始和结束时调用 <code>currentTimeMillis</code> 两次，并从第二个返回值减去第一个值。同样，调用 <code>nanoTime</code> 两次测量一个纳秒的间隔。</p>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;<code>currentTimeMillis</code> 和 <code>nanoTime</code> 的准确性受操作系统提供的时间服务的限制。不要认为 <code>currentTimeMillis</code> 精确到最接近的毫秒或 <code>nanoTime</code> 精确到最接近的纳秒。此外，<code>currentTimeMillis</code> 和 <code>nanoTime</code> 都不应用于确定当前时间。使用高级方法，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Calendar.html#getInstance--"><code>java.util.Calendar.getInstance</code></a>。
 <hr /></div>
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#exit-int-"><code>exit</code></a> 方法导致 Java 虚拟机关闭，并且整数参数指定了退出状态。退出状态可用于启动应用程序的进程。按照惯例，退出状态 <code>0</code> 表示应用程序正常终止，而任何其他值都是错误代码。</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#exit-int-"><code>exit</code></a> 方法导致 Java 虚拟机关闭，并且整数参数指定了退出状态。退出状态可用于启动应用程序的进程。按照规范，退出状态 <code>0</code> 表示应用程序正常终止，而任何其他值都是错误代码。</p>
 
 
         </div>

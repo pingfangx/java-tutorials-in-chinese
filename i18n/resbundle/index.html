@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>课程：隔离特定于区域设置的数据(Java™ 教程-Java Tutorials 中文版&gt;国际化)</title>
+        <title>课程：隔离特定于语言环境的数据(Java™ 教程-Java Tutorials 中文版&gt;国际化)</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
      <meta name="keywords" content="java programming, learn java, java sample code, i18n, internationalization, locale, text formatting" />
@@ -462,7 +462,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="nolinkLESSON">隔离特定于区域设置的数据</div>
+            <div class="nolinkLESSON">隔离特定于语言环境的数据</div>
 <div class="linkAHEAD"><a href="concept.html">关于 ResourceBundle 类</a></div>
 <div class="linkAHEAD"><a href="prepare.html">准备使用 ResourceBundle</a></div>
 <div class="linkAHEAD"><a href="propfile.html">使用属性文件支持 ResourceBundle</a></div>
@@ -478,22 +478,22 @@
             <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>
         </div>
         <div class="NavBit">
-                <a target="_top" href="../locale/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="concept.html">Next&nbsp;»</a>
+                <a target="_top" href="../locale/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="concept.html">下一页&nbsp;»</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-        <div id="PageTitle"><h1>课程：隔离特定于区域设置的数据</h1></div>
+        <div id="PageTitle"><h1>课程：隔离特定于语言环境的数据</h1></div>
         <div id="PageContent">
 
-<p>必须根据终端用户的语言和区域的惯例来定制特定于语言环境的数据。用户界面显示的文本是区域设置特定数据的最明显示例。例如，在美国使用 Cancel 按钮的应用程序将在德国具有 Abbrechen 按钮。在其他国家/地区，此按钮将包含其他标签。显然您不想硬编码这个按钮标签。如果您可以自动为给定的 <code>Locale</code> 获取正确的标签，那不是很好吗？幸运的是，只要您在 <code>ResourceBundle</code> 中隔离特定于语言环境的对象，就可以。</p>
-<p>在本课程中，您将学习如何创建和访问 <code>ResourceBundle</code> 对象。如果您急于查看一些编码示例，请继续查看本课程的最后两节。然后，您可以回到前两个部分以获取有关 <code>ResourceBundle</code> 对象的一些概念性信息。</p>
+<p>必须根据终端用户的语言和区域的规范来定制特定于语言环境的数据。用户界面显示的文本是语言环境特定数据的最明显示例。例如，在美国使用 Cancel 按钮的应用程序将在德国具有 Abbrechen 按钮。在其他国家/地区，此按钮将包含其他标签。显然你不想硬编码这个按钮标签。如果你可以自动为给定的 <code>Locale</code> 获取正确的标签，那不是很好吗？幸运的是，只要你在 <code>ResourceBundle</code> 中隔离特定于语言环境的对象，就可以。</p>
+<p>在本课程中，你将学习如何创建和访问 <code>ResourceBundle</code> 对象。如果你急于查看一些编码示例，请继续查看本课程的最后两节。然后，你可以回到前两个部分以获取有关 <code>ResourceBundle</code> 对象的一些概念性信息。</p>
 <h2><a href="concept.html">关于 ResourceBundle 类</a></h2>
-<p><code>ResourceBundle</code> 对象包含特定于语言环境的对象。当您需要特定于语言环境的对象时，可以从 <code>ResourceBundle</code> 获取它，该对象返回与终端用户的 <code>Locale</code> 匹配的对象。本节介绍 <code>ResourceBundle</code> 如何与 <code>Locale</code> 相关，并描述 <code>ResourceBundle</code> 子类。</p>
+<p><code>ResourceBundle</code> 对象包含特定于语言环境的对象。当你需要特定于语言环境的对象时，可以从 <code>ResourceBundle</code> 获取它，该对象返回与终端用户的 <code>Locale</code> 匹配的对象。本节介绍 <code>ResourceBundle</code> 如何与 <code>Locale</code> 相关，并描述 <code>ResourceBundle</code> 子类。</p>
 <h2><a href="prepare.html">准备使用 ResourceBundle</a></h2>
-<p>在创建 <code>ResourceBundle</code> 对象之前，您应该做一些计划。首先，确定程序中特定于语言环境的对象。然后将它们组织成类别并相应地将它们存储在不同的 <code>ResourceBundle</code> 对象中。</p>
+<p>在创建 <code>ResourceBundle</code> 对象之前，你应该做一些计划。首先，确定程序中特定于语言环境的对象。然后将它们组织成类别并相应地将它们存储在不同的 <code>ResourceBundle</code> 对象中。</p>
 <h2><a href="propfile.html">使用属性文件支持 ResourceBundle</a></h2>
-<p>如果您的应用程序包含需要翻译成各种语言的 <code>String</code> 对象，则可以将这些 <code>String</code> 对象存储在 <code>PropertyResourceBundle</code> 中，其由一组属性文件支持。由于属性文件是简单的文本文件，因此翻译人员可以创建和维护这些文件。您不必更改源代码。在本节中，您将学习如何设置支持属性文件的 <code>PropertyResourceBundle</code>。</p>
+<p>如果你的应用程序包含需要翻译成各种语言的 <code>String</code> 对象，则可以将这些 <code>String</code> 对象存储在 <code>PropertyResourceBundle</code> 中，其由一组属性文件支持。由于属性文件是简单的文本文件，因此翻译人员可以创建和维护这些文件。你不必更改源代码。在本节中，你将学习如何设置支持属性文件的 <code>PropertyResourceBundle</code>。</p>
 <h2><a href="list.html">使用 ListResourceBundle</a></h2>
-<p><code>ListResourceBundle</code> 类是 <code>ResourceBundle</code> 的子类，它使用列表管理特定于语言环境的对象。<code>ListResourceBundle</code> 由类文件支持，这意味着每次需要支持其他 <code>Locale</code> 时，您必须编写和编译新的源文件。但是，<code>ListResourceBundle</code> 对象很有用，因为与属性文件不同，它们可以存储任何类型的特定于语言环境的对象。通过单步执行示例程序，本节演示如何使用 <code>ListResourceBundle</code>。</p>
+<p><code>ListResourceBundle</code> 类是 <code>ResourceBundle</code> 的子类，它使用列表管理特定于语言环境的对象。<code>ListResourceBundle</code> 由类文件支持，这意味着每次需要支持其他 <code>Locale</code> 时，你必须编写和编译新的源文件。但是，<code>ListResourceBundle</code> 对象很有用，因为与属性文件不同，它们可以存储任何类型的特定于语言环境的对象。通过单步执行示例程序，本节演示如何使用 <code>ListResourceBundle</code>。</p>
 <h2><a href="control.html">自定义资源包加载</a></h2>
 <p>本节介绍了改善 <code>ResourceBundle.getBundle</code> 工厂灵活性的新功能。<code>ResourceBundle.Control</code> 类与用于加载资源包的工厂方法协作。这允许将资源包加载过程的每个实质步骤及其高速缓存控制视为单独的方法。</p>
 

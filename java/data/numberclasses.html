@@ -475,13 +475,13 @@
 <div class="linkAHEAD"><a href="numbers.html">数字</a></div>
 <div class="nolinkBHEAD">数字类</div>
 <div class="linkBHEAD"><a href="numberformat.html">格式化数字打印输出</a></div>
-<div class="linkBHEAD"><a href="beyondmath.html">基础算法之外的补充</a></div>
+<div class="linkBHEAD"><a href="beyondmath.html">基础算术之外的补充</a></div>
 <div class="linkBHEAD"><a href="numbersummary.html">数字总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/numbers-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="characters.html">Characters</a></div>
-<div class="linkAHEAD"><a href="strings.html">Strings</a></div>
+<div class="linkAHEAD"><a href="characters.html">字符</a></div>
+<div class="linkAHEAD"><a href="strings.html">字符串</a></div>
 <div class="linkBHEAD"><a href="converting.html">在数字和字符串之间转换</a></div>
-<div class="linkBHEAD"><a href="manipstrings.html">操纵字符串中的字符</a></div>
+<div class="linkBHEAD"><a href="manipstrings.html">操作字符串中的字符</a></div>
 <div class="linkBHEAD"><a href="comparestrings.html">比较字符串和字符串的部分</a></div>
 <div class="linkBHEAD"><a href="buffers.html">StringBuilder 类</a></div>
 <div class="linkBHEAD"><a href="stringsummary.html">字符和字符串总结</a></div>
@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">数字和字符串</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="numbers.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="numberformat.html">Next&nbsp;»</a>
+                <a target="_top" href="numbers.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="numberformat.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>数字类</h1></div>
@@ -511,7 +511,7 @@ int i = 500;
 float gpa = 3.65f;
 byte mask = 0xff;
 </pre></div>
-<p>但是，有时候需要使用对象代替基本类型，Java 平台为每个基本数据类型提供 <i>包装（wrapper）</i> 类。这些类将基本类型 "包装" 在对象中。通常，包装是由编译器完成的 - 如果你在期望对象时使用基本类型，编译器会 <i>装箱</i> 基本类型到它的包装类中。类似地，如果在期望基本类型时使用数字对象，则编译器会 <i>拆箱</i> 对象。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="autoboxing.html">Autoboxing and Unboxing</a></p>
+<p>但是，有时候需要使用对象代替基本类型，Java 平台为每个基本数据类型提供 <i>wrapper (包装)</i> 类。这些类将基本类型 "包装" 在对象中。通常，包装是由编译器完成的 - 如果你在期望对象时使用基本类型，编译器会 <i>boxes (装箱)</i> 基本类型到它的包装类中。类似地，如果在期望基本类型时使用数字对象，则编译器会 <i>unboxes (拆箱)</i> 对象。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="autoboxing.html">Autoboxing and Unboxing</a></p>
 <p>所有数字包装类都是抽象类 <code>Number</code> 的子类： <!-- figure --></p>
 <center><img src="../../figures/java/objects-numberHierarchy.gif" width="327" height="149" align="bottom" alt="Number 的类层次结构。" /></center><div class="note"><hr /><strong>注意:</strong>&nbsp;此处未讨论 <code>Number</code> 的其他四个子类。<code>BigDecimal</code> 和 <code>BigInteger</code> 用于高精度计算。<code>AtomicInteger</code> 和 <code>AtomicLong</code> 用于多线程应用程序。
 <hr /></div>
@@ -540,7 +540,7 @@ long longValue()<br />
 float floatValue()<br />
 
 double doubleValue()</code></td>
-<td>将此 <code>Number</code> 对象的值转换为返回的基本数据类型。</td>
+<td>将此 <code>Number</code> 对象的值转换为基本数据类型返回。</td>
 </tr>
 <tr>
 <td><code>int compareTo(Byte anotherByte)<br />
@@ -576,7 +576,7 @@ Java API 文档中描述了 <code>Double</code> 和 <code>Float</code> 对象的
 </tr>
 <tr>
 <td><code>static int parseInt(String s)</code></td>
-<td>返回一个整数(仅限小数)。</td>
+<td>返回一个整数(仅限十进制)。</td>
 </tr>
 <tr>
 <td><code>static int parseInt(String s, int radix)</code></td>
@@ -600,7 +600,7 @@ Java API 文档中描述了 <code>Double</code> 和 <code>Float</code> 对象的
 </tr>
 <tr>
 <td><code>static Integer valueOf(String s, int radix)</code></td>
-<td>返回一个 <code>Integer</code> 对象，其中包含指定字符串表示形式的整数值，并使用 radix 值进行解析。例如，如果 s ="333" 且 radix = 8，则该方法返回等于八进制数 333 的十进制整数。</td>
+<td>返回一个 <code>Integer</code> 对象，其中包含指定字符串表示的整数值，并使用 radix 值进行解析。例如，如果 s ="333" 且 radix = 8，则该方法返回等于八进制数 333 的十进制整数。</td>
 </tr>
 </table>
 

@@ -502,22 +502,22 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="QandE/interfaces-questions.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="multipleinheritance.html">Next&nbsp;»</a>
+                <a target="_top" href="QandE/interfaces-questions.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="multipleinheritance.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>继承</h1></div>
             <div id="PageContent"><!-- Inheritance -->
 
 
-<p>在前面的课程中，您已经多次看到 <i>inheritance</i>。在 Java 语言中，类可以从其他类 <i>派生（derived）</i>，从而从那些类 <i>继承（inheriting）</i> 字段和方法。</p>
-<div class="note"><hr /><strong>Definitions:</strong> 从另一个类派生的类称为 <i>subclass</i>(也是 <i>derived class</i>，<i>extended class</i> ，或 <i>child class</i>)。从中派生子类的类称为 <i>superclass</i>(也是 <i>base class</i> 或 <i>parent class</i>)。<br /><br />
+<p>在前面的课程中，你已经多次看到 <i>inheritance (继承)</i>。在 Java 语言中，类可以从其他类 <i>derived (派生)</i>，从而从那些类 <i>inheriting (继承)</i> 字段和方法。</p>
+<div class="note"><hr /><strong>定义:</strong>&nbsp;从另一个类派生的类称为 <i>subclass (子类)</i>(也称为 <i>derived class (派生类)</i>，<i>extended class (扩展类)</i> ，或 <i>child class (子类)</i>)。从中派生子类的类称为 <i>superclass (超类)</i>(也称为 <i>base class (基类)</i> 或 <i>parent class (父类)</i>)。<br /><br />
 除了 <code>Object</code>，它没有超类，每个类有且只有一个直接超类(单继承)。在没有任何其他显式超类的情况下，每个类都隐式地是 <code>Object</code> 的子类。<br /><br />
-类可以派生自一个派生类，该派生类可以派生自一个派生类，依此类推，最终派生自最顶层的类 <code>Object</code>。这样的类被称为 <i>descended</i> 从延伸回 <code>Object</code> 的继承链中的所有类。
+类可以派生自一个派生类，该派生类可以派生自一个派生类，依此类推，最终派生自最顶层的类 <code>Object</code>。这样的类被称为 <i>descended (继承了)</i> （译注：可以理解为后代，意会一下）继承链中的所有类延伸回 <code>Object</code>。
 <hr /></div>
-<p>继承的想法很简单但很强大：当你想创建一个新类并且已经有一个包含你想要的代码的类时，你可以从现有的类派生你的新类。在这样做时，您可以重用现有类的字段和方法，而无需自己编写(和调试！)它们。</p>
-<p>子类从其超类继承所有 <i>members</i>(字段，方法和嵌套类)。构造函数不是成员，因此它们不是由子类继承的，但是可以从子类调用超类的构造函数。</p>
+<p>继承的想法很简单但很强大：当你想创建一个新类并且已经有一个包含你想要的代码的类时，你可以从现有的类派生你的新类。在这样做时，你可以重用现有类的字段和方法，而无需自己编写(和调试！)它们。</p>
+<p>子类从其超类继承所有 <i>members (成员)</i>(字段，方法和嵌套类)。构造函数不是成员，因此它们不能由子类继承的，但是可以从子类调用超类的构造函数。</p>
 <h2>Java 平台类层次结构</h2>
-<p>在 <code>java.lang</code> 包中定义的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html"><code>Object</code></a> 类定义并实现所有类共有的行为，包括您编写的类。在 Java 平台中，许多类直接从 <code>Object</code> 派生，其他类派生自其中一些类，依此类推，形成类的层次结构。</p>
+<p>在 <code>java.lang</code> 包中定义的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html"><code>Object</code></a> 类定义并实现所有类共有的行为，包括你编写的类。在 Java 平台中，许多类直接从 <code>Object</code> 派生，其他类派生自其中一些类，依此类推，形成类的层次结构。</p>
 <center><img src="../../figures/java/classes-object.gif" width="560" height="241" align="bottom" alt="Java 平台中的所有类都是 Object 的后代" /></p><p class="FigureCaption">Java 平台中的所有类都是 Object 的后代</p></center><p>在层次结构的顶部，<code>Object</code> 是所有类中最一般的。层次结构底部附近的类提供更专业的行为。</p>
 <h2>继承的一个例子</h2>
 <p>以下是在“类和对象”类中提供的 <code>Bicycle</code> 类的可能实现的示例代码： 
@@ -578,23 +578,23 @@ public class MountainBike extends Bicycle {
     }   
 }
 </pre></div>
-<p><code>MountainBike</code> 继承 <code>Bicycle</code> 的所有字段和方法，并添加字段 <code>seatHeight</code> 以及设置它的方法。除了构造函数之外，就好像你已经从头开始编写了一个新的 <code>MountainBike</code> 类，有四个字段和五个方法。但是，您不必完成所有工作。如果 <code>Bicycle</code> 类中的方法很复杂并且需要花费大量时间来调试，这将特别有价值。</p>
-<h2>您可以在子类中执行的操作</h2>
-<p>无论子类所在的包是什么，子类都会继承其父类的所有 <i>public</i> 和 <i>protected</i> 成员。如果子类与其父类在同一个包中，它还会继承父类的 <i>package-private</i> 成员。您可以按原样使用继承的成员，替换它们，隐藏它们或用新成员补充它们：</p>
+<p><code>MountainBike</code> 继承 <code>Bicycle</code> 的所有字段和方法，并添加字段 <code>seatHeight</code> 以及设置它的方法。除了构造函数之外，就好像你已经从头开始编写了一个新的 <code>MountainBike</code> 类，有四个字段和五个方法。但是，你不必完成所有工作。如果 <code>Bicycle</code> 类中的方法很复杂并且需要花费大量时间来调试，这将特别有价值。</p>
+<h2>你可以在子类中执行的操作</h2>
+<p>无论子类所在的包是什么，子类都会继承其父类的所有 <i>public</i> 和 <i>protected</i> 成员。如果子类与其父类在同一个包中，它还会继承父类的 <i>package-private</i> 成员。你可以按原样使用继承的成员，替换它们，隐藏它们或用新成员补充它们：</p>
 <ul>
 <li>继承的字段可以直接使用，就像任何其他字段一样。</li>
-<li>您可以在子类中声明一个与超类中的字段同名的字段，从而 <i>（隐藏）hiding</i> 它(不推荐)。</li>
-<li>您可以在子类中声明不在超类中的新字段。</li>
+<li>你可以在子类中声明一个与超类中的字段同名的字段，从而 <i>hiding (隐藏)</i> 它(不推荐)。</li>
+<li>你可以在子类中声明不在超类中的新字段。</li>
 <li>继承的方法可以直接使用。</li>
-<li>您可以在子类中编写一个新的 <i>instance</i> 方法，该方法与超类中的签名具有相同的签名，从而 <i>覆盖（overriding）</i> 它。</li>
-<li>您可以在子类中编写一个新的 <i>static</i> 方法，该方法与超类中的签名具有相同的签名，因此 <i>hiding</i> 它。</li>
-<li>您可以在子类中声明不在超类中的新方法。</li>
-<li>您可以编写一个子类构造函数，它可以隐式地或使用关键字 <code>super</code> 来调用超类的构造函数。</li>
+<li>你可以在子类中编写一个新的 <i>instance (实例)</i> 方法，该方法与超类中的方法具有相同的签名，从而 <i>overriding (覆盖)</i> 它。</li>
+<li>你可以在子类中编写一个新的 <i>static (静态)</i> 方法，该方法与超类中的方法具有相同的签名，因此 <i>hiding (隐藏)</i> 它。</li>
+<li>你可以在子类中声明不在超类中的新方法。</li>
+<li>你可以编写一个子类构造函数，它可以隐式地或使用关键字 <code>super</code> 来调用超类的构造函数。</li>
 </ul>
 <p>本课程的以下部分将扩展这些主题。</p>
 <h2>超级私有会员</h2>
-<p>子类不继承其父类的 <code>private</code> 成员。但是，如果超类具有访问其私有字段的公共或受保护方法，则子类也可以使用这些方法。</p>
-<p>嵌套类可以访问其封闭类的所有私有成员 - 包括字段和方法。因此，子类继承的公共或受保护嵌套类可以间接访问超类的所有私有成员。</p>
+<p>子类不继承其父类的 <code>private</code> 成员。但是，如果超类具有访问其 private 字段的 public 或 protected 方法，则子类也可以使用这些方法。</p>
+<p>嵌套类可以访问其封闭类的所有 private 成员 - 包括字段和方法。因此，子类继承的 public 或 protected 嵌套类可以间接访问超类的所有 private 成员。</p>
 <h2>转换对象</h2>
 <p>我们已经看到一个对象是实例化它的类的数据类型。例如，如果我们写</p>
 <div class="codeblock"><pre>
@@ -603,27 +603,27 @@ public MountainBike myBike = new MountainBike();
 <p>那么 <code>myBike</code> 的类型为 <code>MountainBike</code>。</p>
 <p><code>MountainBike</code> 来自 <code>Bicycle</code> 和 <code>Object</code>。因此，<code>MountainBike</code> 是 <code>Bicycle</code> 并且也是 <code>Object</code>，它可以在任何调用 <code>Bicycle</code> 或<code> Object </code> 的地方使用。</p>
 <p>反过来不一定正确：<code>Bicycle</code> <i>可能是</i> 一个 <code>MountainBike</code>，但不一定如此。类似地，<code>Object</code> <i>可能是</i> 一个 <code>Bicycle</code> 或 <code>MountainBike</code>，但不一定如此。</p>
-<p><i>Casting</i> 显示在继承和实现允许的对象中使用一种类型的对象代替另一种类型。例如，如果我们写</p>
+<p><i>Casting (转换)</i> 显示在继承和实现允许的对象中使用一种类型的对象代替另一种类型。例如，如果我们写</p>
 <div class="codeblock"><pre>
 Object obj = new MountainBike();
 </pre></div>
-<p>然后 <code>obj</code> 既是 <code>Object</code> 又是 <code>MountainBike</code>(直到 <code>obj</code> 分配另一个对象 <i>不是</i> 一个 <code>MountainBike</code>)。这称为 <i>隐式转换（implicit casting）</i>。</p>
+<p>然后 <code>obj</code> 既是 <code>Object</code> 又是 <code>MountainBike</code>(直到 <code>obj</code> 分配另一个 <i>不是</i> <code>MountainBike</code> 的对象)。这称为 <i>implicit casting (隐式转换)</i>。</p>
 <p>另一方面，如果我们写</p>
 <div class="codeblock"><pre>
 MountainBike myBike = obj;
 </pre></div>
-<p>我们会得到编译时错误，因为编译器不知道 <code>obj</code> 是 <code>MountainBike</code>。但是，我们可以 <i>告诉</i> 编译器我们承诺分配一个 <code>MountainBike</code> 给 <code>obj</code> ，通过 <i>显示转换（explicit casting）:</i></p>
+<p>我们会得到编译时错误，因为编译器不知道 <code>obj</code> 是 <code>MountainBike</code>。但是，我们可以 <i>告诉</i> 编译器我们承诺分配一个 <code>MountainBike</code> 给 <code>obj</code> ，通过 <i>explicit casting (显示转换)</i>：</p>
 <div class="codeblock"><pre>
 MountainBike myBike = (MountainBike)obj;
 </pre></div>
-<p>此强制转换插入运行时检查 <code>obj</code> 被分配 <code>MountainBike</code>，以便编译器可以安全地假设 <code>obj</code> 是 <code>MountainBike</code>。如果 <code>obj</code> 在运行时不是 <code>MountainBike</code>，则会抛出异常。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;您可以使用 <code>instanceof</code> 运算符对特定对象的类型进行逻辑测试。这可以避免由于不正确的强制转换而出现运行时错误。例如：
+<p>此强制转换插入运行时检查 <code>obj</code> 被分配了一个 <code>MountainBike</code>，以便编译器可以安全地假设 <code>obj</code> 是 <code>MountainBike</code>。如果 <code>obj</code> 在运行时不是 <code>MountainBike</code>，则会抛出异常。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;你可以使用 <code>instanceof</code> 运算符对特定对象的类型进行逻辑测试。这可以避免由于不正确的强制转换而出现运行时错误。例如：
 <div class="codeblock"><pre>
 if (obj instanceof MountainBike) {
     MountainBike myBike = (MountainBike)obj;
 }
 </pre></div>
-<p>这里 <code>instanceof</code> 运算符验证 <code>obj</code> 是否指向 <code>MountainBike</code>，以便我们可以使用转换，而不会抛出运行时异常。</p>
+<p>这里 <code>instanceof</code> 运算符验证 <code>obj</code> 是否引用 <code>MountainBike</code>，以便我们可以使用转换，而不会抛出运行时异常。</p>
 <hr /></div>
 
 

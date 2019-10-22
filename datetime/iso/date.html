@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>&gt;<a href="index.html" target="_top">标准日历</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="enum.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="datetime.html">Next&nbsp;»</a>
+                <a target="_top" href="enum.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="datetime.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>日期类</h1></div>
@@ -511,7 +511,7 @@ Date-Time API 提供了四个专门处理日期信息的类，而不考虑时间
 
 <h2>LocalDate</h2>
 <p>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html"><tt>LocalDate</tt></a> 表示 ISO 日历中的年 - 月 - 日，对于表示没有时间的日期很有用。您可以使用 <tt>LocalDate</tt> 来跟踪重要事件，例如出生日期或结婚日期。以下示例使用 <tt>of</tt> 和 <tt>with</tt> 方法创建 <tt>LocalDate</tt> 的实例：</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html"><tt>LocalDate</tt></a> 表示 ISO 日历中的年 - 月 - 日，对于表示没有时间的日期很有用。你可以使用 <tt>LocalDate</tt> 来跟踪重要事件，例如出生日期或结婚日期。以下示例使用 <tt>of</tt> 和 <tt>with</tt> 方法创建 <tt>LocalDate</tt> 的实例：</p>
 <div class="codeblock"><pre>
 LocalDate date = LocalDate.of(2000, Month.NOVEMBER, 20);
 LocalDate nextWed = date.with(TemporalAdjusters.next(DayOfWeek.WEDNESDAY));

@@ -509,37 +509,37 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">Java Applets</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="security.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">Next&nbsp;»</a>
+                <a target="_top" href="security.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>解决常见的 Applet 问题</h1></div>
             <div id="PageContent">
 
 <p>This section covers some common problems that you might encounter when writing Java applets. After each problem is a list of possible reasons and solutions.</p>
-<p><strong>Problem:</strong> My applet does not display.</p>
+<p><strong>Problem:</strong>My applet does not display.</p>
 <ul>
 <li>Check the Java Console log for errors.</li>
 <li>Check the syntax of the applet's Java Network Launch Protocol (JNLP) file. Incorrect JNLP files are the most common reason for failures without obvious errors.</li>
 <li>Check the JavaScript syntax if deploying using the <code>runApplet</code> function of the Deployment Toolkit. See 
 <a class="TutorialLink" target="_top" href="../deploymentInDepth/runAppletFunction.html">Deploying an Applet</a> for details.</li>
 </ul>
-<p><strong>Problem:</strong> The Java Console log displays java.lang.ClassNotFoundException.</p>
+<p><strong>Problem:</strong>The Java Console log displays java.lang.ClassNotFoundException.</p>
 <ul>
 <li>Make sure your Java source files compiled correctly.</li>
 <li>If deploying using the <code>&lt;applet&gt;</code> tag, check that the path to the applet JAR file is specified accurately in the <code>archive</code> attribute.</li>
 <li>If launching using a JNLP file, check the path in the <code>jar</code> tag in the JNLP file.</li>
 <li>Make sure the applet's JAR file, JNLP file, and web page are located in the correct directory and reference each other accurately.</li>
 </ul>
-<p><strong>Problem:</strong> I was able to build the code once, but now the build fails even though there are no compilation errors.</p>
+<p><strong>Problem:</strong>I was able to build the code once, but now the build fails even though there are no compilation errors.</p>
 <ul>
 <li>Close your browser and run the build again. The browser most likely has a lock on the JAR file, because of which the build process is unable to regenerate the JAR file.</li>
 </ul>
-<p><strong>Problem:</strong> When I try to load a web page that has an applet, my browser redirects me to <code>www.java.com</code> without any warning</p>
+<p><strong>Problem:</strong>When I try to load a web page that has an applet, my browser redirects me to <code>www.java.com</code> without any warning</p>
 <ul>
 <li>The applet on the web page is most likely deployed using the Deployment Toolkit script. The applet may require a later version of the Java Runtime Environment software than the version that currently exists on the client. Check the <code>minimumVersion</code> parameter of the <code>runApplet</code> function in the applet's web page. See 
 <a class="TutorialLink" target="_top" href="../deploymentInDepth/runAppletFunction.html">Deploying an Applet</a> for details.</li>
 </ul>
-<p><strong>Problem:</strong> I fixed some bugs and re-built my applet's source code. When I reload the applet's web page, my fixes are not showing up.</p>
+<p><strong>Problem:</strong>I fixed some bugs and re-built my applet's source code. When I reload the applet's web page, my fixes are not showing up.</p>
 <ul>
 <li>You may be viewing a previously cached version of the applet. Close the browser. Open the Java Control Panel and delete temporary internet files. This will remove your applet from cache. Try viewing your applet again.</li>
 </ul>

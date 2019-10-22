@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,7 +512,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="more.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="thiskey.html">Next&nbsp;»</a>
+                <a target="_top" href="more.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="thiskey.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>从方法中返回一个值</h1></div>
@@ -522,16 +522,16 @@
 <p>方法返回到调用它的代码当它</p>
 <ul>
 <li>完成该方法中的所有语句，</li>
-<li>达到 <code>return</code> 语句或</li>
+<li>到达 <code>return</code> 语句或</li>
 <li>抛出一个异常(稍后介绍)，</li>
 </ul>
 <p>以先发生者为准。</p>
 <p>你在方法声明中声明一个方法的返回类型。在方法的主体中，使用 <code>return</code> 语句返回值。</p>
-<p>任何声明为 <code>void</code> 的方法都不会返回一个值。它不需要包含 <code>return</code> 语句，但可以这样做。在这种情况下，可以使用 <code>return</code> 语句从控制流程块分支退出并退出该方法，并简单地使用如下所示：</p>
+<p>任何声明为 <code>void</code> 的方法都不会返回一个值。它不需要包含 <code>return</code> 语句，但也可以包含。在这种情况下，可以使用 <code>return</code> 语句从控制流程块分支退出并退出该方法，并简单地使用如下所示：</p>
 <div class="codeblock"><pre>
 return;
 </pre></div>
-<p>如果您尝试从声明为 <code>void</code> 的方法返回一个值，您将收到编译器错误。</p>
+<p>如果你尝试从声明为 <code>void</code> 的方法返回一个值，你将收到编译器错误。</p>
 <p>任何声明为非 <code>void</code> 的方法都必须包含具有相应返回值的 <code>return</code> 语句，如下所示：</p>
 <div class="codeblock"><pre>
 return returnValue;
@@ -558,8 +558,8 @@ public Bicycle seeWhosFastest(Bicycle myBike, Bicycle yourBike,
 }
 </pre></div>
 <h2>返回一个类或接口</h2>
-<p>如果本节让您感到困惑，请跳过它，在完成关于接口和继承的课程后再回来查看。</p>
-<p>当一个方法使用类名称作为它的返回类型时，例如 <code>whosFastest</code> 所做的，返回对象类型的类必须是返回类型的子类或确切类。假设您有一个类层次结构，其中 <code>ImaginaryNumber</code> 是 <code>java.lang.Number</code> 的子类，而又是 <code>Object</code> 的子类，如 <span id="figure:classes-hierarchy.gif">下图</span>。</p>
+<p>如果本节让你感到困惑，请跳过它，在完成关于接口和继承的课程后再回来查看。</p>
+<p>当一个方法使用类名称作为它的返回类型时，例如 <code>whosFastest</code> 所做的，返回对象类型的类必须是返回类型的子类或确切类。假设你有一个类层次结构，其中 <code>ImaginaryNumber</code> 是 <code>java.lang.Number</code> 的子类，而又是 <code>Object</code> 的子类，如 <span id="figure:classes-hierarchy.gif">下图</span>。</p>
 <center><img src="../../figures/java/classes-hierarchy.gif" width="130" height="136" align="bottom" alt="ImaginaryNumber 的类层次结构" /></p><p class="FigureCaption">ImaginaryNumber 的类层次结构</p></center><p>现在假设你有一个方法声明返回一个 <code>Number</code>：</p>
 <div class="codeblock"><pre>
 public Number returnANumber() {
@@ -567,14 +567,14 @@ public Number returnANumber() {
 }
 </pre></div>
 <p><code>returnANumber</code> 方法可以返回 <code>ImaginaryNumber</code>，但不能返回 <code>Object</code>。<code>ImaginaryNumber</code> 是 <code>Number</code>，因为它是 <code>Number</code> 的子类。但是，<code>Object</code> 不一定是 <code>Number</code>  它可能是一个 <code>String</code> 或其他类型。</p>
-<p>您可以重写一个方法并将其定义为返回原始方法的子类，如下所示：</p>
+<p>你可以重写一个方法并将其定义为返回原始方法的子类，如下所示：</p>
 <div class="codeblock"><pre>
 public ImaginaryNumber returnANumber() {
     ...
 }
 </pre></div>
-<p>这种称为 <em>covariant return type（协变返回类型）</em> 的技术意味着返回类型可以在与子类相同的方向上变化。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;您也可以使用接口名称作为返回类型。在这种情况下，返回的对象必须实现指定的接口。
+<p>这种称为 <em>covariant return type (协变返回类型)</em> 的技术意味着返回类型可以在与子类相同的方向上变化。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;你也可以使用接口名称作为返回类型。在这种情况下，返回的对象必须实现指定的接口。
 <hr /></div>
 
 

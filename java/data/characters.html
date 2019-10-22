@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Characters(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;数字和字符串)
+        <title>字符(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;数字和字符串)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,13 +475,13 @@
 <div class="linkAHEAD"><a href="numbers.html">数字</a></div>
 <div class="linkBHEAD"><a href="numberclasses.html">数字类</a></div>
 <div class="linkBHEAD"><a href="numberformat.html">格式化数字打印输出</a></div>
-<div class="linkBHEAD"><a href="beyondmath.html">基础算法之外的补充</a></div>
+<div class="linkBHEAD"><a href="beyondmath.html">基础算术之外的补充</a></div>
 <div class="linkBHEAD"><a href="numbersummary.html">数字总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/numbers-questions.html">问题和练习</a></div>
-<div class="nolinkAHEAD">Characters</div>
-<div class="linkAHEAD"><a href="strings.html">Strings</a></div>
+<div class="nolinkAHEAD">字符</div>
+<div class="linkAHEAD"><a href="strings.html">字符串</a></div>
 <div class="linkBHEAD"><a href="converting.html">在数字和字符串之间转换</a></div>
-<div class="linkBHEAD"><a href="manipstrings.html">操纵字符串中的字符</a></div>
+<div class="linkBHEAD"><a href="manipstrings.html">操作字符串中的字符</a></div>
 <div class="linkBHEAD"><a href="comparestrings.html">比较字符串和字符串的部分</a></div>
 <div class="linkBHEAD"><a href="buffers.html">StringBuilder 类</a></div>
 <div class="linkBHEAD"><a href="stringsummary.html">字符和字符串总结</a></div>
@@ -498,10 +498,10 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">数字和字符串</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="QandE/numbers-questions.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="strings.html">Next&nbsp;»</a>
+                <a target="_top" href="QandE/numbers-questions.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="strings.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>Characters</h1></div>
+            <div id="PageTitle"><h1>字符</h1></div>
             <div id="PageContent"><!-- Characters -->
 
 
@@ -513,12 +513,12 @@ char uniChar = '\u03A9';
 // an array of chars
 char[] charArray = { 'a', 'b', 'c', 'd', 'e' };
 </pre></div>
-<p>但是，有时候需要使用 char 作为对象 - 例如，作为期望对象的方法参数。Java 编程语言提供了一个 <i>包装（wrapper）</i> 类，为此目的将 <code>char</code>"包装" 在 <code>Character</code> 对象中。<code>Character</code> 类型的对象包含单个字段，其类型为 <code>char</code>。这个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html">Character</a> 类还提供了许多用于操作字符的有用类(即静态)方法。</p>
-<p>您可以使用 <code>Character</code> 构造函数创建 <code>Character</code> 对象：</p>
+<p>但是，有时候需要使用 char 作为对象 - 例如，作为期望对象的方法参数。Java 编程语言提供了一个 <i>wrapper (包装)</i> 类，为此目的将 <code>char</code> "包装" 在 <code>Character</code> 对象中。<code>Character</code> 类型的对象包含单个字段，其类型为 <code>char</code>。这个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html">Character</a> 类还提供了许多用于操作字符的有用类(即静态)方法。</p>
+<p>你可以使用 <code>Character</code> 构造函数创建 <code>Character</code> 对象：</p>
 <div class="codeblock"><pre>
 Character ch = new Character('a');
 </pre></div>
-<p>在某些情况下，Java 编译器还将为您创建 <code>Character</code> 对象。例如，如果将基本类型 <code>char</code> 传递给需要对象的方法，则编译器会自动将 <code>char</code> 转换为 <code>Character</code>。则此功能称为 <em>自动装箱（autoboxing）</em> 或者如果反向转换则称为 <em>拆箱（unboxing）</em>。有关自动装箱和拆箱的详细信息，请参阅 <a class="TutorialLink" target="_top" href="autoboxing.html">Autoboxing and Unboxing</a>。</p>
+<p>在某些情况下，Java 编译器还将为你创建 <code>Character</code> 对象。例如，如果将基本类型 <code>char</code> 传递给需要对象的方法，则编译器会自动将 <code>char</code> 转换为 <code>Character</code>。则此功能称为 <em>autoboxing (自动装箱)</em>  或者如果反向转换则称为 <em>unboxing (拆箱)</em>。有关自动装箱和拆箱的详细信息，请参阅 <a class="TutorialLink" target="_top" href="autoboxing.html">Autoboxing and Unboxing</a>。</p>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;<code>Character</code> 类是不可变的，因此一旦创建，就无法更改 <code>Character</code> 对象。
 <hr /></div>
 <p>下表列出了 <code>Character</code> 类中一些最有用的方法，但并非详尽无遗。有关此类中所有方法的完整列表(有超过 50 个)，请参阅 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html">java.lang.Character</a> API 规范。</p>
@@ -532,7 +532,7 @@ Character ch = new Character('a');
 <td><code>boolean isLetter(char ch)<br />
 
 boolean isDigit(char ch)</code></td>
-<td>确定指定的 char 值分别是字母还是数字。</td>
+<td>分别确定指定的 char 值是字母还是数字。</td>
 </tr>
 <tr>
 <td><code>boolean isWhitespace(char ch)</code></td>
@@ -542,7 +542,7 @@ boolean isDigit(char ch)</code></td>
 <td><code>boolean isUpperCase(char ch)<br />
 
 boolean isLowerCase(char ch)</code></td>
-<td>确定指定的 char 值分别是大写还是小写。</td>
+<td>分别确定指定的 char 值是大写还是小写。</td>
 </tr>
 <tr>
 <td><code>char toUpperCase(char ch)<br />
@@ -552,11 +552,11 @@ char toLowerCase(char ch)</code></td>
 </tr>
 <tr>
 <td><code>toString(char ch)</code></td>
-<td>返回表示指定字符值的 <code>String</code> 对象也就是说，一个字符的字符串。</td>
+<td>返回表示指定字符值的 <code>String</code> 对象  也就是说，单个字符的字符串。</td>
 </tr>
 </table>
 <h2>转义序列</h2>
-<p>以反斜杠(\)开头的字符是 <i>escape sequence</i>，对编译器具有特殊含义。下表显示了 Java 转义序列：</p>
+<p>以反斜杠(\)开头的字符是 <i>escape sequence (转义序列)</i>，对编译器具有特殊含义。下表显示了 Java 转义序列：</p>
 <table width="50%" border="1" cellpadding="4" cellspacing="3" summary="该表列出了用于格式化的字符序列">
 <caption style="font-weight: bold">转义序列</caption>
 <tr>

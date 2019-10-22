@@ -515,7 +515,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="sync.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="memconsist.html">Next&nbsp;»</a>
+                <a target="_top" href="sync.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="memconsist.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>线程干扰</h1></div>
@@ -556,7 +556,7 @@ class Counter {
 <li>线程 B：获取 c。</li>
 <li>线程 A：增加获取值；结果是 1。</li>
 <li>线程 B：减少获取值；结果是 -1。</li>
-<li>线程 A：将结果存储在 c; c 现在是 1。</li>
+<li>线程 A：将结果存储在 c 中；c 现在是 1。</li>
 <li>线程 B：将结果存储在 c 中；c 现在是 -1。</li>
 </ol>
 <p>线程 A 的结果丢失，被线程 B 覆盖。这种特殊的交错只是一种可能性。在不同情况下，可能是线程 B 的结果丢失，或者根本没有错误。因为它们是不可预测的，所以线程干扰错误难以检测和修复。</p>

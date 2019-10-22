@@ -507,7 +507,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">拖放和数据传输</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="locsensitivedrop.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="emptytable.html">Next&nbsp;»</a>
+                <a target="_top" href="locsensitivedrop.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="emptytable.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>演示 -  LocationSensitiveDemo</h1></div>
@@ -516,7 +516,7 @@
 
 <p>The following demo, <code>LocationSensitiveDemo</code>, shows a <code>JTree</code> that has been configured to support drop on any node except for one called "names" (or its descendants). Use the text field at the top of the frame as the drag source (it will automatically increment the string number each time you drag from there).</p>
 <p>A combo box below the tree allows you to toggle the behavior for showing the drop location. Swing's default behavior is to show the drop location only when the area can accept the drop. You can override this behavior to always show the drop location (even if the area cannot accept the drop) or to never show the drop location (even if the area can accept the drop).</p>
-<center><img src="../../figures/uiswing/dnd/LocationSensitiveDemo.png" width="408" height="370" align="bottom" alt="A snapshot of the LocationSensitiveDemo demo." /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<center><img src="../../figures/uiswing/dnd/LocationSensitiveDemo.png" width="408" height="370" align="bottom" alt="A snapshot of the LocationSensitiveDemo demo." /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run <code>LocationSensitiveDemo</code> using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/dnd/index.html#LocationSensitiveDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/LocationSensitiveDemoProject/LocationSensitiveDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the ListDemo example" /></a><br /></li>
 <li>Initiate a drag by pressing on top of "String 0" in the text field and moving the mouse a short distance. Drag into the tree and move downwards. As you hover the mouse over most of the nodes, the drag acceptibility is indicated by both the mouse cursor and by the node becoming highlighted. Drop the text onto the "colors" node. The new item becomes a child of that node and a sibling to the colors listed.</li>

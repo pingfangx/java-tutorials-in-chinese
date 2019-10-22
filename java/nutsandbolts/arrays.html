@@ -480,7 +480,7 @@
 <div class="linkAHEAD"><a href="operators.html">运算符</a></div>
 <div class="linkBHEAD"><a href="op1.html">赋值，算术和一元运算符</a></div>
 <div class="linkBHEAD"><a href="op2.html">相等性，关系和条件运算符 </a></div>
-<div class="linkBHEAD"><a href="op3.html">按位和位移运算符</a></div>
+<div class="linkBHEAD"><a href="op3.html">位运算和移位运算符</a></div>
 <div class="linkBHEAD"><a href="opsummary.html">运算符总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_operators.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="expressions.html">表达式，语句和块</a></div>
@@ -505,16 +505,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">语言基础</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="datatypes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="variablesummary.html">Next&nbsp;»</a>
+                <a target="_top" href="datatypes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="variablesummary.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>数组</h1></div>
             <div id="PageContent">
 
 
-<p>一个 <i>array（数组）</i> 是一个容器对象，它拥有固定数量的单一类型的值。数组的长度是在创建数组时建立的。创建后，其长度是固定的。您已经在 "Hello World!" 应用的 <code>main</code> 方法中看到过一个数组的例子。本节更详细地讨论数组。</p>
+<p><i>array (数组)</i> 是一个容器对象，它保存固定数量的单种类型的值。数组的长度是在创建数组时建立的。创建后，其长度是固定的。你已经在 "Hello World!" 应用的 <code>main</code> 方法中看到过一个数组的例子。本节更详细地讨论数组。</p>
 <center><img src="../../figures/java/objects-tenElementArray.gif" width="335" height="124" align="bottom" alt="数组为 10 个方框，编号为 0 至 9;索引 0 表示数组中的第一个元素" /></p><p class="FigureCaption">10 个元素的数组。</p></center><br />
-<p>数组中的每个元素称为 <i>element（元素）</i>，每个元素都可以通过其数字 <i>index（索引、下标）</i> 访问。如上图所示，编号从 0 开始。例如，第 9 个元素将在索引 8 处访问。</p>
+<p>数组中的每个项都称为 <i>element (元素)</i>，每个元素都通过其数字 <i>index (索引、下标)</i> 访问。如上图所示，编号从 0 开始。例如，第 9 个元素将在索引 8 处访问。</p>
 <p>以下程序 <a class="SourceLink" target="_blank" href="examples/ArrayDemo.java" onclick="showCode('../../displayCode.html', 'examples/ArrayDemo.java'); return false;"><code>ArrayDemo</code></a> 创建一个整数数组，将一些值放入数组中，并将每个值打印到标准输出。</p>
 <div class="codeblock"><pre>
 
@@ -576,14 +576,14 @@ Element at index 7: 800
 Element at index 8: 900
 Element at index 9: 1000
 </pre></div>
-<p>在现实世界的编程情况下，您可能会使用支持的 <i>looping constructs（循环结构）</i> 之一来遍历数组的每个元素，而不是像前面的示例中那样单独编写每行。但是，该示例清楚地说明了数组语法。您将在 <a class="TutorialLink" target="_top" href="flow.html">Control Flow</a> 部分中了解各种循环结构(<code>for</code>, <code>while</code>, and <code>do-while</code>) 。</p>
+<p>在现实世界的编程情况下，你可能会使用支持的 <i>looping constructs (循环结构)</i> 之一来遍历数组的每个元素，而不是像前面的示例中那样单独编写每行。但是，该示例清楚地说明了数组语法。你将在 <a class="TutorialLink" target="_top" href="flow.html">Control Flow</a> 部分中了解各种循环结构(<code>for</code>, <code>while</code>, and <code>do-while</code>) 。</p>
 <h2>声明一个变量来引用一个数组</h2>
 <p>上述程序使用以下代码行来声明一个数组(名为 <code>anArray</code>)：</p>
 <div class="codeblock"><pre>
 // declares an array of integers
 int[] anArray;
 </pre></div>
-<p>像其他类型变量的声明一样，数组声明包含两个组件：数组的类型和数组的名称。数组的类型被写为 <code><em>type</em>[]</code>，其中 <code><em>type</em></code> 是包含元素的数据类型;括号是特殊的符号，表示这个变量包含一个数组。数组的大小不是其类型的一部分(这就是括号为空的原因)。数组的名称可以是任何你想要的，只要它遵循规则和约定，如前面在 <a class="TutorialLink" target="_top" href="variables.html#naming">naming</a> 部分中所讨论的。与其他类型的变量一样，该声明实际上并不创建数组;它只是告诉编译器该变量将保存指定类型的数组。</p>
+<p>像其他类型变量的声明一样，数组声明包含两个组件：数组的类型和数组的名称。数组的类型被写为 <code><em>type</em>[]</code>，其中 <code><em>type</em></code> 是包含元素的数据类型;括号是特殊的符号，表示这个变量包含一个数组。数组的大小不是其类型的一部分(这就是括号为空的原因)。数组的名称可以是任何你想要的，只要它遵循规则和规范，如前面在 <a class="TutorialLink" target="_top" href="variables.html#naming">naming</a> 部分中所讨论的。与其他类型的变量一样，该声明实际上并不创建数组;它只是告诉编译器该变量将保存指定类型的数组。</p>
 <p>同样，你可以声明其他类型的数组：</p>
 <div class="codeblock"><pre>
 byte[] anArrayOfBytes;
@@ -595,12 +595,12 @@ boolean[] anArrayOfBooleans;
 char[] anArrayOfChars;
 String[] anArrayOfStrings;
 </pre></div>
-<p>您也可以在数组名称后面加上括号：</p>
+<p>你也可以在数组名称后面加上括号：</p>
 <div class="codeblock"><pre>
 // this form is discouraged
 float anArrayOfFloats[];
 </pre></div>
-<p>然而，惯例不鼓励这种形式;括号标识数组类型，并应与类型标识一起出现。</p>
+<p>然而，规范不鼓励这种形式;括号标识数组类型，并应与类型标识一起出现。</p>
 <h2>创建，初始化和访问数组</h2>
 <p>创建数组的一种方法是使用 <code>new</code> 运算符。<code>ArrayDemo</code> 程序中的下一个语句为 10 个整型元素分配一个具有足够内存的数组，并将该数组赋值给 <code>anArray</code> 变量。</p>
 <div class="codeblock"><pre>
@@ -623,7 +623,7 @@ System.out.println("Element 1 at index 0: " + anArray[0]);
 System.out.println("Element 2 at index 1: " + anArray[1]);
 System.out.println("Element 3 at index 2: " + anArray[2]);
 </pre></div>
-<p>或者，您可以使用快捷语法来创建和初始化一个数组：</p>
+<p>或者，你可以使用快捷语法来创建和初始化一个数组：</p>
 <div class="codeblock"><pre>
 int[] anArray = { 
     100, 200, 300,
@@ -632,7 +632,7 @@ int[] anArray = {
 };
 </pre></div>
 <p>这里数组的长度由花括号之间提供用逗号分隔的值的数量决定。</p>
-<p>您还可以使用两组或更多组括号（如 <code>String[][] names</code>）声明数组的数组（也称为 <em>multidimensional（多维）</em> 数组）。因此，每个元素必须通过相应数量的索引值进行访问。</p>
+<p>你还可以使用两组或更多组括号（如 <code>String[][] names</code>）声明数组的数组（也称为 <em>multidimensional (多维)</em> 数组）。因此，每个元素必须通过相应数量的索引值进行访问。</p>
 
 <p>在 Java 编程语言中，多维数组是其组件本身就是数组的数组。这与 C 或 Fortran 中的数组不同。这样做的结果是允许行的长度变化，如下面的 <a class="SourceLink" target="_blank" href="examples/MultiDimArrayDemo.java" onclick="showCode('../../displayCode.html', 'examples/MultiDimArrayDemo.java'); return false;"><code>MultiDimArrayDemo</code></a> 程序所示：</p>
 
@@ -655,12 +655,12 @@ class MultiDimArrayDemo {
 Mr. Smith
 Ms. Jones
 </pre></div>
-<p>最后，您可以使用内置的 <code>length</code> 属性来确定任何数组的大小。以下代码将数组的大小打印到标准输出：</p>
+<p>最后，你可以使用内置的 <code>length</code> 属性来确定任何数组的大小。以下代码将数组的大小打印到标准输出：</p>
 <div class="codeblock"><pre>
  System.out.println(anArray.length);
 </pre></div>
 <h2>复制数组</h2>
-<p><code>System</code> 类有一个 <code>arraycopy</code> 方法，您可以使用该方法将数据从一个数组有效地复制到另一个数组中：</p>
+<p><code>System</code> 类有一个 <code>arraycopy</code> 方法，你可以使用该方法将数据从一个数组有效地复制到另一个数组中：</p>
 <div class="codeblock"><pre>
 public static void arraycopy(Object src, int srcPos,
                              Object dest, int destPos, int length)
@@ -686,7 +686,7 @@ caffein
 </pre></div>
 <h2>数组操作</h2>
 <p>数组是编程中使用的一个强大且有用的概念。Java SE 提供了执行与数组相关的一些最常见操作的方法。例如，<a class="SourceLink" target="_blank" href="examples/ArrayCopyDemo.java" onclick="showCode('../../displayCode.html', 'examples/ArrayCopyDemo.java'); return false;"><code>ArrayCopyDemo</code></a> 示例使用 <code>System</code> 类的 <code>arraycopy</code> 方法而不是手动迭代元素源数组并将每个放入目标数组中。这是在幕后执行的，使开发人员只需使用一行代码即可调用该方法。</p>
-<p>为了您的方便，Java SE 提供了几种在 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html"><code>java.util.Arrays</code></a> 类中执行数组操作(常见任务，如复制，排序和搜索数组)的方法。例如，前面的示例可以修改为使用 <code>java.util.Arrays</code> 类的 <code>copyOfRange</code> 方法，如您在 <a class="SourceLink" target="_blank" href="examples/ArrayCopyOfDemo.java" onclick="showCode('../../displayCode.html', 'examples/ArrayCopyOfDemo.java'); return false;"><code>ArrayCopyOfDemo</code></a> 例子中所见。区别在于使用 <code>copyOfRange</code> 方法不需要您在调用方法之前创建目标数组，因为目标数组是由方法返回的：</p>
+<p>为了你的方便，Java SE 提供了几种在 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html"><code>java.util.Arrays</code></a> 类中执行数组操作(常见任务，如复制，排序和搜索数组)的方法。例如，前面的示例可以修改为使用 <code>java.util.Arrays</code> 类的 <code>copyOfRange</code> 方法，如你在 <a class="SourceLink" target="_blank" href="examples/ArrayCopyOfDemo.java" onclick="showCode('../../displayCode.html', 'examples/ArrayCopyOfDemo.java'); return false;"><code>ArrayCopyOfDemo</code></a> 例子中所见。区别在于使用 <code>copyOfRange</code> 方法不需要你在调用方法之前创建目标数组，因为目标数组是由方法返回的：</p>
 <div class="codeblock"><pre>
 
 class ArrayCopyOfDemo {
@@ -702,7 +702,7 @@ class ArrayCopyOfDemo {
 }
 </pre></div>
 
-<p>正如你所看到的，这个程序的输出是相同的(<code>caffein</code>)，尽管它需要更少的代码。请注意，<code>copyOfRange</code> 方法的第二个参数是要复制的范围的初始索引（包含），而第三个参数是要复制的范围的最终索引，<em>不包含</em>。在此示例中，要复制的范围不包括索引为 9 的数组元素(其中包含字符 <code>a</code>)。</p>
+<p>正如你所看到的，这个程序的输出是相同的(<code>caffein</code>)，尽管它需要更少的代码。请注意，<code>copyOfRange</code> 方法的第二个参数是要复制的范围的初始索引（包含），而第三个参数是要复制的范围的最终索引（<em>不包含</em>）。在此示例中，要复制的范围不包括索引为 9 的数组元素(其中包含字符 <code>a</code>)。</p>
 
 <p>由 <code>java.util.Arrays</code> 类中的方法提供的一些其他有用的操作有：</p>
 <ul>

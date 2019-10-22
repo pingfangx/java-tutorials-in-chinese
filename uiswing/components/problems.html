@@ -525,7 +525,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">使用 Swing 组件</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="border.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../QandE/questions-ch3.html">Next&nbsp;»</a>
+                <a target="_top" href="border.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../QandE/questions-ch3.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>解决常见的组件问题</h1></div>
@@ -543,58 +543,58 @@ the following sections:</p>
 <li>
 <a class="TutorialLink" target="_top" href="../painting/problems.html">解决常见的绘画问题</a></li>
 </ul>
-<p><strong>Problem:</strong> I am having trouble implementing a model (or some other code that is similar to something already in Java SE Platform, Standard Edition).</p>
+<p><strong>Problem:</strong>I am having trouble implementing a model (or some other code that is similar to something already in Java SE Platform, Standard Edition).</p>
 <ul>
 <li>Look at the Java SE source code. It is distributed with the JDK, and it is a great resource for finding code examples of implementing models, firing events, and the like.</li>
 </ul>
-<p><strong>Problem:</strong> Whenever the text in my text field updates, the text field's size changes.</p>
+<p><strong>Problem:</strong>Whenever the text in my text field updates, the text field's size changes.</p>
 <ul>
 <li>You should specify the preferred width of the text field by specifying the number of columns it should have room to display. To do this, you can use either an <code>int</code> argument to the <code>JTextField</code> constructor or the <code>setColumns</code> method.</li>
 </ul>
-<p><strong>Problem:</strong> Certain areas of the content pane look weird when they are repainted.</p>
+<p><strong>Problem:</strong>Certain areas of the content pane look weird when they are repainted.</p>
 <ul>
 <li>If you set the content pane, make sure it is opaque. You can do this by invoking <code>setOpaque(true)</code> on your content pane. Note that although <code>JPanel</code>s are opaque in most look and feels, that is not true in the GTK+ look and feel. See <a href="toplevel.html#contentpane">Adding Components to the Content Pane</a> for details.</li>
 <li>If one or more of your components performs custom painting, make sure you implemented it correctly. See 
 <a class="TutorialLink" target="_top" href="../painting/problems.html">Solving Common Painting Problems</a> for help.</li>
 <li>You might have a thread safety problem. See the next entry.</li>
 </ul>
-<p><strong>Problem:</strong> My program is exhibiting weird symptoms that sometimes seem to be related to timing.</p>
+<p><strong>Problem:</strong>My program is exhibiting weird symptoms that sometimes seem to be related to timing.</p>
 <ul>
 <li>Make sure your code is thread-safe. See 
 <a class="TutorialLink" target="_top" href="../concurrency/index.html">Concurrency in Swing</a> for details.</li>
 </ul>
  
-<p><strong>Problem:</strong> My modal dialog gets lost behind other windows.</p>
+<p><strong>Problem:</strong>My modal dialog gets lost behind other windows.</p>
 <ul>
 <li>If the dialog has a null parent component, try setting it to a valid frame or component when you create it.</li>
 <li>This bug was fixed in the 6.0 release. For more information, see 
 <a class="OutsideLink" target="_blank" href="http://bugs.java.com/bugdatabase/view_bug.do?bug_id=4255200">4255200</a>.</li>
 </ul>
-<p><strong>Problem:</strong> The scroll bar policies do not seem to be working as advertised.</p>
+<p><strong>Problem:</strong>The scroll bar policies do not seem to be working as advertised.</p>
 <ul>
 <li>Some Swing releases contain bugs in the implementations for the <code>VERTICAL_SCROLLBAR_AS_NEEDED</code> and the <code>HORIZONTAL_SCROLLBAR_AS_NEEDED</code> policies. If feasible for your project, use the most recent release of Swing.</li>
 <li>If the scroll pane's client can change size dynamically, the program should set the client's preferred size and then call <code>revalidate</code> on the client.</li>
 <li>Make sure you specified the policy you intended for the orientation you intended.</li>
 </ul>
-<p><strong>Problem:</strong> My scroll pane has no scroll bars.</p>
+<p><strong>Problem:</strong>My scroll pane has no scroll bars.</p>
 <ul>
 <li>If you want a scroll bar to appear all the time, specify either <code>VERTICAL_SCROLLBAR_ALWAYS</code> or <code>HORIZONTAL_SCROLLBAR_ALWAYS</code> for the scroll bar policy as appropriate.</li>
 <li>If you want the scroll bars to appear as needed, and you want to force the scroll bars to be needed when the scroll pane is created, you have two choices: either set the preferred size of scroll pane or its container, or implement a scroll-savvy class and return a value smaller than the component's standard preferred size from the <code>getPreferredScrollableViewportSize</code> method. Refer to <a href="scrollpane.html#sizing">Sizing a Scroll Pane</a> for information.</li>
 </ul>
-<p><strong>Problem:</strong> The divider in my split pane does not move!</p>
+<p><strong>Problem:</strong>The divider in my split pane does not move!</p>
 <ul>
 <li>You need to set the minimum size of at least one of the components in the split pane. Refer to <a href="splitpane.html#divider">Positioning the Divider and Restricting Its Range</a> for information.</li>
 </ul>
-<p><strong>Problem:</strong> The <code>setDividerLocation</code> method of <code>JSplitPane</code> does not work.</p>
+<p><strong>Problem:</strong>The <code>setDividerLocation</code> method of <code>JSplitPane</code> does not work.</p>
 <ul>
 <li>The <code>setDividerLocation(double)</code> method has no effect if the split pane has no size (typically true if it is not onscreen yet). You can either use <code>setDividerLocation(int)</code> or specify the preferred sizes of the split pane's contained components and the split pane's resize weight instead. Refer to <a href="splitpane.html#divider">Positioning the Divider and Restricting Its Range</a> for information.</li>
 </ul>
-<p><a name="nestedborders" id="nestedborders"><strong>Problem:</strong> The borders on nested split panes look too wide.</a></p>
+<p><a name="nestedborders" id="nestedborders"><strong>Problem:</strong>The borders on nested split panes look too wide.</a></p>
 <ul>
 <li>If you nest split panes, the borders accumulate  the border of the inner split panes display next to the border of the outer split pane causing borders that look extra wide. The problem is particularly noticeable when nesting many split panes. The workaround is to set the border to null on any split pane that is placed within another split pane. For information, see bug # 
 <a class="OutsideLink" target="_blank" href="http://bugs.java.com/bugdatabase/view_bug.do?bug_id=4131528">4131528</a> in the Java Bug Database.</li>
 </ul>
-<p><strong>Problem:</strong> The buttons in my tool bar are too big.</p>
+<p><strong>Problem:</strong>The buttons in my tool bar are too big.</p>
 <ul>
 <li>Try reducing the margin for the buttons. 例如：
 <div class="codeblock"><pre>
@@ -610,7 +610,7 @@ button.setMargin(new Insets(0,0,0,0));
 to<br />
 <code>layeredPane.add(label, <strong>i</strong>);</code>.</li>
 </ul>
-<p><strong>Problem:</strong> The method call <code><em>colorChooser</em>.setPreviewPanel(null)</code> does not remove the color chooser's preview panel as expected.</p>
+<p><strong>Problem:</strong>The method call <code><em>colorChooser</em>.setPreviewPanel(null)</code> does not remove the color chooser's preview panel as expected.</p>
 <ul>
 <li>A <code>null</code> argument specifies the default preview panel. To remove the preview panel, specify a standard panel with no size, like this: <code><em>colorChooser</em>.setPreviewPanel(new JPanel());</code></li>
 </ul>

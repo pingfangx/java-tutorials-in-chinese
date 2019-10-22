@@ -492,7 +492,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">实现</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="map.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="deque.html">Next&nbsp;»</a>
+                <a target="_top" href="map.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="deque.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Queue 实现</h1></div>
@@ -502,26 +502,26 @@
 <h2>通用 Queue 实现</h2>
 <p>如前一节所述，<code>LinkedList</code> 实现 <code>Queue</code> 接口，为 <code>add</code> <code>poll</code> 等提供先进先出(FIFO)队列操作。</p>
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html"><code>PriorityQueue</code></a> 类是基于 <em>heap (堆)</em> 数据结构的优先级队列。此队列根据构造时指定的顺序对元素进行排序，这可以是元素的自然顺序或由显式 <code>Comparator</code> 强加的排序。</p>
-<p>队列获取操作 <code>poll</code>，<code>remove</code>，<code>peek</code> 和 <code>element</code> 访问队列头部的元素。<em>队列的头</em> 是关于指定排序的最小元素。如果多个元素被绑定为最小值，则头部是这些元素之一；关系被任意打破。</p>
+<p>队列获取操作  <code>poll</code>，<code>remove</code>，<code>peek</code> 和 <code>element</code>  访问队列头部的元素。<em>队列的头</em> 是关于指定排序的最小元素。如果多个元素被绑定为最小值，则头部是这些元素之一；关系被任意打破。</p>
 <p><code>PriorityQueue</code> 及其迭代器实现 <code>Collection</code> 和 <code>Iterator</code> 接口的所有可选方法。方法 <code>iterator</code> 中提供的迭代器不保证以任何特定顺序遍历 <code>PriorityQueue</code> 的元素。对于有序遍历，请考虑使用 <code>Arrays.sort(pq.toArray())</code>。</p>
 <h2>并发 Queue 实现</h2>
 <p><code>java.util.concurrent</code> 包中包含一组同步的 <code>Queue</code> 接口和类。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/BlockingQueue.html"><code>BlockingQueue</code></a> 继承 <code>Queue</code>，其操作在获取元素时等待队列变为非空，并且在存储元素时等待队列的空间可用。此接口由以下类实现：</p>
 <ul>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedBlockingQueue.html"><code>LinkedBlockingQueue</code></a>由链接节点支持的可选有界 FIFO 阻塞队列</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedBlockingQueue.html"><code>LinkedBlockingQueue</code></a>    由链接节点支持的可选有界 FIFO 阻塞队列</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ArrayBlockingQueue.html"><code>ArrayBlockingQueue</code></a>由数组支持的有界 FIFO 阻塞队列</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ArrayBlockingQueue.html"><code>ArrayBlockingQueue</code></a>  由数组支持的有界 FIFO 阻塞队列</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/PriorityBlockingQueue.html"><code>PriorityBlockingQueue</code></a>由堆支持的无界阻塞优先级队列</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/PriorityBlockingQueue.html"><code>PriorityBlockingQueue</code></a>  由堆支持的无界阻塞优先级队列</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/DelayQueue.html"><code>DelayQueue</code></a>由堆支持的基于时间的调度队列</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/DelayQueue.html"><code>DelayQueue</code></a>  由堆支持的基于时间的调度队列</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/SynchronousQueue.html"><code>SynchronousQueue</code></a>一个简单的集合点机制，它使用 <code>BlockingQueue</code> 接口</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/SynchronousQueue.html"><code>SynchronousQueue</code></a>  一个简单的集合点机制，它使用 <code>BlockingQueue</code> 接口</li>
 </ul>
 <p>在 JDK 7 中，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TransferQueue.html"><code>TransferQueue</code></a> 是一个专用的 <code>BlockingQueue</code>，其中向队列添加元素的代码可以选择等待(阻塞)代码在另一个线程中获取元素。<code>TransferQueue</code> 只有一个实现：</p>
 <ul>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedTransferQueue.html"><code>LinkedTransferQueue</code></a>基于链接节点的无界 <code>TransferQueue</code></li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedTransferQueue.html"><code>LinkedTransferQueue</code></a>  基于链接节点的无界 <code>TransferQueue</code></li>
 </ul>
 
 

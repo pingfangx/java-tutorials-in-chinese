@@ -492,7 +492,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">实现</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="set.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="map.html">Next&nbsp;»</a>
+                <a target="_top" href="set.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="map.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>List 实现</h1></div>
@@ -500,14 +500,14 @@
 
 <p><code>List</code> 实现分为通用和专用实现。</p>
 <h2>通用 List 实现</h2>
-<p>有两个通用的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html"><code>List</code></a> 实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html"><code>ArrayList</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html"><code>LinkedList</code></a>。大多数情况下，您可能会使用 <code>ArrayList</code>，它提供了恒定时间的位置访问，而且速度非常快。它不必为 <code>List</code> 中的每个元素分配节点对象，并且当它必须同时移动多个元素时，它可以利用 <code>System.arraycopy</code> 的优点。将 <code>ArrayList</code> 视为 <code>Vector</code> 而没有同步开销。</p>
-<p>如果经常将元素添加到 <code>List</code> 的开头或迭代 <code>List</code> 以从其内部删除元素，则应考虑使用 <code>LinkedList</code>。这些操作需要 <code>LinkedList</code> 中的常量时间和 <code>ArrayList</code> 中的线性时间。但是您的性能要付出很大的代价。位置访问需要 <code>LinkedList</code> 中的线性时间和 <code>ArrayList</code> 中的常量时间。此外，<code>LinkedList</code> 的常数因子要差得多。如果您认为要使用 <code>LinkedList</code>，请在做出选择之前使用 <code>LinkedList</code> 和 <code>ArrayList</code> 来衡量应用程序的性能；<code>ArrayList</code> 通常更快。</p>
-<p><code>ArrayList</code> 有一个调整参数 <em>initial capacity (初始容量)</em>，指的是 <code>ArrayList</code> 在必须增长之前可以容纳的元素数。<code>LinkedList</code> 没有调整参数，有七个可选操作，其中一个是 <code>clone</code>。其他六个是 <code>addFirst</code>，<code>getFirst</code>，<code>removeFirst</code>，<code>addLast</code>，<code>getLast</code>，以及 <code>removeLast</code>。<code>LinkedList</code> 还实现了 <code>Queue</code> 接口。</p>
+<p>有两个通用的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html"><code>List</code></a> 实现  <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html"><code>ArrayList</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html"><code>LinkedList</code></a>。大多数情况下，你可能会使用 <code>ArrayList</code>，它提供了常量时间的位置访问，而且速度非常快。它不必为 <code>List</code> 中的每个元素分配节点对象，并且当它必须同时移动多个元素时，它可以利用 <code>System.arraycopy</code> 的优点。将 <code>ArrayList</code> 视为 <code>Vector</code> 而没有同步开销。</p>
+<p>如果经常将元素添加到 <code>List</code> 的开头或迭代 <code>List</code> 以从其内部删除元素，则应考虑使用 <code>LinkedList</code>。这些操作需要 <code>LinkedList</code> 中的常量时间和 <code>ArrayList</code> 中的线性时间。但是你的性能要付出很大的代价。位置访问需要 <code>LinkedList</code> 中的线性时间和 <code>ArrayList</code> 中的常量时间。此外，<code>LinkedList</code> 的常数因子要差得多。如果你认为要使用 <code>LinkedList</code>，请在做出选择之前使用 <code>LinkedList</code> 和 <code>ArrayList</code> 来衡量应用程序的性能；<code>ArrayList</code> 通常更快。</p>
+<p><code>ArrayList</code> 有一个调整参数  <em>initial capacity (初始容量)</em>，指的是 <code>ArrayList</code> 在必须增长之前可以容纳的元素数。<code>LinkedList</code> 没有调整参数，有七个可选操作，其中一个是 <code>clone</code>。其他六个是 <code>addFirst</code>，<code>getFirst</code>，<code>removeFirst</code>，<code>addLast</code>，<code>getLast</code>，以及 <code>removeLast</code>。<code>LinkedList</code> 还实现了 <code>Queue</code> 接口。</p>
 <h2>专用 List 实现</h2>
 <p>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArrayList.html"><code>CopyOnWriteArrayList</code></a>是由写时复制数组支持的 <code>List</code> 实现。此实现在本质上类似于 <code>CopyOnWriteArraySet</code>。即使在迭代期间也不需要同步，并且保证迭代器永远不会抛出 <code>ConcurrentModificationException</code>。此实现非常适合维护事件处理程序列表，其中更改很少发生，并且遍历频繁且可能耗时。</p>
-<p>如果需要同步，<code>Vector</code> 将比用 <code>Collections.synchronizedList</code> 同步的 <code>ArrayList</code> 稍快。但是 <code>Vector</code> 有大量的遗留操作，所以要小心总是使用 <code>List</code> 接口操作 <code>Vector</code>，否则您以后可能将无法替换实现。</p>
-<p>如果您的 <code>List</code> 的大小是固定的也就是说，您永远不会使用 <code>remove</code>，<code>add</code>，或 <code>containsAll</code> 以外的任何批量操作您有第三个选择，绝对值得考虑。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="convenience.html">Convenience Implementations</a> 部分中的 <code>Arrays.asList</code>。</p>
+<p>如果需要同步，<code>Vector</code> 将比用 <code>Collections.synchronizedList</code> 同步的 <code>ArrayList</code> 稍快。但是 <code>Vector</code> 有大量的遗留操作，所以要小心总是使用 <code>List</code> 接口操作 <code>Vector</code>，否则你以后可能将无法替换实现。</p>
+<p>如果你的 <code>List</code> 的大小是固定的  也就是说，你永远不会使用 <code>remove</code>，<code>add</code>，或 <code>containsAll</code> 以外的任何批量操作  你有第三个选择，绝对值得考虑。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="convenience.html">Convenience Implementations</a> 部分中的 <code>Arrays.asList</code>。</p>
 
         </div>
         <div class="NavBit">

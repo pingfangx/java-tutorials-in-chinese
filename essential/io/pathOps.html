@@ -516,14 +516,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="pathClass.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="fileOps.html">Next&nbsp;»</a>
+                <a target="_top" href="pathClass.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="fileOps.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>路径操作</h1></div>
             <div id="PageContent"><!-- Path Operations -->
 
 
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html"><code>Path</code></a> 类包括各种方法，可用于获取有关路径的信息，访问路径元素，将路径转换为其他形式或提取路径部分。还存在用于匹配路径字符串的方法和用于去除路径中的冗余的方法。本课程介绍了这些 <code>Path</code> 方法，有时也称为 <em>syntactic</em> 操作，因为它们在路径上运行，不访问文件系统。</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html"><code>Path</code></a> 类包括各种方法，可用于获取有关路径的信息，访问路径元素，将路径转换为其他形式或提取路径部分。还存在用于匹配路径字符串的方法和用于去除路径中的冗余的方法。本课程介绍了这些 <code>Path</code> 方法，有时也称为 <em>syntactic (语法)</em> 操作，因为它们在路径上运行，不访问文件系统。</p>
 <p>本节包括以下内容：</p>
 <ul>
 <li><a href="#create">创建路径</a></li>
@@ -536,7 +536,7 @@
 </ul>
 <h2><a name="create" id="create">创建路径</a></h2>
 <p><code>Path</code> 实例包含用于指定文件或目录位置的信息。在定义时，<code>Path</code> 提供一系列一个或多个名称。可能包含根元素或文件名，但两者都不是必需的。<code>Path</code> 可能只包含一个目录或文件名。</p>
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html"><code>Paths</code></a> (请注意复数)中的以下 <code>get</code> 方法之一轻松创建 <code>Path</code> 对象助手类：</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html"><code>Paths</code></a> (请注意复数)助手类中的以下 <code>get</code> 方法之一轻松创建 <code>Path</code> 对象：</p>
 <div class="codeblock"><pre>
 Path p1 = Paths.get("/tmp/foo");
 Path p2 = Paths.get(args[0]);
@@ -546,12 +546,12 @@ Path p3 = Paths.get(URI.create("file:///Users/joe/FileTest.java"));
 <div class="codeblock"><pre>
 Path p4 = FileSystems.getDefault().getPath("/users/sally");
 </pre></div>
-<p>下面的示例创建 <code>/u/joe/logs/foo.log</code> 假设您的主目录是 <code>/u/joe</code>，或 <code>C:\joe\logs\foo.log</code> 如果您在 Windows 上。</p>
+<p>下面的示例创建 <code>/u/joe/logs/foo.log</code> 假设你的主目录是 <code>/u/joe</code>，或 <code>C:\joe\logs\foo.log</code> 如果你在 Windows 上。</p>
 <div class="codeblock"><pre>
 Path p5 = Paths.get(System.getProperty("user.home"),"logs", "foo.log");
 </pre></div>
 <h2><a name="info" id="info">获取有关路径的信息</a></h2>
-<p>您可以将 <code>Path</code> 视为将这些名称元素存储为序列。目录结构中的最高元素位于索引 0 处。目录结构中的最低元素位于索引 <code>[n-1]</code>，其中 <code>n</code> 是 <code>Path</code> 中的名称元素数。方法可用于使用这些索引获取单个元素或 <code>Path</code> 的子序列。</p>
+<p>你可以将 <code>Path</code> 视为将这些名称元素存储为序列。目录结构中的最高元素位于索引 0 处。目录结构中的最低元素位于索引 <code>[n-1]</code>，其中 <code>n</code> 是 <code>Path</code> 中的名称元素数。方法可用于使用这些索引获取单个元素或 <code>Path</code> 的子序列。</p>
 <p>本课中的示例使用以下目录结构。</p>
 <center><img src="../../figures/essential/io-dirStructure.gif" width="228" height="308" align="bottom" alt="示例目录结构" /></p><p class="FigureCaption"><center>示例目录结构</center></p></center><p>以下代码片段定义 <code>Path</code> 实例，然后调用多个方法以获取有关路径的信息：</p>
 <div class="codeblock"><pre>
@@ -677,7 +677,7 @@ cellspacing=" cellpadding="0">
 </tr>
 </table>
 <h2><a name="normal" id="normal">从路径中移除冗余</a></h2>
-<p>许多文件系统使用“.”符号表示当前目录，使用“..”表示父目录。您可能遇到 <code>Path</code> 包含冗余目录信息的情况。也许服务器配置为将其日志文件保存在“<code>/dir/logs/.</code>”目录中，并且您希望从路径中删除尾随的“<code>/.</code>”符号。</p>
+<p>许多文件系统使用“.”符号表示当前目录，使用“..”表示父目录。你可能遇到 <code>Path</code> 包含冗余目录信息的情况。也许服务器配置为将其日志文件保存在“<code>/dir/logs/.</code>”目录中，并且你希望从路径中删除尾随的“<code>/.</code>”符号。</p>
 <p>以下示例均包含冗余：</p>
 <div class="codeblock"><pre>
 /home/./joe/foo
@@ -687,7 +687,7 @@ cellspacing=" cellpadding="0">
 <p>重要的是要注意，<code>normalize</code> 在清理路径时不检查文件系统。这是一种纯粹的语法操作。在第二个示例中，如果 <code>sally</code> 是符号链接，则移除 <code>sally/..</code> 可能会导致 <code>Path</code> 不再定位目标文件。</p>
 <p>要在确保结果找到正确文件的同时清理路径，可以使用 <code>toRealPath</code> 方法。此方法将在下一节 <a class="TutorialLink" target="_top" href="#convert">Converting a Path</a> 中介绍。</p>
 <h2><a name="convert" id="convert">转换路径</a></h2>
-<p>您可以使用三种方法转换 <code>Path</code>。如果需要将路径转换为可以从浏览器打开的字符串，可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#toUri--"><code>toUri</code></a>。例如：</p>
+<p>你可以使用三种方法转换 <code>Path</code>。如果需要将路径转换为可以从浏览器打开的字符串，可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#toUri--"><code>toUri</code></a>。例如：</p>
 <div class="codeblock"><pre>
 Path p1 = Paths.get("/home/logfile");
 // Result is <strong>file:///home/logfile</strong>
@@ -730,7 +730,7 @@ public class FileTest {
 <li>如果 <code>Path</code> 是相对的，则返回绝对路径。</li>
 <li>如果 <code>Path</code> 包含任何冗余元素，则返回移除了这些元素的路径。</li>
 </ul>
-<p>如果文件不存在或无法访问，则此方法将引发异常。当您想要处理任何这些情况时，您可以捕获异常。例如：</p>
+<p>如果文件不存在或无法访问，则此方法将引发异常。当你想要处理任何这些情况时，你可以捕获异常。例如：</p>
 <div class="codeblock"><pre>
 try {
     Path fp = path.toRealPath();
@@ -743,7 +743,7 @@ try {
 }
 </pre></div>
 <h2><a name="resolve" id="resolve">连接两条路径</a></h2>
-<p>您可以使用 <code>resolve</code> 方法组合路径。传入 <em>partial path</em>，这是一个不包含根元素的路径，并且该部分路径将附加到原始路径。</p>
+<p>你可以使用 <code>resolve</code> 方法组合路径。传入 <em>partial path</em>，这是一个不包含根元素的路径，并且该部分路径将附加到原始路径。</p>
 <p>例如，请考虑以下代码段：</p>
 <div class="codeblock"><pre>
 // Solaris
@@ -764,13 +764,13 @@ System.out.format("%s%n", p1.resolve("bar"));
 Paths.get("foo").resolve("/home/joe");
 </pre></div>
 <h2><a name="relativize" id="relativize">在两条路径之间创建路径</a></h2>
-<p>编写文件 I/O 代码时的一个常见要求是能够构建从文件系统中的一个位置到另一个位置的路径。您可以使用 <code>relativize</code> 方法来满足此要求。此方法构造一个源自原始路径并在传入路径指定的位置结束的路径。新路径 <em>relative</em> 到原始路径。</p>
+<p>编写文件 I/O 代码时的一个常见要求是能够构建从文件系统中的一个位置到另一个位置的路径。你可以使用 <code>relativize</code> 方法来满足此要求。此方法构造一个源自原始路径并在传入路径指定的位置结束的路径。新路径 <em>relative (相对)</em> 到原始路径。</p>
 <p>例如，考虑定义为 <code>joe</code> 和 <code>sally</code> 的两个相对路径：</p>
 <div class="codeblock"><pre>
 Path p1 = Paths.get("joe");
 Path p2 = Paths.get("sally");
 </pre></div>
-<p>在没有任何其他信息的情况下，假设 <code>joe</code> 和 <code>sally</code> 是兄弟，意味着位于树结构中的同一级别的节点。要从 <code>joe</code> 导航到 <code>sally</code>，您可能希望先将一个级别导航到父节点，然后再导航到 <code>sally</code>：</p>
+<p>在没有任何其他信息的情况下，假设 <code>joe</code> 和 <code>sally</code> 是兄弟，意味着位于树结构中的同一级别的节点。要从 <code>joe</code> 导航到 <code>sally</code>，你可能希望先将一个级别导航到父节点，然后再导航到 <code>sally</code>：</p>
 <div class="codeblock"><pre>
 // Result is <strong>../sally</strong>
 Path p1_to_p2 = p1.relativize(p2);
@@ -790,7 +790,7 @@ Path p3_to_p1 = p3.relativize(p1);
 <p>如果只有一个路径包含根元素，则不能构造相对路径。如果两个路径都包含根元素，则构造相对路径的能力取决于系统。</p>
 <p>递归 <a class="SourceLink" target="_blank" href="examples/Copy.java" onclick="showCode('../../displayCode.html', 'examples/Copy.java'); return false;"><code><code>Copy</code></code></a> 示例使用 <code>relativize</code> 和 <code>resolve</code> 方法。</p>
 <h2><a name="compare" id="compare">比较两条路径</a></h2>
-<p><code>Path</code> 类支持 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#equals-java.lang.Object-"><code>equals</code></a>，使您可以测试两条路径是否相等。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#startsWith-java.nio.file.Path-"><code>startsWith</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#endsWith-java.nio.file.Path-"><code>endsWith</code></a> 方法使您能够测试路径是以特定字符串开头还是结尾。这些方法易于使用。例如：</p>
+<p><code>Path</code> 类支持 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#equals-java.lang.Object-"><code>equals</code></a>，使你可以测试两条路径是否相等。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#startsWith-java.nio.file.Path-"><code>startsWith</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#endsWith-java.nio.file.Path-"><code>endsWith</code></a> 方法使你能够测试路径是以特定字符串开头还是结尾。这些方法易于使用。例如：</p>
 <div class="codeblock"><pre>
 Path path = ...;
 Path otherPath = ...;
@@ -805,15 +805,15 @@ if (path.equals(otherPath)) {
     // <em>path ends with "foo"</em>
 }
 </pre></div>
-<p><code>Path</code> 类实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html"><code>Iterable</code></a> 接口。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#iterator--"><code>iterator</code></a> 方法返回一个对象，使您可以迭代路径中的名称元素。返回的第一个元素是最接近目录树中的根的元素。以下代码片段遍历路径，打印每个名称元素：</p>
+<p><code>Path</code> 类实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html"><code>Iterable</code></a> 接口。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#iterator--"><code>iterator</code></a> 方法返回一个对象，使你可以迭代路径中的名称元素。返回的第一个元素是最接近目录树中的根的元素。以下代码片段遍历路径，打印每个名称元素：</p>
 <div class="codeblock"><pre>
 Path path = ...;
 for (Path name: path) {
     System.out.println(name);
 }
 </pre></div>
-<p><code>Path</code> 类还实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html"><code>Comparable</code></a> 接口。您可以使用 <code>compareTo</code> 比较 <code>Path</code> 对象，这对排序很有用。</p>
-<p>您还可以将 <code>Path</code> 对象放入 <code>Collection</code>。有关此强大功能的详细信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/index.html">Collections</a> 路径。</p>
+<p><code>Path</code> 类还实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html"><code>Comparable</code></a> 接口。你可以使用 <code>compareTo</code> 比较 <code>Path</code> 对象，这对排序很有用。</p>
+<p>你还可以将 <code>Path</code> 对象放入 <code>Collection</code>。有关此强大功能的详细信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/index.html">Collections</a> 路径。</p>
 <p>如果要验证两个 <code>Path</code> 对象是否定位同一文件，可以使用 <code>isSameFile</code> 方法，如 <a class="TutorialLink" target="_top" href="check.html#same">Checking Whether Two Paths Locate the Same File</a>。</p>
 
 

@@ -515,7 +515,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="fileAttr.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="rafs.html">Next&nbsp;»</a>
+                <a target="_top" href="fileAttr.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="rafs.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>读取、写入和创建文件</h1></div>
@@ -524,7 +524,7 @@
 
 <p>本页讨论读取、写入、创建和打开文件的详细信息。有多种文件 I/O 方法可供选择。为了帮助理解 API，下图按复杂性排列文件 I/O 方法。</p>
 <center><img src="../../figures/essential/io-fileiomethods.gif" width="455" height="236" align="bottom" alt="使用从最不复杂(在左侧)到最复杂(在右侧)排列的文件 I/O 方法的线条图。" /></p><p class="FigureCaption"><center>文件 I/O 方法从较简单到最复杂排列</center></p></center><p>图的最左侧是实用方法 <code>readAllBytes</code>，<code>readAllLines</code> 和 <code>write</code> 方法，专为简单的常见情况而设计。在这些方法的右侧是用于迭代一行或多行文本的方法，例如 <code>newBufferedReader</code>，<code>newBufferedWriter</code>，然后 <code>newInputStream</code> 和 <code>newOutputStream</code>。这些方法可与 <code>java.io</code> 包互操作。在这些方法的右边是处理 <code>ByteChannels</code>，<code>SeekableByteChannels</code> 和 <code>ByteBuffers</code> 的方法，例如 <code>newByteChannel</code> 方法。最后，最右边是使用 <code>FileChannel</code> 的方法，用于需要文件锁定或内存映射 I/O 的高级应用程序。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;创建新文件的方法使您可以为文件指定一组可选的初始属性。例如，在支持 POSIX 标准集(例如 UNIX)的文件系统上，您可以在创建文件时指定文件所有者，组所有者或文件权限。<a class="TutorialLink" target="_top" href="fileAttr.html">Managing Metadata</a> 页面解释了文件属性以及如何访问和设置它们。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;创建新文件的方法使你可以为文件指定一组可选的初始属性。例如，在支持 POSIX 标准集(例如 UNIX)的文件系统上，你可以在创建文件时指定文件所有者，组所有者或文件权限。<a class="TutorialLink" target="_top" href="fileAttr.html">Managing Metadata</a> 页面解释了文件属性以及如何访问和设置它们。
 <hr /></div>
 <p>此页面包含以下主题：</p>
 <ul>
@@ -537,7 +537,7 @@
 </ul>
 <hr />
 <h2><a name="openOptions" id="openOptions"><code>OpenOptions</code> 参数</a></h2>
-<p>本节中的几个方法采用可选的 <code>OpenOptions</code> 参数。此参数是可选的，API 会告诉您在未指定此参数时该方法的默认行为。</p>
+<p>本节中的几个方法采用可选的 <code>OpenOptions</code> 参数。此参数是可选的，API 会告诉你在未指定此参数时该方法的默认行为。</p>
 <p>支持以下 <code>StandardOpenOptions</code> 枚举：</p>
 <ul>
 <li><code>WRITE</code>  - 打开文件以进行写访问。</li>
@@ -553,14 +553,14 @@
 <hr />
 <h2><a name="common" id="common">小文件的常用方法</a></h2>
 <h3><a name="readAllLines" id="readAllLines">从文件中读取所有字节或行</a></h3>
-<p>如果您有一个小文件并且想要一次读取它的全部内容，您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllBytes-java.nio.file.Path-"><code>readAllBytes(Path)</code></a> 或 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllLines-java.nio.file.Path-java.nio.charset.Charset-"><code>readAllLines(Path, Charset)</code></a> 方法。这些方法可以为您完成大部分工作，例如打开和关闭流，但不用于处理大型文件。以下代码显示了如何使用 <code>readAllBytes</code> 方法：</p>
+<p>如果你有一个小文件并且想要一次读取它的全部内容，你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllBytes-java.nio.file.Path-"><code>readAllBytes(Path)</code></a> 或 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllLines-java.nio.file.Path-java.nio.charset.Charset-"><code>readAllLines(Path, Charset)</code></a> 方法。这些方法可以为你完成大部分工作，例如打开和关闭流，但不用于处理大型文件。以下代码显示了如何使用 <code>readAllBytes</code> 方法：</p>
 <div class="codeblock"><pre>
 Path file = ...;
 byte[] fileArray;
 fileArray = Files.readAllBytes(file);
 </pre></div>
 <h3><a name="writeAllLines" id="writeAllLines">将所有字节或行写入文件</a></h3>
-<p>您可以使用其中一种写入方法将字节或行写入文件。</p>
+<p>你可以使用其中一种写入方法将字节或行写入文件。</p>
 <ul>
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#write-java.nio.file.Path-byte:A-java.nio.file.OpenOption...-"><code>write(Path, byte[], OpenOption...)</code></a></li>
@@ -578,7 +578,7 @@ Files.write(file, buf);
 <h2><a name="textfiles" id="textfiles">文本文件的缓冲 I/O 方法</a></h2>
 <p><code>java.nio.file</code> 包支持通道 I/O，它可以在缓冲区中移动数据，绕过一些可能会阻塞流 I/O 的层。</p>
 <h3><a name="readBufferedStream" id="readBufferedStream">使用缓冲流 I/O 读取文件</a></h3>
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newBufferedReader-java.nio.file.Path-java.nio.charset.Charset-"><code>newBufferedReader(Path, Charset)</code></a> 方法打开一个文件进行读取，返回一个 <code>BufferedReader</code>，可用于从文件中读取文本。有效的方式。</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newBufferedReader-java.nio.file.Path-java.nio.charset.Charset-"><code>newBufferedReader(Path, Charset)</code></a> 方法打开一个文件进行读取，返回一个 <code>BufferedReader</code>，可用于以有效的方式从文件中读取文本。</p>
 <p>以下代码段显示了如何使用 <code>newBufferedReader</code> 方法从文件中读取。该文件以“US-ASCII”编码。</p>
 <div class="codeblock"><pre>
 Charset charset = Charset.forName("US-ASCII");
@@ -592,7 +592,7 @@ try (BufferedReader reader = Files.newBufferedReader(file, charset)) {
 }
 </pre></div>
 <h3><a name="writeBufferedStream" id="writeBufferedStream">使用缓冲流 I/O 写入文件</a></h3>
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newBufferedWriter-java.nio.file.Path-java.nio.charset.Charset-java.nio.file.OpenOption...-"><code>newBufferedWriter(Path, Charset, OpenOption...)</code></a> 方法使用 <code>BufferedWriter</code> 写入文件。</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newBufferedWriter-java.nio.file.Path-java.nio.charset.Charset-java.nio.file.OpenOption...-"><code>newBufferedWriter(Path, Charset, OpenOption...)</code></a> 方法使用 <code>BufferedWriter</code> 写入文件。</p>
 <p>以下代码段显示了如何使用此方法创建以“US-ASCII”编码的文件：</p>
 <div class="codeblock"><pre>
 Charset charset = Charset.forName("US-ASCII");
@@ -621,7 +621,7 @@ try (InputStream in = Files.newInputStream(file);
 }
 </pre></div>
 <h3><a name="createStream" id="createStream">使用流 I/O 创建和写入文件</a></h3>
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newOutputStream-java.nio.file.Path-java.nio.file.OpenOption...-"><code>newOutputStream(Path, OpenOption...)</code></a> 方法创建文件，附加到文件或写入文件。此方法打开或创建用于写入字节的文件，并返回无缓冲的输出流。</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newOutputStream-java.nio.file.Path-java.nio.file.OpenOption...-"><code>newOutputStream(Path, OpenOption...)</code></a> 方法创建文件，附加到文件或写入文件。此方法打开或创建用于写入字节的文件，并返回无缓冲的输出流。</p>
 <p>该方法采用可选的 <code>OpenOption</code> 参数。如果未指定打开选项，并且该文件不存在，则会创建一个新文件。如果文件存在，则会被截断。此选项等效于使用 <code>CREATE</code> 和 <code>TRUNCATE_EXISTING</code> 选项调用方法。</p>
 <p>以下示例打开一个日志文件。如果该文件不存在，则创建该文件。如果该文件存在，则打开该文件以进行追加。</p>
 <div class="codeblock"><pre>
@@ -660,9 +660,9 @@ public class LogFileTest {
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newByteChannel-java.nio.file.Path-java.util.Set-java.nio.file.attribute.FileAttribute...-"><code>newByteChannel(Path, Set&lt;? extends OpenOption&gt;, FileAttribute&lt;?&gt;...)</code></a></li>
 </ul>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;<code>newByteChannel</code> 方法返回 <code>SeekableByteChannel</code> 的实例。使用默认文件系统，您可以将此可搜索字节通道转换为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/channels/FileChannel.html"><code>FileChannel</code></a>，从而提供对更高级功能的访问，例如将文件区域直接映射到内存中以便更快地访问，锁定文件的一个区域，以便其他进程无法访问它，或者从绝对位置读取和写入字节而不影响通道的当前位置。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<code>newByteChannel</code> 方法返回 <code>SeekableByteChannel</code> 的实例。使用默认文件系统，你可以将此可搜索字节通道转换为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/channels/FileChannel.html"><code>FileChannel</code></a>，从而提供对更高级功能的访问，例如将文件区域直接映射到内存中以便更快地访问，锁定文件的一个区域，以便其他进程无法访问它，或者从绝对位置读取和写入字节而不影响通道的当前位置。
 <hr /></div>
-<p>两种 <code>newByteChannel</code> 方法都允许您指定 <code>OpenOption</code> 选项的列表。支持使用与 <code>newOutputStream</code> 方法相同的 <a href="#openOptions">open options</a>：除此外还多一个选项，<code>READ</code> 是必需的，因为 <code>SeekableByteChannel</code> 支持读取和写入。</p>
+<p>两种 <code>newByteChannel</code> 方法都允许你指定 <code>OpenOption</code> 选项的列表。支持使用与 <code>newOutputStream</code> 方法相同的 <a href="#openOptions">open options</a>：除此外还多一个选项，<code>READ</code> 是必需的，因为 <code>SeekableByteChannel</code> 支持读取和写入。</p>
 <p>指定 <code>READ</code> 将打开要读取的通道。指定 <code>WRITE</code> 或 <code>APPEND</code> 将打开要写入的通道。如果未指定这些选项，则打开通道进行读取。</p>
 <p>以下代码段读取文件并将其打印到标准输出：</p>
 <div class="codeblock"><pre>
@@ -726,7 +726,7 @@ public class LogFilePermissionsTest {
 <hr />
 <h2><a name="creating" id="creating">创建常规和临时文件的方法</a></h2>
 <h3><a name="createFile" id="createFile">创建文件</a></h3>
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createFile-java.nio.file.Path-java.nio.file.attribute.FileAttribute...-"><code>createFile(Path, FileAttribute&lt;?&gt;)</code></a> 方法创建具有初始属性集的空文件。例如，如果在创建时希望文件具有特定的文件权限集，请使用 <code>createFile</code> 方法执行此操作。如果未指定任何属性，则使用默认属性创建文件。如果该文件已存在，<code>createFile</code> 将引发异常。</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createFile-java.nio.file.Path-java.nio.file.attribute.FileAttribute...-"><code>createFile(Path, FileAttribute&lt;?&gt;)</code></a> 方法创建具有初始属性集的空文件。例如，如果在创建时希望文件具有特定的文件权限集，请使用 <code>createFile</code> 方法执行此操作。如果未指定任何属性，则使用默认属性创建文件。如果该文件已存在，<code>createFile</code> 将引发异常。</p>
 <p>在单个原子操作中，<code>createFile</code> 方法检查文件是否存在，并使用指定的属性创建该文件，这使得该过程对恶意代码更安全。</p>
 <p>以下代码段创建一个具有默认属性的文件：</p>
 <div class="codeblock"><pre>
@@ -744,16 +744,16 @@ try {
 </pre></div>
 <p>
 <a class="TutorialLink" target="_top" href="fileAttr.html#posix">POSIX 文件权限</a>有一个示例，它使用 <code>createFile(Path, FileAttribute&lt;?&gt;)</code> 创建具有预设权限的文件。</p>
-<p>您还可以使用 <code>newOutputStream</code> 方法创建新文件，如 <a class="TutorialLink" target="_top" href="file.html#createStream">Creating and Writing a File using Stream I/O</a> 中所述。如果打开新输出流并立即关闭它，则会创建一个空文件。</p>
+<p>你还可以使用 <code>newOutputStream</code> 方法创建新文件，如 <a class="TutorialLink" target="_top" href="file.html#createStream">Creating and Writing a File using Stream I/O</a> 中所述。如果打开新输出流并立即关闭它，则会创建一个空文件。</p>
 <h3><a name="createTempFile" id="createTempFile">创建临时文件</a></h3>
-<p>您可以使用以下 <code>createTempFile</code> 方法之一创建临时文件：</p>
+<p>你可以使用以下 <code>createTempFile</code> 方法之一创建临时文件：</p>
 <ul>
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createTempFile-java.nio.file.Path-java.lang.String-java.lang.String-java.nio.file.attribute.FileAttribute...-"><code>createTempFile(Path, String, String, FileAttribute&lt;?&gt;)</code></a></li>
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createTempFile-java.lang.String-java.lang.String-java.nio.file.attribute.FileAttribute...-"><code>createTempFile(String, String, FileAttribute&lt;?&gt;)</code></a></li>
 </ul>
-<p>第一种方法允许代码指定临时文件的目录，第二种方法在默认临时文件目录中创建新文件。这两种方法都允许您为文件名指定后缀，第一种方法允许您指定前缀。以下代码段给出了第二种方法的示例：</p>
+<p>第一种方法允许代码指定临时文件的目录，第二种方法在默认临时文件目录中创建新文件。这两种方法都允许你为文件名指定后缀，第一种方法允许你指定前缀。（译注：根据文档和测试，两者都支持前缀、后缀，只是第一种支持指定目录）以下代码段给出了第二种方法的示例：</p>
 <div class="codeblock"><pre>
 try {
     Path tempFile = Files.createTempFile(null, ".myapp");

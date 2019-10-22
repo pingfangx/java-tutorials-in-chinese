@@ -514,7 +514,7 @@
                 <a href="../../../index.html" target="_top">主页</a>&gt;<a href="../../index.html" target="_top">必要类</a>&gt;<a href="../index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="../further.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../../environment/index.html">Next&nbsp;»</a>
+                <a target="_top" href="../further.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../../environment/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>问题和练习：并发</h1></div>
@@ -522,7 +522,7 @@
 
 <h2>问题</h2>
 <ol>
-<li>您能将 <code>Thread</code> 对象传递给 <code>Executor.execute</code> 吗？这样的调用会有意义吗？</li>
+<li>你能将 <code>Thread</code> 对象传递给 <code>Executor.execute</code> 吗？这样的调用会有意义吗？</li>
 </ol>
 <h2>练习</h2>
 <ol>
@@ -556,7 +556,7 @@ public class BadThreads {
     }
 }
 </pre></div>
-<p>应用程序应打印出“Mares do eat oat”。是否保证始终这样做？如果没有，为什么不呢？更改 <code>Sleep</code> 的两次调用的参数会有帮助吗？您如何保证在主线程中可以看到 <code>message</code> 的所有更改？</p>
+<p>应用程序应打印出“Mares do eat oat”。是否保证始终这样做？如果不是，为什么不是呢？更改 <code>Sleep</code> 的两次调用的参数会有帮助吗？你如何保证在主线程中可以看到 <code>message</code> 的所有更改？</p>
 </li>
 <li>修改 <a href="../guardmeth.html">Guarded Blocks</a> 中的 producer-consumer 示例以使用标准库类而不是 <code>Drop</code> 类。</li>
 </ol>

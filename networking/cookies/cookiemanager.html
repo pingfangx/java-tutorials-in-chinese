@@ -487,7 +487,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">使用 Cookie</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="cookiehandler.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="custom.html">Next&nbsp;»</a>
+                <a target="_top" href="cookiehandler.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="custom.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>默认 CookieManager</h1></div>
@@ -504,7 +504,7 @@ java.net.CookieHandler.setDefault(cm);
 <p>默认的 <code>CookieManager</code> 构造函数使用默认的 cookie 存储和接受策略创建新的 <code>CookieManager</code> 实例。<code>CookieStore</code> 是存储任何已接受的 HTTP Cookie 的地方。如果在创建时未指定，<code>CookieManager</code> 实例将使用内部内存实现。此实现不是持久性的，仅在 Java 虚拟机的生命周期内存在。需要持久存储的用户必须实现自己的存储。</p>
 <p><code>CookieManager</code> 使用的默认 Cookie 策略是 <code>CookiePolicy.ACCEPT_ORIGINAL_SERVER</code>，它只接受来自原始服务器的 Cookie。因此，来自服务器的 <code>Set-Cookie</code> 响应必须设置“domain”属性，并且必须与 URL 中的主机域匹配。有关更多信息，请参阅 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/HttpCookie.html#domainMatches-java.lang.String-java.lang.String-"><code>java.net.HttpCookie.domainMatches</code></a>。需要不同策略的用户必须实现 <code>CookiePolicy</code> 接口并将其传递给 <code>CookieManager</code> 构造函数，或者是使用 <code>setCookiePolicy(cookiePolicy)</code> 方法将其设置给已构造的 <code>CookieManager</code> 实例。</p>
 <p>从 cookie 存储区获取 cookie 时，<code>CookieManager</code> 还会强制执行 <a class="OutsideLink" target="_blank" href="http://www.ietf.org/rfc/rfc2965.txt">RFC 2965</a> 的 3.3.4 节中的路径匹配规则。因此，cookie 还必须设置其“path”属性，以便在从 cookie 存储中获取 cookie 之前应用路径匹配规则。</p>
-<p>总之，<code>CookieManager</code> 提供了处理 cookie 的框架，并为 <code>CookieStore</code> 提供了一个很好的默认实现。<code>CookieManager</code> 可以通过设置您自己的 <code>CookieStore</code>，<code>CookiePolicy</code> 或两者来实现高度自定义。</p>
+<p>总之，<code>CookieManager</code> 提供了处理 cookie 的框架，并为 <code>CookieStore</code> 提供了一个很好的默认实现。<code>CookieManager</code> 可以通过设置你自己的 <code>CookieStore</code>，<code>CookiePolicy</code> 或两者来实现高度自定义。</p>
 
 
         </div>

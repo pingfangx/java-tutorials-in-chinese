@@ -489,7 +489,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">介绍</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="steps.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../locale/index.html">Next&nbsp;»</a>
+                <a target="_top" href="steps.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../locale/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>清单</h1></div>
@@ -517,7 +517,7 @@
 <li>页面布局</li>
 </ul>
 <h2>隔离资源包中的可翻译文本</h2>
-<p>翻译费用昂贵。您可以通过隔离必须在 <code>ResourceBundle</code> 对象中翻译的文本来帮助降低成本。可翻译文本包括状态消息，错误消息，日志文件条目和 GUI 组件标签。该文本被硬编码到尚未国际化的程序中。您需要找到显示给终端用户的所有硬编码文本。例如，您应该像这样清理代码：</p>
+<p>翻译费用昂贵。你可以通过隔离必须在 <code>ResourceBundle</code> 对象中翻译的文本来帮助降低成本。可翻译文本包括状态消息，错误消息，日志文件条目和 GUI 组件标签。该文本被硬编码到尚未国际化的程序中。你需要找到显示给终端用户的所有硬编码文本。例如，你应该像这样清理代码：</p>
 <div class="codeblock"><pre>
 String buttonLabel = &quot;OK&quot;;
 // ...
@@ -531,9 +531,9 @@ Integer fileCount;
 // ...
 String diskStatus = "The disk contains " + fileCount.toString() + " files";
 </pre></div>
-<p>只要有可能，您应该避免构造复合消息，因为它们很难翻译。但是，如果您的应用程序需要复合消息，则可以使用 <a class="TutorialLink" target="_top" href="../format/messageintro.html">Messages</a> 部分中描述的技术处理它们。</p>
+<p>只要有可能，你应该避免构造复合消息，因为它们很难翻译。但是，如果你的应用程序需要复合消息，则可以使用 <a class="TutorialLink" target="_top" href="../format/messageintro.html">Messages</a> 部分中描述的技术处理它们。</p>
 <h2>格式化数字和货币</h2>
-<p>如果您的应用程序显示数字和货币，则必须以与语言环境无关的方式格式化它们。以下代码尚未国际化，因为它不会在所有国家/地区正确显示数字：</p>
+<p>如果你的应用程序显示数字和货币，则必须以与语言环境无关的方式格式化它们。以下代码尚未国际化，因为它不会在所有国家/地区正确显示数字：</p>
 <div class="codeblock"><pre>
 Double amount;
 TextField amountField;
@@ -541,9 +541,9 @@ TextField amountField;
 String displayAmount = amount.toString();
 amountField.setText(displayAmount);
 </pre></div>
-<p>您应该使用正确格式化数字的例程替换前面的代码。Java 编程语言提供了几个格式化数字和货币的类。这些类在 <a class="TutorialLink" target="_top" href="../format/numberintro.html">Numbers and Currencies</a> 部分讨论。</p>
+<p>你应该使用正确格式化数字的例程替换前面的代码。Java 编程语言提供了几个格式化数字和货币的类。这些类在 <a class="TutorialLink" target="_top" href="../format/numberintro.html">Numbers and Currencies</a> 部分讨论。</p>
 <h2>格式化日期和时间</h2>
-<p>日期和时间格式因地区和语言而异。如果您的代码包含如下语句，则需要更改它：</p>
+<p>日期和时间格式因地区和语言而异。如果你的代码包含如下语句，则需要更改它：</p>
 <div class="codeblock"><pre>
 Date currentDate = new Date();
 TextField dateField;
@@ -551,7 +551,7 @@ TextField dateField;
 String dateString = currentDate.toString();
 dateField.setText(dateString);
 </pre></div>
-<p>如果您使用日期格式化类，您的应用程序可以在世界各地正确显示日期和时间。有关示例和说明，请参阅 <a class="TutorialLink" target="_top" href="../format/dateintro.html">Dates and Times</a> 部分。</p>
+<p>如果你使用日期格式化类，你的应用程序可以在世界各地正确显示日期和时间。有关示例和说明，请参阅 <a class="TutorialLink" target="_top" href="../format/dateintro.html">Dates and Times</a> 部分。</p>
 <h2>使用 Unicode 字符属性</h2>
 <p>以下代码尝试验证字符是否为字母：</p>
 <div class="codeblock"><pre>
@@ -560,7 +560,7 @@ char ch;
 if ((ch &gt;= 'a' &amp;&amp; ch &lt;= 'z') || (ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z'))
 </pre></div>
 <p>注意这样的代码，因为它不适用于英语以外的语言。例如，<code>if</code> 语句错过了德语单词 Grün 中的字符 ü。</p>
-<p><code>Character</code> 比较方法使用 Unicode 标准来标识字符属性。因此，您应该使用以下代码替换以前的代码：</p>
+<p><code>Character</code> 比较方法使用 Unicode 标准来标识字符属性。因此，你应该使用以下代码替换以前的代码：</p>
 <div class="codeblock"><pre>
 char ch;
 // ...
@@ -568,7 +568,7 @@ if (Character.isLetter(ch))
 </pre></div>
 <p>有关 <code>Character</code> 比较方法的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../text/charintro.html">Checking Character Properties</a> 部分。</p>
 <h2>正确比较字符串</h2>
-<p>排序文本时，您经常比较字符串。如果显示文本，则不应使用 <code>String</code> 类的比较方法。尚未国际化的程序可能会比较字符串如下：</p>
+<p>排序文本时，你经常比较字符串。如果显示文本，则不应使用 <code>String</code> 类的比较方法。尚未国际化的程序可能会比较字符串如下：</p>
 <div class="codeblock"><pre>
 String target;
 String candidate;
@@ -578,9 +578,9 @@ if (target.equals(candidate)) {
 if (target.compareTo(candidate) &lt; 0) {
 // ...
 </pre></div>
-<p><code>String.equals</code> 和 <code>String.compareTo</code> 方法执行二进制比较，这在大多数语言中排序时无效。相反，您应该使用 <code>Collator</code> 类，该类在 <a class="TutorialLink" target="_top" href="../text/collationintro.html">Comparing Strings</a> 部分中进行了描述。</p>
+<p><code>String.equals</code> 和 <code>String.compareTo</code> 方法执行二进制比较，这在大多数语言中排序时无效。相反，你应该使用 <code>Collator</code> 类，该类在 <a class="TutorialLink" target="_top" href="../text/collationintro.html">Comparing Strings</a> 部分中进行了描述。</p>
 <h2>转换非 Unicode 文本</h2>
-<p>Java 编程语言中的字符以 Unicode 编码。如果您的应用程序处理非 Unicode 文本，您可能需要将其转换为 Unicode。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../text/convertintro.html">Converting Non-Unicode Text</a> 部分。</p>
+<p>Java 编程语言中的字符以 Unicode 编码。如果你的应用程序处理非 Unicode 文本，你可能需要将其转换为 Unicode。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../text/convertintro.html">Converting Non-Unicode Text</a> 部分。</p>
 
 
         </div>

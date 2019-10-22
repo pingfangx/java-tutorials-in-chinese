@@ -492,42 +492,42 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">实现</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="wrapper.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summary.html">Next&nbsp;»</a>
+                <a target="_top" href="wrapper.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summary.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>便利实现</h1></div>
             <div id="PageContent">
 
-<p>本节描述了几种小型实现，当您不需要它们的全部功能时，它们比通用实现更方便，更高效。本节中的所有实现都是通过静态工厂方法而不是 <code>public</code> 类提供的。</p>
+<p>本节描述了几种小型实现，当你不需要它们的全部功能时，它们比通用实现更方便，更高效。本节中的所有实现都是通过静态工厂方法而不是 <code>public</code> 类提供的。</p>
 <h2>列表的数组视图</h2>
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#asList-T...-"><code>Arrays.asList</code></a> 方法返回其数组参数的 <code>List</code> 视图。对 <code>List</code> 的更改将写入数组，反之亦然。集合的大小是数组的大小，不能更改。如果在 <code>List</code> 上调用 <code>add</code> 或 <code>remove</code> 方法，将导致 <code>UnsupportedOperationException</code>。</p>
-<p>此实现的正常使用是作为基于队列和基于集合的 API 之间的桥梁。它允许您将数组传递给期望 <code>Collection</code> 或 <code>List</code> 的方法。但是，这种实现还有另一种用途。如果您需要固定大小的 <code>List</code>，它比任何通用 <code>List</code> 实现更有效。这是习惯用法。</p>
+<p>此实现的正常使用是作为基于队列和基于集合的 API 之间的桥梁。它允许你将数组传递给期望 <code>Collection</code> 或 <code>List</code> 的方法。但是，这种实现还有另一种用途。如果你需要固定大小的 <code>List</code>，它比任何通用 <code>List</code> 实现更有效。这是习惯用法。</p>
 <div class="codeblock"><pre>
 List&lt;String&gt; list = Arrays.asList(new String[size]);
 </pre></div>
 <p>请注意，不保留对后备队列的引用。</p>
 <h2>不可变的多重复制列表</h2>
-<p>有时您需要一个由同一元素的多个副本组成的不可变 <code>List</code>。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#nCopies-int-T-"><code>Collections.nCopies</code></a> 方法返回这样的列表。该实现有两个主要用途。第一种是初始化新创建的 <code>List</code>;例如，假设您想要一个 <code>ArrayList</code>，最初由 1,000 个 <code>null</code> 元素组成。以下咒语起作用。</p>
+<p>有时你需要一个由同一元素的多个副本组成的不可变 <code>List</code>。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#nCopies-int-T-"><code>Collections.nCopies</code></a> 方法返回这样的列表。该实现有两个主要用途。第一种是初始化新创建的 <code>List</code>;例如，假设你想要一个 <code>ArrayList</code>，最初由 1,000 个 <code>null</code> 元素组成。以下咒语起作用。</p>
 <div class="codeblock"><pre>
 List&lt;Type&gt; list = new ArrayList&lt;Type&gt;(Collections.nCopies(1000, (Type)null);
 </pre></div>
-<p>当然，每个元素的初始值不必是 <code>null</code>。第二个主要用途是增加现有的 <code>List</code>。例如，假设您要将 <code>"fruit bat"</code> 的 69 个副本添加到 <code>List&lt;String&gt;</code> 的末尾。目前尚不清楚您为什么要做这样的事情，但让我们假设您做了。以下是您如何做到的。</p>
+<p>当然，每个元素的初始值不必是 <code>null</code>。第二个主要用途是增加现有的 <code>List</code>。例如，假设你要将 <code>"fruit bat"</code> 的 69 个副本添加到 <code>List&lt;String&gt;</code> 的末尾。目前尚不清楚你为什么要做这样的事情，但让我们假设你做了。以下是你如何做到的。</p>
 <div class="codeblock"><pre>
 lovablePets.addAll(Collections.nCopies(69, "fruit bat"));
 </pre></div>
 <p>通过使用同时采用索引和 <code>Collection</code> 的 <code>addAll</code> 形式，可以将新元素添加到 <code>List</code> 的中间而不是到最后。</p>
 <h2>不可变单例集</h2>
-<p>有时您需要一个不可变的 <i>singleton (单例)</i> <code>Set</code>，它由一个指定的元素组成。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#singleton-T-"><code>Collections.singleton</code></a> 方法返回这样的 <code>Set</code>。此实现的一个用途是从 <code>Collection</code> 中移除所有匹配项的指定元素。</p>
+<p>有时你需要一个不可变的 <i>singleton (单例)</i> <code>Set</code>，它由一个指定的元素组成。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#singleton-T-"><code>Collections.singleton</code></a> 方法返回这样的 <code>Set</code>。此实现的一个用途是从 <code>Collection</code> 中移除所有匹配项的指定元素。</p>
 <div class="codeblock"><pre>
 c.removeAll(Collections.singleton(e));
 </pre></div>
-<p>相关的习惯用法从 <code>Map</code> 中移除映射到指定值的所有元素。例如，假设您有一个 <code>Map</code>  <code>job</code> 将人们映射到他们的工作线上并假设您想要消灭所有的律师。下面的一行就可以了。</p>
+<p>相关的习惯用法从 <code>Map</code> 中移除映射到指定值的所有元素。例如，假设你有一个 <code>Map</code>  <code>job</code>  将人们映射到他们的工作线上并假设你想要消灭所有的律师。下面的一行就可以了。</p>
 <div class="codeblock"><pre>
 job.values().removeAll(Collections.singleton(LAWYER));
 </pre></div>
-<p>此实现的另一个用途是为编写为接受值集合的方法提供单个输入值。</p>
+<p>此实现的另一个用途是向编写为接受值集合的方法提供单个输入值。</p>
 <h2>空的 Set，List 和 Map 常量</h2>
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html"><code>Collections</code></a> 类提供了返回空 <code>Set</code>，<code>List</code> 和 <code>Map</code> 的方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#emptySet--"><code>emptySet</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#emptyList--"><code>emptyList</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#emptyMap--"><code>emptyMap</code></a>。这些常量的主要用途是作为采用 <code>Collection</code> 值的方法的输入，而您不想提供任何值时，如本示例所示。</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html"><code>Collections</code></a> 类提供了返回空 <code>Set</code>，<code>List</code> 和 <code>Map</code> 的方法  <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#emptySet--"><code>emptySet</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#emptyList--"><code>emptyList</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#emptyMap--"><code>emptyMap</code></a>。这些常量的主要用途是作为采用 <code>Collection</code> 值的方法的输入，而你不想提供任何值时，如本示例所示。</p>
 <div class="codeblock"><pre>
 tourist.declarePurchases(Collections.emptySet());
 </pre></div>

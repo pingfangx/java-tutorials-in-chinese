@@ -516,7 +516,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="exinter.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="forkjoin.html">Next&nbsp;»</a>
+                <a target="_top" href="exinter.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="forkjoin.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>线程池</h1></div>
@@ -524,15 +524,15 @@
 
 <p><code>java.util.concurrent</code> 中的大多数执行器实现使用 <i>thread pools (线程池)</i>，它由 <i>worker threads (工作线程)</i> 组成。这种线程与它执行的 <code>Runnable</code> 和 <code>Callable</code> 任务分开存在，通常用于执行多个任务。</p>
 <p>使用工作线程可以最大限度地减少创建线程的开销。线程对象使用大量内存，而在大型应用程序中，分配和释放许多线程对象会产生大量的内存管理开销。</p>
-<p>一种常见类型的线程池是 <i>fixed thread pool (固定线程池)</i>。这种类型的线程池始终具有指定数量的线程运行；如果某个线程在仍在使用时以某种方式终止，它将自动替换为新线程。任务通过内部队列提交到线程池中，只要有活动任务多于线程，该队列就会保存额外的任务。</p>
+<p>一种常见类型的线程池是 <i>fixed thread pool (固定线程池)</i>。这种类型的线程池始终具有指定数量的线程在运行；如果某个线程在其仍在使用时以某种方式终止，它将自动替换为新线程。任务通过内部队列提交到线程池中，只要有活动任务多于线程，该队列就会保存额外的任务。</p>
 <p>固定线程池的一个重要优点是使用它的应用程序 <i>degrade gracefully (优雅降级)</i>。要理解这一点，请考虑一个 Web 服务器应用程序，其中每个 HTTP 请求都由一个单独的线程处理。如果应用程序只是为每个新的 HTTP 请求创建一个新线程，并且系统接收的请求数超过它可以立即处理的数量，那么当所有这些线程的开销超过系统的容量时，应用程序将突然停止响应 <i>all (所有)</i> 请求。由于可以创建的线程数量有限制，应用程序不会在 HTTP 请求进入时立即处理，但它将在系统可以处理时尽快处理。</p>
 <p>创建一个使用固定线程池的执行器的方法是调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html"><code>java.util.concurrent.Executors</code></a> 的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html#newFixedThreadPool-int-"><code>newFixedThreadPool</code></a> 工厂方法。该类还提供以下一些工厂方法：</p>
 <ul>
 <li><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html#newCachedThreadPool-int-"><code>newCachedThreadPool</code></a> 方法创建具有可扩展线程池的执行器。此执行器适用于启动许多短期任务的应用程序。</li>
 <li><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html#newSingleThreadExecutor-int-"><code>newSingleThreadExecutor</code></a> 方法创建一次执行单个任务的执行器。</li>
-<li>几种工厂方法是上述执行器的 <code>ScheduledExecutorService</code> 版本。</li>
+<li>有几种工厂方法是上述执行器的 <code>ScheduledExecutorService</code> 版本。</li>
 </ul>
-<p>如果上述工厂方法提供的执行器都不满足您的需要，则构造 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ThreadPoolExecutor.html"><code>java.util.concurrent.ThreadPoolExecutor</code></a> 或 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledThreadPoolExecutor.html"><code>java.util.concurrent.ScheduledThreadPoolExecutor</code></a> 将为您提供其他选项。</p>
+<p>如果上述工厂方法提供的执行器都不满足你的需要，则构造 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ThreadPoolExecutor.html"><code>java.util.concurrent.ThreadPoolExecutor</code></a> 或 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledThreadPoolExecutor.html"><code>java.util.concurrent.ScheduledThreadPoolExecutor</code></a> 将为你提供其他选项。</p>
 
         </div>
         <div class="NavBit">

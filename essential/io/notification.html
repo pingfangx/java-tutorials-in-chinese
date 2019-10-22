@@ -515,16 +515,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="find.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="misc.html">Next&nbsp;»</a>
+                <a target="_top" href="find.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="misc.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>观察目录中的更改</h1></div>
             <div id="PageContent"><!-- Watching a Directory for Changes -->
 
 
-<p>您是否曾经发现自己使用 IDE 或其他编辑器编辑文件时，会出现一个对话框，通知您文件系统中的某个打开文件已更改并需要重新加载？或者，与 NetBeans IDE 一样，应用程序只是在不通知您的情况下安静地更新文件。以下示例对话框显示了此通知在免费编辑器 <a class="OutsideLink" target="_blank" href="http://sourceforge.net/projects/jedit/">jEdit</a> 中的显示方式：</p>
-<center><img src="../../figures/essential/io-jEditDialog.png" width="542" height="325" align="bottom" alt="示例 jEdit 对话框说明：另一个程序在磁盘上更改了以下文件。" /></p><p class="FigureCaption"><center>jEdit 对话框显示检测到修改过的文件</center></p></center><p>要实现此功能，称为 <em>file change notification</em>，程序必须能够检测文件系统上相关目录发生了什么。一种方法是轮询文件系统以查找更改，但这种方法效率低下。它不能扩展到具有数百个要监听的打开文件或目录的应用程序。</p>
-<p><code>java.nio.file</code> 包提供了一个名为 Watch Service API 的文件更改通知 API。此 API 使您可以使用监听服务注册目录(或多个目录)。注册时，您告诉服务您感兴趣的事件类型：文件创建，文件删除或文件修改。当服务检测到感兴趣的事件时，它将被转发到注册的进程。已注册的进程有一个线程(或一个线程池)，专门用于听它已注册的任何事件。当一个事件进入时，它会根据需要进行处理。</p>
+<p>你是否曾经发现自己使用 IDE 或其他编辑器编辑文件时，会出现一个对话框，通知你文件系统中的某个打开文件已更改并需要重新加载？或者，与 NetBeans IDE 一样，应用程序只是在不通知你的情况下安静地更新文件。以下示例对话框显示了此通知在免费编辑器 <a class="OutsideLink" target="_blank" href="http://sourceforge.net/projects/jedit/">jEdit</a> 中的显示方式：</p>
+<center><img src="../../figures/essential/io-jEditDialog.png" width="542" height="325" align="bottom" alt="示例 jEdit 对话框说明：另一个程序在磁盘上更改了以下文件。" /></p><p class="FigureCaption"><center>jEdit 对话框显示检测到修改过的文件</center></p></center><p>要实现此功能，称为 <em>file change notification (文件变更通知)</em>，程序必须能够检测文件系统上相关目录发生了什么。一种方法是轮询文件系统以查找更改，但这种方法效率低下。它不能扩展到具有数百个要监听的打开文件或目录的应用程序。</p>
+<p><code>java.nio.file</code> 包提供了一个名为 Watch Service API 的文件更改通知 API。此 API 使你可以使用监听服务注册目录(或多个目录)。注册时，你告诉服务你感兴趣的事件类型：文件创建，文件删除或文件修改。当服务检测到感兴趣的事件时，它将被转发到注册的进程。已注册的进程有一个线程(或一个线程池)，专门用于听它已注册的任何事件。当一个事件进入时，它会根据需要进行处理。</p>
 <p>本节包括以下内容：</p>
 <ul>
 <li><a href="#overview">Watch Service 概述</a></li>
@@ -535,25 +535,25 @@
 <li><a href="#concerns">何时使用和不使用此 API</a></li>
 </ul>
 <h2><a name="overview" id="overview">Watch Service 概述</a></h2>
-<p><code>WatchService</code> API 相当低级，允许您自定义它。您可以按原样使用它，也可以选择在此机制之上创建高级 API，以便它适合您的特定需求。</p>
+<p><code>WatchService</code> API 相当低级，允许你自定义它。你可以按原样使用它，也可以选择在此机制之上创建高级 API，以便它适合你的特定需求。</p>
 <p>以下是实现监听服务所需的基本步骤：</p>
 <ul>
 <li>创建 <code>WatchService</code> “watcher（监听）” 文件系统。</li>
-<li>对于要监听的每个目录，将其注册到观察程序。注册目录时，您可以指定要通知的事件类型。对于每个注册的目录您会收到 <code>WatchKey</code> 实例。</li>
+<li>对于要监听的每个目录，将其注册到观察程序。注册目录时，你可以指定要通知的事件类型。对于每个注册的目录你会收到 <code>WatchKey</code> 实例。</li>
 <li>实现无限循环以等待传入事件。当事件发生时，密钥（key）将被置为 signaled 状态并放入观察者的队列中。</li>
-<li>从观察者的队列中获取密钥您可以从密钥中获取文件名。</li>
+<li>从观察者的队列中获取密钥你可以从密钥中获取文件名。</li>
 <li>获取密钥的每个待处理事件(可能有多个事件)并根据需要进行处理。</li>
 <li>重置密钥，然后继续等待事件。</li>
 <li>关闭服务：当线程退出或关闭时(通过调用其 <code>closed</code> 方法)，监听服务退出。</li>
 </ul>
-<p><code>WatchKeys</code> 是线程安全的，可以与 <code>java.nio.concurrent</code> 包一起使用。您可以将 <a class="TutorialLink" target="_top" href="../concurrency/pools.html">thread pool</a> 专用于此工作。</p>
+<p><code>WatchKeys</code> 是线程安全的，可以与 <code>java.nio.concurrent</code> 包一起使用。你可以将 <a class="TutorialLink" target="_top" href="../concurrency/pools.html">thread pool</a> 专用于此工作。</p>
 <h2><a name="try" id="try">试一试</a></h2>
-<p>因为此 API 更高级，所以在继续之前尝试一下。将 <a class="SourceLink" target="_blank" href="examples/WatchDir.java" onclick="showCode('../../displayCode.html', 'examples/WatchDir.java'); return false;"><code><code>WatchDir</code></code></a> 示例保存到您的计算机，然后进行编译。创建将传递给示例的 <code>test</code> 目录。<code>WatchDir</code> 使用单个线程处理所有事件，因此它在等待事件时阻止键盘输入。在单独的窗口中或在后台运行程序，如下所示：</p>
+<p>因为此 API 更高级，所以在继续之前尝试一下。将 <a class="SourceLink" target="_blank" href="examples/WatchDir.java" onclick="showCode('../../displayCode.html', 'examples/WatchDir.java'); return false;"><code><code>WatchDir</code></code></a> 示例保存到你的计算机，然后进行编译。创建将传递给示例的 <code>test</code> 目录。<code>WatchDir</code> 使用单个线程处理所有事件，因此它在等待事件时阻止键盘输入。在单独的窗口中或在后台运行程序，如下所示：</p>
 <div class="codeblock"><pre>
 java WatchDir test &amp;
 </pre></div>
-<p>在 <code>test</code> 目录中执行创建，删除和编辑文件。发生任何这些事件时，会向控制台输出一条消息。完成后，删除 <code>test</code> 目录并退出 <code>WatchDir</code>。或者，如果您愿意，可以手动终止该过程。</p>
-<p>您还可以通过指定 <code>-r</code> 选项来监听整个文件树。指定 <code>-r</code> 时，<code>WatchDir</code> <a class="TutorialLink" target="_top" href="walk.html">walks the file tree</a>，使用监听服务注册每个目录。</p>
+<p>在 <code>test</code> 目录中执行创建，删除和编辑文件。发生任何这些事件时，会向控制台输出一条消息。完成后，删除 <code>test</code> 目录并退出 <code>WatchDir</code>。或者，如果你愿意，可以手动终止该过程。</p>
+<p>你还可以通过指定 <code>-r</code> 选项来监听整个文件树。指定 <code>-r</code> 时，<code>WatchDir</code> <a class="TutorialLink" target="_top" href="walk.html">walks the file tree</a>，使用监听服务注册每个目录。</p>
 <h2><a name="register" id="register">创建 Watch Service 并注册事件</a></h2>
 <p>第一步是使用 <code>FileSystem</code> 中的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#newWatchService--"><code>newWatchService</code></a> 方法创建一个新的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchService.html"><code>WatchService</code></a> 类，如下：</p>
 <div class="codeblock"><pre>
@@ -566,7 +566,7 @@ WatchService watcher = FileSystems.getDefault().newWatchService();
 <li><code>ENTRY_CREATE</code>  - 创建目录条目。</li>
 <li><code>ENTRY_DELETE</code>  - 删除目录条目。</li>
 <li><code>ENTRY_MODIFY</code>  - 修改目录条目。</li>
-<li><code>OVERFLOW</code>  - 表示事件可能已丢失或丢弃。您无需注册 <code>OVERFLOW</code> 事件即可接收它。</li>
+<li><code>OVERFLOW</code>  - 表示事件可能已丢失或丢弃。你无需注册 <code>OVERFLOW</code> 事件即可接收它。</li>
 </ul>
 <p>以下代码段显示了如何为所有三种事件类型注册 <code>Path</code> 实例：</p>
 <div class="codeblock"><pre>
@@ -590,20 +590,20 @@ try {
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchService.html#poll--"><code>poll</code></a>–返回排队的密钥（如果有）。如果不可用，则立即返回 <code>null</code> 值。</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchService.html#poll-long-java.util.concurrent.TimeUnit-"><code>poll(long, TimeUnit)</code></a>–返回排队的密钥（如果有）。如果排队的密钥不能立即可用，程序将等待指定的时间。<code>TimeUnit</code> 参数确定指定的时间是纳秒，毫秒还是某个其他时间单位。</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchService.html#poll-long-java.util.concurrent.TimeUnit-"><code>poll(long, TimeUnit)</code></a>–返回排队的密钥（如果有）。如果排队的密钥不能立即可用，程序将等待指定的时间。<code>TimeUnit</code> 参数确定指定的时间是纳秒、毫秒还是某个其他时间单位。</li>
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchService.html#take--"><code>take</code></a>–返回排队的密钥。如果没有可用的排队密钥，则此方法将等待。</li>
 </ul>
 </li>
 <li>处理密钥的挂起事件。从 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchKey.html#pollEvents--"><code>pollEvents</code></a> 方法中获取 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchEvent.html"><code>WatchEvents</code></a> 的 <code>List</code>。</li>
-<li>使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchEvent.html#kind--"><code>kind</code></a> 方法获取事件类型。无论密钥注册了什么事件，都可以接收 <code>OVERFLOW</code> 事件。您可以选择处理溢出或忽略它，但您应该测试它。</li>
+<li>使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchEvent.html#kind--"><code>kind</code></a> 方法获取事件类型。无论密钥注册了什么事件，都可以接收 <code>OVERFLOW</code> 事件。你可以选择处理溢出或忽略它，但你应该测试它。</li>
 <li>获取与事件关联的文件名。文件名存储为事件的上下文，因此 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchEvent.html#context--"><code>context</code></a> 方法用于获取它。</li>
-<li>处理完密钥事件后，需要通过调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchEvent.html#reset--"><code>reset</code></a> 将密钥重新置于 <code>ready</code> 状态。如果此方法返回 <code>false</code>，则该键不再有效，并且循环可以退出。此步骤非常 <strong>重要</strong>。如果您未能调用 <code>reset</code>，则此密钥将不会再收到任何事件。</li>
+<li>处理完密钥事件后，需要通过调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchEvent.html#reset--"><code>reset</code></a> 将密钥重新置于 <code>ready</code> 状态。如果此方法返回 <code>false</code>，则该键不再有效，并且循环可以退出。此步骤非常 <strong>重要</strong>。如果你未能调用 <code>reset</code>，则此密钥将不会再收到任何事件。</li>
 </ol>
 <p>监听密钥具有状态。在任何给定时间，其状态可能是以下之一：</p>
 <ul>
 <li><code>Ready</code> 表示该密钥已准备好接受事件。首次创建时，密钥处于 ready 状态。</li>
-<li><code>Signaled</code> 表示一个或多个事件已排队。一旦该键被发出信号（signaled），它就不再处于就绪（ready）状态，直到调用了 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchKey.html#reset--"><code>reset</code></a> 方法。</li>
+<li><code>Signaled</code> 表示一个或多个事件已排队。一旦该密钥被发出信号（signaled），它就不再处于就绪（ready）状态，直到调用了 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchKey.html#reset--"><code>reset</code></a> 方法。</li>
 <li><code>Invalid</code> 表示密钥不再有效。发生以下事件之一时会发生此状态：
 <ul>
 <li>该过程使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchKey.html#cancel--"><code>cancel</code></a> 方法明确取消密钥。</li>
@@ -692,7 +692,7 @@ static &lt;T&gt; WatchEvent&lt;T&gt; cast(WatchEvent&lt;?&gt; event) {
     return (WatchEvent&lt;Path&gt;)event;
 }
 </pre></div>
-<p>如果您不熟悉 <code>@SuppressWarnings</code> 语法，请参阅 <a class="TutorialLink" target="_top" href="../../java/annotations/index.html">Annotations</a>。</p>
+<p>如果你不熟悉 <code>@SuppressWarnings</code> 语法，请参阅 <a class="TutorialLink" target="_top" href="../../java/annotations/index.html">Annotations</a>。</p>
 <h2><a name="concerns" id="concerns">何时使用和不使用此 API</a></h2>
 <p>Watch Service API 专为需要通知文件更改事件的应用程序而设计。它非常适合任何应用程序，如编辑器或 IDE，可能有许多打开的文件，需要确保文件与文件系统同步。它也非常适合于监听目录的应用程序服务器，可能等待 <code>.jsp</code> 或 <code>.jar</code> 文件放入，以便部署它们。</p>
 <p>此 API <em>不</em> 设计用于索引硬盘驱动器。大多数文件系统实现都具有文件更改通知的本机支持。Watch Service API 在可用的情况下利用此支持。但是，当文件系统不支持此机制时，Watch Service 将轮询文件系统，等待事件。 

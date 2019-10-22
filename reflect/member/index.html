@@ -489,14 +489,14 @@
             <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>
         </div>
         <div class="NavBit">
-                <a target="_top" href="../class/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="field.html">Next&nbsp;»</a>
+                <a target="_top" href="../class/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="field.html">下一页&nbsp;»</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
         <div id="PageTitle"><h1>课程：成员</h1></div>
         <div id="PageContent">
 
 <p>反射定义了一个接口 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Member.html"><code>java.lang.reflect.Member</code></a>，它由 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html"><code>java.lang.reflect.Field</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html"><code>java.lang.reflect.Method</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html"><code>java.lang.reflect.Constructor</code></a> 实现。这些对象将在这节课中讨论。对于每个成员，本课程将描述用于获取声明和类型信息的关联 API，成员特有的任何操作(例如，设置字段的值或调用方法)以及常见的错误。将使用代码示例和相关输出来说明每个概念，其近似于一些预期的反射用途。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;根据 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/index.html"><em>The Java Language Specification, Java SE 7 Edition</em></a>，类的 <em>members (成员)</em> 是继承的类主体的组件，包括字段，方法，嵌套类，接口和枚举类型。由于构造函数不是继承的，因此它们不是成员。这与 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Member.html"><code>java.lang.reflect.Member</code></a> 的实现类不同。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;根据 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/index.html"><em>The Java Language Specification, Java SE 7 Edition</em></a>，类的 <em>members (成员)</em> 是可继承的类主体的组件，包括字段，方法，嵌套类，接口和枚举类型。由于构造函数是不能继承的，因此它们不是成员。这与 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Member.html"><code>java.lang.reflect.Member</code></a> 的实现类不同。
 <hr /></div>
 <h2>字段</h2>
 <p>字段具有类型和值。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html"><code>java.lang.reflect.Field</code></a> 类提供了访问给定对象上的字段的类型信息以及设置和获取值的方法。</p>
@@ -516,7 +516,7 @@
 <li><a href="methodTrouble.html">故障排除</a>涵盖查找或调用方法时遇到的常见错误</li>
 </ul>
 <h2>构造函数</h2>
-<p>构造函数的反射 API 在 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html"><code>java.lang.reflect.Constructor</code></a> 中定义，与方法类似，有两个主要的例外：第一，构造函数没有返回值；第二，调用构造函数为给定的类创建一个对象的新实例。</p>
+<p>构造函数的反射 API 在 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html"><code>java.lang.reflect.Constructor</code></a> 中定义，与方法类似，但有两点主要的区别：第一，构造函数没有返回值；第二，调用构造函数为给定的类创建一个对象的新实例。</p>
 <ul>
 <li><a href="ctorLocation.html">查找构造函数</a>说明了如何获取具有特定参数的构造函数</li>
 <li><a href="ctorModifiers.html">获取和解析构造函数修饰符</a>显示如何获取构造函数声明的修饰符以及有关构造函数的其他信息</li>

@@ -488,7 +488,7 @@
             <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Java SE 中的安全功能</a>
         </div>
         <div class="NavBit">
-                <a target="_top" href="../sigcert/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="signer.html">Next&nbsp;»</a>
+                <a target="_top" href="../sigcert/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="signer.html">下一页&nbsp;»</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
         <div id="PageTitle"><h1>课程：签名代码并授予权限</h1></div>
@@ -497,14 +497,14 @@
 <p>This lesson shows how to use use <code>keytool</code>, <code>jarsigner</code>, <code>Policy Tool</code> and <code>jar</code> to place files into JAR (Java ARchive) files for subsequent signing by the <code>jarsigner</code> tool.</p>
 <p>This lesson has two parts. First, you will create and deploy an application. Second; you will act as the recipient of a signed application.</p>
 <p>Here are the steps to create and deploy an application:</p>
-<p><b>Note:</b>&nbsp;&nbsp;For convenience, you pretend to be a user/developer named Susan Jones. You need to define Susan Jones when you generate the keys.</p>
+<p><b>注意:</b>&nbsp;&nbsp;For convenience, you pretend to be a user/developer named Susan Jones. You need to define Susan Jones when you generate the keys.</p>
 <ul>
 <li>Put Java class files comprising your application into a JAR file</li>
 <li>Sign the JAR file</li>
 <li>Export the public key certificate corresponding to the private key used to sign the JAR file</li>
 </ul>
 <p>Here are the steps to grant permissions to an application</p>
-<p><b>Note:</b>&nbsp;&nbsp;For convenience, you pretend to be a user named Ray.</p>
+<p><b>注意:</b>&nbsp;&nbsp;For convenience, you pretend to be a user named Ray.</p>
 <ul>
 <li>You see how the signed application cannot normally read a file when it is run under a security manager.</li>
 <li>Use <code>keytool</code> to import a certificate into Ray's keystore in an entry aliased by <code>susan</code></li>
@@ -513,7 +513,7 @@
 </ul>
 <p>For more information about digital signatures, certificates, keystores, and the tools, see the 
 <a class="TutorialLink" target="_top" href="../sigcert/index.html">API and Tools Use for Secure Code and File Exchanges</a> lesson.</p>
-<div class="note"><hr /><strong>Important:</strong>&nbsp;You need to perform the tasks in this lesson while working in the directory in which you store the sample application, but you should store the data file needed by the application in a different directory. All examples in this trail assume that you are working in the <code>C:\Test</code> directory, and that the data file is in the <code>C:\TestData</code> directory.<br /><br />
+<div class="note"><hr /><strong>重要:</strong>&nbsp;You need to perform the tasks in this lesson while working in the directory in which you store the sample application, but you should store the data file needed by the application in a different directory. All examples in this trail assume that you are working in the <code>C:\Test</code> directory, and that the data file is in the <code>C:\TestData</code> directory.<br /><br />
 
 If you are working on a UNIX system, substitute your own directory names.
 

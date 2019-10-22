@@ -489,7 +489,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">2D 图形</a>&gt;<a href="index.html" target="_top">Java2D 中的高级主题</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="complexshapes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../end.html">Next&nbsp;»</a>
+                <a target="_top" href="complexshapes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../end.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>支持用户交互</h1></div>
@@ -505,7 +505,7 @@
 <p>This applet allows the user to drag a <code>Shape</code> around within the applet window. The <code>Shape</code> is redrawn at every mouse location to provide feedback as the user drags it.</p>
 
 <p style="text-align: center"><applet code="ShapeMover" archive="examples/lib/ShapeMoverApplet.jar" width="550" height="250" alt="ShapeMover applet"><param name="permissions" value="sandbox" /></applet></p>
-<div class="note"><hr /><strong>注意:</strong>如果您没有看到 applet 正在运行，则需要至少安装 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Development Kit (JDK) 7</a> 版本。<hr /></div>
+<div class="note"><hr /><strong>注意:</strong>如果你没有看到 applet 正在运行，则需要至少安装 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Development Kit (JDK) 7</a> 版本。<hr /></div>
 <p>
 <a class="SourceLink" target="_blank" href="examples/ShapeMover.java" onclick="showCode('../../displayCode.html', 'examples/ShapeMover.java'); return false;"><code>ShapeMover.java</code></a>contains the complete code for this applet.</p>
 <p>The <code>contains</code> method is called to determine whether the cursor is within the bounds of the rectangle when the mouse is pressed. If it is, the location of the rectangle is updated.</p>
@@ -529,7 +529,7 @@ public void updateLocation(MouseEvent e){
 <p>This application illustrates hit testing by drawing the default caret wherever the user clicks on the <code>TextLayout</code>, as shown in the following figure.</p>
 
 <p style="text-align: center"><applet code="HitTestSample" archive="examples/lib/HitTestSampleApplet.jar" width="400" height="250" alt="HitTestSample applet"><param name="permissions" value="sandbox" /></applet></p>
-<div class="note"><hr /><strong>注意:</strong>如果您没有看到 applet 正在运行，则需要至少安装 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Development Kit (JDK) 7</a> 版本。<hr /></div>
+<div class="note"><hr /><strong>注意:</strong>如果你没有看到 applet 正在运行，则需要至少安装 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Development Kit (JDK) 7</a> 版本。<hr /></div>
 <p>
 <a class="SourceLink" target="_blank" href="examples/HitTestSample.java" onclick="showCode('../../displayCode.html', 'examples/HitTestSample.java'); return false;"><code><code>HitTestSample.java</code></code></a>contains the complete code for this applet.</p>
 <p>The <code>mouseClicked</code> method uses <code>TextLayout.hitTestChar</code> to return a <code>java.awt.font.TextHitInfo</code> object that contains the mouse click location (the insertion index) in the <code>TextLayout</code> object.</p>

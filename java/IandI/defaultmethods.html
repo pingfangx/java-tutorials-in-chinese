@@ -503,16 +503,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="nogrow.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summary-interface.html">Next&nbsp;»</a>
+                <a target="_top" href="nogrow.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summary-interface.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>默认方法</h1></div>
             <div id="PageContent">
 
 
-<p><a class="TutorialLink" target="_top" href="../../java/IandI/createinterface.html">Interfaces</a> 部分描述了一个涉及计算机控制汽车制造商的例子，他们发布了行业标准接口，描述了可以调用哪些方法来操作他们的汽车。如果那些计算机控制的汽车制造商为他们的汽车添加新的函数式，例如飞行，该怎么办？这些制造商需要指定新的方法，以使其他公司(如电子制导仪器制造商)能够使其软件适应飞行汽车。这些汽车制造商将在哪里宣布这些与航班有关的新方法？如果他们将它们添加到原始接口，那么实现了这些接口的程序员将不得不重写他们的实现。如果他们将它们作为静态方法添加，那么程序员会将它们视为实用方法，而不是必要的核心方法。</p>
+<p><a class="TutorialLink" target="_top" href="../../java/IandI/createinterface.html">Interfaces</a> 部分描述了一个涉及计算机控制汽车制造商的例子，他们发布了行业标准接口，描述了可以调用哪些方法来操作他们的汽车。如果那些计算机控制的汽车制造商为他们的汽车添加新的功能，例如飞行，该怎么办？这些制造商需要指定新的方法，以使其他公司(如电子制导仪器制造商)能够使其软件适应飞行汽车。这些汽车制造商将在哪里宣布这些与航班有关的新方法？如果他们将它们添加到原始接口，那么实现了这些接口的程序员将不得不重写他们的实现。如果他们将它们作为静态方法添加，那么程序员会将它们视为实用方法，而不是必要的核心方法。</p>
 
-<p>默认方法使您能够向库的接口添加新函数式，并确保与为这些接口的旧版本编写的代码的二进制兼容性。</p> 
+<p>默认方法使你能够向库的接口添加新功能，并确保与为这些接口的旧版本编写的代码的二进制兼容性。</p> 
 
 <p>考虑以下接口 <a class="SourceLink" target="_blank" href="examples/TimeClient.java" onclick="showCode('../../displayCode.html', 'examples/TimeClient.java'); return false;"><code>TimeClient</code></a>，如 <a class="TutorialLink" target="_top" href="../../java/IandI/QandE/interfaces-answers.html">Answers to Questions and Exercises: Interfaces</a> 中所述：</p>
 
@@ -581,7 +581,7 @@ public class SimpleTimeClient implements TimeClient {
 }
 </pre></div>
 
-<p>假设您要向 <code>TimeClient</code> 接口添加新函数式，例如通过 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html"><code>ZonedDateTime</code></a> 对象指定时区的函数式(这是像 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html"><code>LocalDateTime</code></a> 对象，除了它存储时区信息)：</p>
+<p>假设你要向 <code>TimeClient</code> 接口添加新功能，例如通过 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html"><code>ZonedDateTime</code></a> 对象指定时区的功能(这是像 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html"><code>LocalDateTime</code></a> 对象，除了它存储时区信息)：</p>
 
 <div class="codeblock"><pre>
 public interface TimeClient {
@@ -594,7 +594,7 @@ public interface TimeClient {
 }
 </pre></div>
 
-<p>在对 <code>TimeClient</code> 接口进行此修改之后，您还必须修改类 <code>SimpleTimeClient</code> 并实现方法 <code>getZonedDateTime</code>。但是，您可以改为定义 <em>默认实现</em>，而不是让 <code>getZonedDateTime</code> <code>abstract</code>(如上例所示)。(请记住，<a class="TutorialLink" target="_top" href="../../java/IandI/abstract.html">abstract method</a> 是在没有实现的情况下声明的方法。)</p>
+<p>在对 <code>TimeClient</code> 接口进行此修改之后，你还必须修改类 <code>SimpleTimeClient</code> 并实现方法 <code>getZonedDateTime</code>。但是，你可以改为定义 <em>default implementation (默认实现)</em>，而不是让 <code>getZonedDateTime</code> <code>abstract</code>(如上例所示)。(请记住，<a class="TutorialLink" target="_top" href="../../java/IandI/abstract.html">abstract method</a> 是在没有实现的情况下声明的方法。)</p>
 
 <div class="codeblock"><pre>
 
@@ -625,9 +625,9 @@ public interface TimeClient {
 }
 </pre></div>
 
-<p>您指定在接口中定义的方法是默认方法，并在方法签名的开头使用 <code>default</code> 关键字。接口中的所有方法声明（包括默认方法）都隐式 <code>public</code>，因此您可以省略 <code>public</code> 修饰符。</p>
+<p>你指定在接口中定义的方法是默认方法，并在方法签名的开头使用 <code>default</code> 关键字。接口中的所有方法声明（包括默认方法）都隐式 <code>public</code>，因此你可以省略 <code>public</code> 修饰符。</p>
 
-<p>使用此接口，您不必修改类 <code>SimpleTimeClient</code>，并且此类(以及实现接口 <code>TimeClient</code> 的任何类)将具有已定义的方法 <code>getZonedDateTime</code> 。以下示例 <a class="SourceLink" target="_blank" href="examples/defaultmethods/TestSimpleTimeClient.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/TestSimpleTimeClient.java'); return false;"><code>TestSimpleTimeClient</code></a> 从 <code>SimpleTimeClient</code> 的实例调用方法 <code>getZonedDateTime</code>：</p>
+<p>使用此接口，你不必修改类 <code>SimpleTimeClient</code>，并且此类(以及实现接口 <code>TimeClient</code> 的任何类)将具有已定义的方法 <code>getZonedDateTime</code> 。以下示例 <a class="SourceLink" target="_blank" href="examples/defaultmethods/TestSimpleTimeClient.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/TestSimpleTimeClient.java'); return false;"><code>TestSimpleTimeClient</code></a> 从 <code>SimpleTimeClient</code> 的实例调用方法 <code>getZonedDateTime</code>：</p>
 
 <div class="codeblock"><pre>
 
@@ -659,7 +659,7 @@ public class TestSimpleTimeClient {
     <li>重新定义默认方法，将重写该方法。</li>
 </ul>
 
-<p>假设您继承接口 <code>TimeClient</code>，如下所示：</p>
+<p>假设你继承接口 <code>TimeClient</code>，如下所示：</p>
 
 <div class="codeblock"><pre>
 public interface AnotherTimeClient extends TimeClient { }
@@ -667,7 +667,7 @@ public interface AnotherTimeClient extends TimeClient { }
 
 <p>任何实现接口 <code>AnotherTimeClient</code> 的类都将具有由 <code>TimeClient.getZonedDateTime</code> 默认方法指定的实现。</p>
 
-<p>假设您继承接口 <code>TimeClient</code>，如下所示：</p>
+<p>假设你继承接口 <code>TimeClient</code>，如下所示：</p>
 
 <div class="codeblock"><pre>
 public interface AbstractZoneTimeClient extends TimeClient {
@@ -677,7 +677,7 @@ public interface AbstractZoneTimeClient extends TimeClient {
 
 <p>任何实现接口 <code>AbstractZoneTimeClient</code> 的类都必须实现方法 <code>getZonedDateTime</code>;此方法是一个 <code>abstract</code> 方法，就像接口中的所有其他非默认(和非静态)方法一样。</p>
 
-<p>假设您继承接口 <code>TimeClient</code>，如下所示：</p>
+<p>假设你继承接口 <code>TimeClient</code>，如下所示：</p>
 
 <div class="codeblock"><pre>
 public interface HandleInvalidTimeZoneClient extends TimeClient {
@@ -699,7 +699,7 @@ public interface HandleInvalidTimeZoneClient extends TimeClient {
 
 <h2><a name="static">静态方法</a></h2>
 
-<p>除了默认方法，您还可以在接口中定义 <a class="TutorialLink" target="_top" href="../../java/javaOO/classvars.html">static methods </a>。（静态方法是一种与定义它的类相关联的方法，而不是与任何对象相关联的方法。该类的每个实例都共享其静态方法。）这使您可以更轻松地在库中组织辅助方法;您可以在同一个接口中保留特定于接口的静态方法，而不是在单独的类中。以下示例定义一个静态方法，该方法获取与时区标识符对应的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html"><code>ZoneId</code></a> 对象;如果没有与给定标识符对应的 <code>ZoneId</code> 对象，它将使用系统默认时区。(因此，您可以简化方法 <code>getZonedDateTime</code>)：</p>
+<p>除了默认方法，你还可以在接口中定义 <a class="TutorialLink" target="_top" href="../../java/javaOO/classvars.html">static methods </a>。（静态方法是一种与定义它的类相关联的方法，而不是与任何对象相关联的方法。该类的每个实例都共享其静态方法。）这使你可以更轻松地在库中组织辅助方法;你可以在同一个接口中保留特定于接口的静态方法，而不是在单独的类中。以下示例定义一个静态方法，该方法获取与时区标识符对应的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html"><code>ZoneId</code></a> 对象;如果没有与给定标识符对应的 <code>ZoneId</code> 对象，它将使用系统默认时区。(因此，你可以简化方法 <code>getZonedDateTime</code>)：</p>
 
 <div class="codeblock"><pre>
 public interface TimeClient {
@@ -720,14 +720,14 @@ public interface TimeClient {
 }
 </pre></div>
 
-<p>与类中的静态方法一样，在方法签名开头使用 <code>static</code> 关键字，以指定接口中的方法定义是静态方法。接口中的所有方法声明（包括静态方法）都隐式 <code>public</code>，因此您可以省略 <code>public</code> 修饰符。</p><!-- *********************************************************************** -->
+<p>与类中的静态方法一样，在方法签名开头使用 <code>static</code> 关键字，以指定接口中的方法定义是静态方法。接口中的所有方法声明（包括静态方法）都隐式 <code>public</code>，因此你可以省略 <code>public</code> 修饰符。</p><!-- *********************************************************************** -->
 
 
 
 
 <h2><a name="existing_libraries">将默认方法集成到现有库中</a></h2>
 
-<p>默认方法使您能够向现有接口添加新函数式，并确保与为这些接口的旧版本编写的代码的二进制兼容性。特别是，默认方法使您能够将接受 lambda 表达式的方法添加为现有接口的参数。本节演示如何使用默认和静态方法增强 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html"><code>Comparator</code></a> 接口。</p> 
+<p>默认方法使你能够向现有接口添加新功能，并确保与为这些接口的旧版本编写的代码的二进制兼容性。特别是，默认方法使你能够将接受 lambda 表达式的方法添加为现有接口的参数。本节演示如何使用默认和静态方法增强 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html"><code>Comparator</code></a> 接口。</p> 
 
 <p>考虑 <a class="TutorialLink" target="_top" href="../../java/javaOO/QandE/creating-questions.html">Questions and Exercises: Classes</a> 中描述的 <code>Card</code> 和 <code>Deck</code> 类。此示例将 <a class="SourceLink" target="_blank" href="examples/defaultmethods/Card.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/Card.java'); return false;"><code>Card</code></a> 和 <a class="SourceLink" target="_blank" href="examples/defaultmethods/Deck.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/Deck.java'); return false;"><code>Deck</code></a> 类重写为接口。<code>Card</code> 接口包含两个 <code>enum</code> 类型(<code>Suit</code> 和 <code>Rank</code>)和两个抽象方法(<code>getSuit</code> 和 <code>getRank</code>)：</p>
  
@@ -782,7 +782,7 @@ public interface Card extends Comparable&lt;Card&gt; {
 }
 </pre></div>
 
-<p><code>Deck</code> 接口包含操作牌堆中的牌各种方法：</p>
+<p><code>Deck</code> 接口包含操作牌组中的牌各种方法：</p>
 
 <div class="codeblock"><pre>
 
@@ -842,9 +842,9 @@ public int compareTo(Card o) {
 }
 </pre></div>
 
-<p>方法 <code>compareTo</code> 使方法 <code>StandardDeck.sort()</code> 首先按花色对牌进行排序，然后按点数排序。</p>
+<p>方法 <code>compareTo</code> 使方法 <code>StandardDeck.sort()</code> 首先按花色对牌进行排序，然后按大小排序。</p>
 
-<p>如果你想先按点数排序，然后按花色排序怎么办？您需要实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html"><code>Comparator</code></a> 接口以指定新的排序条件，并使用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#sort-java.util.List-java.util.Comparator-"><code>sort(List&lt;T&gt; list, Comparator&lt;? super T&gt; c)</code></a>(包含 <code>Comparator</code> 参数的 <code>sort</code> 方法的版本)。您可以在类 <code>StandardDeck</code> 中定义以下方法：</p>
+<p>如果你想先按大小排序，然后按花色排序怎么办？你需要实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html"><code>Comparator</code></a> 接口以指定新的排序条件，并使用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#sort-java.util.List-java.util.Comparator-"><code>sort(List&lt;T&gt; list, Comparator&lt;? super T&gt; c)</code></a>(包含 <code>Comparator</code> 参数的 <code>sort</code> 方法的版本)。你可以在类 <code>StandardDeck</code> 中定义以下方法：</p>
 
 <div class="codeblock"><pre>
 public void sort(Comparator&lt;Card&gt; c) {
@@ -852,7 +852,7 @@ public void sort(Comparator&lt;Card&gt; c) {
 }  
 </pre></div>
 
-<p>使用此方法，您可以指定方法 <code>Collections.sort</code> 如何对 <code>Card</code> 类的实例进行排序。一种方法是实现 <code>Comparator</code> 接口，以指定您希望卡牌的排序方式。示例 <a class="SourceLink" target="_blank" href="examples/defaultmethods/SortByRankThenSuit.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/SortByRankThenSuit.java'); return false;"><code>SortByRankThenSuit</code></a> 执行此操作：
+<p>使用此方法，你可以指定方法 <code>Collections.sort</code> 如何对 <code>Card</code> 类的实例进行排序。一种方法是实现 <code>Comparator</code> 接口，以指定你希望卡牌的排序方式。示例 <a class="SourceLink" target="_blank" href="examples/defaultmethods/SortByRankThenSuit.java" onclick="showCode('../../displayCode.html', 'examples/defaultmethods/SortByRankThenSuit.java'); return false;"><code>SortByRankThenSuit</code></a> 执行此操作：
 </p>
 
 <div class="codeblock"><pre>
@@ -875,7 +875,7 @@ public class SortByRankThenSuit implements Comparator&lt;Card&gt; {
 }
 </pre></div>
 
-<p>以下调用首先按点数对扑克牌进行排序，然后按照花色进行排序：</p>
+<p>以下调用首先按大小对扑克牌进行排序，然后按照花色进行排序：</p>
 
 <div class="codeblock"><pre>
 StandardDeck myDeck = new StandardDeck();
@@ -883,9 +883,9 @@ myDeck.shuffle();
 myDeck.sort(new SortByRankThenSuit());
 </pre></div>
 
-<p>但是，这种方法过于冗长;如果你能指定要排序 <em>什么（what）</em>，而不是 <em>如何（how）</em> 排序，那会更好。假设您是编写 <code>Comparator</code> 接口的开发人员。您可以将哪些默认或静态方法添加到 <code>Comparator</code> 接口，以使其他开发人员能够更轻松地指定排序条件？</p>
+<p>但是，这种方法过于冗长;如果你能指定要排序 <em>what (什么)</em>，而不是 <em>how (如何)</em> 排序，那会更好。假设你是编写 <code>Comparator</code> 接口的开发人员。你可以将哪些默认或静态方法添加到 <code>Comparator</code> 接口，以使其他开发人员能够更轻松地指定排序条件？</p>
 
-<p>首先，假设您想按点数对扑克牌进行排序，而不考虑花色。您可以按如下方式调用 <code>StandardDeck.sort</code> 方法：</p>
+<p>首先，假设你想按大小对扑克牌进行排序，而不考虑花色。你可以按如下方式调用 <code>StandardDeck.sort</code> 方法：</p>
 
 <div class="codeblock"><pre>
 StandardDeck myDeck = new StandardDeck();
@@ -898,23 +898,23 @@ myDeck.sort(
 
 <p>由于接口 <code>Comparator</code> 是 <a class="TutorialLink" target="_top" href="../../java/javaOO/lambdaexpressions.html#approach6">functional interface</a>，因此可以使用 lambda 表达式作为 <code>sort</code> 方法的参数。在此示例中，lambda 表达式比较两个整数值。</p>
 
-<p>如果他们可以通过仅调用方法 <code>Card.getRank</code> 来创建 <code>Comparator</code> 实例，那么对于开发人员来说会更简单。特别是，如果您的开发人员可以创建一个 <code>Comparator</code> 实例，以比较可以从一个方法返回数值的任何对象时（如 <code>getValue</code> 或 <code>hashCode</code> ），这会很有用。<code>Comparator</code> 接口已通过静态方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#comparing-java.util.function.Function-java.util.Comparator-"><code>comparing</code></a> 增强了此功能：</p>
+<p>如果他们可以通过仅调用方法 <code>Card.getRank</code> 来创建 <code>Comparator</code> 实例，那么对于开发人员来说会更简单。特别是，如果你的开发人员可以创建一个 <code>Comparator</code> 实例，以比较可以从一个方法返回数值的任何对象时（如 <code>getValue</code> 或 <code>hashCode</code> ），这会很有用。<code>Comparator</code> 接口已通过静态方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#comparing-java.util.function.Function-java.util.Comparator-"><code>comparing</code></a> 增强了此功能：</p>
  
 <div class="codeblock"><pre>
 myDeck.sort(Comparator.comparing((card) -> card.getRank()));  
 </pre></div>
 
-<p>在此示例中，您可以使用 <a class="TutorialLink" target="_top" href="../../java/javaOO/methodreferences.html">方法引用（method reference）</a>：</p>
+<p>在此示例中，你可以使用 <a class="TutorialLink" target="_top" href="../../java/javaOO/methodreferences.html">method reference (方法引用)</a>：</p>
 
 <div class="codeblock"><pre>
 myDeck.sort(Comparator.comparing(Card::getRank));  
 </pre></div>
 
-<p>此调用更好地演示排序 <em>什么（what）</em> 而不是 <em>如何（how）</em> 进行排序。</p>
+<p>此调用更好地演示排序 <em>what (什么)</em> 而不是 <em>how (如何)</em> 进行排序。</p>
 
-<p><code>Comparator</code> 接口已通过其他版本的静态方法 <code>comparing</code> 进行了增强，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#comparingDouble-java.util.function.ToDoubleFunction-java.util.Comparator-"><code>comparingDouble</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#comparingLong-java.util.function.ToLongFunction-"><code>comparingLong</code></a>，使您能够创建比较其他数据类型的 <code>Comparator</code> 实例。</p>
+<p><code>Comparator</code> 接口已通过其他版本的静态方法 <code>comparing</code> 进行了增强，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#comparingDouble-java.util.function.ToDoubleFunction-java.util.Comparator-"><code>comparingDouble</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#comparingLong-java.util.function.ToLongFunction-"><code>comparingLong</code></a>，使你能够创建比较其他数据类型的 <code>Comparator</code> 实例。</p>
 
-<p>假设您的开发人员想要创建一个 <code>Comparator</code> 实例，该实例可以比较具有多个条件的对象。例如，你如何先按点数排序扑克牌，然后按花色排序？和以前一样，您可以使用 lambda 表达式来指定这些排序条件：</p>  
+<p>假设你的开发人员想要创建一个 <code>Comparator</code> 实例，该实例可以比较具有多个条件的对象。例如，你如何先按大小排序扑克牌，然后按花色排序？和以前一样，你可以使用 lambda 表达式来指定这些排序条件：</p>  
 
 <div class="codeblock"><pre>
 StandardDeck myDeck = new StandardDeck();
@@ -931,7 +931,7 @@ myDeck.sort(
 ); 
 </pre></div>
 
-<p>如果他们可以从一系列 <code>Comparator</code> 实例中构建 <code>Comparator</code> 实例，那么对于您的开发人员来说会更简单。<code>Comparator</code> 接口已使用默认方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#thenComparing-java.util.Comparator-"><code>thenComparing</code></a> 对此功能进行了增强：</p>
+<p>如果他们可以从一系列 <code>Comparator</code> 实例中构建 <code>Comparator</code> 实例，那么对于你的开发人员来说会更简单。<code>Comparator</code> 接口已使用默认方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#thenComparing-java.util.Comparator-"><code>thenComparing</code></a> 对此功能进行了增强：</p>
 
 <div class="codeblock"><pre>
 myDeck.sort(
@@ -940,9 +940,9 @@ myDeck.sort(
         .thenComparing(Comparator.comparing(Card::getSuit)));
 </pre></div>
 
-<p><code>Comparator</code> 接口已使用其他版本的默认方法 <code>thenComparing</code> 进行了增强(例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#thenComparingDouble-java.util.function.ToDoubleFunction-"><code>thenComparingDouble</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#thenComparingLong-java.util.function.ToLongFunction-"><code>thenComparingLong</code></a>)，使您能够构建比较其他数据类型的 <code>Comparator</code> 实例。</p>
+<p><code>Comparator</code> 接口已使用其他版本的默认方法 <code>thenComparing</code> 进行了增强(例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#thenComparingDouble-java.util.function.ToDoubleFunction-"><code>thenComparingDouble</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#thenComparingLong-java.util.function.ToLongFunction-"><code>thenComparingLong</code></a>)，使你能够构建比较其他数据类型的 <code>Comparator</code> 实例。</p>
  
-<p>假设您的开发人员想要创建一个 <code>Comparator</code> 实例，使他们能够以相反的顺序对对象集合进行排序。例如，你如何按照点数的降序排序扑克牌，从 Ace 到 2(而不是从 2 到 Ace)？和以前一样，您可以指定另一个 lambda 表达式。但是，如果您的开发人员可以通过调用方法来反转现有的 <code>Comparator</code>，则会更简单。<code>Comparator</code> 接口使用默认方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#reversed--"><code>reversed</code></a> 增强了此功能：</p>
+<p>假设你的开发人员想要创建一个 <code>Comparator</code> 实例，使他们能够以相反的顺序对对象集合进行排序。例如，你如何按照大小的降序排序扑克牌，从 Ace 到 2(而不是从 2 到 Ace)？和以前一样，你可以指定另一个 lambda 表达式。但是，如果你的开发人员可以通过调用方法来反转现有的 <code>Comparator</code>，则会更简单。<code>Comparator</code> 接口使用默认方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#reversed--"><code>reversed</code></a> 增强了此功能：</p>
 
 <div class="codeblock"><pre>
 myDeck.sort(
@@ -951,7 +951,7 @@ myDeck.sort(
         .thenComparing(Comparator.comparing(Card::getSuit)));
 </pre></div>
        
-<p>此示例演示如何使用默认方法，静态方法，lambda 表达式和方法引用增强 <code>Comparator</code> 接口，以创建更具表现力的库方法，其函数式程序员可以通过查看它们的调用方式快速推断出来。使用这些构造来增强库中的接口。</p>     
+<p>此示例演示如何使用默认方法，静态方法，lambda 表达式和方法引用增强 <code>Comparator</code> 接口，以创建更具表现力的库方法，其功能程序员可以通过查看它们的调用方式快速推断出来。使用这些构造来增强库中的接口。</p>     
     
 
         </div>

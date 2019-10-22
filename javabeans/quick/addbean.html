@@ -487,26 +487,26 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">JavaBeans(TM)</a>&gt;<a href="index.html" target="_top">快速开始</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="wiring.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../writing/index.html">Next&nbsp;»</a>
+                <a target="_top" href="wiring.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../writing/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用第三方 Bean</h1></div>
             <div id="PageContent">
 
-<p>几乎所有代码都可以打包为 bean。到目前为止，您看到的 bean 都是可视化 bean，但 bean 可以在没有可见组件的情况下提供功能。</p>
-<p>JavaBeans 的强大之处在于您可以使用软件组件而无需编写它们或了解它们的实现。</p>
+<p>几乎所有代码都可以打包为 bean。到目前为止，你看到的 bean 都是可视化 bean，但 bean 可以在没有可见组件的情况下提供功能。</p>
+<p>JavaBeans 的强大之处在于你可以使用软件组件而无需编写它们或了解它们的实现。</p>
 <p>此页面描述了如何将 JavaBean 添加到应用程序并利用其功能。</p>
 <h2>将 Bean 添加到 NetBeans Palette</h2>
 <p>下载 <a class="SourceLink" target="_blank" href="BumperSticker.jar" onclick="showCode('../../displayCode.html', 'BumperSticker.jar'); return false;"><code>JavaBean 组件的一个例子 <code>BumperSticker</code></code></a>。Bean 作为 JAR 文件分发。将文件保存在计算机上的某个位置。<code>BumperSticker</code> 是图形组件，并公开了一个方法 <code>go()</code>，它启动了一个动画。</p>
 <p>要将 <code>BumperSticker</code> 添加到 NetBeans 选项板，请从 NetBeans 菜单中选择  <b>Tools&gt;Palette&gt;Swing/AWT Components</b>。</p>
-<center><img src="../../figures/javabeans/nb-palette-manager.png" width="475" height="475" align="bottom" alt="NetBeans 面板管理器" /></center><p>单击 <b>Add from JAR...</b> 按钮。NetBeans 要求您找到包含要添加到面板的 Bean 的 JAR 文件。找到刚刚下载的文件，然后单击 <b>Next</b>。</p>
-<center><img src="../../figures/javabeans/nb-palette-install-1.png" width="500" height="500" align="bottom" alt="找到 JAR 文件" /></center><p>NetBeans 显示 JAR 文件中的类列表。选择您希望添加到面板中的那些。在这种情况下，选择 <b>BumperSticker</b> 并单击 <b>Next</b>。</p>
+<center><img src="../../figures/javabeans/nb-palette-manager.png" width="475" height="475" align="bottom" alt="NetBeans 面板管理器" /></center><p>单击 <b>Add from JAR...</b> 按钮。NetBeans 要求你找到包含要添加到面板的 Bean 的 JAR 文件。找到刚刚下载的文件，然后单击 <b>Next</b>。</p>
+<center><img src="../../figures/javabeans/nb-palette-install-1.png" width="500" height="500" align="bottom" alt="找到 JAR 文件" /></center><p>NetBeans 显示 JAR 文件中的类列表。选择你希望添加到面板中的那些。在这种情况下，选择 <b>BumperSticker</b> 并单击 <b>Next</b>。</p>
 <center><img src="../../figures/javabeans/nb-palette-install-2.png" width="500" height="500" align="bottom" alt="选择要添加到面板的 bean" /></center><p>最后，NetBeans 需要知道面板的哪个部分将接收新的 bean。选择 <b>Beans</b> 点击 <b>Finish</b> 完成。</p>
 <center><img src="../../figures/javabeans/nb-palette-install-3.png" width="500" height="500" align="bottom" alt="选择面板部分" /></center><p>单击 <b>Close</b> 以使 <b>Palette Manager</b> 窗口消失。现在看看面板。<b>Beans</b> 部分中有 <code>BumperSticker</code>。</p>
 <h2>使用新的 JavaBean</h2>
 <p>继续将 <code>BumperSticker</code> 拖出面板并进入窗体。</p>
-<center><img src="../../figures/javabeans/BumperSticker.png" width="433" height="396" align="bottom" alt="我们都喜欢 Java Tutorial" /></center><p>您可以像处理任何其他 bean 一样使用 <code>BumperSticker</code> 实例。要查看此操作，请将另一个按钮拖到窗体中。这个按钮将启动 <code>BumperSticker</code> 的动画。</p>
-<center><img src="../../figures/javabeans/BumperSticker-button.png" width="433" height="396" align="bottom" alt="向表单添加另一个按钮" /></center><p>将按钮连接到 <code>BumperSticker</code> bean，就像之前将第一个按钮连接到文本字段一样。</p>
+<center><img src="../../figures/javabeans/BumperSticker.png" width="433" height="396" align="bottom" alt="我们都喜欢 Java Tutorial" /></center><p>你可以像处理任何其他 bean 一样使用 <code>BumperSticker</code> 实例。要查看此操作，请将另一个按钮拖到窗体中。这个按钮将启动 <code>BumperSticker</code> 的动画。</p>
+<center><img src="../../figures/javabeans/BumperSticker-button.png" width="433" height="396" align="bottom" alt="向表单添加另一个按钮" /></center><p>将按钮连接到 <code>BumperSticker</code> bean，就像之前将第一个按钮连接到文本框一样。</p>
 <ol>
 <li>首先单击 <b>Connection Mode</b> 按钮。</li>
 <li>单击第二个按钮。NetBeans 为其提供了红色轮廓。</li>
@@ -514,7 +514,7 @@
 <li>单击 <b>action</b> 旁边的 <b>+</b>，然后选择 <b>actionPerformed</b>。单击 <b>Next &gt;</b>。</li>
 <li>选择 <b>Method Call</b>，然后从列表中选择 <b>go()</b>。点击 <b>Finish</b>。</li>
 </ol>
-<p>如果您不确定任何步骤，请查看 <a href="wiring.html">Wiring the Application</a>。这里的过程非常相似。</p>
+<p>如果你不确定任何步骤，请查看 <a href="wiring.html">Wiring the Application</a>。这里的过程非常相似。</p>
 <p>再次运行该应用程序。单击第二个按钮时，<code>BumperSticker</code> 组件会激活心脏的颜色。</p>
 <p>再次注意，如何在不编写任何代码的情况下生成正常运行的应用程序。</p>
 <center><img src="../../figures/javabeans/SnapApp-2.png" width="446" height="342" align="bottom" alt="快照应用程序" /></center>

@@ -472,7 +472,7 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">类</a></div>
-<div class="linkAHEAD"><a href="classNew.html">获取类对象</a></div>
+<div class="linkAHEAD"><a href="classNew.html">获取 Class 对象</a></div>
 <div class="linkAHEAD"><a href="classModifiers.html">检查类修饰符和类型</a></div>
 <div class="linkAHEAD"><a href="classMembers.html">发现类成员</a></div>
 <div class="nolinkAHEAD">故障排除</div>
@@ -487,7 +487,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">类</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="classMembers.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../member/index.html">Next&nbsp;»</a>
+                <a target="_top" href="classMembers.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../member/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>故障排除</h1></div>
@@ -495,7 +495,7 @@
 
 <p>以下示例显示了在反映类时可能遇到的典型错误。</p>
 <h2>编译器警告："Note: ... uses unchecked or unsafe operations"</h2>
-<p>调用方法时，将检查参数值的类型并进行转换。<a class="SourceLink" target="_blank" href="example/ClassWarning.java" onclick="showCode('../../displayCode.html', 'example/ClassWarning.java'); return false;"><code><code>ClassWarning</code></code></a> 调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getMethod-java.lang.String-java.lang.Class...-"><code>getMethod()</code></a> 以产生典型的未经检查的转换警告：</p>
+<p>当一个方法被调用时，参数值的类型被检查并且可能被转换。<a class="SourceLink" target="_blank" href="example/ClassWarning.java" onclick="showCode('../../displayCode.html', 'example/ClassWarning.java'); return false;"><code><code>ClassWarning</code></code></a> 调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getMethod-java.lang.String-java.lang.Class...-"><code>getMethod()</code></a> 以产生典型的未经检查的转换警告：</p>
 <div class="codeblock"><pre>
 
 import java.lang.reflect.Method;
@@ -524,23 +524,23 @@ Method m = c.getMethod("m");  // warning
                       ^
 1 warning
 </pre></div>
-<p>许多库方法已经使用泛型声明进行了改进，包括 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a> 中的几个。由于 <code>c</code> 被声明为 <em>raw (原始)</em> 类型(没有类型参数)且相应的参数 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getMethod-java.lang.String-java.lang.Class...-"><code>getMethod()</code></a> 是参数化类型，发生未经检查的转换。编译器需要生成警告。(参见 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/index.html"><em>The Java Language Specification, Java SE 7 Edition</em></a> 中的 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html#jls-5.1.9">Unchecked Conversion</a> 和 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html#jls-5.3">Method Invocation Conversion</a> 部分。)</p>
-<p>有两种可能的解决方案。修改 <code>c</code> 的声明以包含适当的泛型类型更为可取。在这种情况下，声明应该是：</p>
+<p>许多库方法已经使用泛型声明进行了改进，包括 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>Class</code></a> 中的几个。由于 <code>c</code> 被声明为 <em>raw (原始)</em> 类型(没有类型形参)且 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getMethod-java.lang.String-java.lang.Class...-"><code>getMethod()</code></a> 的相应的参数是参数化类型，所以发生未经检查的转换。编译器需要生成警告。(参见 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/index.html"><em>The Java Language Specification, Java SE 7 Edition</em></a> 中的 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html#jls-5.1.9">Unchecked Conversion</a> 和 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html#jls-5.3">Method Invocation Conversion</a> 部分。)</p>
+<p>有两种可能的解决方案。比较好的方案是修改 <code>c</code> 的声明以包含适当的泛型类型。在这种情况下，声明应该是：</p>
 <div class="codeblock"><pre>
 Class&lt;?&gt; c = warn.getClass();
 </pre></div>
-<p>或者，可以在有问题的语句之前的使用预定义注解 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/SuppressWarnings.html"><code>@SuppressWarnings</code></a> 明确禁止警告。</p>
+<p>或者，可以在有问题的语句之前的使用预定义注解 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/SuppressWarnings.html"><code>@SuppressWarnings</code></a> 明确抑制警告。</p>
 <div class="codeblock"><pre>
 Class c = ClassWarning.class;
 @SuppressWarnings("unchecked")
 Method m = c.getMethod("m");  
 // warning gone
 </pre></div>
-<div class="note"><hr /><strong>提示:</strong>&nbsp;作为一般原则，警告不应该被忽略，因为它们可能表明存在错误。应适当使用参数化声明。如果这不可能(可能是因为应用程序必须与库供应商的代码交互)，请使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/SuppressWarnings.html"><code>@SuppressWarnings</code></a> 注解违规行。
+<div class="note"><hr /><strong>提示:</strong>&nbsp;作为一般原则，警告不应该被忽略，因为它们可能表明存在错误。应适当使用参数化声明。如果这不可能(可能是因为应用程序必须与库供应商的代码交互)，请使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/SuppressWarnings.html"><code>@SuppressWarnings</code></a> 注解违规的行。
 <hr /></div>
 <h2>构造函数不可访问时的 InstantiationException</h2>
 <p>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#newInstance--"><code>Class.newInstance()</code></a>如果尝试创建类的新实例并且零参数构造函数不可见时，将抛出 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/InstantiationException.html"><code>InstantiationException</code></a> 。<a class="SourceLink" target="_blank" href="example/ClassTrouble.java" onclick="showCode('../../displayCode.html', 'example/ClassTrouble.java'); return false;"><code><code>ClassTrouble</code></code></a> 示例说明了生成的堆栈跟踪。</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#newInstance--"><code>Class.newInstance()</code></a>如果尝试创建类的新实例，并且类的无参构造函数不可见时，将抛出 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/InstantiationException.html"><code>InstantiationException</code></a> 。<a class="SourceLink" target="_blank" href="example/ClassTrouble.java" onclick="showCode('../../displayCode.html', 'example/ClassTrouble.java'); return false;"><code><code>ClassTrouble</code></code></a> 示例说明了生成的堆栈跟踪。</p>
 <div class="codeblock"><pre>
 
 class Cls {
@@ -574,7 +574,7 @@ java.lang.IllegalAccessException: Class ClassTrouble can not access a member of
         at ClassTrouble.main(ClassTrouble.java:9)
 </pre></div>
 <p>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#newInstance--"><code>Class.newInstance()</code></a>与 <code>new</code> 关键字的行为非常相似，并且会因 <code>new</code> 失败相同的原因而失败。反射中的典型解决方案是利用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AccessibleObject.html"><code>java.lang.reflect.AccessibleObject</code></a> 类，它提供了抑制访问控制检查的能力；但是，这种方法不起作用，因为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>java.lang.Class</code></a> 没有继承 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AccessibleObject.html"><code>AccessibleObject</code></a>。唯一的解决方案是修改代码以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html#newInstance-java.lang.Object...-"><code>Constructor.newInstance()</code></a>，它确实继承了 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AccessibleObject.html"><code>AccessibleObject</code></a>。</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#newInstance--"><code>Class.newInstance()</code></a>与 <code>new</code> 关键字的行为非常相似，并且会因 <code>new</code> 失败的相同原因而失败。反射中的典型解决方案是利用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AccessibleObject.html"><code>java.lang.reflect.AccessibleObject</code></a> 类，它提供了抑制访问控制检查的能力；但是，这种方案不起作用，因为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html"><code>java.lang.Class</code></a> 没有继承 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AccessibleObject.html"><code>AccessibleObject</code></a>。唯一的解决方案是修改代码以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html#newInstance-java.lang.Object...-"><code>Constructor.newInstance()</code></a>，它确实继承了 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AccessibleObject.html"><code>AccessibleObject</code></a>。</p>
 <div class="note"><hr /><strong>提示:</strong>&nbsp;通常，出于 <a href="../member/index.html">Members</a> 课程中的 <a href="../member/ctorInstance.html">Creating New Class Instances</a> 部分中描述的原因，创建新类实例最好使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html#newInstance-java.lang.Object...-"><code>Constructor.newInstance()</code></a> 。
 <hr /></div>
 <p>使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html#newInstance-java.lang.Object...-"><code>Constructor.newInstance()</code></a> 的潜在问题的其他示例可以在 <a href="../member/index.html">Members</a> 课程的 <a href="../member/ctorTrouble.html">Constructor Troubleshooting</a> 部分中找到。</p>

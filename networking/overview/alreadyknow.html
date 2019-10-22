@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>您可能已经知道的 Java 中的网络(Java™ 教程-Java Tutorials 中文版&gt;自定义网络&gt;网络概述)
+        <title>你可能已经知道的 Java 中的网络(Java™ 教程-Java Tutorials 中文版&gt;自定义网络&gt;网络概述)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This networking Java tutorial describes networking capabilities of the Java platform, working with URLs, sockets, datagrams, and cookies" />
@@ -472,7 +472,7 @@
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
             <div class="linkLESSON"><a href="index.html">网络概述</a></div>
-<div class="nolinkAHEAD">您可能已经知道的 Java 中的网络</div>
+<div class="nolinkAHEAD">你可能已经知道的 Java 中的网络</div>
 <div class="linkAHEAD"><a href="networking.html">网络基础知识</a></div>
 </div>
     </div>
@@ -485,22 +485,22 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">网络概述</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="networking.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="networking.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>您可能已经知道的 Java 中的网络</h1></div>
+            <div id="PageTitle"><h1>你可能已经知道的 Java 中的网络</h1></div>
             <div id="PageContent">
 
-<p><em>networking (网络)</em> 这个词在许多程序员的心中引起了恐惧。不要害怕！使用 Java 环境中提供的网络功能非常简单。事实上，您可能已经使用网络甚至没有意识到它！</p>
+<p><em>networking (网络)</em> 这个词在许多程序员的心中引起了恐惧。不要害怕！使用 Java 环境中提供的网络功能非常简单。事实上，你可能已经使用网络甚至没有意识到它！</p>
 <h2>从网络加载 applet</h2>
-<p>如果您可以访问支持 Java 的浏览器，那么毫无疑问您已经执行了许多小程序。您运行的 applet 是由 HTML 文件中的特殊标记引用的 <code>&lt;APPLET&gt;</code> 标签。Applet 可以位于任何位置，无论是在本地计算机上还是在 Internet 上的某个位置。applet 的位置对用户来说是完全不可见的。但是，applet 的位置在 <code>&lt;APPLET&gt;</code> 标记内编码。浏览器解码此信息，找到 applet 并运行它。如果 applet 位于您自己以外的某台计算机上，则浏览器必须先下载该 applet 才能运行。</p>
-<p>这是您从 Java 开发环境访问 Internet 的最高级别。其他人花时间编写了一个浏览器，可以完成连接到网络和从中获取数据的所有繁琐工作，从而使您可以从世界上任何地方运行 applet。</p>
+<p>如果你可以访问支持 Java 的浏览器，那么毫无疑问你已经执行了许多小程序。你运行的 applet 是由 HTML 文件中的特殊标记引用的  <code>&lt;APPLET&gt;</code> 标签。Applet 可以位于任何位置，无论是在本地计算机上还是在 Internet 上的某个位置。applet 的位置对用户来说是完全不可见的。但是，applet 的位置在 <code>&lt;APPLET&gt;</code> 标记内编码。浏览器解码此信息，找到 applet 并运行它。如果 applet 位于你自己以外的某台计算机上，则浏览器必须先下载该 applet 才能运行。</p>
+<p>这是你从 Java 开发环境访问 Internet 的最高级别。其他人花时间编写了一个浏览器，可以完成连接到网络和从中获取数据的所有繁琐工作，从而使你可以从世界上任何地方运行 applet。</p>
 <p><strong>更多信息：</strong><br />
-<a class="TutorialLink" target="_top" href="../../getStarted/cupojava/index.html">"Hello World!" 应用</a>向您展示如何编写第一个 applet 并运行它。</p>
+<a class="TutorialLink" target="_top" href="../../getStarted/cupojava/index.html">"Hello World!" 应用</a>向你展示如何编写第一个 applet 并运行它。</p>
 <p><a class="TutorialLink" target="_top" href="../../deployment/applet/index.html">Java Applets</a> 跟踪描述了如何从 A 到 Z 编写 Java applet。</p>
 <h2>从 URL 加载图像</h2>
-<p>如果您已经冒险编写自己的 Java applet 和应用程序，您可能会遇到名为 URL 的 java.net 包中的一个类。此类表示统一资源定位符，是网络上某些资源的地址。您的 applet 和应用程序可以使用 URL 来引用甚至连接到网络上的资源。例如，要从网络加载图像，Java 程序必须首先创建一个包含图像地址的 URL。</p>
-<p>这是您可以与互联网进行的下一个最高级别的互动您的 Java 程序获取它想要的地址，为它创建 URL，然后使用 Java 开发环境中的一些现有函数来完成连接到网络和检索资源的繁重工作。</p>
+<p>如果你已经冒险编写自己的 Java applet 和应用程序，你可能会遇到名为 URL 的 java.net 包中的一个类。此类表示统一资源定位符，是网络上某些资源的地址。你的 applet 和应用程序可以使用 URL 来引用甚至连接到网络上的资源。例如，要从网络加载图像，Java 程序必须首先创建一个包含图像地址的 URL。</p>
+<p>这是你可以与互联网进行的下一个最高级别的互动  你的 Java 程序获取它想要的地址，为它创建 URL，然后使用 Java 开发环境中的一些现有函数来完成连接到网络和检索资源的繁重工作。</p>
 <p><strong>更多信息：</strong><br />
 <a class="TutorialLink" target="_top" href="../../uiswing/components/icon.html">如何使用图标</a>显示如何在拥有 URL 时将图像加载到 Java 程序(无论是 applet 还是应用程序)中。在加载图像之前，必须创建一个 URL 对象，其中包含资源的地址。</p>
 <p>

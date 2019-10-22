@@ -490,16 +490,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">介绍</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="run.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="checklist.html">Next&nbsp;»</a>
+                <a target="_top" href="run.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="checklist.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>国际化示例程序</h1></div>
             <div id="PageContent">
 
-<p>如果您查看国际化的源代码，您会发现硬编码的英文消息已被移除。由于消息不再是硬编码的，并且因为语言代码是在运行时指定的，因此可以在全球范围内分发相同的可执行文件。本地化不需要重新编译。该程序已国际化。</p>
-<p>您可能想知道消息的文本发生了什么，或者语言和国家代码是什么意思。别担心。当您逐步完成示例程序的国际化过程时，您将了解这些概念。</p>
+<p>如果你查看国际化的源代码，你会发现硬编码的英文消息已被移除。由于消息不再是硬编码的，并且因为语言代码是在运行时指定的，因此可以在全球范围内分发相同的可执行文件。本地化不需要重新编译。该程序已国际化。</p>
+<p>你可能想知道消息的文本发生了什么，或者语言和国家代码是什么意思。别担心。当你逐步完成示例程序的国际化过程时，你将了解这些概念。</p>
 <h2>1. 创建属性文件</h2>
-<p>属性文件存储有关程序或环境特征的信息。属性文件是纯文本格式。您可以使用几乎任何文本编辑器创建该文件。</p>
+<p>属性文件存储有关程序或环境特征的信息。属性文件是纯文本格式。你可以使用几乎任何文本编辑器创建该文件。</p>
 <p>在示例中，属性文件存储要显示的消息的可翻译文本。在程序国际化之前，该文本的英文版本在 <code>System.out.println</code> 语句中进行了硬编码。默认属性文件，名为 <code>MessagesBundle.properties</code>，包含以下行：</p>
 <div class="codeblock"><pre>
 greetings = Hello
@@ -512,7 +512,7 @@ greetings = Bonjour.
 farewell = Au revoir.
 inquiry = Comment allez-vous?
 </pre></div>
-<p>请注意，等号右侧的值已被翻译，但左侧的键未更改。这些键不能更改，因为它们将在您的程序获取翻译文本时被引用。</p>
+<p>请注意，等号右侧的值已被翻译，但左侧的键未更改。这些键不能更改，因为它们将在你的程序获取翻译文本时被引用。</p>
 <p>属性文件的名称很重要。例如，<code>MessagesBundle_fr_FR.properties</code> 文件的名称包含 <code>fr</code> 语言代码和 <code>FR</code> 国家/地区代码。创建 <code>Locale</code> 对象时也会使用这些代码。</p>
 <h2>2. 定义 Locale</h2>
 <p><code>Locale</code> 对象标识特定语言和国家/地区。以下语句定义了 <code>Locale</code>，其语言为英语，国家/地区为美国：</p>
@@ -530,9 +530,9 @@ String language = new String(args[0]);
 String country = new String(args[1]);
 currentLocale = new Locale(language, country);
 </pre></div>
-<p><code>Locale</code> 对象只是标识符。定义 <code>Locale</code> 后，将其传递给执行有用任务的其他对象，例如格式化日期和数字。这些对象是 <em class="Book">locale-sensitive (区域设置敏感的)</em>，因为它们的行为根据 <code>Locale</code> 而变化。<code>ResourceBundle</code> 是区域设置敏感对象的示例。</p>
+<p><code>Locale</code> 对象只是标识符。定义 <code>Locale</code> 后，将其传递给执行有用任务的其他对象，例如格式化日期和数字。这些对象是 <em class="Book">locale-sensitive (语言环境敏感的)</em>，因为它们的行为根据 <code>Locale</code> 而变化。<code>ResourceBundle</code> 是语言环境敏感对象的示例。</p>
 <h2>3. 创建一个 ResourceBundle</h2>
-<p><code>ResourceBundle</code> 对象包含特定于语言环境的对象。您使用 <code>ResourceBundle</code> 对象来隔离区域设置敏感数据，例如可翻译文本。在示例程序中，<code>ResourceBundle</code> 由包含我们要显示的消息文本的属性文件支持。</p>
+<p><code>ResourceBundle</code> 对象包含特定于语言环境的对象。你使用 <code>ResourceBundle</code> 对象来隔离语言环境敏感数据，例如可翻译文本。在示例程序中，<code>ResourceBundle</code> 由包含我们要显示的消息文本的属性文件支持。</p>
 <p><code>ResourceBundle</code> 创建如下：</p>
 <div class="codeblock"><pre>
 messages = ResourceBundle.getBundle(&quot;MessagesBundle&quot;, currentLocale);
@@ -544,15 +544,15 @@ MessagesBundle_fr_FR.properties
 MessagesBundle_de_DE.properties
 </pre></div>
 <p><code>Locale</code> 是 <code>getBundle</code> 的第二个参数，指定选择哪个 <code>MessagesBundle</code> 文件。创建 <code>Locale</code> 后，语言代码和国家/地区代码将传递给其构造函数。请注意，在属性文件的名称中，语言和国家/地区代码跟在 <code>MessagesBundle</code> 之后。</p>
-<p>现在，您只需从 <code>ResourceBundle</code> 获取已翻译的消息。</p>
+<p>现在，你只需从 <code>ResourceBundle</code> 获取已翻译的消息。</p>
 <h2>4. 从 ResourceBundle 获取文本</h2>
 <p>属性文件包含键值对。值包含程序将显示的已翻译文本。使用 <code>getString</code> 方法从 <code>ResourceBundle</code> 获取已翻译的消息时要指定键。例如，要获取由 greetings 键标识的消息，请按如下方式调用 <code>getString</code>：</p>
 <div class="codeblock"><pre>
 String msg1 = messages.getString("greetings");
 </pre></div>
-<p>示例程序使用键 <code>greetings</code>，因为它反映了消息的内容，但它可能使用了另一个 <code>String</code>，例如 <code>s1</code> 或 <code>msg1</code>。只需记住，键在程序中是硬编码的，并且必须存在于属性文件中。如果您的翻译人员意外修改了属性文件中的键，<code>getString</code> 将无法找到这些消息。</p>
+<p>示例程序使用键 <code>greetings</code>，因为它反映了消息的内容，但它可能使用了另一个 <code>String</code>，例如 <code>s1</code> 或 <code>msg1</code>。只需记住，键在程序中是硬编码的，并且必须存在于属性文件中。如果你的翻译人员意外修改了属性文件中的键，<code>getString</code> 将无法找到这些消息。</p>
 <h2>结论</h2>
-<p>就是这样。如您所见，国际化程序并不太难。它需要一些规划和一些额外的编码，但好处是巨大的。为了向您提供国际化过程的概述，本课程中的示例程序有意保持简单。在阅读下面的课程时，您将了解 Java 编程语言的更高级的国际化功能。</p>
+<p>就是这样。如你所见，国际化程序并不太难。它需要一些规划和一些额外的编码，但好处是巨大的。为了向你提供国际化过程的概述，本课程中的示例程序有意保持简单。在阅读下面的课程时，你将了解 Java 编程语言的更高级的国际化功能。</p>
 
 
         </div>

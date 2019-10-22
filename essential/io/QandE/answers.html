@@ -399,18 +399,18 @@
         <div id="PageContent">
 
 <h2>问题</h2>
-<p>问题1. 您将使用什么类和方法来读取位于大文件末尾附近的已知位置的一些数据？</p>
-<p>答案1. <code>Files.newByteChannel</code> 返回 <code>SeekableByteChannel</code> 的实例，它允许您读取(或写入)文件中的任何位置。</p>
+<p>问题1. 你将使用什么类和方法来读取位于大文件末尾附近的已知位置的一些数据？</p>
+<p>答案1. <code>Files.newByteChannel</code> 返回 <code>SeekableByteChannel</code> 的实例，它允许你读取(或写入)文件中的任何位置。</p>
 <p>问题2. 调用 <code>format</code> 时，表示新行的最佳方法是什么？</p>
 <p>答案2. 使用 <code>%n</code> 转换  <code>\n</code> 转义不是平台独立的！</p>
-<p>问题3. 您如何确定文件的 MIME 类型？</p>
+<p>问题3. 你如何确定文件的 MIME 类型？</p>
 <p>答案3. <code>Files.probeContentType</code> 方法使用平台的基础文件类型检测器来计算和返回 MIME 类型。<br /></p>
-<p>问题4. 您将使用什么方法来确定文件是否是符号链接？</p>
-<p>答案4. 您将使用 <code>Files.isSymbolicLink</code> 方法。</p>
+<p>问题4. 你将使用什么方法来确定文件是否是符号链接？</p>
+<p>答案4. 你将使用 <code>Files.isSymbolicLink</code> 方法。</p>
 <h2>练习</h2>
-<p>练习1. 编写一个示例，计算特定字符（例如 <code>e</code>）出现在文件中的次数。可以在命令行中指定该字符。您可以使用 <a class="SourceLink" target="_blank" href="../examples/xanadu.txt" onclick="showCode('../../../displayCode.html', '../examples/xanadu.txt'); return false;"><code>xanadu.txt</code></a> 作为输入文件。</p>
+<p>练习1. 编写一个示例，计算特定字符（例如 <code>e</code>）出现在文件中的次数。可以在命令行中指定该字符。你可以使用 <a class="SourceLink" target="_blank" href="../examples/xanadu.txt" onclick="showCode('../../../displayCode.html', '../examples/xanadu.txt'); return false;"><code>xanadu.txt</code></a> 作为输入文件。</p>
 <p>答案1. 解决方案请参阅 <a class="SourceLink" target="_blank" href="CountLetter.java" onclick="showCode('../../../displayCode.html', 'CountLetter.java'); return false;"><code>CountLetter.java</code></a>。</p>
-<p>练习2. 文件 <a class="SourceLink" target="_blank" href="datafile" onclick="showCode('../../../displayCode.html', 'datafile'); return false;"><code>datafile</code></a> 以单个 <code>long</code> 开头，它告诉您单个 <code>int</code> 数据在同一个文件中的偏移量。编写一个获取 <code>int</code> 数据的程序。<code>int</code> 数据是多少？</p>
+<p>练习2. 文件 <a class="SourceLink" target="_blank" href="datafile" onclick="showCode('../../../displayCode.html', 'datafile'); return false;"><code>datafile</code></a> 以单个 <code>long</code> 开头，它告诉你单个 <code>int</code> 数据在同一个文件中的偏移量。编写一个获取 <code>int</code> 数据的程序。<code>int</code> 数据是多少？</p>
 <p>答案2. <code>123</code>。解决方案请参阅 <a class="SourceLink" target="_blank" href="FindInt.java" onclick="showCode('../../../displayCode.html', 'FindInt.java'); return false;"><code>FindInt.java</code></a>。</p>
 
 

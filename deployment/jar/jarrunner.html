@@ -506,7 +506,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="jarclassloader.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">Next&nbsp;»</a>
+                <a target="_top" href="jarclassloader.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>JarRunner 类</h1></div>
@@ -536,7 +536,7 @@ public static void main(String[] args) {
 JarClassLoader cl = new JarClassLoader(url);
 </pre></div>
 <p>正如我们在上一节中所看到的那样，JarRunner 通过 <tt>JarClassLoader</tt> 进入 JAR 处理 API。</p>
-<p>传递给 <tt>JarClassLoader</tt> 构造函数的 URL 是您要运行的 JAR 捆绑应用程序的 URL。接下来，JarRunner 调用类加载器的 <tt>getMainClassName</tt> 方法来识别应用程序的入口点类：</p>
+<p>传递给 <tt>JarClassLoader</tt> 构造函数的 URL 是你要运行的 JAR 打包应用程序的 URL。接下来，JarRunner 调用类加载器的 <tt>getMainClassName</tt> 方法来识别应用程序的入口点类：</p>
 <div class="codeblock"><pre>
 String name = null;
 try {

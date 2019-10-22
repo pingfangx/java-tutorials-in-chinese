@@ -515,7 +515,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="threads.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="sleep.html">Next&nbsp;»</a>
+                <a target="_top" href="threads.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="sleep.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>定义和启动一个线程</h1></div>
@@ -557,7 +557,7 @@ public class HelloThread extends Thread {
 </li>
 </ul>
 <p>请注意，两个示例都调用 <code>Thread.start</code> 以启动新线程。</p>
-<p>您应该使用哪一种习惯用法？第一种使用 <code>Runnable</code> 对象的习惯用法更为通用，因为 <code>Runnable</code> 对象可以继承 <code>Thread</code> 以外的类。第二种习惯用法在简单的应用程序中更容易使用，但受限于您的任务类必须是 <code>Thread</code> 的后代类这一事实。本课重点介绍第一种方法，该方法将 <code>Runnable</code> 任务与执行任务的 <code>Thread</code> 对象分开。这种方法不仅更灵活，而且适用于后面介绍的高级线程管理 API。</p>
+<p>你应该使用哪一种习惯用法？第一种使用 <code>Runnable</code> 对象的习惯用法更为通用，因为 <code>Runnable</code> 对象可以继承 <code>Thread</code> 以外的类。第二种习惯用法在简单的应用程序中更容易使用，但受限于你的任务类必须是 <code>Thread</code> 的后代类这一事实。本课重点介绍第一种方法，该方法将 <code>Runnable</code> 任务与执行任务的 <code>Thread</code> 对象分开。这种方法不仅更灵活，而且适用于后面介绍的高级线程管理 API。</p>
 <p><code>Thread</code> 类定义了许多对线程管理有用的方法。这些方法包括 <code>static</code> 方法，它们提供有关调用方法的线程的信息或影响其状态。其他方法是从管理线程及 <code>Thread</code> 对象的其他线程调用的。我们将在以下部分中研究其中一些方法。</p>
 
 

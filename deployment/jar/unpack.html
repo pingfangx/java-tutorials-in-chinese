@@ -506,7 +506,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="view.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="update.html">Next&nbsp;»</a>
+                <a target="_top" href="view.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="update.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>提取 JAR 文件的内容</h1></div>
@@ -518,14 +518,14 @@ jar xf <i>jar-file [archived-file(s)]</i>
 </pre></div>
 <p>让我们看看这个命令中的选项和参数：</p>
 <ul>
-<li><tt>x</tt> 选项表示您要从 JAR 存档中 <em>extract (提取)</em> 文件。</li>
+<li><tt>x</tt> 选项表示你要从 JAR 存档中 <em>extract (提取)</em> 文件。</li>
 <li><tt>f</tt> 选项表示要从中提取文件的 JAR <em>file (文件)</em> 是在命令行中指定的，而不是通过 stdin 指定的。</li>
 <li><tt>jar-file</tt> 参数是从中提取文件的 JAR 文件的文件名(或路径和文件名)。</li>
 <li><tt>archived-file(s)</tt> 是一个可选参数，由要从存档中提取的文件的空格分隔列表组成。如果此参数不存在，Jar 工具将提取存档中的所有文件。</li>
 </ul>
 <p>像往常一样，命令中出现 <tt>x</tt> 和 <tt>f</tt> 选项的顺序无关紧要，但它们之间不能有空格。</p>
 <p>在提取文件时，Jar 工具会复制所需的文件并将它们写入当前目录，从而重现文件在存档中的目录结构。原始 JAR 文件保持不变。</p>
-<div class="note"><hr /><strong>Caution:</strong> 当它提取文件时，Jar 工具将覆盖与提取文件具有相同路径名的任何现有文件。
+<div class="note"><hr /><strong>警告:</strong>&nbsp;当它提取文件时，Jar 工具将覆盖与提取文件具有相同路径名的任何现有文件。
 <hr /></div>
 <h2>一个例子</h2>
 <p>让我们从前面部分中使用的 TicTacToe JAR 文件中提取一些文件。回想一下 <tt>TicTacToe.jar</tt> 的内容是：</p>
@@ -545,7 +545,7 @@ images/
 images/cross.gif
 images/not.gif
 </pre></div>
-<p>假设您要提取 <tt>TicTacToe</tt> 类文件和 <tt>cross.gif</tt> 图像文件。为此，您可以使用此命令：</p>
+<p>假设你要提取 <tt>TicTacToe</tt> 类文件和 <tt>cross.gif</tt> 图像文件。为此，你可以使用此命令：</p>
 <div class="codeblock"><pre>
 jar xf TicTacToe.jar TicTacToe.class images/cross.gif
 </pre></div>
@@ -555,7 +555,7 @@ jar xf TicTacToe.jar TicTacToe.class images/cross.gif
 <li>它创建目录 <tt>images</tt>(如果它尚不存在)，并在其中放置 <tt>cross.gif</tt> 的副本。</li>
 </ul>
 <p>原始的 TicTacToe JAR 文件保持不变。</p>
-<p>可以以相同的方式从 JAR 文件中提取所需的文件。当命令未指定要提取的文件时，Jar 工具将提取存档中的所有文件。例如，您可以使用以下命令提取 TicTacToe 存档中的所有文件：</p>
+<p>可以以相同的方式从 JAR 文件中提取所需的文件。当命令未指定要提取的文件时，Jar 工具将提取存档中的所有文件。例如，你可以使用以下命令提取 TicTacToe 存档中的所有文件：</p>
 <div class="codeblock"><pre>
 jar xf TicTacToe.jar
 </pre></div>

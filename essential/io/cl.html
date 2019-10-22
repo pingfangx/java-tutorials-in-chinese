@@ -515,7 +515,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="formatting.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="datastreams.html">Next&nbsp;»</a>
+                <a target="_top" href="formatting.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="datastreams.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>来自命令行的 I/O</h1></div>
@@ -524,8 +524,8 @@
 <p>程序经常从命令行运行，并在命令行环境中与用户交互。Java 平台以两种方式支持这种交互：通过标准流和通过控制台。</p>
 <h2>标准流</h2>
 <p>标准流是许多操作系统的一个特性。默认情况下，他们从键盘读取输入并将输出写入显示器。它们还支持文件和程序之间的 I/O，但该功能由命令行解释器控制，而不是程序。</p>
-<p>Java 平台支持三种标准流：<em>Standard Input</em>，可通过 <code>System.in</code> 访问； <em>Standard Output</em>，可通过 <code>System.out</code> 访问；和 <em>Standard Error</em>，可通过 <code>System.err</code> 访问。这些对象是自动定义的，不需要打开。标准输出和标准误差均用于输出；单独具有错误输出允许用户将常规输出转移到文件并仍然能够读取错误消息。有关更多信息，请参阅命令行解释程序的文档。</p>
-<p>您可能希望标准流是字符流，但由于历史原因，它们是字节流。<code>System.out</code> 和 <code>System.err</code> 定义为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html"><code>PrintStream</code></a> 个对象。虽然从技术上讲它是字节流，但 <code>PrintStream</code> 利用内部字符流对象来模拟字符流的许多功能。</p>
+<p>Java 平台支持三种标准流：<em>Standard Input</em>，可通过 <code>System.in</code> 访问； <em>Standard Output</em>，可通过 <code>System.out</code> 访问；和 <em>Standard Error</em>，可通过 <code>System.err</code> 访问。这些对象是自动定义的，不需要打开。标准输出和标准错误均用于输出；单独具有错误输出允许用户将常规输出转移到文件并仍然能够读取错误消息。有关更多信息，请参阅命令行解释程序的文档。</p>
+<p>你可能希望标准流是字符流，但由于历史原因，它们是字节流。<code>System.out</code> 和 <code>System.err</code> 定义为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html"><code>PrintStream</code></a> 个对象。虽然从技术上讲它是字节流，但 <code>PrintStream</code> 利用内部字符流对象来模拟字符流的许多功能。</p>
 <p>相比之下，<code>System.in</code> 是一个没有字符流功能的字节流。要将标准输入用作字符流，请在 <code>InputStreamReader</code> 中包装 <code>System.in</code>。</p>
 <div class="codeblock"><pre>
 InputStreamReader cin = new InputStreamReader(System.in);

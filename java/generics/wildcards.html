@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="nolinkAHEAD">通配符</div>
@@ -505,14 +505,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="genTypeInference.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="upperBounded.html">Next&nbsp;»</a>
+                <a target="_top" href="genTypeInference.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="upperBounded.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>通配符</h1></div>
             <div id="PageContent">
 
 <p>
-在泛型代码中，称之为 <em>通配符（wildcard）</em> 的问号(<tt>?</tt>)表示未知类型。通配符可用于各种情况：作为参数，字段或局部变量的类型;有时作为返回类型(虽然更好的编程实践是让其更具体)。通配符从不用作泛型方法调用，泛型类实例创建或超类型的类型参数。</p>
+在泛型代码中，称之为 <em>wildcard (通配符)</em> 的问号(<tt>?</tt>)表示未知类型。通配符可用于各种情况：作为参数、字段或局部变量的类型；有时作为返回类型(虽然更好的编程实践是让其更具体)。通配符从不用作泛型方法调用，泛型类实例创建或超类型的类型实参。</p>
 <p>
 以下部分更详细地讨论通配符，包括上界通配符，下界通配符和通配符捕获。</p>
 

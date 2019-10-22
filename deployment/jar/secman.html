@@ -506,7 +506,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="sealman.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="signindex.html">Next&nbsp;»</a>
+                <a target="_top" href="sealman.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="signindex.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用清单属性增强安全性</h1></div>
@@ -514,12 +514,12 @@
 
 <p>以下 JAR 文件清单属性可用于帮助确保 applet 或 Java Web Start 应用程序的安全性。只需要 <tt>Permissions</tt> 属性。</p>
 <ul>
-<li><p><tt>Permissions</tt> 属性用于确保应用程序仅请求用于调用应用程序的 applet 标记或 JNLP 文件中指定的权限级别。使用此属性可帮助防止某人重新部署使用您的证书签名并在不同权限级别运行它的应用程序。</p>
+<li><p><tt>Permissions</tt> 属性用于确保应用程序仅请求用于调用应用程序的 applet 标记或 JNLP 文件中指定的权限级别。使用此属性可帮助防止某人重新部署使用你的证书签名并在不同权限级别运行它的应用程序。</p>
 <p>主 JAR 文件的清单中需要此属性。有关详细信息，请参阅 Java 平台标准版部署指南中的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/manifest.html#JSDPG896">Permissions Attribute</a>。</p></li>
-<li><p><tt>Codebase</tt> 属性用于确保 JAR 文件的代码库仅限于特定域名。使用此属性可防止某人出于恶意目的在其他网站上重新部署您的应用程序。有关详细信息，请参阅 Java 平台标准版部署指南中的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/manifest.html#JSDPG897">Codebase Attribute</a>。</p></li>
+<li><p><tt>Codebase</tt> 属性用于确保 JAR 文件的代码库仅限于特定域名。使用此属性可防止某人出于恶意目的在其他网站上重新部署你的应用程序。有关详细信息，请参阅 Java 平台标准版部署指南中的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/manifest.html#JSDPG897">Codebase Attribute</a>。</p></li>
 <li><p><tt>Application-Name</tt> 属性用于提供已签名应用程序的安全提示中显示的标题。有关详细信息，请参阅 Java 平台标准版部署指南中的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/manifest.html#JSDPG899">Application-Name Attribute</a>。</p></li>
-<li><p><tt>Application-Library-Allowable-Codebase</tt> 属性用于标识应该找到您的应用程序的位置。当 JAR 文件位于与 JNLP 文件或 HTML 页面不同的位置时，使用此属性可减少安全提示中显示的位置数。有关详细信息，请参阅 Java 平台标准版部署指南中的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/manifest.html#JSDPG900">Application-Library-Allowable-Codebase Attribute</a>。</p></li>
-<li><p><tt>Caller-Allowable-Codebase</tt> 属性用于标识 JavaScript 代码可以从中调用应用程序的域名。使用此属性可防止未知 JavaScript 代码访问您的应用程序。有关详细信息，请参阅 Java 平台标准版部署指南中的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/manifest.html#JSDPG901">Caller-Allowable-Codebase Attribute</a>。</p></li>
+<li><p><tt>Application-Library-Allowable-Codebase</tt> 属性用于标识应该找到你的应用程序的位置。当 JAR 文件位于与 JNLP 文件或 HTML 页面不同的位置时，使用此属性可减少安全提示中显示的位置数。有关详细信息，请参阅 Java 平台标准版部署指南中的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/manifest.html#JSDPG900">Application-Library-Allowable-Codebase Attribute</a>。</p></li>
+<li><p><tt>Caller-Allowable-Codebase</tt> 属性用于标识 JavaScript 代码可以从中调用应用程序的域名。使用此属性可防止未知 JavaScript 代码访问你的应用程序。有关详细信息，请参阅 Java 平台标准版部署指南中的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/manifest.html#JSDPG901">Caller-Allowable-Codebase Attribute</a>。</p></li>
 <li><p><tt>Entry-Point</tt> 属性用于标识允许用作 RIA 入口点的类。使用此属性可防止未经授权的代码从 JAR 文件中的其他可用入口点运行。有关详细信息，请参阅 Java 平台标准版部署指南中的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/manifest.html#JSDPG902">Entry-Point Attribute</a>。</p></li>
 <li><p><tt>Trusted-Only</tt> 属性用于防止加载不受信任的组件。有关详细信息，请参阅 Java 平台标准版部署指南中的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/manifest.html#JSDPG903">Trusted-Only Attribute</a>。</p></li>
 <li><p><tt>Trusted-Library</tt> 属性用于允许特权 Java 代码和沙箱 Java 代码之间的调用，而不会提示用户许可。有关详细信息，请参阅 Java 平台标准版部署指南中的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/manifest.html#JSDPG904">Trusted-Library Attribute</a>。</p></li>

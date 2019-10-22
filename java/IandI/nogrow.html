@@ -503,7 +503,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="interfaceAsType.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="defaultmethods.html">Next&nbsp;»</a>
+                <a target="_top" href="interfaceAsType.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="defaultmethods.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>不断发展的接口</h1></div>
@@ -517,7 +517,7 @@ public interface DoIt {
    int doSomethingElse(String s);
 }
 </pre></div>
-<p>假设稍后您想要向 <code>DoIt</code> 添加第三个方法，这样接口现在变成：</p>
+<p>假设稍后你想要向 <code>DoIt</code> 添加第三个方法，这样接口现在变成：</p>
 <div class="codeblock"><pre>
 public interface DoIt {
 
@@ -530,7 +530,7 @@ public interface DoIt {
 
 <p>如果进行此更改，则实现旧 <code>DoIt</code> 接口的所有类都将中断，因为它们不再实现旧接口。依赖此接口的程序员将大声抗议。</p>
 
-<p>尝试预测接口的所有用途，并从头开始完全指定。如果要向接口添加其他方法，可以使用多个选项。您可以创建继承 <code>DoIt</code> 的 <code>DoItPlus</code> 接口：</p>
+<p>尝试预测接口的所有用途，并从头开始完全指定。如果要向接口添加其他方法，你可以有几种选择。你可以创建继承 <code>DoIt</code> 的 <code>DoItPlus</code> 接口：</p>
 <div class="codeblock"><pre>
 public interface DoItPlus extends DoIt {
 
@@ -539,9 +539,9 @@ public interface DoItPlus extends DoIt {
 }
 </pre></div>
 
-<p>现在，您的代码用户可以选择继续使用旧接口或升级到新接口。</p>
+<p>现在，你的代码用户可以选择继续使用旧接口或升级到新接口。</p>
 
-<p>或者，您可以将新方法定义为 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">default methods</a>。以下示例定义名为 <code>didItWork</code> 的默认方法：</p>
+<p>或者，你可以将新方法定义为 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">default methods</a>。以下示例定义名为 <code>didItWork</code> 的默认方法：</p>
 
 <div class="codeblock"><pre>
 public interface DoIt {
@@ -555,7 +555,7 @@ public interface DoIt {
 }
 </pre></div>
 
-<p>请注意，您必须提供默认方法的实现。您还可以为现有接口定义新的 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html#static">static methods</a>。具有实现使用新的默认或静态方法增强的接口的类的用户不必修改或重新编译它们以适应其他方法。</p>   
+<p>请注意，你必须提供默认方法的实现。你还可以为现有接口定义新的 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html#static">static methods</a>。用户如果有实现使用新的默认或静态方法增强的接口的类，则不必修改或重新编译这些类来适应添加的方法。</p>   
 
 
         </div>

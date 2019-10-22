@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">接口</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="order.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="sorted-map.html">Next&nbsp;»</a>
+                <a target="_top" href="order.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="sorted-map.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>SortedSet 接口</h1></div>
@@ -502,9 +502,9 @@
 
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html"><code>SortedSet</code></a> 是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html"><code>Set</code></a>，它按升序维护其元素，根据元素的自然顺序排序或根据 <code>SortedSet</code> 创建时提供的 <code>Comparator</code>。除了正常的 <code>Set</code> 操作外，<code>SortedSet</code> 接口还提供以下操作：</p>
 <ul>
-<li><code>Range view</code> 允许对有序集进行任意范围操作</li>
-<li><code>Endpoints</code> 返回有序集合中的第一个或最后一个元素</li>
-<li><code>Comparator access</code> 返回用于对集合进行排序的 <code>Comparator</code>(如果有)</li>
+<li><code>Range view</code>  允许对有序集进行任意范围操作</li>
+<li><code>Endpoints</code>  返回有序集合中的第一个或最后一个元素</li>
+<li><code>Comparator access</code>  返回用于对集合进行排序的 <code>Comparator</code>(如果有)</li>
 </ul>
 <p>接下来是 <code>SortedSet</code> 接口的代码。</p>
 <div class="codeblock"><pre>
@@ -523,19 +523,19 @@ public interface SortedSet&lt;E&gt; extends Set&lt;E&gt; {
 }
 </pre></div>
 <h2>Set 运算</h2>
-<p><code>SortedSet</code> 继承自 <code>Set</code> 的操作在排序集和普通集上的行为完全相同，但有两个例外：</p>
+<p><code>SortedSet</code> 继承自 <code>Set</code> 的操作在有序集和普通集上的行为完全相同，但有两个例外：</p>
 <ul>
 <li><code>iterator</code> 操作返回的 <code>Iterator</code> 按顺序遍历有序集。</li>
 <li><code>toArray</code> 返回的数组按顺序包含有序集的元素。</li>
 </ul>
 <p>虽然接口不保证它，但 Java 平台的 <code>SortedSet</code> 实现的 <code>toString</code> 方法按顺序返回一个包含有序集的所有元素的字符串。</p>
 <h2><a name="constructor" id="constructor">标准构造函数</a></h2>
-<p>按照惯例，所有通用 <code>Collection</code> 实现都提供了一个标准转换构造函数，它采用 <code>Collection</code>; <code>SortedSet</code> 实现也不例外。在 <code>TreeSet</code> 中，此构造函数创建一个实例，根据其自然顺序对其元素进行排序。这可能是一个错误。最好动态检查以查看指定的集合是否为 <code>SortedSet</code> 实例，如果是，则根据相同的标准对新的 <code>TreeSet</code> 进行排序(比较器或自然排序)。因为 <code>TreeSet</code> 采用了它所采用的方法，它还提供了一个构造函数，它接受 <code>SortedSet</code> 并返回一个新的 <code>TreeSet</code>，其中包含相同的元素排序依据达到同样的标准。请注意，它是参数的编译时类型，而不是其运行时类型，它确定调用这两个构造函数中的哪一个(以及是否保留了排序条件)。</p>
-<p>按照惯例，<code>SortedSet</code> 实现还提供了一个构造函数，它接受 <code>Comparator</code> 并返回根据指定的 <code>Comparator</code> 排序的空集。如果将 <code>null</code> 传递给此构造函数，它将返回一个集合，该集合根据其自然顺序对其元素进行排序。</p>
+<p>按照规范，所有通用 <code>Collection</code> 实现都提供了一个标准转换构造函数，它采用 <code>Collection</code>; <code>SortedSet</code> 实现也不例外。在 <code>TreeSet</code> 中，此构造函数创建一个实例，根据其自然顺序对其元素进行排序。这可能是一个错误。最好动态检查以查看指定的集合是否为 <code>SortedSet</code> 实例，如果是，则根据相同的标准对新的 <code>TreeSet</code> 进行排序(比较器或自然排序)。因为 <code>TreeSet</code> 采用了它所采用的方法，它还提供了一个构造函数，它接受 <code>SortedSet</code> 并返回一个新的 <code>TreeSet</code>，其中包含相同的元素排序依据达到同样的标准。请注意，它是参数的编译时类型，而不是其运行时类型，它确定调用这两个构造函数中的哪一个(以及是否保留了排序条件)。</p>
+<p>按照规范，<code>SortedSet</code> 实现还提供了一个构造函数，它接受 <code>Comparator</code> 并返回根据指定的 <code>Comparator</code> 排序的空集。如果将 <code>null</code> 传递给此构造函数，它将返回一个集合，该集合根据其自然顺序对其元素进行排序。</p>
 <h2>范围视图操作</h2>
-<p><code>range-view</code> 操作有点类似于 <code>List</code> 接口提供的操作，但有一个很大的区别。即使直接修改了后备排序集，排序集的范围视图仍然有效。这是可行的，因为有序集的范围视图的端点是元素空间中的绝对点，而不是后备集合中的特定元素，如列表的情况。排序集的 <code>range-view</code> 实际上只是该集合的任何部分位于元素空间的指定部分中的窗口。对 <code>range-view</code> 的更改将写回到后备排序集，反之亦然。因此，与列表上的 <code>range-view</code> 不同，可以长时间在有序集上使用 <code>range-view</code>。</p>
-<p>排序集提供三个 <code>range-view</code> 操作。第一个 <code>subSet</code> 采用两个端点，如 <code>subList</code>。端点不是索引，而是对象，必须与有序集合中的元素相比较，使用 <code>Set</code> 的 <code>Comparator</code> 或其元素的自然顺序，以 <code>Set</code> 用于排序本身为准。与 <code>subList</code> 类似，范围是半开放的，包括其低端点但不包括高端点。</p>
-<p>因此，以下代码行告诉您 <code>"doorbell"</code> 和 <code>"pickle"</code> 之间有多少单词，包括 <code>"doorbell"</code> 但不包括 <code>"pickle"</code>，包含在名为 <code>dictionary</code> 的 <code>SortedSet</code> 字符串中：</p>
+<p><code>range-view</code> 操作有点类似于 <code>List</code> 接口提供的操作，但有一个很大的区别。即使直接修改了后备有序集，有序集的范围视图仍然有效。这是可行的，因为有序集的范围视图的端点是元素空间中的绝对点，而不是后备集合中的特定元素，如列表的情况。有序集的 <code>range-view</code> 实际上只是该集合的任何部分位于元素空间的指定部分中的窗口。对 <code>range-view</code> 的更改将写回到后备有序集，反之亦然。因此，与列表上的 <code>range-view</code> 不同，可以长时间在有序集上使用 <code>range-view</code>。</p>
+<p>有序集提供三个 <code>range-view</code> 操作。第一个 <code>subSet</code> 采用两个端点，类似 <code>subList</code>。端点不是索引，而是对象，必须与有序集合中的元素相比较，使用 <code>Set</code> 的 <code>Comparator</code> 或其元素的自然顺序，以 <code>Set</code> 用于排序本身的为准。与 <code>subList</code> 类似，范围是半开放的，包括其低端点但不包括高端点。</p>
+<p>因此，以下代码行告诉你 <code>"doorbell"</code> 和 <code>"pickle"</code> 之间有多少单词，包括 <code>"doorbell"</code> 但不包括 <code>"pickle"</code>，包含在名为 <code>dictionary</code> 的 <code>SortedSet</code> 字符串中：</p>
 <div class="codeblock"><pre>
 int count = dictionary.subSet("doorbell", "pickle").size();
 </pre></div>
@@ -543,7 +543,7 @@ int count = dictionary.subSet("doorbell", "pickle").size();
 <div class="codeblock"><pre>
 dictionary.subSet("f", "g").clear();
 </pre></div>
-<p>类似的技巧可以用来打印一个表格，告诉您每个字母开头有多少个单词。</p>
+<p>类似的技巧可以用来打印一个表格，告诉你每个字母开头有多少个单词。</p>
 <div class="codeblock"><pre>
 for (char ch = 'a'; ch &lt;= 'z'; ) {
     String from = String.valueOf(ch++);
@@ -551,29 +551,29 @@ for (char ch = 'a'; ch &lt;= 'z'; ) {
     System.out.println(from + ": " + dictionary.subSet(from, to).size());
 }
 </pre></div>
-<p>假设您要查看 <i>closed interval (闭区间)</i>，其中包含两个端点，而不是开区间。如果元素类型允许计算元素空间中给定值的后继，则请求 <code>subSet</code> 从 <code>lowEndpoint</code>  到 <code>successor(highEndpoint)</code>。虽然不是很明显，但 <code>String</code> 中自然顺序的字符串 <code>s</code> 的后继是 <code>s + "\0"</code> 也就是说，<code>s</code> 附加了 <code>null</code> 字符。</p>
-<p>因此，下面的单行代码告诉您在词典中 <code>"doorbell"</code> 和 <code>"pickle"</code> 之间有多少个单词，包括 doorbell <i>和</i> pickle。</p>
+<p>假设你要查看 <i>closed interval (闭区间)</i>，其中包含两个端点，而不是开区间。如果元素类型允许计算元素空间中给定值的后继，则请求 <code>subSet</code> 从 <code>lowEndpoint</code>  到 <code>successor(highEndpoint)</code>。虽然不是很明显，但 <code>String</code> 中自然顺序的字符串 <code>s</code> 的后继是 <code>s + "\0"</code>  也就是说，<code>s</code> 附加了 <code>null</code> 字符。</p>
+<p>因此，下面的单行代码告诉你在字典中 <code>"doorbell"</code> 和 <code>"pickle"</code> 之间有多少个单词，包括 doorbell <i>和</i> pickle。</p>
 <div class="codeblock"><pre>
 count = dictionary.subSet("doorbell", "pickle\0").size();
 </pre></div>
-<p>可以使用类似的技术来查看 <i>open interval (开区间)</i>，其中既不包含端点也不包含端点。从 <code>lowEndpoint</code> 到 <code>highEndpoint</code> 的开区间视图是从 <code>successor(lowEndpoint)</code> 到 <code>highEndpoint</code> 的半开区间。使用以下内容计算 <code>"doorbell"</code> 和 <code>"pickle"</code> 之间的单词数，不包括两者。</p>
+<p>可以使用类似的技术来查看 <i>open interval (开区间)</i>，其不包含任何端点。从 <code>lowEndpoint</code> 到 <code>highEndpoint</code> 的开区间视图是从 <code>successor(lowEndpoint)</code> 到 <code>highEndpoint</code> 的半开区间。使用以下内容计算 <code>"doorbell"</code> 和 <code>"pickle"</code> 之间的单词数，不包括两者。</p>
 <div class="codeblock"><pre>
 count = dictionary.subSet("doorbell\0", "pickle").size();
 </pre></div>
-<p><code>SortedSet</code> 接口还包含两个 <code>range-view</code> 操作 <code>headSet</code> 和 <code>tailSet</code>，两者都采用单个 <code>Object</code> 参数。前者返回后备 <code>SortedSet</code> 的初始部分的视图，直到但不包括指定的对象。后者返回后备 <code>SortedSet</code> 的最后部分的视图，从指定对象开始并继续到后备 <code>SortedSet</code> 的末尾。因此，以下代码允许您将字典视为两个不相交的 <code>volumes</code>(<code>a-m</code> 和 <code>n-z</code>)。</p>
+<p><code>SortedSet</code> 接口还包含两个 <code>range-view</code> 操作  <code>headSet</code> 和 <code>tailSet</code>，两者都采用单个 <code>Object</code> 参数。前者返回后备 <code>SortedSet</code> 的初始部分的视图，直到但不包括指定的对象。后者返回后备 <code>SortedSet</code> 的最后部分的视图，从指定对象开始并继续到后备 <code>SortedSet</code> 的末尾。因此，以下代码允许你将字典视为两个不相交的 <code>volumes</code>(<code>a-m</code> 和 <code>n-z</code>)。</p>
 <div class="codeblock"><pre>
 SortedSet&lt;String&gt; volume1 = dictionary.headSet("n");
 SortedSet&lt;String&gt; volume2 = dictionary.tailSet("n");
 </pre></div>
 <h2>端点操作</h2>
-<p><code>SortedSet</code> 接口包含返回有序集合中第一个和最后一个元素的操作，不出意外地称为 <code>first</code> 和 <code>last</code>。除了明显的用途之外，<code>last</code> 允许解决 <code>SortedSet</code> 接口中的缺陷。您想用 <code>SortedSet</code> 做的一件事就是进入 <code>Set</code> 的内部并向前或向后迭代。从内部向前很容易：只需获得一个 <code>tailSet</code> 并迭代它。不幸的是，没有简单的方法可以后退。</p>
+<p><code>SortedSet</code> 接口包含返回有序集合中第一个和最后一个元素的操作，不出意外地称为 <code>first</code> 和 <code>last</code>。除了明显的用途之外，<code>last</code> 允许解决 <code>SortedSet</code> 接口中的缺陷。你想用 <code>SortedSet</code> 做的一件事就是进入 <code>Set</code> 的内部并向前或向后迭代。从内部向前很容易：只需获得一个 <code>tailSet</code> 并迭代它。不幸的是，没有简单的方法可以后退。</p>
 <p>以下习惯用法获得的元素空间中的第一个小于指定对象 <code>o</code> 的元素。</p>
 <div class="codeblock"><pre>
 Object predecessor = ss.headSet(o).last();
 </pre></div>
-<p>这是从排序集内部的一个点向后移动一个元素的好方法。它可以重复应用以向后迭代，但这是非常低效的，需要查找返回的每个元素。</p>
+<p>这是从有序集内部的一个点向后移动一个元素的好方法。它可以重复应用以向后迭代，但这是非常低效的，需要查找返回的每个元素。</p>
 <h2>Comparator 访问器</h2>
-<p><code>SortedSet</code> 接口包含一个名为 <code>comparator</code> 的访问器方法，它返回用于对集合进行排序的 <code>Comparator</code>，如果该集合根据其元素的 <i>natural ordering (自然排序)</i> 进行排序，则返回 <code>null</code> 。提供此方法以便可以将排序的集合复制到具有相同排序的新排序集合中。它由之前 <a href="#constructor">之前</a> 描述的 <code>SortedSet</code> 构造函数使用。</p>
+<p><code>SortedSet</code> 接口包含一个名为 <code>comparator</code> 的访问器方法，它返回用于对集合进行排序的 <code>Comparator</code>，如果该集合根据其元素的 <i>natural ordering (自然排序)</i> 进行排序，则返回 <code>null</code> 。提供此方法以便可以将排序的集合复制到具有相同排序的新排序集合中。它由 <a href="#constructor">之前</a> 描述的 <code>SortedSet</code> 构造函数使用。</p>
 
 
         </div>

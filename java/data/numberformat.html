@@ -475,13 +475,13 @@
 <div class="linkAHEAD"><a href="numbers.html">数字</a></div>
 <div class="linkBHEAD"><a href="numberclasses.html">数字类</a></div>
 <div class="nolinkBHEAD">格式化数字打印输出</div>
-<div class="linkBHEAD"><a href="beyondmath.html">基础算法之外的补充</a></div>
+<div class="linkBHEAD"><a href="beyondmath.html">基础算术之外的补充</a></div>
 <div class="linkBHEAD"><a href="numbersummary.html">数字总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/numbers-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="characters.html">Characters</a></div>
-<div class="linkAHEAD"><a href="strings.html">Strings</a></div>
+<div class="linkAHEAD"><a href="characters.html">字符</a></div>
+<div class="linkAHEAD"><a href="strings.html">字符串</a></div>
 <div class="linkBHEAD"><a href="converting.html">在数字和字符串之间转换</a></div>
-<div class="linkBHEAD"><a href="manipstrings.html">操纵字符串中的字符</a></div>
+<div class="linkBHEAD"><a href="manipstrings.html">操作字符串中的字符</a></div>
 <div class="linkBHEAD"><a href="comparestrings.html">比较字符串和字符串的部分</a></div>
 <div class="linkBHEAD"><a href="buffers.html">StringBuilder 类</a></div>
 <div class="linkBHEAD"><a href="stringsummary.html">字符和字符串总结</a></div>
@@ -499,16 +499,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">数字和字符串</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="numberclasses.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="beyondmath.html">Next&nbsp;»</a>
+                <a target="_top" href="numberclasses.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="beyondmath.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>格式化数字打印输出</h1></div>
             <div id="PageContent"><!-- Formatting Numeric Print Output -->
 
 
-<p>之前您已经看到使用 <code>print</code> 和 <code>println</code> 方法将字符串打印到标准输出(<code>System.out</code>)。由于所有数字都可以转换为字符串(您将在本课程后面看到)，您可以使用这些方法打印出字符串和数字的任意混合。但是，Java 编程语言还有其他方法，可以在包含数字时对打印输出进行更多控制。</p>
+<p>之前你已经看到使用 <code>print</code> 和 <code>println</code> 方法将字符串打印到标准输出(<code>System.out</code>)。由于所有数字都可以转换为字符串(你将在本课程后面看到)，你可以使用这些方法打印出字符串和数字的任意混合。但是，Java 编程语言还有其他方法，可以在包含数字时对打印输出进行更多控制。</p>
 <h2>printf 和格式方法</h2>
-<p><code>java.io</code> 包中包含一个 <code>PrintStream</code> 类，它有两种格式化方法可用于替换 <code>print</code> 和 <code>println</code>。这些方法 <code>format</code> 和 <code>printf</code> 彼此相同。您一直使用的熟悉的 <code>System.out</code> 恰好是 <code>PrintStream</code> 对象，因此您可以在 <code>System.out</code> 上执行 <code>PrintStream</code> 的方法。因此，您可以在代码中之前使用 <code>print</code> 或 <code>println</code> 的任何位置使用 <code>format</code> 或 <code>printf</code> 。例如，</p>
+<p><code>java.io</code> 包中包含一个 <code>PrintStream</code> 类，它有两种格式化方法可用于替换 <code>print</code> 和 <code>println</code>。这些方法 <code>format</code> 和 <code>printf</code> 彼此相同。你一直使用的熟悉的 <code>System.out</code> 恰好是 <code>PrintStream</code> 对象，因此你可以在 <code>System.out</code> 上执行 <code>PrintStream</code> 的方法。因此，你可以在代码中之前使用 <code>print</code> 或 <code>println</code> 的任何位置使用 <code>format</code> 或 <code>printf</code> 。例如，</p>
 <div class="codeblock"><pre>
 System.out.format(.....);
 </pre></div>
@@ -522,8 +522,8 @@ System.out.format("The value of " + "the float variable is " +
      "%f, while the value of the " + "integer variable is %d, " +
      "and the string is %s", floatVar, intVar, stringVar); 
 </pre></div>
-<p>第一个参数 <code>format</code> 是一个格式字符串，指定如何格式化第二个参数 <code>args</code> 中的对象。格式字符串包含纯文本以及 <em>format specifiers</em>，它们是格式化 <code>Object... args</code> 参数的特殊字符。(符号 <code>Object... args</code> 称为 <em>varargs</em>，这意味着参数的数量可能会有所不同。)</p>
-<p>格式说明符以百分号(%)开头，以 <i>转换器（converter）</i> 结束。转换器是一个字符，指示要格式化的参数类型。在百分号(%)和转换器之间，您可以使用可选的标志和说明符。有许多转换器，标志和说明符，它们记录在 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html"><code>java.util.Formatter</code> </a> 中</p>
+<p>第一个参数 <code>format</code> 是一个格式字符串，指定如何格式化第二个参数 <code>args</code> 中的对象。格式字符串包含纯文本以及 <em>format specifiers (格式说明)</em>，它们是格式化 <code>Object... args</code> 参数的特殊字符。(符号 <code>Object... args</code> 称为 <em>varargs (可变参数)</em>，这意味着参数的数量可能会有所不同。)</p>
+<p>格式说明符以百分号(%)开头，以 <i>converter (转换器)</i> 结束。转换器是一个字符，指示要格式化的参数类型。在百分号(%)和转换器之间，你可以使用可选的标志和说明符。有许多转换器，标志和说明符，它们记录在 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html"><code>java.util.Formatter</code> </a> 中</p>
 <p>这是一个基本的例子：</p>
 <div class="codeblock"><pre>
 int i = 461012;
@@ -533,11 +533,11 @@ System.out.format("The value of i is: %d%n", i);
 <div class="codeblock"><pre>
 The value of i is: 461012
 </pre></div>
-<p><code>printf</code> 和 <code>format</code> 方法已重载。每个版本都有一个版本，其语法如下：</p>
+<p><code>printf</code> 和 <code>format</code> 方法已重载。每个都有以下语法的版本：</p>
 <div class="codeblock"><pre>
 public PrintStream format(Locale l, String format, Object... args)
 </pre></div>
-<p>例如，要在法语系统中打印数字(使用逗号代替浮点数的英文表示中的小数位)，您将使用：</p>
+<p>例如，要在法语系统中打印数字(使用逗号代替浮点数的英文表示中的小数位)，你将使用：</p>
 <div class="codeblock"><pre>
 System.out.format(Locale.FRANCE,
     "The value of the float " + "variable is %f, while the " +
@@ -566,47 +566,47 @@ System.out.format(Locale.FRANCE,
 <tr>
 <td>n</td>
 <td>&nbsp;</td>
-<td>适合运行应用程序的平台的换行符。您应始终使用 <code>%n</code>，而不是 <code>\n</code>。</td>
+<td>适合运行应用程序的平台的换行符。你应始终使用 <code>%n</code>，而不是 <code>\n</code>。</td>
 </tr>
 <tr>
 <td>tB</td>
 <td>&nbsp;</td>
-<td>日期和时间转换特定于语言环境的月份全名。</td>
+<td>日期和时间转换  特定于语言环境的月份全名。</td>
 </tr>
 <tr>
 <td>td, te</td>
 <td>&nbsp;</td>
-<td>日期和时间转换 月份 2 位数的天数。td 根据需要有前导零，te 没有。</td>
+<td>日期和时间转换  月份 2 位数的天数。td 根据需要有前导零，te 没有。</td>
 </tr>
 <tr>
 <td>ty, tY</td>
 <td>&nbsp;</td>
-<td>日期和时间转换 ty = 2 位数年份，tY = 4 位数年份。</td>
+<td>日期和时间转换  ty = 2 位数年份，tY = 4 位数年份。</td>
 </tr>
 <tr>
 <td>tl</td>
 <td>&nbsp;</td>
-<td>日期和时间转换 12 小时制。</td>
+<td>日期和时间转换  12 小时制。</td>
 </tr>
 <tr>
 <td>tM</td>
 <td>&nbsp;</td>
-<td>日期和时间转换分钟，2 位数，必要时带前导零。</td>
+<td>日期和时间转换  分钟，2 位数，必要时带前导零。</td>
 </tr>
 <tr>
 <td>tp</td>
 <td>&nbsp;</td>
-<td>日期和时间转换特定于语言环境的 am/pm(小写)。</td>
+<td>日期和时间转换  特定于语言环境的 am/pm(小写)。</td>
 </tr>
 <tr>
 <td>tm</td>
 <td>&nbsp;</td>
-<td>日期和时间转换月份，2 位数字，必要时带前导零。</td>
+<td>日期和时间转换  月份，2 位数字，必要时带前导零。</td>
 </tr>
 <tr>
 <td>tD</td>
 <td>&nbsp;</td>
-<td>日期和时间转换日期为 %tm%td%ty</td>
+<td>日期和时间转换  日期为 %tm%td%ty</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
@@ -639,7 +639,7 @@ System.out.format(Locale.FRANCE,
 <td>宽度为十个字符，右对齐，小数点后三位。</td>
 </tr>
 </table>
-<p>以下程序显示了您可以使用 <code>format</code> 执行的一些格式设置。输出显示在嵌入注释中的双引号内：</p>
+<p>以下程序显示了你可以使用 <code>format</code> 执行的一些格式设置。输出显示在嵌入注释中的双引号内：</p>
 <div class="codeblock"><pre>
 import java.util.Calendar;
 import java.util.Locale;
@@ -677,8 +677,8 @@ public class TestFormat {
 使用 <code>String.format</code> 创建字符串包含在 <a class="TutorialLink" target="_top" href="strings.html">Strings</a> 中。
 <hr /></div>
 <h2>DecimalFormat 类</h2>
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html"><code>java.text.DecimalFormat</code> </a> 类来控制前导和尾随零，前缀和后缀，分组(千)分隔符和小数分隔符的显示。<code>DecimalFormat</code> 在数字格式化方面提供了极大的灵活性，但它可以使您的代码更复杂。</p>
-<p>下面的示例通过将模式字符串传递给 <code>DecimalFormat</code> 构造函数来创建 <code>DecimalFormat</code> 对象 <code>myFormatter</code>。<code>format()</code> 方法，<code>DecimalFormat</code> 继承自 <code>NumberFormat</code>，然后由 <code>myFormatter</code> 调用它接受一个 <code>double</code> 值作为参数并返回字符串中的格式化数字：</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html"><code>java.text.DecimalFormat</code> </a> 类来控制前导和尾随零，前缀和后缀，分组(千)分隔符和小数分隔符的显示。<code>DecimalFormat</code> 在数字格式化方面提供了极大的灵活性，但它可以使你的代码更复杂。</p>
+<p>下面的示例通过将模式字符串传递给 <code>DecimalFormat</code> 构造函数来创建 <code>DecimalFormat</code> 对象 <code>myFormatter</code>。<code>format()</code> 方法，<code>DecimalFormat</code> 继承自 <code>NumberFormat</code>，然后由 <code>myFormatter</code> 调用  它接受一个 <code>double</code> 值作为参数并返回字符串中的格式化数字：</p>
 <p>这是一个示例程序，说明 <code>DecimalFormat</code> 的使用：</p>
 <div class="codeblock"><pre>
 

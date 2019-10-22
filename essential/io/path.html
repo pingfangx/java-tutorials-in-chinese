@@ -515,7 +515,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="fileio.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="pathClass.html">Next&nbsp;»</a>
+                <a target="_top" href="fileio.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="pathClass.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>什么是路径？(和其他文件系统事实)</h1></div>
@@ -545,11 +545,11 @@ C:\home\sally\statusReport
 <p>相对路径需要与另一个路径组合才能访问文件。例如，<code>joe/foo</code> 是相对路径。如果没有更多信息，程序将无法在文件系统中可靠地找到 <code>joe/foo</code> 目录。</p>
 <h2><a name="symlink" id="symlink">符号链接</a></h2>
 <p>文件系统对象通常是目录或文件。每个人都熟悉这些对象。但是一些文件系统也支持符号链接的概念。符号链接也称为 <em>symlink</em> 或 <em>soft link</em>。</p>
-<p><em>symbolic link</em> 是一个特殊文件，用作对另一个文件的引用。在大多数情况下，符号链接对应用程序是透明的，符号链接上的操作会自动重定向到链接的目标。(指向的文件或目录称为链接的 <em>target</em>。)例外情况是删除或重命名符号链接，在这种情况下链接本身被删除，或重命名而不是链接的目标。</p>
+<p><em>symbolic link</em> 是一个特殊文件，用作对另一个文件的引用。在大多数情况下，符号链接对应用程序是透明的，符号链接上的操作会自动重定向到链接的目标。(指向的文件或目录称为链接的 <em>target</em>。)例外情况是删除或重命名符号链接，在这种情况下链接本身被删除或重命名，而不是链接的目标。</p>
 <p>在下图中，<code>logFile</code> 似乎是用户的常规文件，但它实际上是指向 <code>dir/logs/HomeLogFile</code> 的符号链接。<code>HomeLogFile</code> 是链接的目标。</p>
 <center><img src="../../figures/essential/io-symlink.gif" width="384" height="307" align="bottom" alt="示例符号链接" /></p><p class="FigureCaption"><center>符号链接的示例。</center></p></center><p>符号链接通常对用户是透明的。读取或写入符号链接与读取或写入任何其他文件或目录相同。</p>
 <p>短语 <em>resolving a link</em> 意味着用文件系统中的实际位置替换符号链接。在该示例中，解析 <code>logFile</code> 会产生 <code>dir/logs/HomeLogFile</code>。</p>
-<p>在实际场景中，大多数文件系统都可以自由使用符号链接。偶尔，粗心创建的符号链接可能会导致循环引用。当链接的目标指向原始链接时，会发生循环引用。循环引用可能是间接引用：目录 <code>a</code> 指向目录 <code>b</code>，它指向目录 <code>c</code>，其中包含指向目录的子目录 <code>a</code>。当程序递归地遍历目录结构时，循环引用可能会导致严重破坏。但是，此方案已被考虑，并且不会导致程序无限循环。</p>
+<p>在实际场景中，大多数文件系统都可以自由使用符号链接。偶尔，粗心创建的符号链接可能会导致循环引用。当链接的目标指向原始链接时，会发生循环引用。循环引用可能是间接引用：目录 <code>a</code> 指向目录 <code>b</code>，它指向目录 <code>c</code>，其中包含指向目录的子目录 <code>a</code>。当程序递归地遍历目录结构时，循环引用可能会导致严重破坏。但是，这个场景已经考虑过了，不会导致程序无限循环。</p>
 <p>下一页将讨论 Java 编程语言中文件 I/O 支持的核心，即 <code>Path</code> 类。</p>
 
 

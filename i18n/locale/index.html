@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>课程：设置区域设置(Java™ 教程-Java Tutorials 中文版&gt;国际化)</title>
+        <title>课程：设置语言环境(Java™ 教程-Java Tutorials 中文版&gt;国际化)</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
      <meta name="keywords" content="java programming, learn java, java sample code, i18n, internationalization, locale, text formatting" />
@@ -462,12 +462,12 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="nolinkLESSON">设置区域设置</div>
-<div class="linkAHEAD"><a href="create.html">创建区域设置</a></div>
+            <div class="nolinkLESSON">设置语言环境</div>
+<div class="linkAHEAD"><a href="create.html">创建语言环境</a></div>
 <div class="linkAHEAD"><a href="extensions.html">BCP 47 扩展</a></div>
-<div class="linkAHEAD"><a href="identify.html">识别可用的区域设置</a></div>
+<div class="linkAHEAD"><a href="identify.html">识别可用的语言环境</a></div>
 <div class="linkAHEAD"><a href="matching.html">语言标签过滤和查找</a></div>
-<div class="linkAHEAD"><a href="scope.html">区域设置的范围</a></div>
+<div class="linkAHEAD"><a href="scope.html">语言环境的范围</a></div>
 <div class="linkAHEAD"><a href="services.html">区域敏感服务 SPI</a></div>
 </div>
     </div>
@@ -479,32 +479,32 @@
             <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>
         </div>
         <div class="NavBit">
-                <a target="_top" href="../intro/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="create.html">Next&nbsp;»</a>
+                <a target="_top" href="../intro/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="create.html">下一页&nbsp;»</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-        <div id="PageTitle"><h1>课程：设置区域设置</h1></div>
+        <div id="PageTitle"><h1>课程：设置语言环境</h1></div>
         <div id="PageContent">
 
 <p>国际化程序可以在全世界以不同方式显示信息。例如，该程序将在巴黎，东京和纽约显示不同的消息。如果本地化过程已经过微调，该程序将在纽约和伦敦显示不同的消息，以解释美国和英国英语之间的差异。国际化程序如何确定终端用户的适当语言和区域？简单。它引用了 <code>Locale</code> 对象。</p>
-<p><code>Locale</code> 对象是特定语言和区域组合的标识符。如果类根据 <code>Locale</code> 改变其行为，则称其为 <em>locale-sensitive (区域设置敏感的)</em>。例如，<code>NumberFormat</code> 类是区域设置敏感的；它返回的数字格式取决于 <code>Locale</code>。因此，<code>NumberFormat</code> 可以返回 902 300(法国)，或 902.300(德国)或 902,300(美国)的数字。<code>Locale</code> 对象只是标识符。实际工作(例如格式化和检测字边界)由区域设置敏感类的方法执行。</p>
+<p><code>Locale</code> 对象是特定语言和区域组合的标识符。如果类根据 <code>Locale</code> 改变其行为，则称其为 <em>locale-sensitive (语言环境敏感的)</em>。例如，<code>NumberFormat</code> 类是语言环境敏感的；它返回的数字格式取决于 <code>Locale</code>。因此，<code>NumberFormat</code> 可以返回 902 300(法国)，或 902.300(德国)或 902,300(美国)的数字。<code>Locale</code> 对象只是标识符。实际工作(例如格式化和检测字边界)由语言环境敏感类的方法执行。</p>
 
 <p>以下部分说明如何使用 <code>Locale</code> 对象：</p>
-<h2><a href="create.html">创建区域设置</a></h2>
+<h2><a href="create.html">创建语言环境</a></h2>
 <p>创建 <code>Locale</code> 对象时，通常会指定语言代码和国家/地区代码。第三个参数，即变体，是可选的。</p>
 
 <h2><a href="extensions.html">BCP 47 扩展</a></h2>
 <p>
-本节介绍如何将 Unicode 区域设置扩展或专用扩展添加到 <tt>Locale</tt>。</p>
+本节介绍如何将 Unicode 语言环境扩展或专用扩展添加到 <tt>Locale</tt>。</p>
 
-<h2><a href="identify.html">识别可用的区域设置</a></h2>
-<p>区域设置敏感类仅支持某些 <code>Locale</code> 定义。本节介绍如何确定支持哪些 <code>Locale</code> 定义。</p>
+<h2><a href="identify.html">识别可用的语言环境</a></h2>
+<p>语言环境敏感类仅支持某些 <code>Locale</code> 定义。本节介绍如何确定支持哪些 <code>Locale</code> 定义。</p>
 
 <h2><a href="matching.html">语言标签过滤和查找</a></h2>
 <p>
 本节介绍语言标签，语言标签过滤和语言标签查找的国际化支持。</p>
 
-<h2><a href="scope.html">区域设置的范围</a></h2>
-<p>在 Java 平台上，不用在运行应用程序之前设置环境变量来指定全局 <code>Locale</code>。相反，您要么依赖默认的 Locale，要么为每个区域设置敏感的对象分配 <code>Locale</code>。</p>
+<h2><a href="scope.html">语言环境的范围</a></h2>
+<p>在 Java 平台上，不用在运行应用程序之前设置环境变量来指定全局 <code>Locale</code>。相反，你要么依赖默认的 Locale，要么为每个语言环境敏感的对象分配 <code>Locale</code>。</p>
 
 <h2><a href="services.html">区域敏感服务 SPI</a></h2>
 <p>本节介绍如何启用与语言环境相关的数据和服务的插件。除了当前可用的语言环境之外，这些 SPI(服务提供程序接口)还提供对更多语言环境的支持。</p>

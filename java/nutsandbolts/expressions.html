@@ -480,7 +480,7 @@
 <div class="linkAHEAD"><a href="operators.html">运算符</a></div>
 <div class="linkBHEAD"><a href="op1.html">赋值，算术和一元运算符</a></div>
 <div class="linkBHEAD"><a href="op2.html">相等性，关系和条件运算符 </a></div>
-<div class="linkBHEAD"><a href="op3.html">按位和位移运算符</a></div>
+<div class="linkBHEAD"><a href="op3.html">位运算和移位运算符</a></div>
 <div class="linkBHEAD"><a href="opsummary.html">运算符总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_operators.html">问题和练习</a></div>
 <div class="nolinkAHEAD">表达式，语句和块</div>
@@ -504,15 +504,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">语言基础</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="QandE/questions_operators.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions_expressions.html">Next&nbsp;»</a>
+                <a target="_top" href="QandE/questions_operators.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions_expressions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>表达式，语句和块</h1></div>
             <div id="PageContent">
 
-<p>现在你已经了解了变量和运算符符，现在该了解 <i>expressions（表达式）</i>，<i>statements（语句）</i> 和 <i>blocks（块）</i>了。运算符可以用于构建计算值的表达式;表达式是语句的核心组成部分;语句可能被分组成块。</p>
+<p>现在你已经了解了变量和运算符，现在是学习 <i>expressions (表达式)</i>、<i>statements (语句)</i> 和 <i>blocks (块)</i> 的时候了。运算符可以用于构建计算值的表达式;表达式是语句的核心组成部分;语句可能被分组成块。</p>
 <h2>表达式</h2>
-<p>一个 <em>expression</em> 是一个由变量，运算符和方法调用组成的构造，它是根据语言的语法构造的，它的计算结果为单个值。您已经看过表达式的例子，如下所示：</p>
+<p>一个 <em>expression (表达式)</em> 是一个由变量，运算符和方法调用组成的构造，它是根据语言的语法构造的，它的计算结果为单个值。你已经看过表达式的例子，如下所示：</p>
 <div class="codeblock"><pre>
 <code>int <strong>cadence = 0</strong>;</code>
 <code><strong>anArray[0] = 100</strong>;</code>
@@ -522,20 +522,20 @@
 <code>if (<strong>value1 == value2</strong>) 
     System.out.println(<strong>"value1 == value2"</strong>);</code>
 </pre></div>
-<p>表达式返回的值的数据类型取决于表达式中使用的元素。表达式 <code>cadence = 0</code> 返回一个 <code>int</code>，因为赋值运算符返回与其左手操作数相同数据类型的值;在这种情况下，<code>cadence</code> 是 <code>int</code>。从其他表达式中可以看出，表达式也可以返回其他类型的值，例如 <code>boolean</code> 或 <code>String</code>。</p>
-<p>Java 编程语言允许您从各种较小的表达式构造复合表达式，只要表达式的一部分所需的数据类型与另一部分的数据类型匹配即可。下面是一个复合表达式的例子：</p>
+<p>表达式返回的值的数据类型取决于表达式中使用的元素。表达式 <code>cadence = 0</code> 返回一个 <code>int</code>，因为赋值运算符返回与其左侧操作数相同数据类型的值;在这种情况下，<code>cadence</code> 是 <code>int</code>。从其他表达式中可以看出，表达式也可以返回其他类型的值，例如 <code>boolean</code> 或 <code>String</code>。</p>
+<p>Java 编程语言允许你从各种较小的表达式构造复合表达式，只要表达式的一部分所需的数据类型与另一部分的数据类型匹配即可。下面是一个复合表达式的例子：</p>
 <div class="codeblock"><pre> 
 1 * 2 * 3
 </pre></div>
-<p>在这个特定的例子中，计算表达式的顺序并不重要，因为乘法的结果与顺序无关;无论按照何种顺序应用乘法，结果总是相同的。但是，这并非所有表达式都适用。例如，下面的表达式会给出不同的结果，具体取决于您是先执行加法还是除法操作：</p>
+<p>在这个特定的例子中，计算表达式的顺序并不重要，因为乘法的结果与顺序无关;无论按照何种顺序应用乘法，结果总是相同的。但是，这并非所有表达式都适用。例如，下面的表达式会给出不同的结果，具体取决于你是先执行加法还是除法操作：</p>
 <div class="codeblock"><pre>
 x + y / 100    // ambiguous
 </pre></div>
-<p>您可以使用平衡圆括号准确指定如何计算表达式:( 和 )。例如，要使前面的表达式明确无误，可以编写以下内容：</p>
+<p>你可以使用平衡圆括号准确指定如何计算表达式:( 和 )。例如，要使前面的表达式明确无误，可以编写以下内容：</p>
 <div class="codeblock"><pre> 
 (x + y) / 100  // unambiguous, recommended
 </pre></div>
-<p>如果您没有明确指出要执行的操作的顺序，则顺序由分配给表达式中使用的操作符的优先级确定。优先级较高的运算符首先得到计算。例如，除法运算符的优先级高于加法运算符。因此，以下两个语句是等同的：</p>
+<p>如果你没有明确指出要执行的操作的顺序，则顺序由分配给表达式中使用的操作符的优先级确定。优先级较高的运算符首先得到计算。例如，除法运算符的优先级高于加法运算符。因此，以下两个语句是等同的：</p>
 <div class="codeblock"><pre>
 x + y / 100 <br />
 
@@ -543,14 +543,14 @@ x + (y / 100) // unambiguous, recommended
 </pre></div>
 <p>在编写复合表达式时，应明确指出，并用括号表示首先应计算哪些运算符。这种做法使代码更易于阅读和维护。</p>
 <h2>语句</h2>
-<p>语句大致相当于自然语言中的句子。一个 <em>statement</em> 形成一个完整的执行单元。通过用分号(<code>;</code>)终止表达式，可以将以下类型的表达式编入语句中。</p>
+<p>语句大致相当于自然语言中的句子。一个 <em>statement (语句)</em> 形成一个完整的执行单元。通过用分号(<code>;</code>)终止表达式，可以将以下类型的表达式编入语句中。</p>
 <ul>
 <li>赋值表达式</li>
-<li>任何使用 <code>++</code> 或 <code>--</code></li>
+<li>任何 <code>++</code> 或 <code>--</code> 的使用</li>
 <li>方法调用</li>
 <li>对象创建表达式</li>
 </ul>
-<p>这样的语句被称为 <em>expression statements（表达式语句）</em>。这里有一些表达式语句的例子。</p>
+<p>这种语句称为 <em>expression statements (表达式语句)</em>。这里有一些表达式语句的例子。</p>
 <div class="codeblock"><pre>
 // assignment statement
 aValue = 8933.234;
@@ -561,14 +561,14 @@ System.out.println("Hello World!");
 // object creation statement
 Bicycle myBike = new Bicycle();
 </pre></div>
-<p>除了表达式语句之外，还有两种其他类型的语句：<i>declaration statements（声明语句）</i> 和 <i>control flow statements（控制流语句）</i>。一个 <em>declaration statement</em> 声明一个变量。你已经看到很多声明语句的例子：</p>
+<p>除了表达式语句，还有两种其它类型的语句：<i>declaration statements (声明语句)</i> 和 <i>control flow statements (控制流语句)</i>。一个 <em>declaration statement (声明语句)</em> 声明一个变量。你已经看到很多声明语句的例子：</p>
 <div class="codeblock"><pre>
 // declaration statement
 double aValue = 8933.234;
 </pre></div>
-<p>最后，<em>control flow statements</em> 调节语句执行的顺序。您将在下一节 <a class="TutorialLink" target="_top" href="flow.html">Control Flow Statements</a> 中了解控制流程语句</p>
+<p>最后，<em>control flow statements (控制流语句)</em> 调节语句执行的顺序。你将在下一节 <a class="TutorialLink" target="_top" href="flow.html">Control Flow Statements</a> 中了解控制流程语句</p>
 <h2>块</h2>
-<p>一个 <i>block</i> 是平衡花括号之间的一组零个或多个语句，可用于允许单个语句的任何位置。以下示例 <a class="SourceLink" target="_blank" href="examples/BlockDemo.java" onclick="showCode('../../displayCode.html', 'examples/BlockDemo.java'); return false;"><code>BlockDemo</code></a> 演示了如何使用块：</p>
+<p>一个 <i>block (块)</i> 是平衡花括号之间的一组零个或多个语句，可用于允许单个语句的任何位置。以下示例 <a class="SourceLink" target="_blank" href="examples/BlockDemo.java" onclick="showCode('../../displayCode.html', 'examples/BlockDemo.java'); return false;"><code>BlockDemo</code></a> 演示了如何使用块：</p>
 <div class="codeblock"><pre>
 class BlockDemo {
      public static void main(String[] args) {

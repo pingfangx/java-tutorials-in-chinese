@@ -489,14 +489,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">使用 URL</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="readingURL.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="readingWriting.html">Next&nbsp;»</a>
+                <a target="_top" href="readingURL.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="readingWriting.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>连接到 URL</h1></div>
             <div id="PageContent">
 
 <p>成功创建 <code>URL</code> 对象后，可以调用 <code>URL</code> 对象的 <code>openConnection</code> 方法来获取 <code>URLConnection</code> 对象，或其协议特定的子类之一，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/HttpURLConnection.html"><code>java.net.HttpURLConnection</code></a></p>
-<p>您可以使用此 <code>URLConnection</code> 对象来设置连接前可能需要的参数和常规请求属性。只有在调用 <code>URLConnection.connect</code> 方法时，才会启动与 URL 表示的远程对象的连接。执行此操作时，您将初始化 Java 程序与网络上的 URL 之间的通信链接。例如，以下代码打开与站点 <code>example.com</code> 的连接：</p>
+<p>你可以使用此 <code>URLConnection</code> 对象来设置连接前可能需要的参数和常规请求属性。只有在调用 <code>URLConnection.connect</code> 方法时，才会启动与 URL 表示的远程对象的连接。执行此操作时，你将初始化 Java 程序与网络上的 URL 之间的通信链接。例如，以下代码打开与站点 <code>example.com</code> 的连接：</p>
 <div class="codeblock"><pre>
 try {
     URL myURL = new URL("http://example.com/");
@@ -513,8 +513,8 @@ catch (IOException e) {
 }
 </pre></div>
 <p>每次通过调用此 URL 的协议处理程序的 <code>openConnection</code> 方法，都会创建一个新的 <code>URLConnection</code> 对象。</p>
-<p>您并不总是需要显式调用 <code>connect</code> 方法来启动连接。依赖于连接的操作(如 <code>getInputStream</code>，<code>getOutputStream</code> 等)将隐式执行连接(如有必要)。</p>
-<p>现在您已成功连接到 URL，可以使用 <code>URLConnection</code> 对象执行读取或写入连接等操作。下一节将向您展示如何。</p>
+<p>你并不总是需要显式调用 <code>connect</code> 方法来启动连接。依赖于连接的操作(如 <code>getInputStream</code>，<code>getOutputStream</code> 等)将隐式执行连接(如有必要)。</p>
+<p>现在你已成功连接到 URL，可以使用 <code>URLConnection</code> 对象执行读取或写入连接等操作。下一节将向你展示如何。</p>
 
 
         </div>

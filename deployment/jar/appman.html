@@ -506,13 +506,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="modman.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="downman.html">Next&nbsp;»</a>
+                <a target="_top" href="modman.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="downman.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>设置应用程序的入口点</h1></div>
             <div id="PageContent">
 
-<p>如果您有一个捆绑在 JAR 文件中的应用程序，则需要某种方法来指示 JAR 文件中的哪个类是应用程序的入口点。您可以使用清单中的 <code>Main-Class</code> 头提供此信息，该头具有以下一般形式：</p>
+<p>如果你有一个打包在 JAR 文件中的应用程序，则需要某种方法来指示 JAR 文件中的哪个类是应用程序的入口点。你可以使用清单中的 <code>Main-Class</code> 头提供此信息，该头具有以下一般形式：</p>
 <div class="codeblock"><pre>
 Main-Class: <em>classname</em>
 </pre></div>
@@ -529,7 +529,7 @@ java -jar <em>JAR-name</em>
 <div class="codeblock"><pre>
 Main-Class: MyPackage.MyClass
 </pre></div>
-<div class="note"><hr /><strong>Warning:</strong> 文本文件必须以新行或回车结束。如果不以新行或回车结束，则不会正确解析最后一行。
+<div class="note"><hr /><strong>警告:</strong>&nbsp;文本文件必须以新行或回车结束。如果不以新行或回车结束，则不会正确解析最后一行。
 <hr /></div>
 <p>然后，我们通过输入以下命令创建名为 <code>MyJar.jar</code> 的 JAR 文件：</p>
 <div class="codeblock"><pre>
@@ -551,7 +551,7 @@ java -jar MyJar.jar
 <div class="codeblock"><pre>
 jar cfe app.jar MyApp MyApp.class
 </pre></div>
-<p>您可以通过运行以下命令直接调用此应用程序：</p>
+<p>你可以通过运行以下命令直接调用此应用程序：</p>
 <div class="codeblock"><pre>
 java -jar app.jar
 </pre></div>

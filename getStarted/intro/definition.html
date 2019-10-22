@@ -486,7 +486,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">入门</a>&gt;<a href="index.html" target="_top">Java 技术现象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="cando.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="cando.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>关于 Java 技术</h1></div>
@@ -518,7 +518,7 @@
 </tr>
 </table>
 <p>前面的每个流行语都在 James Gosling 和 Henry McGilton 写的白皮书 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/langenv-140151.html"><em>The Java Language Environment</em></a> 中解释。</p>
-<p>在 Java 编程语言中，所有源代码首先以纯文本文件写成，后缀为 <code>.java</code> 扩展名。然后这些源文件被 <code>javac</code> 编译器编译到 <code>.class</code> 文件中。<code>.class</code> 文件不包含处理器本机的代码;它包含 <em>bytecodes</em>  -  Java 虚拟机 <sup><a href="#FOOT">1</a></sup>(Java VM)的机器语言。然后，<code>java</code> 启动程序工具使用 Java 虚拟机的一个实例运行您的应用程序。</p>
+<p>在 Java 编程语言中，所有源代码首先以纯文本文件写成，后缀为 <code>.java</code> 扩展名。然后这些源文件被 <code>javac</code> 编译器编译到 <code>.class</code> 文件中。<code>.class</code> 文件不包含处理器本机的代码;它包含 <em>bytecodes</em>  -  Java 虚拟机 <sup><a href="#FOOT">1</a></sup>(Java VM)的机器语言。然后，<code>java</code> 启动程序工具使用 Java 虚拟机的一个实例运行你的应用程序。</p>
 <center><img src="../../figures/getStarted/getStarted-compiler.gif" width="583" height="137" align="bottom" alt="该图显示了在计算机上运行的 MyProgram.java，编译器，MyProgram.class，Java VM 和 My Program。" /></p><p class="FigureCaption">软件开发过程的概述。</p></center><p>由于 Java VM 在许多不同的操作系统上都可用，因此相同的 <code>.class</code> 文件能够在 Microsoft Windows，Solaris™操作系统(Solaris OS)，Linux 或 Mac OS 上运行。一些虚拟机（例如 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136373.html">Java SE HotSpot at a Glance</a>）在运行时执行其他步骤，以提高应用程序的性能。这包括各种任务，如查找性能瓶颈和重新编译(本地代码)经常使用的代码部分。</p>
 <center><img src="../../figures/getStarted/helloWorld.gif" width="346" height="332" align="bottom" alt="该图显示了 Win32，Solaris OS / Linux 和 Mac OS 的源代码，编译器和 Java VM" /></p><p class="FigureCaption">通过 Java VM，相同的应用程序能够在多个平台上运行。</p></center><h2>Java 平台</h2>
 <p>一个 <em>platform</em> 是程序运行的硬件或软件环境。我们已经提到了一些最流行的平台，如 Microsoft Windows，Linux，Solaris OS 和 Mac OS。大多数平台可以被描述为操作系统和底层硬件的组合。Java 平台不同于大多数其他平台，因为它是一个运行在其他基于硬件的平台之上的纯软件平台。</p>
@@ -527,9 +527,9 @@
 <li><em>Java Virtual Machine</em></li>
 <li><em>Java Application Programming Interface</em>(API)</li>
 </ul>
-<p>您已经被介绍了 Java 虚拟机;它是 Java 平台的基础，并被移植到各种基于硬件的平台上。</p>
+<p>已经向你介绍过了 Java 虚拟机；它是 Java 平台的基础，并被移植到各种基于硬件的平台上。</p>
 <p>API 是大量现成的软件组件，提供许多有用的功能。它被分组到相关类和接口的库中;这些库被称为 <em>packages</em>。下一节 <a class="TutorialLink" target="_top" href="cando.html">What Can Java Technology Do?</a> 强调了 API 提供的一些功能。</p>
-<center><img src="../../figures/getStarted/getStarted-jvm.gif" width="266" height="127" align="bottom" alt="该图显示了 MyProgram.java，API，Java 虚拟机和基于硬件的平台" /></p><p class="FigureCaption">API 和 Java 虚拟机将程序与底层硬件隔离开来。</p></center><p>作为一个独立于平台的环境，Java 平台可能比本地代码慢一点。然而，编译器和虚拟机技术的进步使性能接近本地代码的性能，而不会威胁到可移植性。</p>
+<center><img src="../../figures/getStarted/getStarted-jvm.gif" width="266" height="127" align="bottom" alt="该图显示了 MyProgram.java，API，Java 虚拟机和基于硬件的平台" /></p><p class="FigureCaption">API 和 Java 虚拟机将程序与底层硬件隔离开来。</p></center><p>作为一个独立于平台的环境，Java 平台可能比原生代码慢一点。然而，编译器和虚拟机技术的进步使性能接近原生代码的性能，而不会威胁到可移植性。</p>
 <p><a name="FOOT" id="FOOT">术语 "Java虚拟机" 和 "JVM" 是指用于 Java 平台的虚拟机。</a></p>
 
         </div>

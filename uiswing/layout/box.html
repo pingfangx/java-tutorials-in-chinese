@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">在容器中布置组件</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="border.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="card.html">Next&nbsp;»</a>
+                <a target="_top" href="border.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="card.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>如何使用 BoxLayout</h1></div>
@@ -575,8 +575,7 @@ The following sections discuss <code>BoxLayout</code> in more detail:</p>
 <p>Do not let the length of the <code>BoxLayout</code> discussion scare you! You can probably use <code>BoxLayout</code> with the information you already have. If you run into trouble or you want to take advantage of <code>BoxLayout</code>'s power, read on.</p>
 <h2><a name="features" id="features">Box Layout Features</a></h2>
 <p>As said before, <code>BoxLayout</code> arranges components either on top of each other or in a row. As the box layout arranges components, it takes the components' alignments and minimum, preferred, and maximum sizes into account. In this section, we will talk about top-to-bottom layout. The same concepts apply to left-to-right or right-to-left layout. You simply substitute X for Y, height for width, and so on.</p>
-<div class="note"><hr /><strong>Version note:</strong>&nbsp;Before JDK version 1.4, no constants existed for specifying the box layout's axis in a localizable way. Instead, you specified <code>X_AXIS</code> (left to right) or <code>Y_AXIS</code> (top to bottom) when creating the <code>BoxLayout</code>. Our examples now use the constants <code>LINE_AXIS</code> and <code>PAGE_AXIS</code>, which are preferred because they enable programs to adjust to languages that have different orientations. In the default, left-to-right orientation, <code>LINE_AXIS</code> specifies left-to-right layout and <code>PAGE_AXIS</code> specifies top-to-bottom layout.
-
+<div class="note"><hr /><strong>版本说明:</strong>&nbsp;Before JDK version 1.4, no constants existed for specifying the box layout's axis in a localizable way. Instead, you specified <code>X_AXIS</code> (left to right) or <code>Y_AXIS</code> (top to bottom) when creating the <code>BoxLayout</code>. Our examples now use the constants <code>LINE_AXIS</code> and <code>PAGE_AXIS</code>, which are preferred because they enable programs to adjust to languages that have different orientations. In the default, left-to-right orientation, <code>LINE_AXIS</code> specifies left-to-right layout and <code>PAGE_AXIS</code> specifies top-to-bottom layout.
 <hr /></div>
 <p>When a <code>BoxLayout</code> lays out components from top to bottom, it tries to size each component at the component's preferred height. If the vertical space of the layout does not match the sum of the preferred heights, then <code>BoxLayout</code> tries to resize the components to fill the space. The components either grow or shrink to fill the space, with <code>BoxLayout</code> honoring the minimum and maximum sizes of each of the components. Any extra space appears at the bottom of the container.</p>
 <p>For a top-to-bottom box layout, the preferred width of the container is that of the maximum preferred width of the children. If the container is forced to be wider than that, <code>BoxLayout</code> attempts to size the width of each component to that of the container's width (minus insets). If the maximum size of a component is smaller than the width of the container, then X alignment comes into play.</p>
@@ -592,7 +591,7 @@ The following sections discuss <code>BoxLayout</code> in more detail:</p>
 All components with an intermediate X alignment (such as center) will be as wide as their container. Here are two examples:</p>
 <img src="../../figures/uiswing/layout/BoxLayoutDemo-left2.png" width="200" height="181" alt="Three components with mixed X alignments and no maximum size" />&nbsp; 
 <img src="../../figures/uiswing/layout/BoxLayoutDemo-wacky2.png" width="202" height="181" alt="Three components with mixed X alignments and no maximum size" /><p>To get to know <code>BoxLayout</code> better, you can run your own experiments with BoxLayoutDemo2.</p>
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run BoxLayoutDemo2 using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/layout/index.html#BoxLayoutDemo2">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/BoxLayoutDemo2Project/BoxLayoutDemo2.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the BoxLayoutDemo2 example" /></a><br />
 <p>You can see the code in 

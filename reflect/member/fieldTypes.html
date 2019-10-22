@@ -500,7 +500,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">成员</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="field.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="fieldModifiers.html">Next&nbsp;»</a>
+                <a target="_top" href="field.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="fieldModifiers.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>获取字段类型</h1></div>
@@ -554,7 +554,7 @@ GenericType: T
 <p>字段 <code>val</code> 的类型报告为 <code>java.lang.Object</code>，因为泛型是通过 <em>type erasure (类型擦除)</em> 实现的，它在编译过程中移除了关于泛型类型的所有信息。因此，<code>T</code> 被类型变量的上界所取代，在本例中为 <code>java.lang.Object</code>。</p>
 <p>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#getGenericType--"><code>Field.getGenericType()</code></a>将参考 <!-- The specific reference should be JVMS3 section 4.4.4 "Signature" -->
-类文件中的签名属性(如果存在)。如果该属性不可用，则它将返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#getType--"><code>Field.getType()</code></a>，这不会因引入泛型而更改。对于 <em>Foo</em> 的某些值，名称 <code>getGeneric<em>Foo</em></code> 的反射中的其他方法类似地实现。</p>
+类文件中的签名属性(如果存在)。如果该属性不可用，则它将返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#getType--"><code>Field.getType()</code></a>，其不会因引入泛型而更改。在反射中，对于 <em>Foo</em> 的某些值的名为 <code>getGeneric<em>Foo</em></code> 的其他方法也是类似地实现。</p>
 
 
         </div>

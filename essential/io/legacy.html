@@ -515,7 +515,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="misc.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summary.html">Next&nbsp;»</a>
+                <a target="_top" href="misc.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summary.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>旧版文件 I/O 代码</h1></div>
@@ -533,25 +533,25 @@
 <li>许多 <code>File</code> 方法没有扩展。通过服务器请求大型目录列表可能会导致挂起。大目录也可能导致内存资源问题，导致拒绝服务。</li>
 <li>如果存在循环符号链接，则无法编写可递归遍历文件树并正确响应的可靠代码。</li>
 </ul>
-<p>也许您有使用 <code>java.io.File</code> 的遗留代码，并希望利用 <code>java.nio.file.Path</code> 功能，而对代码的影响最小。</p>
+<p>也许你有使用 <code>java.io.File</code> 的遗留代码，并希望利用 <code>java.nio.file.Path</code> 功能，而对代码的影响最小。</p>
 <p><code>java.io.File</code> 类提供 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#toPath--"><code>toPath</code></a> 方法，该方法将旧样式 <code>File</code> 实例转换为 <code>java.nio.file.Path</code> 实例，如下：</p>
 <div class="codeblock"><pre>
 Path input = file.toPath();
 </pre></div>
-<p>然后，您可以利用 <code>Path</code> 类可用的丰富功能集。</p>
-<p>例如，假设您有一些删除文件的代码：</p>
+<p>然后，你可以利用 <code>Path</code> 类可用的丰富功能集。</p>
+<p>例如，假设你有一些删除文件的代码：</p>
 <div class="codeblock"><pre>
 file.delete();
 </pre></div>
-<p>您可以修改此代码以使用 <code>Files.delete</code> 方法，如下所示：</p>
+<p>你可以修改此代码以使用 <code>Files.delete</code> 方法，如下所示：</p>
 <div class="codeblock"><pre>
 Path fp = file.toPath();
 Files.delete(fp);
 </pre></div>
 <p>相反，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#toFile--"><code>Path.toFile</code></a> 方法为 <code>Path</code> 对象构造 <code>java.io.File</code> 对象。</p>
 <h2><a name="mapping" id="mapping">将 java.io.File 功能映射到 java.nio.file</a></h2>
-<p>由于文件 I/O 的 Java 实现已在 Java SE 7 发行版中完全重新构建，因此您无法将一种方法替换为另一种方法。如果要使用 <code>java.nio.file</code> 包提供的丰富功能，最简单的解决方案是使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#toPath--"><code>File.toPath</code></a> 方法正如上一节所述。但是，如果您不想使用该方法或者它不足以满足您的需求，则必须重写文件 I/O 代码。</p>
-<p>两个 API 之间没有一对一的对应关系，但是下表让您大致了解 <code>java.io.File</code> API 中的哪些功能映射到 <code>java.nio.file</code> API 并告诉您可以从何处获取更多信息。</p>
+<p>由于文件 I/O 的 Java 实现已在 Java SE 7 发行版中完全重新构建，因此你无法将一种方法替换为另一种方法。如果要使用 <code>java.nio.file</code> 包提供的丰富功能，最简单的解决方案是使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#toPath--"><code>File.toPath</code></a> 方法正如上一节所述。但是，如果你不想使用该方法或者它不足以满足你的需求，则必须重写文件 I/O 代码。</p>
+<p>两个 API 之间没有一对一的对应关系，但是下表让你大致了解 <code>java.io.File</code> API 中的哪些功能映射到 <code>java.nio.file</code> API 并告诉你可以从何处获取更多信息。</p>
 <table border="1" cellspacing="2" cellpadding="0" summary="此表显示 java.io.File 功能映射的内容
        在 Java SE 7 中引入的 java.nio.file 包中">
 <tr>

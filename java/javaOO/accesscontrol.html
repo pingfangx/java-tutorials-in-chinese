@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,7 +512,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="thiskey.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="classvars.html">Next&nbsp;»</a>
+                <a target="_top" href="thiskey.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="classvars.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>控制对类成员的访问</h1></div>
@@ -521,12 +521,12 @@
 
 <p>访问级别修饰符确定其他类是否可以使用特定字段或调用特定方法。有两个级别的访问控制：</p>
 <ul>
-<li>在顶级 <code>public</code> 或 <i>package-private</i>(没有明确的修饰符)。</li>
-<li>在成员级 <code>public</code>，<code>private</code>，<code>protected</code> 或 <i>package-private</i>(无明确修饰符)。</li>
+<li>在顶级  <code>public</code> 或 <i>package-private</i>(无明确修饰符)。</li>
+<li>在成员级  <code>public</code>，<code>private</code>，<code>protected</code> 或 <i>package-private</i>(无明确修饰符)。</li>
 </ul>
 <p>一个类可以使用修饰符 <code>public</code> 来声明，在这种情况下，该类对任何地方的所有类都是可见的。如果一个类没有修饰符(默认，也称为 <i>package-private</i>)，它只在它自己的包中可见(包是相关类的命名组，你将在以后的课程中学习)。 
 </p>
-<p>在成员级别，您也可以像使用顶级类一样使用 <code>public</code> 修饰符或无修饰符(<i>package-private</i>)，其含义相同。对于成员，还有两个额外的访问修饰符：<code>private</code> 和 <code>protected</code>。<code>private</code> 修饰符指定该成员只能在其自己的类中访问。<code>protected</code> 修饰符指定成员只能在其自己的包中访问(与 <i>package-private</i> 一样)，另外，还可以在另一个包中由其类的子类访问。</p>
+<p>在成员级别，你也可以像使用顶级类一样使用 <code>public</code> 修饰符或无修饰符(<i>package-private</i>)，其含义相同。对于成员，还有两个额外的访问修饰符：<code>private</code> 和 <code>protected</code>。<code>private</code> 修饰符指定该成员只能在其自己的类中访问。<code>protected</code> 修饰符指定成员只能在其自己的包中访问(与 <i>package-private</i> 一样)，另外，还可以在另一个包中由其类的子类访问。</p>
 <p>下表显示了每个修饰符允许的成员访问权限。</p>
 <table border="1" summary="该表定义了一个修饰符赋予的访问级别">
 <caption style="font-weight: bold" id="accesscontrol-levels">访问级别</caption>
@@ -566,8 +566,8 @@
 <td>N</td>
 </tr>
 </table>
-<p>第一个数据列表示类本身是否有权访问成员，由访问级别定义。正如你所看到的，一个类总是可以访问自己的成员。第二列表出与该类相同的包中的类(不管他们的亲子关系)是否有权访问该类成员。第三列表示在此包外部声明的类的子类是否有权访问该类成员。第四列表示是否所有的类都有权访问该类成员。</p>
-<p>访问级别以两种方式影响你。首先，当您使用来自其他来源的类（例如 Java 平台中的类）时，访问级别将确定您自己的类可以使用哪些类的成员。其次，当你编写一个类时，你需要决定每个成员变量和类中每个方法应具有的访问级别。</p>
+<p>第一个数据列表示类本身是否有权访问成员，由访问级别定义。正如你所看到的，一个类总是可以访问自己的成员。第二列表出与该类相同的包中的类(不管他们父子关系)是否有权访问该类成员。第三列表示在此包外部声明的类的子类是否有权访问该类成员。第四列表示是否所有的类都有权访问该类成员。</p>
+<p>访问级别以两种方式影响你。首先，当你使用来自其他来源的类（例如 Java 平台中的类）时，访问级别将确定你自己的类可以使用哪些类的成员。其次，当你编写一个类时，你需要决定每个成员变量和类中每个方法应具有的访问级别。</p>
 <p>我们来看看一组类，并了解访问级别如何影响可视性。<span id="figure:classes-access.gif">下图</span> 显示了本例中的四个类以及它们之间的关系。</p>
 <center><img src="../../figures/java/classes-access.gif" width="257" height="113" align="bottom" alt="用于说明访问级别的示例的类和包" /></p><p class="FigureCaption">用于说明访问级别的示例的类和包</p></center><p>
 <span id="table:accesscontrol-levels">下表</span> 显示了可以应用于每个访问修饰符的 Alpha 类成员的可见位置。</p>
@@ -609,10 +609,10 @@
 <td>N</td>
 </tr>
 </table>
-<div class="note"><hr /><strong>关于选择访问级别的提示：</strong>&nbsp;<p>如果其他程序员使用您的类，您希望确保不会发生误用错误。访问级别可以帮助你做到这一点。</p>
+<div class="note"><hr /><strong>关于选择访问级别的提示:</strong>&nbsp;<p>如果其他程序员使用你的类，你希望确保不会发生误用错误。访问级别可以帮助你做到这一点。</p>
 <ul>
 <li>使用对特定成员有意义的限制性最强的访问级别。除非你有充分的理由不使用，否则使用 <code>private</code>。</li>
-<li>除了常量外，避免 <code>public</code> 字段。（本教程中的许多示例使用公共字段。这可能有助于简洁地说明一些观点，但不建议用于生产代码。）公共字段倾向于将您链接到特定的实现，并限制您更改代码的灵活性。</li>
+<li>除了常量外，避免 <code>public</code> 字段。（本教程中的许多示例使用公共字段。这可能有助于简洁地说明一些观点，但不建议用于生产代码。）公共字段倾向于将你链接到特定的实现，并限制你更改代码的灵活性。</li>
 </ul>
 <hr /></div>
 

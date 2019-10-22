@@ -479,28 +479,28 @@
             <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>
         </div>
         <div class="NavBit">
-                <a target="_top" href="../overview/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="definition.html">Next&nbsp;»</a>
+                <a target="_top" href="../overview/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="definition.html">下一页&nbsp;»</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
         <div id="PageTitle"><h1>课程：使用 URL</h1></div>
         <div id="PageContent">
 
-<p>URL 是统一资源定位器的首字母缩写。它是 Internet 上资源的引用(地址)。您给您喜欢的 Web 浏览器提供 URL，以便它可以在 Internet 上查找文件，就像您在信上提供地址以便邮局可以找到您的联系人一样。</p>
+<p>URL 是统一资源定位器的首字母缩写。它是 Internet 上资源的引用(地址)。你给你喜欢的 Web 浏览器提供 URL，以便它可以在 Internet 上查找文件，就像你在信上提供地址以便邮局可以找到你的联系人一样。</p>
 <p>与 Internet 交互的 Java 程序也可以使用 URL 来查找他们希望访问的 Internet 上的资源。Java 程序可以使用 <code>java.net</code> 包中名为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html"><code>URL</code></a> 的类来表示 URL 地址。</p>
-<div class="note"><hr /><strong>术语注释：</strong>&nbsp;<p>术语 <em>URL</em> 可能不明确。它可以引用 Java 程序中的 Internet 地址或 <code>URL</code> 对象。如果 URL 的含义需要特定，则此文本使用“URL 地址”表示 Internet 地址，使用“<code>URL</code> 对象”表示 <code>URL</code> 类的实例在一个程序中。</p>
+<div class="note"><hr /><strong>术语说明:</strong>&nbsp;<p>术语 <em>URL</em> 可能不明确。它可以引用 Java 程序中的 Internet 地址或 <code>URL</code> 对象。如果 URL 的含义需要特定，则此文本使用“URL 地址”表示 Internet 地址，使用“<code>URL</code> 对象”表示在一个程序中的 <code>URL</code> 类的实例。</p>
 <hr /></div>
 <h2><a href="definition.html">什么是 URL？</a></h2>
 <p>URL 采用字符串的形式，描述如何在 Internet 上查找资源。URL 有两个主要组件：访问资源所需的协议和资源的位置。</p>
 <h2><a href="creatingUrls.html">创建 URL</a></h2>
-<p>在 Java 程序中，您可以创建表示 URL 地址的 URL 对象。URL 对象始终引用绝对 URL，但可以从绝对 URL，相对 URL 或 URL 组件构造。</p>
+<p>在 Java 程序中，你可以创建表示 URL 地址的 URL 对象。URL 对象始终引用绝对 URL，但可以从绝对 URL，相对 URL 或 URL 组件构造。</p>
 <h2><a href="urlInfo.html">解析 URL</a></h2>
-<p>解析 URL 以查找主机名，文件名和其他信息的日子已经一去不复返了。使用有效的 URL 对象，您可以调用其任何访问器方法，以从 URL 获取所有这些信息，而无需进行任何字符串解析！</p>
+<p>解析 URL 以查找主机名，文件名和其他信息的日子已经一去不复返了。使用有效的 URL 对象，你可以调用其任何访问器方法，以从 URL 获取所有这些信息，而无需进行任何字符串解析！</p>
 <h2><a href="readingURL.html">直接从 URL 读取</a></h2>
 <p>本节介绍 Java 程序如何使用 <code>openStream()</code> 方法从 URL 读取。</p>
 <h2><a href="connecting.html">连接到 URL</a></h2>
-<p>如果您想做的不仅仅是从 URL 读取，您可以通过在 URL 上调用 <code>openConnection()</code> 来连接到它。<code>openConnection()</code> 方法返回一个 URLConnection 对象，您可以将该对象用于与 URL 进行更一般的通信，例如从中读取，写入或查询内容和其他信息。</p>
+<p>如果你想做的不仅仅是从 URL 读取，你可以通过在 URL 上调用 <code>openConnection()</code> 来连接到它。<code>openConnection()</code> 方法返回一个 URLConnection 对象，你可以将该对象用于与 URL 进行更一般的通信，例如从中读取，写入或查询内容和其他信息。</p>
 <h2><a href="readingWriting.html">读取和写入 URLConnection</a></h2>
-<p>某些 URL（例如许多连接到 cgi-bin 脚本的 URL）允许您（甚至要求您）将信息写入 URL。例如，搜索脚本可能需要在执行搜索之前将详细的查询数据写入 URL。本节介绍如何写入 URL 以及如何获取结果。</p>
+<p>某些 URL（例如许多连接到 cgi-bin 脚本的 URL）允许你（甚至要求你）将信息写入 URL。例如，搜索脚本可能需要在执行搜索之前将详细的查询数据写入 URL。本节介绍如何写入 URL 以及如何获取结果。</p>
 
 
         </div>

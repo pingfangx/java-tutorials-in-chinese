@@ -401,7 +401,7 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p><strong>Question:</strong> Which of the following items is not an advantage of self-contained applications?</p>
+<p><strong>问题:</strong>Which of the following items is not an advantage of self-contained applications?</p>
 <ol type="A">
   <li>Users install the application with an installer that is familiar to them.</li>
   <li>The application runs as a native application.</li>
@@ -409,23 +409,23 @@
   <li>You control the version of the JRE that is used by the application.</li>
   <li>The application does not require a browser to run.</li>
 </ol>
-<p><strong>Answer:</strong> C. The application requires more space because the JRE is bundled with the application.</p>
+<p><strong>答案:</strong>C. The application requires more space because the JRE is bundled with the application.</p>
 </li>
 
 <li>
-<p><strong>Question:</strong> True or False: MIME type must always be used to set up a file association.</p>
-<p><strong>Answer:</strong> <strong>False</strong>. Depending on the platform and the bundler used, a MIME type or file extension can be used. For Linux, the MIME type is required. For Windows, the file extension is required. For OS X, either the MIME type or the file extension is required. It is a good practice to provide both the MIME type and file extension when setting up file associations, regardless of the platform.</p>
+<p><strong>问题:</strong>对或错:MIME type must always be used to set up a file association.</p>
+<p><strong>答案:</strong><strong>False</strong>. Depending on the platform and the bundler used, a MIME type or file extension can be used. For Linux, the MIME type is required. For Windows, the file extension is required. For OS X, either the MIME type or the file extension is required. It is a good practice to provide both the MIME type and file extension when setting up file associations, regardless of the platform.</p>
 </li>
 
 <li>
-<p><strong>Question:</strong> What elements are used to identify the entry points for self-contained applications in the <code>&lt;fx:deploy&gt;</code> Ant task?</p>
-<p><strong>Answer:</strong> The <code>mainClass</code> attribute of the <code>&lt;fx:application&gt;</code> element is used to identify the main entry point. If the self-contained application has multiple entry points, the <code>&lt;fx:secondaryLauncher&gt;</code> element is used for each secondary entry point.</p>
+<p><strong>问题:</strong>What elements are used to identify the entry points for self-contained applications in the <code>&lt;fx:deploy&gt;</code> Ant task?</p>
+<p><strong>答案:</strong>The <code>mainClass</code> attribute of the <code>&lt;fx:application&gt;</code> element is used to identify the main entry point. If the self-contained application has multiple entry points, the <code>&lt;fx:secondaryLauncher&gt;</code> element is used for each secondary entry point.</p>
 </li>
 </ol>
 <h2>练习</h2>
 <ol>
 <li>
-<p><strong>Exercise:</strong> Write the <code>&lt;fx:deploy&gt;</code> Ant task to generate a Windows MSI bundle for a simple application named My Sample App. The JAR file for the application is in the <code>dist</code> directory, the main class is <code>samples.MyApp</code>, and output files are to be written to the current directory.</p>
+<p><strong>练习:</strong>Write the <code>&lt;fx:deploy&gt;</code> Ant task to generate a Windows MSI bundle for a simple application named My Sample App. The JAR file for the application is in the <code>dist</code> directory, the main class is <code>samples.MyApp</code>, and output files are to be written to the current directory.</p>
 <p><strong>答案：</strong></p>
 <div class="codeblock"><pre>
 &lt;fx:deploy outdir="."
@@ -446,7 +446,7 @@
 </li>
 
 <li>
-<p><strong>Exercise:</strong> Enhance the code in the previous exercise to create bundles for all Windows installers and define a file association for text files.</p>
+<p><strong>练习:</strong>Enhance the code in the previous exercise to create bundles for all Windows installers and define a file association for text files.</p>
 <p><strong>答案：</strong></p>
 <div class="codeblock"><pre>
 &lt;fx:deploy outdir="."

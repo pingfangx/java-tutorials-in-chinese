@@ -503,15 +503,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="final.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summaryinherit.html">Next&nbsp;»</a>
+                <a target="_top" href="final.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summaryinherit.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>抽象方法和类</h1></div>
             <div id="PageContent"><!-- Abstract Methods and Classes -->
 
 
-<p><i>abstract class</i> 是一个声明为 <code>abstract</code> 的类，它可能包含也可能不包含抽象方法。抽象类无法实例化，但可以进行子类化。</p>
-<p><i>abstract method</i> 是一个没有实现的情况下声明的方法(没有大括号，后跟分号)，如下所示：</p>
+<p><i>abstract class (抽象类)</i> 是一个声明为 <code>abstract</code> 的类，它可能包含也可能不包含抽象方法。抽象类无法实例化，但可以进行子类化。</p>
+<p><i>abstract method (抽象方法)</i> 是一个没有实现的情况下声明的方法(没有大括号，后跟分号)，如下所示：</p>
 <div class="codeblock"><pre>
 abstract void moveTo(double deltaX, double deltaY);
 </pre></div>
@@ -524,41 +524,41 @@ public abstract class GraphicObject {
 }
 </pre></div>
 <p>当抽象类被子类化时，子类通常为其父类中的所有抽象方法提供实现。但是，如果没有，则子类也必须声明为 <code>abstract</code>。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;<i>interface</i> 中的方法(参见 <a class="TutorialLink" target="_top" href="../IandI/createinterface.html">Interfaces</a> 部分)，如果未声明为 default 或 static ，则都<i>隐式（implicitly）</i> 抽象，因此 <code>abstract</code> 修饰符不用于接口方法。(可以使用，但不需要。)
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<i>interface (接口)</i> 中的方法(参见 <a class="TutorialLink" target="_top" href="../IandI/createinterface.html">Interfaces</a> 部分)，如果未声明为 default 或 static ，则都 <i>implicitly (隐式)</i> abstract，因此 <code>abstract</code> 修饰符不用于接口方法。(可以使用，但不需要。)
 <hr /></div>
 
 
 <h2><a name="abstact_classes_compared_to_interfaces">抽象类与接口相比</a></h2>
 
-<p>抽象类与接口类似。您无法实例化它们，并且它们可能声明一些包含或不包含实现的混合方法。但是，使用抽象类，您可以声明非静态和 final 的字段，并定义 public，protected 和 private 具体方法。使用接口，所有字段都自动为 public，static 和 final，并且您声明或定义的所有方法(作为默认方法)都是 public 的。此外，您只能继承一个类，无论它是否是抽象的，而您可以实现任意数量的接口。</p>
+<p>抽象类与接口类似。你无法实例化它们，并且它们可能声明一些包含或不包含实现的混合方法。但是，使用抽象类，你可以声明非静态和 final 的字段，并定义 public，protected 和 private 具体方法。使用接口，所有字段都自动为 public，static 和 final，并且你声明或定义的所有方法(作为默认方法)都是 public 的。此外，你只能继承一个类，无论它是否是抽象的，而你可以实现任意数量的接口。</p>
 
 <p>你应该使用抽象类还是接口？</p>
 
 <ul>
-  <li>如果任何这些语句适用于您的情况，请考虑使用抽象类：
+  <li>如果任何这些语句适用于你的情况，请考虑使用抽象类：
     <ul>
-      <li>您希望在几个密切相关的类之间共享代码。</li>
-      <li>您希望继承抽象类的类具有许多常用方法或字段，或者需要除 public 之外的访问修饰符(例如 protected 和 private)。</li>
-      <li>您想声明非静态或非最终字段。这使您可以定义可以访问和修改它们所属对象的状态的方法。</li>
+      <li>你希望在几个密切相关的类之间共享代码。</li>
+      <li>你希望继承抽象类的类具有许多常用方法或字段，或者需要除 public 之外的访问修饰符(例如 protected 和 private)。</li>
+      <li>你想声明非静态或非最终字段。这使你可以定义可以访问和修改它们所属对象的状态的方法。</li>
     </ul>
   </li>
-  <li>如果任何这些语句适用于您的情况，请考虑使用接口：
+  <li>如果任何这些语句适用于你的情况，请考虑使用接口：
     <ul>
-      <li>您希望不相关的类将实现您的接口。例如，接口 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html"><code>Comparable</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html"><code>Cloneable</code></a> 由许多不相关的类实现。</li>
-      <li>您希望指定特定数据类型的行为，但不关心谁实现其行为。</li>
-      <li>您希望利用类型的多重继承。</li>
+      <li>你希望不相关的类将实现你的接口。例如，接口 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html"><code>Comparable</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html"><code>Cloneable</code></a> 由许多不相关的类实现。</li>
+      <li>你希望指定特定数据类型的行为，但不关心谁实现其行为。</li>
+      <li>你希望利用类型的多重继承。</li>
     </ul>
   </li>
 </ul>
 
-<p>JDK 中抽象类的一个示例是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractMap.html"><code>AbstractMap</code></a>，它是 Collections Framework 的一部分。它的子类(包括 <code>HashMap</code>，<code>TreeMap</code> 和 <code>ConcurrentHashMap</code>)共享许多方法(包括 <code>get</code>，<code>put</code>，<code>isEmpty</code>，<code>containsKey</code>和<code>containsValue</code>)，这些方法由 <code>AbstractMap</code> 定义。</p>
+<p>JDK 中抽象类的一个示例是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractMap.html"><code>AbstractMap</code></a>，它是集合框架的一部分。它的子类(包括 <code>HashMap</code>，<code>TreeMap</code> 和 <code>ConcurrentHashMap</code>)共享许多方法(包括 <code>get</code>，<code>put</code>，<code>isEmpty</code>，<code>containsKey</code>和<code>containsValue</code>)，这些方法由 <code>AbstractMap</code> 定义。</p>
 
-<p>JDK 中实现多个接口的类的示例是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code>HashMap</code></a>，它实现接口 <code>Serializable</code>，<code>Cloneable</code> ，和 <code>Map&lt;K, V&gt;</code>。通过阅读这个接口列表，您可以推断出 <code>HashMap</code> 的实例(无论实现该类的开发人员或公司)是可以克隆的，是可序列化的(这意味着它可以转换为字节流;请参阅 <a class="TutorialLink" target="_top" href="../../jndi/objects/serial.html">Serializable Objects</a> 部分)，并具有 map 的功能。此外，<code>Map&lt;K, V&gt;</code> 接口已经增强了许多默认方法，例如 <code>merge</code> 和 <code>forEach</code> 已经实现这个接口的旧类不必定义。</p>
+<p>JDK 中实现多个接口的类的示例是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code>HashMap</code></a>，它实现接口 <code>Serializable</code>，<code>Cloneable</code> ，和 <code>Map&lt;K, V&gt;</code>。通过阅读这个接口列表，你可以推断出 <code>HashMap</code> 的实例(无论实现该类的开发人员或公司)是可以克隆的，是可序列化的(这意味着它可以转换为字节流;请参阅 <a class="TutorialLink" target="_top" href="../../jndi/objects/serial.html">Serializable Objects</a> 部分)，并具有 map 的功能。此外，<code>Map&lt;K, V&gt;</code> 接口已经增强了许多默认方法，例如 <code>merge</code> 和 <code>forEach</code> 已经实现这个接口的旧类不必定义。</p>
 
 <p>请注意，许多软件库都使用抽象类和接口; <code>HashMap</code> 类实现了几个接口，并且还继承了抽象类 <code>AbstractMap</code>。</p>
 
 <h2>抽象类示例</h2>
-<p>在面向对象的绘图应用程序中，您可以绘制圆形，矩形，线条，贝塞尔曲线和许多其他图形对象。这些对象都具有某些状态(例如：位置，方向，线条颜色，填充颜色)和行为(例如：moveTo，rotate，resize，draw)。所有图形对象中的一些状态和行为都是相同的(例如：位置，填充颜色和 moveTo)。其他需要不同的实现(例如，调整大小或绘制)。所有 <code>GraphicObject</code> 必须能够自己绘制或调整大小;他们只是在做不同的事情上有所不同。这是抽象超类的完美情况。您可以利用相似性并声明所有图形对象都从相同的抽象父对象继承(例如，<code>GraphicObject</code>)，如下图中的 <span id="figure:classes-graphicObject.gif">the following figure.</span></p>
+<p>在面向对象的绘图应用程序中，你可以绘制圆形，矩形，线条，贝塞尔曲线和许多其他图形对象。这些对象都具有某些状态(例如：位置，方向，线条颜色，填充颜色)和行为(例如：moveTo，rotate，resize，draw)。所有图形对象中的一些状态和行为都是相同的(例如：位置，填充颜色和 moveTo)。其他需要不同的实现(例如，调整大小或绘制)。所有 <code>GraphicObject</code> 必须能够自己绘制或调整大小;他们只是在做不同的事情上有所不同。这是抽象超类的完美情况。你可以利用相似性并声明所有图形对象都从相同的抽象父对象继承(例如，<code>GraphicObject</code>)，如 <span id="figure:classes-graphicObject.gif">下图所示</span>。</p>
 <center><img src="../../figures/java/classes-graphicObject.gif" width="372" height="80" align="bottom" alt="Classes Rectangle, Line, Bezier, and Circle Inherit from GraphicObject " /></p><p class="FigureCaption">Classes Rectangle, Line, Bezier, and Circle Inherit from GraphicObject</p></center><p>首先，声明一个抽象类 <code>GraphicObject</code>，以提供由所有子类完全共享的成员变量和方法，例如当前位置和 <code>moveTo</code> 方法。<code>GraphicObject</code> 还声明方法的抽象方法，例如 <code>draw</code> 或 <code>resize</code>，这些方法需要由所有子类实现，但必须以不同的方式实现。<code>GraphicObject</code> 类看起来像这样：</p>
 <div class="codeblock"><pre>
 abstract class GraphicObject {
@@ -603,7 +603,7 @@ class XX extends X {
 </pre></div>
 <p>在这种情况下，类 <code>X</code> 必须是 <code>abstract</code>，因为它没有完全实现 <code>Y</code>，但是类 <code>XX</code> ，实际上，它完全实现 <code>Y</code>。</p>
 <h2>类成员</h2>
-<p>抽象类可以包含 <code>static</code> 字段和 <code>static</code> 方法。您可以将这些静态成员与类引用一起使用（例如，<code>AbstractClass.staticMethod()</code>），就像使用任何其他类一样。</p>
+<p>抽象类可以包含 <code>static</code> 字段和 <code>static</code> 方法。你可以将这些静态成员与类引用一起使用（例如，<code>AbstractClass.staticMethod()</code>），就像使用任何其他类一样。</p>
 
 
         </div>

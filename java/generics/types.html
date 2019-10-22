@@ -476,8 +476,8 @@
 <div class="nolinkAHEAD">泛型类型</div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -505,14 +505,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="why.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="rawTypes.html">Next&nbsp;»</a>
+                <a target="_top" href="why.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="rawTypes.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>泛型类型</h1></div>
             <div id="PageContent">
 
 <p>
-<em>generic type</em> 是在类型上参数化的泛型类或接口。将修改以下 <tt>Box</tt> 类以演示该概念。</p>
+<em>generic type (泛型类型)</em> 是在类型上参数化的泛型类或接口。将修改以下 <tt>Box</tt> 类以演示该概念。</p>
 
 <h2>一个简单的 Box 类</h2>
 <p>
@@ -526,18 +526,18 @@ public class Box {
 }
 </pre></div>
 <p>
-由于它的方法接受或返回 <tt>Object</tt>，所以只要它不是基本类型之一，您就可以随意传入任何内容。在编译时无法验证类的使用方式。代码的一部分可能会在箱中放置 <tt>Integer</tt> 并期望从中获取 <tt>Integer</tt>，而代码的另一部分可能会错误地传入 <tt>String</tt>，导致运行时错误。</p>
+由于它的方法接受或返回 <tt>Object</tt>，所以只要它不是基本类型之一，你就可以随意传入任何内容。在编译时无法验证类的使用方式。代码的一部分可能会在箱中放置 <tt>Integer</tt> 并期望从中获取 <tt>Integer</tt>，而代码的另一部分可能会错误地传入 <tt>String</tt>，导致运行时错误。</p>
 
 <h2>Box 类的泛型版本</h2>
 <p>
-<em>generic class</em> 使用以下格式定义：</p>
+<em>generic class (泛型类)</em> 使用以下格式定义：</p>
 <div class="codeblock"><pre>
 class name&lt;T1, T2, ..., Tn&gt; { /* ... */ }
 </pre></div>
 <p>
-由尖括号(<tt>&lt;&gt;</tt>)分隔的类型参数部分跟在类名后面。它指定 <em>类型参数（type parameters）</em>(也称为 <em>类型变量（type variables）</em>)<tt>T1</tt>，<tt>T2</tt>，...和 <tt>Tn</tt>。</p>
+由尖括号(<tt>&lt;&gt;</tt>)分隔的类型形参部分跟在类名后面。它指定 <em>type parameters (类型形参)</em>(也称为 <em>type variables (类型变量)</em>)<tt>T1</tt>，<tt>T2</tt>，...和 <tt>Tn</tt>。</p>
 <p>
-要更新 <tt>Box</tt> 类以使用泛型，可以通过将代码“<tt>public class Box</tt>”更改为“<tt>public class Box&lt;T&gt;</tt>“ 以创建一个 <em>泛型类型声明（generic type declaration）</em> 。这引入了类型变量 <tt>T</tt>，可以在类中的任何位置使用。</p>
+要更新 <tt>Box</tt> 类以使用泛型，可以通过将代码“<tt>public class Box</tt>”更改为“<tt>public class Box&lt;T&gt;</tt>“ 以创建一个 <em>generic type declaration (泛型类型声明)</em> 。这引入了类型变量 <tt>T</tt>，可以在类中的任何位置使用。</p>
 <p>
 通过此更改，<tt>Box</tt> 类变为：</p>
 <div class="codeblock"><pre>
@@ -554,37 +554,37 @@ public class Box&lt;T&gt; {
 }
 </pre></div>
 <p>
-如您所见，<tt>Object</tt> 的所有匹配项都被 <tt>T</tt> 替换。类型变量可以是您指定的任何 <strong>非基本（non-primitive）</strong> 类型：任何类类型，任何接口类型，任何数组类型，甚至是其他类型变量。</p>
+如你所见，<tt>Object</tt> 的所有匹配项都被 <tt>T</tt> 替换。类型变量可以是你指定的任何 <strong>non-primitive (非基本)</strong> 类型：任何类类型，任何接口类型，任何数组类型，甚至是其他类型变量。</p>
 <p>
 可以应用相同的技术来创建泛型接口。</p>
 
-<h2>类型参数命名约定</h2>
-<p>按照惯例，类型参数名称是单个大写字母。这与你已经知道的变量 <a class="TutorialLink" target="_top" href="../nutsandbolts/variables.html#naming">命名</a> 约定形成鲜明对比，并且有充分的理由：没有这个约定，很难区分类型变量和普通类或接口之间的名称区别。</p>
-<p>最常用的类型参数名称是：</p>
+<h2>类型形参命名规范</h2>
+<p>按照规范，类型形参名称是单个大写字母。这与你已经知道的变量 <a class="TutorialLink" target="_top" href="../nutsandbolts/variables.html#naming">命名</a> 规范形成鲜明对比，并且有充分的理由：没有这个规范，很难区分类型变量和普通类或接口之间的名称区别。</p>
+<p>最常用的类型形参名称是：</p>
 <ul>
-<li>E - Element(Java Collections Framework 广泛使用)</li>
+<li>E - Element(Java 集合框架广泛使用)</li>
 <li>K - Key</li>
 <li>N - Number</li>
 <li>T - Type</li>
 <li>V - Value</li>
 <li>S,U,V etc. - 2nd, 3rd, 4th types</li>
 </ul>
-<p>您将在整个 Java SE API 和本课程的其余部分中看到这些名称。</p>
+<p>你将在整个 Java SE API 和本课程的其余部分中看到这些名称。</p>
 
 <h2><a name="instantiation">调用和实例化泛型类型</a></h2>
 <p>
-要从代码中引用泛型 <tt>Box</tt> 类，必须执行 <em>泛型类型调用（generic type invocation）</em>，它将 <tt>T</tt> 替换为某些具体值，例如 <tt>Integer</tt>：</p>
+要从代码中引用泛型 <tt>Box</tt> 类，必须执行 <em>generic type invocation (泛型类型调用)</em>，它将 <tt>T</tt> 替换为某些具体值，例如 <tt>Integer</tt>：</p>
 <div class="codeblock"><pre>
 Box&lt;Integer&gt; integerBox;
 </pre></div>
 <p>
-您可以将泛型类型调用视为与普通方法调用类似，但不是将参数传递给方法，而是传递 <em>类型参数（type argument）</em>  -  这种情况下是 <tt>Integer</tt> - 到 <tt>Box</tt> 类本身。</p>
-<div class="note"><hr /><strong>类型形参和类型实参术语（Type Parameter and Type Argument Terminology）:</strong> 许多开发人员互换地使用术语 "type parameter" 和 "type argument"，但这些术语并不相同。编码时，提供类型实参（type arguments）以创建参数化类型（parameterized type）。因此，<tt>Foo&lt;T&gt;</tt> 中的 <tt>T</tt> 是一个类型形参（type parameter），而 <tt>Foo&lt;String&gt; f</tt> 中的 <tt>String</tt> 是一个类型实参（type argument）。本课程在使用这些术语时会遵循此定义。
+你可以将泛型类型调用视为与普通方法调用类似，但不是将参数传递给方法，而是传递 <em>type argument (类型实参)</em>  -  这种情况下是 <tt>Integer</tt> - 到 <tt>Box</tt> 类本身。</p>
+<div class="note"><hr /><strong>类型形参和类型实参术语:</strong>&nbsp;<strong>Type Parameter and Type Argument Terminology (类型形参和类型实参术语)</strong>：许多开发人员互换地使用术语 "type parameter" 和 "type argument"，但这些术语并不相同。编码时，提供类型实参（type arguments）以创建参数化类型（parameterized type）。因此，<tt>Foo&lt;T&gt;</tt> 中的 <tt>T</tt> 是一个类型形参（type parameter），而 <tt>Foo&lt;String&gt; f</tt> 中的 <tt>String</tt> 是一个类型实参（type argument）。本课程在使用这些术语时会遵循此定义。
 <hr /></div>
 <p>
 与任何其他变量声明一样，此代码实际上不会创建新的 <tt>Box</tt> 对象。它只是声明 <tt>integerBox</tt> 将保存对 "<tt>Integer</tt> 的 <tt>Box</tt>" 的引用，这就是 <tt>Box&lt;Integer&gt;</tt> 的读法。</p>
 <p>
-泛型类型的调用通常称为 <em>参数化类型（parameterized type）</em>。</p>
+泛型类型的调用通常称为 <em>parameterized type (参数化类型)</em>。</p>
 <p>
 要实例化此类，请像往常一样使用 <tt>new</tt> 关键字，但在类名和括号之间放置 <tt>&lt;Integer&gt;</tt>：</p>
 <div class="codeblock"><pre>
@@ -593,16 +593,16 @@ Box&lt;Integer&gt; integerBox = new Box&lt;Integer&gt;();
 
 <h2><a name="diamond" id="diamond">钻石（Diamond）操作符</a></h2>
 <p>
-在 Java SE 7 及更高版本中，只要编译器可以从上下文中确定或推断类型参数，就可以用一组空的类型参数(&lt;&gt;)替换调用泛型类的构造函数所需的类型参数。 这对尖括号 &lt;&gt; 非正式地称为 <em>the diamond</em>。例如，您可以使用以下语句创建 <tt>Box&lt;Integer&gt;</tt> 的实例：</p>
+在 Java SE 7 及更高版本中，只要编译器可以从上下文中确定或推断类型实参，就可以用一组空的类型实参(&lt;&gt;)替换调用泛型类的构造函数所需的类型实参。 这对尖括号 &lt;&gt; 非正式地称为 <em>the diamond (钻石)</em>（译注：diamond 有钻石和菱形的意思，这里是根据形状命名的，但不知道英文中具体含义，统一翻译为钻石）。例如，你可以使用以下语句创建 <tt>Box&lt;Integer&gt;</tt> 的实例：</p>
 <div class="codeblock"><pre>
 Box&lt;Integer&gt; integerBox = new Box&lt;&gt;();
 </pre></div>
 <p>
 有关钻石表示法和类型推断的更多信息，请参阅 <a class="TutorialLink" target="_top" href="genTypeInference.html">Type Inference</a>。</p>
 
-<h2><a name="multiple" id="multiple">多个类型参数</a></h2>
+<h2><a name="multiple" id="multiple">多个类型形参</a></h2>
 <p>
-如前所述，泛型类可以有多个类型参数。例如，泛型 <tt>OrderedPair</tt> 类，它实现了泛型的 <tt>Pair</tt> 接口：</p>
+如前所述，泛型类可以有多个类型形参。例如，泛型 <tt>OrderedPair</tt> 类，它实现了泛型的 <tt>Pair</tt> 接口：</p>
 <div class="codeblock"><pre>
 public interface Pair&lt;K, V&gt; {
     public K getKey();
@@ -641,11 +641,11 @@ OrderedPair&lt;String, String&gt;  p2 = new OrderedPair<strong>&lt;&gt;</strong>
 </pre></div>
 
 <p>
-要创建泛型接口，请遵循与创建泛型类相同的约定。</p>
+要创建泛型接口，请遵循与创建泛型类相同的规范。</p>
 
 <h2>参数化类型</h2>
 <p>
-您还可以使用参数化类型(即 <tt>List&lt;String&gt;</tt>)替换类型参数(即 <tt>K</tt> 或 <tt>V</tt>)。例如，使用 <tt>OrderedPair&lt;K, V&gt;</tt> 示例：</p>
+你还可以使用参数化类型(即 <tt>List&lt;String&gt;</tt>)替换类型形参(即 <tt>K</tt> 或 <tt>V</tt>)。例如，使用 <tt>OrderedPair&lt;K, V&gt;</tt> 示例：</p>
 <div class="codeblock"><pre>
 OrderedPair&lt;String, <strong>Box&lt;Integer&gt;</strong>&gt; p = new OrderedPair&lt;&gt;("primes", new Box&lt;Integer&gt;(...));
 </pre></div>

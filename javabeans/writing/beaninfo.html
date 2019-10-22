@@ -487,23 +487,23 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">JavaBeans(TM)</a>&gt;<a href="index.html" target="_top">编写 JavaBeans 组件</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="events.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../advanced/index.html">Next&nbsp;»</a>
+                <a target="_top" href="events.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../advanced/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用 BeanInfo</h1></div>
             <div id="PageContent">
 
-<p>Bean，尤其是图形组件，有很多属性。如果您的类继承自 <code>Component</code> 或 <code>JComponent</code> 或其他 Swing 类，则它将具有超过一百个属性。尽管像 NetBeans 这样的构建器工具可以轻松编辑 bean 属性，但很难找到合适的属性进行编辑，尤其是对于没有经验的程序员。</p>
+<p>Bean，尤其是图形组件，有很多属性。如果你的类继承自 <code>Component</code> 或 <code>JComponent</code> 或其他 Swing 类，则它将具有超过一百个属性。尽管像 NetBeans 这样的构建器工具可以轻松编辑 bean 属性，但很难找到合适的属性进行编辑，尤其是对于没有经验的程序员。</p>
 <h2><code>BeanInfo</code> 概述</h2>
 <p><code>BeanInfo</code> 是一个更改 bean 在构建器工具中的显示方式的类。构建器工具可以查询 <code>BeanInfo</code> 以找出它应首先显示哪些属性以及应隐藏哪些属性。</p>
 <p>bean 的 <code>BeanInfo</code> 类应与 bean 类同名，并附加 <code>BeanInfo</code>。例如，<code>FaceBean</code> 类具有相应的 <code>FaceBeanBeanInfo</code> 类来描述它。</p>
-<p>虽然可以“手动”实现 <code>BeanInfo</code> 类，但您会发现使用 NetBeans 等工具编辑 <code>BeanInfo</code> 要容易得多。</p>
+<p>虽然可以“手动”实现 <code>BeanInfo</code> 类，但你会发现使用 NetBeans 等工具编辑 <code>BeanInfo</code> 要容易得多。</p>
 <h2>在 NetBeans 中创建 <code>BeanInfo</code></h2>
 <p>在 <b>Projects</b> 窗格中，按住 Control 键并单击 bean 类的名称，然后从弹出菜单中选择 <b>BeanInfo Editor...</b>。</p>
-<center><img src="../../figures/javabeans/nb-beaninfo-1.png" width="430" height="658" align="bottom" alt="创建 BeanInfo，第 1 部分" /></center><p>NetBeans 注意到您没有 <code>BeanInfo</code> 并询问您是否要创建一个。单击 <b>Yes</b>。</p>
-<center><img src="../../figures/javabeans/nb-beaninfo-2.png" width="333" height="173" align="bottom" alt="创建 BeanInfo，第 2 部分" /></center><p>NetBeans 创建了一个新类，并将您引入源代码编辑器。单击 <b>Designer</b> 切换到可视编辑器。</p>
-<center><a href="../../figures/javabeans/nb-beaninfo-designer.png" target="_top"><img src="../../figures/javabeans/nb-beaninfo-designer.png" width="500" height="249" align="bottom" alt="BeanInfo 可视化编辑器" /></a><br />点击查看完整图片</center><p>从可视编辑器左侧的列表中选择属性，然后在右侧编辑其属性。如果您不希望使用构建器工具向开发人员显示特定属性，请单击 <b>Hidden</b>。要表明应在其他属性之前显示，请单击 <b>Preferred</b>。您还可以指示属性是绑定还是约束。</p>
-<p>您可以为 bean 的事件源和方法提供类似的信息。</p>
+<center><img src="../../figures/javabeans/nb-beaninfo-1.png" width="430" height="658" align="bottom" alt="创建 BeanInfo，第 1 部分" /></center><p>NetBeans 注意到你没有 <code>BeanInfo</code> 并询问你是否要创建一个。单击 <b>Yes</b>。</p>
+<center><img src="../../figures/javabeans/nb-beaninfo-2.png" width="333" height="173" align="bottom" alt="创建 BeanInfo，第 2 部分" /></center><p>NetBeans 创建了一个新类，并将你引入源代码编辑器。单击 <b>Designer</b> 切换到可视编辑器。</p>
+<center><a href="../../figures/javabeans/nb-beaninfo-designer.png" target="_top"><img src="../../figures/javabeans/nb-beaninfo-designer.png" width="500" height="249" align="bottom" alt="BeanInfo 可视化编辑器" /></a><br />点击查看完整图片</center><p>从可视编辑器左侧的列表中选择属性，然后在右侧编辑其属性。如果你不希望使用构建器工具向开发人员显示特定属性，请单击 <b>Hidden</b>。要表明应在其他属性之前显示，请单击 <b>Preferred</b>。你还可以指示属性是绑定还是约束。</p>
+<p>你可以为 bean 的事件源和方法提供类似的信息。</p>
 <p>当构建器工具加载 bean 类以将其添加到面板时，它将自动找到相应的 <code>BeanInfo</code> 并使用它来决定如何将 bean 呈现给开发人员。</p>
 
 

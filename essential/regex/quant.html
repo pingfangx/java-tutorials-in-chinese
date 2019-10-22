@@ -479,7 +479,7 @@
 <div class="linkAHEAD"><a href="pre_char_classes.html">预定义的字符类</a></div>
 <div class="nolinkAHEAD">量词</div>
 <div class="linkAHEAD"><a href="groups.html">捕获组</a></div>
-<div class="linkAHEAD"><a href="bounds.html">边界匹配器</a></div>
+<div class="linkAHEAD"><a href="bounds.html">边界匹配</a></div>
 <div class="linkAHEAD"><a href="pattern.html">Pattern 类的方法</a></div>
 <div class="linkAHEAD"><a href="matcher.html">Matcher 类的方法</a></div>
 <div class="linkAHEAD"><a href="pse.html">PatternSyntaxException 类的方法</a></div>
@@ -497,14 +497,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">正则表达式</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="pre_char_classes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="groups.html">Next&nbsp;»</a>
+                <a target="_top" href="pre_char_classes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="groups.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>量词</h1></div>
             <div id="PageContent"><!--Quantifiers-->
 
 
-<p><i>Quantifiers (量词)</i> 允许您指定要匹配的匹配项次数。为方便起见，下面介绍了描述贪婪，懒惰和占有量词的 Pattern API 规范的三个部分。乍一看，似乎量词 <code>X?</code>，<code>X??</code> 和 <code>X?+</code> 完全相同，因为它们都承诺匹配“<code>X</code>，一次或根本不匹配”。有一些细微的实现差异，将在本节末尾附近解释。</p>
+<p><i>Quantifiers (量词)</i> 允许你指定要匹配的匹配项次数。为方便起见，下面介绍了描述贪婪，懒惰和占有量词的 Pattern API 规范的三个部分。乍一看，似乎量词 <code>X?</code>，<code>X??</code> 和 <code>X?+</code> 完全相同，因为它们都承诺匹配“<code>X</code>，一次或根本不匹配”。有一些细微的实现差异，将在本节末尾附近解释。</p>
 <table border="1" cellspacing="2" cellpadding="0" summary="贪婪，懒惰和占有量词表">
 <tr>
 <th>贪婪</th>
@@ -564,8 +564,8 @@ Enter input string to search:
 No match found.
 </pre></div> 
 <h2>零长度匹配</h2>
-<p>在上面的示例中，匹配在前两种情况下成功，因为表达式 <code>a?</code> 和 <code>a*</code> 都允许字母 <code>a</code> 的零次匹配项。您还会注意到开始和结束索引都是零，这与我们到目前为止看到的任何示例都不同。空输入字符串 <code>""</code> 没有长度，因此测试只是匹配索引 0 处的任何内容。这种匹配被称为 <i>zero-length matches (零长度匹配)</i>。在以下几种情况下可能发生零长度匹配：在空输入字符串中，在输入字符串的开头，在输入字符串的最后一个字符之后，或在输入字符串的任意两个字符之间。零长度匹配很容易识别，因为它们始终在相同的索引位置开始和结束。</p>
-<p>让我们通过几个例子来探索零长度匹配。将输入字符串更改为单个字母“a”，您会注意到一些有趣的内容：</p>
+<p>在上面的示例中，匹配在前两种情况下成功，因为表达式 <code>a?</code> 和 <code>a*</code> 都允许字母 <code>a</code> 的零次匹配项。你还会注意到开始和结束索引都是零，这与我们到目前为止看到的任何示例都不同。空输入字符串 <code>""</code> 没有长度，因此测试只是匹配索引 0 处的任何内容。这种匹配被称为 <i>zero-length matches (零长度匹配)</i>。在以下几种情况下可能发生零长度匹配：在空输入字符串中，在输入字符串的开头，在输入字符串的最后一个字符之后，或在输入字符串的任意两个字符之间。零长度匹配很容易识别，因为它们始终在相同的索引位置开始和结束。</p>
+<p>让我们通过几个例子来探索零长度匹配。将输入字符串更改为单个字母“a”，你会注意到一些有趣的内容：</p>
 <div class="codeblock"><pre> 
 Enter your regex: a?
 Enter input string to search: a
@@ -582,7 +582,7 @@ Enter input string to search: a
 I found the text "a" starting at index 0 and ending at index 1.
 </pre></div> 
 <p>所有三个量词都找到了字母“a”，但前两个也在索引 1 处找到了零长度匹配；也就是说，在输入字符串的最后一个字符之后。请记住，匹配器将字符“a”视为位于索引 0 和索引 1 之间的单元格中，并且我们的测试工具循环直到它无法再找到匹配项。根据所使用的量词，最后一个字符后索引处“无”的存在可能触发也可能不触发匹配。</p>
-<p>现在连续五次将输入字符串更改为字母“a”，您将获得以下内容：</p>
+<p>现在连续五次将输入字符串更改为字母“a”，你将获得以下内容：</p>
 <div class="codeblock"><pre> 
 Enter your regex: a?
 Enter input string to search: aaaaa
@@ -603,7 +603,7 @@ Enter input string to search: aaaaa
 I found the text "aaaaa" starting at index 0 and ending at index 5.
 </pre></div> 
 <p>表达式 <code>a?</code> 找到每个字符的单独匹配，因为它匹配“a”出现零或一次。表达式 <code>a*</code> 找到两个单独的匹配：第一个匹配中的所有字母“a”，然后是索引 5 处的最后一个字符后的零长度匹配。最后，<code>a+</code> 匹配所有字母“a”组成的匹配项，忽略最后一个索引处“无”的存在。</p>
-<p>此时，如果前两个量词遇到“a”以外的字母，您可能想知道结果会是什么。例如，如果遇到字母“b”会发生什么，如“ababaaaab”？</p>
+<p>此时，如果前两个量词遇到“a”以外的字母，你可能想知道结果会是什么。例如，如果遇到字母“b”会发生什么，如“ababaaaab”？</p>
 <p>我们来看看：</p>
 <div class="codeblock"><pre> 
 Enter your regex: a?
@@ -672,7 +672,7 @@ Enter input string to search: aaaaaaaaa
 I found the text "aaaaaa" starting at index 0 and ending at index 6.
 I found the text "aaa" starting at index 6 and ending at index 9.
 </pre></div> 
-<p>在这里，第一个匹配被强制停止在 6 个字符的上限。第二个匹配包括剩余的内容，恰好是 3 个 a   满足此匹配允许的最小字符数。如果输入字符串短一个字符，则不会有第二个匹配，因为只剩下两个 a。</p>
+<p>在这里，第一个匹配被强制停止在 6 个字符的上限。第二个匹配包括剩余的内容，恰好是 3 个 a  满足此匹配允许的最小字符数。如果输入字符串短一个字符，则不会有第二个匹配，因为只剩下两个 a。</p>
 <h2>使用量词捕获组和字符类</h2>
 <p>到目前为止，我们只对包含一个字符的输入字符串测试了量词。实际上，量词只能一次附加到一个字符，因此正则表达式“abc+”表示“a，后跟 b，后跟 c 一次或多次”。它不意味着“abc”一次或多次。但是，量词也可以附加到 <a class="TutorialLink" target="_top" href="char_classes.html">Character Classes</a> 和 <a class="TutorialLink" target="_top" href="groups.html">Capturing Groups</a>，例如 <code>[abc]+</code>(a 或 b 或 c，一次或多次) 或 <code>(abc)+</code>(组“abc”，一次或多次)。</p>
 <p>让我们通过指定每行三个的 <code>(dog)</code> 组来说明。</p>
@@ -724,7 +724,7 @@ No match found.
 </pre></div> 
 <p>第一个例子使用贪婪量词 <code>.*</code> 来找到“任何东西”，零次或多次，然后是字母 <code>"f" "o" "o"</code>。因为量词是贪婪，所以表达式的 <code>.*</code> 部分首先会占用整个输入字符串。此时，整体表达式不能成功，因为已经消耗了最后三个字母(<code>"f" "o" "o"</code>)。因此，匹配器一次缓慢地后退一个字母，直到最右边的“foo”重新出现，此时匹配成功并且搜索结束。</p>
 <p>然而，第二个例子是懒惰的，所以它首先消耗“无”。因为“foo”没有出现在字符串的开头，所以它被强制吞下第一个字母(“x”)，这会触发 0 和 4 的第一个匹配。我们的测试工具将继续此过程，直到输入字符串耗尽为止。它在 4 和 13 找到另一场匹配。</p>
-<p>第三个例子找不到匹配，因为量词是占有。在这种情况下，整个输入字符串由 <code>.*+</code> 消耗，不留下任何内容以满足表达式末尾的“foo”。使用占有量词来表示您想要抓住所有东西而不会后退的情况；在没有立即找到匹配的情况下，它将胜过等效的贪婪量词。</p>
+<p>第三个例子找不到匹配，因为量词是占有。在这种情况下，整个输入字符串由 <code>.*+</code> 消耗，不留下任何内容以满足表达式末尾的“foo”。使用占有量词来表示你想要抓住所有东西而不会后退的情况；在没有立即找到匹配的情况下，它将胜过等效的贪婪量词。</p>
 
 
         </div>

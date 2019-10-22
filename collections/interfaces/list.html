@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">接口</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="set.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="queue.html">Next&nbsp;»</a>
+                <a target="_top" href="set.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="queue.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>List 接口</h1></div>
@@ -503,9 +503,9 @@
 
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html"><code>List</code></a> 是有序的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html"><code>Collection</code></a>(有时称为 <i>sequence (序列)</i>)。列表可能包含重复元素。除了从 <code>Collection</code> 继承的操作之外，<code>List</code> 接口还包括以下操作：</p>
 <ul>
-<li><code>Positional access</code> 根据列表中的数字位置操纵元素。这包括 <code>get</code>，<code>set</code>，<code>add</code>，<code>addAll</code> 和 <code>remove</code> 等方法。</li>
-<li><code>Search</code> 搜索列表中的指定对象并返回其数字位置。搜索方法包括 <code>indexOf</code> 和 <code>lastIndexOf</code>。</li>
-<li><code>Iteration</code> 继承 <code>Iterator</code> 语义以利用列表的顺序特性。<code>listIterator</code> 方法提供此行为。</li>
+<li><code>Positional access</code>  根据列表中的数字位置操纵元素。这包括 <code>get</code>，<code>set</code>，<code>add</code>，<code>addAll</code> 和 <code>remove</code> 等方法。</li>
+<li><code>Search</code>  搜索列表中的指定对象并返回其数字位置。搜索方法包括 <code>indexOf</code> 和 <code>lastIndexOf</code>。</li>
+<li><code>Iteration</code>  继承 <code>Iterator</code> 语义以利用列表的顺序特性。<code>listIterator</code> 方法提供此行为。</li>
 <li><code>Range-view</code>  <code>sublist</code> 方法在列表上执行任意 <i>range operations (范围操作)</i>。</li>
 </ul><!--
 
@@ -551,7 +551,7 @@ public interface List&lt;E&gt; extends Collection&lt;E&gt; {
 
 
 <h2>集合操作</h2>
-<p>从 <code>Collection</code> 继承的操作都是关于您期望他们做的事情，假设您已经熟悉它们。如果您不熟悉 <code>Collection</code>，现在是阅读 <a class="TutorialLink" target="_top" href="collection.html">The Collection Interface</a> 部分的好时机。<code>remove</code> 操作始终从列表中移除 <i>第一个</i> 匹配项。<code>add</code> 和 <code>addAll</code> 操作始终将新元素附加到列表的 <i>结尾</i>。因此，以下习惯用法将一个列表连接到另一个列表。</p>
+<p>从 <code>Collection</code> 继承的操作都是关于你期望他们做的事情，假设你已经熟悉它们。如果你不熟悉 <code>Collection</code>，现在是阅读 <a class="TutorialLink" target="_top" href="collection.html">The Collection Interface</a> 部分的好时机。<code>remove</code> 操作始终从列表中移除 <i>第一个</i> 匹配项。<code>add</code> 和 <code>addAll</code> 操作始终将新元素附加到列表的 <i>结尾</i>。因此，以下习惯用法将一个列表连接到另一个列表。</p>
 <div class="codeblock"><pre>
 list1.addAll(list2);
 </pre></div>
@@ -563,7 +563,7 @@ list3.addAll(list2);
 <p>请注意，习惯用法以其非破坏性形式利用了 <code>ArrayList</code> 的标准转换构造函数。</p>
 
 <p>
-这是一个将一些名称聚合到 <code>List</code> 的示例(JDK 8 及更高版本)：
+这是一个将一些名字聚合到 <code>List</code> 的示例(JDK 8 及更高版本)：
 </p>
 <div class="codeblock"><pre>
 List&lt;String&gt; list = people.stream()
@@ -610,7 +610,7 @@ public class Shuffle {
     }
 }
 </pre></div>
-<p>事实上，这个程序可以更短，更快。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html"><code>Arrays</code></a> 类有一个名为 <code>asList</code> 的静态工厂方法，它允许将数组视为 <code>List</code>。此方法不会复制数组。<code>List</code> 中的更改将写入数组，反之亦然。生成的 List 不是通用的 <code>List</code> 实现，因为它没有实现(可选的)<code>add</code> 和 <code>remove</code> 操作：数组是不可调整大小。利用 <code>Arrays.asList</code> 并调用 <code>shuffle</code> 的库版本(使用默认的随机源)，您将获得以下 <a class="SourceLink" target="_blank" href="examples/Shuffle.java" onclick="showCode('../../displayCode.html', 'examples/Shuffle.java'); return false;"><code>tiny program</code></a>，其行为与之前的程序相同。</p>
+<p>事实上，这个程序可以更短，更快。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html"><code>Arrays</code></a> 类有一个名为 <code>asList</code> 的静态工厂方法，它允许将数组视为 <code>List</code>。此方法不会复制数组。<code>List</code> 中的更改将写入数组，反之亦然。生成的 List 不是通用的 <code>List</code> 实现，因为它没有实现(可选的)<code>add</code> 和 <code>remove</code> 操作：数组是不可调整大小。利用 <code>Arrays.asList</code> 并调用 <code>shuffle</code> 的库版本(使用默认的随机源)，你将获得以下 <a class="SourceLink" target="_blank" href="examples/Shuffle.java" onclick="showCode('../../displayCode.html', 'examples/Shuffle.java'); return false;"><code>tiny program</code></a>，其行为与之前的程序相同。</p>
 <div class="codeblock"><pre>
 import java.util.*;
 
@@ -623,7 +623,7 @@ public class Shuffle {
 }
 </pre></div>
 <h2><a name="Iterator" id="Iterator">迭代器</a></h2>
-<p>正如您所期望的那样，<code>List</code> 的 <code>iterator</code> 操作返回的 <code>Iterator</code> 以正确的顺序返回列表的元素。<code>List</code> 还提供了一个更丰富的迭代器，称为 <code>ListIterator</code>，它允许您在任一方向遍历列表，在迭代期间修改列表，并获取迭代器的当前位置。 
+<p>正如你所期望的那样，<code>List</code> 的 <code>iterator</code> 操作返回的 <code>Iterator</code> 以正确的顺序返回列表的元素。<code>List</code> 还提供了一个更丰富的迭代器，称为 <code>ListIterator</code>，它允许你在任一方向遍历列表，在迭代期间修改列表，并获取迭代器的当前位置。 
 </p><!--
 <p>The <code>ListIterator</code> interface follows.</p>
 
@@ -644,7 +644,7 @@ public interface ListIterator&lt;E&gt; extends Iterator&lt;E&gt; {
 
 
 
-<p><code>ListIterator</code> 继承自 <code>Iterator</code> 的三个方法(<code>hasNext</code>，<code>next</code>，<code>remove</code> )在两个接口中做同样的事情。<code>hasPrevious</code> 和 <code>previous</code> 操作是 <code>hasNext</code> 和 <code>next</code> 的精确类似物。前一个操作引用(隐式)游标之前的元素，而后者引用游标之后的元素。<code>previous</code> 操作向后移动光标，而 <code>next</code> 向前移动光标。</p>
+<p><code>ListIterator</code> 继承自 <code>Iterator</code> 的三个方法(<code>hasNext</code>，<code>next</code>，<code>remove</code> )在两个接口中做同样的事情。<code>hasPrevious</code> 和 <code>previous</code> 操作是 <code>hasNext</code> 和 <code>next</code> 的精确类似物。前一个操作引用(隐式)光标之前的元素，而后者引用光标之后的元素。<code>previous</code> 操作向后移动光标，而 <code>next</code> 向前移动光标。</p>
 <p>这是在列表中向后迭代的标准习惯用法。</p>
 <div class="codeblock"><pre>
 for (ListIterator&lt;Type&gt; it = list.listIterator(list.size()); it.hasPrevious(); ) {
@@ -653,8 +653,8 @@ for (ListIterator&lt;Type&gt; it = list.listIterator(list.size()); it.hasPreviou
 }
 </pre></div>
 <p>请注意上述习惯用法中 <code>listIterator</code> 的参数。<code>List</code> 接口有两种形式的 <code>listIterator</code> 方法。没有参数的形式返回位于列表开头的 <code>ListIterator</code>;带有 <code>int</code> 参数的形式返回位于指定索引处的 <code>ListIterator</code>。索引引用初始调用 <code>next</code> 返回的元素。对 <code>previous</code> 的初始调用将返回索引为 <code>index-1</code> 的元素。在长度 <code>n</code> 的列表中，有 <code>n+1</code> 个 <code>index</code> 的有效值，从 <code>0</code> 到 <code>n</code>，包括在内。</p>
-<p>直观地说，光标总是在两个元素之间通过调用 <code>previous</code> 返回的那个，以及通过调用 <code>next</code> 返回的那个。<code>n+1</code> 有效 <code>index</code> 值对应于元素之间的 <code>n+1</code> 间隙，从第一个元素之前的间隙到最后一个元素之后的间隙。<span id="figure:colls-fivePossibleCursor.gif">下图</span> 显示包含四个元素的列表中的五个可能的光标位置。</p>
-<center><img src="../../figures/collections/colls-fivePossibleCursor.gif" width="370" height="98" align="bottom" alt="五个箭头代表五个光标位置，从 0 到 4，有四个元素，每个箭头之间有一个元素。" /></p><p class="FigureCaption">五个可能的光标位置。</p></center><p>调用 <code>next</code> 和 <code>previous</code> 可以混合，但您必须要小心。第一次调用 <code>previous</code> 会返回与上一次调用 <code>next</code> 相同的元素。类似地，在对 <code>previous</code> 的一系列调用之后，第一次调用 <code>next</code> 会返回与上次调用 <code>previous</code> 相同的元素。</p>
+<p>直观地说，光标总是在两个元素之间  通过调用 <code>previous</code> 返回的那个，以及通过调用 <code>next</code> 返回的那个。<code>n+1</code> 个有效 <code>index</code> 值对应于元素之间的 <code>n+1</code> 个间隙，从第一个元素之前的间隙到最后一个元素之后的间隙。<span id="figure:colls-fivePossibleCursor.gif">下图</span> 显示包含四个元素的列表中的五个可能的光标位置。</p>
+<center><img src="../../figures/collections/colls-fivePossibleCursor.gif" width="370" height="98" align="bottom" alt="五个箭头代表五个光标位置，从 0 到 4，有四个元素，每个箭头之间有一个元素。" /></p><p class="FigureCaption">五个可能的光标位置。</p></center><p>调用 <code>next</code> 和 <code>previous</code> 可以混合，但你必须要小心。第一次调用 <code>previous</code> 会返回与上一次调用 <code>next</code> 相同的元素。类似地，在对 <code>previous</code> 的一系列调用之后，第一次调用 <code>next</code> 会返回与上次调用 <code>previous</code> 相同的元素。</p>
 <p>毫无疑问，<code>nextIndex</code> 方法返回后续调用 <code>next</code> 返回的元素的索引，以及 <code>previousIndex</code> 返回后续调用 <code>previous</code> 返回的元素的索引。这些调用通常用于报告找到某些内容的位置或记录 <code>ListIterator</code> 的位置，以便可以创建具有相同位置的另一个 <code>ListIterator</code>。</p>
 <p>同样，<code>nextIndex</code> 返回的数字总是比 <code>previousIndex</code> 返回的数字大一点也就不足为奇了。这意味着两种边界情况的行为：(1)当光标在初始元素之前调用 <code>previousIndex</code> 返回 <code>-1</code> ，以及(2)调用 <code>nextIndex</code> 当光标位于最后一个元素之后返回 <code>list.size()</code>。为了使所有这些具体化，以下是 <code>List.indexOf</code> 的可能实现。</p>
 <div class="codeblock"><pre>
@@ -667,7 +667,7 @@ public int indexOf(E e) {
 }
 </pre></div>
 <p>请注意，<code>indexOf</code> 方法返回 <code>it.previousIndex()</code>，即使它正在向前遍历列表。原因是 <code>it.nextIndex()</code> 将返回我们将要检查的元素的索引，并且我们想要返回我们刚刚检查的元素的索引。</p>
-<p><code>Iterator</code> 接口提供 <code>remove</code> 操作，以从 <code>Collection</code> 中移除 <code>next</code> 返回的最后一个元素。对于 <code>ListIterator</code>，此操作将移除 <code>next</code> 或 <code>previous</code> 返回的最后一个元素。<code>ListIterator</code> 接口提供了两个额外的操作来修改列表 <code>set</code> 和 <code>add</code>。<code>set</code> 方法用指定的元素覆盖 <code>next</code> 或 <code>previous</code> 返回的最后一个元素。以下多态算法使用 <code>set</code> 将一个指定值的所有匹配项替换为另一个。</p>
+<p><code>Iterator</code> 接口提供 <code>remove</code> 操作，以从 <code>Collection</code> 中移除 <code>next</code> 返回的最后一个元素。对于 <code>ListIterator</code>，此操作将移除 <code>next</code> 或 <code>previous</code> 返回的最后一个元素。<code>ListIterator</code> 接口提供了两个额外的操作来修改列表  <code>set</code> 和 <code>add</code>。<code>set</code> 方法用指定的元素覆盖 <code>next</code> 或 <code>previous</code> 返回的最后一个元素。以下多态算法使用 <code>set</code> 将一个指定值的所有匹配项替换为另一个。</p>
 <div class="codeblock"><pre>
 public static &lt;E&gt; void replace(List&lt;E&gt; list, E val, E newVal) {
     for (ListIterator&lt;E&gt; it = list.listIterator(); it.hasNext(); )
@@ -675,7 +675,7 @@ public static &lt;E&gt; void replace(List&lt;E&gt; list, E val, E newVal) {
             it.set(newVal);
 }
 </pre></div>
-<p>本例中唯一的棘手问题是 <code>val</code> 和 <code>it.next</code> 之间的相等性测试。您需要小心特殊情况下 <code>null</code> 的 <code>val</code> 值以防止 <code>NullPointerException</code>。</p>
+<p>本例中唯一的棘手问题是 <code>val</code> 和 <code>it.next</code> 之间的相等性测试。你需要小心特殊情况下 <code>null</code> 的 <code>val</code> 值以防止 <code>NullPointerException</code>。</p>
 <p><code>add</code> 方法将新元素插入到列表中当前光标位置之前。此方法在以下多态算法中说明，以使用指定列表中包含的值序列替换指定值的所有匹配项。</p>
 <div class="codeblock"><pre>
 public static &lt;E&gt; 
@@ -696,7 +696,7 @@ for (int i = fromIndex; i &lt; toIndex; i++) {
     ...
 }
 </pre></div>
-<p>正如术语 <i>view</i> 所暗示的那样，<code>subList</code> 被调用返回的 <code>List</code> 是 <code>List</code> 的备份，所以前者的变化反映在后者中。</p>
+<p>正如术语 <i>view (视图)</i> 所暗示的那样，<code>subList</code> 被调用返回的 <code>List</code> 是 <code>List</code> 的备份，所以前者的变化反映在后者中。</p>
 <p>此方法消除了对显式范围操作(对于数组通常存在的排序)的需要。任何期望 <code>List</code> 的操作都可以通过传递 <code>subList</code> 视图而不是整个 <code>List</code> 来用作范围操作。例如，以下习惯用法从 <code>List</code> 中移除一系列元素。</p>
 <div class="codeblock"><pre>
 list.subList(fromIndex, toIndex).clear();
@@ -782,21 +782,21 @@ public class Deal {
 [8 of spades, 6 of diamonds, ace of spades, 3 of hearts,
     ace of hearts]
 </pre></div>
-<p>虽然 <code>subList</code> 操作非常强大，但在使用它时必须小心。除了操作返回的 <code>List</code> 之外，如果以任何方式向后备 <code>List</code> 添加或移除元素，则 <code>subList</code> 返回的 <code>List</code> 的语义将变为未定义。因此，强烈建议您仅将 <code>subList</code> 返回的 <code>List</code> 用作瞬态对象在后备 <code>List</code> 上执行一个或一系列范围操作。使用 <code>subList</code> 实例的时间越长，通过直接修改后备 <code>List</code> 或通过另一个 <code>subList</code> 对象来破坏它的可能性就越大。请注意，修改子列表的子列表并继续使用原始子列表(尽管不是并发)是合法的。</p>
+<p>虽然 <code>subList</code> 操作非常强大，但在使用它时必须小心。除了操作返回的 <code>List</code> 之外，如果以任何方式向后备 <code>List</code> 添加或移除元素，则 <code>subList</code> 返回的 <code>List</code> 的语义将变为未定义。因此，强烈建议你仅将 <code>subList</code> 返回的 <code>List</code> 用作瞬态对象  在后备 <code>List</code> 上执行一个或一系列范围操作。使用 <code>subList</code> 实例的时间越长，通过直接修改后备 <code>List</code> 或通过另一个 <code>subList</code> 对象来破坏它的可能性就越大。请注意，修改子列表的子列表并继续使用原始子列表(尽管不是并发)是合法的。</p>
 <h2>列表算法</h2>
 <p><code>Collections</code> 类中的大多数多态算法专门应用于 <code>List</code>。拥有所有这些算法可以很容易地操作列表。以下是这些算法的摘要，这些算法在 <a class="TutorialLink" target="_top" href="../algorithms/index.html">Algorithms</a> 部分中有更详细的描述。</p>
 <ul>
-<li><code>sort</code> 使用合并排序算法对 <code>List</code> 进行排序，该算法提供快速，稳定的排序。(A <i>stable sort (稳定排序)</i> 是不重新排序相同元素的排序。)</li>
-<li><code>shuffle</code> 随机置换 <code>List</code> 中的元素。</li>
-<li><code>reverse</code> 颠倒 <code>List</code> 中元素的顺序。</li>
-<li><code>rotate</code> 将 <code>List</code> 中的所有元素旋转指定的距离。</li>
-<li><code>swap</code> 将元素交换到 <code>List</code> 中的指定位置。</li>
-<li><code>replaceAll</code> 将所有的匹配项用一个指定值替换为另一个。</li>
-<li><code>fill</code> 用指定的值覆盖 <code>List</code> 中的每个元素。</li>
-<li><code>copy</code> 将源 <code>List</code> 复制到目标 <code>List</code>。</li>
-<li><code>binarySearch</code> 使用二分搜索算法搜索有序 <code>List</code> 中的元素。</li>
-<li><code>indexOfSubList</code> 返回 <code>List</code> 中的第一个与另一个列表相等的子列表的索引。</li>
-<li><code>lastIndexOfSubList</code> 返回 <code>List</code> 中最后一个与另一个列表相等的子列表的索引。</li>
+<li><code>sort</code>  使用合并排序算法对 <code>List</code> 进行排序，该算法提供快速，稳定的排序。(A <i>stable sort (稳定排序)</i> 是不重新排序相同元素的排序。)</li>
+<li><code>shuffle</code>  随机置换 <code>List</code> 中的元素。</li>
+<li><code>reverse</code>  颠倒 <code>List</code> 中元素的顺序。</li>
+<li><code>rotate</code>  将 <code>List</code> 中的所有元素旋转指定的距离。</li>
+<li><code>swap</code>  将元素交换到 <code>List</code> 中的指定位置。</li>
+<li><code>replaceAll</code>  将所有的匹配项用一个指定值替换为另一个。</li>
+<li><code>fill</code>  用指定的值覆盖 <code>List</code> 中的每个元素。</li>
+<li><code>copy</code>  将源 <code>List</code> 复制到目标 <code>List</code>。</li>
+<li><code>binarySearch</code>  使用二分搜索算法搜索有序 <code>List</code> 中的元素。</li>
+<li><code>indexOfSubList</code>  返回 <code>List</code> 中的第一个与另一个列表相等的子列表的索引。</li>
+<li><code>lastIndexOfSubList</code>  返回 <code>List</code> 中最后一个与另一个列表相等的子列表的索引。</li>
 </ul>
 
 

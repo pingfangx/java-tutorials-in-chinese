@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>基础算法之外的补充(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;数字和字符串)
+        <title>基础算术之外的补充(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;数字和字符串)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -475,13 +475,13 @@
 <div class="linkAHEAD"><a href="numbers.html">数字</a></div>
 <div class="linkBHEAD"><a href="numberclasses.html">数字类</a></div>
 <div class="linkBHEAD"><a href="numberformat.html">格式化数字打印输出</a></div>
-<div class="nolinkBHEAD">基础算法之外的补充</div>
+<div class="nolinkBHEAD">基础算术之外的补充</div>
 <div class="linkBHEAD"><a href="numbersummary.html">数字总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/numbers-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="characters.html">Characters</a></div>
-<div class="linkAHEAD"><a href="strings.html">Strings</a></div>
+<div class="linkAHEAD"><a href="characters.html">字符</a></div>
+<div class="linkAHEAD"><a href="strings.html">字符串</a></div>
 <div class="linkBHEAD"><a href="converting.html">在数字和字符串之间转换</a></div>
-<div class="linkBHEAD"><a href="manipstrings.html">操纵字符串中的字符</a></div>
+<div class="linkBHEAD"><a href="manipstrings.html">操作字符串中的字符</a></div>
 <div class="linkBHEAD"><a href="comparestrings.html">比较字符串和字符串的部分</a></div>
 <div class="linkBHEAD"><a href="buffers.html">StringBuilder 类</a></div>
 <div class="linkBHEAD"><a href="stringsummary.html">字符和字符串总结</a></div>
@@ -499,23 +499,23 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">数字和字符串</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="numberformat.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="numbersummary.html">Next&nbsp;»</a>
+                <a target="_top" href="numberformat.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="numbersummary.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>基础算法之外的补充</h1></div>
+            <div id="PageTitle"><h1>基础算术之外的补充</h1></div>
             <div id="PageContent"><!-- Beyond Basic Arithmetic -->
 
 
 <p>Java 编程语言支持基本算术及其算术运算符：+, -, *, /, 和 %。<code>java.lang</code> 包中的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html"><code>Math</code> </a> 类提供了进行更高级数学计算的方法和常量。</p>
-<p><code>Math</code> 类中的方法都是静态的，因此您可以直接从类中调用它们，如下所示：</p>
+<p><code>Math</code> 类中的方法都是静态的，因此你可以直接从类中调用它们，如下所示：</p>
 <div class="codeblock"><pre>
 Math.cos(angle);
 </pre></div>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;使用 <a class="TutorialLink" target="_top" href="../package/usepkgs.html#staticimport"><code>static import</code> </a> 语言功能，您不必在每个数学前面写 <code>Math</code> 功能：
+<div class="note"><hr /><strong>注意:</strong>&nbsp;使用 <a class="TutorialLink" target="_top" href="../package/usepkgs.html#staticimport"><code>static import</code> </a> 语言功能，你不必在每个数学前面写 <code>Math</code> 功能：
 <div class="codeblock"><pre>
 import static java.lang.Math.*;
 </pre></div>
-<p>这允许您通过简单名称调用 <code>Math</code> 类方法。例如：</p>
+<p>这允许你通过简单名称调用 <code>Math</code> 类方法。例如：</p>
 <div class="codeblock"><pre>
 cos(angle);
 </pre></div>
@@ -672,7 +672,7 @@ public class ExponentialDemo {
     }
 }
 </pre></div>
-<p>这是您运行 <code>ExponentialDemo</code> 时将看到的输出：</p>
+<p>这是你运行 <code>ExponentialDemo</code> 时将看到的输出：</p>
 <div class="codeblock"><pre>
 The value of e is 2.7183
 exp(11.635) is 112983.831
@@ -681,7 +681,7 @@ pow(11.635, 2.760) is 874.008
 sqrt(11.635) is 3.411
 </pre></div>
 <h2>三角函数方法</h2>
-<p><code>Math</code> 类还提供了三角函数的集合，如下表所示。传递给每个方法的值是以弧度表示的角度。您可以使用 <code>toRadians</code> 方法将度数转换为弧度。</p>
+<p><code>Math</code> 类还提供了三角函数的集合，如下表所示。传递给每个方法的值是以弧度表示的角度。你可以使用 <code>toRadians</code> 方法将度数转换为弧度。</p>
 <table width="100%" border="1" cellpadding="4" cellspacing="3" summary="该表列出了三角函数方法">
 <caption style="font-weight: bold">三角函数方法</caption>
 <tr>
@@ -768,12 +768,12 @@ The arccosine of 0.7071 is 45.0000 degrees
 The arctangent of 1.0000 is 45.0000 degrees
 </pre></div>
 <h2>随机数</h2>
-<p><code>random()</code> 方法返回一个介于 0.0 和 1.0 之间的伪随机选择的数字。范围包括 0.0 但不包括 1.0。换句话说：<code> 0.0 &lt;= Math.random()&lt;1.0 </code>。要获取不同范围内的数字，可以对随机方法返回的值执行算术运算。例如，要生成 0 到 9 之间的整数，您可以编写：</p>
+<p><code>random()</code> 方法返回一个介于 0.0 和 1.0 之间的伪随机选择的数字。范围包括 0.0 但不包括 1.0。换句话说：<code> 0.0 &lt;= Math.random()&lt;1.0 </code>。要获取不同范围内的数字，可以对随机方法返回的值执行算术运算。例如，要生成 0 到 9 之间的整数，你可以编写：</p>
 <div class="codeblock"><pre>
 int number = (int)(Math.random() * 10);
 </pre></div>
 <p>通过将该值乘以 10，可能值的范围变为  <code>0.0 &lt;= number &lt; 10.0</code>。</p>
-<p>当您需要生成单个随机数时，使用 <code>Math.random</code> 可以正常工作。如果需要生成一系列随机数，则应创建 <code>java.util.Random</code> 的实例，并在该对象上调用方法以生成数字。</p>
+<p>当你需要生成单个随机数时，使用 <code>Math.random</code> 可以正常工作。如果需要生成一系列随机数，则应创建 <code>java.util.Random</code> 的实例，并在该对象上调用方法以生成数字。</p>
 
 
         </div>

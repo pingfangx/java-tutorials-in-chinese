@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>为您的类提供构造函数(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;类和对象)
+        <title>为你的类提供构造函数(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;类和对象)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="nolinkBHEAD">为您的类提供构造函数</div>
+<div class="nolinkBHEAD">为你的类提供构造函数</div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,10 +512,10 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="methods.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="arguments.html">Next&nbsp;»</a>
+                <a target="_top" href="methods.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="arguments.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>为您的类提供构造函数</h1></div>
+            <div id="PageTitle"><h1>为你的类提供构造函数</h1></div>
             <div id="PageContent"><!-- Providing Constructors for Your Classes -->
 
 
@@ -540,12 +540,12 @@ public Bicycle() {
     speed = 0;
 }
 </pre></div>
-<p><code>Bicycle yourBike = new Bicycle();</code> 调用无参数构造函数来创建一个名为 <code>yourBike</code> 的新 <code>Bicycle</code> 对象。</p>
-<p>这两个构造函数都可以在 <code>Bicycle</code> 中声明，因为它们有不同的参数列表。与方法一样，Java 平台根据列表中参数的数量及其类型区分构造函数。你不能为同一个类编写两个具有相同数量和类型参数的构造函数，因为平台无法区分它们。这样做会导致编译时错误。</p>
-<p>你不必为你的类提供任何构造函数，但是在做这件事时你必须小心。编译器自动为任何没有构造函数的类提供一个无参数的默认构造函数。这个默认构造函数将调用超类的无参构造函数。在这种情况下，如果超类没有无参数构造函数，编译器会发出抱怨，因此您必须验证它是否存在。如果你的类没有显式超类，那么它有一个 <code>Object</code> 的隐式超类，它<i>有</i> 一个无参数的构造函数。</p>
+<p><code>Bicycle yourBike = new Bicycle();</code> 调用无参构造函数来创建一个名为 <code>yourBike</code> 的新 <code>Bicycle</code> 对象。</p>
+<p>这两个构造函数都可以在 <code>Bicycle</code> 中声明，因为它们有不同的参数列表。与方法一样，Java 平台根据列表中参数的数量及其类型区分构造函数。你不能为同一个类编写两个具有相同数量和类型的参数的构造函数，因为平台无法区分它们。这样做会导致编译时错误。</p>
+<p>你不必为你的类提供任何构造函数，但是在做这件事时你必须小心。编译器自动为任何没有构造函数的类提供一个无参数的默认构造函数。这个默认构造函数将调用超类的无参构造函数。在这种情况下，如果超类没有无参构造函数，编译器会发出抱怨，因此你必须验证它是否存在。如果你的类没有显式超类，那么它有一个 <code>Object</code> 的隐式超类，它<i>有</i> 一个无参构造函数。</p>
 <p>你可以自己使用一个超类的构造函数。本课开始的 <code>MountainBike</code> 类就是这样做的。这将在稍后的接口和继承课程中讨论。</p>
-<p>您可以在构造函数的声明中使用访问修饰符来控制哪些其他类可以调用构造函数。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;如果另一个类不能调用 <code>MyClass</code> 构造函数，它不能直接创建 <code>MyClass</code> 对象。
+<p>你可以在构造函数的声明中使用访问修饰符来控制哪些其他类可以调用构造函数。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;如果另一个类不能调用 <code>MyClass</code> 构造函数，它就不能直接创建 <code>MyClass</code> 对象。
 <hr /></div>
 
 

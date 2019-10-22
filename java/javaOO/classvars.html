@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,7 +512,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="accesscontrol.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="initial.html">Next&nbsp;»</a>
+                <a target="_top" href="accesscontrol.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="initial.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>理解类成员</h1></div>
@@ -521,9 +521,9 @@
 
 <p>在本节中，我们讨论使用 <code>static</code> 关键字来创建属于类的字段和方法，而不是类的实例。</p>
 <h2>类变量</h2>
-<p>当多个对象是从同一个类蓝图创建的时候，它们都有自己独立的 <i>instance variables（实例变量）</i> 副本。在 <code>Bicycle</code> 类中，实例变量为 <code>cadence</code>，<code>gear</code> 和 <code>speed</code>。每个 <code>Bicycle</code> 对象都有自己的这些变量值，存储在不同的存储位置。</p>
-<p>有时候，你想拥有所有对象通用的变量。这是通过 <code>static</code> 修饰符完成的。在其声明中具有 <code>static</code> 修饰符的字段称为 <i>static fields（静态字段）</i> 或 <i>class variables（类变量）</i>。他们与类相关联，而不是与任何对象相关联。该类的每个实例共享一个类变量，它位于内存中的一个固定位置。任何对象都可以更改类变量的值，但也可以在不创建类的实例的情况下操作类变量。</p>
-<p>例如，假设您要创建多个 <code>Bicycle</code> 对象并为每个对象分配一个序列号，从第一个对象开始为 1。此 ID 号对每个对象都是唯一的，因此是一个实例变量。同时，您需要一个字段来跟踪已创建的 <code>Bicycle</code> 对象的数量，以便您知道要分配给下一个对象的 ID。这样的字段与任何单个对象无关，而是与整个类相关。为此，您需要一个类变量 <code>numberOfBicycles</code>，如下所示：</p>
+<p>当多个对象是从同一个类蓝图创建的时候，它们都有自己独立的 <i>instance variables (实例变量)</i> 副本。在 <code>Bicycle</code> 类中，实例变量为 <code>cadence</code>，<code>gear</code> 和 <code>speed</code>。每个 <code>Bicycle</code> 对象都有自己的这些变量值，存储在不同的存储位置。</p>
+<p>有时候，你想拥有所有对象通用的变量。这是通过 <code>static</code> 修饰符完成的。在其声明中具有 <code>static</code> 修饰符的字段称为 <i>static fields (静态字段)</i> 或 <i>class variables (类变量)</i>。他们与类相关联，而不是与任何对象相关联。该类的每个实例共享一个类变量，它位于内存中的一个固定位置。任何对象都可以更改类变量的值，但也可以在不创建类的实例的情况下操作类变量。</p>
+<p>例如，假设你要创建多个 <code>Bicycle</code> 对象并为每个对象分配一个序列号，从第一个对象开始为 1。此 ID 号对每个对象都是唯一的，因此是一个实例变量。同时，你需要一个字段来跟踪已创建的 <code>Bicycle</code> 对象的数量，以便你知道要分配给下一个对象的 ID。这样的字段与任何单个对象无关，而是与整个类相关。为此，你需要一个类变量 <code>numberOfBicycles</code>，如下所示：</p>
 <div class="codeblock"><pre>
 public class Bicycle {
         
@@ -545,13 +545,13 @@ public class Bicycle {
 Bicycle.numberOfBicycles
 </pre></div> 
 <p>这表明它们是类变量。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;您也可以使用对象引用来引用静态字段，像
+<div class="note"><hr /><strong>注意:</strong>&nbsp;你也可以使用对象引用来引用静态字段，像
 <div class="codeblock"><pre>
 myBike.numberOfBicycles
 </pre></div> 
 但是这是不鼓励的，因为它并不能清楚地表明它们是类变量。
 <hr /></div>
-<p>您可以使用 <code>Bicycle</code> 构造函数来设置 <code>id</code> 实例变量并增加 <code>numberOfBicycles</code> 类变量：</p>
+<p>你可以使用 <code>Bicycle</code> 构造函数来设置 <code>id</code> 实例变量并增加 <code>numberOfBicycles</code> 类变量：</p>
 <div class="codeblock"><pre>
 public class Bicycle {
         
@@ -603,13 +603,13 @@ public <b>static</b> int getNumberOfBicycles() {
 <li>类方法 <b style="font-style: italic">不能</b> 直接访问实例变量或实例方法 - 它们必须使用对象引用。此外，类方法不能使用 <code>this</code> 关键字，因为没有 <code>this</code> 引用的实例。</li>
 </ul>
 <h2>常量</h2>
-<p><code>static</code> 修饰符与 <code>final</code> 修饰符结合使用，也用于定义常量。<code>final</code> 修饰符表示此字段的值不能更改。</p>
+<p><code>static</code> 修饰符在与 <code>final</code> 修饰符结合使用时，也用于定义常量。<code>final</code> 修饰符表示此字段的值不能更改。</p>
 <p>例如，以下变量声明定义了一个名为 <code>PI</code> 的常量，其值是 pi 的近似值(圆周长与直径的比值)：</p>
 <div class="codeblock"><pre>
 static final double PI = 3.141592653589793;
 </pre></div>
-<p>以这种方式定义的常量不能重新分配，如果您的程序尝试这样做，则它是编译时错误。按照惯例，常量值的名称拼写为大写字母。如果名称由多个单词组成，则单词由下划线(_)分隔。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;如果将基本类型或字符串定义为常量并且该值在编译时已知，则编译器会将代码中的常量名称替换为其值。这称为 <i>编译时常量</i>。如果外部世界中常量的值发生变化(例如，如果立法规定 pi 实际上应该是 3.975)，则需要重新编译使用此常量来获取当前值的任何类。
+<p>以这种方式定义的常量不能重新分配，如果你的程序尝试这样做，则它是编译时错误。按照规范，常量值的名称拼写为大写字母。如果名称由多个单词组成，则单词由下划线(_)分隔。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;如果将基本类型或字符串定义为常量并且该值在编译时已知，则编译器会将代码中的常量名称替换为其值。这称为 <i>编译时常量</i>。如果外部世界中常量的值发生变化(例如，如果法律规定 pi 实际应为 3.975)，则需要重新编译使用此常量的任何类以获取当前值。
 <hr /></div>
 <h2><code>Bicycle</code> 类</h2>
 <p>在本节中进行了所有修改之后，<code>Bicycle</code> 类现在是：</p>

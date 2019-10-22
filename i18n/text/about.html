@@ -474,7 +474,7 @@
             <div class="linkLESSON"><a href="index.html">使用文本</a></div>
 <div class="linkAHEAD"><a href="charintro.html">检查字符属性</a></div>
 <div class="linkAHEAD"><a href="collationintro.html">比较字符串</a></div>
-<div class="linkBHEAD"><a href="locale.html">执行与区域设置无关的比较</a></div>
+<div class="linkBHEAD"><a href="locale.html">执行与语言环境无关的比较</a></div>
 <div class="linkBHEAD"><a href="rule.html">自定义排序规则</a></div>
 <div class="linkBHEAD"><a href="perform.html">提高排序性能</a></div>
 <div class="linkAHEAD"><a href="unicode.html">Unicode</a></div>
@@ -508,17 +508,17 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">使用文本</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="boundaryintro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="char.html">Next&nbsp;»</a>
+                <a target="_top" href="boundaryintro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="char.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>关于 BreakIterator 类</h1></div>
             <div id="PageContent">
 
-<p><code>BreakIterator</code> 类对区域设置敏感，因为文本边界因语言而异。例如，换行符的语法规则对于所有语言都不相同。要确定 <code>BreakIterator</code> 类支持的区域设置，请调用 <code>getAvailableLocales</code> 方法，如下所示：</p>
+<p><code>BreakIterator</code> 类对语言环境敏感，因为文本边界因语言而异。例如，换行符的语法规则对于所有语言都不相同。要确定 <code>BreakIterator</code> 类支持的语言环境，请调用 <code>getAvailableLocales</code> 方法，如下所示：</p>
 <div class="codeblock"><pre>
 Locale[] locales = BreakIterator.getAvailableLocales();
 </pre></div>
-<p>您可以使用 <code>BreakIterator</code> 类分析四种边界：字符，单词，句子和潜在的换行符。实例化 <code>BreakIterator</code> 时，可以调用相应的工厂方法：</p>
+<p>你可以使用 <code>BreakIterator</code> 类分析四种边界：字符，单词，句子和潜在的换行符。实例化 <code>BreakIterator</code> 时，可以调用相应的工厂方法：</p>
 <ul>
 <li><code>getCharacterInstance</code></li>
 <li><code>getWordInstance</code></li>
@@ -526,8 +526,8 @@ Locale[] locales = BreakIterator.getAvailableLocales();
 <li><code>getLineInstance</code></li>
 </ul>
 <p><code>BreakIterator</code> 的每个实例只能检测一种类型的边界。例如，如果要同时找到字符和字边界，则可以创建两个单独的实例。</p>
-<p><code>BreakIterator</code> 有一个虚构的光标，指向文本字符串中的当前边界。您可以使用 <code>previous</code> 和 <code>next</code> 方法在文本中移动此光标。例如，如果您使用 <code>getWordInstance</code> 创建了 <code>BreakIterator</code>，则每次调用 <code>next</code> 方法时，光标都会移动到文本中的下一个词边界。光标移动方法返回指示边界位置的整数。此位置是文本字符串中将跟随边界的字符的索引。与字符串索引一样，边界从零开始。第一个边界为 0，最后一个边界是字符串的长度。下图显示了一行文本中 <code>next</code> 和 <code>previous</code> 方法检测到的单词边界：</p>
-<center><a href="../../figures/i18n/i18n-4.gif" target="_top"><img src="../../figures/i18n/i18n-4.gif" width="460" height="63" align="bottom" alt="文本“Hope is the thing with feathers”，标明了边界。" /></a><br /><em>这个图已缩小以适合页面。 <br /> 单击图像以其自然大小查看。</em></center><p>您应该仅将 <code>BreakIterator</code> 类用于自然语言文本。要标记编程语言，请使用 <code>StreamTokenizer</code> 类。</p>
+<p><code>BreakIterator</code> 有一个虚构的光标，指向文本字符串中的当前边界。你可以使用 <code>previous</code> 和 <code>next</code> 方法在文本中移动此光标。例如，如果你使用 <code>getWordInstance</code> 创建了 <code>BreakIterator</code>，则每次调用 <code>next</code> 方法时，光标都会移动到文本中的下一个词边界。光标移动方法返回指示边界位置的整数。此位置是文本字符串中将跟随边界的字符的索引。与字符串索引一样，边界从零开始。第一个边界为 0，最后一个边界是字符串的长度。下图显示了一行文本中 <code>next</code> 和 <code>previous</code> 方法检测到的单词边界：</p>
+<center><a href="../../figures/i18n/i18n-4.gif" target="_top"><img src="../../figures/i18n/i18n-4.gif" width="460" height="63" align="bottom" alt="文本“Hope is the thing with feathers”，标明了边界。" /></a><br /><em>这个图已缩小以适合页面。 <br /> 单击图像以其自然大小查看。</em></center><p>你应该仅将 <code>BreakIterator</code> 类用于自然语言文本。要标记编程语言，请使用 <code>StreamTokenizer</code> 类。</p>
 <p>以下部分给出了每种边界分析的示例。编码示例来自名为 <a class="SourceLink" target="_blank" href="examples/BreakIteratorDemo.java" onclick="showCode('../../displayCode.html', 'examples/BreakIteratorDemo.java'); return false;"><code>BreakIteratorDemo.java</code></a> 的源代码文件。</p>
 
 

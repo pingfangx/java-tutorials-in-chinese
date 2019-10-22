@@ -486,7 +486,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">关于数据报</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="definition.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="broadcasting.html">Next&nbsp;»</a>
+                <a target="_top" href="definition.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="broadcasting.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>编写数据报客户端和服务器</h1></div>
@@ -527,7 +527,7 @@ public QuoteServerThread(String name) throws IOException {
     }
 }  
 </pre></div>
-<p>请记住，某些端口专用于众所周知的服务，您无法使用它们。如果指定正在使用的端口，则 <code>DatagramSocket</code> 的创建将失败。</p>
+<p>请记住，某些端口专用于众所周知的服务，你无法使用它们。如果指定正在使用的端口，则 <code>DatagramSocket</code> 的创建将失败。</p>
 <p>构造函数还在名为 <a class="SourceLink" target="_blank" href="examples/one-liners.txt" onclick="showCode('../../displayCode.html', 'examples/one-liners.txt'); return false;"><code>one-liners.txt</code></a> 的文件上打开 <code>BufferedReader</code><!--
 <a href="examples/one-liners.txt">one-liners.txt</a> 
 -->
@@ -540,7 +540,7 @@ byte[] buf = new byte[256];
 DatagramPacket packet = new DatagramPacket(buf, buf.length);
 socket.receive(packet);
 </pre></div>
-<p>第一个语句创建一个字节数组，然后用于创建 <code>DatagramPacket</code>。由于用于创建它的构造函数，<code>DatagramPacket</code> 将用于从套接字接收数据报。此构造函数只需要两个参数：包含特定于客户端的数据的字节数组和字节数组的长度。构造 <code>DatagramPacket</code> 以通过 <code>DatagramSocket</code> 发送时，还必须提供数据包目标的 Internet 地址和端口号。稍后当我们讨论服务器如何响应客户端请求时，您会看到这一点。</p>
+<p>第一个语句创建一个字节数组，然后用于创建 <code>DatagramPacket</code>。由于用于创建它的构造函数，<code>DatagramPacket</code> 将用于从套接字接收数据报。此构造函数只需要两个参数：包含特定于客户端的数据的字节数组和字节数组的长度。构造 <code>DatagramPacket</code> 以通过 <code>DatagramSocket</code> 发送时，还必须提供数据包目标的 Internet 地址和端口号。稍后当我们讨论服务器如何响应客户端请求时，你会看到这一点。</p>
 <p>前一个代码段中的最后一个语句从套接字接收数据报(从客户端接收的信息被复制到数据包中)。receive 方法一直等待，直到收到数据包。如果没有收到数据包，则服务器不再继续进行，只是等待。</p>
 <p>现在假设，服务器已收到来自客户端的引语请求。现在服务器必须响应。run 方法中的这部分代码构造响应：</p>
 <div class="codeblock"><pre>
@@ -560,7 +560,7 @@ packet = new DatagramPacket(buf, buf.length, address, port);
 socket.send(packet);
 </pre></div>
 <p>此代码段中的前两个语句分别从从客户端接收的数据报包中获取 Internet 地址和端口号。Internet 地址和端口号表示数据报包的来源。这是服务器必须发送其响应的位置。在此示例中，数据报包的字节数组不包含相关信息。数据包本身的到达表示来自客户端的请求，该请求可以在数据报包中指示的因特网地址和端口号处找到。</p>
-<p>第三个语句创建一个新的 <code>DatagramPacket</code> 对象，用于通过数据报套接字发送数据报消息。您可以告诉新的 <code>DatagramPacket</code> 旨在通过套接字发送数据，因为用于创建它的构造函数。此构造函数需要四个参数。前两个参数与用于创建接收数据报的构造函数相同：一个字节数组，包含从发送方到接收方的消息以及该数组的长度。接下来的两个参数是不同的：Internet 地址和端口号。这两个参数是数据报包的目的地的完整地址，必须由数据报的发送者提供。最后一行代码在其路上发送 <code>DatagramPacket</code>。</p>
+<p>第三个语句创建一个新的 <code>DatagramPacket</code> 对象，用于通过数据报套接字发送数据报消息。你可以告诉新的 <code>DatagramPacket</code> 旨在通过套接字发送数据，因为用于创建它的构造函数。此构造函数需要四个参数。前两个参数与用于创建接收数据报的构造函数相同：一个字节数组，包含从发送方到接收方的消息以及该数组的长度。接下来的两个参数是不同的：Internet 地址和端口号。这两个参数是数据报包的目的地的完整地址，必须由数据报的发送者提供。最后一行代码在其路上发送 <code>DatagramPacket</code>。</p>
 <p>当服务器读取了引语文件中的所有引语时，<code>while</code> 循环终止并且 <code>run</code> 方法清除：</p>
 <div class="codeblock"><pre>
 socket.close();
@@ -608,9 +608,9 @@ System.out.println("Quote of the Moment: " + received);
 <p>为了从服务器获得响应，客户端创建“receive”数据包并使用 <code>DatagramSocket</code> 接收方法从服务器接收回复。receive 方法等待，直到发往客户端的数据报包通过套接字到来。请注意，如果服务器的回复以某种方式丢失，则客户端将永远等待，因为数据报模型的无保证策略。通常，客户端设置一个计时器，以便它不会永远等待回复；如果没有回复，则计时器关闭，客户端重新发送。</p>
 <p>当客户端从服务器收到回复时，客户端使用 getData 方法从数据包中获取该数据。然后，客户端将数据转换为字符串并显示它。</p>
 <h2>运行服务器和客户端</h2>
-<p>成功编译服务器和客户端程序后，运行它们。您必须先运行服务器程序。只需使用 Java 解释器并指定 <code>QuoteServer</code> 类名。</p>
-<p>服务器启动后，您可以运行客户端程序。请记住使用一个命令行参数运行客户端程序：运行 <code>QuoteServer</code> 的主机的名称。</p>
-<p>客户端发送请求并从服务器收到响应后，您应该看到与此类似的输出：</p>
+<p>成功编译服务器和客户端程序后，运行它们。你必须先运行服务器程序。只需使用 Java 解释器并指定 <code>QuoteServer</code> 类名。</p>
+<p>服务器启动后，你可以运行客户端程序。请记住使用一个命令行参数运行客户端程序：运行 <code>QuoteServer</code> 的主机的名称。</p>
+<p>客户端发送请求并从服务器收到响应后，你应该看到与此类似的输出：</p>
 <div class="codeblock"><pre>
 Quote of the Moment:
 Good programming is 99% sweat and 1% coffee.

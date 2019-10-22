@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="creating.html">创建异常类</a></div>
-<div class="linkAHEAD"><a href="runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="summary.html">总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -500,7 +500,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="finally.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="putItTogether.html">Next&nbsp;»</a>
+                <a target="_top" href="finally.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="putItTogether.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>try-with-resources 语句</h1></div>
@@ -518,7 +518,7 @@ static String readFirstLineFromFile(String path) throws IOException {
 }
 </pre></div>
 <p>在此示例中，<code>try</code>-with-resources 语句中声明的资源是 <code>BufferedReader</code>。声明语句出现在 <code>try</code> 关键字后面的括号内。Java SE 7 及更高版本中的类 <code>BufferedReader</code> 实现了接口 <code>java.lang.AutoCloseable</code>。因为 <code>BufferedReader</code> 实例是在 <code>try</code>-with-resource 语句中声明的，所以无论 <code>try</code> 语句是否正常完成或中断(作为方法 <code>BufferedReader.readLine</code> 抛出 <code>IOException</code> 的结果)，它都将被关闭。</p>
-<p>在 Java SE 7 之前，您可以使用 <code>finally</code> 块来确保资源已关闭，无论 <code>try</code> 语句是正常完成还是中断。以下示例使用 <code>finally</code> 块而不是 <code>try</code>-with-resources 语句：</p>
+<p>在 Java SE 7 之前，你可以使用 <code>finally</code> 块来确保资源已关闭，无论 <code>try</code> 语句是正常完成还是中断。以下示例使用 <code>finally</code> 块而不是 <code>try</code>-with-resources 语句：</p>
 <div class="codeblock"><pre>
 static String readFirstLineFromFileWithFinallyBlock(String path)
                                                      throws IOException {
@@ -530,8 +530,8 @@ static String readFirstLineFromFileWithFinallyBlock(String path)
     }
 }
 </pre></div>
-<p>但是，在此示例中，如果方法 <code>readLine</code> 和 <code>close</code> 都抛出异常，则方法 <code>readFirstLineFromFileWithFinallyBlock</code> 将从 <code>finally</code> 块抛出异常;从 <code>try</code> 块抛出的异常被抑制。相反，在示例 <code>readFirstLineFromFile</code> 中，如果从 <code>try</code> 块和 <code>try</code>-with-resources 语句抛出异常，则该方法 <code>readFirstLineFromFile</code> 抛出 <code>try</code> 块引发的异常;从 <code>try</code>-with-resources 块抛出的异常被抑制。在 Java SE 7 及更高版本中，您可以获取抑制的异常;有关详细信息，请参阅 <a href="#suppressed-exceptions">Suppressed Exceptions</a> 部分。</p>
-<p>您可以在 <code>try</code>-with-resources 语句中语句一个或多个资源。以下示例获取 zip 文件 <code>zipFileName</code> 中打包的文件的名称，并创建一个包含这些文件名称的文本文件：</p>
+<p>但是，在此示例中，如果方法 <code>readLine</code> 和 <code>close</code> 都抛出异常，则方法 <code>readFirstLineFromFileWithFinallyBlock</code> 将从 <code>finally</code> 块抛出异常;从 <code>try</code> 块抛出的异常被抑制。相反，在示例 <code>readFirstLineFromFile</code> 中，如果从 <code>try</code> 块和 <code>try</code>-with-resources 语句抛出异常，则该方法 <code>readFirstLineFromFile</code> 抛出 <code>try</code> 块引发的异常;从 <code>try</code>-with-resources 块抛出的异常被抑制。在 Java SE 7 及更高版本中，你可以获取抑制的异常;有关详细信息，请参阅 <a href="#suppressed-exceptions">Suppressed Exceptions</a> 部分。</p>
+<p>你可以在 <code>try</code>-with-resources 语句中声明一个或多个资源。以下示例获取 zip 文件 <code>zipFileName</code> 中打包的文件的名称，并创建一个包含这些文件名称的文本文件：</p>
 <div class="codeblock"><pre>
 public static void writeToFileZipFileContents(String zipFileName,
                                            String outputFileName)
@@ -593,7 +593,7 @@ public static void viewTable(Connection con) throws SQLException {
 <p><strong>注意</strong>:<code>try</code>-with-resources 语句可以像普通的 <code>try</code> 语句一样具有 <code>catch</code> 和 <code>finally</code> 块。在 <code>try</code>-with-resources 语句中，任何 <code>catch</code> 或 <code>finally</code> 块在声明的资源关闭后运行。</p><!-- ************************************** -->
 
 <h2><a name="suppressed-exceptions" id="suppressed-exceptions">抑制的异常</a></h2>
-<p>可以从与 <code>try</code>-with-resources 语句关联的代码块中抛出异常。在示例 <code>writeToFileZipFileContents</code> 中，可以从 <code>try</code> 块中抛出异常，并且可以从 <code>try</code>-with-resources 语句中抛出最多两个异常 - 当它尝试关闭 <code>ZipFile</code> 和 <code>BufferedWriter</code> 对象时。如果从 <code>try</code> 块抛出异常并且从 <code>try</code>-with-resources 语句抛出一个或多个异常，那么从 <code>try</code>-with-resources 语句抛出的异常被抑制，块抛出的异常是 <code>writeToFileZipFileContents</code> 方法抛出的异常。您可以通过从 <code>try</code> 块抛出的异常中调用 <code>Throwable.getSuppressed</code> 方法来获取这些抑制的异常。</p>
+<p>可以从与 <code>try</code>-with-resources 语句关联的代码块中抛出异常。在示例 <code>writeToFileZipFileContents</code> 中，可以从 <code>try</code> 块中抛出异常，并且可以从 <code>try</code>-with-resources 语句中抛出最多两个异常 - 当它尝试关闭 <code>ZipFile</code> 和 <code>BufferedWriter</code> 对象时。如果从 <code>try</code> 块抛出异常并且从 <code>try</code>-with-resources 语句抛出一个或多个异常，那么从 <code>try</code>-with-resources 语句抛出的异常被抑制，块抛出的异常是 <code>writeToFileZipFileContents</code> 方法抛出的异常。你可以通过从 <code>try</code> 块抛出的异常中调用 <code>Throwable.getSuppressed</code> 方法来获取这些抑制的异常。</p>
 <h2>实现 AutoCloseable 或 Closeable 接口的类</h2>
 <p>请参阅 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html"><code>AutoCloseable</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html"><code>Closeable</code></a> 接口的 Javadoc，以获取实现这些接口之一的类列表。<code>Closeable</code> 接口继承了 <code>AutoCloseable</code> 接口。<code>Closeable</code> 接口的 <code>close</code> 方法抛出 <code>IOException</code> 类型的异常，而 <code>AutoCloseable</code> 接口的 <code>close</code> 方法抛出 <code>Exception</code> 类型的异常。因此，<code>AutoCloseable</code> 接口的子类可以覆盖 <code>close</code> 方法的此行为，以抛出特殊异常，例如 <code>IOException</code>，或者根本没有异常。</p>
 

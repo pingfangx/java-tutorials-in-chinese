@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">接口</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="collection.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="list.html">Next&nbsp;»</a>
+                <a target="_top" href="collection.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="list.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Set 接口</h1></div>
@@ -539,15 +539,15 @@ public interface Set&lt;E&gt; extends Collection&lt;E&gt; {
 
 
 
-<p>Java 平台包含三个通用 <code>Set</code> 实现：<code>HashSet</code>，<code>TreeSet</code> 和 <code>LinkedHashSet</code>。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html"><code>HashSet</code></a>，将其元素存储在哈希表中，是性能最佳的实现；但它不能保证迭代的顺序。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html"><code>TreeSet</code></a>，将其元素存储在红黑树中，根据其值对其元素进行排序；它比 <code>HashSet</code> 慢得多。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html"><code>LinkedHashSet</code></a>，作为哈希表实现，其中有链表贯穿其中，根据它们插入集合的顺序对其元素进行排序（插入顺序）。<code>LinkedHashSet</code> 使客户端免受 <code>HashSet</code> 提供的未指定的，通常是混乱的排序的影响，其成本仅稍高一些。</p>
-<p>这是一个简单但有用的 <code>Set</code> 习惯用法。假设您有一个 <code>Collection</code>，<code>c</code>，并且您想要创建另一个包含相同元素的 <code>Collection</code>，但会删除所有重复项。下面的一行就可以了。</p>
+<p>Java 平台包含三个通用 <code>Set</code> 实现：<code>HashSet</code>，<code>TreeSet</code> 和 <code>LinkedHashSet</code>。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html"><code>HashSet</code></a>，将其元素存储在哈希表中，是性能最佳的实现；但它不能保证迭代的顺序。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html"><code>TreeSet</code></a>，将其元素存储在红黑树中，根据其值对其元素进行排序；它比 <code>HashSet</code> 慢得多。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html"><code>LinkedHashSet</code></a>，作为哈希表实现，其中有链表贯穿其中，根据它们插入集合的顺序对其元素进行排序（插入顺序）。<code>LinkedHashSet</code> 使客户端免受 <code>HashSet</code> 提供的未指定的、通常是混乱的排序的影响，其成本仅稍高一些。</p>
+<p>这是一个简单但有用的 <code>Set</code> 习惯用法。假设你有一个 <code>Collection</code>，<code>c</code>，并且你想要创建另一个包含相同元素的 <code>Collection</code>，但会删除所有重复项。下面的一行就可以了。</p>
 <div class="codeblock"><pre>
 Collection&lt;Type&gt; noDups = new HashSet&lt;Type&gt;(c);
 </pre></div>
 <p>它的工作原理是创建一个 <code>Set</code>(根据定义，它不能包含重复项)，最初包含 <code>c</code> 中的所有元素。它使用 <a class="TutorialLink" target="_top" href="collection.html">The Collection Interface</a> 部分中描述的标准转换构造函数。</p>
 
 <p>
-或者，如果使用 JDK 8 或更高版本，您可以使用聚合操作轻松收集到 <code>Set</code>：
+或者，如果使用 JDK 8 或更高版本，你可以使用聚合操作轻松收集到 <code>Set</code>：
 </p>
 
 <div class="codeblock"><pre>
@@ -577,7 +577,7 @@ public static &lt;E&gt; Set&lt;E&gt; removeDups(Collection&lt;E&gt; c) {
 }
 </pre></div>
 <h2>Set 接口基本操作</h2>
-<p><code>size</code> 操作返回 <code>Set</code>(其 <i>cardinality (基数)</i>)中的元素数。<code>isEmpty</code> 方法完全按照您的想法执行。<code>add</code> 方法将指定的元素添加到 <code>Set</code>(如果它尚不存在)并返回一个布尔值，指示是否添加了元素。类似地，<code>remove</code> 方法从 <code>Set</code> 中移除指定的元素(如果存在)并返回指示元素是否存在的布尔值。<code>iterator</code> 方法在 <code>Set</code> 上返回一个 <code>Iterator</code>。</p>
+<p><code>size</code> 操作返回 <code>Set</code>(其 <i>cardinality (基数)</i>)中的元素数。<code>isEmpty</code> 方法完全按照你的想法执行。<code>add</code> 方法将指定的元素添加到 <code>Set</code>(如果它尚不存在)并返回一个布尔值，指示是否添加了元素。类似地，<code>remove</code> 方法从 <code>Set</code> 中移除指定的元素(如果存在)并返回指示元素是否存在的布尔值。<code>iterator</code> 方法在 <code>Set</code> 上返回一个 <code>Iterator</code>。</p>
 <p>以下 <a class="SourceLink" target="_blank" href="examples/FindDups.java" onclick="showCode('../../displayCode.html', 'examples/FindDups.java'); return false;"><code>program</code></a> 打印出其参数列表中的所有不同单词。提供了该程序的两个版本。第一个使用 JDK 8 聚合操作。第二个使用 for-each 结构。</p>
 
 
@@ -627,8 +627,8 @@ java FindDups i came i saw i left
 <div class="codeblock"><pre>
 4 distinct words: [left, came, saw, i]
 </pre></div>
-<p>请注意，代码始终通过其接口类型(<code>Set</code>)而不是其实现类型引用 <code>Collection</code>。这是 <i>strongly (强烈)</i> 推荐的编程实践，因为它使您可以灵活地仅通过更改构造函数来更改实现。如果用于存储集合的变量或用于传递它的参数被声明为 <code>Collection</code> 的实现类型而不是其接口类型，则必须更改 <i>所有的</i> 此类变量和参数的才能更改其实现类型。</p>
-<p>此外，无法保证生成的程序能够正常运行。如果程序使用原始实现类型中存在但未在新实现类型中存在的任何非标准操作，则程序将失败。仅通过其接口引用集合可防止您使用任何非标准操作。</p>
+<p>请注意，代码始终通过其接口类型(<code>Set</code>)而不是其实现类型引用 <code>Collection</code>。这是 <i>strongly (强烈)</i> 推荐的编程实践，因为它使你可以灵活地仅通过更改构造函数来更改实现。如果用于存储集合的变量或用于传递它的参数被声明为 <code>Collection</code> 的实现类型而不是其接口类型，则必须更改 <i>所有的</i> 此类变量和参数的才能更改其实现类型。</p>
+<p>此外，无法保证生成的程序能够正常运行。如果程序使用原始实现类型中存在但未在新实现类型中存在的任何非标准操作，则程序将失败。仅通过其接口引用集合可防止你使用任何非标准操作。</p>
 <p>前面示例中 <code>Set</code> 的实现类型是 <code>HashSet</code>，它不保证 <code>Set</code> 中元素的顺序。如果希望程序按字母顺序打印单词列表，只需将 <code>Set</code> 的实现类型从 <code>HashSet</code> 更改为 <code>TreeSet</code>。进行这个简单的单行更改会导致前一个示例中的命令行生成以下输出。</p>
 <div class="codeblock"><pre>
 java FindDups i came i saw i left
@@ -638,10 +638,10 @@ java FindDups i came i saw i left
 <h2>Set 接口批量操作</h2>
 <p>批量操作特别适合 <code>Set</code>;应用时，它们执行标准的集合代数运算。假设 <code>s1</code> 和 <code>s2</code> 是 set。以下是批量操作的作用：</p>
 <ul>
-<li><code>s1.containsAll(s2)</code> 如果 <code>s2</code> 是 <code>s1</code> 的 <b>subset (子集)</b>，则返回 <code>true</code>。(<code>s2</code> 是 <code>s1</code> 的子集，如果 set <code>s1</code> 包含 <code>s2</code> 中的所有元素。)</li>
-<li><code>s1.addAll(s2)</code> 将 <code>s1</code> 转换为 <code>s1</code> 和 <code>s2</code> 的 <b>union (并集)</b>。(两个集合的并集是包含任一集合中包含的所有元素的集合。)</li>
-<li><code>s1.retainAll(s2)</code> 将 <code>s1</code> 转换为 <code>s1</code> 和 <code>s2</code> 的交集。(两个集合的交集是仅包含两个集合共有的元素的集合。)</li>
-<li><code>s1.removeAll(s2)</code> 将 <code>s1</code> 转换为 <code>s1</code> 和 <code>s2</code> 的(不对称)集合差异（译注：应该也称为相对补集）。(例如，<code>s1</code> 减去 <code>s2</code> 的集合差异是包含 <code>s1</code> 中但不包含在 <code>s2</code> 中的所有元素)。</li>
+<li><code>s1.containsAll(s2)</code>  如果 <code>s2</code> 是 <code>s1</code> 的 <b>subset (子集)</b>，则返回 <code>true</code>。(<code>s2</code> 是 <code>s1</code> 的子集，如果 set <code>s1</code> 包含 <code>s2</code> 中的所有元素。)</li>
+<li><code>s1.addAll(s2)</code>  将 <code>s1</code> 转换为 <code>s1</code> 和 <code>s2</code> 的 <b>union (并集)</b>。(两个集合的并集是包含任一集合中包含的所有元素的集合。)</li>
+<li><code>s1.retainAll(s2)</code>  将 <code>s1</code> 转换为 <code>s1</code> 和 <code>s2</code> 的交集。(两个集合的交集是仅包含两个集合共有的元素的集合。)</li>
+<li><code>s1.removeAll(s2)</code>  将 <code>s1</code> 转换为 <code>s1</code> 和 <code>s2</code> 的(不对称)集合差异（译注：应该也称为相对补集）。(例如，<code>s1</code> 减去 <code>s2</code> 的集合差异是包含 <code>s1</code> 中但不包含在 <code>s2</code> 中的所有元素)。</li>
 </ul>
 <p>要 <i>nondestructively (非破坏性地)</i> (不修改任何一个集合)计算两个集合的并集，交集或集合差异，调用者必须在调用适当的批量操作之前复制一个集合。以下是由此产生的习惯用法。</p>
 <div class="codeblock"><pre>
@@ -655,7 +655,7 @@ Set&lt;Type&gt; difference = new HashSet&lt;Type&gt;(s1);
 difference.removeAll(s2);
 </pre></div>
 <p>前面的习惯用法中的结果 <code>Set</code> 的实现类型是 <code>HashSet</code>，正如已经提到的那样，它是 Java 平台最好的全面 <code>Set</code> 实现。但是，可以替换任何泛型的 <code>Set</code> 实现。</p>
-<p>让我们重温一下 <code>FindDups</code> 程序。假设您想知道参数列表中的哪些单词只出现一次，哪些出现多次，但您不希望重复打印任何重复项。这种效果可以通过生成两组来实现。一个包含参数列表中的每个单词，另一个只包含重复项。仅出现一次的单词是这两组的集合差异，我们知道如何计算。这是 <a class="SourceLink" target="_blank" href="examples/FindDups2.java" onclick="showCode('../../displayCode.html', 'examples/FindDups2.java'); return false;"><code>the resulting program</code></a> 的展示。
+<p>让我们重温一下 <code>FindDups</code> 程序。假设你想知道参数列表中的哪些单词只出现一次，哪些出现多次，但你不希望重复打印任何重复项。这种效果可以通过生成两组来实现。一个包含参数列表中的每个单词，另一个只包含重复项。仅出现一次的单词是这两组的集合差异，我们知道如何计算。这是 <a class="SourceLink" target="_blank" href="examples/FindDups2.java" onclick="showCode('../../displayCode.html', 'examples/FindDups2.java'); return false;"><code>the resulting program</code></a> 的展示。
 </p>
 
 <div class="codeblock"><pre>

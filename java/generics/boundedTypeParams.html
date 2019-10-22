@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>泛型方法和有界类型参数(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;泛型(更新))
+        <title>泛型方法和有界类型形参(Java™ 教程-Java Tutorials 中文版&gt;学习 Java 语言&gt;泛型(更新))
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This beginner Java tutorial describes fundamentals of programming in the Java programming language" />
@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="nolinkBHEAD">泛型方法和有界类型参数</div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="nolinkBHEAD">泛型方法和有界类型形参</div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -506,14 +506,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="bounded.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="inheritance.html">Next&nbsp;»</a>
+                <a target="_top" href="bounded.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="inheritance.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>泛型方法和有界类型参数</h1></div>
+            <div id="PageTitle"><h1>泛型方法和有界类型形参</h1></div>
             <div id="PageContent">
 
 <p>
-有界类型参数是泛型算法实现的关键。请考虑以下方法，该方法计算数组 <tt>T[]</tt> 中大于指定元素 <tt>elem</tt> 的元素数。</p>
+有界类型形参是泛型算法实现的关键。请考虑以下方法，该方法计算数组 <tt>T[]</tt> 中大于指定元素 <tt>elem</tt> 的元素数。</p>
 <div class="codeblock"><pre>
 public static &lt;T&gt; int countGreaterThan(T[] anArray, T elem) {
     int count = 0;
@@ -524,7 +524,7 @@ public static &lt;T&gt; int countGreaterThan(T[] anArray, T elem) {
 }
 </pre></div>
 <p>
-该方法的实现很简单，但它不能编译，因为大于运算符(<tt>&gt;</tt>)仅适用于基本类型，如 <tt>short</tt>，<tt>int</tt>，<tt>double</tt>，<tt>long</tt>，<tt>float</tt>，<tt>byte</tt> 和 <tt>char</tt>。您不能使用 <tt>&gt;</tt> 运算符来比较对象。要解决此问题，请使用由 <tt>Comparable&lt;T&gt;</tt> 接口限定的类型参数：</p>
+该方法的实现很简单，但它不能编译，因为大于运算符(<tt>&gt;</tt>)仅适用于基本类型，如 <tt>short</tt>，<tt>int</tt>，<tt>double</tt>，<tt>long</tt>，<tt>float</tt>，<tt>byte</tt> 和 <tt>char</tt>。你不能使用 <tt>&gt;</tt> 运算符来比较对象。要解决此问题，请使用由 <tt>Comparable&lt;T&gt;</tt> 接口限定的类型形参：</p>
 <div class="codeblock"><pre>
 public interface Comparable&lt;T&gt; {
     public int compareTo(T o);

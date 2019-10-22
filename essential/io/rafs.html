@@ -515,14 +515,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="file.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="dirs.html">Next&nbsp;»</a>
+                <a target="_top" href="file.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="dirs.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>随机访问文件</h1></div>
             <div id="PageContent"><!-- Random Access Files -->
 
 
-<p><em>Random access files</em> 允许对文件内容进行非顺序或随机访问。要随机访问文件，请打开文件，查找特定位置，然后读取或写入该文件。</p>
+<p><em>Random access files (随机访问文件)</em> 允许对文件内容进行非顺序或随机访问。要随机访问文件，请打开文件，查找特定位置，然后读取或写入该文件。</p>
 <p>使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/channels/SeekableByteChannel.html"><code>SeekableByteChannel</code></a> 接口可以实现此功能。<code>SeekableByteChannel</code> 接口使用当前位置的概念继承通道 I/O。使用方法可以设置或查询位置，然后可以从该位置读取数据或将数据写入该位置。API 由一些易于使用的方法组成：</p>
 <ul>
 <li>
@@ -537,7 +537,7 @@
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/channels/SeekableByteChannel.html#truncate-long-"><code>truncate(long)</code></a>–截断连接到通道的文件(或其他实体)</li>
 </ul>
 <p>
-<a class="TutorialLink" target="_top" href="file.html#channelio">使用通道 I/O 读取和写入文件</a>显示 <code>Path.newByteChannel</code> 方法返回 <code>SeekableByteChannel</code> 的实例。在默认文件系统上，您可以按原样使用该通道，也可以将其转换为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/channels/FileChannel.html"><code>FileChannel</code></a>，以便您访问更多高级功能，例如映射区域文件直接进入内存以便更快地访问，锁定文件的一个区域，或者从绝对位置读取和写入字节而不影响通道的当前位置。</p>
+<a class="TutorialLink" target="_top" href="file.html#channelio">使用通道 I/O 读取和写入文件</a>显示 <code>Path.newByteChannel</code> 方法返回 <code>SeekableByteChannel</code> 的实例。在默认文件系统上，你可以按原样使用该通道，也可以将其转换为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/channels/FileChannel.html"><code>FileChannel</code></a>，以便你访问更多高级功能，例如映射区域文件直接进入内存以便更快地访问，锁定文件的一个区域，或者从绝对位置读取和写入字节而不影响通道的当前位置。</p>
 <p>以下代码段使用 <code>newByteChannel</code> 方法之一打开用于读取和写入的文件。返回的 <code>SeekableByteChannel</code> 将强制转换为 <code>FileChannel</code>。然后，从文件的开头读取 12 个字节，字符串“I was here!”在那个地方写入。文件中的当前位置移动到末尾，并附加从开头的 12 个字节。最后，字符串，“I was here!”附加上，并关闭文件上的通道。</p>
 <div class="codeblock"><pre>
 String s = "I was here!\n";

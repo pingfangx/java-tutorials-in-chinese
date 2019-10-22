@@ -479,7 +479,7 @@
 <div class="linkAHEAD"><a href="pre_char_classes.html">预定义的字符类</a></div>
 <div class="linkAHEAD"><a href="quant.html">量词</a></div>
 <div class="linkAHEAD"><a href="groups.html">捕获组</a></div>
-<div class="linkAHEAD"><a href="bounds.html">边界匹配器</a></div>
+<div class="linkAHEAD"><a href="bounds.html">边界匹配</a></div>
 <div class="nolinkAHEAD">Pattern 类的方法</div>
 <div class="linkAHEAD"><a href="matcher.html">Matcher 类的方法</a></div>
 <div class="linkAHEAD"><a href="pse.html">PatternSyntaxException 类的方法</a></div>
@@ -497,7 +497,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">正则表达式</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="bounds.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="matcher.html">Next&nbsp;»</a>
+                <a target="_top" href="bounds.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="matcher.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Pattern 类的方法</h1></div>
@@ -539,11 +539,11 @@ Enter input string to search: DoGDOg
 I found the text "DoG" starting at index 0 and ending at index 3.
 I found the text "DOg" starting at index 3 and ending at index 6.
 </pre></div> 
-<p>如您所见，无论大小写如何，字符串文字“dog”都匹配这两种情况。要编译带有多个标志的模式，请使用按位或运算符 "<code>|</code>" 分隔要包含的标志。为清楚起见，以下代码示例对正则表达式进行硬编码，而不是从 <code>Console</code> 中读取它：</p>
+<p>如你所见，无论大小写如何，字符串文字“dog”都匹配这两种情况。要编译带有多个标志的模式，请使用按位或运算符 "<code>|</code>" 分隔要包含的标志。为清楚起见，以下代码示例对正则表达式进行硬编码，而不是从 <code>Console</code> 中读取它：</p>
 <div class="codeblock"><pre> 
 pattern = Pattern.compile("[az]$", Pattern.MULTILINE <b>|</b> Pattern.UNIX_LINES);
 </pre></div> 
-<p>您也可以指定 <code>int</code> 变量：</p>
+<p>你也可以指定 <code>int</code> 变量：</p>
 <div class="codeblock"><pre> 
 final int flags = Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE;
 Pattern pattern = Pattern.compile("aa", flags);
@@ -600,7 +600,7 @@ I found the text "foO" starting at index 9 and ending at index 12.
 </tr>
 </table>
 <h2>使用 <code>matches(String,CharSequence)</code> 方法</h2>
-<p><code>Pattern</code> 类定义了一个方便的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-"><code>matches</code></a> 方法，该方法允许您快速检查给定输入字符串中是否存在模式。与所有公共静态方法一样，您应该通过其类名调用 <code>matches</code>，例如 <code>Pattern.matches("\\d","1");</code>。在此示例中，该方法返回 <code>true</code>，因为数字“1”与正则表达式 <code>\d</code> 匹配。</p>
+<p><code>Pattern</code> 类定义了一个方便的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-"><code>matches</code></a> 方法，该方法允许你快速检查给定输入字符串中是否存在模式。与所有公共静态方法一样，你应该通过其类名调用 <code>matches</code>，例如 <code>Pattern.matches("\\d","1");</code>。在此示例中，该方法返回 <code>true</code>，因为数字“1”与正则表达式 <code>\d</code> 匹配。</p>
 <h2>使用 <code>split(String)</code> 方法</h2>
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#split-java.lang.CharSequence-"><code>split</code></a> 方法是一个很好的工具，用于收集位于匹配模式两侧的文本。如下面 <a class="SourceLink" target="_blank" href="examples/SplitDemo.java" onclick="showCode('../../displayCode.html', 'examples/SplitDemo.java'); return false;"><code>SplitDemo.java</code></a> 所示，<code>split</code> 方法可以提取单词“<code>one two three four five</code>”从字符串“<code>one:two:three:four:five</code>”：</p>
 <div class="codeblock"><pre>
@@ -632,7 +632,7 @@ three
 four
 five
 </pre></div> 
-<p>为简单起见，我们匹配了字符串文字冒号(<code>:</code>)而不是复杂的正则表达式。由于我们仍在使用 <code>Pattern</code> 和 <code>Matcher</code> 对象，因此您可以使用 split 来获取位于任何正则表达式两侧的文本。这是相同的例子，<a class="SourceLink" target="_blank" href="examples/SplitDemo2.java" onclick="showCode('../../displayCode.html', 'examples/SplitDemo2.java'); return false;"><code>SplitDemo2.java</code></a>，修改为在数字上拆分：</p>
+<p>为简单起见，我们匹配了字符串文字冒号(<code>:</code>)而不是复杂的正则表达式。由于我们仍在使用 <code>Pattern</code> 和 <code>Matcher</code> 对象，因此你可以使用 split 来获取位于任何正则表达式两侧的文本。这是相同的例子，<a class="SourceLink" target="_blank" href="examples/SplitDemo2.java" onclick="showCode('../../displayCode.html', 'examples/SplitDemo2.java'); return false;"><code>SplitDemo2.java</code></a>，修改为在数字上拆分：</p>
 <div class="codeblock"><pre>
 
 import java.util.regex.Pattern;
@@ -663,7 +663,7 @@ four
 five
 </pre></div> 
 <h2>其他实用方法</h2>
-<p>您可能会发现以下方法也有一些用处：</p>
+<p>你可能会发现以下方法也有一些用处：</p>
 <ul>
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#quote-java.lang.String-"><code>public static String quote(String s)</code></a>返回指定 <code>String</code> 的文字模式 <code>String</code>。此方法生成 <code>String</code>，可用于创建与 <code>String s</code> 匹配的 <code>Pattern</code>，就像它是文字模式一样。输入序列中的元字符或转义序列将没有特殊含义。</li>

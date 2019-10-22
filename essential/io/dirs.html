@@ -515,7 +515,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="rafs.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="links.html">Next&nbsp;»</a>
+                <a target="_top" href="rafs.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="links.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>创建和读取目录</h1></div>
@@ -533,7 +533,7 @@
 <li><a href="#filter">编写自己的目录过滤器</a></li>
 </ul>
 <h2><a name="listall" id="listall">列出文件系统的根目录</a></h2>
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getRootDirectories--"><code>FileSystem.getRootDirectories</code></a> 方法列出文件系统的所有根目录。此方法返回 <code>Iterable</code>，这使您可以使用 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/for.html">enhanced for</a> 语句迭代所有根目录。</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getRootDirectories--"><code>FileSystem.getRootDirectories</code></a> 方法列出文件系统的所有根目录。此方法返回 <code>Iterable</code>，这使你可以使用 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/for.html">enhanced for</a> 语句迭代所有根目录。</p>
 <p>以下代码段打印默认文件系统的根目录：</p>
 <div class="codeblock"><pre>
 Iterable&lt;Path&gt; dirs = FileSystems.getDefault().getRootDirectories();
@@ -542,7 +542,7 @@ for (Path name: dirs) {
 }
 </pre></div>
 <h2><a name="create" id="create">创建目录</a></h2>
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createDirectory-java.nio.file.Path-java.nio.file.attribute.FileAttribute...-"><code>createDirectory(Path, FileAttribute&lt;?&gt;)</code></a> 方法创建新目录。如果未指定任何 <code>FileAttributes</code>，则新目录将具有默认属性。例如：</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createDirectory-java.nio.file.Path-java.nio.file.attribute.FileAttribute...-"><code>createDirectory(Path, FileAttribute&lt;?&gt;)</code></a> 方法创建新目录。如果未指定任何 <code>FileAttributes</code>，则新目录将具有默认属性。例如：</p>
 <div class="codeblock"><pre>
 Path dir = ...;
 Files.createDirectory(path);
@@ -555,14 +555,14 @@ FileAttribute&lt;Set&lt;PosixFilePermission&gt;&gt; attr =
     PosixFilePermissions.asFileAttribute(perms);
 Files.createDirectory(file, attr);
 </pre></div>
-<p>要在一个或多个父目录可能尚不存在时创建多个级别的目录，可以使用方便方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createDirectories-java.nio.file.Path-java.nio.file.attribute.FileAttribute...-"><code>createDirectories(Path, FileAttribute&lt;?&gt;)</code></a>。与 <code>createDirectory(Path, FileAttribute&lt;?&gt;)</code> 方法一样，您可以指定一组可选的初始文件属性。以下代码段使用默认属性：</p>
+<p>要在一个或多个父目录可能尚不存在时创建多个级别的目录，可以使用方便方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createDirectories-java.nio.file.Path-java.nio.file.attribute.FileAttribute...-"><code>createDirectories(Path, FileAttribute&lt;?&gt;)</code></a>。与 <code>createDirectory(Path, FileAttribute&lt;?&gt;)</code> 方法一样，你可以指定一组可选的初始文件属性。以下代码段使用默认属性：</p>
 <div class="codeblock"><pre>
 Files.createDirectories(Paths.get("foo/bar/test"));
 </pre></div>
 <p>根据需要，从上到下创建目录。在 <code>foo/bar/test</code> 示例中，如果 <code>foo</code> 目录不存在，则会创建该目录。接下来，如果需要，将创建 <code>bar</code> 目录，最后创建 <code>test</code> 目录。</p>
 <p>创建一些（但不是全部）父目录后，此方法可能会失败。</p>
 <h2><a name="createTemp" id="createTemp">创建临时目录</a></h2>
-<p>您可以使用 <code>createTempDirectory</code> 方法之一创建临时目录：</p>
+<p>你可以使用 <code>createTempDirectory</code> 方法之一创建临时目录：</p>
 <ul>
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createTempDirectory-java.nio.file.Path-java.lang.String-java.nio.file.attribute.FileAttribute...-"><code>createTempDirectory(Path, String, FileAttribute&lt;?&gt;...)</code></a></li>
@@ -571,8 +571,8 @@ Files.createDirectories(Paths.get("foo/bar/test"));
 </ul>
 <p>第一种方法允许代码指定临时目录的位置，第二种方法在默认的 temporary-fle 目录中创建新目录。</p>
 <h2><a name="listdir" id="listdir">列出目录的内容</a></h2>
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newDirectoryStream-java.nio.file.Path-"><code>newDirectoryStream(Path)</code></a> 方法列出目录的所有内容。此方法返回实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/DirectoryStream.html"><code>DirectoryStream</code></a> 接口的对象。实现 <code>DirectoryStream</code> 接口的类也实现了 <code>Iterable</code>，因此您可以遍历目录流，读取所有对象。这种方法适用于非常大的目录。</p>
-<div class="note"><hr /><strong>Remember:</strong> 返回的 <code>DirectoryStream</code> 是 <em>stream</em>。如果您没有使用 <code>try-</code>with-resources 语句，请不要忘记在 <code>finally</code> 块中关闭流。<code>try-</code>with-resources 语句会为您解决此问题。
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newDirectoryStream-java.nio.file.Path-"><code>newDirectoryStream(Path)</code></a> 方法列出目录的所有内容。此方法返回实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/DirectoryStream.html"><code>DirectoryStream</code></a> 接口的对象。实现 <code>DirectoryStream</code> 接口的类也实现了 <code>Iterable</code>，因此你可以遍历目录流，读取所有对象。这种方法适用于非常大的目录。</p>
+<div class="note"><hr /><strong>记住:</strong>&nbsp;返回的 <code>DirectoryStream</code> 是 <em>stream</em>。如果你没有使用 <code>try-</code>with-resources 语句，请不要忘记在 <code>finally</code> 块中关闭流。<code>try-</code>with-resources 语句会为你解决此问题。
 <hr /></div>
 <p>以下代码段显示了如何打印目录的内容：</p>
 <div class="codeblock"><pre>
@@ -588,10 +588,10 @@ try (DirectoryStream&lt;Path&gt; stream = Files.newDirectoryStream(dir)) {
 }
 </pre></div>
 <p>迭代器返回的 <code>Path</code> 对象是根据目录解析的条目的名称。因此，如果列出 <code>/tmp</code> 目录的内容，则返回的条目为 <code>/tmp/a</code>，<code>/tmp/b</code>，依此类推。</p>
-<p>此方法返回目录的全部内容：文件，链接，子目录和隐藏文件。如果您希望对获取的内容更具选择性，可以使用其他 <code>newDirectoryStream</code> 方法之一，如本页后面所述。</p>
+<p>此方法返回目录的全部内容：文件，链接，子目录和隐藏文件。如果你希望对获取的内容更具选择性，可以使用其他 <code>newDirectoryStream</code> 方法之一，如本页后面所述。</p>
 <p>请注意，如果在目录迭代期间发生异常，则抛出 <code>DirectoryIteratorException</code>，并将 <code>IOException</code> 作为原因。迭代器方法不能抛出例外的异常。</p>
 <h2><a name="glob" id="glob">使用 Globbing 过滤目录列表</a></h2>
-<p>如果您只想获取每个名称与特定模式匹配的文件和子目录，可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newDirectoryStream-java.nio.file.Path-java.lang.String-"><code>newDirectoryStream(Path, String)</code></a> 方法来实现此目的，该方法提供了内置的 glob 过滤器。如果您不熟悉 glob 语法，请参阅 <a class="TutorialLink" target="_top" href="fileOps.html#glob">What Is a Glob?</a></p>
+<p>如果你只想获取每个名称与特定模式匹配的文件和子目录，可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newDirectoryStream-java.nio.file.Path-java.lang.String-"><code>newDirectoryStream(Path, String)</code></a> 方法来实现此目的，该方法提供了内置的 glob 过滤器。如果你不熟悉 glob 语法，请参阅 <a class="TutorialLink" target="_top" href="fileOps.html#glob">What Is a Glob?</a></p>
 <p>例如，以下代码段列出了与 Java 相关的文件：<em>.class</em>，<em>.java</em> 和 <em>.jar</em> 文件：</p>
 <div class="codeblock"><pre>
 Path dir = ...;
@@ -607,7 +607,7 @@ try (DirectoryStream&lt;Path&gt; stream =
 }
 </pre></div>
 <h2><a name="filter" id="filter">编写自己的目录过滤器</a></h2>
-<p>您可能希望根据模式匹配以外的某些条件过滤目录的内容。您可以通过实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/DirectoryStream.Filter.html"><code>DirectoryStream.Filter&lt;T&gt;</code></a> 接口来创建自己的过滤器。此接口由一个方法 <code>accept</code> 组成，该方法确定文件是否满足搜索要求。</p>
+<p>你可能希望根据模式匹配以外的某些条件过滤目录的内容。你可以通过实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/DirectoryStream.Filter.html"><code>DirectoryStream.Filter&lt;T&gt;</code></a> 接口来创建自己的过滤器。此接口由一个方法 <code>accept</code> 组成，该方法确定文件是否满足搜索要求。</p>
 <p>例如，以下代码段实现了仅获取目录的过滤器：</p>
 <div class="codeblock"><pre>
 DirectoryStream.Filter&lt;Path&gt; filter =

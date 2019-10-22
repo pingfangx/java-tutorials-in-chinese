@@ -486,7 +486,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">关于套接字</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="definition.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="clientServer.html">Next&nbsp;»</a>
+                <a target="_top" href="definition.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="clientServer.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>读取和写入套接字</h1></div>
@@ -518,7 +518,7 @@ try (
 )
 </pre></div>
 
-<p><code>try</code>-with resources 语句中的第一个语句创建一个新的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html"><code>Socket</code></a> 对象，并将其命名为 <code>echoSocket</code>。此处使用的 <code>Socket</code> 构造函数需要计算机的名称和要连接的端口号。示例程序使用第一个 <a class="TutorialLink" target="_top" href="../../essential/environment/cmdLineArgs.html">命令行参数</a> 作为计算机的名称(主机名)，使用第二个命令行参数作为端口号。在计算机上运行此程序时，请确保您使用的主机名是要连接的计算机的完全限定 IP 名称。例如，如果您的 echo 服务器正在计算机上运行 <code>echoserver.example.com</code> 并且它正在侦听端口号 7，如果要将 <code>EchoServer</code> 示例用作 echo 服务器，请首先从 <code>echoserver.example.com</code> 计算机运行以下命令：</p>
+<p><code>try</code>-with resources 语句中的第一个语句创建一个新的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html"><code>Socket</code></a> 对象，并将其命名为 <code>echoSocket</code>。此处使用的 <code>Socket</code> 构造函数需要计算机的名称和要连接的端口号。示例程序使用第一个 <a class="TutorialLink" target="_top" href="../../essential/environment/cmdLineArgs.html">命令行参数</a> 作为计算机的名称(主机名)，使用第二个命令行参数作为端口号。在计算机上运行此程序时，请确保你使用的主机名是要连接的计算机的完全限定 IP 名称。例如，如果你的 echo 服务器正在计算机上运行 <code>echoserver.example.com</code> 并且它正在侦听端口号 7，如果要将 <code>EchoServer</code> 示例用作 echo 服务器，请首先从 <code>echoserver.example.com</code> 计算机运行以下命令：</p>
 
 <div class="codeblock"><pre>
 java EchoServer 7
@@ -532,7 +532,7 @@ java EchoClient echoserver.example.com 7
  
 <p><code>try</code>-with resources 语句中的第二个语句获取套接字的输出流并在其上打开 <code>PrintWriter</code>。类似地，第三个语句获取套接字的输入流并在其上打开 <code>BufferedReader</code>。该示例使用读取器和写入器，以便它可以在套接字上写入 Unicode 字符。</p>
 
-<p>要通过套接字将数据发送到服务器，<code>EchoClient</code> 示例需要写入 <code>PrintWriter</code>。要获得服务器的响应，<code>EchoClient</code> 从 <code>BufferedReader</code> 对象 <code>stdIn</code> 中读取，该对象是在 <code>try</code>-with resources 中的第四个语句创建的。如果您还不熟悉 Java 平台的 I/O 类，则可能希望阅读 <a class="TutorialLink" target="_top" href="../../essential/io/index.html">Basic I/O</a>。</p>
+<p>要通过套接字将数据发送到服务器，<code>EchoClient</code> 示例需要写入 <code>PrintWriter</code>。要获得服务器的响应，<code>EchoClient</code> 从 <code>BufferedReader</code> 对象 <code>stdIn</code> 中读取，该对象是在 <code>try</code>-with resources 中的第四个语句创建的。如果你还不熟悉 Java 平台的 I/O 类，则可能希望阅读 <a class="TutorialLink" target="_top" href="../../essential/io/index.html">Basic I/O</a>。</p>
 
 <p>该程序的下一个有趣部分是 <code>while</code> 循环。循环从标准输入流一次读取一行，并通过将其写入连接到套接字的 <code>PrintWriter</code> 立即将其发送到服务器：</p>
 
@@ -546,9 +546,9 @@ while ((userInput = stdIn.readLine()) != null) {
 
 <p><code>while</code> 循环中的最后一个语句从连接到套接字的 <code>BufferedReader</code> 中读取一行信息。<code>readLine</code> 方法等待，直到服务器将信息回送回 <code>EchoClient</code>。当 <code>readline</code> 返回时，<code>EchoClient</code> 将信息输出到标准输出。</p>
 
-<p><code>while</code> 循环继续，直到用户键入输入结束字符。也就是说，<code>EchoClient</code> 示例从用户读取输入，将其发送到 Echo 服务器，从服务器获取响应并显示它，直到它到达输入结束。(您可以通过按 <strong>Ctrl-C</strong> 键入输入结束字符。)<code>while</code> 循环然后终止，Java 运行时自动关闭连接到套接字的读取器和写入器和标准输入流，并且关闭到服务器的套接字连接。Java 运行时会自动关闭这些资源，因为它们是在 <code>try</code>-with-resources 语句中创建的。Java 运行时以与创建它们相反的顺序关闭这些资源。(这很好，因为连接到套接字的流应该在套接字本身关闭之前关闭。)</p>
+<p><code>while</code> 循环继续，直到用户键入输入结束字符。也就是说，<code>EchoClient</code> 示例从用户读取输入，将其发送到 Echo 服务器，从服务器获取响应并显示它，直到它到达输入结束。(你可以通过按 <strong>Ctrl-C</strong> 键入输入结束字符。)<code>while</code> 循环然后终止，Java 运行时自动关闭连接到套接字的读取器和写入器和标准输入流，并且关闭到服务器的套接字连接。Java 运行时会自动关闭这些资源，因为它们是在 <code>try</code>-with-resources 语句中创建的。Java 运行时以与创建它们相反的顺序关闭这些资源。(这很好，因为连接到套接字的流应该在套接字本身关闭之前关闭。)</p>
 
-<p>此客户端程序简单明了，因为 echo 服务器实现了一个简单的协议。客户端将文本发送到服务器，服务器将其回送回来。当您的客户端程序与更复杂的服务器(如 HTTP 服务器)通信时，您的客户端程序也会更复杂。但是，基本原理与本程序中的基本原理基本相同：</p>
+<p>此客户端程序简单明了，因为 echo 服务器实现了一个简单的协议。客户端将文本发送到服务器，服务器将其回送回来。当你的客户端程序与更复杂的服务器(如 HTTP 服务器)通信时，你的客户端程序也会更复杂。但是，基本原理与本程序中的基本原理基本相同：</p>
 <ol>
 <li>打开一个套接字。</li>
 <li>打开一个输入流和一个输出流到套接字。</li>

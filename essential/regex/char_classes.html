@@ -479,7 +479,7 @@
 <div class="linkAHEAD"><a href="pre_char_classes.html">预定义的字符类</a></div>
 <div class="linkAHEAD"><a href="quant.html">量词</a></div>
 <div class="linkAHEAD"><a href="groups.html">捕获组</a></div>
-<div class="linkAHEAD"><a href="bounds.html">边界匹配器</a></div>
+<div class="linkAHEAD"><a href="bounds.html">边界匹配</a></div>
 <div class="linkAHEAD"><a href="pattern.html">Pattern 类的方法</a></div>
 <div class="linkAHEAD"><a href="matcher.html">Matcher 类的方法</a></div>
 <div class="linkAHEAD"><a href="pse.html">PatternSyntaxException 类的方法</a></div>
@@ -497,14 +497,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">正则表达式</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="literals.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="pre_char_classes.html">Next&nbsp;»</a>
+                <a target="_top" href="literals.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="pre_char_classes.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>字符类</h1></div>
             <div id="PageContent"><!--Character Classes-->
 
 
-<p>如果浏览 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html"><code>Pattern</code></a> 类规范，您将看到总结支持的正则表达式结构的表。在“字符类”部分中，您将找到以下内容：</p>
+<p>如果浏览 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html"><code>Pattern</code></a> 类规范，你将看到总结支持的正则表达式结构的表。在“字符类”部分中，你将找到以下内容：</p>
 <p><a name="CHART" id="CHART"></a></p>
 <table border="1" summary="正则表达式构造字符类">
 <tr>
@@ -584,7 +584,7 @@ I found the text "hat" starting at index 0 and ending at index 3.
 </pre></div>
 <p>仅当输入字符串的第一个字符 <i>不</i> 包含字符类定义的任何字符时，匹配才会成功。</p>
 <h3>范围</h3>
-<p>有时您需要定义一个包含一系列值的字符类，例如字母“a 到 h”或数字“1 到 5”。要指定范围，只需在要匹配的第一个和最后一个字符之间插入“<code>-</code>”元字符，例如 <code>[1-5]</code> 或 <code>[a-h]</code>。您还可以在类中将不同的范围放在彼此旁边，以进一步扩展匹配的可能性。例如，<code>[a-zA-Z]</code> 将匹配字母表中的任何字母：a 到 z(小写)或 A 到 Z(大写)。</p>
+<p>有时你需要定义一个包含一系列值的字符类，例如字母“a 到 h”或数字“1 到 5”。要指定范围，只需在要匹配的第一个和最后一个字符之间插入“<code>-</code>”元字符，例如 <code>[1-5]</code> 或 <code>[a-h]</code>。你还可以在类中将不同的范围放在彼此旁边，以进一步扩展匹配的可能性。例如，<code>[a-zA-Z]</code> 将匹配字母表中的任何字母：a 到 z(小写)或 A 到 Z(大写)。</p>
 <p>以下是范围和否定的一些示例：</p>
 <div class="codeblock"><pre>
 Enter your regex: [a-c]
@@ -624,7 +624,7 @@ Enter input string to search: foo6
 I found the text "foo6" starting at index 0 and ending at index 4.
 </pre></div>
 <h3>联合</h3>
-<p>您还可以使用 <i>unions (联合)</i> 创建由两个或多个单独的字符类组成的单个字符类。要创建联合，只需将一个类嵌套在另一个类中，例如 <code>[0-4[6-8]]</code>。此特定联合创建一个与数字 0,1,2,3,4,6,7 和 8 匹配的单个字符类。</p>
+<p>你还可以使用 <i>unions (联合)</i> 创建由两个或多个单独的字符类组成的单个字符类。要创建联合，只需将一个类嵌套在另一个类中，例如 <code>[0-4[6-8]]</code>。此特定联合创建一个与数字 0,1,2,3,4,6,7 和 8 匹配的单个字符类。</p>
 <div class="codeblock"><pre>
 Enter your regex: [0-4[6-8]]
 Enter input string to search: 0
@@ -692,7 +692,7 @@ Enter input string to search: 7
 No match found.
 </pre></div>
 <h3>减法</h3>
-<p>最后，您可以使用 <i>subtraction (减法)</i> 来否定一个或多个嵌套字符类，例如 <code>[0-9&amp;&amp;[^345]]</code>。此示例创建一个匹配 0 到 9，<i>except (除了)</i> 数字 3,4 和 5 之外的所有内容的单个字符类。</p>
+<p>最后，你可以使用 <i>subtraction (减法)</i> 来否定一个或多个嵌套字符类，例如 <code>[0-9&amp;&amp;[^345]]</code>。此示例创建一个匹配 0 到 9，<i>except (除了)</i> 数字 3,4 和 5 之外的所有内容的单个字符类。</p>
 <div class="codeblock"><pre> 
 Enter your regex: [0-9&amp;&amp;[^345]]
 Enter input string to search: 2
@@ -718,7 +718,7 @@ Enter your regex: [0-9&amp;&amp;[^345]]
 Enter input string to search: 9
 I found the text "9" starting at index 0 and ending at index 1.
 </pre></div>
-<p>现在我们已经介绍了如何创建字符类，您可能希望在继续下一部分之前查看 <a href="#CHART">Character Classes table</a>。</p>
+<p>现在我们已经介绍了如何创建字符类，你可能希望在继续下一部分之前查看 <a href="#CHART">Character Classes table</a>。</p>
 
 
         </div>

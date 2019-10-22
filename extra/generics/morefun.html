@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">泛型</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="literals.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="convert.html">Next&nbsp;»</a>
+                <a target="_top" href="literals.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="convert.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用通配符更多的乐趣</h1></div>
@@ -523,7 +523,7 @@ Sink&lt;Object&gt; s;
 Collection&lt;String&gt; cs;
 String str = writeAll(cs, s); // <i>Illegal call.</i>
 </pre></div>
-<p>如上所述，对 <code>writeAll()</code> 的调用是非法的，因为不能推断出有效的类型参数；<code>String</code> 和 <code>Object</code> 都不是 <code>T</code> 的合适类型，因为 <code>Collection</code> 元素和 <code>Sink</code> 元素必须是同一类型。</p>
+<p>如上所述，对 <code>writeAll()</code> 的调用是非法的，因为不能推断出有效的类型实参；<code>String</code> 和 <code>Object</code> 都不是 <code>T</code> 的合适类型，因为 <code>Collection</code> 元素和 <code>Sink</code> 元素必须是同一类型。</p>
 <p>我们可以通过使用通配符修改 <code>writeAll()</code> 的签名来修复此错误，如下所示。</p>
 <div class="codeblock"><pre>
 <b>public static</b> &lt;T&gt; T writeAll(Collection&lt;? <b>extends</b> T&gt;, Sink&lt;T&gt;) {...}
@@ -532,7 +532,7 @@ String str = writeAll(cs, s); // <i>Illegal call.</i>
 String str = writeAll(cs, s);
 </pre></div>
 <p>调用现在是合法的，但是赋值是错误的，因为推断的返回类型是 <code>Object</code>，因为 <code>T</code> 匹配 <code>s</code> 的元素类型，它是 <code>Object</code>。</p>
-<p>解决方案是使用一种我们还没有看到的有界通配符形式：<i>lower bound (下界)</i> 通配符。语法 <code>? <b>super</b> T</code> 表示 <code>T</code> 的超类型的未知类型(或 <code>T</code> 本身；请记住超类型关系是自反的)。它是我们一直在使用的有界通配符的相对的，我们使用 <code>? <b>extends</b> T</code> 表示作为 <code>T</code> 的子类型的未知类型。</p>
+<p>解决方案是使用一种我们还没有看到的有界通配符形式：<i>lower bound (下界)</i> 通配符。语法 <code>? <b>super</b> T</code> 表示 <code>T</code> 的超类型的未知类型(或 <code>T</code> 本身；请记住超类型关系是包含自己的(reflexive))。它是我们一直在使用的有界通配符的相对的，我们使用 <code>? <b>extends</b> T</code> 表示作为 <code>T</code> 的子类型的未知类型。</p>
 <div class="codeblock"><pre>
 <b>public static</b> &lt;T&gt; T writeAll(Collection&lt;T&gt; coll, Sink&lt;? <b>super</b> T&gt; snk) {
     ...
@@ -568,14 +568,14 @@ TreeSet(Comparator&lt;? <b>super</b> E&gt; c)
 Collection&lt;Foo&gt; cf = ... ;
 Collections.max(cf); // <i>Should work.</i>
 </pre></div>
-<p><code>cf</code> 的每个元素都与 <code>cf</code> 中的每个元素是可比的，因为每个这样的元素都是 <code>Foo</code>，它与任何对象都是可比的，并且特别是另一个 <code>Foo</code>。‘但是，使用上面的签名，我们发现该调用被拒绝。推断类型必须是 <code>Foo</code>，但 <code>Foo</code> 不实现 <code>Comparable&lt;Foo&gt;</code>。</p>
+<p><code>cf</code> 的每个元素都与 <code>cf</code> 中的每个元素是可比的，因为每个这样的元素都是 <code>Foo</code>，它与任何对象都是可比的，并且特别是另一个 <code>Foo</code>。但是，使用上面的签名，我们发现该调用被拒绝。推断类型必须是 <code>Foo</code>，但 <code>Foo</code> 不实现 <code>Comparable&lt;Foo&gt;</code>。</p>
 <p><code>T</code> 不必 <b>正好</b> 与本身是可比的。所需要的只是 <code>T</code> 与其超类型之一是可比的。这给了我们：</p>
 <div class="codeblock"><pre>
 <b>public static</b> &lt;T <b>extends</b> Comparable&lt;? <b>super</b> T&gt;&gt; 
         T max(Collection&lt;T&gt; coll)
 </pre></div>
-<p>请注意，<code>Collections.max()</code> 的实际签名更复杂。我们将在下一节中回到它，<a class="TutorialLink" target="_top" href="convert.html">Converting Legacy Code to Use Generics</a>。这种推理适用于几乎任何用于任意类型的 <code>Comparable</code> 的用法：您总是想使用 <code>Comparable&lt;? <b>super</b> T&gt;</code>。</p>
-<p>通常，如果您的 API 仅使用类型参数 <code>T</code> 作为参数，则其使用应该利用下界通配符(<code>? <b>super</b> T</code>)。相反，如果 API 仅返回 <code>T</code>，您将通过使用上界通配符(<code>? <b>extends</b> T</code>)为您的客户提供更大的灵活性。</p>
+<p>请注意，<code>Collections.max()</code> 的实际签名更复杂。我们将在下一节中回到它，<a class="TutorialLink" target="_top" href="convert.html">Converting Legacy Code to Use Generics</a>。这种推理适用于几乎任何用于任意类型的 <code>Comparable</code> 的用法：你总是想使用 <code>Comparable&lt;? <b>super</b> T&gt;</code>。</p>
+<p>通常，如果你的 API 仅使用类型形参 <code>T</code> 作为参数，则其使用应该利用下界通配符(<code>? <b>super</b> T</code>)。相反，如果 API 仅返回 <code>T</code>，你将通过使用上界通配符(<code>? <b>extends</b> T</code>)为你的客户提供更大的灵活性。</p>
 <h2>通配符捕获</h2>
 <p>它应该很清楚了，鉴于：</p>
 <div class="codeblock"><pre>
@@ -590,7 +590,7 @@ Set&lt;?&gt; unknownSet = new HashSet&lt;String&gt;();
 <div class="codeblock"><pre>
 addToSet(unknownSet, "abc"); // <i>Illegal.</i>
 </pre></div>
-<p>传递的实际 set 是字符串 set 没有区别；重要的是，作为参数传递的表达式是未知类型 set，不能保证是字符串 set，还是任何类型的  set。</p>
+<p>传递的实际 set 就是一个字符串 set；但重要的是，作为参数传递的表达式是未知类型 set，不能保证是字符串 set，还是任何类型的  set。</p>
 <p>现在，请考虑以下代码：</p>
 <div class="codeblock"><pre>
 <b>class</b> Collections {
@@ -603,7 +603,7 @@ addToSet(unknownSet, "abc"); // <i>Illegal.</i>
 Set&lt;?&gt; s = Collections.unmodifiableSet(unknownSet); // <i>This works! Why?</i>
 </pre></div>
 <p>看来这不应该被允许；但是，看看这个特定的调用，允许它是完全安全的。毕竟，<code>unmodifiableSet()</code> 适用于任何类型的 <code>Set</code>，无论其元素类型如何。</p>
-<p>由于这种情况相对频繁地出现，因此有一个特殊规则允许在非常特定的情况下使用这些代码，在这种情况下可以证明代码是安全的。此规则称为 <i>wildcard capture (通配符捕获)</i>，允许编译器将通配符的未知类型推断为泛型方法的类型参数。</p>
+<p>由于这种情况相对频繁地出现，因此有一个特殊规则允许在非常特定的情况下使用这些代码，在这种情况下可以证明代码是安全的。此规则称为 <i>wildcard capture (通配符捕获)</i>，允许编译器将通配符的未知类型推断为泛型方法的类型实参。</p>
 
 
         </div>

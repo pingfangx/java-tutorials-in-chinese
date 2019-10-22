@@ -485,15 +485,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">扩展机制</a>&gt;<a href="index.html" target="_top">使扩展安全</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="policy.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../end.html">Next&nbsp;»</a>
+                <a target="_top" href="policy.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../end.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>在扩展中密封包</h1></div>
             <div id="PageContent">
 
-<p>您可以选择 <em>seal (密封)</em> 扩展 JAR 文件中的包作为附加安全措施。如果密封包，则该包中定义的所有类必须来自单个 JAR 文件。</p>
-<p>如果没有密封，“恶意”程序可以创建一个类并将其定义为您的一个扩展包的成员。然后恶意软件可以免费访问扩展包的受包保护的成员。</p>
-<p>密封扩展中的与密封任何 JAR 包装的类没有什么不同。要密封扩展包，必须将 <tt>Sealed</tt> 头添加到包含扩展的 JAR 文件的清单中。您可以通过将 <tt>Sealed</tt> 头与软件包的 <tt>Name</tt> 头相关联来密封单个软件包。与归档中的单个包无关的 <tt>Sealed</tt> 头表示所有包都已密封。这样的“全局”<tt>Sealed</tt> 头被与各个包相关联的任何 <tt>Sealed</tt> 头覆盖。与 <tt>Sealed</tt> 头关联的值为 <tt>true</tt> 或 <tt>false</tt>。</p>
+<p>你可以选择 <em>seal (密封)</em> 扩展 JAR 文件中的包作为附加安全措施。如果密封包，则该包中定义的所有类必须来自单个 JAR 文件。</p>
+<p>如果没有密封，“恶意”程序可以创建一个类并将其定义为你的一个扩展包的成员。然后恶意软件可以免费访问扩展包的受包保护的成员。</p>
+<p>密封扩展中的与密封任何 JAR 包装的类没有什么不同。要密封扩展包，必须将 <tt>Sealed</tt> 头添加到包含扩展的 JAR 文件的清单中。你可以通过将 <tt>Sealed</tt> 头与软件包的 <tt>Name</tt> 头相关联来密封单个软件包。与归档中的单个包无关的 <tt>Sealed</tt> 头表示所有包都已密封。这样的“全局”<tt>Sealed</tt> 头被与各个包相关联的任何 <tt>Sealed</tt> 头覆盖。与 <tt>Sealed</tt> 头关联的值为 <tt>true</tt> 或 <tt>false</tt>。</p>
 <h2>例子</h2>
 <p>我们来看一些示例清单文件。对于这些示例，假设 JAR 文件包含以下这些包：</p>
 <div class="codeblock"><pre>
@@ -502,13 +502,13 @@ com/myCompany/package_2/
 com/myCompany/package_3/
 com/myCompany/package_4/
 </pre></div>
-<p>假设您要密封所有包裹。您可以通过简单地将清单级 <tt>Sealed</tt> 头添加到清单中来执行此操作，如下所示：</p>
+<p>假设你要密封所有包裹。你可以通过简单地将清单级 <tt>Sealed</tt> 头添加到清单中来执行此操作，如下所示：</p>
 <div class="codeblock"><pre>
 Manifest-Version: 1.0
 Sealed: true
 </pre></div>
 <p>具有此清单的任何 JAR 文件中的所有包都将被密封。</p>
-<p>如果您只想密封 <tt>com.myCompany.package_3</tt>，可以使用此清单进行密封：</p>
+<p>如果你只想密封 <tt>com.myCompany.package_3</tt>，可以使用此清单进行密封：</p>
 <div class="codeblock"><pre>
 Manifest-Version: 1.0
 
@@ -516,7 +516,7 @@ Name: com/myCompany/package_3/
 Sealed: true
 </pre></div>
 <p>在此示例中，唯一的 <tt>Sealed</tt> 头是与包 <tt>com.myCompany.package_3</tt> 的 <tt>Name</tt> 头关联的，因此只有该软件包被密封。(<tt>Sealed</tt> 头与 <tt>Name</tt> 头关联，因为它们之间没有空行。)</p>
-<p>最后一个例子，假设您要密封所有包 <em>除了</em> <tt>com.myCompany.package_2</tt>。您可以使用这样的清单来完成它：</p>
+<p>最后一个例子，假设你要密封所有包 <em>除了</em> <tt>com.myCompany.package_2</tt>。你可以使用这样的清单来完成它：</p>
 <div class="codeblock"><pre>
 Manifest-Version: 1.0
 Sealed: true

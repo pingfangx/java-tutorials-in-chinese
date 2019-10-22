@@ -494,16 +494,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">格式化</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="simpleDateFormat.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="messageintro.html">Next&nbsp;»</a>
+                <a target="_top" href="simpleDateFormat.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="messageintro.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>更改日期格式符号</h1></div>
             <div id="PageContent">
 
-<div class="note"><hr /><strong>Version note:</strong> 此日期和时间部分使用 <tt>java.util</tt> 包中的日期和时间 API。JDK 8 发行版中提供的 <tt>java.time</tt> API 提供了一个全面的日期和时间模型，它比 <tt>java.util</tt> 类提供了重大改进。<tt>java.time</tt> API 在 <a class="TutorialLink" target="_top" href="../../datetime/index.html">Date Time</a> 路径中描述。<a class="TutorialLink" target="_top" href="../../datetime/iso/legacy.html">Legacy Date-Time Code</a> 页面可能特别有用。
+<div class="note"><hr /><strong>版本说明:</strong>&nbsp;此日期和时间部分使用 <tt>java.util</tt> 包中的日期和时间 API。JDK 8 发行版中提供的 <tt>java.time</tt> API 提供了一个全面的日期和时间模型，它比 <tt>java.util</tt> 类提供了重大改进。<tt>java.time</tt> API 在 <a class="TutorialLink" target="_top" href="../../datetime/index.html">Date Time</a> 路径中描述。<a class="TutorialLink" target="_top" href="../../datetime/iso/legacy.html">Legacy Date-Time Code</a> 页面可能特别有用。
 <hr /></div>
 
-<p><code>SimpleDateFormat</code> 类的 <code>format</code> 方法返回由数字和符号组成的 <code>String</code>。例如，在 <code>String</code> “Friday, April 10, 2009”中，符号为“Friday”和“April”。如果封装在 <code>SimpleDateFormat</code> 中的符号不​​符合您的需要，您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/DateFormatSymbols.html"><code>DateFormatSymbols</code></a> 更改它们。您可以更改代表月份，星期几和时区等名称的符号。下表列出了允许您修改符号的 <code>DateFormatSymbols</code> 方法：</p>
+<p><code>SimpleDateFormat</code> 类的 <code>format</code> 方法返回由数字和符号组成的 <code>String</code>。例如，在 <code>String</code> “Friday, April 10, 2009”中，符号为“Friday”和“April”。如果封装在 <code>SimpleDateFormat</code> 中的符号不​​符合你的需要，你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/DateFormatSymbols.html"><code>DateFormatSymbols</code></a> 更改它们。你可以更改代表月份，星期几和时区等名称的符号。下表列出了允许你修改符号的 <code>DateFormatSymbols</code> 方法：</p>
 <table summary="DateFormatSymbols 方法" border="1">
 <caption><code>DateFormatSymbol</code> 方法</caption>
 <tr>

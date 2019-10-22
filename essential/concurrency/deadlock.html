@@ -515,14 +515,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="liveness.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="starvelive.html">Next&nbsp;»</a>
+                <a target="_top" href="liveness.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="starvelive.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Deadlock (死锁)</h1></div>
             <div id="PageContent">
 
 <p><i>Deadlock (死锁)</i> 描述了两个或多个线程永远被阻塞，等待彼此的情况。这是一个例子。</p>
-<p>Alphonse 和 Gaston 是朋友，都很有礼貌。礼貌的一个严格的规则是，当你给一个朋友鞠躬时，你必须保持鞠躬，直到你的朋友鞠躬回给你。不幸的是，这条规则并没有考虑这种可能性：两个朋友同时向对方鞠躬。此示例应用程序 <a class="SourceLink" target="_blank" href="examples/Deadlock.java" onclick="showCode('../../displayCode.html', 'examples/Deadlock.java'); return false;"><code><code>Deadlock</code></code></a> 模拟了这种可能性：</p>
+<p>Alphonse 和 Gaston 是朋友，都很有礼貌。礼貌的一个严格的规则是，当你给一个朋友鞠躬时，你必须保持鞠躬，直到你的朋友鞠躬回应你。不幸的是，这条规则并没有考虑这种可能性：两个朋友同时向对方鞠躬。此示例应用程序 <a class="SourceLink" target="_blank" href="examples/Deadlock.java" onclick="showCode('../../displayCode.html', 'examples/Deadlock.java'); return false;"><code><code>Deadlock</code></code></a> 模拟了这种可能性：</p>
 <div class="codeblock"><pre>
 
 public class Deadlock {

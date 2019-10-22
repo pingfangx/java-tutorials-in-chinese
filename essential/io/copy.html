@@ -515,14 +515,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="delete.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="move.html">Next&nbsp;»</a>
+                <a target="_top" href="delete.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="move.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>复制文件或目录</h1></div>
             <div id="PageContent"><!-- Copying a File or Directory -->
 
 
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#copy-java.nio.file.Path-java.nio.file.Path-java.nio.file.CopyOption...-"><code>copy(Path, Path, CopyOption...)</code></a> 方法复制文件或目录。如果目标文件存在，则复制将失败，除非指定了 <code>REPLACE_EXISTING</code> 选项。</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#copy-java.nio.file.Path-java.nio.file.Path-java.nio.file.CopyOption...-"><code>copy(Path, Path, CopyOption...)</code></a> 方法复制文件或目录。如果目标文件存在，则复制将失败，除非指定了 <code>REPLACE_EXISTING</code> 选项。</p>
 <p>目录可以复制。但是，目录中的文件不会被复制，因此即使原始目录包含文件，新目录也是空的。</p>
 <p>复制符号链接时，将复制链接的目标。如果要复制链接本身而不是链接的内容，请指定 <code>NOFOLLOW_LINKS</code> 或 <code>REPLACE_EXISTING</code> 选项。</p>
 <p>此方法采用 varargs 参数。支持以下 <code>StandardCopyOption</code> 和 <code>LinkOption</code> 枚举：</p>
@@ -531,7 +531,7 @@
 <li><code>COPY_ATTRIBUTES</code>  - 将与文件关联的文件属性复制到目标文件。支持的确切文件属性是文件系统和平台相关的，但跨平台支持 <code>last-modified-time</code> 并复制到目标文件。</li>
 <li><code>NOFOLLOW_LINKS</code>  - 表示不应遵循符号链接。如果要复制的文件是符号链接，则复制链接(而不是链接的目标)。</li>
 </ul>
-<p>如果您不熟悉 <code>enums</code>，请参阅 <a class="TutorialLink" target="_top" href="../../java/javaOO/enum.html">Enum Types</a>。</p>
+<p>如果你不熟悉 <code>enums</code>，请参阅 <a class="TutorialLink" target="_top" href="../../java/javaOO/enum.html">Enum Types</a>。</p>
 <p>以下显示如何使用 <code>copy</code> 方法：</p>
 <div class="codeblock"><pre>
 import static java.nio.file.StandardCopyOption.*;

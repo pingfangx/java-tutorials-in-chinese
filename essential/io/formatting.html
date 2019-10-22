@@ -516,14 +516,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="scanning.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="cl.html">Next&nbsp;»</a>
+                <a target="_top" href="scanning.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="cl.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>格式化</h1></div>
             <div id="PageContent">
 
 <p>实现格式化的流对象是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html"><code>PrintWriter</code></a>，字符流类或 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html"><code>PrintStream</code></a>，字节流类的实例。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;您可能需要的唯一 <code>PrintStream</code> 对象是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#out"><code>System.out</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#err"><code>System.err</code></a>。(有关这些对象的更多信息，请参阅命令行中的 <a href="cl.html">I/O from the Command Line</a>。)当您需要创建格式化的输出流时，实例化 <code>PrintWriter</code>，而不是 <code>PrintStream</code>。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;你可能需要的唯一 <code>PrintStream</code> 对象是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#out"><code>System.out</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#err"><code>System.err</code></a>。(有关这些对象的更多信息，请参阅命令行中的 <a href="cl.html">I/O from the Command Line</a>。)当你需要创建格式化的输出流时，实例化 <code>PrintWriter</code>，而不是 <code>PrintStream</code>。
 <hr /></div>
 <p>与所有字节和字符流对象一样，<code>PrintStream</code> 和 <code>PrintWriter</code> 的实例实现了一组标准的 <code>write</code> 方法，用于简单的字节和字符输出。此外，<code>PrintStream</code> 和 <code>PrintWriter</code> 都实现了将内部数据转换为格式化输出的同一组方法。提供两个级别的格式：</p>
 <ul>
@@ -555,7 +555,7 @@ public class Root {
 The square root of 2 is 1.4142135623730951.
 The square root of 5 is 2.23606797749979.
 </pre></div>
-<p><code>i</code> 和 <code>r</code> 变量被格式化两次：第一次在 <code>print</code> 的重载中使用代码，第二次由 Java 编译器自动生成的转换代码，它也使用 <code>toString</code>。您可以通过这种方式格式化任何值，但是您无法控制结果。</p>
+<p><code>i</code> 和 <code>r</code> 变量被格式化两次：第一次在 <code>print</code> 的重载中使用代码，第二次由 Java 编译器自动生成的转换代码，它也使用 <code>toString</code>。你可以通过这种方式格式化任何值，但是你无法控制结果。</p>
 <h2><code>format</code> 方法</h2>
 <p><code>format</code> 方法基于 <i>format string (格式字符串)</i> 格式化多个参数。格式字符串由嵌入 <i>format specifiers (格式说明符)</i> 的静态文本组成；除格式说明符外，格式字符串输出不变。</p>
 <p>格式字符串支持许多功能。在本教程中，我们将只介绍一些基础知识。有关完整说明，请参阅 API 规范中的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html#syntax"><code>format string syntax</code></a>。</p>
@@ -588,7 +588,7 @@ The square root of 2 is 1.414214.
 </ul>
 <p>还有很多其他转换。</p>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;<p>除 <code>%%</code> 和 <code>%n</code> 外，所有格式说明符必须与参数匹配。如果他们不匹配，则会抛出异常。</p>
-<p>在 Java 编程语言中，<code>\n</code> 转义始终生成换行符(<code>\u000A</code>)。除非您特别需要换行符，否则请勿使用 <code>\n</code>。要获取本地平台的正确行分隔符，请使用 <code>%n</code>。</p>
+<p>在 Java 编程语言中，<code>\n</code> 转义始终生成换行符(<code>\u000A</code>)。除非你特别需要换行符，否则请勿使用 <code>\n</code>。要获取本地平台的正确行分隔符，请使用 <code>%n</code>。</p>
 <hr /></div>
 <p>除了转换之外，格式说明符还可以包含几个其他元素，以进一步自定义格式化输出。这是一个例子，<a class="SourceLink" target="_blank" href="examples/Format.java" onclick="showCode('../../displayCode.html', 'examples/Format.java'); return false;"><code>Format</code></a>，它使用了所有可能的元素。</p>
 <div class="codeblock"><pre>
@@ -608,7 +608,7 @@ public class Format {
 <li><b>Precision</b>。对于浮点值，这是格式化值的数学精度。对于 <code>s</code> 和其他常规转换，这是格式化值的最大宽度；如有必要，该值将被右截断。</li>
 <li><b>Width</b>。格式化值的最小宽度；必要时填充该值。默认情况下，该值使用左边空白填充。</li>
 <li><b>Flags</b> 指定其他格式选项。在 <code>Format</code> 示例中，<code>+</code> 标志指定应始终使用符号格式化数字，<code>0</code> 标志指定 <code>0</code> 是填充字符。其他标志包括 <code>-</code>(右侧的 pad)和 <code>,</code>(具有特定于语言环境的千位分隔符的格式编号)。请注意，某些标志不能与某些其他标志一起使用或与某些转换一起使用。</li>
-<li><b>Argument Index</b> 允许您显式匹配指定的参数。您还可以指定 <code>&lt;</code> 以匹配与前一个说明符相同的参数。因此，示例可以说：<code>System.out.format("%f, %&lt;+020.10f %n", Math.PI);</code></li>
+<li><b>Argument Index</b> 允许你显式匹配指定的参数。你还可以指定 <code>&lt;</code> 以匹配与前一个说明符相同的参数。因此，示例可以说：<code>System.out.format("%f, %&lt;+020.10f %n", Math.PI);</code></li>
 </ul>
 
         </div>

@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>&gt;<a href="index.html" target="_top">标准日历</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="queries.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="clock.html">Next&nbsp;»</a>
+                <a target="_top" href="queries.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="clock.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Period 和 Duration</h1></div>
@@ -507,7 +507,7 @@
 
 
 <p>
-编写代码以指定时间量时，请使用最符合您需要的类或方法：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html"><tt>Duration</tt></a> 类，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html"><tt>Period</tt></a> 类，或 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/ChronoUnit.html#between-java.time.temporal.Temporal-java.time.temporal.Temporal-"><tt>ChronoUnit.between</tt></a> 方法。<tt>Duration</tt> 使用基于时间的值(秒，纳秒)测量时间量。<tt>Period</tt> 使用基于日期的值(年，月，日)。</p>
+编写代码以指定时间量时，请使用最符合你需要的类或方法：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html"><tt>Duration</tt></a> 类，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html"><tt>Period</tt></a> 类，或 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/ChronoUnit.html#between-java.time.temporal.Temporal-java.time.temporal.Temporal-"><tt>ChronoUnit.between</tt></a> 方法。<tt>Duration</tt> 使用基于时间的值(秒，纳秒)测量时间量。<tt>Period</tt> 使用基于日期的值(年，月，日)。</p>
 
 <div class="note"><hr /><strong>注意:</strong>&nbsp;一天的 <tt>Duration</tt> <em>正好时</em> 24 小时。一天的 <tt>Period</tt>，当添加到 <tt>ZonedDateTime</tt> 时，可能会根据时区而有所不同。例如，如果它发生在夏令时的第一天或最后一天。
 <hr /></div>
@@ -535,7 +535,7 @@ Instant later = start.plus(gap);
 
 <h2>ChronoUnit</h2>
 <p>
-<a class="TutorialLink" target="_top" href="temporal.html">The Temporal Package</a> 中讨论的 <tt>ChronoUnit</tt> 枚举定义了用于测量时间的单位。当您想要仅在单个时间单位(例如天或秒)中测量时间量时，<tt>ChronoUnit.between</tt> 方法非常有用。<tt>between</tt> 适用于所有基于时间的对象，但它仅返回单个单位中的数量。以下代码计算两个时间戳之间的间隔(以毫秒为单位)：</p>
+<a class="TutorialLink" target="_top" href="temporal.html">The Temporal Package</a> 中讨论的 <tt>ChronoUnit</tt> 枚举定义了用于测量时间的单位。当你想要仅在单个时间单位(例如天或秒)中测量时间量时，<tt>ChronoUnit.between</tt> 方法非常有用。<tt>between</tt> 适用于所有基于时间的对象，但它仅返回单个单位中的数量。以下代码计算两个时间戳之间的间隔(以毫秒为单位)：</p>
 
 <div class="codeblock"><pre>
 import java.time.Instant;
@@ -553,11 +553,11 @@ if (previous != null) {
 
 <h2>Period</h2>
 <p>
-要使用基于日期的值(年，月，日)定义时间量，请使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html"><tt>Period</tt></a> 类。<tt>Period</tt> 类提供各种 <tt>get</tt> 方法，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html#getMonths--"><tt>getMonths</tt></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html#getDays--"><tt>getDays</tt></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html#getYears--"><tt>getYears</tt></a>，以便您可以从期间中提取时间。</p>
+要使用基于日期的值(年，月，日)定义时间量，请使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html"><tt>Period</tt></a> 类。<tt>Period</tt> 类提供各种 <tt>get</tt> 方法，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html#getMonths--"><tt>getMonths</tt></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html#getDays--"><tt>getDays</tt></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html#getYears--"><tt>getYears</tt></a>，以便你可以从期间中提取时间。</p>
 <p>
-总时间段由所有三个单元一起表示：月，日和年。要显示在单个时间单位(例如天)中测量的时间量，您可以使用 <tt>ChronoUnit.between</tt> 方法。</p>
+总时间段由所有三个单元一起表示：月，日和年。要显示在单个时间单位(例如天)中测量的时间量，你可以使用 <tt>ChronoUnit.between</tt> 方法。</p>
 <p>
-假设您出生于 1960 年 1 月 1 日，以下代码报告您的年龄。<tt>Period</tt> 类用于确定年，月和日的时间。使用 <tt>ChronoUnit.between</tt> 方法确定同一时段(总天数)，并显示在括号中：</p>
+假设你出生于 1960 年 1 月 1 日，以下代码报告你的年龄。<tt>Period</tt> 类用于确定年，月和日的时间。使用 <tt>ChronoUnit.between</tt> 方法确定同一时段(总天数)，并显示在括号中：</p>
 <div class="codeblock"><pre>
 LocalDate today = LocalDate.now();
 LocalDate birthday = LocalDate.of(1960, Month.JANUARY, 1);
@@ -574,7 +574,7 @@ System.out.println("You are " + p.getYears() + " years, " + p.getMonths() +
 You are 53 years, 4 months, and 29 days old. (19508 days total)
 </pre></div>
 <p>
-要计算到下一个生日的时间，您可以使用 <a class="SourceLink" target="_blank" href="examples/Birthday.java" onclick="showCode('../../displayCode.html', 'examples/Birthday.java'); return false;"><code><tt>Birthday</tt></code></a> 示例中的以下代码。<tt>Period</tt> 类用于确定以月和日为单位的值。<tt>ChronoUnit.between</tt> 方法返回总天数值，并显示在括号中。</p>
+要计算到下一个生日的时间，你可以使用 <a class="SourceLink" target="_blank" href="examples/Birthday.java" onclick="showCode('../../displayCode.html', 'examples/Birthday.java'); return false;"><code><tt>Birthday</tt></code></a> 示例中的以下代码。<tt>Period</tt> 类用于确定以月和日为单位的值。<tt>ChronoUnit.between</tt> 方法返回总天数值，并显示在括号中。</p>
 <div class="codeblock"><pre>
 LocalDate birthday = LocalDate.of(1960, Month.JANUARY, 1);
 
@@ -597,7 +597,7 @@ System.out.println("There are " + p.getMonths() + " months, and " +
 There are 7 months, and 2 days until your next birthday. (216 total)
 </pre></div>
 <p>
-这些计算不考虑时区差异。例如，如果您出生在澳大利亚，但目前住在班加罗尔，这会略微影响您确切年龄的计算。在这种情况下，将 <tt>Period</tt> 与 <tt>ZonedDateTime</tt> 类结合使用。将 <tt>Period</tt> 添加到 <tt>ZonedDateTime</tt> 时，会观察到时间差。</p>
+这些计算不考虑时区差异。例如，如果你出生在澳大利亚，但目前住在班加罗尔，这会略微影响你确切年龄的计算。在这种情况下，将 <tt>Period</tt> 与 <tt>ZonedDateTime</tt> 类结合使用。将 <tt>Period</tt> 添加到 <tt>ZonedDateTime</tt> 时，会观察到时间差。</p>
 
         </div>
         <div class="NavBit">

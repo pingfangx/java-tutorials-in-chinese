@@ -489,13 +489,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">自定义网络</a>&gt;<a href="index.html" target="_top">使用 URL</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="connecting.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../sockets/index.html">Next&nbsp;»</a>
+                <a target="_top" href="connecting.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../sockets/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>读取和写入 URLConnection</h1></div>
             <div id="PageContent">
 
-<p><code>URLConnection</code> 类包含许多方法，可让您通过网络与 URL 进行通信。<code>URLConnection</code> 是一个以 HTTP 为中心的类；也就是说，只有在使用 HTTP URL 时，它的许多方法才有用。但是，大多数 URL 协议允许您读取和写入连接。本节介绍这两种功能。</p>
+<p><code>URLConnection</code> 类包含许多方法，可让你通过网络与 URL 进行通信。<code>URLConnection</code> 是一个以 HTTP 为中心的类；也就是说，只有在使用 HTTP URL 时，它的许多方法才有用。但是，大多数 URL 协议允许你读取和写入连接。本节介绍这两种功能。</p>
 <h2>从 URLConnection 读取</h2>
 <p>以下程序执行与 <a class="TutorialLink" target="_top" href="readingURL.html">Reading Directly from a URL</a> 中读取的 <code>URLReader</code> 程序相同的功能。</p>
 <p>但是，该程序不是直接从 URL 获取输入流，而是显式获取 <code>URLConnection</code> 对象并从连接获取输入流。通过调用 <code>getInputStream</code> 隐式打开连接。然后，像 <code>URLReader</code> 一样，该程序在输入流上创建 <code>BufferedReader</code> 并从中读取。粗体语句高亮了此示例与上一个示例之间的差异：</p>
@@ -516,10 +516,10 @@ public class <strong>URLConnectionReader</strong> {
     }
 }
 </pre></div>
-<p>此程序的输出与直接从 URL 打开流的程序的输出相同。您可以使用任一方式从 URL 读取。但是，从 <code>URLConnection</code> 读取而不是直接从 URL 读取可能更有用。这是因为您可以同时将 <code>URLConnection</code> 对象用于其他任务(例如写入 URL)。</p>
-<p>同样，如果程序挂起或您看到错误消息，则可能必须设置代理主机以便程序可以找到 Oracle 服务器。</p>
+<p>此程序的输出与直接从 URL 打开流的程序的输出相同。你可以使用任一方式从 URL 读取。但是，从 <code>URLConnection</code> 读取而不是直接从 URL 读取可能更有用。这是因为你可以同时将 <code>URLConnection</code> 对象用于其他任务(例如写入 URL)。</p>
+<p>同样，如果程序挂起或你看到错误消息，则可能必须设置代理主机以便程序可以找到 Oracle 服务器。</p>
 <h2>写入 URLConnection</h2>
-<p>许多 HTML 页面包含 <em>forms (表单)</em>  - 文本字段和其他 GUI 对象，可让您输入要发送到服务器的数据。键入所需信息并通过单击按钮启动查询后，Web 浏览器会通过网络将数据写入 URL。在另一端，服务器接收数据，处理数据，然后通常以新的 HTML 页面的形式向您发送响应。</p>
+<p>许多 HTML 页面包含 <em>forms (表单)</em>  - 文本框和其他 GUI 对象，可让你输入要发送到服务器的数据。键入所需信息并通过单击按钮启动查询后，Web 浏览器会通过网络将数据写入 URL。在另一端，服务器接收数据，处理数据，然后通常以新的 HTML 页面的形式向你发送响应。</p>
 <p>许多这些 HTML 表单使用 HTTP POST METHOD 将数据发送到服务器。因此，写入 URL 通常称为 <em>posting to a URL (发送到 URL )</em>。服务器识别 POST 请求并读取从客户端发送的数据。</p>
 <p>对于 Java 程序与服务器端进程交互，它必须能够写入 URL，从而向服务器提供数据。它可以通过以下步骤：</p>
 <ol>
@@ -539,7 +539,7 @@ public class <strong>URLConnectionReader</strong> {
 <!--
 <a href="examples/ReverseServlet.java">ReverseServlet</a>
 -->
-<a class="SourceLink" target="_blank" href="examples/ReverseServlet.java" onclick="showCode('../../displayCode.html', 'examples/ReverseServlet.java'); return false;"><code>ReverseServlet</code></a>(或者如果您更喜欢 <a href="examples/backwards">cgi-bin</a> 脚本)。您可以使用此 servlet 来测试以下示例程序。</p>
+<a class="SourceLink" target="_blank" href="examples/ReverseServlet.java" onclick="showCode('../../displayCode.html', 'examples/ReverseServlet.java'); return false;"><code>ReverseServlet</code></a>(或者如果你更喜欢 <a href="examples/backwards">cgi-bin</a> 脚本)。你可以使用此 servlet 来测试以下示例程序。</p>
 
 <p>在容器中运行的 servlet 从其 inputstream 中读取、反转字符串并将其写入其 outputstream。servlet 需要输入格式 <code>string=string_to_reverse</code>，其中 <code>string_to_reverse</code> 是要以相反顺序显示其字符的字符串。</p>
 <p>这是一个通过 <code>URLConnection</code> 在网络上运行 <code>ReverseServlet</code> 的示例程序：</p>
@@ -607,8 +607,8 @@ OutputStreamWriter out = new OutputStreamWriter(connection.getOutputStream());
 out.write("string=" + stringToReverse);
 out.close();
 </pre></div>
-<p>此代码使用 <code>write</code> 方法写入输出流。因此，您可以看到将数据写入 URL 就像将数据写入流一样简单。写入客户端输出流的数据是服务器端 servlet 的输入。<code>Reverse</code> 程序通过将 <code>string=</code> 添加到要反转的编码字符串中，以脚本所需的格式构造输入。</p>
-<p>servlet 读取您编写的信息，对字符串值执行反向操作，然后将其发送给您。您现在需要读取服务器已发回的字符串。<code>Reverse</code> 程序是这样的：</p>
+<p>此代码使用 <code>write</code> 方法写入输出流。因此，你可以看到将数据写入 URL 就像将数据写入流一样简单。写入客户端输出流的数据是服务器端 servlet 的输入。<code>Reverse</code> 程序通过将 <code>string=</code> 添加到要反转的编码字符串中，以脚本所需的格式构造输入。</p>
+<p>servlet 读取你编写的信息，对字符串值执行反向操作，然后将其发送给你。你现在需要读取服务器已发回的字符串。<code>Reverse</code> 程序是这样的：</p>
 <div class="codeblock"><pre>
 BufferedReader in = new BufferedReader(
                             new InputStreamReader(
@@ -619,11 +619,11 @@ while ((decodedString = in.readLine()) != null) {
 }
 in.close();
 </pre></div>
-<p>如果您的 <code>ReverseServlet</code> 位于 <code>http://example.com/servlet/ReverseServlet</code>，那么当您使用 <code>Reverse</code> 程序运行时</p>
+<p>如果你的 <code>ReverseServlet</code> 位于 <code>http://example.com/servlet/ReverseServlet</code>，那么当你使用 <code>Reverse</code> 程序运行时</p>
 <div class="codeblock"><pre>
 http://example.com/servlet/ReverseServlet "Reverse Me"
 </pre></div>
-<p>作为参数(包括双引号)，您应该看到这个输出：</p>
+<p>作为参数(包括双引号)，你应该看到这个输出：</p>
 <div class="codeblock"><pre>
 Reverse Me
  reversed is: 

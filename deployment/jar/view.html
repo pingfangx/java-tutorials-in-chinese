@@ -506,7 +506,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="build.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="unpack.html">Next&nbsp;»</a>
+                <a target="_top" href="build.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="unpack.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>查看 JAR 文件的内容</h1></div>
@@ -518,13 +518,13 @@ jar tf <i>jar-file</i>
 </pre></div>
 <p>让我们看看这个命令中使用的选项和参数：</p>
 <ul>
-<li><tt>t</tt> 选项表示您要查看 JAR 文件内容的 <em>table (表)</em>。</li>
+<li><tt>t</tt> 选项表示你要查看 JAR 文件内容的 <em>table (表)</em>。</li>
 <li><tt>f</tt> 选项表示在命令行中指定了要查看其内容的 JAR 文件。</li>
 <li><tt>jar-file</tt> 参数是要查看其内容的 JAR 文件的路径和名称。</li>
 </ul>
 <p><tt>t</tt> 和 <tt>f</tt> 选项可以按任意顺序出现，但它们之间不能有任何空格。</p>
 <p>此命令将 JAR 文件的目录显示到 <tt>stdout</tt>。</p>
-<p>您可以选择添加详细选项 <tt>v</tt>，以在输出中生成有关文件大小和上次修改日期的其他信息。</p>
+<p>你可以选择添加详细选项 <tt>v</tt>，以在输出中生成有关文件大小和上次修改日期的其他信息。</p>
 <h2>一个例子</h2>
 <p>让我们使用 Jar 工具列出我们在上一节中创建的 <tt>TicTacToe.jar</tt> 文件的内容：</p>
 <div class="codeblock"><pre>
@@ -545,7 +545,7 @@ images/cross.gif
 images/not.gif
 </pre></div>
 <p>JAR 文件包含 <tt>TicTacToe</tt> 类文件以及音频和图像目录，如预期的那样。输出还显示 JAR 文件包含默认清单文件 <tt>META-INF/MANIFEST.MF</tt>，该文件由 JAR 工具自动放置在归档中。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="defman.html">Understanding the Default Manifest</a> 部分。</p>
-<p>无论您使用的平台或操作系统如何，所有路径名都以正斜杠显示。JAR 文件中的路径始终是相对的；例如，您永远不会看到以 <tt>C:</tt> 开头的路径。</p>
+<p>无论你使用的平台或操作系统如何，所有路径名都以正斜杠显示。JAR 文件中的路径始终是相对的；例如，你永远不会看到以 <tt>C:</tt> 开头的路径。</p>
 <p>如果使用 <tt>v</tt> 选项，JAR 工具将显示其他信息：</p>
 <div class="codeblock"><pre>
 jar tvf TicTacToe.jar

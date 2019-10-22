@@ -503,7 +503,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="hidevariables.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="objectclass.html">Next&nbsp;»</a>
+                <a target="_top" href="hidevariables.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="objectclass.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用 super 关键字</h1></div>
@@ -511,7 +511,7 @@
 
 
 <h2>访问超类成员</h2>
-<p>如果您的方法覆盖其超类的方法之一，则可以通过使用关键字 <code>super</code> 来调用覆盖方法。您也可以使用 <code>super</code> 来引用隐藏字段(尽管不鼓励隐藏字段)。考虑这个类，<code>Superclass</code>：</p>
+<p>如果你的方法覆盖其超类的方法之一，则可以通过使用关键字 <code>super</code> 来调用覆盖方法。你也可以使用 <code>super</code> 来引用隐藏字段(尽管不鼓励隐藏字段)。考虑这个类，<code>Superclass</code>：</p>
 <div class="codeblock"><pre>
 public class Superclass {
 
@@ -560,10 +560,10 @@ super();
 <div class="codeblock"><pre>
 super(parameter list);
 </pre></div>
-<p>使用 <code>super()</code>，将调用超类无参数构造函数。使用 <code>super(parameter list)</code>，将调用具有匹配参数列表的超类构造函数。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;如果构造函数没有显式调用超类构造函数，Java 编译器会自动插入对超类的无参数构造函数的调用。如果超类没有无参数构造函数，则会出现编译时错误。<code>Object</code> <i>does</i> 具有这样的构造函数，因此如果 <code>Object</code> 是唯一的超类，则没有问题。
+<p>使用 <code>super()</code>，将调用超类无参构造函数。使用 <code>super(parameter list)</code>，将调用具有匹配参数列表的超类构造函数。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;如果构造函数没有显式调用超类构造函数，Java 编译器会自动插入对超类的无参构造函数的调用。如果超类没有无参构造函数，则会出现编译时错误。<code>Object</code> <i>有</i> 这样的构造函数，所以如果 <code>Object</code> 是唯一的超类，也没有问题。
 <hr /></div>
-<p>如果子类构造函数显式或隐式地调用其超类的构造函数，您可能会认为将调用一整个构造函数链，一直回到 <code>Object</code> 的构造函数。事实上，情况就是这样。它被称为 <i>constructor chaining</i>，当有很长的类下降时你需要注意它。</p>
+<p>如果子类构造函数显式或隐式地调用其超类的构造函数，你可能会认为将调用一整个构造函数链，一直回到 <code>Object</code> 的构造函数。事实上，情况就是这样。它被称为 <i>constructor chaining (构造函数链)</i>，当有很长的类后代时你需要注意它。</p>
 
 
         </div>

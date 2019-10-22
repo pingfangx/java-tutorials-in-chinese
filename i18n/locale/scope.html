@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>区域设置的范围(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置区域设置)
+        <title>语言环境的范围(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置语言环境)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
@@ -471,12 +471,12 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">设置区域设置</a></div>
-<div class="linkAHEAD"><a href="create.html">创建区域设置</a></div>
+            <div class="linkLESSON"><a href="index.html">设置语言环境</a></div>
+<div class="linkAHEAD"><a href="create.html">创建语言环境</a></div>
 <div class="linkAHEAD"><a href="extensions.html">BCP 47 扩展</a></div>
-<div class="linkAHEAD"><a href="identify.html">识别可用的区域设置</a></div>
+<div class="linkAHEAD"><a href="identify.html">识别可用的语言环境</a></div>
 <div class="linkAHEAD"><a href="matching.html">语言标签过滤和查找</a></div>
-<div class="nolinkAHEAD">区域设置的范围</div>
+<div class="nolinkAHEAD">语言环境的范围</div>
 <div class="linkAHEAD"><a href="services.html">区域敏感服务 SPI</a></div>
 </div>
     </div>
@@ -486,24 +486,24 @@
         <br /><b>Lesson:</b> Setting the Locale
     </div>
             <div id="BreadCrumbs">
-                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置区域设置</a>
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置语言环境</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="matching.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="services.html">Next&nbsp;»</a>
+                <a target="_top" href="matching.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="services.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>区域设置的范围</h1></div>
+            <div id="PageTitle"><h1>语言环境的范围</h1></div>
             <div id="PageContent"><!-- The Scope of a Locale -->
 
 
-<p>Java 平台不要求您在整个程序中使用相同的 <code>Locale</code>。如果您愿意，可以为程序中的每个区域设置敏感对象分配不同的 <code>Locale</code>。这种灵活性允许您开发多语言应用程序，可以显示多种语言的信息。</p>
-<p>但是，大多数应用程序不是多语言的，它们的区域设置敏感对象依赖于默认的 <code>Locale</code>。由 Java 虚拟机启动时设置，默认 <code>Locale</code> 对应于主机平台的区域设置。要确定 Java 虚拟机的默认 <code>Locale</code>，请调用 <code>Locale.getDefault</code> 方法。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>可以为两种类型的用途独立设置默认语言环境：<em>format (格式)</em> 设置用于格式化资源，<em>display</em> 设置用于菜单和对话框。在 Java SE 7 发行版中引入，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getDefault-java.util.Locale.Category-"><code>Locale.getDefault(Locale.Category)</code></a> 方法采用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.Category.html"><code>Locale.Category</code></a> 参数。将 <code>FORMAT</code> 枚举传递给 <code>getDefault(Locale.Category)</code> 方法会返回格式化资源的默认语言环境。同样，传递 <code>DISPLAY</code> 枚举将返回 UI 使用的默认语言环境。相应的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#setDefault-java.util.Locale.Category-java.util.Locale-"><code>setDefault(Locale.Category, Locale)</code></a> 方法允许设置所需类别的区域设置。无参数 <code>getDefault</code> 方法返回 <code>DISPLAY</code> 默认值。</p>
+<p>Java 平台不要求你在整个程序中使用相同的 <code>Locale</code>。如果你愿意，可以为程序中的每个语言环境敏感对象分配不同的 <code>Locale</code>。这种灵活性允许你开发多语言应用程序，可以显示多种语言的信息。</p>
+<p>但是，大多数应用程序不是多语言的，它们的语言环境敏感对象依赖于默认的 <code>Locale</code>。由 Java 虚拟机启动时设置，默认 <code>Locale</code> 对应于主机平台的语言环境。要确定 Java 虚拟机的默认 <code>Locale</code>，请调用 <code>Locale.getDefault</code> 方法。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>可以为两种类型的用途独立设置默认语言环境：<em>format (格式)</em> 设置用于格式化资源，<em>display</em> 设置用于菜单和对话框。在 Java SE 7 发行版中引入，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getDefault-java.util.Locale.Category-"><code>Locale.getDefault(Locale.Category)</code></a> 方法采用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.Category.html"><code>Locale.Category</code></a> 参数。将 <code>FORMAT</code> 枚举传递给 <code>getDefault(Locale.Category)</code> 方法会返回格式化资源的默认语言环境。同样，传递 <code>DISPLAY</code> 枚举将返回 UI 使用的默认语言环境。相应的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#setDefault-java.util.Locale.Category-java.util.Locale-"><code>setDefault(Locale.Category, Locale)</code></a> 方法允许设置所需类别的语言环境。无参数 <code>getDefault</code> 方法返回 <code>DISPLAY</code> 默认值。</p>
 <p>在 Windows 平台上，根据 Windows 控制面板中的“标准和格式”和“显示语言”设置初始化这些默认值。</p>
 <hr /></div>
-<p>您不应以编程方式设置默认的 <code>Locale</code>，因为它由所有区域设置敏感的类共享。</p>
-<p>分布式计算提出了一些有趣的问题。例如，假设您正在设计一个应用程序服务器，它将接收来自不同国家/地区的客户端的请求。如果每个客户端的 <code>Locale</code> 不同，那么服务器的 <code>Locale</code> 应该是什么？也许服务器是多线程的，每个线程都设置为它所服务的客户端的 <code>Locale</code>。或者，服务器和客户端之间传递的所有数据都应该是与语言环境无关的。</p>
-<p>您应该选择哪种设计方法？如果可能，服务器和客户端之间传递的数据应该与语言环境无关。这通过使客户端负责以区域设置敏感的方式显示数据来简化服务器的设计。但是，如果服务器必须以特定于语言环境的形式存储数据，则此方法将不起作用。例如，服务器可能将相同数据的西班牙语，英语和法语版本存储在不同的数据库列中。在这种情况下，服务器可能希望查询客户端的 <code>Locale</code>，因为 <code>Locale</code> 可能自上次请求以来已更改。</p>
+<p>你不应以编程方式设置默认的 <code>Locale</code>，因为它由所有语言环境敏感的类共享。</p>
+<p>分布式计算提出了一些有趣的问题。例如，假设你正在设计一个应用程序服务器，它将接收来自不同国家/地区的客户端的请求。如果每个客户端的 <code>Locale</code> 不同，那么服务器的 <code>Locale</code> 应该是什么？也许服务器是多线程的，每个线程都设置为它所服务的客户端的 <code>Locale</code>。或者，服务器和客户端之间传递的所有数据都应该是与语言环境无关的。</p>
+<p>你应该选择哪种设计方法？如果可能，服务器和客户端之间传递的数据应该与语言环境无关。这通过使客户端负责以语言环境敏感的方式显示数据来简化服务器的设计。但是，如果服务器必须以特定于语言环境的形式存储数据，则此方法将不起作用。例如，服务器可能将相同数据的西班牙语，英语和法语版本存储在不同的数据库列中。在这种情况下，服务器可能希望查询客户端的 <code>Locale</code>，因为 <code>Locale</code> 可能自上次请求以来已更改。</p>
 
 
         </div>

@@ -516,7 +516,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="executors.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="pools.html">Next&nbsp;»</a>
+                <a target="_top" href="executors.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="pools.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>执行器接口</h1></div>
@@ -544,7 +544,7 @@ e.execute(r);
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html"><code>ExecutorService</code></a> 接口使用类似但更通用的 <code>submit</code> 方法补充 <code>execute</code>。与 <code>execute</code> 一样，<code>submit</code> 接受 <code>Runnable</code> 对象，但也接受 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html"><code>Callable</code></a> 对象，允许任务返回值。<code>submit</code> 方法返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html"><code>Future</code></a> 对象，该对象用于获取 <code>Callable</code> 返回值并管理 <code>Callable</code> 和 <code>Runnable</code> 任务的状态。</p>
 <p><code>ExecutorService</code> 还提供了提交 <code>Callable</code> 对象的大集合的方法。最后，<code>ExecutorService</code> 提供了许多用于管理执行器关闭的方法。为了支持立即关闭，任务应正确处理 <a href="interrupt.html">interrupts</a>。</p>
 <h2><code>ScheduledExecutorService</code> 接口</h2>
-<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html"><code>ScheduledExecutorService</code></a> 接口使用 <code>schedule</code> 补充其父 <code>ExecutorService</code> 的方法，它在指定的延时后执行一个 <code>Runnable</code> 或 <code>Callable</code> 任务此外，接口定义 <code>scheduleAtFixedRate</code> 和 <code>scheduleWithFixedDelay</code>，它以定义的间隔重复执行指定的任务。</p>
+<p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html"><code>ScheduledExecutorService</code></a> 接口使用 <code>schedule</code> 补充其父 <code>ExecutorService</code> 的方法，它在指定的延时后执行一个 <code>Runnable</code> 或 <code>Callable</code> 任务。此外，接口定义 <code>scheduleAtFixedRate</code> 和 <code>scheduleWithFixedDelay</code>，它以定义的间隔重复执行指定的任务。</p>
 
         </div>
         <div class="NavBit">

@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>BCP 47 扩展(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置区域设置)
+        <title>BCP 47 扩展(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置语言环境)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
@@ -471,12 +471,12 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">设置区域设置</a></div>
-<div class="linkAHEAD"><a href="create.html">创建区域设置</a></div>
+            <div class="linkLESSON"><a href="index.html">设置语言环境</a></div>
+<div class="linkAHEAD"><a href="create.html">创建语言环境</a></div>
 <div class="nolinkAHEAD">BCP 47 扩展</div>
-<div class="linkAHEAD"><a href="identify.html">识别可用的区域设置</a></div>
+<div class="linkAHEAD"><a href="identify.html">识别可用的语言环境</a></div>
 <div class="linkAHEAD"><a href="matching.html">语言标签过滤和查找</a></div>
-<div class="linkAHEAD"><a href="scope.html">区域设置的范围</a></div>
+<div class="linkAHEAD"><a href="scope.html">语言环境的范围</a></div>
 <div class="linkAHEAD"><a href="services.html">区域敏感服务 SPI</a></div>
 </div>
     </div>
@@ -486,18 +486,18 @@
         <br /><b>Lesson:</b> Setting the Locale
     </div>
             <div id="BreadCrumbs">
-                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置区域设置</a>
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置语言环境</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="create.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="identify.html">Next&nbsp;»</a>
+                <a target="_top" href="create.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="identify.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>BCP 47 扩展</h1></div>
             <div id="PageContent"><!-- BCP 47 Extensions -->
 
 
-<p>Java SE 7 版本符合 IETF BCP 47 标准，该标准支持向 <code>Locale</code> 添加扩展。任何单个字符都可用于表示扩展名，但有两个预定义的扩展代码：<code>'u'</code> 指定 <em>Unicode locale extension ( Unicode 区域设置扩展)</em>，<code>'x'</code> 指定 <em>private use extension (私有使用扩展)</em>。</p>
-<p>Unicode 区域设置扩展由 Unicode <a href="http://cldr.unicode.org/">Common Locale Data Repository (CLDR)</a> 项目定义。它们用于指定非语言特定的信息，例如日历或货币。私有用扩展可用于指定任何其他信息，例如平台(例如，Windows，UNIX 或 Linux)或发布信息(例如，6u23 或 JDK 7)。</p>
+<p>Java SE 7 版本符合 IETF BCP 47 标准，该标准支持向 <code>Locale</code> 添加扩展。任何单个字符都可用于表示扩展名，但有两个预定义的扩展代码：<code>'u'</code> 指定 <em>Unicode locale extension ( Unicode 语言环境扩展)</em>，<code>'x'</code> 指定 <em>private use extension (私有使用扩展)</em>。</p>
+<p>Unicode 语言环境扩展由 Unicode <a href="http://cldr.unicode.org/">Common Locale Data Repository (CLDR)</a> 项目定义。它们用于指定非语言特定的信息，例如日历或货币。私有用扩展可用于指定任何其他信息，例如平台(例如，Windows，UNIX 或 Linux)或发布信息(例如，6u23 或 JDK 7)。</p>
 <p>扩展名被指定为键/值对，其中键是单个字符(通常为 <code>'u'</code> 或 <code>'x'</code>)。格式良好的值具有以下格式：</p>
 <div class="codeblock"><pre>
 SUBTAG ('-' SUBTAG)*
@@ -507,12 +507,12 @@ SUBTAG ('-' SUBTAG)*
 SUBTAG = [0-9a-zA-Z]{2,8}    <em>For key='u'</em>
 SUBTAG = [0-9a-zA-Z]{1,8}    <em>For key='x'</em>
 </pre></div>
-<p>请注意，私有用扩展允许使用单字符值。但是，Unicode 区域设置扩展中的值最小为 2 个字符。</p>
+<p>请注意，私有用扩展允许使用单字符值。但是，Unicode 语言环境扩展中的值最小为 2 个字符。</p>
 <p>扩展字符串不区分大小写，但 <code>Locale</code> 类将所有键和值映射为小写。</p>
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getExtensionKeys--"><code>getExtensionKeys()</code></a> 方法返回 <code>Locale</code> 的扩展键集（如果有）。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getExtension-char-"><code>getExtension(key)</code></a> 方法返回指定键的值字符串（如果有）。</p>
-<h2><a name="unicode" id="unicode">Unicode 区域设置扩展</a></h2>
-<p>如前所述，Unicode 区域设置扩展由 <code>'u'</code> 键代码或 <code>UNICODE_LOCALE_EXTENSION</code> 常量指定。值本身也由键/类型对指定。合法值在 <a href="http://www.unicode.org">Unicode</a> 网站的 <a href="http://www.unicode.org/reports/tr35/#Key_Type_Definitions">Key/Type Definitions</a> 表中定义。键代码由两个字母字符指定。下表列出了 Unicode 区域设置扩展键：</p>
-<table border="1" summary="显示 Unicode 区域设置扩展键的表">
+<h2><a name="unicode" id="unicode">Unicode 语言环境扩展</a></h2>
+<p>如前所述，Unicode 语言环境扩展由 <code>'u'</code> 键代码或 <code>UNICODE_LOCALE_EXTENSION</code> 常量指定。值本身也由键/类型对指定。合法值在 <a href="http://www.unicode.org">Unicode</a> 网站的 <a href="http://www.unicode.org/reports/tr35/#Key_Type_Definitions">Key/Type Definitions</a> 表中定义。键代码由两个字母字符指定。下表列出了 Unicode 语言环境扩展键：</p>
+<table border="1" summary="显示 Unicode 语言环境扩展键的表">
 <tr>
 <th>键码</th>
 <th>描述</th>
@@ -542,10 +542,10 @@ SUBTAG = [0-9a-zA-Z]{1,8}    <em>For key='x'</em>
 <td>常见的变种类型</td>
 </tr>
 </table>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>指定 Unicode 区域设置扩展(例如数字格式)并不保证底层平台的语言环境服务将遵循该请求。</p>
+<div class="note"><hr /><strong>注意:</strong>&nbsp;<p>指定 Unicode 语言环境扩展(例如数字格式)并不保证底层平台的语言环境服务将遵循该请求。</p>
 <hr /></div>
-<p>下表显示了 Unicode 区域设置扩展的键/类型对的一些示例。</p>
-<table border="1" summary="Unicode 区域设置扩展的键/类型对的一些示例">
+<p>下表显示了 Unicode 语言环境扩展的键/类型对的一些示例。</p>
+<table border="1" summary="Unicode 语言环境扩展的键/类型对的一些示例">
 <tr>
 <th>键/类型对</th>
 <th>描述</th>
@@ -575,14 +575,14 @@ SUBTAG = [0-9a-zA-Z]{1,8}    <em>For key='x'</em>
 <div class="codeblock"><pre>
 de-DE-u-email-co-phonebk-x-linux
 </pre></div>
-<p>以下 <code>Locale</code> 方法可用于访问有关 Unicode 区域设置扩展的信息。使用以前的德语语言环境示例描述了这些方法。</p>
+<p>以下 <code>Locale</code> 方法可用于访问有关 Unicode 语言环境扩展的信息。使用以前的德语语言环境示例描述了这些方法。</p>
 <ul>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getUnicodeLocaleKeys--"><code>getUnicodeLocaleKeys()</code></a>返回 Unicode 区域设置键码集，如果语言环境没有，则返回空集。对于德语示例，这将返回包含单个字符串 <code>"co"</code> 的集合。</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getUnicodeLocaleKeys--"><code>getUnicodeLocaleKeys()</code></a>返回 Unicode 语言环境键码集，如果语言环境没有，则返回空集。对于德语示例，这将返回包含单个字符串 <code>"co"</code> 的集合。</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getUnicodeLocaleType-java.lang.String-"><code>getUnicodeLocaleType(String)</code></a>返回与 Unicode 区域设置键码关联的 Unicode 区域设置类型。为德语示例调用 <code>getUnicodeLocaleType("co")</code> 将返回字符串 <code>"phonebk"</code>。</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getUnicodeLocaleType-java.lang.String-"><code>getUnicodeLocaleType(String)</code></a>返回与 Unicode 语言环境键码关联的 Unicode 语言环境类型。为德语示例调用 <code>getUnicodeLocaleType("co")</code> 将返回字符串 <code>"phonebk"</code>。</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getUnicodeLocaleAttributes--"><code>getUnicodeLocaleAttributes()</code></a>返回与此区域设置关联的 Unicode 区域设置属性集（如果有）。在德语示例中，这将返回包含单个字符串 <code>"email"</code> 的集。</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getUnicodeLocaleAttributes--"><code>getUnicodeLocaleAttributes()</code></a>返回与此语言环境关联的 Unicode 语言环境属性集（如果有）。在德语示例中，这将返回包含单个字符串 <code>"email"</code> 的集。</li>
 </ul>
 <h2><a name="private" id="private">私有使用扩展</a></h2>
 <p>由 <code>'x'</code> 键代码或 <code>PRIVATE_USE_EXTENSION</code> 常量指定的私有使用扩展可以是任何内容，只要该值格式正确即可。</p>

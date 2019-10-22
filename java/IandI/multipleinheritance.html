@@ -503,17 +503,17 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="subclasses.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="override.html">Next&nbsp;»</a>
+                <a target="_top" href="subclasses.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="override.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>状态，实现和类型的多重继承</h1></div>
             <div id="PageContent">
 
-<p>类和接口之间的一个显着区别是类可以有字段而接口不能。此外，您可以实例化一个类来创建一个对象，这是您无法使用接口进行的。如 <a class="TutorialLink" target="_top" href="../../java/concepts/object.html">What Is an Object?</a> 部分所述，对象将其状态存储在字段中，这些字段在类中定义。Java 编程语言不允许继承多个类的一个原因是为了避免 <em>multiple inheritance of state</em>，这是从多个类继承字段的能力。例如，假设您能够定义一个继承多个类的新类。通过实例化该类来创建对象时，该对象将继承所有类的超类中的字段。如果来自不同超类的方法或构造函数实例化相同的字段会怎样？哪个方法或构造函数优先？由于接口不包含字段，因此您不必担心多重继承状态所导致的问题。</p>
+<p>类和接口之间的一个显着区别是类可以有字段而接口不能有。此外，你可以实例化一个类来创建一个对象，但不能实例化接口。如 <a class="TutorialLink" target="_top" href="../../java/concepts/object.html">What Is an Object?</a> 部分所述，对象将其状态存储在字段中，这些字段在类中定义。Java 编程语言不允许继承多个类的一个原因是为了避免 <em>multiple inheritance of state (状态的多重继承)</em>，这是从多个类继承字段的能力。例如，假设你能够定义一个继承多个类的新类。通过实例化该类来创建对象时，该对象将继承所有类的超类中的字段。如果来自不同超类的方法或构造函数实例化相同的字段会怎样？哪个方法或构造函数优先？由于接口不包含字段，因此你不必担心多重继承状态所导致的问题。</p>
 
-<p><em>Multiple inheritance of implementation</em> 是从多个类继承方法定义的能力。这种类型的多重继承会出现问题，例如名称冲突和歧义。当支持这种类型的多重继承的编程语言的编译器遇到包含具有相同名称的方法的超类时，它们有时无法确定要访问或调用的成员或方法。此外，程序员可以通过向超类添加新方法而无意中引入名称冲突。<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">Default methods</a> 引入了一种形式的多重继承实现。一个类可以实现多个接口，该接口可以包含具有相同名称的默认方法。Java 编译器提供了一些规则来确定特定类使用哪种默认方法。</p>
+<p><em>Multiple inheritance of implementation (实现的多重继承)</em> 是从多个类继承方法定义的能力。这种类型的多重继承会出现问题，例如名称冲突和歧义。当支持这种类型的多重继承的编程语言的编译器遇到包含具有相同名称的方法的超类时，它们有时无法确定要访问或调用的成员或方法。此外，程序员可以通过向超类添加新方法而无意中引入名称冲突。<a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">Default methods</a> 引入了一种形式的实现的多重继承。一个类可以实现多个接口，该接口可以包含具有相同名称的默认方法。Java 编译器提供了一些规则来确定特定类使用哪种默认方法。</p>
 
-<p>Java 编程语言支持 <em>multiple inheritance of type</em> 的多重继承，这是类实现多个接口的能力。一个对象可以有多种类型：它自己的类的类型以及该类实现的所有接口的类型。这意味着如果将变量声明为接口的类型，则其值可以引用从实现接口的任何类实例化的任何对象。这在 <a class="TutorialLink" target="_top" href="../../java/IandI/interfaceAsType.html">Using an Interface as a Type</a> 一节中讨论。</p>
+<p>Java 编程语言支持 <em>multiple inheritance of type (类型的多重继承)</em>，这是类实现多个接口的能力。一个对象可以有多种类型：它自己的类的类型以及该类实现的所有接口的类型。这意味着如果将变量声明为接口的类型，则其值可以引用从实现接口的任何类实例化的任何对象。这在 <a class="TutorialLink" target="_top" href="../../java/IandI/interfaceAsType.html">Using an Interface as a Type</a> 一节中讨论。</p>
 
 <p>与实现的多重继承一样，类可以继承在其继承的接口中定义的方法(作为默认或静态)的不同实现。在这种情况下，编译器或用户必须决定使用哪一个。</p>
 

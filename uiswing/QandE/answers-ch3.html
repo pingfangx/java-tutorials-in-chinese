@@ -404,16 +404,16 @@
 <p><b>问题1a</b>: A component that lets the user pick a color.<br />
 <b>答案1a</b>: <a href="../../uiswing/components/colorchooser.html">color chooser</a><br />
 <br />
-<b>问题1b:</b> A component that displays an icon, but that doesn't react to user clicks.<br />
+<b>问题1b:</b>A component that displays an icon, but that doesn't react to user clicks.<br />
 <b>答案1b</b>: <a href="../../uiswing/components/label.html">label</a><br />
 <br />
-<b>问题1c:</b> A component that looks like a button and that, when pressed, brings up a menu of items for the user to choose from.<br />
+<b>问题1c:</b>A component that looks like a button and that, when pressed, brings up a menu of items for the user to choose from.<br />
 <b>答案1c</b>: <a href="../../uiswing/components/combobox.html">uneditable combo box</a><br />
 <br />
-<b>问题1d:</b> A container that looks like a frame, but that appears (usually with other, similar containers) within a real frame.<br />
+<b>问题1d:</b>A container that looks like a frame, but that appears (usually with other, similar containers) within a real frame.<br />
 <b>答案1d</b>: <a href="../../uiswing/components/internalframe.html">internal frame</a><br />
 <br />
-<b>问题1e:</b> A container that lets the user determine how two components share a limited amount of space.<br />
+<b>问题1e:</b>A container that lets the user determine how two components share a limited amount of space.<br />
 <b>答案1e</b>: <a href="../../uiswing/components/splitpane.html">split pane</a></p>
 <p><b>问题2:</b>Which method do you use to add a menu bar to a top-level container such as a <code>JFrame</code>?<br />
 <b>答案2</b>:<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#setJMenuBar(javax.swing.JMenuBar)">setJMenuBar</a></code></p>
@@ -421,9 +421,9 @@
 <b>答案3</b>:<code>JRootPane</code>'s <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JRootPane.html#setDefaultButton(javax.swing.JButton)">setDefaultButton</a></code> method. (You get the top-level container's root pane using the <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/RootPaneContainer.html#getRootPane()">getRootPane</a></code> method defined by the <code>RootPaneContainer</code> interface, which every top-level container implements.)</p>
 <p><b>问题4:</b>Which method do you use to enable and disable components such as <code>JButton</code>s?What class is it defined in?<br />
 <b>答案4</b>:<code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html#setEnabled(boolean)">setEnabled</a></code>, which is defined in the <code>Component</code> class</p>
-<p><b>问题5a:</b> Which Swing components use <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ListSelectionModel.html">ListSelectionModel</a></code>?[<i>Hint:</i> The "Use" link at the top of the specification for each interface and class takes you to a page showing where in the API that interface or class is referenced.]<br />
+<p><b>问题5a:</b>Which Swing components use <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ListSelectionModel.html">ListSelectionModel</a></code>?[<i>Hint:</i> The "Use" link at the top of the specification for each interface and class takes you to a page showing where in the API that interface or class is referenced.]<br />
 <b>答案5a</b>: <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.html">JList</a></code> and <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html">JTable</a></code></p>
-<p><b>问题5b:</b> Do those components use any other models to handle other aspects of the components' state?If so, list the other models' types.<br />
+<p><b>问题5b:</b>Do those components use any other models to handle other aspects of the components' state?If so, list the other models' types.<br />
 <b>答案5b</b>: <code>JList</code> also uses a <code>ListModel</code>, which holds the list's data. <code>JTable</code> uses a <code>TableModel</code> to hold its data and a <code>TableColumnModel</code> to manage the table's columns.</p>
 <p><b>问题6:</b>Which type of model holds a text component's content?<br />
 <b>答案6</b>:<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Document.html">Document</a></code><br /></p>

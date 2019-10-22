@@ -474,17 +474,17 @@
             <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>
         </div>
         <div class="NavBit">
-                <a target="_top" href="../network/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="resourcebundlecontrolprovider.html">Next&nbsp;»</a>
+                <a target="_top" href="../network/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="resourcebundlecontrolprovider.html">下一页&nbsp;»</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
         <div id="PageTitle"><h1>课程：国际化服务提供者</h1></div>
         <div id="PageContent">
 
-<p>国际化服务提供者支持依赖于区域设置的数据和服务的插件。因为可以插入依赖于语言环境的数据和服务，所以第三方能够在 <code>java.text</code> 和 <code>java.util</code> 包中提供大多数区域设置敏感类的实现。</p>
+<p>国际化服务提供者支持依赖于语言环境的数据和服务的插件。因为可以插入依赖于语言环境的数据和服务，所以第三方能够在 <code>java.text</code> 和 <code>java.util</code> 包中提供大多数语言环境敏感类的实现。</p>
 
-<p>服务是一组编程接口和类，可以访问特定应用程序的功能或特性。服务提供者接口(SPI)是服务定义的公共接口和抽象类的集合。服务提供者实现 SPI。服务提供者使您可以创建可扩展的应用程序，您可以在不修改其原始代码源的情况下进行扩展。您可以使用新的插件或模块增强其功能。有关服务提供者和可扩展应用程序的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../ext/basics/spi.html">Creating Extensible Applications</a>。</p>
+<p>服务是一组编程接口和类，可以访问特定应用程序的功能或特性。服务提供者接口(SPI)是服务定义的公共接口和抽象类的集合。服务提供者实现 SPI。服务提供者使你可以创建可扩展的应用程序，你可以在不修改其原始代码源的情况下进行扩展。你可以使用新的插件或模块增强其功能。有关服务提供者和可扩展应用程序的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../ext/basics/spi.html">Creating Extensible Applications</a>。</p>
 
-<p>您可以使用服务者进行国际化，以提供以下区域设置敏感类的自定义实现：</p>
+<p>你可以使用服务者进行国际化，以提供以下语言环境敏感类的自定义实现：</p>
 
 <ul>
   <li>
@@ -543,7 +543,7 @@
 </td>
 </tr>
 </table>
-<p>例如，如果要为新区域设置提供 <code>NumberFormat</code> 对象，请实现 <code>java.text.spi.NumberFormatProvider</code> 类并实现以下方法：</p>
+<p>例如，如果要为新语言环境提供 <code>NumberFormat</code> 对象，请实现 <code>java.text.spi.NumberFormatProvider</code> 类并实现以下方法：</p>
 <ul>
 <li><code>getCurrencyInstance(Locale locale)</code></li>
 <li><code>getIntegerInstance(Locale locale)</code></li>
@@ -554,9 +554,9 @@
 Locale loc = new Locale("da", "DK");
 NumberFormat nf = NumberFormatProvider.getNumberInstance(loc);
 </pre></div>
-<p>这些方法首先检查 Java 运行时环境是否支持所请求的区域设置；如果是这样，方法使用该支持。否则，这些方法会调用已安装提供程序的 <code>getAvailableLocales</code> 方法，以找到支持所请求区域设置的提供程序。</p>
+<p>这些方法首先检查 Java 运行时环境是否支持所请求的语言环境；如果是这样，方法使用该支持。否则，这些方法会调用已安装提供程序的 <code>getAvailableLocales</code> 方法，以找到支持所请求语言环境的提供程序。</p>
 
-<p>有关如何使用服务提供程序进行国际化的深入示例，请参阅 <a class="TutorialLink" target="_top" href="../../i18n/serviceproviders/resourcebundlecontrolprovider.html">Installing a Custom Resource Bundle as an Extension</a>。本节介绍如何实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/spi/ResourceBundleControlProvider.html"><code>ResourceBundleControlProvider</code></a> 接口，该接口允许您使用任何自定义 <code>ResourceBundle.Control</code> 类，而无需对源进行任何其他更改您的应用代码。</p>
+<p>有关如何使用服务提供程序进行国际化的深入示例，请参阅 <a class="TutorialLink" target="_top" href="../../i18n/serviceproviders/resourcebundlecontrolprovider.html">Installing a Custom Resource Bundle as an Extension</a>。本节介绍如何实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/spi/ResourceBundleControlProvider.html"><code>ResourceBundleControlProvider</code></a> 接口，该接口允许你使用任何自定义 <code>ResourceBundle.Control</code> 类，而无需对源进行任何其他更改你的应用代码。</p>
 
 
         </div>

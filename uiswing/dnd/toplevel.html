@@ -506,7 +506,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">拖放和数据传输</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="droplocation.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="cutpaste.html">Next&nbsp;»</a>
+                <a target="_top" href="droplocation.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="cutpaste.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>顶级放置</h1></div>
@@ -517,7 +517,7 @@
 <p>This is particularly useful for applications that import files, such as editors, IDEs, image manipulation programs, CD burning programs. Such an application generally includes a menu, a toolbar, an area for editing documents, and probably a list or mechanism for switching between open documents.</p>
 <p>We have such an example but because this demo reads files, we do not provide a Java Web Start version — you will have to download and compile the demo yourself.</p>
 <p>As you can see in the screen shot below, <code>TopLevelTransferHandlerDemo</code> has a menu (empty, except for the Demo submenu), a (non-functional) toolbar, an area (on the left) that displays a list of open documents, and a area (to the right) that displays the content of each open document. At startup the blue document area has been assigned a transfer handler that supports file imports — so is the only place that can accept a drop.</p>
-<center><img src="../../figures/uiswing/dnd/TopLevelTransferHandlerDemo.png" width="365" height="268" align="bottom" alt="A snapshot of the TopLevelTransferHandlerDemo demo." /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<center><img src="../../figures/uiswing/dnd/TopLevelTransferHandlerDemo.png" width="365" height="268" align="bottom" alt="A snapshot of the TopLevelTransferHandlerDemo demo." /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Compile and run the 
 <a class="SourceLink" target="_blank" href="../examples/dnd/TopLevelTransferHandlerDemoProject/src/dnd/TopLevelTransferHandlerDemo.java" onclick="showCode('../../displayCode.html', '../examples/dnd/TopLevelTransferHandlerDemoProject/src/dnd/TopLevelTransferHandlerDemo.java'); return false;"><code><code>TopLevelTransferHandlerDemo</code></code></a> example, consult the <a href="../examples/dnd/index.html#TopLevelTransferHandlerDemo">example index</a> if you would like to download a zip file structured for NetBeans.</li>
 <li>Drag a file from your native desktop or file system and drop it on the blue document area to the right. The file is opened and a frame filled with its contents will appear. The document area, a <code>JDesktopPane</code>, contains a transfer handler that supports import of <code>javaFileListFlavor</code>.</li>

@@ -400,7 +400,7 @@
 
 <h2>问题</h2>
 <ol>
-<li><b>Question:</b> 以下代码是否合法？
+<li><b>问题:</b>以下代码是否合法？
 <div class="codeblock"><pre>
 try {
     
@@ -408,17 +408,17 @@ try {
    
 }
 </pre></div>
-<b>Answer:</b> 是的，这是合法的非常有用的。一个 <code>try</code> 语句如果有 <code>finally</code> 块，则不必有 <code>catch</code> 块。如果 <code>try</code> 语句中的代码具有多个退出点且没有关联的 <code>catch</code> 子句，则无论 <code>try</code> 块如何退出都会执行 <code>finally</code> 块中的代码。因此，如果存在 <i>必须始终</i> 执行的代码，则提供 <code>finally</code> 块是有意义的。这包括资源恢复代码，例如关闭 I/O 流的代码。</li>
-<li><b>Question:</b> 以下处理程序可以捕获哪些异常类型？
+<b>答案:</b>是的，这是合法的  非常有用的。一个 <code>try</code> 语句如果有 <code>finally</code> 块，则不必有 <code>catch</code> 块。如果 <code>try</code> 语句中的代码具有多个退出点且没有关联的 <code>catch</code> 子句，则无论 <code>try</code> 块如何退出都会执行 <code>finally</code> 块中的代码。因此，如果存在 <i>必须始终</i> 执行的代码，则提供 <code>finally</code> 块是有意义的。这包括资源恢复代码，例如关闭 I/O 流的代码。</li>
+<li><b>问题:</b>以下处理程序可以捕获哪些异常类型？
 <div class="codeblock"><pre>
 catch (Exception e) {
      
 }
 </pre></div>
 使用这种类型的异常处理程序有什么问题？
-<p><b>Answer:</b> 此处理程序捕获 <code>Exception</code> 类型的异常;因此，它捕获任何异常。这可能是一个糟糕的实现，因为您丢失了有关抛出的异常类型的有价值信息，并使您的代码效率降低。因此，您的程序可能会被迫确定异常类型，然后才能决定最佳恢复策略。</p>
+<p><b>答案:</b>此处理程序捕获 <code>Exception</code> 类型的异常;因此，它捕获任何异常。这可能是一个糟糕的实现，因为你丢失了有关抛出的异常类型的有价值信息，并使你的代码效率降低。因此，你的程序可能会被迫确定异常类型，然后才能决定最佳恢复策略。</p>
 </li>
-<li><b>Question:</b> 编写此异常处理程序有什么问题吗？这段代码可以编译吗？
+<li><b>问题:</b>编写此异常处理程序有什么问题吗？这段代码可以编译吗？
 <div class="codeblock"><pre>
 try {
 
@@ -428,13 +428,13 @@ try {
     
 }
 </pre></div>
-<b>Answer:</b> 第一个处理程序捕获 <code>Exception</code> 类型的异常;因此，它捕获任何异常，包括 <code>ArithmeticException</code>。第二个处理程序永远无法到达。此代码将无法编译。</li>
-<li><b>Question:</b> 将第一个列表中的每个情况与第二个列表中的项目进行匹配。
+<b>答案:</b>第一个处理程序捕获 <code>Exception</code> 类型的异常;因此，它捕获任何异常，包括 <code>ArithmeticException</code>。第二个处理程序永远无法到达。此代码将无法编译。</li>
+<li><b>问题:</b>将第一个列表中的每个情况与第二个列表中的项匹配。
 <ol type="a">
 <li><code>int[] A;<br />
 
 A[0] = 0;</code></li>
-<li>JVM 开始运行您的程序，但 JVM 找不到 Java 平台类。(Java 平台类位于 <code>classes.zip</code> 或 <code>rt.jar</code>。)</li>
+<li>JVM 开始运行你的程序，但 JVM 找不到 Java 平台类。(Java 平台类位于 <code>classes.zip</code> 或 <code>rt.jar</code>。)</li>
 <li>程序正在读取流并到达 <code>end of stream</code> 标记的末尾。</li>
 <li>在关闭流之前和到达 <code>end of stream</code> 标记之后，程序尝试再次读取流。</li>
 </ol>
@@ -448,17 +448,17 @@ A[0] = 0;</code></li>
 <ol type="a">
 <li>3 (编译错误)。数组未初始化，将无法编译。</li>
 <li>1 (错误)。</li>
-<li>4 (无异常)。当您读取流时，您希望流标记结束。您应该使用异常来捕获程序中的意外行为。</li>
+<li>4 (无异常)。当你读取流时，你希望流标记结束。你应该使用异常来捕获程序中的意外行为。</li>
 <li>2 (检查型异常)。</li>
 </ol>
 </li>
 </ol>
 <h2>练习</h2>
 <ol>
-<li><b>Exercise:</b> 将 <code>readList</code> 方法添加到 <a class="SourceLink" target="_blank" href="../examples/ListOfNumbers.java" onclick="showCode('../../../displayCode.html', '../examples/ListOfNumbers.java'); return false;"><code><code>ListOfNumbers.java</code></code></a>。此方法应从文件中读取 <code>int</code> 值，打印每个值，并将它们附加到 vector 的末尾。你应该抓住所有适当的错误。您还需要一个包含要读入的数字的文本文件。
-<p><b>Answer:</b> 参见 <code> <a class="SourceLink" target="_blank" href="../examples/ListOfNumbers2.java" onclick="showCode('../../../displayCode.html', '../examples/ListOfNumbers2.java'); return false;"><code><code>ListOfNumbers2.java</code></code></a>.</code></p>
+<li><b>练习:</b>将 <code>readList</code> 方法添加到 <a class="SourceLink" target="_blank" href="../examples/ListOfNumbers.java" onclick="showCode('../../../displayCode.html', '../examples/ListOfNumbers.java'); return false;"><code><code>ListOfNumbers.java</code></code></a>。此方法应从文件中读取 <code>int</code> 值，打印每个值，并将它们附加到 vector 的末尾。你应该捕获所有适当的错误。你还需要一个包含要读入的数字的文本文件。
+<p><b>答案:</b>参见 <code> <a class="SourceLink" target="_blank" href="../examples/ListOfNumbers2.java" onclick="showCode('../../../displayCode.html', '../examples/ListOfNumbers2.java'); return false;"><code><code>ListOfNumbers2.java</code></code></a>.</code></p>
 </li>
-<li><b>Exercise:</b> 修改以下 <code>cat</code> 方法，以便进行编译：
+<li><b>练习:</b>修改以下 <code>cat</code> 方法，以便进行编译：
 <div class="codeblock"><pre>
 public static void cat(File file) {
     RandomAccessFile input = null;
@@ -477,7 +477,7 @@ public static void cat(File file) {
     }
 }
 </pre></div>
-<p><b>Answer:</b> 捕获异常的代码以粗体显示：</p>
+<p><b>答案:</b>捕获异常的代码以粗体显示：</p>
 <div class="codeblock"><pre>
 public static void cat(File file) {
     RandomAccessFile input = null;

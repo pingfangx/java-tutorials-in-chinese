@@ -487,7 +487,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">扩展机制</a>&gt;<a href="index.html" target="_top">创建和使用扩展</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="download.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="download.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>安装型扩展</h1></div>
@@ -495,9 +495,9 @@
 
 <p>安装型扩展是 Java Runtime Environment(JRE™) 软件的 <tt>lib/ext</tt> 目录中的 JAR 文件。顾名思义，JRE 是 Java Development Kit 的运行时部分，包含平台的核心 API，但没有编译器和调试器等开发工具。JRE 可以单独使用，也可以作为 Java Development Kit 的一部分使用。</p>
 <p>JRE 是 JDK 软件的严格子集。JDK 软件目录树的子集如下所示：</p>
-<center><img src="../../figures/ext/extb1.gif" width="392" height="234" align="bottom" alt="JDK 软件目录树" /></center><p>JRE 由图中高亮的框内的那些目录组成。无论您的 JRE 是独立的还是 JDK 软件的一部分，JRE 目录的 <tt>lib/ext</tt> 中的任何 JAR 文件都会被运行时环境自动视为扩展。</p>
+<center><img src="../../figures/ext/extb1.gif" width="392" height="234" align="bottom" alt="JDK 软件目录树" /></center><p>JRE 由图中高亮的框内的那些目录组成。无论你的 JRE 是独立的还是 JDK 软件的一部分，JRE 目录的 <tt>lib/ext</tt> 中的任何 JAR 文件都会被运行时环境自动视为扩展。</p>
 <p>由于安装型扩展扩展了平台的核心 API，因此请谨慎使用它们。它们很少适用于单个或一小组应用程序使用的接口。</p>
-<p>此外，由于安装型扩展定义的符号将在所有 Java 进程中可见，因此应注意确保所有可见符号遵循适当的“反向域名”和“类层次结构”约定。例如，<tt>com.mycompany.MyClass</tt>。</p>
+<p>此外，由于安装型扩展定义的符号将在所有 Java 进程中可见，因此应注意确保所有可见符号遵循适当的“反向域名”和“类层次结构”规范。例如，<tt>com.mycompany.MyClass</tt>。</p>
 <p>从 Java 6 开始，扩展 JAR 文件也可以放置在独立于任何特定 JRE 的位置，以便扩展可以由系统上安装的所有 JRE 共享。在 Java 6 之前，<tt>java.ext.dirs</tt> 的值是指单个目录，但从 Java 6 开始，它是一个目录列表(如 <tt>CLASSPATH</tt>)，它指定了搜索扩展名的位置。路径的第一个元素始终是 JRE 的 <tt>lib/ext</tt> 目录。第二个元素是 JRE 之外的目录。此其他位置允许扩展 JAR 文件安装一次，并由该系统上安装的多个 JRE 使用。位置因操作系统而异：</p>
 <ul>
 <li>Solaris™ 操作系统：<tt>/usr/jdk/packages/lib/ext</tt></li>
@@ -515,7 +515,7 @@ public final class RectangleArea {
 }
 </pre></div>
 <p>该类只有一个方法 <tt>area</tt>，它接受 <tt>java.awt.Rectangle</tt> 的实例并返回矩形的区域。</p>
-<p>假设您要使用名为 <code>AreaApp</code> 的应用程序测试 <tt>RectangleArea</tt>：</p>
+<p>假设你要使用名为 <code>AreaApp</code> 的应用程序测试 <tt>RectangleArea</tt>：</p>
 <div class="codeblock"><pre>
 import java.awt.*;
 
@@ -532,12 +532,12 @@ public class AreaApp {
 </pre></div>
 <p>此应用程序实例化一个 10 <var>x</var> 5 矩形，然后使用 <tt>RectangleArea.area</tt> 方法打印出矩形区域。</p>
 <h2>在没有扩展机制的情况下运行 AreaApp</h2>
-<p>让我们首先回顾一下如何在不使用扩展机制的情况下运行 <code>AreaApp</code> 应用程序。我们假设 <tt>RectangleArea</tt> 类捆绑在名为 <tt>area.jar</tt> 的 JAR 文件中。</p>
-<p>当然，<tt>RectangleArea</tt> 类不是 Java 平台的一部分，因此您需要将 <tt>area.jar</tt> 文件放在类路径上才能运行 <code>AreaApp</code>，才不会产生运行时异常。例如，如果 <tt>area.jar</tt> 位于目录 <tt>/home/user</tt> 中，则可以使用此命令：</p>
+<p>让我们首先回顾一下如何在不使用扩展机制的情况下运行 <code>AreaApp</code> 应用程序。我们假设 <tt>RectangleArea</tt> 类打包在名为 <tt>area.jar</tt> 的 JAR 文件中。</p>
+<p>当然，<tt>RectangleArea</tt> 类不是 Java 平台的一部分，因此你需要将 <tt>area.jar</tt> 文件放在类路径上才能运行 <code>AreaApp</code>，才不会产生运行时异常。例如，如果 <tt>area.jar</tt> 位于目录 <tt>/home/user</tt> 中，则可以使用此命令：</p>
 <div class="codeblock"><pre>
 java -classpath .:/home/user/area.jar AreaApp 
 </pre></div>
-<p>此命令中指定的类路径包含当前目录，包含 <tt>AreaApp.class</tt>，以及包含 <tt>RectangleArea</tt> 包的 JAR 文件的路径。您可以通过运行此命令获得所需的输出：</p>
+<p>此命令中指定的类路径包含当前目录，包含 <tt>AreaApp.class</tt>，以及包含 <tt>RectangleArea</tt> 包的 JAR 文件的路径。你可以通过运行此命令获得所需的输出：</p>
 <div class="codeblock"><pre>
 The rectangle's area is 50
 </pre></div>
@@ -548,7 +548,7 @@ The rectangle's area is 50
 <div class="codeblock"><pre>
 java AreaApp 
 </pre></div>
-<p>因为您使用 <tt>area.jar</tt> 作为安装型扩展，所以运行时环境将能够找到并加载 <code>RectangleArea</code> 类，即使您尚未指定它类路径。同样，系统上任何用户运行的任何 applet 或应用程序都能够找到并使用 <tt>RectangleArea</tt> 类。</p>
+<p>因为你使用 <tt>area.jar</tt> 作为安装型扩展，所以运行时环境将能够找到并加载 <code>RectangleArea</code> 类，即使你尚未指定它类路径。同样，系统上任何用户运行的任何 applet 或应用程序都能够找到并使用 <tt>RectangleArea</tt> 类。</p>
 <p>如果系统上安装了多个 JRE(Java 6 或更高版本)，并希望 <tt>RectangleArea</tt> 类可用作所有 JRE 的扩展，则不要将其安装在 <tt>lib/ext</tt> 特定 JRE 的目录，将其安装在系统范围的位置。例如，在运行 Linux 的系统上，在 <tt>/usr/java/packages/lib/ext</tt> 目录中安装 <tt>area.jar</tt>。然后 <tt>AreaApp</tt> 可以使用安装在该系统上的不同 JRE 运行，例如，如果将不同的浏览器配置为使用不同的 JRE。</p>
 
 

@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>使用 ListResourceBundle(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;隔离特定于区域设置的数据)
+        <title>使用 ListResourceBundle(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;隔离特定于语言环境的数据)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
@@ -471,7 +471,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">隔离特定于区域设置的数据</a></div>
+            <div class="linkLESSON"><a href="index.html">隔离特定于语言环境的数据</a></div>
 <div class="linkAHEAD"><a href="concept.html">关于 ResourceBundle 类</a></div>
 <div class="linkAHEAD"><a href="prepare.html">准备使用 ResourceBundle</a></div>
 <div class="linkAHEAD"><a href="propfile.html">使用属性文件支持 ResourceBundle</a></div>
@@ -485,10 +485,10 @@
         <br /><b>Lesson:</b> Isolating Locale-Specific Data
     </div>
             <div id="BreadCrumbs">
-                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">隔离特定于区域设置的数据</a>
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">隔离特定于语言环境的数据</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="propfile.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="control.html">Next&nbsp;»</a>
+                <a target="_top" href="propfile.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="control.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用 ListResourceBundle</h1></div>
@@ -517,7 +517,7 @@ public class StatsBundle_ja_JP extends ListResourceBundle {
     };
 }
 </pre></div>
-<h2>2. 指定区域设置</h2>
+<h2>2. 指定语言环境</h2>
 <p><code>ListDemo</code> 程序定义 <code>Locale</code> 对象，如下所示：</p>
 <div class="codeblock"><pre>
 Locale[] supportedLocales = {

@@ -480,7 +480,7 @@
 <div class="linkAHEAD"><a href="operators.html">运算符</a></div>
 <div class="linkBHEAD"><a href="op1.html">赋值，算术和一元运算符</a></div>
 <div class="linkBHEAD"><a href="op2.html">相等性，关系和条件运算符 </a></div>
-<div class="linkBHEAD"><a href="op3.html">按位和位移运算符</a></div>
+<div class="linkBHEAD"><a href="op3.html">位运算和移位运算符</a></div>
 <div class="linkBHEAD"><a href="opsummary.html">运算符总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_operators.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="expressions.html">表达式，语句和块</a></div>
@@ -505,44 +505,44 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">语言基础</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="variables.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="arrays.html">Next&nbsp;»</a>
+                <a target="_top" href="variables.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="arrays.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>基本数据类型</h1></div>
             <div id="PageContent">
 
-<p>Java 编程语言是静态类型的，这意味着所有变量必须先声明才能使用。这包括说明变量的类型和名称，正如您已经看到的那样：</p>
+<p>Java 编程语言是静态类型的，这意味着所有变量必须先声明才能使用。这包括说明变量的类型和名称，正如你已经看到的那样：</p>
 <div class="codeblock"><pre>
 int gear = 1;
 </pre></div>
-<p>这样做会告诉程序存在名为 "齿轮" 的字段，保存数字数据并且初始值为 "1"。变量的数据类型决定了它可能包含的值，以及可能对其执行的操作。除 <code>int</code> 外，Java 编程语言还支持其他七种 <i>primitive data types（基本数据类型）</i>。基本类型由语言预定义，并由保留关键字命名。基本值不与其他基本值共享状态。Java 编程语言支持的八种基本数据类型是：</p>
+<p>这样做会告诉程序存在名为 "gear" 的字段，持有数值数据，并且初始值为 "1"。变量的数据类型决定了它可能包含的值，以及可能对其执行的操作。除 <code>int</code> 外，Java 编程语言还支持其他七种 <i>primitive data types (基本数据类型)</i>。基本类型由语言预定义，并由保留关键字命名。基本值不与其他基本值共享状态。Java 编程语言支持的八种基本数据类型是：</p>
 <ul>
 <li>
-<p><strong>byte</strong>：<code>byte</code> 数据类型是一个 8 位有符号二进制补码整数。它的最小值为-128，最大值为 127(包括)。<code>byte</code> 数据类型可用于节省大型 <a class="TutorialLink" target="_top" href="arrays.html">arrays</a> 中的内存，其中内存节省实际上很重要。它们也可以用来代替 <code>int</code>，它们的限制有助于澄清代码;变量范围有限这一事实可以用作文档的一种形式。</p>
+<p><strong>byte</strong>：<code>byte</code> 数据类型是一个 8 位有符号补码整数。它的最小值为-128，最大值为 127(包括)。在需要内存节省的地方，可以将 <code>byte</code> 数据类型用于大型 <a class="TutorialLink" target="_top" href="arrays.html">arrays</a> 中以节省内存。它们也可以用来代替 <code>int</code> 它们的限制有助于阐明代码；变量的范围是有限的这一事实可以作为文档的一种形式。</p>
 </li>
 <li>
-<p><strong>short</strong>：<code>short</code> 数据类型是一个 16 位有符号二进制补码整数。它的最小值为-32,768，最大值为 32,767(包括)。与 <code>byte</code> 一样，适用相同的准则：在节省内存的情况下，可以使用 <code>short</code> 保存在大型数组中来节省内存。</p>
+<p><strong>short</strong>：<code>short</code> 数据类型是一个 16 位有符号补码整数。它的最小值为-32,768，最大值为 32,767(包括)。与 <code>byte</code> 一样，适用相同的准则：在节省内存的情况下，可以将 <code>short</code> 保存在大型数组中以节省内存。</p>
 </li>
 <li>
-<p><strong>int</strong>：默认情况下，<code>int</code> 数据类型是一个 32 位有符号的二进制补码整数，其最小值为-2<sup>31</sup>，最大值为 2<sup>31</sup>-1。在 Java SE 8 和更高版本中，可以使用 <code>int</code> 数据类型来表示无符号的 32 位整数，其最小值为 0，最大值为 2<sup>32</sup>-1。使用 Integer 类将 <code>int</code> 数据类型用作无符号整数。有关更多信息，请参阅数字类部分。类似 <code>compareUnsigned</code>，<code>divideUnsigned</code> 等静态方法已被添加到 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html"><code>Integer</code></a> 类中以支持无符号整数的算术运算。</p>
+<p><strong>int</strong>：默认情况下，<code>int</code> 数据类型是一个 32 位有符号的补码整数，其最小值为-2<sup>31</sup>，最大值为 2<sup>31</sup>-1。在 Java SE 8 和更高版本中，可以使用 <code>int</code> 数据类型来表示无符号的 32 位整数，其最小值为 0，最大值为 2<sup>32</sup>-1。使用 Integer 类将 <code>int</code> 数据类型用作无符号整数。有关更多信息，请参阅数字类部分。类似 <code>compareUnsigned</code>，<code>divideUnsigned</code> 等静态方法已被添加到 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html"><code>Integer</code></a> 类中以支持无符号整数的算术运算。</p>
 </li>
 <li>
-<p><strong>long</strong>：<code>long</code> 数据类型是一个 64 位二进制补码整数。带符号的 long 的最小值为 -2<sup>6</sup>，最大值为 2<sup>63</sup>-1。在 Java SE 8 和更高版本中，可以使用 <code>long</code> 数据类型来表示一个无符号的 64 位 long，它的最小值为 0，最大值为 2<sup>64</sup>-1。当您需要的范围值比 <code>int</code> 提供的范围宽时，使用此数据类型。<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html"><code>Long</code></a> 类还包含像 <code>compareUnsigned</code>，<code> divideUnsigned </code> 等方法来支持无符号 long 的算术运算。</p>
+<p><strong>long</strong>：<code>long</code> 数据类型是一个 64 位二进制补码整数。带符号的 long 的最小值为 -2<sup>63</sup>，最大值为 2<sup>63</sup>-1。在 Java SE 8 和更高版本中，可以使用 <code>long</code> 数据类型来表示一个无符号的 64 位 long，它的最小值为 0，最大值为 2<sup>64</sup>-1。当你需要的范围值比 <code>int</code> 提供的范围宽时，使用此数据类型。<a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html"><code>Long</code></a> 类还包含像 <code>compareUnsigned</code>，<code> divideUnsigned </code> 等方法来支持无符号 long 的算术运算。</p>
 </li>
 <li>
-<p><strong>float</strong>：<code>float</code> 数据类型是一个单精度 32 位 IEEE 754 浮点数。其值范围超出了本讨论的范围，但在 Java 语言规范的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3">Floating-Point Types, Formats, and Values</a> 部分中进行了指定。对于 <code>byte</code> 和 <code>short</code> 的建议，如果您需要节省内存，在浮点数的大数组中请使用 <code>float</code>(而不是 <code>double</code>)。此数据类型不应用于精确值，例如货币。为此，您需要改为使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">java.math.BigDecimal</a> 类。<a class="TutorialLink" target="_top" href="../data/index.html">Numbers and Strings</a> 涵盖了 Java 平台提供的 <code>BigDecimal</code> 和其他有用的类。</p>
+<p><strong>float</strong>：<code>float</code> 数据类型是一个单精度 32 位 IEEE 754 浮点数。其值范围超出了本讨论的范围，但在 Java 语言规范的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3">Floating-Point Types, Formats, and Values</a> 部分中进行了指定。对于 <code>byte</code> 和 <code>short</code> 的建议，如果你需要节省内存，在浮点数的大数组中请使用 <code>float</code>(而不是 <code>double</code>)。此数据类型不应用于精确值，例如货币。为此，你需要改为使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">java.math.BigDecimal</a> 类。<a class="TutorialLink" target="_top" href="../data/index.html">Numbers and Strings</a> 涵盖了 Java 平台提供的 <code>BigDecimal</code> 和其他有用的类。</p>
 </li>
 <li>
 <p><strong>double</strong>：<code>double</code> 数据类型是一个双精度 64 位 IEEE 754 浮点。其值范围超出了本讨论的范围，但在 Java 语言规范的 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3">Floating-Point Types, Formats, and Values</a> 部分中进行了指定。对于十进制值，这种数据类型通常是默认的选择。如上所述，此数据类型不应用于精确值，例如货币。</p>
 </li>
 <li>
-<p><strong>boolean</strong>：<code>boolean</code> 数据类型只有两个可能的值：<code>true</code> 和 <code>false</code>。将此数据类型用于跟踪真/假条件的简单标志。这种数据类型代表了一点信息，但其 '大小' 不是精确定义的。</p>
+<p><strong>boolean</strong>：<code>boolean</code> 数据类型只有两个可能的值：<code>true</code> 和 <code>false</code>。将此数据类型用于跟踪真/假条件的简单标志。此数据类型表示一位信息，但它的“大小”并不是精确定义的。</p>
 </li>
 <li>
-<p><strong>char</strong>：<code>char</code> 数据类型是一个单一的 16 位 Unicode 字符。它的最小值为 <code>'\u0000'</code>(或 0)，最大值为 <code>'\uffff'</code>(或 65,535)。</p>
+<p><strong>char</strong>：<code>char</code> 数据类型是一个 16 位 Unicode 字符。它的最小值为 <code>'\u0000'</code>(或 0)，最大值为 <code>'\uffff'</code>(或 65,535)。</p>
 </li>
 </ul>
-<p>除了上面列出的八种基本数据类型之外，Java 编程语言还通过 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">java.lang.String</a> 类为字符串提供了特别的支持。用双引号括起你的字符串会自动创建一个新的 <code>String</code> 对象;例如，<code>String s = "this is a string";</code>。<code>String</code> 对象是 <i>immutable（不可变的）</i>，这意味着一旦创建，它们的值就不能改变。<code>String</code> 类在技术上不是原始数据类型，但考虑到该语言给予它的特殊支持，您可能倾向于这样认为。您将在 <a class="TutorialLink" target="_top" href="../data/index.html">Simple Data Objects</a> 中了解有关 <code>String</code> 类的更多信息</p>
+<p>除了上面列出的八种基本数据类型之外，Java 编程语言还通过 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">java.lang.String</a> 类为字符串提供了特别的支持。用双引号括起你的字符串会自动创建一个新的 <code>String</code> 对象;例如，<code>String s = "this is a string";</code>。<code>String</code> 对象是 <i>immutable (不可变的)</i>，这意味着一旦创建，它们的值就不能改变。<code>String</code> 类在技术上不是原始数据类型，但考虑到该语言给予它的特殊支持，你可能倾向于这样认为。你将在 <a class="TutorialLink" target="_top" href="../data/index.html">Simple Data Objects</a> 中了解有关 <code>String</code> 类的更多信息</p>
 <h2>默认值</h2>
 <p>当声明一个字段时，并不总是需要赋值。已声明但未初始化的字段将由编译器设置为合理的默认值。一般来说，根据数据类型的不同，此默认值将为零或 <code>null</code>。然而，依赖于这种默认值，通常被认为是糟糕的编程风格。</p>
 <p>以下图表总结了上述数据类型的默认值。</p>
@@ -591,7 +591,7 @@ int gear = 1;
 <br />
 <p>局部变量略有不同;编译器从不将默认值分配给未初始化的局部变量。如果你不能初始化声明它的局部变量，确保在你尝试使用它之前给它赋值。访问未初始化的本地变量将导致编译时错误。</p>
 <h3>Literals（字面量）</h3>
-<p>您可能已经注意到，在初始化基本类型的变量时，不会使用 <code>new</code> 关键字。基本类型是内置于语言中的特殊数据类型;它们不是从一个类创建的对象。一个 <em>literal</em> 是固定值的源代码表示;字面量直接在你的代码中表示而不需要计算。如下所示，可以将一个字面量分配给基本类型的变量：</p>
+<p>你可能已经注意到，在初始化基本类型的变量时，不会使用 <code>new</code> 关键字。基本类型是内置于语言中的特殊数据类型;它们不是从一个类创建的对象。一个 <em>literal</em> 是固定值的源代码表示;字面量直接在你的代码中表示而不需要计算。如下所示，可以将一个字面量分配给基本类型的变量：</p>
 <div class="codeblock"><pre>
 boolean result = true;
 char capitalC = 'C';
@@ -600,14 +600,14 @@ short s = 10000;
 int i = 100000;
 </pre></div>
 <h4>整数字面量</h4>
-<p>一个整数字面量如果以字母 <code>L</code> 或 <code>l</code> 结尾则其类型为 <code>long</code>;否则它是 <code>int</code> 类型。建议您使用大写字母 <code>L</code>，因为小写字母 <code>l</code> 难以与数字 <code>1</code> 区分。</p>
+<p>一个整数字面量如果以字母 <code>L</code> 或 <code>l</code> 结尾则其类型为 <code>long</code>;否则它是 <code>int</code> 类型。建议你使用大写字母 <code>L</code>，因为小写字母 <code>l</code> 难以与数字 <code>1</code> 区分。</p>
 <p>整型 <code>byte</code>，<code>short</code>，<code>int</code> 和 <code>long</code> 的值可以从 <code>int</code> 字面量创建。超过 <code>int</code> 范围的 <code>long</code> 类型的值可以由 <code>long</code> 字面量创建。整数字面量可以用这些数字系统表示：</p>
 <ul>
 <li>十进制：基数 10，其数字由数字 0 到 9 组成;这是你每天使用的数字系统</li>
 <li>十六进制：基数 16，其数字由数字 0 到 9 以及字母 A 到 F 组成</li>
-<li>二进制：基数 2，其数字由数字 0 和 1 组成(您可以在 Java SE 7 及更高版本中创建二进制文字)</li>
+<li>二进制：基数 2，其数字由数字 0 和 1 组成(你可以在 Java SE 7 及更高版本中创建二进制文字)</li>
 </ul>
-<p>对于通用编程，十进制系统可能是您将要使用的唯一数字系统。但是，如果您需要使用其他数字系统，则以下示例显示正确的语法。前缀 <code>0x</code> 表示十六进制，<code>0b</code> 表示二进制：</p>
+<p>对于通用编程，十进制系统可能是你将要使用的唯一数字系统。但是，如果你需要使用其他数字系统，则以下示例显示正确的语法。前缀 <code>0x</code> 表示十六进制，<code>0b</code> 表示二进制：</p>
 <div class="codeblock"><pre>
 // The number 26, in decimal
 int decVal = 26;
@@ -618,7 +618,7 @@ int binVal = 0b11010;
 </pre></div>
 <h4>浮点字面量</h4>
 <p>如果以字母 <code>F</code> 或 <code>f</code> 结尾，则浮点字面量的类型为 <code>float</code>;否则它的类型是 <code>double</code>，它可以选择以字母 <code>D</code> 或 <code>d</code> 结尾。</p>
-<p>浮点类型(<code>float</code> 和 <code>double</code>)也可以用 E 或 e(科学记数法)，F 或 f(32 位 float 字面量)和 D 或 d(64 位double 字面量;这是默认值，按照惯例被省略)。</p>
+<p>浮点类型(<code>float</code> 和 <code>double</code>)也可以用 E 或 e(科学记数法)，F 或 f(32 位 float 字面量)和 D 或 d(64 位double 字面量;这是默认值，按照规范被省略)。</p>
 <div class="codeblock"><pre>
 double d1 = 123.4;
 // same value as d1, but in scientific notation
@@ -626,13 +626,13 @@ double d2 = 1.234e2;
 float f1  = 123.4f;
 </pre></div>
 <h4>字符和字符串字面量</h4>
-<p><code>char</code> 和 <code>String</code> 类型的字面量可以包含任何 Unicode(UTF-16)字符。如果你的编辑器和文件系统允许，你可以直接在你的代码中使用这些字符。如果不是，你可以使用 "Unicode 转义"，如 <code>'\u0108'</code>(大写字母 C with circumflex)，或者 <code>"S\u00ED Se\u00F1or"</code>(Sí Señor 在西班牙语中)。<code>char</code> 字面量总是使用 '单引号' ，<code>String</code> 字面量总是使用 "双引号" 。Unicode 转义序列可以在程序中的其他地方使用(例如在字段名称中)，而不仅仅在 <code>char</code> 或 <code>String</code> 字面量中使用。</p>
+<p><code>char</code> 和 <code>String</code> 类型的字面量可以包含任何 Unicode(UTF-16)字符。如果你的编辑器和文件系统允许，你可以直接在你的代码中使用这些字符。如果不允许，你可以使用 "Unicode 转义"，如 <code>'\u0108'</code>(带扬抑符的大写字母 C)，或者 <code>"S\u00ED Se\u00F1or"</code>(Sí Señor 在西班牙语中)。<code>char</code> 字面量总是使用 '单引号' ，<code>String</code> 字面量总是使用 "双引号" 。Unicode 转义序列可以在程序中的其他地方使用(例如在字段名称中)，而不仅仅在 <code>char</code> 或 <code>String</code> 字面量中使用。</p>
 <p>Java 编程语言还支持 <code>char</code> 和 <code>String</code> 字面量的一些特殊转义序列：<code>\b</code>（退格），<code>\t</code> （tab），<code>\n</code>（换行符），<code>\f</code>（换页符），<code>\r</code> （回车），<code>\"</code> （双引号）， <code>\'</code> （单引号）和 <code>\\</code>（反斜杠）。</p>
-<p>还有一个特殊的 <code>null</code> 字面量，可以用作任何引用类型的值。可以将 <code>null</code> 分配给任何变量，但基本类型的变量除外。对于 <code>null</code> 值，除了测试它的存在之外，您无能为力。因此，<code>null</code> 通常在程序中用作标记来指示某个对象不可用。</p>
+<p>还有一个特殊的 <code>null</code> 字面量，可以用作任何引用类型的值。可以将 <code>null</code> 分配给任何变量，但基本类型的变量除外。对于 <code>null</code> 值，除了测试它的存在之外，几乎没有别的可做的。因此，<code>null</code> 通常在程序中用作标记来指示某个对象不可用。</p>
 <p>最后，还有一种特殊类型的字面量，称为 <em>class literal</em>，通过取一个类型名称并加上 "<code>.class"</code>;例如 <code>String.class</code>。这指的是表示类型本身的对象(类型 <code>Class</code>)。</p>
 <h2>在数字字面量中使用下划线字符</h2>
-<p>在 Java SE 7 和更高版本中，任何数字的下划线字符(<code>_</code>)都可以出现在数字字面量中的数字之间的任何位置。例如，此功能支持您。以数字字面量分隔数字组，这可以提高代码的可读性。</p>
-<p>例如，如果您的代码包含具有许多数的数字，则可以使用下划线字符以三个一组来分隔数字，这与使用逗号或空格等标点符号作为分隔符类似。</p>
+<p>在 Java SE 7 和更高版本中，任何数字的下划线字符(<code>_</code>)都可以出现在数字字面量中的数字之间的任何位置。例如，此功能使你能够以数字字面量分隔数字组，这可以提高代码的可读性。</p>
+<p>例如，如果你的代码包含具有许多数的数字，则可以使用下划线字符以三个一组来分隔数字，这与使用逗号或空格等标点符号作为分隔符类似。</p>
 <p>以下示例显示了可以在数字字面量中使用下划线的其他方法：</p>
 <div class="codeblock"><pre>
 long creditCardNumber = 1234_5678_9012_3456L;
@@ -644,7 +644,7 @@ long maxLong = 0x7fff_ffff_ffff_ffffL;
 byte nybbles = 0b0010_0101;
 long bytes = 0b11010010_01101001_10010100_10010010;
 </pre></div>
-<p>您只能在数字之间放置下划线;你不能在下列地方放置下划线：</p>
+<p>你只能在数字之间放置下划线;你不能在下列地方放置下划线：</p>
 <ul>
 <li>在数字的开头或结尾</li>
 <li>与浮点数字中的小数点相邻</li>

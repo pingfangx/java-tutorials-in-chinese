@@ -400,7 +400,7 @@
 
 <ol>
 <li>编写一个泛型方法来计算集合中具有特定属性的元素数(例如，奇数整数，素数，回文数)。<br /><br />
-<strong>答案</strong>：
+<strong>答案</strong>:
 <div class="codeblock"><pre>
 public final class Algorithm {
     public static &lt;T&gt; int countIf(Collection&lt;T&gt; c, UnaryPredicate&lt;T&gt; p) {
@@ -448,10 +448,10 @@ public final class Algorithm {
     }
 }
 </pre></div>
-<strong>Answer</strong>: No. 大于(<tt>&gt;</tt>)运算符仅适用于基本数字类型。<br /><br />
+<strong>答案</strong>:No. 大于(<tt>&gt;</tt>)运算符仅适用于基本数字类型。<br /><br />
 </li>
 <li>编写一个泛型方法来交换数组中两个不同元素的位置。<br /><br />
-<strong>答案</strong>：
+<strong>答案</strong>:
 <div class="codeblock"><pre>
 public final class Algorithm {
     public static &lt;T&gt; void swap(T[] a, int i, int j) {
@@ -462,12 +462,12 @@ public final class Algorithm {
 }
 </pre></div>
 </li>
-<li>如果编译器在编译时擦除所有类型参数，为什么要使用泛型？<br /><br />
-<strong>Answer</strong>：您应该使用泛型，因为：
+<li>如果编译器在编译时擦除所有类型形参，为什么要使用泛型？<br /><br />
+<strong>答案</strong>:你应该使用泛型，因为：
 <ul>
 <li>Java 编译器在编译时对泛型代码强制执行更严格的类型检查。</li>
 <li>泛型支持编程类型作为参数。</li>
-<li>泛型使您能够实现泛型算法。</li>
+<li>泛型使你能够实现泛型算法。</li>
 </ul>
 <br /><br />
 </li>
@@ -490,7 +490,7 @@ public class Pair&lt;K, V&gt; {
     private V value;
 }
 </pre></div>
-<strong>答案</strong>：
+<strong>答案</strong>:
 <div class="codeblock"><pre>
 public class Pair {
 
@@ -517,7 +517,7 @@ public static &lt;T extends Comparable&lt;T&gt;&gt;
     // ...
 }
 </pre></div>
-<strong>答案</strong>：
+<strong>答案</strong>:
 <div class="codeblock"><pre>
 public static int findFirstGreaterThan(Comparable[] at, Comparable elem) {
     // ...
@@ -532,12 +532,11 @@ public static void print(List&lt;? extends Number&gt; list) {
     System.out.println();
 }
 </pre></div>
-<strong>Answer</strong>: Yes.
-
+<strong>答案</strong>:对。
 <br /><br />
 </li>
 <li>编写一个泛型方法来查找列表 <tt>[begin, end)</tt> 范围内的最大元素。<br /><br />
-<strong>答案</strong>：
+<strong>答案</strong>:
 <div class="codeblock"><pre>
 import java.util.*;
 
@@ -569,7 +568,7 @@ public class Singleton&lt;T&gt; {
     private static T instance = null;
 }
 </pre></div>
-<strong>Answer</strong>: No. 您不能创建类型参数 <tt>T</tt> 的静态字段。
+<strong>答案</strong>:No. 你不能创建类型形参 <tt>T</tt> 的静态字段。
 <br /><br />
 </li>
 <li> 考虑到以下类：
@@ -585,7 +584,7 @@ class Node&lt;T&gt; { /* ... */ }
 Node&lt;Circle&gt; nc = new Node&lt;&gt;();
 Node&lt;Shape&gt;  ns = nc;
 </pre></div>
-<strong>Answer</strong>: No. 因为 <tt>Node&lt;Circle&gt;</tt> 不是 <tt>Node&lt;Shape&gt;</tt> 的子类型。
+<strong>答案</strong>:No. 因为 <tt>Node&lt;Circle&gt;</tt> 不是 <tt>Node&lt;Shape&gt;</tt> 的子类型。
 <br /><br />
 </li>
 <li>考虑这个类：
@@ -596,8 +595,7 @@ class Node&lt;T&gt; implements Comparable&lt;T&gt; {
 }
 </pre></div>
 下面的代码会编译吗？如果没有，为什么？<br /><br />
-<strong>Answer</strong>: Yes.
-
+<strong>答案</strong>:对。
 <div class="codeblock"><pre>
 Node&lt;String&gt; node = new Node&lt;&gt;();
 Comparable&lt;String&gt; comp = node;
@@ -609,7 +607,7 @@ public static &lt;T&gt;
     int findFirst(List&lt;T&gt; list, int begin, int end, UnaryPredicate&lt;T&gt; p)
 </pre></div>
 注意，如果 gcd(<em>a, b</em>)= 1，则两个整数 <em>a</em> 和 <em>b</em> 是相对素数，其中 gcd 是最大公约数的缩写。<br /><br />
-<strong>答案</strong>：
+<strong>答案</strong>:
 <div class="codeblock"><pre>
 import java.util.*;
 

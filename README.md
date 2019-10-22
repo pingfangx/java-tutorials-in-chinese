@@ -1,7 +1,9 @@
-# The Java™ Tutorials 中文版
-本不想翻译了，简单读一遍就好。  
-后来又想，反正也是一句一句的读，顺手翻译一下即可，也方便日后复习。
+# Java Tutorials 中文版
+原本不想翻译的，只想简单读一遍就好。  
+后来觉得顺手翻译一下也行，方便日后复习。
 
-# 在线阅读
-* [Github Pages](https://pingfangx.github.io/java-tutorials/)
-* [GitBook](https://pingfangx.gitbook.io/java-tutorials/)
+# 英文原版
+[The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/)
+
+# 汉化版在线阅读
+[Java Tutorials 中文版](https://www.pingfangx.com/xx/translation/java_tutorial/read/github)

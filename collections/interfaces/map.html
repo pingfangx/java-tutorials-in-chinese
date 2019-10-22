@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">接口</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="deque.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="order.html">Next&nbsp;»</a>
+                <a target="_top" href="deque.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="order.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Map 接口</h1></div>
@@ -569,7 +569,7 @@ Map&lt;Boolean, List&lt;Student&gt;&gt; passingFailing = students.stream()
 </pre></div>
 
 <p>
-您还可以按城市分组：
+你还可以按城市分组：
 </p>
 
 <div class="codeblock"><pre>
@@ -590,7 +590,7 @@ Map&lt;String, Map&lt;String, List&lt;Person&gt;&gt;&gt; peopleByStateAndCity
 </pre></div>
 
 <p>
-同样，这些只是如何使用新 JDK 8 API 的几个示例。有关 lambda 表达式和聚合操作的深入报道，请参阅标题为 <a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> 的课程。
+同样，这些只是如何使用新 JDK 8 API 的几个示例。有关 lambda 表达式和聚合操作的深入介绍，请参阅标题为 <a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> 的课程。
 </p><!--
 <h2>Comparison to Hashtable</h2>
 <p>If you&#39;ve used <code>Hashtable</code>, you&#39;re already familiar with the general basics of <code>Map</code>. (Of course, <code>Map</code> is an interface, while <code>Hashtable</code> is a concrete implementation.) The following are the major differences:</p>
@@ -636,24 +636,24 @@ java Freq if it is to be it is up to me to delegate
 8 distinct words:
 {to=3, delegate=1, be=1, it=2, up=1, if=1, me=1, is=2}
 </pre></div>
-<p>假设您希望按字母顺序查看频率表。您所要做的就是将 <code>Map</code> 的实现类型从 <code>HashMap</code> 更改为 <code>TreeMap</code>。进行这种四个字符的更改会导致程序从同一命令行生成以下输出。</p>
+<p>假设你希望按字母顺序查看频率表。你所要做的就是将 <code>Map</code> 的实现类型从 <code>HashMap</code> 更改为 <code>TreeMap</code>。进行这种四个字符的更改会导致程序从同一命令行生成以下输出。</p>
 <div class="codeblock"><pre>
 8 distinct words:
 {be=1, delegate=1, if=1, is=2, it=2, me=1, to=3, up=1}
 </pre></div>
-<p>类似地，您可以通过将 map 的实现类型更改为 <code>LinkedHashMap</code>，使程序按照单词首次出现在命令行上的顺序打印频率表。这样做会产生以下输出。</p>
+<p>类似地，你可以通过将 map 的实现类型更改为 <code>LinkedHashMap</code>，使程序按照单词首次出现在命令行上的顺序打印频率表。这样做会产生以下输出。</p>
 <div class="codeblock"><pre>
 8 distinct words:
 {if=1, it=2, is=2, to=3, be=1, up=1, me=1, delegate=1}
 </pre></div>
 <p>这种灵活性有力地说明了基于接口的框架的强大功能。</p>
 <p>与 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html"><code>Set</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html"><code>List</code></a> 接口类似，<code>Map</code> 增强了对 <code>equals</code> 和 <code>hashCode</code> 方法的要求，以便可以比较两个 <code>Map</code> 对象的逻辑相等性，而不考虑它们的实现类型。如果两个 <code>Map</code> 实例表示相同的键值映射，则它们是相等的。</p>
-<p>按照惯例，所有通用 <code>Map</code> 实现都提供构造函数，这些构造函数接受 <code>Map</code> 对象并初始化新的 <code>Map</code> 以包含指定的 <code>Map</code> 中所有的键值映射。此标准 <code>Map</code> 转换构造函数完全类似于标准 <code>Collection</code> 构造函数：它允许调用者创建最初所需实现类型的 <code>Map</code> 包含另一个 <code>Map</code> 中的所有映射，无论其他 <code>Map</code> 的实现类型如何。例如，假设您有 <code>Map</code>，名为 <code>m</code>。以下单行创建一个新的 <code>HashMap</code>，最初包含与 <code>m</code> 相同的所有键值映射。</p>
+<p>按照规范，所有通用 <code>Map</code> 实现都提供构造函数，这些构造函数接受 <code>Map</code> 对象并初始化新的 <code>Map</code> 以包含指定的 <code>Map</code> 中所有的键值映射。此标准 <code>Map</code> 转换构造函数完全类似于标准 <code>Collection</code> 构造函数：它允许调用者创建最初所需实现类型的 <code>Map</code> 包含另一个 <code>Map</code> 中的所有映射，无论其他 <code>Map</code> 的实现类型如何。例如，假设你有 <code>Map</code>，名为 <code>m</code>。以下单行创建一个新的 <code>HashMap</code>，最初包含与 <code>m</code> 相同的所有键值映射。</p>
 <div class="codeblock"><pre>
 Map&lt;K, V&gt; copy = new HashMap&lt;K, V&gt;(m);
 </pre></div>
 <h2>Map 接口批量操作</h2>
-<p><code>clear</code> 操作完全按照您的想法执行：它从 <code>Map</code> 中移除所有映射。<code>putAll</code> 操作是 <code>Collection</code> 接口的 <code>addAll</code> 操作的 <code>Map</code> 类似物。除了明显使用将一个 <code>Map</code> 转储到另一个之外，它还有第二个更微妙的用途。假设 <code>Map</code> 用于表示属性 - 值对的集合；<code>putAll</code> 操作与 <code>Map</code> 转换构造函数结合使用，提供了一种使用默认值实现属性映射创建的简洁方法。以下是演示此技术的静态工厂方法。</p>
+<p><code>clear</code> 操作完全按照你的想法执行：它从 <code>Map</code> 中移除所有映射。<code>putAll</code> 操作是 <code>Collection</code> 接口的 <code>addAll</code> 操作的 <code>Map</code> 类似物。除了明显使用将一个 <code>Map</code> 转储到另一个之外，它还有第二个更微妙的用途。假设 <code>Map</code> 用于表示属性 - 值对的集合；<code>putAll</code> 操作与 <code>Map</code> 转换构造函数结合使用，提供了一种使用默认值实现属性映射创建的简洁方法。以下是演示此技术的静态工厂方法。</p>
 <div class="codeblock"><pre>
 static &lt;K, V&gt; Map&lt;K, V&gt; newAttributeMap(Map&lt;K, V&gt;defaults, Map&lt;K, V&gt; overrides) {
     Map&lt;K, V&gt; result = new HashMap&lt;K, V&gt;(defaults);
@@ -689,22 +689,22 @@ for (Map.Entry&lt;KeyType, ValType&gt; e : m.entrySet())
 <p>起初，很多人担心这些习惯用法可能会很慢，因为每次调用 <code>Collection</code> 视图操作时，<code>Map</code> 都必须创建一个新的 <code>Collection</code> 实例。请不用担心：每次要求给定 <code>Collection</code> 视图时，<code>Map</code> 始终会返回相同的对象。这正是 <code>java.util</code> 中所有 <code>Map</code> 实现的功能。</p>
 <p>使用所有三个 <code>Collection</code> 视图，调用 <code>Iterator</code> 的 <code>remove</code> 操作将从后备 <code>Map</code> 中移除关联的条目，假设后备 <code>Map</code> 支持元素移除。这由前面的过滤习惯用法说明。</p>
 <p>使用 <code>entrySet</code> 视图，还可以通过在迭代期间调用 <code>Map.Entry</code> 的 <code>setValue</code> 方法来更改与键关联的值(再次，假设 <code>Map</code> 支持值修改)。请注意，这些是在迭代期间修改 <code>Map</code> 的 <i>only (唯一)</i> 安全方法；如果在迭代进行过程中以任何其他方式修改基础 <code>Map</code>，则行为未指定。</p>
-<p><code>Collection</code> 视图支持以多种形式移除元素 <code>remove</code>，<code>removeAll</code>，<code>retainAll</code> 和 <code>clear</code> 操作，以及 <code>Iterator.remove</code> 操作。(再次，这假设后备 <code>Map</code> 支持元素移除。)</p>
+<p><code>Collection</code> 视图支持以多种形式移除元素  <code>remove</code>，<code>removeAll</code>，<code>retainAll</code> 和 <code>clear</code> 操作，以及 <code>Iterator.remove</code> 操作。(再次，这假设后备 <code>Map</code> 支持元素移除。)</p>
 <p>在任何情况下，<code>Collection</code> 视图 <i>都不支持</i> 元素添加。对于 <code>keySet</code> 和 <code>values</code> 视图没有任何意义，并且 <code>entrySet</code> 视图没有必要，因为后备 <code>Map</code> 的 <code>put</code> 和 <code>putAll</code> 方法提供相同的功能。</p>
 <h2>集合视图的花哨用途：地图代数</h2>
-<p>当应用于 <code>Collection</code> 视图时，批量操作(<code>containsAll</code>，<code>removeAll</code> 和 <code>retainAll</code>)是令人惊讶的有效工具。对于初学者，假设您想知道一个 <code>Map</code> 是否是另一个的子图也就是说，第一个 <code>Map</code> 是否包含第二个中的所有键值映射。以下习惯用法可以解决这个问题。</p>
+<p>当应用于 <code>Collection</code> 视图时，批量操作(<code>containsAll</code>，<code>removeAll</code> 和 <code>retainAll</code>)是令人惊讶的有效工具。对于初学者，假设你想知道一个 <code>Map</code> 是否是另一个的子图  也就是说，第一个 <code>Map</code> 是否包含第二个中的所有键值映射。以下习惯用法可以解决这个问题。</p>
 <div class="codeblock"><pre>
 if (m1.entrySet().containsAll(m2.entrySet())) {
     ...
 }
 </pre></div>
-<p>沿着类似的行，假设您想知道两个 <code>Map</code> 对象是否包含所有相同键的映射。</p>
+<p>沿着类似的行，假设你想知道两个 <code>Map</code> 对象是否包含所有相同键的映射。</p>
 <div class="codeblock"><pre>
 if (m1.keySet().equals(m2.keySet())) {
     ...
 }
 </pre></div>
-<p>假设您有一个 <code>Map</code> 表示一组属性 - 值对，两个 <code>Set</code> 表示必需的属性和允许的属性。(允许的属性包括必需的属性。)以下代码段确定属性映射是否符合这些约束，如果不符合则打印详细的错误消息。</p>
+<p>假设你有一个 <code>Map</code> 表示一组属性 - 值对，两个 <code>Set</code> 表示必需的属性和允许的属性。(允许的属性包括必需的属性。)以下代码段确定属性映射是否符合这些约束，如果不符合则打印详细的错误消息。</p>
 <div class="codeblock"><pre>
 static &lt;K, V&gt; boolean validate(Map&lt;K, V&gt; attrMap, Set&lt;K&gt; requiredAttrs, Set&lt;K&gt;permittedAttrs) {
     boolean valid = true;
@@ -725,41 +725,41 @@ static &lt;K, V&gt; boolean validate(Map&lt;K, V&gt; attrMap, Set&lt;K&gt; requi
     return valid;
 }
 </pre></div>
-<p>假设您想知道两个 <code>Map</code> 对象共有的所有键。</p>
+<p>假设你想知道两个 <code>Map</code> 对象共有的所有键。</p>
 <div class="codeblock"><pre>
 Set&lt;KeyType&gt;commonKeys = new HashSet&lt;KeyType&gt;(m1.keySet());
 commonKeys.retainAll(m2.keySet());
 </pre></div>
-<p>类似的习惯用法可以为您提供共同的值。</p>
-<p>到目前为止提出的所有习惯用法都是非破坏性的；也就是说，他们不会修改后备 <code>Map</code>。这里有一些会。假设您要移除一个 <code>Map</code> 与另一个键共有的所有键值对。</p>
+<p>类似的习惯用法可以为你提供共同的值。</p>
+<p>到目前为止提出的所有习惯用法都是非破坏性的；也就是说，他们不会修改后备 <code>Map</code>。这里有一些会。假设你要移除一个 <code>Map</code> 与另一个键共有的所有键值对。</p>
 <div class="codeblock"><pre>
 m1.entrySet().removeAll(m2.entrySet());
 </pre></div>
-<p>假设您要从一个 <code>Map</code> 中移除在另一个中具有映射的所有键。</p>
+<p>假设你要从一个 <code>Map</code> 中移除在另一个中具有映射的所有键。</p>
 <div class="codeblock"><pre>
 m1.keySet().removeAll(m2.keySet());
 </pre></div>
-<p>在同一批量操作中开始混合键和值时会发生什么？假设您有一个 <code>Map</code>，<code>managers</code>，它将公司中的每个员工映射到员工的经理。我们会故意模糊键和值对象的类型。没关系，只要它们是相同的。现在假设您想知道所有“个人贡献者”(或非管理者)是谁。以下代码段将准确告诉您您想要了解的内容。</p>
+<p>在同一批量操作中开始混合键和值时会发生什么？假设你有一个 <code>Map</code>，<code>managers</code>，它将公司中的每个员工映射到员工的经理。我们会故意模糊键和值对象的类型。没关系，只要它们是相同的。现在假设你想知道所有“个人贡献者”(或非管理者)是谁。以下代码段将准确告诉你你想要了解的内容。</p>
 <div class="codeblock"><pre>
 Set&lt;Employee&gt; individualContributors = new HashSet&lt;Employee&gt;(managers.keySet());
 individualContributors.removeAll(managers.values());
 </pre></div>
-<p>假设您要解雇所有直接向某位经理 Simon 报告的员工。</p>
+<p>假设你要解雇所有直接向某位经理 Simon 报告的员工。</p>
 <div class="codeblock"><pre>
 Employee simon = ... ;
 managers.values().removeAll(Collections.singleton(simon));
 </pre></div>
 <p>请注意，此习惯用法使用 <code>Collections.singleton</code>，这是一个静态工厂方法，它返回带有单个指定元素的不可变 <code>Set</code>。</p>
-<p>一旦您完成了这项工作，您可能会有一大堆员工，他们的经理不再为公司工作(如果任何西蒙的直接报告本身就是经理)。以下代码将告诉您哪些员工拥有不再为公司工作的经理。</p>
+<p>一旦你完成了这项工作，你可能会有一大堆员工，他们的经理不再为公司工作(如果任何西蒙的直接报告本身就是经理)。以下代码将告诉你哪些员工拥有不再为公司工作的经理。</p>
 <div class="codeblock"><pre>
 Map&lt;Employee, Employee&gt; m = new HashMap&lt;Employee, Employee&gt;(managers);
 m.values().removeAll(managers.keySet());
 Set&lt;Employee&gt; slackers = m.keySet();
 </pre></div>
 <p>这个例子有点棘手。首先，它创建 <code>Map</code> 的临时副本，并从临时副本中移除其(manager)值是原始 <code>Map</code> 中的键的所有条目。请记住，原始 <code>Map</code> 为每位员工都有一个条目。因此，临时 <code>Map</code> 中的其余条目包含原始 <code>Map</code> 中的所有条目，其(经理)值不再是雇员。因此，临时副本中的 key 恰好代表了我们正在寻找的员工。</p>
-<p>还有很多像本节所包含的那样的习惯用法，但是将它们全部列出是不实际和繁琐的。一旦您掌握了它的窍门，当您需要它的时候，找到一个合适的并不难。</p>
+<p>还有很多像本节所包含的那样的习惯用法，但是将它们全部列出是不实际和繁琐的。一旦你掌握了它的窍门，当你需要它的时候，找到一个合适的并不难。</p>
 <h2>Multimaps</h2>
-<p><i>multimap</i> 类似于 <code>Map</code>，但它可以将每个键映射到多个值。Java Collections Framework 不包含多重映射的接口，因为它们不常用。将值 <code>List</code> 实例的 <code>Map</code> 用作 multimap，这是一件相当简单的事情。在下一个代码示例中演示了此技术，该示例读取每行包含一个单词(全部小写)的单词列表，并打印出符合大小标准的所有 anagram 组。<i>anagram group</i> 是一堆单词，所有单词都包含完全相同的字母，但顺序不同。该程序在命令行上有两个参数：(1)字典文件的名称和(2)要打印的 anagram 组的最小大小。不打印包含少于指定最小值的单词组的 Anagram 组。</p>
+<p><i>multimap</i> 类似于 <code>Map</code>，但它可以将每个键映射到多个值。Java 集合框架不包含多重映射的接口，因为它们不常用。将值 <code>List</code> 实例的 <code>Map</code> 用作 multimap，这是一件相当简单的事情。在下一个代码示例中演示了此技术，该示例读取每行包含一个单词(全部小写)的单词列表，并打印出符合大小标准的所有 anagram 组。<i>anagram group (anagram 组)</i> 是一堆单词，所有单词都包含完全相同的字母，但顺序不同。该程序在命令行上有两个参数：(1)字典文件的名称和(2)要打印的 anagram 组的最小大小。不打印包含少于指定最小值的单词组的 anagram 组。</p>
 <p>找到 anagram 组有一个标准技巧：对于字典中的每个单词，按字母顺序排列单词中的字母(即将单词的字母重新排序为字母顺序)并将条目放入 multimap，将字母顺序排列的单词映射到原始单词字。例如，单词 <em>bad</em> 会产生 <em>abd</em> 映射 <em>bad</em> 的条目以放入 multimap。片刻的反射将显示任何给定键映射形成 anagram 组的所有单词。迭代 multimap 中的键，打印出满足大小约束的每个 anagram 组是一件简单的事情。</p>
 <p>
 <a class="SourceLink" target="_blank" href="examples/Anagrams.java" onclick="showCode('../../displayCode.html', 'examples/Anagrams.java'); return false;"><code>以下程序</code></a>是该技术的直接实现。</p>

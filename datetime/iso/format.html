@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>&gt;<a href="index.html" target="_top">标准日历</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="instant.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="temporal.html">Next&nbsp;»</a>
+                <a target="_top" href="instant.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="temporal.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>解析和格式化</h1></div>
@@ -507,15 +507,15 @@
 
 
 <p>
-Date-Time API 中基于时间的类提供 <tt>parse</tt> 方法，用于解析包含日期和时间信息的字符串。这些类还提供了 <tt>format</tt> 方法，用于格式化基于时间的对象以供显示。在这两种情况下，过程都类似：您为 <tt>DateTimeFormatter</tt> 提供模式以创建格式化程序对象。然后将此格式化程序传递给 <tt>parse</tt> 或 <tt>format</tt> 方法。</p>
+Date-Time API 中基于时间的类提供 <tt>parse</tt> 方法，用于解析包含日期和时间信息的字符串。这些类还提供了 <tt>format</tt> 方法，用于格式化基于时间的对象以供显示。在这两种情况下，过程都类似：你为 <tt>DateTimeFormatter</tt> 提供模式以创建格式化程序对象。然后将此格式化程序传递给 <tt>parse</tt> 或 <tt>format</tt> 方法。</p>
 <p>
-<tt>DateTimeFormatter</tt> 类提供了大量 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#predefined">预定义的格式化程序</a>，或者您可以定义自己的格式化程序。</p>
+<tt>DateTimeFormatter</tt> 类提供了大量 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#predefined">预定义的格式化程序</a>，或者你可以定义自己的格式化程序。</p>
 <p>
-如果在转换过程中出现问题，<tt>parse</tt> 和 <tt>format</tt> 方法会抛出异常。因此，您的解析代码应该捕获 <tt>DateTimeParseException</tt> 错误，并且您的格式代码应该捕获 <tt>DateTimeException</tt> 错误。有关异常处理的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../essential/exceptions/handling.html">Catching and Handling Exceptions</a>。</p>
+如果在转换过程中出现问题，<tt>parse</tt> 和 <tt>format</tt> 方法会抛出异常。因此，你的解析代码应该捕获 <tt>DateTimeParseException</tt> 错误，并且你的格式代码应该捕获 <tt>DateTimeException</tt> 错误。有关异常处理的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../essential/exceptions/handling.html">Catching and Handling Exceptions</a>。</p>
 <p>
 <tt>DateTimeFormatter</tt> 类既是不可变的又是线程安全的；它可以(并且应该)在适当的时候分配给静态常量。</p>
 
-<div class="note"><hr /><strong>Version Note:</strong> <tt>java.time</tt> 日期时间对象可以直接与 <tt>java.util.Formatter</tt> 和 <tt>String.format</tt> 一起使用，通过使用相似的基于模式的格式，原先用于遗留的 <tt>java.util.Date</tt> 和 <tt>java.util.Calendar</tt> 类。
+<div class="note"><hr /><strong>版本说明:</strong>&nbsp;<tt>java.time</tt> 日期时间对象可以直接与 <tt>java.util.Formatter</tt> 和 <tt>String.format</tt> 一起使用，通过使用相似的基于模式的格式，原先用于遗留的 <tt>java.util.Date</tt> 和 <tt>java.util.Calendar</tt> 类。
 <hr /></div>
 
 <h2>解析</h2>
@@ -526,7 +526,7 @@ String in = ...;
 LocalDate date = LocalDate.parse(in, DateTimeFormatter.BASIC_ISO_DATE);
 </pre></div>
 <p>
-您还可以使用自己的模式定义格式化程序。以下代码，来自 <a class="SourceLink" target="_blank" href="examples/Parse.java" onclick="showCode('../../displayCode.html', 'examples/Parse.java'); return false;"><code><tt>Parse</tt></code></a> 示例，创建一个格式化程序，应用格式“MMM d yyyy”。此格式指定表示月份的三个字符，表示月份日期的一个数字和表示年份的四个数字。使用此模式创建的格式化程序将识别诸如“Jan 3 2003”或“Mar 23 1994”之类的字符串。但是，要将格式指定为“MMM dd yyyy”，每月中有两个字符，那么您必须始终使用两个字符，填充零以表示一位数的日期：“Jun 03 2003”。</p>
+你还可以使用自己的模式定义格式化程序。以下代码，来自 <a class="SourceLink" target="_blank" href="examples/Parse.java" onclick="showCode('../../displayCode.html', 'examples/Parse.java'); return false;"><code><tt>Parse</tt></code></a> 示例，创建一个格式化程序，应用格式“MMM d yyyy”。此格式指定表示月份的三个字符，表示月份日期的一个数字和表示年份的四个数字。使用此模式创建的格式化程序将识别诸如“Jan 3 2003”或“Mar 23 1994”之类的字符串。但是，要将格式指定为“MMM dd yyyy”，每月中有两个字符，那么你必须始终使用两个字符，填充零以表示一位数的日期：“Jun 03 2003”。</p>
 <div class="codeblock"><pre>
 String input = ...;
 try {

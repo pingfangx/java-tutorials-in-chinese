@@ -515,7 +515,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="cl.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="objectstreams.html">Next&nbsp;»</a>
+                <a target="_top" href="cl.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="objectstreams.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>数据流</h1></div>
@@ -610,7 +610,7 @@ try {
 }
 </pre></div>
 <p>请注意，<code>DataStreams</code> 通过捕获 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/EOFException.html"><code>EOFException</code></a> 来检测文件结束条件，而不是测试无效的返回值。<code>DataInput</code> 方法的所有实现都使用 <code>EOFException</code> 而不是返回值。</p>
-<p>另请注意，<code>DataStreams</code> 中的每个专用 <code>write</code> 都与相应的专用 <code>read</code> 完全匹配。程序员需要确保输出类型和输入类型以这种方式匹配：输入流由简单的二进制数据组成，没有任何内容可以指示单个值的类型，也不是它们在流中开始的位置。</p>
+<p>另请注意，<code>DataStreams</code> 中的每个专用 <code>write</code> 都与相应的专用 <code>read</code> 完全匹配。程序员需要确保输出类型和输入类型以这种方式匹配：输入流由简单的二进制数据组成，没有任何内容可以指示单个值的类型或它们在流中开始的位置。</p>
 <p><code>DataStreams</code> 使用一种非常糟糕的编程技术：它使用浮点数来表示货币值。通常，浮点对于精确值是不利的。对于小数部分尤其如此，因为常见值(例如 <code>0.1</code>)没有二进制表示。</p>
 <p>用于货币值的正确类型是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html"><code>java.math.BigDecimal</code></a>。不幸的是，<code>BigDecimal</code> 是一种对象类型，因此它不适用于数据流。但是，<code>BigDecimal</code> <i>will (将)</i> 与对象流一起使用，这将在下一节中介绍。</p>
 

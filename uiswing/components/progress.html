@@ -526,7 +526,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">使用 Swing 组件</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="passwordfield.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="rootpane.html">Next&nbsp;»</a>
+                <a target="_top" href="passwordfield.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="rootpane.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>如何使用进度条</h1></div>
@@ -558,7 +558,7 @@ container.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
 <h2><a name="bars" id="bars">Using Determinate Progress Bars</a></h2>
 <p>Here's a picture of a small demo application that uses a progress bar to measure the progress of a task that runs in its own thread:</p>
 <center><img src="../../figures/uiswing/components/ProgressBarDemo.png" width="281" height="203" align="bottom" alt="A snapshot of ProgressBarDemo, which uses a progress bar" /></center><!-- *******  boilerplate stuff ******* -->
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ul>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ul>
 <li>Click the Launch button to run the ProgressBar Demo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#ProgressBarDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ProgressBarDemoProject/ProgressBarDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the ProgressBar Demo example" /></a><br /></li>
 </ul>
@@ -665,7 +665,7 @@ public void propertyChange(PropertyChangeEvent evt) {
 <p>The other changes in the code are related to string display. A progress bar that displays a string is likely to be taller than one that doesn't, and, as the demo designers, we've arbitarily decided that this progress bar should display a string only when it's in the default, determinate mode. However, we want to avoid the layout ugliness that might result if the progress bar changed height when it changed modes. Thus, the code leaves in the call to <code>setStringPainted(true)</code> but adds a call to <code>setString("")</code> so that no text will be displayed. Later, when the progress bar switches from indeterminate to determinate mode, invoking <code>setString(null)</code> makes the progress bar display its default string.</p>
 <p>One change we did <em>not</em> make was removing the call to <code>progressBar.setValue</code> from the <code>progress</code> event handler. The call doesn't do any harm because an indeterminate progress bar doesn't use its value property, except perhaps to display it in the status string. In fact, keeping the progress bar's data as up-to-date as possible is a good practice, since some look and feels might not support indeterminate mode.</p><!-- *******  boilerplate stuff ******* -->
 
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run the ProgressBar2 Demo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#ProgressBarDemo2">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ProgressBarDemo2Project/ProgressBarDemo2.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the ProgressBar2 Demo example" /></a><br /></li>
 <li>Push the <strong>Start</strong> button. Note that the progress bar starts animating as soon as the button is pressed, and then switches back into determinate mode (like ProgressBarDemo).</li>
@@ -692,7 +692,7 @@ public void propertyChange(PropertyChangeEvent evt) {
 <h2><a name="monitors" id="monitors">How to Use Progress Monitors</a></h2>
 <p>Now let's rewrite ProgressBarDemo to use a progress monitor instead of a progress bar. Here's a picture of the new demo program, ProgressMonitorDemo:</p>
 <center><img src="../../figures/uiswing/components/ProgressMonitorDemo.png" width="469" height="267" align="bottom" alt="A snapshot of ProgressMonitorDemo and a dialog brought up by a progress monitor" /></center><!-- *******  boilerplate stuff ******* -->
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run the ProgressMonitor Demo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#ProgressMonitorDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ProgressMonitorDemoProject/ProgressMonitorDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the ProgressMonitor Demo example" /></a><br /></li>
 <li>Push the <strong>Start</strong> button. After a certain amount of time, the program displays a progress dialog.</li>

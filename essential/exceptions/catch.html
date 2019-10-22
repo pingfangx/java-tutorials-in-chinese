@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="creating.html">创建异常类</a></div>
-<div class="linkAHEAD"><a href="runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="summary.html">总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -500,7 +500,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="try.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="finally.html">Next&nbsp;»</a>
+                <a target="_top" href="try.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="finally.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>catch 块</h1></div>
@@ -516,7 +516,7 @@ try {
 
 }
 </pre></div>
-<p>每个 <code>catch</code> 块都是一个异常处理程序，它处理由其参数指示的异常类型。参数类型，<code><em>异常类型（ExceptionType）</em></code>，声明处理程序可以处理的异常类型，并且必须是继承自 <code>Throwable</code> 类的类的名称。处理程序可以使用 <code><em>name</em></code> 引用异常。</p>
+<p>每个 <code>catch</code> 块都是一个异常处理程序，它处理由其参数指示的异常类型。参数类型，<code><em>ExceptionType (异常类型)</em></code>，声明处理程序可以处理的异常类型，并且必须是继承自 <code>Throwable</code> 类的类的名称。处理程序可以使用 <code><em>name</em></code> 引用异常。</p>
 <p><code>catch</code> 块包含在调用异常处理程序时执行的代码。当处理程序是调用堆栈中第一个 <code><em>ExceptionType</em></code> 与抛出的异常类型匹配时，运行时系统调用异常处理程序。如果抛出的对象可以合法地分配给异常处理程序的参数，则系统认为它是匹配的。</p>
 <p>以下是 <code>writeList</code> 方法的两个异常处理程序：</p>
 <div class="codeblock"><pre>
@@ -540,7 +540,7 @@ catch (IOException|SQLException ex) {
     throw ex;
 }
 </pre></div>
-<p><strong>注意</strong>:如果 <code>catch</code> 块处理多个异常类型，则 <code>catch</code> 参数隐式 <code>final</code>。在此示例中，<code>catch</code> 参数 <code>ex</code> 是 <code>final</code>，因此您无法在 <code>catch</code> 块中为其指定任何值。</p>
+<p><strong>注意</strong>:如果 <code>catch</code> 块处理多个异常类型，则 <code>catch</code> 参数隐式 <code>final</code>。在此示例中，<code>catch</code> 参数 <code>ex</code> 是 <code>final</code>，因此你无法在 <code>catch</code> 块中为其指定任何值。</p>
 
 
         </div>

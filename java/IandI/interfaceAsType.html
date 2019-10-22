@@ -503,14 +503,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="usinginterface.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="nogrow.html">Next&nbsp;»</a>
+                <a target="_top" href="usinginterface.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="nogrow.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用接口作为类型</h1></div>
             <div id="PageContent">
 
-<p>定义新接口时，您将定义新的参考数据类型。您可以在任何可以使用任何其他数据类型名称的地方使用接口名称。如果定义类型为接口的引用变量，则分配给它的任何对象 <i>必须</i> 是实现接口的类的实例。</p>
-<p>作为示例，这里是一种用于查找一对对象中的最大对象的方法，对于从实现 <code>Relatable</code> 的类实例化的 <i>any</i> 对象：</p>
+<p>定义新接口时，你将定义新的引用数据类型。你可以在任何可以使用任何其他数据类型名称的地方使用接口名称。如果定义类型为接口的引用变量，则分配给它的任何对象 <i>必须</i> 是实现接口的类的实例。</p>
+<p>作为示例，这里是一种用于查找一对对象中的最大对象的方法，对于从实现 <code>Relatable</code> 的类实例化的 <i>任何</i> 对象：</p>
 <div class="codeblock"><pre>
 public Object findLargest(Object object1, Object object2) {
    Relatable obj1 = (Relatable)object1;
@@ -522,7 +522,7 @@ public Object findLargest(Object object1, Object object2) {
 }
 </pre></div>
 <p>通过将 <code>object1</code> 转换为 <code>Relatable</code> 类型，它可以调用 <code>isLargerThan</code> 方法。</p>
-<p>如果您要在各种类中实现 <code>Relatable</code>，那么可以将从这些类的 <i>any</i> 实例化的对象与 <code>findLargest()</code> 方法只要两个对象属于同一个类。同样，它们都可以与以下方法进行比较：</p>
+<p>如果你要在各种类中实现 <code>Relatable</code>，那么可以从这些类实例化的 <i>任何</i> 对象都可以用 <code>findLargest()</code> 方法比较  只要两个对象属于同一个类。同样，它们都可以用以下方法进行比较：</p>
 <div class="codeblock"><pre>
 public Object findSmallest(Object object1, Object object2) {
    Relatable obj1 = (Relatable)object1;

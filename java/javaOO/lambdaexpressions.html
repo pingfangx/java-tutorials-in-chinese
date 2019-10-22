@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,15 +512,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="anonymousclasses.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methodreferences.html">Next&nbsp;»</a>
+                <a target="_top" href="anonymousclasses.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methodreferences.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Lambda 表达式</h1></div>
             <div id="PageContent">
 
-<p>匿名类的一个问题是，如果匿名类的实现非常简单，例如只包含一个方法的接口，那么匿名类的语法可能看起来不实用且不清楚。在这些情况下，您通常会尝试将函数作为参数传递给另一个方法，例如当有人单击按钮时应采取的操作。Lambda 表达式使您可以执行此操作，将函数视为方法参数，或将代码视为数据。</p>
+<p>匿名类的一个问题是，如果匿名类的实现非常简单，例如只包含一个方法的接口，那么匿名类的语法可能看起来不实用且不清楚。在这些情况下，你通常会尝试将函数作为参数传递给另一个方法，例如传递当有人单击按钮时应采取的操作。Lambda 表达式使你可以执行此操作，将函数视为方法参数，或将代码视为数据。</p>
 
-<p>上一节 <a class="TutorialLink" target="_top" href="anonymousclasses.html">匿名类</a>，向您展示了如何在不给它命名的情况下实现某个基类。虽然这通常比命名类更简洁，但对于只有一个方法的类，即使是匿名类也似乎有点过分和繁琐。Lambda 表达式允许您更紧凑地表达单方法的类的实例。</p>
+<p>上一节 <a class="TutorialLink" target="_top" href="anonymousclasses.html">匿名类</a>，向你展示了如何在不给它命名的情况下实现某个基类。虽然这通常比命名类更简洁，但对于只有一个方法的类，即使是匿名类也似乎有点过分和繁琐。Lambda 表达式允许你更紧凑地表达单个方法的类的实例。</p>
 
 <p>本节包括以下主题：</p>
 
@@ -551,7 +551,7 @@
 
 <h2><a name="use-case">Lambda 表达式的理想用例</a></h2>
 
-<p>假设您正在创建社交网络应用程序。您希望创建一项功能，使管理员能够对满足特定条件的社交网络应用程序成员执行任何类型的操作，例如发送消息。下表详细描述了此用例：</p>
+<p>假设你正在创建社交网络应用程序。你希望创建一项功能，使管理员能够对满足特定条件的社交网络应用程序成员执行任何类型的操作，例如发送消息。下表详细描述了此用例：</p>
 
 <table border="1" summary="用于社交网络应用程序的用例">
   <tr>
@@ -627,14 +627,14 @@
     }
 }</pre>
 
-<p>假设您的社交网络应用程序的成员存储在 <code>List&lt;Person&gt;</code> 实例中。</p>
+<p>假设你的社交网络应用程序的成员存储在 <code>List&lt;Person&gt;</code> 实例中。</p>
 
 <p>本节首先介绍这种用例的简单方法。它使用局部和匿名类改进了这种方法，然后使用 lambda 表达式以高效和简洁的方法完成。在示例 <a class="SourceLink" target="_blank" href="examples/RosterTest.java" onclick="showCode('../../displayCode.html', 'examples/RosterTest.java'); return false;"><code>RosterTest</code></a> 中查找本节中描述的代码片段。
 </p>
 
 <h3><a name="approach1">方法 1：创建搜索匹配一个特征的成员的方法</a></h3>
 
-<p>一种简单的方法是创建几种方法;每种方法都会搜索与一个特征匹配的成员，例如性别或年龄。以下方法打印超过指定年龄的成员：</p>
+<p>一种简单的方式是创建多个方法；每个方法都会搜索与一个特征匹配的成员，例如性别或年龄。以下方法打印超过指定年龄的成员：</p>
 
 
 <pre class="codeblock">public static void printPersonsOlderThan(List&lt;Person&gt; roster, int age) {
@@ -647,7 +647,7 @@
 
 <p><b>Note</b>：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html"><code>List</code></a> 是有序的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html"><code>Collection</code></a>。<em>collection</em> 是将多个元素组合到一个单元中的对象。集合用于存储，检索，操作和传递聚合数据。有关集合的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/index.html">Collections</a> 路径。</p>
 
-<p>这种方法可能会使您的应用程序 <em>brittle（脆弱）</em>，这是由于引入了更新(例如更新的数据类型)而导致应用程序无法工作的可能性。假设您升级应用程序并更改 <code>Person</code> 类的结构，使其包含不同的成员变量;也许该类记录和测量年龄与不同的数据类型或算法。您必须重写大量 API 以适应此更改。此外，这种方法是不必要的限制;例如，如果您想要打印年龄小于某个年龄的成员，该怎么办？</p><!-- ********************************************************************** -->
+<p>这种方式可能会使你的应用程序 <em>brittle (脆弱)</em>，因为如果引入更新(例如新的数据类型)就可能导致应用程序无法工作。假设你升级应用程序并更改 <code>Person</code> 类的结构，使其包含不同的成员变量；也许类使用不同的数据类型或算法记录和测量年龄。你必须重写大量 API 以适应此更改。此外，这种方法有不必要的限制；例如，如果你想打印小于某个年龄的成员，该怎么办？</p><!-- ********************************************************************** -->
 
 
 <h3><a name="approach2">方法 2：创建更通用的搜索方法</a></h3>
@@ -664,12 +664,12 @@
 }</pre>
 
 
-<p>如果您想要打印指定性别的成员，或指定性别和年龄范围的组合，该怎么办？如果您决定更改 <code>Person</code> 类并添加其他属性（如关系状态或地理位置），该怎么办？虽然此方法比 <code>printPersonsOlderThan</code> 更通用，但尝试为每个可能的搜索查询创建单独的方法仍然会导致代码脆弱。您可以改为分隔指定要在其他类中搜索的条件的代码。</p><!-- ********************************************************************** -->
+<p>如果你想要打印指定性别的成员，或指定性别和年龄范围的组合，该怎么办？如果你决定更改 <code>Person</code> 类并添加其他属性（如关系状态或地理位置），该怎么办？虽然此方法比 <code>printPersonsOlderThan</code> 更通用，但尝试为每个可能的搜索查询创建单独的方法仍然会导致代码脆弱。相反，你可以将指定要在其他类中搜索的条件的代码分开。</p><!-- ********************************************************************** -->
 
 
 <h3><a name="approach3">方法 3：在局部类中指定搜索条件代码</a></h3>
 
-<p>以下方法打印与您指定的搜索条件匹配的成员：</p>
+<p>以下方法打印与你指定的搜索条件匹配的成员：</p>
 
 <pre class="codeblock">public static void printPersons(
     List&lt;Person&gt; roster, CheckPerson tester) {
@@ -703,7 +703,7 @@
 <pre class="codeblock">printPersons(
     roster, new CheckPersonEligibleForSelectiveService());</pre>
 
-<p>虽然这种方法不那么脆弱 - 如果更改 <code>Person</code> 的结构，则不必重写方法 - 但还是需要写其他代码：为在应用中执行的每个搜索写新接口和局部类。因为 <code>CheckPersonEligibleForSelectiveService</code> 实现了一个接口，所以您可以使用匿名类而不是局部类，并且无需为每次搜索声明一个新类。</p><!-- ********************************************************************** -->
+<p>虽然这种方法不那么脆弱了 - 如果更改 <code>Person</code> 的结构，则不必重写方法 - 但还是需要写其他代码：为在应用中执行的每个搜索写新接口和局部类。因为 <code>CheckPersonEligibleForSelectiveService</code> 实现了一个接口，所以你可以使用匿名类而不是局部类，并且无需为每次搜索声明一个新类。</p><!-- ********************************************************************** -->
 
 
 <h3><a name="approach4">方法 4：在匿名类中指定搜索条件代码</a></h3>
@@ -721,12 +721,12 @@
     }
 );</pre>
 
-<p>此方法减少了所需的代码量，因为您不必为要执行的每个搜索创建新类。但是，考虑到 <code>CheckPerson</code> 接口只包含一个方法，匿名类的语法很笨重。在这种情况下，您可以使用 lambda 表达式而不是匿名类，如下一节中所述。</p><!-- ********************************************************************** -->
+<p>此方法减少了所需的代码量，因为你不必为要执行的每个搜索创建新类。但是，考虑到 <code>CheckPerson</code> 接口只包含一个方法，匿名类的语法很笨重。在这种情况下，你可以使用 lambda 表达式而不是匿名类，如下一节中所述。</p><!-- ********************************************************************** -->
 
 
 <h3><a name="approach5">方法 5：使用 Lambda 表达式指定搜索条件代码</a></h3>
 
-<p><code>CheckPerson</code> 接口是 <i>functional interface（函数式接口）</i>。函数式接口是任何只包含一个 <a class="TutorialLink" target="_top" href="../../java/IandI/abstract.html">抽象方法</a> 的接口。(函数式接口可能包含一个或多个 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">default methods（默认方法）</a> 或 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html#static">static methods（静态方法）</a>。)因为函数式接口只包含一个抽象方法，所以当您实现它时可省略该方法的名称。要执行此操作，请使用 <i>lambda 表达式</i>，而不是使用匿名类表达式，该表达式在以下方法调用中高亮：</p>
+<p><code>CheckPerson</code> 接口是 <i>functional interface (函数式接口)</i>。函数式接口是任何只包含一个 <a class="TutorialLink" target="_top" href="../../java/IandI/abstract.html">抽象方法</a> 的接口。(函数式接口可能包含一个或多个 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html">default methods (默认方法)</a> 或 <a class="TutorialLink" target="_top" href="../../java/IandI/defaultmethods.html#static">static methods (静态方法)</a>。)因为函数式接口只包含一个抽象方法，所以当你实现它时可省略该方法的名称。要执行此操作，请使用 <i>lambda 表达式</i>，而不是使用匿名类表达式，该表达式在以下方法调用中高亮：</p>
 
 <pre class="codeblock">printPersons(
     roster,
@@ -737,7 +737,7 @@
 
 <p>有关如何定义 lambda 表达式的信息，请参阅 <a href="#syntax">Syntax of Lambda Expressions</a>。</p>
 
-<p>您可以使用标准函数式接口代替接口 <code>CheckPerson</code>，这可以进一步减少所需的代码量。</p><!-- ********************************************************************** -->
+<p>你可以使用标准函数式接口代替接口 <code>CheckPerson</code>，这可以进一步减少所需的代码量。</p><!-- ********************************************************************** -->
 
 
 <h3><a name="approach6">方法 6：将标准函数式接口与 Lambda 表达式一起使用</a></h3>
@@ -748,22 +748,22 @@
     boolean test(Person p);
 }</pre>
 
-<p>这是一个非常简单的接口。它是一个函数式接口，因为它只包含一个抽象方法。此方法接受一个参数并返回 <code>boolean</code> 值。该方法非常简单，在您的应用程序中定义一个方法可能不值得。因此，JDK 定义了几个标准函数式接口，您可以在包 <code>java.util.function</code> 中找到它们。</p>
+<p>这是一个非常简单的接口。它是一个函数式接口，因为它只包含一个抽象方法。此方法接受一个参数并返回 <code>boolean</code> 值。该方法非常简单，在你的应用程序中定义一个方法可能不值得。因此，JDK 定义了几个标准函数式接口，你可以在包 <code>java.util.function</code> 中找到它们。</p>
 
-<p>例如，您可以使用 <code>Predicate&lt;T&gt;</code> 接口代替 <code>CheckPerson</code>。该接口包含方法 <code>boolean test(T t)</code>：</p>
+<p>例如，你可以使用 <code>Predicate&lt;T&gt;</code> 接口代替 <code>CheckPerson</code>。该接口包含方法 <code>boolean test(T t)</code>：</p>
 
 
 <pre class="codeblock">interface Predicate&lt;T&gt; {
     boolean test(T t);
 }</pre>
 
-<p>接口 <code>Predicate&lt;T&gt;</code> 是泛型接口的示例。（有关泛型的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../java/generics/index.html">Generics (Updated)</a> 课程。）泛型类型（如泛型接口）在尖括号（<code>&lt;&gt;</code> ）内指定一个或多个类型参数。此接口仅包含一个类型参数 <code>T</code>。当您使用实际类型参数声明或实例化泛型类型时，您具有参数化类型。例如，参数化类型 <code>Predicate&lt;Person&gt;</code> 如下：</p>
+<p>接口 <code>Predicate&lt;T&gt;</code> 是泛型接口的示例。（有关泛型的更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../java/generics/index.html">Generics (Updated)</a> 课程。）泛型类型（如泛型接口）在尖括号（<code>&lt;&gt;</code> ）内指定一个或多个类型形参。此接口仅包含一个类型形参 <code>T</code>。当你使用实际类型实参声明或实例化泛型类型时，你具有参数化类型。例如，参数化类型 <code>Predicate&lt;Person&gt;</code> 如下：</p>
 
 <pre class="codeblock">interface Predicate&lt;<code>Person</code>&gt; {
     boolean test(<code>Person</code> t);
 }</pre>
 
-<p>此参数化类型包含与 <code>CheckPerson.boolean test(Person p)</code> 具有相同返回类型和参数的方法。因此，您可以使用 <code>Predicate&lt;T&gt;</code> 代替 <code>CheckPerson</code>，如以下方法所示：</p>
+<p>此参数化类型包含与 <code>CheckPerson.boolean test(Person p)</code> 具有相同返回类型和参数的方法。因此，你可以使用 <code>Predicate&lt;T&gt;</code> 代替 <code>CheckPerson</code>，如以下方法所示：</p>
 
 <pre class="codeblock">public static void printPersonsWithPredicate(
     List&lt;Person&gt; roster, Predicate&lt;Person&gt; tester) {
@@ -801,7 +801,7 @@
 
 <p>此方法检查 <code>List</code> 参数 <code>roster</code> 中包含的每个 <code>Person</code> 实例是否满足 <code>Predicate</code> 参数 <code>tester</code> 中指定的条件。如果 <code>Person</code> 实例满足 <code>tester</code> 指定的条件，则在 <code>Person</code> 实例上调用方法 <code>printPersron</code>。</p>
 
-<p>您可以指定对满足 <code>tester</code> 指定条件的 <code>Person</code> 实例执行的其他操作，而不是调用方法 <code>printPerson</code>。您可以使用 lambda 表达式指定此操作。假设你想要一个类似于 <code>printPerson</code> 的 lambda 表达式，一个接受一个参数(类型为 <code>Person</code> 的对象)并返回 void。请记住，要使用 lambda 表达式，您需要实现一个函数式接口。在这种情况下，您需要一个包含抽象方法的函数式接口，该方法可以接受一个 <code>Person</code> 类型的参数并返回 void。<code>Consumer&lt;T&gt;</code> 接口包含方法 <code>void accept(T t)</code>，它具有这些特性。以下方法将调用 <code>p.printPerson()</code> 替换为调用方法 <code>accept</code> 的 <code>Consumer&lt;Person&gt;</code> 实例：</p>
+<p>你可以指定对满足 <code>tester</code> 指定条件的 <code>Person</code> 实例执行的其他操作，而不是调用方法 <code>printPerson</code>。你可以使用 lambda 表达式指定此操作。假设你想要一个类似于 <code>printPerson</code> 的 lambda 表达式，一个接受一个参数(类型为 <code>Person</code> 的对象)并返回 void。请记住，要使用 lambda 表达式，你需要实现一个函数式接口。在这种情况下，你需要一个包含抽象方法的函数式接口，该方法可以接受一个 <code>Person</code> 类型的参数并返回 void。<code>Consumer&lt;T&gt;</code> 接口包含方法 <code>void accept(T t)</code>，它具有这些特性。以下方法将调用 <code>p.printPerson()</code> 替换为调用方法 <code>accept</code> 的 <code>Consumer&lt;Person&gt;</code> 实例：</p>
 
 <pre class="codeblock">public static void processPersons(
     List&lt;Person&gt; roster,
@@ -814,7 +814,7 @@
         }
 }</pre>
 
-<p>因此，以下方法调用与在 <a href="#approach3">方法 3：在局部类中指定搜索条件代码</a> 中调用 <code>printPersons</code> 时相同，以获取符合美国兵役登记制度的成员：The lambda expression used to print members is highlighted:</p>
+<p>因此，以下方法调用与在 <a href="#approach3">方法 3：在局部类中指定搜索条件代码</a> 中调用 <code>printPersons</code> 时相同，以获取符合美国兵役登记制度的成员：用于打印成员的 lambda 表达式被高亮：</p>
 
 <pre class="codeblock">processPersons(
      roster,
@@ -824,7 +824,7 @@
      <strong>p -&gt; p.printPerson()</strong>
 );</pre>
 
-<p>如果您想对会员的个人资料进行更多操作而不是打印出来，该怎么办？。假设您要验证成员的个人资料或检索他们的联系信息？在这种情况下，您需要一个包含返回值的抽象方法的函数式接口。<code>Function&lt;T,R&gt;</code> 接口包含方法 <code>R apply(T t)</code>。以下方法检索由参数 <code>mapper</code> 指定的数据，然后对参数 <code>block</code> 指定的操作执行操作：</p>
+<p>如果你想对会员的个人资料进行更多操作而不是打印出来，该怎么办？假设你要验证成员的个人资料或检索他们的联系信息？在这种情况下，你需要一个包含返回值的抽象方法的函数式接口。<code>Function&lt;T,R&gt;</code> 接口包含方法 <code>R apply(T t)</code>。以下方法检索由参数 <code>mapper</code> 指定的数据，然后按参数 <code>block</code> 的指定执行操作：</p>
 
 <pre class="codeblock">public static void processPersonsWithFunction(
     List&lt;Person&gt; roster,
@@ -892,7 +892,7 @@
   
 </ol>
 
-<p>您可以使用聚合操作替换每个操作。</p><!-- ********************************************************************** -->
+<p>你可以使用聚合操作替换每个操作。</p><!-- ********************************************************************** -->
 
 
 <h3><a name="approach9">方法 9：使用接受 Lambda 表达式作为参数的聚合操作</a></h3>
@@ -942,7 +942,7 @@
 
 </table>
 
-<p>操作 <code>filter</code>，<code>map</code> 和 <code>forEach</code> 是 <em>聚合操作（aggregate operations）</em>。聚合操作处理流中的元素，而不是直接来自集合(这是在此示例中调用的第一个方法是 <code>stream</code> 的原因)。<em>stream</em> 是一系列元素。与集合不同，它不是存储元素的数据结构。相反，流通过管道携带来自源（例如集合）的值。<em>pipeline</em> 是一系列流操作，在此示例中是 <code>filter</code>  -  <code>map</code>  -  <code>forEach</code>。此外，聚合操作通常接受 lambda 表达式作为参数，使您可以自定义它们的行为方式。</p>
+<p>操作 <code>filter</code>，<code>map</code> 和 <code>forEach</code> 是 <em>aggregate operations (聚合操作)</em>。聚合操作处理流中的元素，而不是直接来自集合(这是在此示例中调用的第一个方法是 <code>stream</code> 的原因)。<em>stream</em> 是一系列元素。与集合不同，它不是存储元素的数据结构。相反，流通过管道携带来自源（例如集合）的值。<em>pipeline (管道)</em> 是一系列流操作，在此示例中是 <code>filter</code>  -  <code>map</code>  -  <code>forEach</code>。此外，聚合操作通常接受 lambda 表达式作为参数，使你可以自定义它们的行为方式。</p>
 
 <p>有关聚合操作的更全面讨论，请参阅 <a class="TutorialLink" target="_top" href="../../collections/streams/index.html">Aggregate Operations</a> 课程。</p>
 
@@ -952,7 +952,7 @@
 <p>要处理图形用户接口(GUI)应用程序中的事件，例如键盘操作，鼠标操作和滚动操作，通常会创建事件处理程序，这通常涉及实现特定的接口。通常，事件处理程序接口是函数式接口;他们往往只有一种方法。</p>
 
 <p>在 JavaFX 示例 <a href=
-"https://docs.oracle.com/javase/8/javafx/get-started-tutorial/hello_world.htm"> <code>HelloWorld.java</code></a>(在上一节 <a class="TutorialLink" target="_top" href="anonymousclasses.html">Anonymous Classes</a> 中讨论过)中，您可以使用 lambda 表达式替换该语句中高亮的匿名类：</p>
+"https://docs.oracle.com/javase/8/javafx/get-started-tutorial/hello_world.htm"> <code>HelloWorld.java</code></a>(在上一节 <a class="TutorialLink" target="_top" href="anonymousclasses.html">Anonymous Classes</a> 中讨论过)中，你可以使用 lambda 表达式替换该语句中高亮的匿名类：</p>
 
 <pre class="codeblock">        btn.setOnAction(<b>new EventHandler&lt;ActionEvent&gt;() {</b>
 
@@ -962,7 +962,7 @@
             <b>}</b>
         <b>}</b>);</pre>
 
-<p>方法调用 <code>btn.setOnAction</code> 指定当您选择 <code>btn</code> 对象表示的按钮时会发生什么。此方法需要类型为 <code>EventHandler&lt;ActionEvent&gt;</code> 的对象。<code>EventHandler&lt;ActionEvent&gt;</code> 接口只包含一个方法，<code>void handle(T event)</code>。此接口是一个函数式接口，因此您可以使用以下高亮的 lambda 表达式来替换它：</p>
+<p>方法调用 <code>btn.setOnAction</code> 指定当你选择 <code>btn</code> 对象表示的按钮时会发生什么。此方法需要类型为 <code>EventHandler&lt;ActionEvent&gt;</code> 的对象。<code>EventHandler&lt;ActionEvent&gt;</code> 接口只包含一个方法，<code>void handle(T event)</code>。此接口是一个函数式接口，因此你可以使用以下高亮的 lambda 表达式来替换它：</p>
 
 <pre class="codeblock">        btn.setOnAction(
           <b>event -&gt; System.out.println("Hello World!")</b>
@@ -974,7 +974,7 @@
 
 <ul>
   <li><p>括号中用逗号分隔的形式参数列表。<code>CheckPerson.test</code> 方法包含一个参数 <code>p</code>，它表示 <code>Person</code> 类的实例。</p>
-  <p><b>Note</b>：您可以省略 lambda 表达式中参数的数据类型。此外，如果只有一个参数，则可以省略括号。例如，以下 lambda 表达式也是有效的：</p>
+  <p><b>Note</b>：你可以省略 lambda 表达式中参数的数据类型。此外，如果只有一个参数，则可以省略括号。例如，以下 lambda 表达式也是有效的：</p>
 
 <pre class="codeblock">p -&gt; p.getGender() == Person.Sex.MALE 
     &amp;&amp; p.getAge() &gt;= 18
@@ -987,7 +987,7 @@
     &amp;&amp; p.getAge() &gt;= 18
     &amp;&amp; p.getAge() &lt;= 25</pre>
 
-<p>如果指定单个表达式，则 Java 运行时将计算表达式，然后返回其值。或者，您可以使用 return 语句：</p>
+<p>如果指定单个表达式，则 Java 运行时将计算表达式，然后返回其值。或者，你可以使用 return 语句：</p>
 
 <pre class="codeblock">p -&gt; {
     return p.getGender() == Person.Sex.MALE
@@ -995,14 +995,14 @@
         &amp;&amp; p.getAge() &lt;= 25;
 }</pre>
 
-  <p>return 语句不是表达式;在 lambda 表达式中，必须将语句括在大括号(<code>{}</code>)中。但是，您不必在大括号中包含 void 方法调用。例如，以下是有效的 lambda 表达式：</p>
+  <p>return 语句不是表达式;在 lambda 表达式中，必须将语句括在大括号(<code>{}</code>)中。但是，不必将 void 方法调用括在大括号中（译注：这里的意思是，如果是纯方法调用，不处理返回值，也没有 ; 则只是一个表达式，不需要括在大括号中；如果加上分号，就变成了语句，就必须括在大括号中）。例如，以下是有效的 lambda 表达式：</p>
 
 <pre class="codeblock">email -&gt; System.out.println(email)</pre>
 </li>
 
 </ul>
 
-<p>请注意，lambda 表达式看起来很像方法声明;您可以将 lambda 表达式视为匿名方法 - 没有名称的方法。</p>
+<p>请注意，lambda 表达式看起来很像方法声明;你可以将 lambda 表达式视为匿名方法 - 没有名称的方法。</p>
 
 <p>以下示例 <a class="SourceLink" target="_blank" href="examples/Calculator.java" onclick="showCode('../../displayCode.html', 'examples/Calculator.java'); return false;"><code>Calculator</code></a> 是一个 lambda 表达式的示例，它采用多个形式参数：</p>
 
@@ -1040,7 +1040,7 @@ public class Calculator {
 
 <h2><a name="accessing-local-variables">访问封闭范围的局部变量</a></h2>
 
-<p>像局部和匿名类一样，lambda 表达式可以 <a class="TutorialLink" target="_top" href="localclasses.html#accessing-members-of-an-enclosing-class">捕获变量（capture variables）</a>;它们对封闭范围的局部变量具有相同的访问权限。但是，与局部和匿名类不同，lambda 表达式没有任何阴影问题(有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../java/javaOO/nested.html#shadowing">Shadowing</a>)。Lambda 表达式是词法（lexically）范围的。这意味着它们不会从超类型继承任何名称或引入新级别的范围。lambda 表达式中的声明与封闭环境中的声明一样被解释。以下示例 <a class="SourceLink" target="_blank" href="examples/LambdaScopeTest.java" onclick="showCode('../../displayCode.html', 'examples/LambdaScopeTest.java'); return false;"><code>LambdaScopeTest</code></a> 演示了这一点：</p>
+<p>像局部和匿名类一样，lambda 表达式可以 <a class="TutorialLink" target="_top" href="localclasses.html#accessing-members-of-an-enclosing-class">capture variables (捕获变量)</a>;它们对封闭范围的局部变量具有相同的访问权限。但是，与局部和匿名类不同，lambda 表达式没有任何遮蔽问题(有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../java/javaOO/nested.html#shadowing">Shadowing</a>)。Lambda 表达式是词法（lexically）范围的。这意味着它们不会从超类型继承任何名称或引入新级别的范围。lambda 表达式中的声明与封闭环境中的声明一样被解释。以下示例 <a class="SourceLink" target="_blank" href="examples/LambdaScopeTest.java" onclick="showCode('../../displayCode.html', 'examples/LambdaScopeTest.java'); return false;"><code>LambdaScopeTest</code></a> 演示了这一点：</p>
 
 <pre class="codeblock">
 
@@ -1098,9 +1098,9 @@ LambdaScopeTest.this.x = 0</pre>
     // ...
 }</pre>
 
-<p>编译器生成错误 "变量 x 已在方法 methodInFirstLevel(int) 中定义"，因为 lambda 表达式不会引入新的作用域级别。因此，您可以直接访问封闭范围的字段，方法和局部变量。例如，lambda 表达式直接访问方法 <code>methodInFirstLevel</code> 的参数 <code>x</code>。要访问封闭类中的变量，请使用关键字 <code>this</code>。在此示例中，<code>this.x</code> 引用成员变量 <code>FirstLevel.x</code>。</p>
+<p>编译器生成错误 "变量 x 已在方法 methodInFirstLevel(int) 中定义"，因为 lambda 表达式不会引入新的作用域级别。因此，你可以直接访问封闭范围的字段，方法和局部变量。例如，lambda 表达式直接访问方法 <code>methodInFirstLevel</code> 的参数 <code>x</code>。要访问封闭类中的变量，请使用关键字 <code>this</code>。在此示例中，<code>this.x</code> 引用成员变量 <code>FirstLevel.x</code>。</p>
 
-<p>但是，与局部和匿名类一样，lambda 表达式只能访问 final 或 effectively final 的封闭块的局部变量和参数。例如，假设您在 <code>methodInFirstLevel</code> 定义语句之后立即添加以下赋值语句：</p>
+<p>但是，与局部和匿名类一样，lambda 表达式只能访问 final 或 effectively final 的封闭块的局部变量和参数。例如，假设你在 <code>methodInFirstLevel</code> 定义语句之后立即添加以下赋值语句：</p>
 
 <pre class="codeblock">void methodInFirstLevel(int x) {
     <strong>x = 99;</strong>
@@ -1129,7 +1129,7 @@ LambdaScopeTest.this.x = 0</pre>
 
 </ul>
 
-<p>当 Java 运行时调用方法 <code>printPersons</code> 时，它期望数据类型为 <code>CheckPerson</code>，因此 lambda 表达式属于此类型。但是，当 Java 运行时调用方法 <code>printPersonsWithPredicate</code> 时，它期望数据类型为 <code>Predicate&lt;Person&gt;</code>，因此 lambda 表达式属于此类型。这些方法所期望的数据类型称为 <em>目标类型（target type）</em>。要确定 lambda 表达式的类型，Java 编译器将使用发现 lambda 表达式的上下文或情境的目标类型。因此，您只能在 Java 编译器可以确定目标类型的情况下使用 lambda 表达式：</p>
+<p>当 Java 运行时调用方法 <code>printPersons</code> 时，它期望数据类型为 <code>CheckPerson</code>，因此 lambda 表达式属于此类型。但是，当 Java 运行时调用方法 <code>printPersonsWithPredicate</code> 时，它期望数据类型为 <code>Predicate&lt;Person&gt;</code>，因此 lambda 表达式属于此类型。这些方法所期望的数据类型称为 <em>target type (目标类型)</em>。要确定 lambda 表达式的类型，Java 编译器将使用发现 lambda 表达式的上下文或情境的目标类型。因此，你只能在 Java 编译器可以确定目标类型的情况下使用 lambda 表达式：</p>
 
 <ul>
   <li><p>变量声明</p></li>
@@ -1144,7 +1144,7 @@ LambdaScopeTest.this.x = 0</pre>
 
 <h3><a name="target-types-and-method-arguments">目标类型和方法参数</a></h3>
 
-<p>对于方法参数，Java 编译器使用另外两种语言特性确定目标类型：重载决策和类型参数推断。</p>
+<p>对于方法参数，Java 编译器使用另外两种语言特性确定目标类型：重载决策和类型实参推断。</p>
 
 <p>考虑以下两个函数式接口(<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html"><code>java.lang.Runnable</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html"><code>java.util.concurrent.Callable&lt;V&gt;</code></a>)：</p>
 
@@ -1158,7 +1158,7 @@ public interface Callable&lt;V&gt; {
 
 <p>方法 <code>Runnable.run</code> 不返回值，而 <code>Callable&lt;V&gt;.call</code> 则返回值。</p>
 
-<p>假设您已按如下方式重载方法 <code>invoke</code>(有关重载方法的详细信息，请参阅 <a class="TutorialLink" target="_top" href="methods.html">Defining Methods</a>)：</p>
+<p>假设你已按如下方式重载方法 <code>invoke</code>(有关重载方法的详细信息，请参阅 <a class="TutorialLink" target="_top" href="methods.html">Defining Methods</a>)：</p>
 
 <pre class="codeblock">void invoke(Runnable r) {
     r.run();
@@ -1176,7 +1176,7 @@ public interface Callable&lt;V&gt; {
 
 <h2><a name="serialization">序列化</a></h2>
 
-<p>如果 lambda 表达式的目标类型及其捕获的参数是可序列化的，则可以 <a class="TutorialLink" target="_top" href="../../jndi/objects/serial.html">序列化（serialize）</a> 一个表达式。但是，与 <a class="TutorialLink" target="_top" href="nested.html#serialization">inner classes</a> 类似，强烈建议不要对 lambda 表达式进行序列化。</p>
+<p>如果 lambda 表达式的目标类型及其捕获的参数是可序列化的，则可以 <a class="TutorialLink" target="_top" href="../../jndi/objects/serial.html">serialize (序列化)</a> 一个表达式。但是，与 <a class="TutorialLink" target="_top" href="nested.html#serialization">inner classes</a> 类似，强烈建议不要对 lambda 表达式进行序列化。</p>
 
         </div>
         <div class="NavBit">

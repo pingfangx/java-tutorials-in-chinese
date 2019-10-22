@@ -493,23 +493,23 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">格式化</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="decimalFormat.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="dateFormat.html">Next&nbsp;»</a>
+                <a target="_top" href="decimalFormat.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="dateFormat.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>日期和时间</h1></div>
             <div id="PageContent">
 
-<div class="note"><hr /><strong>Version note:</strong> 此日期和时间部分使用 <tt>java.util</tt> 包中的日期和时间 API。JDK 8 发行版中提供的 <tt>java.time</tt> API 提供了一个全面的日期和时间模型，它比 <tt>java.util</tt> 类提供了重大改进。<tt>java.time</tt> API 在 <a class="TutorialLink" target="_top" href="../../datetime/index.html">Date Time</a> 路径中描述。<a class="TutorialLink" target="_top" href="../../datetime/iso/legacy.html">Legacy Date-Time Code</a> 页面可能特别有用。
+<div class="note"><hr /><strong>版本说明:</strong>&nbsp;此日期和时间部分使用 <tt>java.util</tt> 包中的日期和时间 API。JDK 8 发行版中提供的 <tt>java.time</tt> API 提供了一个全面的日期和时间模型，它比 <tt>java.util</tt> 类提供了重大改进。<tt>java.time</tt> API 在 <a class="TutorialLink" target="_top" href="../../datetime/index.html">Date Time</a> 路径中描述。<a class="TutorialLink" target="_top" href="../../datetime/iso/legacy.html">Legacy Date-Time Code</a> 页面可能特别有用。
 <hr /></div>
 
-<p><code>Date</code> 对象表示日期和时间。如果没有先将 <code>Date</code> 对象转换为格式正确的 <code>String</code>，则无法显示或打印。什么是“适当的”格式？首先，格式应符合终端用户的 <code>Locale</code> 的约定。例如，德国人认为 <code>20.4.09</code> 是有效日期，但美国人希望同一日期显示为 <code>4/20/09</code>。其次，格式应包括必要的信息。例如，测量网络性能的程序可以报告经过的毫秒数。在线约会日历可能不会显示毫秒，但会显示一周中的几天。</p>
-<p>本节介绍如何以各种方式和区域设置敏感的方式格式化日期和时间。如果您遵循这些技术，您的程序将在相应的 <code>Locale</code> 中显示日期和时间，但您的源代码将保持独立于任何特定的 <code>Locale</code>。</p>
+<p><code>Date</code> 对象表示日期和时间。如果没有先将 <code>Date</code> 对象转换为格式正确的 <code>String</code>，则无法显示或打印。什么是“适当的”格式？首先，格式应符合终端用户的 <code>Locale</code> 的规范。例如，德国人认为 <code>20.4.09</code> 是有效日期，但美国人希望同一日期显示为 <code>4/20/09</code>。其次，格式应包括必要的信息。例如，测量网络性能的程序可以报告经过的毫秒数。在线约会日历可能不会显示毫秒，但会显示一周中的几天。</p>
+<p>本节介绍如何以各种方式和语言环境敏感的方式格式化日期和时间。如果你遵循这些技术，你的程序将在相应的 <code>Locale</code> 中显示日期和时间，但你的源代码将保持独立于任何特定的 <code>Locale</code>。</p>
 <h2><a href="dateFormat.html">使用预定义格式</a></h2>
 <p><code>DateFormat</code> 类提供特定于语言环境且易于使用的预定义格式样式。</p>
 <h2><a href="simpleDateFormat.html">自定义格式</a></h2>
-<p>使用 <code>SimpleDateFormat</code> 类，您可以创建自定义的特定于语言环境的格式。</p>
+<p>使用 <code>SimpleDateFormat</code> 类，你可以创建自定义的特定于语言环境的格式。</p>
 <h2><a href="dateFormatSymbols.html">更改日期格式符号</a></h2>
-<p>使用 <code>DateFormatSymbols</code> 类，您可以更改表示月份名称，星期几和其他格式元素的符号。</p>
+<p>使用 <code>DateFormatSymbols</code> 类，你可以更改表示月份名称，星期几和其他格式元素的符号。</p>
 
 
         </div>

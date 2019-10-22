@@ -516,17 +516,17 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="pools.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="collections.html">Next&nbsp;»</a>
+                <a target="_top" href="pools.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="collections.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Fork/Join</h1></div>
             <div id="PageContent">
 
-<p>fork/join 框架是 <code>ExecutorService</code> 接口的一个实现，可帮助您利用多处理器。它专为可以递归分解成小块的工作而设计。目标是使用所有可用的处理能力来提高应用程序的性能。</p>
+<p>fork/join 框架是 <code>ExecutorService</code> 接口的一个实现，可帮助你利用多处理器。它专为可以递归分解成小块的工作而设计。目标是使用所有可用的处理能力来提高应用程序的性能。</p>
 <p>与任何 <code>ExecutorService</code> 实现一样，fork/join 框架将任务分配给线程池中的工作线程。fork/join 框架是不同的，因为它使用 <i>work-stealing (工作窃取)</i> 算法。完成要做的事情的工作线程可以从仍然忙碌的其他线程中窃取任务。</p>
 <p>fork/join 框架的核心是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ForkJoinPool.html"><code>ForkJoinPool</code></a> 类，它是 <code>AbstractExecutorService</code> 类的扩展。<code>ForkJoinPool</code> 实现核心工作窃取算法，可以执行 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ForkJoinTask.html"><code>ForkJoinTask</code></a> 进程。</p>
 <h2>基本用法</h2>
-<p>使用 fork/join 框架的第一步是编写执行一部分工作的代码。您的代码应类似于以下伪代码：</p>
+<p>使用 fork/join 框架的第一步是编写执行一部分工作的代码。你的代码应类似于以下伪代码：</p>
 <div class="codeblock"><pre>
 if (my portion of the work is small enough)
   do the work directly
@@ -537,8 +537,8 @@ else
 <p>将此代码包装在 <code>ForkJoinTask</code> 子类中，通常使用其中一种更专业的类型，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/RecursiveTask.html"><code>RecursiveTask</code></a>(可以返回结果)或 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/RecursiveAction.html"><code>RecursiveAction</code></a>。</p>
 <p>在 <code>ForkJoinTask</code> 子类就绪后，创建表示要完成的所有工作的对象，并将其传递给 <code>ForkJoinPool</code> 实例的 <code>invoke()</code> 方法。</p>
 <h2>模糊图片的例子</h2>
-<p>为了帮助您了解 fork/join 框架的工作原理，请考虑以下示例。假设您想模糊一张图像。原始 <i>source (源)</i> 图像由整数数组表示，其中每个整数包含单个像素的颜色值。模糊的 <i>destination (目标)</i> 图像也由与源相同大小的整数数组表示。</p>
-<p>通过一次一个像素地处理源阵列来完成模糊。每个像素与周围像素进行平均(红色，绿色和蓝色分量被平均)，结果放在目标数组中。由于图像是很大的数组，因此此过程可能需要很长时间。通过使用 fork/join 框架实现算法，您可以利用多处理器系统上的并发处理。这是一个可能的实现：</p>
+<p>为了帮助你了解 fork/join 框架的工作原理，请考虑以下示例。假设你想模糊一张图像。原始 <i>source (源)</i> 图像由整数数组表示，其中每个整数包含单个像素的颜色值。模糊的 <i>destination (目标)</i> 图像也由与源相同大小的整数数组表示。</p>
+<p>通过一次一个像素地处理源阵列来完成模糊。每个像素与周围像素进行平均(红色，绿色和蓝色分量被平均)，结果放在目标数组中。由于图像是很大的数组，因此此过程可能需要很长时间。通过使用 fork/join 框架实现算法，你可以利用多处理器系统上的并发处理。这是一个可能的实现：</p>
 <div class="codeblock"><pre>
 public class ForkBlur extends RecursiveAction {
     private int[] mSource;

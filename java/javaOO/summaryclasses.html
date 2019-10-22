@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,18 +512,18 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="initial.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/creating-questions.html">Next&nbsp;»</a>
+                <a target="_top" href="initial.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/creating-questions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>创建及使用类和对象的总结</h1></div>
             <div id="PageContent"><!-- Summary of Creating Classes -->
 
 
-<p>类声明为类命名，并将类主体包围在大括号之间。类名可以在修饰符之后。类主体包含类的字段，方法和构造函数。类使用字段来包含状态信息，并使用方法来实现行为。构造函数初始化类的新实例的，它使用类的名称，看起来像没有返回类型的方法。</p>
-<p>您可以通过相同的方式控制对类和成员的访问：在声明中使用访问修饰符，例如 <code>public</code>。</p>
-<p>您可以使用成员声明中的 <code>static</code> 关键字指定类变量或类方法。未声明为 <code>static</code> 的成员隐式地是实例成员。类变量由类的所有实例共享，可以通过类名和实例引用来访问。类的实例获取每个实例变量的自己的副本，必须通过实例引用访问它们。</p>
-<p>您可以使用 <code>new</code> 运算符和构造函数从类创建对象。new 运算符返回对已创建对象的引用。您可以为变量分配引用或直接使用它。</p>
-<p>可以通过使用限定名称来引用可在其声明的类之外的代码访问的实例变量和方法。实例变量的限定名称如下所示：</p>
+<p>类声明命名一个类，并将类主体包围在大括号之间。类名可以在修饰符之后。类主体包含类的字段，方法和构造函数。类使用字段来包含状态信息，并使用方法来实现行为。构造函数初始化类的新实例，它使用类的名称，看起来像没有返回类型的方法。</p>
+<p>你可以通过相同的方式控制对类和成员的访问：在声明中使用访问修饰符，例如 <code>public</code>。</p>
+<p>你可以使用成员声明中的 <code>static</code> 关键字指定类变量或类方法。未声明为 <code>static</code> 的成员隐式地是实例成员。类变量由类的所有实例共享，可以通过类名和实例引用来访问。类的实例获取每个实例变量的自己的副本，必须通过实例引用访问它们。</p>
+<p>你可以使用 <code>new</code> 运算符和构造函数从类创建对象。new 运算符返回对已创建对象的引用。你可以将引用赋值给变量或直接使用它。</p>
+<p>如果实例变量和方法可在其声明的类之外的代码访问，则可以通过使用限定名称来引用。实例变量的限定名称如下所示：</p>
 <div class="codeblock"><pre>
 <em>objectReference.variableName</em>
 </pre></div>
@@ -535,7 +535,7 @@
 <div class="codeblock"><pre>
 <em>objectReference.methodName()</em>
 </pre></div>
-<p>垃圾收集器自动清理未使用的对象。如果程序不再包含对它的引用，则不使用该对象。您可以通过设置包含 <code>null</code> 引用的变量来显式删除引用。</p>
+<p>垃圾回收器自动清理未使用的对象。如果程序不再包含对它的引用，则不使用该对象。可以通过设置变量持用的引用为 <code>null</code> 来显式删除的引用。</p>
 
 
         </div>

@@ -489,23 +489,23 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">全屏独占模式 API</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="rendering.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="bufferstrategy.html">Next&nbsp;»</a>
+                <a target="_top" href="rendering.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="bufferstrategy.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>双缓冲和页面翻转</h1></div>
             <div id="PageContent"><!--Double Buffering and Page Flipping-->
 
 
-<p>假设您必须逐个像素或逐行在屏幕上绘制整个图片。如果您要将这样的东西直接绘制到屏幕上(使用，例如，<tt>Graphics.drawLine</tt>)，您可能会非常失望地注意到需要花费一些时间。您甚至可能会注意到图片绘制方式的可见瑕疵。大多数程序员使用一种名为 <i>double-buffering (双缓冲)</i> 的技术，而不是按照这种方式并以这种速度观看事物。</p>
-<p>Java 应用程序中传统的双缓冲概念非常简单：创建一个屏幕外图像，使用图像的图形对象绘制到该图像，然后，一步，使用目标窗口的图形对象和屏幕外的图像调用 <tt>drawImage</tt>。您可能已经注意到 Swing 在其许多组件中使用此技术，通常默认情况下使用 <tt>setDoubleBuffered</tt> 方法启用。</p>
+<p>假设你必须逐个像素或逐行在屏幕上绘制整个图片。如果你要将这样的东西直接绘制到屏幕上(使用，例如，<tt>Graphics.drawLine</tt>)，你可能会非常失望地注意到需要花费一些时间。你甚至可能会注意到图片绘制方式的可见瑕疵。大多数程序员使用一种名为 <i>double-buffering (双缓冲)</i> 的技术，而不是按照这种方式并以这种速度观看事物。</p>
+<p>Java 应用程序中传统的双缓冲概念非常简单：创建一个屏幕外图像，使用图像的图形对象绘制到该图像，然后，一步，使用目标窗口的图形对象和屏幕外的图像调用 <tt>drawImage</tt>。你可能已经注意到 Swing 在其许多组件中使用此技术，通常默认情况下使用 <tt>setDoubleBuffered</tt> 方法启用。</p>
 <p>屏幕表面通常被称为 <i>primary surface (主表面)</i>，并且用于双缓冲的屏幕外图像通常被称为 <i>back buffer (后缓冲器)</i>。将内容物从一个表面复制到另一个表面的行为通常被称为块线转移，或 <i>blitting</i>(blt 通常发音为“blit”并且不应与 BLT 三明治混淆)。</p>
-<center><img src="../../figures/extra/fullscreen/doubleBuffering.gif" width="432" height="315" align="bottom" alt="双缓冲" /></center><p>主表面通常通过任何显示组件的图形对象进行操作；在全屏模式下，使用全屏窗口图形的任何操作都是对屏幕内存的直接操作。因此，您可以利用全屏独占模式中的其他功能，否则由于窗口系统的开销而无法使用这些功能。仅在全屏独占模式下可用的一种这样的技术是称为 <i>page-flipping (页面翻转)</i> 的双缓冲形式。</p>
+<center><img src="../../figures/extra/fullscreen/doubleBuffering.gif" width="432" height="315" align="bottom" alt="双缓冲" /></center><p>主表面通常通过任何显示组件的图形对象进行操作；在全屏模式下，使用全屏窗口图形的任何操作都是对屏幕内存的直接操作。因此，你可以利用全屏独占模式中的其他功能，否则由于窗口系统的开销而无法使用这些功能。仅在全屏独占模式下可用的一种这样的技术是称为 <i>page-flipping (页面翻转)</i> 的双缓冲形式。</p>
 <h2>页面翻转</h2>
-<p>许多显卡都有 <i>video pointer (视频指针)</i> 的概念，它只是视频内存中的一个地址。该指针告诉显卡在下一个刷新周期中在哪里查找要显示的视频内容。在某些显卡和某些操作系统中，甚至可以通过编程方式操作此指针。假设您创建了一个具有精确宽度，高度和位深度的后缓冲区(在视频内存中)，然后以与使用双缓冲相同的方式绘制到该缓冲区。现在想象一下，如果不是像双缓冲那样将图像模糊到屏幕上，而是将视频指针改为后缓冲区，会发生什么。在下一次刷新期间，显卡现在将使用您的图像显示。这种切换称为页面翻转，基于 blt 的双缓冲的性能提升是只需要在内存中移动一个指针，而不是将整个内容从一个缓冲区复制到另一个缓冲区。</p>
+<p>许多显卡都有 <i>video pointer (视频指针)</i> 的概念，它只是视频内存中的一个地址。该指针告诉显卡在下一个刷新周期中在哪里查找要显示的视频内容。在某些显卡和某些操作系统中，甚至可以通过编程方式操作此指针。假设你创建了一个具有精确宽度，高度和位深度的后缓冲区(在视频内存中)，然后以与使用双缓冲相同的方式绘制到该缓冲区。现在想象一下，如果不是像双缓冲那样将图像模糊到屏幕上，而是将视频指针改为后缓冲区，会发生什么。在下一次刷新期间，显卡现在将使用你的图像显示。这种切换称为页面翻转，基于 blt 的双缓冲的性能提升是只需要在内存中移动一个指针，而不是将整个内容从一个缓冲区复制到另一个缓冲区。</p>
 <p>当页面翻转发生时，指向旧后缓冲区的指针现在指向主表面，而指向旧主表面的指针现在指向后缓冲区内存。这会自动为下一次绘制操作设置。</p>
 <center><img src="../../figures/extra/fullscreen/pageFlipping.gif" width="474" height="544" align="bottom" alt="页面翻转" /></center><p>有时在 <i>flip chain (翻转链)</i> 中设置多个后缓冲区是有利的。当绘图所花费的时间大于显示器的刷新率时，这尤其有用。翻转链只是两个或多个后缓冲区(有时称为 <i>intermediary buffers (中间缓冲区)</i>)加上主表面(这有时称为三级缓冲，四级缓冲等)。在翻转链中，下一个可用的后缓冲区变为主表面等，一直到最后面的后缓冲区，用于绘制。</p>
 <h2>双缓冲和页面翻转的好处</h2>
-<p>如果您的性能指标只是双缓冲或页面翻转的速度与直接渲染相比，您可能会感到失望。您可能会发现直接渲染的数字远远超过双缓冲的数字，并且这些数字远远超过页面翻转的数字。这些技术中的每一种都用于改善 <i>perceived performance (感知性能)</i>，这在图形应用中比 <i>numerical performance (数值性能)</i> 更重要。</p>
+<p>如果你的性能指标只是双缓冲或页面翻转的速度与直接渲染相比，你可能会感到失望。你可能会发现直接渲染的数字远远超过双缓冲的数字，并且这些数字远远超过页面翻转的数字。这些技术中的每一种都用于改善 <i>perceived performance (感知性能)</i>，这在图形应用中比 <i>numerical performance (数值性能)</i> 更重要。</p>
 <p>双缓冲主要用于消除可见的绘制，这可能使应用程序看起来像业余，缓慢或看起来闪烁。页面翻转主要用于消除 <i>tearing (撕裂)</i>，当绘制到屏幕时发生的分裂效果比显示器的刷新率更快。更平滑的绘图意味着更好的感知性能和更好的用户体验。</p>
 
 

@@ -506,16 +506,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="defman.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="appman.html">Next&nbsp;»</a>
+                <a target="_top" href="defman.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="appman.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>修改清单文件</h1></div>
             <div id="PageContent">
 
 <p>在创建 JAR 文件期间，使用 <tt>m</tt> 命令行选项将自定义信息添加到清单。本节介绍 <tt>m</tt> 选项。</p>
-<p>Jar 工具自动将 <a href="defman.html">默认清单</a> 与路径名 <tt>META-INF/MANIFEST.MF</tt> 放入您创建的任何 JAR 文件中。您可以通过修改默认清单来启用特殊 JAR 文件功能，例如 <a href="sealman.html">package sealing</a>。通常，修改默认清单涉及向清单添加专用 <i>headers (头)</i>，以允许 JAR 文件执行特定的所需功能。</p>
+<p>Jar 工具自动将 <a href="defman.html">默认清单</a> 与路径名 <tt>META-INF/MANIFEST.MF</tt> 放入你创建的任何 JAR 文件中。你可以通过修改默认清单来启用特殊 JAR 文件功能，例如 <a href="sealman.html">package sealing</a>。通常，修改默认清单涉及向清单添加专用 <i>headers (头)</i>，以允许 JAR 文件执行特定的所需功能。</p>
 <p>要修改清单，必须首先准备一个文本文件，其中包含要添加到清单的信息。然后使用 Jar 工具的 <tt>m</tt> 选项将文件中的信息添加到清单中。</p>
-<div class="note"><hr /><strong>Warning:</strong> 要创建清单的文本文件必须以新行或回车符结束。如果不以新行或回车结束，则不会正确解析最后一行。
+<div class="note"><hr /><strong>警告:</strong>&nbsp;要创建清单的文本文件必须以新行或回车符结束。如果不以新行或回车结束，则不会正确解析最后一行。
 <hr /></div>
 <p>基本命令具有以下格式：</p>
 <div class="codeblock"><pre>
@@ -523,17 +523,17 @@ jar cfm <i>jar-file manifest-addition input-file(s)</i>
 </pre></div>
 <p>让我们看看这个命令中使用的选项和参数：</p>
 <ul>
-<li><tt>c</tt> 选项表示您要 <em>create (创建)</em> 一个 JAR 文件。</li>
-<li><tt>m</tt> 选项表示您要将现有文件中的信息合并到正在创建的 JAR 文件的清单文件中。</li>
-<li><tt>f</tt> 选项表示您希望输出转到 <em>file (文件)</em>(您正在创建的 JAR 文件)而不是标准输出。</li>
+<li><tt>c</tt> 选项表示你要 <em>create (创建)</em> 一个 JAR 文件。</li>
+<li><tt>m</tt> 选项表示你要将现有文件中的信息合并到正在创建的 JAR 文件的清单文件中。</li>
+<li><tt>f</tt> 选项表示你希望输出转到 <em>file (文件)</em>(你正在创建的 JAR 文件)而不是标准输出。</li>
 <li><em><tt>manifest-addition</tt></em> 是现有文本文件的名称(或路径和名称)，其内容要添加到 JAR 文件清单的内容中。</li>
-<li><em><tt>jar-file</tt></em> 是您希望生成的 JAR 文件具有的名称。</li>
+<li><em><tt>jar-file</tt></em> 是你希望生成的 JAR 文件具有的名称。</li>
 <li><em><tt>input-file(s)</tt></em> 参数是一个以空格分隔的列表，其中包含要放置在 JAR 文件中的一个或多个文件。</li>
 </ul>
 <p><tt>m</tt> 和 <tt>f</tt> 选项的顺序必须与相应的参数相同（译注：f 对应 jar-file，m 对应 manifest-addition）。</p>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;清单的内容必须以 UTF-8 编码。
 <hr /></div>
-<p>本课程的其余部分演示了您可能要对清单文件进行的特定修改。</p>
+<p>本课程的其余部分演示了你可能要对清单文件进行的特定修改。</p>
 
         </div>
         <div class="NavBit">

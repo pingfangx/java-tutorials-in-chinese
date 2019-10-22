@@ -492,7 +492,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">实现</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="list.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="queue.html">Next&nbsp;»</a>
+                <a target="_top" href="list.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="queue.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Map 实现</h1></div>
@@ -500,7 +500,7 @@
 
 <p><code>Map</code> 实现分为通用，专用和并发实现。</p>
 <h2>通用 Map 实现</h2>
-<p>三个通用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html"><code>Map</code></a> 实现是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code>HashMap</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html"><code>TreeMap</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html"><code>LinkedHashMap</code></a>。如果需要 <code>SortedMap</code> 操作或按键排序 <code>Collection</code>-视图迭代，请使用 <code>TreeMap</code>;如果您想要最大速度而不关心迭代顺序，请使用 <code>HashMap</code>;如果您想要近似 <code>HashMap</code> 性能和插入顺序迭代，请使用 <code>LinkedHashMap</code>。在这方面，<code>Map</code> 的情况类似于 <code>Set</code>。同样，<a class="TutorialLink" target="_top" href="../implementations/set.html">Set Implementations</a> 部分中的所有其他内容也适用于 <code>Map</code> 实现。</p>
+<p>三个通用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html"><code>Map</code></a> 实现是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code>HashMap</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html"><code>TreeMap</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html"><code>LinkedHashMap</code></a>。如果需要 <code>SortedMap</code> 操作或以键排序的 <code>Collection</code>-视图迭代，请使用 <code>TreeMap</code>;如果你想要最大速度而不关心迭代顺序，请使用 <code>HashMap</code>;如果你想要近似 <code>HashMap</code> 性能和插入顺序迭代，请使用 <code>LinkedHashMap</code>。在这方面，<code>Map</code> 的情况类似于 <code>Set</code>。同样，<a class="TutorialLink" target="_top" href="../implementations/set.html">Set Implementations</a> 部分中的所有其他内容也适用于 <code>Map</code> 实现。</p>
 <p><code>LinkedHashMap</code> 提供了 <code>LinkedHashSet</code> 不具备的两项功能。创建 <code>LinkedHashMap</code> 时，可以基于 key 的访问而不是插入顺序来对其进行排序。换句话说，仅查找与键相关联的值会将该键带到 map 的末尾。此外，<code>LinkedHashMap</code> 提供了 <code>removeEldestEntry</code> 方法，可以重写该方法，以便在将新映射添加到 map 时自动移除过时映射的策略。这使得实现自定义缓存变得非常容易。</p>
 <p>例如，此覆盖将允许 map 多达 100 个条目，然后每次添加新条目时它将删除最旧条目，从而保持 100 个条目的稳定状态。</p>
 <div class="codeblock"><pre>
@@ -511,12 +511,12 @@ protected boolean removeEldestEntry(Map.Entry eldest) {
 }
 </pre></div>
 <h2>专用 Map 实现</h2>
-<p>有三个专用 Map 实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumMap.html"><code>EnumMap</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/WeakHashMap.html"><code>WeakHashMap</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/IdentityHashMap.html"><code>IdentityHashMap</code></a>。<code>EnumMap</code>，内部实现为 <code>array</code>，是一个与枚举键一起使用的高性能 <code>Map</code> 实现。此实现将 <code>Map</code> 接口的丰富性和安全性与接近阵列的速度相结合。如果要将枚举映射到值，则应始终使用 <code>EnumMap</code> 而不是数组。</p>
-<p><code>WeakHashMap</code> 是 <code>Map</code> 接口的一个实现，它只存储对其键的弱引用。仅存储弱引用允许在其键不再在 <code>WeakHashMap</code> 之外引用时对其进行垃圾收集。此类提供了利用弱引用功能的最简单方法。它对于实现“类似注册表”的数据结构很有用，其中当任何线程不再可以访问其键时，条目的实用程序就会消失。</p>
-<p><code>IdentityHashMap</code> 是基于哈希表的基于身份的 <code>Map</code> 实现。此类对于拓扑保留对象图转换非常有用，例如序列化或深度复制。要执行此类转换，您需要维护一个基于身份的“节点表”，以跟踪已经看到的对象。基于身份的 map 还用于维护动态调试器和类似系统中的对象到元信息映射。最后，基于身份的地图有助于阻止故意不正常的 <code>equals</code> 方法导致的“欺骗攻击”，因为 <code>IdentityHashMap</code> 永远不会调用键的 <code>equals</code> 的方法。这种实现的另一个好处是它很快。</p>
+<p>有三个专用 Map 实现  <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumMap.html"><code>EnumMap</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/WeakHashMap.html"><code>WeakHashMap</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/IdentityHashMap.html"><code>IdentityHashMap</code></a>。<code>EnumMap</code>，内部实现为 <code>array</code>，是一个与枚举键一起使用的高性能 <code>Map</code> 实现。此实现将 <code>Map</code> 接口的丰富性和安全性与接近数组的速度相结合。如果要将枚举映射到值，则应始终使用 <code>EnumMap</code> 而不是数组。</p>
+<p><code>WeakHashMap</code> 是 <code>Map</code> 接口的一个实现，它只存储对其键的弱引用。仅存储弱引用允许在其键不再在 <code>WeakHashMap</code> 之外引用时对其进行垃圾回收。此类提供了利用弱引用功能的最简单方法。它对于实现“类似注册表”的数据结构很有用，其中当任何线程不再可以访问其键时，条目的实用程序就会消失。</p>
+<p><code>IdentityHashMap</code> 是基于哈希表的基于身份的 <code>Map</code> 实现。此类对于拓扑保留对象图转换非常有用，例如序列化或深度复制。要执行此类转换，你需要维护一个基于身份的“节点表”，以跟踪已经看到的对象。基于身份的 map 还用于维护动态调试器和类似系统中的对象到元信息映射。最后，基于身份的地图有助于阻止故意不正常的 <code>equals</code> 方法导致的“欺骗攻击”，因为 <code>IdentityHashMap</code> 永远不会调用键的 <code>equals</code> 的方法。这种实现的另一个好处是它很快。</p>
 <h2>并发 Map 实现</h2>
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/package-summary.html"><code>java.util.concurrent</code></a> 包中包含 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentMap.html"><code>ConcurrentMap</code></a> 接口，该接口继承了 <code>Map</code> 原子的 <code>putIfAbsent</code>，<code>remove</code>，<code>replace</code> 方法，且 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html"><code>ConcurrentHashMap</code></a> 实现那个接口。</p>
-<p><code>ConcurrentHashMap</code> 是一个由哈希表支持的高度并发，高性能的实现。执行获取时，此实现永远不会阻塞，并允许客户端选择更新的并发级别。它旨在作为 <code>Hashtable</code> 的替代品：除了实现 <code>ConcurrentMap</code> 之外，它还支持 <code>Hashtable</code> 特有的所有遗留方法。同样，如果您不需要遗留操作，请小心使用 <code>ConcurrentMap</code> 接口对其进行操作。</p>
+<p><code>ConcurrentHashMap</code> 是一个由哈希表支持的高度并发、高性能的实现。执行获取时，此实现永远不会阻塞，并允许客户端选择更新的并发级别。它旨在作为 <code>Hashtable</code> 的替代品：除了实现 <code>ConcurrentMap</code> 之外，它还支持 <code>Hashtable</code> 特有的所有遗留方法。同样，如果你不需要遗留操作，请小心使用 <code>ConcurrentMap</code> 接口对其进行操作。</p>
 
 
         </div>

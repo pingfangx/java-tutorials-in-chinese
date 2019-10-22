@@ -500,13 +500,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">成员</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="methodModifiers.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methodTrouble.html">Next&nbsp;»</a>
+                <a target="_top" href="methodModifiers.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methodTrouble.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>调用方法</h1></div>
             <div id="PageContent">
 
-<p>反射提供了在类上调用方法的方法。通常，只有在无法在非反射代码中将类的实例强制转换为所需类型时才需要这样做。使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html#invoke-java.lang.Object-java.lang.Object...-"><code>java.lang.reflect.Method.invoke()</code></a> 调用方法。第一个参数是要在其上调用此特定方法的对象实例。(如果方法是 <code>static</code>，则第一个参数应为 <code>null</code>。)后续参数是方法的参数。如果底层方法抛出异常，它将被 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/InvocationTargetException.html"><code>java.lang.reflect.InvocationTargetException</code></a> 包装。可以使用异常链机制的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/InvocationTargetException.html#getCause--"><code>InvocationTargetException.getCause()</code></a> 方法获取方法的原始异常。</p>
+<p>反射提供了在类上调用方法的方式。通常，只有在无法在非反射代码中将类的实例强制转换为所需类型时才需要这样做。使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html#invoke-java.lang.Object-java.lang.Object...-"><code>java.lang.reflect.Method.invoke()</code></a> 调用方法。第一个参数是要在其上调用此特定方法的对象实例。(如果方法是 <code>static</code>，则第一个参数应为 <code>null</code>。)后续参数是方法的参数。如果底层方法抛出异常，它将被 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/InvocationTargetException.html"><code>java.lang.reflect.InvocationTargetException</code></a> 包装。可以使用异常链机制的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/InvocationTargetException.html#getCause--"><code>InvocationTargetException.getCause()</code></a> 方法获取方法的原始异常。</p>
 <h2>查找并调用具有特定声明的方法</h2>
 <p>考虑一个测试套件，它使用反射来调用给定类中的私有测试方法。<a class="SourceLink" target="_blank" href="example/Deet.java" onclick="showCode('../../displayCode.html', 'example/Deet.java'); return false;"><code><code>Deet</code></code></a> 示例在类中搜索 <code>public</code> 方法，该方法以字符串 "<code>test</code>" 开始，具有布尔返回类型，以及单个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html"><code>Locale</code></a> 参数。然后它调用每个匹配方法。</p>
 <div class="codeblock"><pre>

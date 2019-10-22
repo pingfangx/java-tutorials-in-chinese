@@ -494,13 +494,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">格式化</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="numberFormat.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="dateintro.html">Next&nbsp;»</a>
+                <a target="_top" href="numberFormat.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="dateintro.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>自定义格式</h1></div>
             <div id="PageContent">
 
-<p>您可以使用 <code>DecimalFormat</code> 类将十进制数格式化为特定于语言环境的字符串。此类允许您控制前导和尾随零，前缀和后缀，分组(千)分隔符和小数分隔符的显示。如果要更改格式符号(例如小数点分隔符)，可以将 <code>DecimalFormatSymbols</code> 与 <code>DecimalFormat</code> 类结合使用。这些类在数字格式化方面提供了极大的灵活性，但它们可以使您的代码更加复杂。</p>
+<p>你可以使用 <code>DecimalFormat</code> 类将十进制数格式化为特定于语言环境的字符串。此类允许你控制前导和尾随零，前缀和后缀，分组(千)分隔符和小数分隔符的显示。如果要更改格式符号(例如小数点分隔符)，可以将 <code>DecimalFormatSymbols</code> 与 <code>DecimalFormat</code> 类结合使用。这些类在数字格式化方面提供了极大的灵活性，但它们可以使你的代码更加复杂。</p>
 <p>下面的文本使用演示 <code>DecimalFormat</code> 和 <code>DecimalFormatSymbols</code> 类的示例。此材料中的代码示例来自名为 <a class="SourceLink" target="_blank" href="examples/DecimalFormatDemo.java" onclick="showCode('../../displayCode.html', 'examples/DecimalFormatDemo.java'); return false;"><code>DecimalFormatDemo</code></a> 的示例程序。</p>
 <h2>构建模式</h2>
 <p>使用模式 <code>String</code> 指定 <code>DecimalFormat</code> 的格式设置属性。模式决定格式化后的数字的外观。有关模式语法的完整说明，请参阅 <a href="#numberpattern">Number Format Pattern Syntax</a>。</p>
@@ -565,9 +565,9 @@ System.out.println(pattern + &quot; &quot; + output + &quot; &quot; + loc.toStri
 ###,###.###      123.456,789     de_DE
 ###,###.###      123 456,789     fr_FR
 </pre></div>
-<p>到目前为止，这里讨论的格式模式遵循美国英语的惯例。例如，在模式 ###,###.## 中，逗号是千位分隔符，句点表示小数点。如果终端用户没有接触到它，那么这个约定很好。但是，某些应用程序(如电子表格和报表生成器)允许终端用户定义自己的格式设置模式。对于这些应用程序，终端用户指定的格式模式应使用本地化表示法。在这些情况下，您需要在 <code>DecimalFormat</code> 对象上调用 <code>applyLocalizedPattern</code> 方法。</p>
+<p>到目前为止，这里讨论的格式模式遵循美国英语的规范。例如，在模式 ###,###.## 中，逗号是千位分隔符，句点表示小数点。如果终端用户没有接触到它，那么这个规范很好。但是，某些应用程序(如电子表格和报表生成器)允许终端用户定义自己的格式设置模式。对于这些应用程序，终端用户指定的格式模式应使用本地化表示法。在这些情况下，你需要在 <code>DecimalFormat</code> 对象上调用 <code>applyLocalizedPattern</code> 方法。</p>
 <h2>改变格式符号</h2>
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormatSymbols.html">DecimalFormatSymbols</a> 类来更改由 <code>format</code> 方法生成的格式化数字中出现的符号。这些符号包括小数分隔符，分组分隔符，减号和百分号等。</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormatSymbols.html">DecimalFormatSymbols</a> 类来更改由 <code>format</code> 方法生成的格式化数字中出现的符号。这些符号包括小数分隔符，分组分隔符，减号和百分号等。</p>
 <p>下一个示例通过对数字应用奇怪的格式来演示 <code>DecimalFormatSymbols</code> 类。不常见的格式是调用 <code>setDecimalSeparator</code>，<code>setGroupingSeparator</code> 和 <code>setGroupingSize</code> 方法的结果。</p>
 <div class="codeblock"><pre>
 DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols(currentLocale);
@@ -586,7 +586,7 @@ System.out.println(bizarre);
 1^2345|678
 </pre></div>
 <h2><a name="numberpattern" id="numberpattern"></a>数字格式模式语法</h2>
-<p>您可以按照以下 BNF 图表指定的规则为数字设计自己的格式模式：</p>
+<p>你可以按照以下 BNF 图表指定的规则为数字设计自己的格式模式：</p>
 <div class="codeblock"><pre>
 pattern    := subpattern{;subpattern}
 subpattern := {prefix}integer{.fraction}{suffix}
@@ -624,7 +624,7 @@ fraction   := '0'* '#'*
 </table>
 <p>在前面的 BNF 图中，第一个子模式指定了正数的格式。第二个子模式是可选的，指定负数的格式。</p>
 <p>虽然未在 BNF 图中注明，但逗号可能出现在整数部分内。</p>
-<p>在子模式中，您可以使用特殊符号指定格式。这些符号如下表所述：</p>
+<p>在子模式中，你可以使用特殊符号指定格式。这些符号如下表所述：</p>
 <table border="1" summary="格式符号说明">
 <tr>
 <th>符号</th>

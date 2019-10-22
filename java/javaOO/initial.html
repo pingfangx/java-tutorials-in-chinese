@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,14 +512,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="classvars.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summaryclasses.html">Next&nbsp;»</a>
+                <a target="_top" href="classvars.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summaryclasses.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>初始化字段</h1></div>
             <div id="PageContent"><!-- Initializing Fields -->
 
 
-<p>如您所见，您通常可以在其声明中为字段提供初始值：</p>
+<p>如你所见，你通常可以在其声明中为字段提供初始值：</p>
 <div class="codeblock"><pre>
 public class BedAndBreakfast {
 
@@ -530,11 +530,11 @@ public class BedAndBreakfast {
     private boolean full = false;
 }
 </pre></div>
-<p>当初始化值可用并且初始化可以放在一行上时，这很有效。然而，这种形式的初始化由于其简单性而具有局限性。如果初始化需要一些逻辑(例如，错误处理或 <code>for</code> 循环来填充复杂数组)，则简单的赋值是不合适的。实例变量可以在构造函数中初始化，其中可以使用错误处理或其他逻辑。为了为类变量提供相同的功能，Java 编程语言包括 <i>static initialization blocks（静态初始化块）</i>。</p>
+<p>当初始化值可用并且初始化可以放在一行上时，这很有效。然而，这种形式的初始化由于其简单性而具有局限性。如果初始化需要一些逻辑(例如，错误处理或 <code>for</code> 循环来填充复杂数组)，则简单的赋值是不合适的。实例变量可以在构造函数中初始化，其中可以使用错误处理或其他逻辑。为了为类变量提供相同的功能，Java 编程语言包括 <i>static initialization blocks (静态初始化块)</i>。</p>
 <div class="note"><hr /><strong>注意:</strong>&nbsp;虽然这是最常见的做法，但没有必要在类定义的开头声明字段。唯一的必要是必须在使用它们之前声明和初始化它们。
 <hr /></div>
 <h2>静态初始化块</h2>
-<p>一个 <i>静态初始化块</i> 是括号（<code> {} </code>）内的一个普通代码块，前面有 <code>static</code> 关键字。这里是一个例子：</p>
+<p>一个 <i>静态初始化块</i> 是大括号 <code>{ }</code> 内的一个普通代码块，前面有 <code>static</code> 关键字。这里是一个例子：</p>
 <div class="codeblock"><pre>
 static {
     // whatever code is needed for initialization goes here
@@ -552,9 +552,9 @@ class Whatever {
     }
 }
 </pre></div>
-<p>私有静态方法的优点是，如果需要重新初始化类变量，可以在以后重用它们。</p>
+<p>私有静态方法的优点是，如果需要重新初始化类变量，可以在以后重用私有静态方法。</p>
 <h2>初始化实例成员</h2>
-<p>通常，您可以使用代码在构造函数中初始化实例变量。使用构造函数初始化实例变量有两种选择：初始化块和 final 方法。</p>
+<p>通常，你可以使用代码在构造函数中初始化实例变量。使用构造函数初始化实例变量有两种选择：初始化块和 final 方法。</p>
 <p>实例变量的初始化程序块看起来就像静态初始化程序块，但没有 <code>static</code> 关键字：</p>
 <div class="codeblock"><pre>
 {

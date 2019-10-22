@@ -526,7 +526,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">使用 Swing 组件</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="buttongroup.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="combobox.html">Next&nbsp;»</a>
+                <a target="_top" href="buttongroup.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="combobox.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>如何使用颜色选择器</h1></div>
@@ -536,7 +536,7 @@
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html"><code>JColorChooser</code></a> class to enable users to choose from a palette of colors. A color chooser is a component that you can place anywhere within your program GUI. The <code>JColorChooser</code> API also makes it easy to bring up a <a href="dialog.html">dialog</a> (modal or not) that contains a color chooser.</p>
 <p>Here is a picture of an application that uses a color chooser to set the text color in a banner:</p>
 <center><img src="../../figures/uiswing/components/ColorChooserDemoMetal.png" width="654" height="462" align="bottom" alt="A snapshot of ColorChooserDemo, which contains a standard color chooser." /></center><!-- *******  boilerplate stuff ******* -->
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ul>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ul>
 <li>Click the Launch button to run the ColorChooser Demo using
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download the JDK</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#ColorChooserDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ColorChooserDemoProject/ColorChooserDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the ButtonDemo example" /></a><br /></li>
 </ul>
@@ -586,7 +586,7 @@ The rest of this section discusses these topics:
  <a name="advancedexample" id="advancedexample"></a></p>
 <h2><a name="advancedexample__1" id="advancedexample__1">Another Example: ColorChooserDemo2</a></h2>
 <p>Now let's turn our attention to <a href="../examples/components/index.html#ColorChooserDemo2">ColorChooserDemo2</a>, a modified version of the previous demo program that uses more of the <code>JColorChooser</code> API.  <!-- *******  boilerplate stuff ******* --></p>
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ul>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ul>
 <li>Click the Launch button to run the ColorChooser Demo using
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download the JDK</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#ColorChooserDemo2">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ColorChooserDemo2Project/ColorChooserDemo2.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the ButtonDemo example" /></a><br /></li>
 </ul>
@@ -635,10 +635,10 @@ tcc.setPreviewPanel(new JPanel());
 <p>The default color chooser provides five chooser panels:</p>
 <ul>
 <li>Swatches  for choosing a color from a collection of swatches.</li>
-<li><a href="http://en.wikipedia.org/wiki/HSL_and_HSV">HSV</a>for choosing a color using the Hue-Saturation-Value color representation. Prior to JDK 7, this was called HSB, for Hue-Saturation-Brightness.</li>
-<li><a href="http://en.wikipedia.org/wiki/HSL_and_HSV">HSL</a>for choosing a color using the Hue-Saturation-Lightness color representation. This is new in JDK 7.</li>
-<li><a href="http://en.wikipedia.org/wiki/RGB_color_model">RGB</a>for choosing a color using the Red-Green-Blue color model.</li>
-<li><a href="http://en.wikipedia.org/wiki/Cmyk">CMYK</a>for choosing a color using the process color or four color model. This is new in JDK 7.</li>
+<li><a href="http://en.wikipedia.org/wiki/HSL_and_HSV">HSV</a>  for choosing a color using the Hue-Saturation-Value color representation. Prior to JDK 7, this was called HSB, for Hue-Saturation-Brightness.</li>
+<li><a href="http://en.wikipedia.org/wiki/HSL_and_HSV">HSL</a>  for choosing a color using the Hue-Saturation-Lightness color representation. This is new in JDK 7.</li>
+<li><a href="http://en.wikipedia.org/wiki/RGB_color_model">RGB</a>  for choosing a color using the Red-Green-Blue color model.</li>
+<li><a href="http://en.wikipedia.org/wiki/Cmyk">CMYK</a>  for choosing a color using the process color or four color model. This is new in JDK 7.</li>
 </ul>
 <p>You can extend the default color chooser by adding chooser panels of your own design with <code>addChooserPanel</code>, or you can limit it by removing chooser panels with <code>removeChooserPanel</code>.</p>
 <p>If you want to remove all of the default chooser panels and add one or more of your own, you can do this with a single call to <code>setChooserPanels</code>. ColorChooserDemo2 uses this method to replace the default chooser panels with an instance of

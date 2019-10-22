@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">泛型</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="simple.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="simple.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>介绍</h1></div>
@@ -502,8 +502,8 @@
 
 
 <p>JDK 5.0 引入了 Java 编程语言的几个新扩展。其中之一是 <i>generics (泛型)</i> 的引入。</p>
-<p>这条路径是对泛型的介绍。您可能熟悉其他语言的类似结构，最常见的是 C++ 模板。如果是这样，您会发现存在相似之处和重要差异。如果您不熟悉其他地方看起来相似的结构，那就更好了；您可以重新开始，而不必忘记任何误解。</p>
-<p>泛型允许您抽象类型。最常见的示例是容器类型，例如 Collections 层次结构中的容器类型。</p>
+<p>这条路径是对泛型的介绍。你可能熟悉其他语言的类似结构，最常见的是 C++ 模板。如果是这样，你会发现存在相似之处和重要差异。如果你不熟悉其他地方看起来相似的结构，那就更好了；你可以重新开始，而不必忘记任何误解。</p>
+<p>泛型允许你抽象类型。最常见的示例是容器类型，例如 Collections 层次结构中的容器类型。</p>
 <p>以下是此类的典型用法：</p>
 <div class="codeblock"><pre>
 List myIntList = new LinkedList(); // 1
@@ -519,10 +519,10 @@ List&lt;Integer&gt;
 myIntList.add(new Integer(0)); // 2'
 Integer x = myIntList.iterator().next(); // 3'
 </pre></div>
-<p>注意变量 <code>myIntList</code> 的类型声明。它指定这不仅是一个任意 <code>List</code>，而是一个 <code>Integer</code> 的 <code>List</code>，写成 <code>List&lt;Integer&gt;</code>。我们说 <code>List</code> 是一个带有 <i>type parameter (类型参数)</i> 的泛型接口 - 在这种情况下，<code>Integer</code>。我们还在创建列表对象时指定了类型参数。</p>
+<p>注意变量 <code>myIntList</code> 的类型声明。它指定这不仅是一个任意 <code>List</code>，还是一个 <code>Integer</code> 的 <code>List</code>，写成 <code>List&lt;Integer&gt;</code>。我们说 <code>List</code> 是一个带有 <i>type parameter (类型形参)</i> 的泛型接口 - 在这种情况下，<code>Integer</code>。我们还在创建列表对象时指定了类型形参。</p>
 <p>另请注意，第 3 行的强制转换已经消失。</p>
-<p>现在，您可能会认为我们所取得的成就就是去除了杂乱无章。我们将 <code>Integer</code> 作为第 1 行的类型参数，而不是第 3 行的强制转换为 <code>Integer</code> 。但是，这里有很大的不同。编译器现在可以在编译时检查程序的类型正确性。当我们说 <code>myIntList</code> 用类型 <code>List&lt;Integer&gt;</code> 声明时，这告诉我们一些关于变量 <code>myIntList</code> 的信息，无论它在何时何处被使用都保持为真，编译器将保证它。相比之下，强制转换告诉我们程序员认为代码中的单个点是正确的。</p>
-<p>这种 net 效果提高了可读性和稳健性，特别是在大型程序中。</p>
+<p>现在，你可能会认为我们所取得的成就就是去除了杂乱无章。我们将 <code>Integer</code> 作为第 1 行的类型形参，而不是第 3 行的强制转换为 <code>Integer</code> 。但是，这里有很大的不同。编译器现在可以在编译时检查程序的类型正确性。当我们说 <code>myIntList</code> 用类型 <code>List&lt;Integer&gt;</code> 声明时，这告诉我们一些关于变量 <code>myIntList</code> 的信息，无论它在何时何处被使用都保持为真，编译器将保证它。相比之下，强制转换告诉我们程序员认为代码中的单个点是正确的。</p>
+<p>最终的效果，提高了可读性和稳健性，特别是在大型程序中。</p>
 
 
         </div>

@@ -473,7 +473,7 @@
             <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">入门</a>
         </div>
         <div class="NavBit">
-                <a target="_top" href="../cupojava/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../QandE/questions.html">Next&nbsp;»</a>
+                <a target="_top" href="../cupojava/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../QandE/questions.html">下一页&nbsp;»</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
         <div id="PageTitle"><h1>课程：仔细看看 "Hello World！" 应用</h1></div>
@@ -488,7 +488,7 @@ class HelloWorldApp {
     }
 }
 </pre></div>
-<p>"Hello World！" 应用程序由三个主要部分组成：<a href="#COMMENTS">源码注释</a>，<a href="#CLASS_DEF"><code>HelloWorldApp</code> 类定义</a> 和 <a href="#MAIN"><code>main</code> 方法</a>。以下说明将为您提供对代码的基本理解，但深层含义只有在完成本教程的其余部分的阅读后才会显现出来。</p>
+<p>"Hello World！" 应用程序由三个主要部分组成：<a href="#COMMENTS">源码注释</a>，<a href="#CLASS_DEF"><code>HelloWorldApp</code> 类定义</a> 和 <a href="#MAIN"><code>main</code> 方法</a>。以下说明将为你提供对代码的基本理解，但深层含义只有在完成本教程的其余部分的阅读后才会显现出来。</p>
 <h2><a name="COMMENTS" id="COMMENTS">源码注释</a></h2>
 <p><a name="COMMENTS__1" id="COMMENTS__1">以下粗体文本定义了 "Hello World！" 应用的 <i>注释</i>：</a></p>
 <div class="codeblock"><pre>
@@ -548,8 +548,8 @@ class HelloWorldApp {
 <div class="codeblock"><pre>
 public static void main(String[] args)
 </pre></div>
-<p>可以按任意顺序(<code>public static</code> 或 <code>static public</code>)编写修饰符 <code>public</code> 和 <code>static</code>，但约定就是使用 <code>public static</code>，如上所示。你可以根据需要命名参数，但大多数程序员选择 "args" 或 "argv"。</p>
-<p><code>main</code> 方法类似于 C 和 C ++中的 <code>main</code> 函数;它是您的应用程序的入口点，随后将调用您的程序所需的所有其他方法。</p>
+<p>可以按任意顺序(<code>public static</code> 或 <code>static public</code>)编写修饰符 <code>public</code> 和 <code>static</code>，但规范就是使用 <code>public static</code>，如上所示。你可以根据需要命名参数，但大多数程序员选择 "args" 或 "argv"。</p>
+<p><code>main</code> 方法类似于 C 和 C ++中的 <code>main</code> 函数;它是你的应用程序的入口点，随后将调用你的程序所需的所有其他方法。</p>
 <p><code>main</code> 方法接受一个参数：<code>String</code> 类型元素的数组。</p>
 <div class="codeblock"><pre>
 public static void main(<b>String[] args</b>)
@@ -562,7 +562,7 @@ java <em>MyApp</em> <em>arg1</em> <em>arg2</em>
 <div class="codeblock"><pre>
 -descending
 </pre></div>
-<p>"Hello World！" 应用程序会忽略它的命令行参数，但您应该意识到这样的参数确实存在的事实。</p>
+<p>"Hello World！" 应用程序会忽略它的命令行参数，但你应该意识到这样的参数确实存在的事实。</p>
 <p>最后，该行：</p>
 <div class="codeblock"><pre>
 System.out.println("Hello World!");

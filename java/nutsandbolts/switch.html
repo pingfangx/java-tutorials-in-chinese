@@ -480,7 +480,7 @@
 <div class="linkAHEAD"><a href="operators.html">运算符</a></div>
 <div class="linkBHEAD"><a href="op1.html">赋值，算术和一元运算符</a></div>
 <div class="linkBHEAD"><a href="op2.html">相等性，关系和条件运算符 </a></div>
-<div class="linkBHEAD"><a href="op3.html">按位和位移运算符</a></div>
+<div class="linkBHEAD"><a href="op3.html">位运算和移位运算符</a></div>
 <div class="linkBHEAD"><a href="opsummary.html">运算符总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions_operators.html">问题和练习</a></div>
 <div class="linkAHEAD"><a href="expressions.html">表达式，语句和块</a></div>
@@ -505,13 +505,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">语言基础</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="if.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="while.html">Next&nbsp;»</a>
+                <a target="_top" href="if.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="while.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>switch 语句</h1></div>
             <div id="PageContent">
 
-<p>与 <code>if-then</code> 和 <code>if-then-else</code> 语句不同，<code>switch</code> 语句可以具有许多可能的执行路径。<code>switch</code> 可与 <code>byte</code>，<code>short</code>，<code>char</code> 和 <code>int</code> 原始数据一起使用类型。它也适用于 <i>enumerated types</i>(在 <a class="TutorialLink" target="_top" href="../javaOO/enum.html">Enum Types</a> 中讨论)，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code>String</code></a> 类以及一些包装某些原始类型的特殊类：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html"><code>Character</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Byte.html"><code>Byte</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html"><code>Short</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html"><code>Integer</code></a>(在 <a class="TutorialLink" target="_top" href="../data/index.html">Numbers and Strings</a> 中讨论)。</p>
+<p>与 <code>if-then</code> 和 <code>if-then-else</code> 语句不同，<code>switch</code> 语句可以具有许多可能的执行路径。<code>switch</code> 可与 <code>byte</code>，<code>short</code>，<code>char</code> 和 <code>int</code> 原始数据一起使用类型。它也适用于 <i>enumerated types (枚举类型)</i>(在 <a class="TutorialLink" target="_top" href="../javaOO/enum.html">Enum Types</a> 中讨论)，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code>String</code></a> 类以及一些包装某些原始类型的特殊类：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html"><code>Character</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Byte.html"><code>Byte</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html"><code>Short</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html"><code>Integer</code></a>(在 <a class="TutorialLink" target="_top" href="../data/index.html">Numbers and Strings</a> 中讨论)。</p>
 <p>以下代码示例 <a class="SourceLink" target="_blank" href="examples/SwitchDemo.java" onclick="showCode('../../displayCode.html', 'examples/SwitchDemo.java'); return false;"><code>SwitchDemo</code></a> 声明了一个名为 <code>month</code> 的 <code>int</code>，其值代表一个月份。该代码使用 <code>switch</code> 语句根据 <code>month</code> 的值显示月份的名称。</p>
 <div class="codeblock"><pre>
 
@@ -554,7 +554,7 @@ public class SwitchDemo {
 </pre></div>
 <p>在这种情况下，<code>August</code> 被打印到标准输出。</p>
 <p><code>switch</code> 语句的主体被称为 <i>switch block</i>。<code>switch</code> 块中的语句可以标注一个或多个 <code>case</code> 或 <code>default</code> 标签。<code>switch</code> 语句计算其表达式，然后执行匹配的 <code>case</code> 标签后面的所有语句。</p>
-<p>您还可以使用 <code>if-then-else</code> 语句显示月份的名称：</p>
+<p>你还可以使用 <code>if-then-else</code> 语句显示月份的名称：</p>
 <div class="codeblock"><pre>
 int month = 8;
 if (month == 1) {
@@ -611,7 +611,7 @@ October
 November
 December
 </pre></div>
-<p>从技术上讲，最终 <code>break</code> 不是必需的，因为流程不在 <code>switch</code> 语句中。建议使用 <code>break</code>，以便修改代码更容易，更不容易出错。<code>default</code> 部分处理所有未由 <code>case</code> 部分之一明确处理的值。</p>
+<p>从技术上讲，最终 <code>break</code> 不是必需的，因为流程不在 <code>switch</code> 语句中。建议使用 <code>break</code>，以便修改代码更容易，也不容易出错。<code>default</code> 部分处理所有未由 <code>case</code> 部分之一明确处理的值。</p>
 <p>以下代码示例 <a class="SourceLink" target="_blank" href="examples/SwitchDemo2.java" onclick="showCode('../../displayCode.html', 'examples/SwitchDemo2.java'); return false;"><code>SwitchDemo2</code></a> 显示了语句如何具有多个 <code>case</code> 标签。代码示例计算特定月份的天数：</p>
 <div class="codeblock"><pre>
 

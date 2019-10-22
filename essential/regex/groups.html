@@ -479,7 +479,7 @@
 <div class="linkAHEAD"><a href="pre_char_classes.html">预定义的字符类</a></div>
 <div class="linkAHEAD"><a href="quant.html">量词</a></div>
 <div class="nolinkAHEAD">捕获组</div>
-<div class="linkAHEAD"><a href="bounds.html">边界匹配器</a></div>
+<div class="linkAHEAD"><a href="bounds.html">边界匹配</a></div>
 <div class="linkAHEAD"><a href="pattern.html">Pattern 类的方法</a></div>
 <div class="linkAHEAD"><a href="matcher.html">Matcher 类的方法</a></div>
 <div class="linkAHEAD"><a href="pse.html">PatternSyntaxException 类的方法</a></div>
@@ -497,7 +497,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">正则表达式</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="quant.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="bounds.html">Next&nbsp;»</a>
+                <a target="_top" href="quant.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="bounds.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>捕获组</h1></div>
@@ -528,7 +528,7 @@
 <p><a name="backref" id="backref"></a></p>
 <h2>反向引用</h2>
 <p>与捕获组匹配的输入字符串部分保存在内存中，以便稍后通过 <i>backreference (反向引用)</i> 进行调用。在正则表达式中将反向引用指定为反斜杠(<code>\</code>)，后跟一个数字（指示要调用的组的编号）。例如，表达式 <code>(\d\d)</code> 定义了一个匹配个行中两个数字的捕获组，可以通过反向引用 <code>\1</code> 在表达式中稍后调用。</p>
-<p>要匹配任何 2 位数字，后跟完全相同的两位数字，您可以使用 <code>(\d\d)\1</code> 作为正则表达式：</p>
+<p>要匹配任何 2 位数字，后跟完全相同的两位数字，你可以使用 <code>(\d\d)\1</code> 作为正则表达式：</p>
 <div class="codeblock"><pre> 
 Enter your regex: (\d\d)\1
 Enter input string to search: 1212

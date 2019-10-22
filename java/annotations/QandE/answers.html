@@ -401,7 +401,7 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p><strong>Question</strong>：以下接口有什么问题：</p>
+<p><strong>问题</strong>:以下接口有什么问题：</p>
 <div class="codeblock"><pre>
 public interface House {
     @Deprecated
@@ -410,7 +410,7 @@ public interface House {
     public void openBackDoor();
 }
 </pre></div>
-<p><strong>Answer</strong> 文档应该反映出为什么不推荐使用 <code>open</code> 以及使用什么。例如：</p>
+<p><strong>答案</strong>文档应该反映出为什么不推荐使用 <code>open</code> 以及使用什么。例如：</p>
 <div class="codeblock"><pre>
 public interface House { 
     /**
@@ -427,7 +427,7 @@ public interface House {
 </pre></div>
 </li>
 <li>
-<p><strong>Question</strong>：考虑问题 1 中所示的 <code>House</code> 接口的这种实现。</p>
+<p><strong>问题</strong>:考虑问题 1 中所示的 <code>House</code> 接口的这种实现。</p>
 <div class="codeblock"><pre>
 public class MyHouse implements House {
     public void open() {}
@@ -436,7 +436,7 @@ public class MyHouse implements House {
 }
 </pre></div>
 <p>如果编译此程序，编译器会生成警告，因为不推荐使用 <code>open</code>(在接口中)。你能做些什么来摆脱那个警告？</p>
-<p><strong>Answer</strong>：您可以弃用 <code>open</code> 的实现：</p>
+<p><strong>答案</strong>:你可以弃用 <code>open</code> 的实现：</p>
 <div class="codeblock"><pre>
 public class MyHouse implements House { 
     // The documentation is 
@@ -447,7 +447,7 @@ public class MyHouse implements House {
     public void openBackDoor() {}
 }
 </pre></div>
-<p>或者，您可以取消警告：</p>
+<p>或者，你可以取消警告：</p>
 <div class="codeblock"><pre>
 public class MyHouse implements House { 
     @SuppressWarnings("deprecation")
@@ -459,7 +459,7 @@ public class MyHouse implements House {
 </li>
 
 <li>
-<p>以下代码是否会编译而不会出错？为什么或者为什么不？</p>
+<p>以下代码是否可以正常编译而不出错？为什么或者为什么不？</p>
 <div class="codeblock"><pre>
 public @interface Meal { ... }
 
@@ -468,7 +468,7 @@ public @interface Meal { ... }
 @Meal("dinner", mainDish="salad")
 public void evaluateDiet() { ... }
 </pre></div>
-<p><strong>Answer</strong>：代码无法编译。在 JDK 8 之前，不支持可重复的注解。从 JDK 8 开始，代码无法编译，因为 <code>Meal</code> 注解类型未定义为可重复。可以通过添加 <code>@Repeatable</code> 元注解并定义容器注解类型来修复它：</p>
+<p><strong>答案</strong>:代码无法编译。在 JDK 8 之前，不支持可重复的注解。从 JDK 8 开始，代码无法编译，因为 <code>Meal</code> 注解类型未定义为可重复。可以通过添加 <code>@Repeatable</code> 元注解并定义容器注解类型来修复它：</p>
 <div class="codeblock"><pre>
 @java.lang.annotation.Repeatable(MealContainer.class)
 public @interface Meal { ... }
@@ -484,7 +484,7 @@ public @interface MealContainer {
 <h2>练习</h2>
 <ol>
 <li><strong>Exercise</strong>：为元素 <code>id</code>，<code>synopsis</code>，<code>engineer</code> 和 <code>date</code>。为工程师指定默认值 <code>unassigned</code>，为日期指定 <code>unknown</code>。
-<p><strong>答案</strong>：</p>
+<p><strong>答案</strong>:</p>
 <div class="codeblock"><pre>
 /**
  * Describes the Request-for-Enhancement (RFE) annotation type.

@@ -410,7 +410,7 @@ public interface SomethingIsWrong {
     }
 }
 </pre></div>
-<p>答案2:它有一个方法实现。只有默认和静态方法才有实现。</p>
+<p>答案2:它有一个方法实现。只有默认和静态方法才能有实现。</p>
 <p>问题3:修复问题 2 中的接口。<br />
 答案3:</p>
 <div class="codeblock"><pre>
@@ -418,7 +418,7 @@ public interface SomethingIsWrong {
     void aMethod(int aValue);
 }
 </pre></div>
-<p>或者，您可以将 <code>aMethod</code> 定义为默认方法：</p>
+<p>或者，你可以将 <code>aMethod</code> 定义为默认方法：</p>
 <div class="codeblock"><pre>
 public interface SomethingIsWrong {
     default void aMethod(int aValue) {
@@ -433,9 +433,9 @@ public interface Marker {
 </pre></div>
 <p>答案4:对。方法不是必需的。空接口可以用作类型和标记类，而无需任何特定的方法实现。有关有用的空接口的示例，请参阅 <code>java.io.Serializable.</code></p>
 <h2>练习</h2>
-<p>练习1:编写一个实现 <code>java.lang</code> 包中的 <code>CharSequence</code> 接口的类。您的实现应该向后返回字符串。选择本书中的一个句子作为数据。写一个小的 <code>main</code> 方法来测试你的类;确保调用所有四种方法。<br />
+<p>练习1:编写一个实现 <code>java.lang</code> 包中的 <code>CharSequence</code> 接口的类。你的实现应该向后返回字符串。选择本书中的一个句子作为数据。写一个小的 <code>main</code> 方法来测试你的类;确保调用所有四种方法。<br />
 答案1:参见 <a class="SourceLink" target="_blank" href="../examples/CharSequenceDemo.java" onclick="showCode('../../../displayCode.html', '../examples/CharSequenceDemo.java'); return false;"><code>CharSequenceDemo.java</code></a></p>
-<p>练习2:假设您已经编写了一个时间服务器，它会定期通知客户当前的日期和时间。编写一个服务器可用于在其客户端上强制执行特定协议的接口。<br />
+<p>练习2:假设你已经编写了一个时间服务器，它会定期通知客户当前的日期和时间。编写一个服务器可用于在其客户端上强制执行特定协议的接口。<br />
 答案2:请参阅 <a class="SourceLink" target="_blank" href="../examples/TimeClient.java" onclick="showCode('../../../displayCode.html', '../examples/TimeClient.java'); return false;"><code>TimeClient.java</code></a>。</p>
 
 

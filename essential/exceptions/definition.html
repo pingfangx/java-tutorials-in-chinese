@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="creating.html">创建异常类</a></div>
-<div class="linkAHEAD"><a href="runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="summary.html">总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -499,20 +499,20 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="catchOrDeclare.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="catchOrDeclare.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>异常是什么？</h1></div>
             <div id="PageContent">
 
-<p>术语 <em>exception</em> 是短语 "异常事件（exceptional event）" 的简写。</p>
-<div class="note"><hr /><strong>定义：</strong> <em>exception</em> 是一个在程序执行期间发生的事件，它会中断程序指令的正常流程。
+<p>术语 <em>exception</em> 是短语 "exceptional event (异常事件)" 的简写。</p>
+<div class="note"><hr /><strong>定义:</strong>&nbsp;<strong>定义：</strong> <em>exception</em> 是一个在程序执行期间发生的事件，它会中断程序指令的正常流程。
 <hr /></div>
-<p>当方法中发生错误时，该方法会创建一个对象并将其交给运行时系统。该对象称为 <em>异常对象（exception object）</em>，它包含有关错误的信息，包括错误的类型和错误发生时程序的状态。创建异常对象并将其交给运行时系统称为 <em>抛出一个异常（throwing an exception）</em>。</p>
-<p>在一个方法抛出异常之后，运行时系统会尝试找到一些东西来处理它。处理异常的可能 "东西" 的集合，是已被调用的到达发生错误的方法的有序方法列表。该方法列表称为 <em>调用推栈（call stack）</em>(参见<span id="figure:exceptions-callstack.gif">下图</span>)。</p>
-<center><img src="../../figures/essential/exceptions-callstack.gif" width="288" height="193" align="bottom" alt="调用堆栈显示三个方法调用，其中第一个调用的方法具有异常处理程序。" /></p><p class="FigureCaption">调用堆栈。</p></center><p>运行时系统在调用堆栈中搜索包含可以处理异常的代码块的方法。这段代码称为 <em>异常处理程序（exception handler）</em>。搜索从发生错误的方法开始，并以调用方法的相反顺序继续浏览调用堆栈。找到适当的处理程序后，运行时系统会将异常传递给处理程序。如果抛出的异常对象的类型与处理程序可以处理的类型匹配，则认为异常处理程序是合适的。</p>
-<p>异常处理程序的选择被称为 <em>捕获异常（catch the exception）</em>。如果运行时系统彻底搜索了调用堆栈上的所有方法，但没有找到适当的异常处理程序，如 <span id="figure:exceptions-errorOccurs.gif">下图</span> 所示，则运行时系统(所以，连同程序)将终止。</p>
-<center><img src="../../figures/essential/exceptions-errorOccurs.gif" width="411" height="193" align="bottom" alt="调用堆栈显示三个方法调用，其中第一个调用的方法具有异常处理程序。" /></p><p class="FigureCaption">在调用堆栈中搜索异常处理程序。</p></center><p>使用异常来管理错误比传统的错误管理技术有一些优势。您可以在 <a class="TutorialLink" target="_top" href="advantages.html">Advantages of Exceptions</a> 部分了解更多信息。</p>
+<p>当方法中发生错误时，该方法会创建一个对象并将其交给运行时系统。该对象称为 <em>exception object (异常对象)</em>，它包含有关错误的信息，包括错误的类型和错误发生时程序的状态。创建异常对象并将其交给运行时系统称为 <em>throwing an exception (抛出一个异常)</em>。</p>
+<p>在一个方法抛出异常之后，运行时系统会尝试找到一些东西来处理它。处理异常的可能 "东西" 的集合，是已被调用的到达发生错误的方法的有序方法列表。该方法列表称为 <em>call stack (调用推栈)</em>(参见<span id="figure:exceptions-callstack.gif">下图</span>)。</p>
+<center><img src="../../figures/essential/exceptions-callstack.gif" width="288" height="193" align="bottom" alt="调用堆栈显示三个方法调用，其中第一个调用的方法具有异常处理程序。" /></p><p class="FigureCaption">调用堆栈。</p></center><p>运行时系统在调用堆栈中搜索包含可以处理异常的代码块的方法。这段代码称为 <em>exception handler (异常处理程序)</em>。搜索从发生错误的方法开始，并以调用方法的相反顺序继续浏览调用堆栈。找到适当的处理程序后，运行时系统会将异常传递给处理程序。如果抛出的异常对象的类型与处理程序可以处理的类型匹配，则认为异常处理程序是适当的。</p>
+<p>异常处理程序的选择被称为 <em>catch the exception (捕获异常)</em>。如果运行时系统彻底搜索了调用堆栈上的所有方法，但没有找到适当的异常处理程序，如 <span id="figure:exceptions-errorOccurs.gif">下图</span> 所示，则运行时系统(所以，连同程序)将终止。</p>
+<center><img src="../../figures/essential/exceptions-errorOccurs.gif" width="411" height="193" align="bottom" alt="调用堆栈显示三个方法调用，其中第一个调用的方法具有异常处理程序。" /></p><p class="FigureCaption">在调用堆栈中搜索异常处理程序。</p></center><p>使用异常来管理错误比传统的错误管理技术有一些优势。你可以在 <a class="TutorialLink" target="_top" href="advantages.html">Advantages of Exceptions</a> 部分了解更多信息。</p>
 
 
         </div>

@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,13 +512,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="innerclasses.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="anonymousclasses.html">Next&nbsp;»</a>
+                <a target="_top" href="innerclasses.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="anonymousclasses.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>局部类</h1></div>
             <div id="PageContent">
 
-<p>局部类是在 <em>块</em> 中定义的类，它是平衡大括号之间的一组零个或多个语句。您通常会在方法体中找到定义的局部类。</p>
+<p>局部类是在 <em>块</em> 中定义的类，它是平衡大括号之间的一组零个或多个语句。你通常会在方法体中找到定义的局部类。</p>
 
 <p>本节包括以下主题：</p>
 
@@ -534,7 +534,7 @@
 
 <h2><a name="declaring-local-classes">声明局部类</a></h2>
 
-<p>您可以在任何块内定义局部类(有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/expressions.html">Expressions, Statements, and Blocks</a>)。例如，您可以在方法体中，<code>for</code> 循环或 <code>if</code> 子句中定义局部类。</p>
+<p>你可以在任何块内定义局部类(有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/expressions.html">Expressions, Statements, and Blocks</a>)。例如，你可以在方法体中，<code>for</code> 循环或 <code>if</code> 子句中定义局部类。</p>
 
 <p>以下示例 <a class="SourceLink" target="_blank" href="examples/LocalClassExample.java" onclick="showCode('../../displayCode.html', 'examples/LocalClassExample.java'); return false;"><code>LocalClassExample</code></a> 验证两个电话号码。它在方法 <code>validatePhoneNumber</code> 中定义了局部类 <code>PhoneNumber</code>：</p>
 
@@ -613,9 +613,9 @@ Second number is invalid</pre>
 
 <p>局部类可以访问其封闭类的成员。在前面的示例中，<code>PhoneNumber</code> 构造函数访问成员 <code>LocalClassExample.regularExpression</code>。</p>
 
-<p>此外，局部类可以访问局部变量。但是，局部类只能访问声明为 final 的局部变量。当局部类访问封闭块的局部变量或参数时，它 <em>captures（捕获）</em> 该变量或参数。例如，<code>PhoneNumber</code> 构造函数可以访问局部变量 <code>numberLength</code>，因为它被声明为 final; <code>numberLength</code> 是 <em>捕获变量</em>。</p>
+<p>此外，局部类可以访问局部变量。但是，局部类只能访问声明为 final 的局部变量。当局部类访问封闭块的局部变量或参数时，它 <em>captures (捕获)</em> 该变量或参数。例如，<code>PhoneNumber</code> 构造函数可以访问局部变量 <code>numberLength</code>，因为它被声明为 final; <code>numberLength</code> 是 <em>捕获变量</em>。</p>
 
-<p>但是，从 Java SE 8 开始，局部类可以访问 final 或 <em>effectively final（实际上 final）</em> 的封闭块的局部变量和参数。在初始化之后其值永远不会更改的变量或参数实际上是 final 的。例如，假设变量 <code>numberLength</code> 未声明为 final，并在 <code>PhoneNumber</code> 构造函数中添加高亮的赋值语句，以将有效电话号码的长度更改为 7 位数：</p>
+<p>但是，从 Java SE 8 开始，局部类可以访问 final 或 <em>effectively final (实际上 final)</em> 的封闭块的局部变量和参数。在初始化之后其值永远不会更改的变量或参数实际上是 final 的。例如，假设变量 <code>numberLength</code> 未声明为 final，并在 <code>PhoneNumber</code> 构造函数中添加高亮的赋值语句，以将有效电话号码的长度更改为 7 位数：</p>
 
 <pre class="codeblock">PhoneNumber(String phoneNumber) {
     <strong>numberLength = 7;</strong>
@@ -631,7 +631,7 @@ Second number is invalid</pre>
 
 <pre class="codeblock">if (currentNumber.length() == numberLength)</pre>
 
-<p>从 Java SE 8 开始，如果在方法中声明局部类，它可以访问方法的参数。例如，您可以在 <code>PhoneNumber</code> 局部类中定义以下方法：</p>
+<p>从 Java SE 8 开始，如果在方法中声明局部类，它可以访问方法的参数。例如，你可以在 <code>PhoneNumber</code> 局部类中定义以下方法：</p>
 
 <pre class="codeblock">public void printOriginalNumbers() {
     System.out.println("Original numbers are " + phoneNumber1 +
@@ -666,7 +666,7 @@ Second number is invalid</pre>
         myGreeting.greet();
     }</pre>
 
-<p>您不能在局部类中声明静态初始化程序或成员接口。以下代码片段无法编译，因为方法 <code>EnglishGoodbye.sayGoodbye</code> 声明为 <code>static</code>。当遇到此方法定义时，编译器会生成类似于 "修饰符 'static' 只允许在常量变量声明中使用"的错误：</p>
+<p>你不能在局部类中声明静态初始化程序或成员接口。以下代码片段无法编译，因为方法 <code>EnglishGoodbye.sayGoodbye</code> 声明为 <code>static</code>。当遇到此方法定义时，编译器会生成类似于 "修饰符 'static' 只允许在常量变量声明中使用"的错误：</p>
 
 <pre class="codeblock">    public void sayGoodbyeInEnglish() {
         class EnglishGoodbye {

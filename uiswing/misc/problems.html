@@ -497,20 +497,20 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">使用其他 Swing 功能</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="systemtray.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../layout/index.html">Next&nbsp;»</a>
+                <a target="_top" href="systemtray.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../layout/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用其他 Swing 特性解决常见问题</h1></div>
             <div id="PageContent">
 
-<p><strong>Problem:</strong> My application is not showing the look and feel I have requested via <code>UIManager.setLookAndFeel</code>.</p>
+<p><strong>Problem:</strong>My application is not showing the look and feel I have requested via <code>UIManager.setLookAndFeel</code>.</p>
 <p>You probably either set the look and feel to an invalid look and feel or set it after the UI manager loaded the default look and feel. If you are sure that the look and feel you specified is valid and setting the look and feel is the first thing your program does (at the top of its main method, for example), check whether you have a static field that references a Swing class. This reference can cause the default look and feel to be loaded if none has been specified. For more information, including how to set a look and feel after the GUI has been created, see the <a href="../lookandfeel/plaf.html">look and feel</a> section.</p>
-<p><strong>Problem:</strong> Why is not my component getting the focus?</p>
+<p><strong>Problem:</strong>Why is not my component getting the focus?</p>
 <ul>
 <li>Is it a custom component (for example, a direct subclass of <code>JComponent</code>) that you created? If so, you may need to give your component an input map and mouse listener. See <a href="focus.html#focusable">How to Make a Custom Component Focusable</a> for more information and a demo.</li>
 <li>Is the component inside of a <code>JWindow</code> object? The focus system requires a <code>JWindow</code>'s owning frame to be visible for any components in the <code>JWindow</code> object to get the focus. By default, if you do not specify an owning frame for a <code>JWindow</code> object, an invisible owning frame is created for it. The solution is to either specify a visible and focusable owning frame when creating the <code>JWindow</code> object or to use <code>JDialog</code> or <code>JFrame</code> objects instead.</li>
 </ul>
-<p><strong>Problem:</strong> Why cannot my dialog receive the event generated when the user hits the Escape key?</p>
+<p><strong>Problem:</strong>Why cannot my dialog receive the event generated when the user hits the Escape key?</p>
 <p>If your dialog contains a text field, it may be consuming the event.</p>
 <ul>
 <li>If you want to get the Escape event regardless of whether a component consumes it, you should use a 
@@ -518,8 +518,7 @@
 <li>If you want to get the Escape event only if a component has not consumed it, then register a key binding on any <code>JComponent</code> component in the <code>JDialog</code> object, using the <code>WHEN_IN_FOCUSED_WINDOW</code> input map. For more information, see the 
 <a class="TutorialLink" target="_top" href="../misc/keybinding.html">How to Use Key Bindings</a> page.</li>
 </ul>
-<p><strong>Problem:</strong> Why I cannot apply Swing components to a tray icon? Current implementation of the <code>TrayIcon</code> class supports the <code>PopupMenu</code> component, but not its Swing counterpart <code>JPopupMenu</code>. This limitation narrows capabilities to employ additional Swing features, for example, menu icons. See the Bug ID 
-<a class="OutsideLink" target="_blank" href="http://bugs.java.com/bugdatabase/view_bug.do?bug_id=6285881">6285881</a>.</p>
+<p><strong>Problem:</strong>Why I cannot apply Swing components to a tray icon?Current implementation of the <code>TrayIcon</code> class supports the <code>PopupMenu</code> component, but not its Swing counterpart <code>JPopupMenu</code>. This limitation narrows capabilities to employ additional Swing features, for example, menu icons. See the Bug ID <a class="OutsideLink" target="_blank" href="http://bugs.java.com/bugdatabase/view_bug.do?bug_id=6285881">6285881</a>.</p>
 <ul>
 <li>A new <code>JTrayIcon</code> class will be created to eliminate this inconvenience. Until then, use AWT components to add a menu item, checkbox menu item, or submenu.</li>
 </ul>

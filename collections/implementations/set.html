@@ -492,7 +492,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">实现</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="list.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="list.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Set 实现</h1></div>
@@ -500,18 +500,18 @@
 
 <p><code>Set</code> 实现分为通用和专用实现。</p>
 <h2>通用 Set 实现</h2>
-<p>有三种通用的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html"><code>Set</code></a> 实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html"><code>HashSet</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html"><code>TreeSet</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html"><code>LinkedHashSet</code></a>。使用这三种中的哪一种通常是直截了当的。<code>HashSet</code> 比 <code>TreeSet</code> 快得多(大多数操作的常量时间与 log 时间)，但不提供排序保证。如果需要使用 <code>SortedSet</code> 接口中的操作，或者需要按值进行迭代，请使用 <code>TreeSet</code>;否则，请使用 <code>HashSet</code>。可以肯定的是，大多数时候您最终都会使用 <code>HashSet</code>。</p>
-<p><code>LinkedHashSet</code> 在某种意义上介于 <code>HashSet</code> 和 <code>TreeSet</code> 之间。作为一个具有链表的哈希表来实现，它提供 <em>insertion-ordered (插入顺序)</em> 迭代(最早插入到最近插入)并且运行几乎与 <code>HashSet</code> 一样快。<code>LinkedHashSet</code> 实现使其客户端免于由 <code>HashSet</code> 提供的未指定的，通常是混乱的排序影响，而不会导致与 <code>TreeSet</code> 相关的增加的成本。</p>
+<p>有三种通用的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html"><code>Set</code></a> 实现  <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html"><code>HashSet</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html"><code>TreeSet</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html"><code>LinkedHashSet</code></a>。使用这三种中的哪一种通常是直截了当的。<code>HashSet</code> 比 <code>TreeSet</code> 快得多(大多数操作的常量时间与 log 时间)，但不提供排序保证。如果需要使用 <code>SortedSet</code> 接口中的操作，或者需要按值进行迭代，请使用 <code>TreeSet</code>;否则，请使用 <code>HashSet</code>。可以肯定的是，大多数时候你最终都会使用 <code>HashSet</code>。</p>
+<p><code>LinkedHashSet</code> 在某种意义上介于 <code>HashSet</code> 和 <code>TreeSet</code> 之间。作为一个具有链表的哈希表来实现，它提供 <em>insertion-ordered (插入顺序)</em> 迭代(最早插入到最近插入)并且运行几乎与 <code>HashSet</code> 一样快。<code>LinkedHashSet</code> 实现使其客户端免于由 <code>HashSet</code> 提供的未指定的、通常是混乱的排序影响，而不会导致与 <code>TreeSet</code> 相关的增加的成本。</p>
 <p>关于 <code>HashSet</code> 值得记住的一件事是，迭代在条目数和桶数(<em>capacity (容量)</em>)之和中是线性的。因此，选择太高的初始容量会浪费空间和时间。另一方面，选择一个太低的初始容量会在每次强制增加容量时复制数据结构，从而浪费时间。如果未指定初始容量，则默认值为 16。过去，选择素数作为初始容量有一些优势。这不再是真的。在内部，容量总是四舍五入到 2 的幂。使用 <code>int</code> 构造函数指定初始容量。以下代码行分配一个 <code>HashSet</code>，其初始容量为 64。</p>
 <div class="codeblock"><pre>
 Set&lt;String&gt; s = new HashSet&lt;String&gt;(64);
 </pre></div>
-<p><code>HashSet</code> 类有另一个调整参数，称为 <em>load factor (加载因子)</em>。如果您非常关心 <code>HashSet</code> 的空间消耗，请阅读 <code>HashSet</code> 文档以获取更多信息。否则，只接受默认值；这几乎总是正确的事情。</p>
-<p>如果您接受默认加载因子但想要指定初始容量，请选择一个大约是您希望该组增长的大小的两倍的数字。如果您的猜测偏远，您可能会浪费一些空间，时间或两者，但这不太可能是一个大问题。</p>
+<p><code>HashSet</code> 类有另一个调整参数，称为 <em>load factor (加载因子)</em>。如果你非常关心 <code>HashSet</code> 的空间消耗，请阅读 <code>HashSet</code> 文档以获取更多信息。否则，只需接受默认值；这几乎总是正确的事情。</p>
+<p>如果你接受默认加载因子但想要指定初始容量，请选择一个大约是你希望该组增长的大小的两倍的数字。如果你的猜测偏远，你可能会浪费一些空间，时间或两者，但这不太可能是一个大问题。</p>
 <p><code>LinkedHashSet</code> 与 <code>HashSet</code> 具有相同的调整参数，但迭代时间不受容量影响。<code>TreeSet</code> 没有调整参数。</p>
 <h2>专用 Set 实现</h2>
-<p>有两个专用的 <code>Set</code> 实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html"><code>EnumSet</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArraySet.html"><code>CopyOnWriteArraySet</code></a>。</p>
-<p><code>EnumSet</code> 是枚举类型的高性能 <code>Set</code> 实现。枚举集的所有成员必须具有相同的枚举类型。在内部，它由位向量表示，通常是单个 <code>long</code>。枚举集支持枚举类型范围内的迭代。例如，给定星期几的枚举声明，您可以迭代工作日。<code>EnumSet</code> 类提供了一个简单的静态工厂。</p>
+<p>有两个专用的 <code>Set</code> 实现  <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html"><code>EnumSet</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArraySet.html"><code>CopyOnWriteArraySet</code></a>。</p>
+<p><code>EnumSet</code> 是枚举类型的高性能 <code>Set</code> 实现。枚举集的所有成员必须具有相同的枚举类型。在内部，它由位向量表示，通常是单个 <code>long</code>。枚举集支持枚举类型范围内的迭代。例如，给定星期几的枚举声明，你可以迭代工作日。<code>EnumSet</code> 类提供了一个简单的静态工厂。</p>
 <div class="codeblock"><pre>
     for (Day d : EnumSet.range(Day.MONDAY, Day.FRIDAY))
         System.out.println(d);

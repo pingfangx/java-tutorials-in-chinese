@@ -395,7 +395,7 @@
             <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>
         </div>
         <div class="NavBit">
-                <a target="_top" href="../implementations/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../custom-implementations/index.html">Next&nbsp;»</a>
+                <a target="_top" href="../implementations/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../custom-implementations/index.html">下一页&nbsp;»</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
         <div id="PageTitle"><h1>课程：算法</h1></div>
@@ -413,13 +413,13 @@
 </ul>
 <a name="sorting" id="sorting"></a>
 <h2>排序</h2>
-<p><code>sort</code> 算法重新排序 <code>List</code>，以便其元素按照排序关系按升序排列。提供了两种形式的操作。简单形式采用 <code>List</code> 并根据其元素的 <em>natural ordering (自然排序)</em> 对其进行排序。如果您不熟悉自然排序的概念，请阅读 <a class="TutorialLink" target="_top" href="../interfaces/order.html">Object Ordering</a> 部分。</p>
+<p><code>sort</code> 算法重新排序 <code>List</code>，以便其元素按照排序关系按升序排列。提供了两种形式的操作。简单形式采用 <code>List</code> 并根据其元素的 <em>natural ordering (自然排序)</em> 对其进行排序。如果你不熟悉自然排序的概念，请阅读 <a class="TutorialLink" target="_top" href="../interfaces/order.html">Object Ordering</a> 部分。</p>
 <p><code>sort</code> 操作使用快速且稳定的略微优化的 <em>merge sort (合并排序)</em> 算法：</p>
 <ul>
-<li><b>Fast</b>：保证在 <code>n log(n)</code> 时间内运行，并且在近乎排序的列表上运行得更快。经验测试显示它与高度优化的快速排序一样快。快速排序通常被认为比合并排序更快但不稳定并且不保证 <code>n log(n)</code> 性能。</li>
-<li><b>Stable</b>：它不会重新排序相等的元素。如果在不同属性上重复对同一列表进行排序，这一点很重要。如果邮件程序的用户通过邮寄日期对收件箱进行排序，然后由发件人对其进行排序，则用户自然希望来自给定发件人的现在连续的邮件列表(仍然)将按邮寄日期排序。仅当第二个排序稳定时才能保证这一点。</li>
+<li><b>快</b>：保证在 <code>n log(n)</code> 时间内运行，并且在近乎排序的列表上运行得更快。经验测试显示它与高度优化的快速排序一样快。快速排序通常被认为比合并排序更快但不稳定并且不保证 <code>n log(n)</code> 性能。</li>
+<li><b>稳定</b>：它不会重新排序相等的元素。如果在不同的属性上，重复对同一列表进行排序，这一点很重要。如果邮件程序的用户通过邮寄日期对收件箱进行排序，然后由发件人对其进行排序，则用户自然希望来自给定发件人的现在连续的邮件列表(仍然)将按邮寄日期排序。仅当第二个排序稳定时才能保证这一点。</li>
 </ul>
-<p>以下 <a class="SourceLink" target="_blank" href="examples/Sort.java" onclick="showCode('../../displayCode.html', 'examples/Sort.java'); return false;"><code>trivial program</code></a> 以字典(按字母顺序)顺序打印出其参数。</p>
+<p>以下 <a class="SourceLink" target="_blank" href="examples/Sort.java" onclick="showCode('../../displayCode.html', 'examples/Sort.java'); return false;"><code>trivial program</code></a> 以词典(按字母顺序)顺序打印出其参数。</p>
 <div class="codeblock"><pre>
 
 import java.util.*;
@@ -440,8 +440,8 @@ public class Sort {
 <div class="codeblock"><pre>
 [i, line, the, walk]
 </pre></div>
-<p>该程序仅用于向您展示算法确实像它们看起来一样容易使用。</p>
-<p><code>sort</code> 的第二种形式采用除 <code>List</code> 之外的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html"><code>Comparator</code></a>，并使用 <code>Comparator</code> 排序元素。假设您想要以相反的大小顺序打印出前面示例中的 anagram 组最大的 anagram 组首先。下面的示例向您展示了如何借助 <code>sort</code> 方法的第二种形式实现此目的。</p>
+<p>该程序仅用于向你展示算法确实像它们看起来一样容易使用。</p>
+<p><code>sort</code> 的第二种形式采用除 <code>List</code> 之外的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html"><code>Comparator</code></a>，并使用 <code>Comparator</code> 排序元素。假设你想要以相反的大小顺序打印出前面示例中的 anagram 组  最大的 anagram 组在前。下面的示例向你展示了如何借助 <code>sort</code> 方法的第二种形式实现此目的。</p>
 <p>回想一下，anagram 组作为值存储在 <code>Map</code> 中，格式为 <code>List</code> 实例。修改后的打印代码遍历 <code>Map</code> 的值视图，将通过最小尺寸测试的每个 <code>List</code> 放入保存 <code>List</code> 的 <code>List</code> 中。然后代码使用需要 <code>List</code> 实例的 <code>Comparator</code> 对此 <code>List</code> 进行排序，并实现反向大小排序。最后，代码遍历排序的 <code>List</code>，打印其元素(anagram 组)。以下代码替换 <code>Anagrams</code> 示例中 <code>main</code> 方法末尾的打印代码。</p>
 <div class="codeblock"><pre>
 // Make a List of all anagram groups above size threshold.
@@ -498,16 +498,16 @@ for (List&lt;String&gt; l : winners)
 <h2>常规数据操作</h2>
 <p><code>Collections</code> 类提供了五种算法，用于对 <code>List</code> 对象进行常规数据操作，所有这些算法都非常简单：</p>
 <ul>
-<li><code>reverse</code> 颠倒 <code>List</code> 中元素的顺序。</li>
-<li><code>fill</code> 用指定的值覆盖 <code>List</code> 中的每个元素。此操作对于重新初始化 <code>List</code> 非常有用。</li>
-<li><code>copy</code> 接受两个参数，一个目标 <code>List</code> 和一个源 <code>List</code>，并将源的元素复制到目标中，覆盖其内容。目标 <code>List</code> 必须至少与源一样长。如果它更长，则目标 <code>List</code> 中的其余元素不受影响。</li>
-<li><code>swap</code> 交换 <code>List</code> 中的指定位置的元素。</li>
-<li><code>addAll</code> 将所有指定的元素添加到 <code>Collection</code>。要添加的元素可以单独指定，也可以作为数组指定。</li>
+<li><code>reverse</code>  颠倒 <code>List</code> 中元素的顺序。</li>
+<li><code>fill</code>  用指定的值覆盖 <code>List</code> 中的每个元素。此操作对于重新初始化 <code>List</code> 非常有用。</li>
+<li><code>copy</code>  接受两个参数，一个目标 <code>List</code> 和一个源 <code>List</code>，并将源的元素复制到目标中，覆盖其内容。目标 <code>List</code> 必须至少与源一样长。如果它更长，则目标 <code>List</code> 中的其余元素不受影响。</li>
+<li><code>swap</code>  交换 <code>List</code> 中的指定位置的元素。</li>
+<li><code>addAll</code>  将所有指定的元素添加到 <code>Collection</code>。要添加的元素可以单独指定，也可以作为数组指定。</li>
 </ul>
 <p><a name="searching" id="searching"></a></p>
 <h2>搜索</h2>
-<p><code>binarySearch</code> 算法在已排序的 <code>List</code> 中搜索指定元素。该算法有两种形式。第一个采用 <code>List</code> 和要搜索的元素(“search key”)。此形式假定 <code>List</code> 根据其元素的自然顺序按升序排序。第二种形式采用除了 <code>List</code> 和搜索键之外的 <code>Comparator</code>，并假设 <code>List</code> 按照指定的 <code>Comparator</code> 升序排序。在调用 <code>binarySearch</code> 之前，可以使用 <code>sort</code> 算法对 <code>List</code> 进行排序。</p>
-<p>两个形式的返回值相同。如果 <code>List</code> 包含搜索键，则返回其索引。如果不是，则返回值为 <code>(-(插入点) - 1)</code>，其中插入点是将值插入 <code>List</code> 的点，或者说是第一个大于值的元素的索引，或者如果 <code>List</code> 中的所有元素都小于指定值，则返回 <code>list.size()</code>。这个公认的丑陋公式保证当且仅当找到搜索键时返回值 <code>&gt;= 0</code>。将布尔值 <code>(是否找到)</code> 和整数 <code>(索引)</code> 组合成单个 <code>int</code> 返回值基本上是一种破解。</p>
+<p><code>binarySearch</code> 算法在已排序的 <code>List</code> 中搜索指定元素。该算法有两种形式。第一个采用 <code>List</code> 和要搜索的元素(“search key”)。此形式假定 <code>List</code> 根据其元素的自然顺序按升序排序。第二种形式除了 <code>List</code> 和搜索键之外，还有一个的 <code>Comparator</code>，并假设 <code>List</code> 按照指定的 <code>Comparator</code> 升序排序。在调用 <code>binarySearch</code> 之前，可以使用 <code>sort</code> 算法对 <code>List</code> 进行排序。</p>
+<p>两个形式的返回值相同。如果 <code>List</code> 包含搜索键，则返回其索引。如果不包含，则返回值为 <code>(-(插入点) - 1)</code>，其中插入点是将值插入 <code>List</code> 的点，或者说是第一个大于值的元素的索引，或者如果 <code>List</code> 中的所有元素都小于指定值，则返回 <code>list.size()</code>。这个公认的丑陋公式保证当且仅当找到搜索键时返回值 <code>&gt;= 0</code>。将布尔值 <code>(是否找到)</code> 和整数 <code>(索引)</code> 组合成单个 <code>int</code> 返回值基本上是一种破解。</p>
 <p>以下习惯用法(可用于 <code>binarySearch</code> 操作的两种形式)查找指定的搜索键并将其插入适当的位置(如果它尚不存在)。</p>
 <div class="codeblock"><pre>
 int pos = Collections.binarySearch(list, key);
@@ -518,8 +518,8 @@ if (pos &lt; 0)
 <h2>组成</h2>
 <p>频率和不相交算法测试一个或多个 <code>Collections</code> 的组成的某些方面：</p>
 <ul>
-<li><code>frequency</code> 计算指定元素在指定集合中出现的次数</li>
-<li><code>disjoint</code> 确定两个 <code>Collections</code> 是否不相交；也就是说，它们是否不包含任何共同的元素</li>
+<li><code>frequency</code>  计算指定元素在指定集合中出现的次数</li>
+<li><code>disjoint</code>  确定两个 <code>Collections</code> 是否不相交；也就是说，它们是否不包含任何共同的元素</li>
 </ul>
 <p><a name="fev" id="fev"></a></p>
 <h2>求极值</h2>

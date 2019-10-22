@@ -399,7 +399,7 @@
         <div id="PageContent">
 
 <h2>答案</h2>
-<p>问题1:假设您已经编写了一些类。稍后，您决定将它们拆分为三个包，如下表所示。此外，假设类当前在默认包中(它们没有 <code>package</code> 语句)。</p>
+<p>问题1:假设你已经编写了一些类。稍后，你决定将它们拆分为三个包，如下表所示。此外，假设类当前在默认包中(它们没有 <code>package</code> 语句)。</p>
 <table summary="包和类名" border="1" cellspacing="1" cellpadding="3" width="300">
 <tr>
 <th>
@@ -434,7 +434,7 @@
 </td>
 </tr>
 </table>
-<p>a. 您需要在每个源文件中添加哪些代码才能将每个类放入正确的包中？<br />
+<p>a. 你需要在每个源文件中添加哪些代码才能将每个类放入正确的包中？<br />
 答案1a:每个文件的第一行必须指定包：</p>
 <dl>
 <dt>在 <code>Client.java</code> 中添加：</dt>
@@ -444,8 +444,8 @@
 <dt>在 <code>Utilities.java</code> 中添加：</dt>
 <dd><code>package mygame.shared;</code></dd>
 </dl>
-<p>b. 要遵循目录结构，您需要在开发目录中创建一些子目录，并将源文件放在正确的子目录中。您必须创建哪些子目录？每个源文件进入哪个子目录？<br />
-答案1b:在 <code>mygame</code> 目录中，您需要创建三个子目录：<code>client</code>，<code>server</code> 和 <code>shared</code>。</p>
+<p>b. 要遵循目录结构，你需要在开发目录中创建一些子目录，并将源文件放在正确的子目录中。你必须创建哪些子目录？每个源文件进入哪个子目录？<br />
+答案1b:在 <code>mygame</code> 目录中，你需要创建三个子目录：<code>client</code>，<code>server</code> 和 <code>shared</code>。</p>
 <dl>
 <dt>在 <code>mygame/client/</code> 中：</dt>
 <dd><code>Client.java</code></dd>
@@ -455,7 +455,7 @@
 <dd><code>Utilities.java</code></dd>
 </dl>
 <p>c. 你认为你需要对源文件进行任何其他更改才能使它们正确编译吗？如果需要，则需要做什么？<br />
-答案1c:是的，您需要添加 import 语句。<code>Client.java</code> 和 <code>Server.java</code> 需要导入 <code>Utilities</code> 类，他们可以通过以下两种方式之一进行操作：</p>
+答案1c:是的，你需要添加 import 语句。<code>Client.java</code> 和 <code>Server.java</code> 需要导入 <code>Utilities</code> 类，他们可以通过以下两种方式之一进行操作：</p>
 <div class="codeblock"><pre>
 import mygame.shared.*;
        --or--
@@ -475,9 +475,9 @@ import mygame.client.Client;
 <li>
 <a class="SourceLink" target="_blank" href="question/Utilities.java" onclick="showCode('../../../displayCode.html', 'question/Utilities.java'); return false;"><code>Utilities</code></a></li>
 </ul>
-<p>a. 使用刚刚下载的源文件实现您在问题 1 中提出的更改。<br />
+<p>a. 使用刚刚下载的源文件实现你在问题 1 中提出的更改。<br />
 b. 编译修改后的源文件。（<i>Hint:</i> 如果从命令行调用编译器（而不是使用构建器），请从包含 <code>mygame</code> 目录的目录中调用编译器答案）1：下载包含答案的 zip 文件：<a class="SourceLink" target="_blank" href="mygame.zip" onclick="showCode('../../../displayCode.html', 'mygame.zip'); return false;"><code>mygame.zip</code></a><br />
-您可能需要更改建议的导入代码以反映我们的实现。</p>
+你可能需要更改建议的导入代码以反映我们的实现。</p>
 
 
         </div>

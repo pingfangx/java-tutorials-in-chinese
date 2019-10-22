@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">接口</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="sorted-set.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summary.html">Next&nbsp;»</a>
+                <a target="_top" href="sorted-set.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="summary.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>SortedMap 接口</h1></div>
@@ -502,9 +502,9 @@
 
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/SortedMap.html"><code>SortedMap</code></a> 是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html"><code>Map</code></a>，它按升序维护其条目，根据键的自然顺序排序，或者根据 <code>SortedMap</code> 创建时提供的 <code>Comparator</code>。自然排序和 <code>Comparator</code> 在 <a class="TutorialLink" target="_top" href="order.html">Object Ordering</a> 部分中讨论。<code>SortedMap</code> 接口提供正常 <code>Map</code> 操作的操作，以及以下操作：</p>
 <ul>
-<li><code>Range view</code> 对有序 map 执行任意范围操作</li>
-<li><code>Endpoints</code> 返回有序 map 中的第一个或最后一个键</li>
-<li><code>Comparator access</code> 返回用于对 map 进行排序的 <code>Comparator</code>(如果有)</li>
+<li><code>Range view</code>  对有序 map 执行任意范围操作</li>
+<li><code>Endpoints</code>  返回有序 map 中的第一个或最后一个键</li>
+<li><code>Comparator access</code>  返回用于对 map 进行排序的 <code>Comparator</code>(如果有)</li>
 </ul>
 <p>以下接口是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html"><code>SortedSet</code></a> 的 <code>Map</code> 模拟。</p>
 <div class="codeblock"><pre>
@@ -525,8 +525,8 @@ public interface SortedMap&lt;K, V&gt; extends Map&lt;K, V&gt;{
 </ul>
 <p>虽然接口无法保证，但所有 Java 平台的 <code>SortedMap</code> 实现中 <code>Collection</code> 视图的 <code>toString</code> 方法，返回包含视图所有元素内容的字符串，按顺序排列。</p>
 <h2>标准构造函数</h2>
-<p>按照惯例，所有通用 <code>Map</code> 实现都提供了一个标准转换构造函数，它采用 <code>Map</code>; <code>SortedMap</code> 实现也不例外。在 <code>TreeMap</code> 中，此构造函数创建一个实例，根据其键的自然顺序对其条目进行排序。这可能是一个错误。最好动态检查以查看指定的 <code>Map</code> 实例是否为 <code>SortedMap</code>，如果是，则根据相同的标准对新 map 进行排序(比较器或自然排序)。因为 <code>TreeMap</code> 采用了该方法，它还提供了一个构造函数，它接受 <code>SortedMap</code> 并返回一个新的 <code>TreeMap</code>，其中包含与给定的 <code>SortedMap</code> 相同的映射，根据相同的标准排序。请注意，它是参数的编译时类型，而不是其运行时类型，它确定是否优先于普通的 <code>map</code> 构造函数调用 <code>SortedMap</code> 构造函数。</p>
-<p>按照惯例，<code>SortedMap</code> 实现还提供了一个构造函数，它接受 <code>Comparator</code> 并返回根据指定的 <code>Comparator</code> 排序的空 map。如果将 <code>null</code> 传递给此构造函数，它将返回 <code>Map</code>，根据其键的自然顺序对其映射进行排序。</p>
+<p>按照规范，所有通用 <code>Map</code> 实现都提供了一个标准转换构造函数，它采用 <code>Map</code>; <code>SortedMap</code> 实现也不例外。在 <code>TreeMap</code> 中，此构造函数创建一个实例，根据其键的自然顺序对其条目进行排序。这可能是一个错误。最好动态检查以查看指定的 <code>Map</code> 实例是否为 <code>SortedMap</code>，如果是，则根据相同的标准对新 map 进行排序(比较器或自然排序)。因为 <code>TreeMap</code> 采用了该方法，它还提供了一个构造函数，它接受 <code>SortedMap</code> 并返回一个新的 <code>TreeMap</code>，其中包含与给定的 <code>SortedMap</code> 相同的映射，根据相同的标准排序。请注意，它是参数的编译时类型，而不是其运行时类型，它确定是否优先于普通的 <code>map</code> 构造函数调用 <code>SortedMap</code> 构造函数。</p>
+<p>按照规范，<code>SortedMap</code> 实现还提供了一个构造函数，它接受 <code>Comparator</code> 并返回根据指定的 <code>Comparator</code> 排序的空 map。如果将 <code>null</code> 传递给此构造函数，它将返回 <code>Map</code>，根据其键的自然顺序对其映射进行排序。</p>
 <h2>与 SortedSet 的比较</h2>
 <p>因为此接口是 <code>SortedSet</code> 的精确 <code>Map</code> 模拟，所以 <a class="TutorialLink" target="_top" href="sorted-set.html">The SortedSet Interface</a> 部分中的所有习惯用法和代码示例都适用于 <code>SortedMap</code> 只做了一些微不足道的修改。</p>
 

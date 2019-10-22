@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="nolinkBHEAD">声明成员变量</div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,7 +512,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="classdecl.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methods.html">Next&nbsp;»</a>
+                <a target="_top" href="classdecl.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="methods.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>声明成员变量</h1></div>
@@ -521,9 +521,9 @@
 
 <p>有几种变量：</p>
 <ul>
-<li>类中的成员变量这些被称为 <i>fields（字段）</i>。</li>
-<li>方法或代码块中的变量这些被称为 <i>local variables（局部变量）</i>。</li>
-<li>方法声明中的变量这些被称为 <i>parameters（参数）</i>。</li>
+<li>类中的成员变量  这些被称为 <i>fields (字段)</i>。</li>
+<li>方法或代码块中的变量  这些被称为 <i>local variables (局部变量)</i>。</li>
+<li>方法声明中的变量  这些被称为 <i>parameters (参数)</i>。</li>
 </ul>
 <p><code>Bicycle</code> 类使用以下几行代码来定义其字段：</p>
 <div class="codeblock"><pre>
@@ -537,14 +537,14 @@ public int speed;
 <li>该字段的类型。</li>
 <li>该字段的名称。</li>
 </ol>
-<p><code>Bicycle</code> 的字段被命名为 <code>cadence</code>，<code>gear</code> 和 <code>speed</code>，并且数据类型都是 integer(<code>int</code>)。<code>public</code> 关键字将这些字段标识为公共成员，可由任何可访问该类的对象访问。</p>
+<p><code>Bicycle</code> 的字段被命名为 <code>cadence</code>，<code>gear</code> 和 <code>speed</code>，并且数据类型都是整数类型(<code>int</code>)。<code>public</code> 关键字将这些字段标识为公共成员，可由任何可访问该类的对象访问。</p>
 <h2>访问修饰符</h2>
 <p>第一个(最左侧)修饰符用于控制可以访问成员字段的其他类。目前，只考虑 <code>public</code> 和 <code>private</code>。其他访问修饰符将在稍后讨论。</p>
 <ul>
-<li><code>public</code> 修饰符该字段可以从所有类访问。</li>
-<li><code>private</code> 修饰符该字段只能在其自己的类中访问。</li>
+<li><code>public</code> 修饰符  该字段可以从所有类访问。</li>
+<li><code>private</code> 修饰符  该字段只能在其自己的类中访问。</li>
 </ul>
-<p>本着封装的精神，将字段私有化是很常见的。这意味着它们只能从 Bicycle 类中<i>直接（directly）</i>访问。但是，我们仍然需要访问这些值。这可以通过添加获取我们字段值的公共方法 <i>间接（indirectly）</i> 完成：</p>
+<p>本着封装的精神，将字段私有化是很常见的。这意味着它们只能从 Bicycle 类中<i>directly (直接)</i>访问。但是，我们仍然需要访问这些值。这可以通过添加获取我们字段值的公共方法 <i>indirectly (间接)</i> 完成：</p>
 <div class="codeblock"><pre>
 public class Bicycle {
         
@@ -588,10 +588,10 @@ public class Bicycle {
 }
 </pre></div>
 <h2>类型</h2>
-<p>所有变量都必须有一个类型。您可以使用 <code>int</code>，<code>float</code>，<code>boolean</code> 等基本类型。或者你可以使用引用类型，比如字符串，数组或者对象。</p>
+<p>所有变量都必须有一个类型。你可以使用 <code>int</code>，<code>float</code>，<code>boolean</code> 等基本类型。或者你可以使用引用类型，比如字符串，数组或者对象。</p>
 <h2>变量名称</h2>
-<p>所有变量，无论它们是字段，局部变量还是参数，都遵循语言基础课程 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/variables.html#naming">VariablesNaming</a> 中涵盖的相同命名规则和约定。</p>
-<p>在本课中，请注意，相同的命名规则和约定用于方法和类名称，除此之外</p>
+<p>所有变量，无论它们是字段，局部变量还是参数，都遵循语言基础课程 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/variables.html#naming">Variables  Naming</a> 中涵盖的相同命名规则和规范。</p>
+<p>在本课中，请注意，相同的命名规则和规范用于方法和类名称，除此之外</p>
 <ul>
 <li>类名的第一个字母应该大写，并且</li>
 <li>方法名中的第一个(或唯一)单词应该是一个动词。</li>

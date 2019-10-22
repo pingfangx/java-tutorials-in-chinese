@@ -489,7 +489,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">全屏独占模式 API</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="doublebuf.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="example.html">Next&nbsp;»</a>
+                <a target="_top" href="doublebuf.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="example.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>BufferStrategy 和 BufferCapabilities</h1></div>
@@ -497,8 +497,8 @@
 
 
 <h2><code>BufferStrategy</code></h2>
-<p>在 Java 2 Standard Edition 中，您不必担心视频指针或视频内存，以便充分利用双缓冲或页面翻转。添加了新类 <tt>java.awt.image.BufferStrategy</tt> 是为了便于以一般方式处理绘制到表面和组件，无论使用的缓冲区数量或用于显示它们的技术如何。</p>
-<p>缓冲策略为您提供了两种通用的绘图方法：<tt>getDrawGraphics</tt> 和 <tt>show</tt>。当您想要开始绘图时，获取绘制图形并使用它。当您完成绘图并希望向屏幕显示您的信息时，请调用 <tt>show</tt>。这两种方法旨在相当优雅地适应渲染循环：</p>
+<p>在 Java 2 Standard Edition 中，你不必担心视频指针或视频内存，以便充分利用双缓冲或页面翻转。添加了新类 <tt>java.awt.image.BufferStrategy</tt> 是为了便于以一般方式处理绘制到表面和组件，无论使用的缓冲区数量或用于显示它们的技术如何。</p>
+<p>缓冲策略为你提供了两种通用的绘图方法：<tt>getDrawGraphics</tt> 和 <tt>show</tt>。当你想要开始绘图时，获取绘制图形并使用它。当你完成绘图并希望向屏幕显示你的信息时，请调用 <tt>show</tt>。这两种方法旨在相当优雅地适应渲染循环：</p>
 <div class="codeblock"><pre>
 BufferStrategy myStrategy;
 
@@ -509,10 +509,10 @@ while (!done) {
     myStrategy.show();
 }
 </pre></div>
-<p>还设置了缓冲策略来帮助您监控 <tt>VolatileImage</tt> 问题。在全屏独占模式下，<tt>VolatileImage</tt> 问题尤为重要，因为窗口系统有时可以收回它给您的视频内存。一个重要的例子是当用户在 Windows 中按下 <tt>ALT+TAB</tt> 组合键时 - 突然您的全屏程序在后台运行，您的视频内存丢失了。您可以调用 <tt>contentsLost</tt> 方法来查明是否发生了这种情况。同样，当窗口系统将内存返回给您时，您可以找到使用 <tt>contentsRestored</tt> 方法。</p>
+<p>还设置了缓冲策略来帮助你监控 <tt>VolatileImage</tt> 问题。在全屏独占模式下，<tt>VolatileImage</tt> 问题尤为重要，因为窗口系统有时可以收回它给你的视频内存。一个重要的例子是当用户在 Windows 中按下 <tt>ALT+TAB</tt> 组合键时 - 突然你的全屏程序在后台运行，你的视频内存丢失了。你可以调用 <tt>contentsLost</tt> 方法来查明是否发生了这种情况。同样，当窗口系统将内存返回给你时，你可以找到使用 <tt>contentsRestored</tt> 方法。</p>
 <h2><code>BufferCapabilities</code></h2>
-<p>如前所述，不同的操作系统，甚至同一操作系统上的不同显卡，可以使用不同的技术。这些 <i>capabilities (功能)</i> 为您公开，以便您可以为您的应用选择最佳技术。</p>
-<p>类 <tt>java.awt.BufferCapabilities</tt> 封装了这些功能。每个缓冲区策略都由其缓冲区功能控制，因此为您的应用选择正确的缓冲区非常重要。要找出可用的功能，请从图形设备上可用的 <tt>GraphicsConfiguration</tt> 对象调用 <tt>getBufferCapabilities</tt> 方法。</p>
+<p>如前所述，不同的操作系统，甚至同一操作系统上的不同显卡，可以使用不同的技术。这些 <i>capabilities (功能)</i> 为你公开，以便你可以为你的应用选择最佳技术。</p>
+<p>类 <tt>java.awt.BufferCapabilities</tt> 封装了这些功能。每个缓冲区策略都由其缓冲区功能控制，因此为你的应用选择正确的缓冲区非常重要。要找出可用的功能，请从图形设备上可用的 <tt>GraphicsConfiguration</tt> 对象调用 <tt>getBufferCapabilities</tt> 方法。</p>
 <p>Java 2 Standard Edition 1.4 版中提供的功能包括：</p><!--
 <dl>
 <dt><code>isPageFlipping</code></dt>
@@ -548,19 +548,19 @@ while (!done) {
 此功能返回用于执行硬件页面翻转的技术的提示。这很重要，因为在 <tt>show</tt> 之后的后缓冲区的内容根据所使用的技术而不同。返回的值可以为 null(如果 <tt>isPageFlipping</tt> 返回 <tt>false</tt>)或以下值之一。只要 <tt>isPageFlipping</tt> 方法返回 true，就可以为缓冲区策略指定任何值，但性能会因可用功能而异。
 </li>
 <li><code>FlipContents.COPIED</code><br/>
-该值表示后缓冲区的内容被复制到主表面。“翻转”可能是作为硬件 blt 执行的，这意味着硬件双缓冲可能是使用 blitting 而不是真正的页面翻转来完成的。这应该(在理论上)比从 <tt>VolatileImage</tt> 到主表面的 blitting 更快，或者至少同样快，尽管您的里程可能会有所不同。翻转后后缓冲器的内容与主表面相同。
+该值表示后缓冲区的内容被复制到主表面。“翻转”可能是作为硬件 blt 执行的，这意味着硬件双缓冲可能是使用 blitting 而不是真正的页面翻转来完成的。这应该(在理论上)比从 <tt>VolatileImage</tt> 到主表面的 blitting 更快，或者至少同样快，尽管你的里程可能会有所不同。翻转后后缓冲器的内容与主表面相同。
 </li>
 <li><code>FlipContents.BACKGROUND</code><br/>
 此值表示已使用背景颜色清除后缓冲区的内容。发生了真正的翻页或 blt。
 </li>
 <li><code>FlipContents.PRIOR</code><br/>
-此值表示后缓冲区的内容现在是旧主曲面的内容，反之亦然。通常，此值表示发生了真正的页面翻转，但这不能保证，并且再一次，您在此操作上的里程可能会有所不同。
+此值表示后缓冲区的内容现在是旧主曲面的内容，反之亦然。通常，此值表示发生了真正的页面翻转，但这不能保证，并且再一次，你在此操作上的里程可能会有所不同。
 </li>
 <li><code>FlipContents.UNKNOWN</code><br/>
-该值表示翻转后后缓冲区的内容未定义。您可能需要尝试找到最适合您的技术(或者您可能不关心)，并且每次绘制时您必须自己设置后备缓冲区的内容。
+该值表示翻转后后缓冲区的内容未定义。你可能需要尝试找到最适合你的技术(或者你可能不关心)，并且每次绘制时你必须自己设置后备缓冲区的内容。
 </li>
 </ul>
-<p>要为组件创建缓冲区策略，请调用 <tt>createBufferStrategy</tt> 方法，提供所需的缓冲区数(此数字包括主表面)。如果需要任何特定的缓冲技术，请提供适当的 <tt>BufferCapabilities</tt> 对象。请注意，当您使用此版本的方法时，如果您的选择不可用，则必须捕获 <tt>AWTException</tt>。另请注意，这些方法仅适用于 <tt>Canvas</tt> 和 <tt>Window</tt>。</p>
+<p>要为组件创建缓冲区策略，请调用 <tt>createBufferStrategy</tt> 方法，提供所需的缓冲区数(此数字包括主表面)。如果需要任何特定的缓冲技术，请提供适当的 <tt>BufferCapabilities</tt> 对象。请注意，当你使用此版本的方法时，如果你的选择不可用，则必须捕获 <tt>AWTException</tt>。另请注意，这些方法仅适用于 <tt>Canvas</tt> 和 <tt>Window</tt>。</p>
 <p>一旦为组件创建了特定的缓冲区策略，就可以使用 <tt>getBufferStrategy</tt> 方法对其进行操作。请注意，此方法也仅适用于画布和窗口。</p>
 <h2>编程提示</h2>
 <p>关于使用缓冲功能和缓冲策略的一些提示：</p>
@@ -583,11 +583,11 @@ while (!done) {
 </li>
 <li>在使用缓冲策略之前检查可用功能。</li>
 <li>为获得最佳效果，请在全屏独占窗口上创建缓冲区策略。在使用页面翻转之前，请确保检查 <tt>isFullScreenRequired</tt> 和 <tt>isPageFlipping</tt> 功能。</li>
-<li>不要对性能做任何假设。根据需要调整代码，但请记住，不同的操作系统和显卡具有不同的功能。配置您的应用程序！</li>
-<li>您可能希望子组化您的组件以覆盖 <tt>createBufferStrategy</tt> 方法。使用算法选择最适合您的应用程序的策略。<tt>FlipBufferStrategy</tt> 和 <tt>BltBufferStrategy</tt> 内部类是 protected，可以进行子类化。</li>
-<li>不要忘记您可能会丢失您的绘图表面！在绘制之前，请务必检查 <tt>contentsLost</tt> 和 <tt>contentsRestored</tt>。丢失的所有缓冲区在恢复时都必须重绘。</li>
+<li>不要对性能做任何假设。根据需要调整代码，但请记住，不同的操作系统和显卡具有不同的功能。配置你的应用程序！</li>
+<li>你可能希望子组化你的组件以覆盖 <tt>createBufferStrategy</tt> 方法。使用算法选择最适合你的应用程序的策略。<tt>FlipBufferStrategy</tt> 和 <tt>BltBufferStrategy</tt> 内部类是 protected，可以进行子类化。</li>
+<li>不要忘记你可能会丢失你的绘图表面！在绘制之前，请务必检查 <tt>contentsLost</tt> 和 <tt>contentsRestored</tt>。丢失的所有缓冲区在恢复时都必须重绘。</li>
 <li>如果在 Swing 应用程序中使用缓冲策略进行双缓冲，则可能需要关闭 Swing 组件的双缓冲，因为它们已经是双缓冲的。视频内存有些宝贵，只应在绝对必要时使用。</li>
-<li>使用多个后备缓冲区可能最终会浪费。多次缓冲仅在绘图时间超过执行 <tt>show</tt> 所花费的时间时才有用。配置您的应用程序！</li>
+<li>使用多个后备缓冲区可能最终会浪费。多次缓冲仅在绘图时间超过执行 <tt>show</tt> 所花费的时间时才有用。配置你的应用程序！</li>
 </ul>
 
 

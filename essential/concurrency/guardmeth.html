@@ -514,7 +514,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="starvelive.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="immutable.html">Next&nbsp;»</a>
+                <a target="_top" href="starvelive.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="immutable.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>Guarded Blocks (保护块)</h1></div>
@@ -543,7 +543,7 @@ public synchronized void guardedJoy() {
     System.out.println("Joy and efficiency have been achieved!");
 }
 </pre></div>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;始终在测试等待条件的循环内调用 <code>wait</code>。不要假设中断是针对您正在等待的特定条件，或者假设该条件仍然为真。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;始终在测试等待条件的循环内调用 <code>wait</code>。不要假设中断是针对你正在等待的特定条件，或者假设该条件仍然为真。
 <hr /></div>
 <p>像许多暂停执行的方法一样，<code>wait</code> 可以抛出 <code>InterruptedException</code>。在这个例子中，我们可以忽略那个异常  我们只关心 <code>joy</code> 的值。</p>
 <p>为什么这个版本的 <code>guardedJoy</code> 是同步的？假设 <code>d</code> 是我们用来调用 <code>wait</code> 的对象。当一个线程调用 <code>d.wait</code> 时，它必须拥有 <code>d</code> 的内在锁  否则会抛出错误。在同步方法中调用 <code>wait</code> 是获取内部锁的一种简单方法。</p>
@@ -555,7 +555,7 @@ public synchronized notifyJoy() {
 }
 </pre></div>
 <p>在第二个线程释放锁之后的一段时间，第一个线程重新获取锁并通过从 <code>wait</code> 的调用返回来恢复。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;第二种通知方法是 <code>notify</code>，它唤醒一个线程。因为 <code>notify</code> 不允许您指定被唤醒的线程，所以它只适用于大规模并行应用程序也就是说，具有大量线程的程序，都在做类似的杂务。在这样的应用程序中，您不必关心哪个线程被唤醒。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;第二种通知方法是 <code>notify</code>，它唤醒一个线程。因为 <code>notify</code> 不允许你指定被唤醒的线程，所以它只适用于大规模并行应用程序  也就是说，具有大量线程的程序，都在做类似的杂务。在这样的应用程序中，你不必关心哪个线程被唤醒。
 <hr /></div>
 <p>让我们使用保护块来创建 <i>Producer-Consumer</i> 应用程序。这种应用程序在两个线程之间共享数据：<i>producer</i>，用于创建数据；<i>consumer</i>，用于使用数据执行某些操作。两个线程使用共享对象进行通信。协调是必不可少的：消费者线程不得在生产者线程交付之前尝试获取数据，并且如果消费者未获取旧数据，则生产者线程不得尝试传递新数据。</p>
 <p>在此示例中，数据是一系列文本消息，通过一个 <a class="SourceLink" target="_blank" href="examples/Drop.java" onclick="showCode('../../displayCode.html', 'examples/Drop.java'); return false;"><code><code>Drop</code></code></a> 类型的对象共享：</p>
@@ -674,7 +674,7 @@ public class ProducerConsumerExample {
     }
 }
 </pre></div>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;编写 <code>Drop</code> 类是为了演示防护块。为避免重新发明轮子，请在尝试编写自己的数据共享对象之前检查 <a class="TutorialLink" target="_top" href="../../collections/index.html">Java Collections Framework</a> 中的现有数据结构。有关更多信息，请参阅 <a href="QandE/questions.html">Questions and Exercises</a> 部分。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;编写 <code>Drop</code> 类是为了演示防护块。为避免重新发明轮子，请在尝试编写自己的数据共享对象之前检查 <a class="TutorialLink" target="_top" href="../../collections/index.html">Java 集合框架</a> 中的现有数据结构。有关更多信息，请参阅 <a href="QandE/questions.html">Questions and Exercises</a> 部分。
 <hr /></div>
 
         </div>

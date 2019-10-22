@@ -489,14 +489,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">面向对象的编程概念</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="class.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="interface.html">Next&nbsp;»</a>
+                <a target="_top" href="class.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="interface.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>什么是继承？</h1></div>
             <div id="PageContent">
 
 <p>不同种类的物体通常具有一定的共同点。例如，山地自行车，公路自行车和双人自行车都具有自行车的特征(当前速度，当前踏板节奏，当前档位)。然而每一个也定义了使它们不同的附加特征：双人自行车有两个座位和两组把手;公路自行车有 drop 把手;一些山地自行车有一个额外的链环，给他们一个较低的传动比。</p>
-<p>面向对象编程允许从其他类 <i>inherit（继承）</i> 常用的状态和行为。在这个例子中，<code>Bicycle</code> 现在成为 <code>MountainBike</code>，<code>RoadBike</code> 和 <code>TandemBike</code> 的 <i>superclass（超类）</i> &gt;。在 Java 编程语言中，每个类都被允许拥有一个直接的超类，每个超类都有可能拥有无限数量的 <i>subclasses（子类）</i>：</p>
+<p>面向对象编程允许从其他类 <i>inherit (继承)</i> 常用的状态和行为。在这个例子中，<code>Bicycle</code> 现在成为 <code>MountainBike</code>，<code>RoadBike</code> 和 <code>TandemBike</code> 的 <i>superclass (超类)</i>。在 Java 编程语言中，每个类都被允许拥有一个直接的超类，每个超类都有可能拥有无限数量的 <i>subclasses (子类)</i>：</p>
 <center><img src="../../figures/java/concepts-bikeHierarchy.gif" width="374" height="324" align="bottom" alt="层次结构中的类的图表。" /></p><p class="FigureCaption">自行车类的层次结构。</p></center><p>创建子类的语法很简单。在类声明的开始处，使用 <code>extends</code> 关键字，后面跟着要继承的类的名称：</p>
 <div class="codeblock"><pre>
 class MountainBike <strong>extends</strong> Bicycle {
@@ -506,7 +506,7 @@ class MountainBike <strong>extends</strong> Bicycle {
 
 }
 </pre></div>
-<p>这给了 <code>MountainBike</code> 与 <code>Bicycle</code> 所有相同的字段和方法，但允许其代码专注于使其独特的功能。这使得您的子类的代码易于阅读。但是，必须注意正确记录每个超类定义的状态和行为，因为该代码不会出现在每个子类的源文件中。</p>
+<p>这给了 <code>MountainBike</code> 与 <code>Bicycle</code> 所有相同的字段和方法，但允许其代码专注于使其独特的功能。这使得你的子类的代码易于阅读。但是，必须注意正确记录每个超类定义的状态和行为，因为该代码不会出现在每个子类的源文件中。</p>
 
         </div>
         <div class="NavBit">

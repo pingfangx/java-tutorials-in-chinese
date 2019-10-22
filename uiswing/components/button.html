@@ -526,7 +526,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">使用 Swing 组件</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="applet.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="buttongroup.html">Next&nbsp;»</a>
+                <a target="_top" href="applet.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="buttongroup.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>如何使用按钮，复选框和单选按钮</h1></div>
@@ -590,7 +590,7 @@
 <p>First, this section explains the basic button API that <code>AbstractButton</code> defines  and thus all Swing buttons have in common. Next, it describes the small amount of API that <code>JButton</code> adds to <code>AbstractButton</code>. After that, this section shows you how to use specialized API to implement check boxes and radio buttons.</p>
 <h2><a name="abstractbutton" id="abstractbutton">How to Use the Common Button API</a></h2>
 <p>Here is a picture of an application that displays three buttons:</p>
-<center><img src="../../figures/uiswing/components/ButtonDemoMetal.png" width="489" height="96" align="bottom" alt="A snapshot of ButtonDemo" /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol><!-- *******  boilerplate stuff ******* -->
+<center><img src="../../figures/uiswing/components/ButtonDemoMetal.png" width="489" height="96" align="bottom" alt="A snapshot of ButtonDemo" /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol><!-- *******  boilerplate stuff ******* -->
 <li>Click the Launch button to run the Button Demo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#ButtonDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ButtonDemoProject/ButtonDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the ButtonDemo example" /></a><br />
 <p><!--  ******* end boilerplate stuff  *******  --><!-- 
@@ -687,7 +687,7 @@ getRootPane().setDefaultButton(setButton);
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JCheckBoxMenuItem.html"><code>JCheckBoxMenuItem</code></a> class. Because <code>JCheckBox</code> and <code>JCheckBoxMenuItem</code> inherit from <code>AbstractButton</code>, Swing check boxes have all the usual button characteristics, as discussed earlier in this section. For example, you can specify images to be used in check boxes.</p>
 <p>Check boxes are similar to <a href="#radiobutton">radio buttons</a> but their selection model is different, by convention. Any number of check boxes in a group  none, some, or all  can be selected. A group of radio buttons, on the other hand, can have only one button selected.</p>
 <p>Here is a picture of an application that uses four check boxes to customize a cartoon:</p>
-<center><img src="../../figures/uiswing/components/CheckBoxDemoMetal.png" width="203" height="170" align="bottom" alt="NOT a tutorial reader!" /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<!-- *******  boilerplate stuff ******* -->
+<center><img src="../../figures/uiswing/components/CheckBoxDemoMetal.png" width="203" height="170" align="bottom" alt="NOT a tutorial reader!" /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<!-- *******  boilerplate stuff ******* -->
 <ol>
 <li>Click the Launch button to run the CheckBox Demo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#CheckBoxDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/CheckBoxDemoProject/CheckBoxDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the ButtonDemo example" /></a><br />
@@ -759,7 +759,7 @@ public void itemStateChanged(ItemEvent e) {
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JRadioButtonMenuItem.html"><code>JRadioButtonMenuItem</code></a> class. Other ways of displaying one-of-many choices are <a href="combobox.html">combo boxes</a> and <a href="list.html">lists</a>. Radio buttons look similar to <a href="#checkbox">check boxes</a>, but, by convention, check boxes place no limits on how many items can be selected at a time.</p>
 <p>Because <code>JRadioButton</code> inherits from <code>AbstractButton</code>, Swing radio buttons have all the usual button characteristics, as discussed earlier in this section. For example, you can specify the image displayed in a radio button.</p>
 <p>Here is a picture of an application that uses five radio buttons to let you choose which kind of pet is displayed:</p>
-<center><img src="../../figures/uiswing/components/RadioButtonDemoMetal.png" width="286" height="196" align="bottom" alt="A snapshot of RadioButtonDemo" /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol><!-- *******  boilerplate stuff ******* -->
+<center><img src="../../figures/uiswing/components/RadioButtonDemoMetal.png" width="286" height="196" align="bottom" alt="A snapshot of RadioButtonDemo" /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol><!-- *******  boilerplate stuff ******* -->
 <li>Click the Launch button to run the RadioButton Demo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#RadioButtonDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/RadioButtonDemoProject/RadioButtonDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the ButtonDemo example" /></a><br />
 <p><!--  ******* end boilerplate stuff  *******  --><!-- 

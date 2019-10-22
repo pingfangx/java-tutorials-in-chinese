@@ -515,15 +515,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="move.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="file.html">Next&nbsp;»</a>
+                <a target="_top" href="move.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="file.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>管理元数据(文件和文件存储属性)</h1></div>
             <div id="PageContent"><!-- Managing Metadata (File and File Store Attributes) -->
 
 
-<p><em>metadata</em> 的定义是“关于其他数据的数据”。使用文件系统，数据包含在其文件和目录中，元数据跟踪有关每个对象的信息：它是常规文件，目录还是链接？它的大小，创建日期，上次修改日期，文件所有者，组所有者和访问权限是什么？</p>
-<p>文件系统的元数据通常称为其 <em>file attributes</em>。<code>Files</code> 类包括可用于获取文件的单个属性或设置属性的方法。</p>
+<p><em>metadata (元数据)</em> 的定义是“关于其他数据的数据”。使用文件系统，数据包含在其文件和目录中，元数据跟踪有关每个对象的信息：它是常规文件，目录还是链接？它的大小，创建日期，上次修改日期，文件所有者，组所有者和访问权限是什么？</p>
+<p>文件系统的元数据通常称为其 <em>file attributes (文件属性)</em>。<code>Files</code> 类包括可用于获取文件的单个属性或设置属性的方法。</p>
 <table border="1" cellspacing="2" cellpadding="4" summary="此表显示了 Files 类的一些方法">
 <tr>
 <th>方法</th>
@@ -610,10 +610,10 @@
 <li>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/attribute/AclFileAttributeView.html"><code>AclFileAttributeView</code></a>–支持读取或更新文件的访问控制列表(ACL)。支持 NFSv4 ACL 模型。也可以支持任何 ACL 模型，例如 Windows ACL 模型，它具有定义到 NFSv4 模型的定义良好的映射。</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/attribute/UserDefinedFileAttributeView.html"><code>UserDefinedFileAttributeView</code></a>–支持用户定义的元数据。此视图可以映射到系统支持的任何扩展机制。例如，在 Solaris OS 中，您可以使用此视图来存储文件的 MIME 类型。</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/attribute/UserDefinedFileAttributeView.html"><code>UserDefinedFileAttributeView</code></a>–支持用户定义的元数据。此视图可以映射到系统支持的任何扩展机制。例如，在 Solaris OS 中，你可以使用此视图来存储文件的 MIME 类型。</li>
 </ul>
 <p>特定文件系统实现可能仅支持基本文件属性视图，或者它可能支持其中几个文件属性视图。文件系统实现可能支持此 API 中未包含的其他属性视图。</p>
-<p>在大多数情况下，您不必直接处理任何 <code>FileAttributeView</code> 接口。(如果确实需要直接使用 <code>FileAttributeView</code>，可以通过 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#getFileAttributeView-java.nio.file.Path-java.lang.Class-java.nio.file.LinkOption...-"><code>getFileAttributeView(Path, Class&lt;V&gt;, LinkOption...)</code></a> 方法访问它。)</p>
+<p>在大多数情况下，你不必直接处理任何 <code>FileAttributeView</code> 接口。(如果确实需要直接使用 <code>FileAttributeView</code>，可以通过 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#getFileAttributeView-java.nio.file.Path-java.lang.Class-java.nio.file.LinkOption...-"><code>getFileAttributeView(Path, Class&lt;V&gt;, LinkOption...)</code></a> 方法访问它。)</p>
 <p><code>readAttributes</code> 方法使用泛型，可用于读取任何文件属性视图的属性。本页其余部分中的示例使用 <code>readAttributes</code> 方法。</p>
 <p>本节的其余部分包括以下主题：</p>
 <ul>
@@ -627,7 +627,7 @@
 </ul>
 <h2><a name="basic" id="basic">基本文件属性</a></h2>
 <p>如前所述，要读取文件的基本属性，可以使用 <code>Files.readAttributes</code> 方法之一，该方法在一个批量操作中读取所有基本属性。这比单独访问文件系统以读取每个单独的属性要有效得多。varargs 参数目前支持 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/LinkOption.html"><code>LinkOption</code></a> 枚举，<code>NOFOLLOW_LINKS</code>。如果不希望遵循符号链接，请使用此选项。</p>
-<div class="note"><hr /><strong>A word about time stamps:</strong> 基本属性集包括三个时间戳：<code>creationTime</code>，<code>lastModifiedTime</code> 和 <code>lastAccessTime</code>。在特定实现中可能不支持任何这些时间戳，在这种情况下，相应的访问器方法返回特定于实现的值。支持时，时间戳将作为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/attribute/FileTime.html"><code>FileTime</code></a> 对象返回。
+<div class="note"><hr /><strong>关于时间戳:</strong>&nbsp;基本属性集包括三个时间戳：<code>creationTime</code>，<code>lastModifiedTime</code> 和 <code>lastAccessTime</code>。在特定实现中可能不支持任何这些时间戳，在这种情况下，相应的访问器方法返回特定于实现的值。支持时，时间戳将作为 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/attribute/FileTime.html"><code>FileTime</code></a> 对象返回。
 <hr /></div>
 <p>以下代码段读取并打印给定文件的基本文件属性，并使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/attribute/BasicFileAttributes.html"><code>BasicFileAttributes</code></a> 类中的方法。</p>
 <div class="codeblock"><pre>
@@ -672,7 +672,7 @@ try {
         " attributes not supported:" + x);
 }
 </pre></div>
-<p>但是，您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#setAttribute-java.nio.file.Path-java.lang.String-java.lang.Object-java.nio.file.LinkOption...-"><code>setAttribute(Path, String, Object, LinkOption...)</code></a> 方法设置 DOS 属性，如下所示：</p>
+<p>但是，你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#setAttribute-java.nio.file.Path-java.lang.String-java.lang.Object-java.nio.file.LinkOption...-"><code>setAttribute(Path, String, Object, LinkOption...)</code></a> 方法设置 DOS 属性，如下所示：</p>
 <div class="codeblock"><pre>
 Path file = ...;
 Files.setAttribute(file, "dos:hidden", true);
@@ -718,7 +718,7 @@ Files.setPosixFilePermissions(file, perms);
 </pre></div>
 <p><a class="SourceLink" target="_blank" href="examples/Chmod.java" onclick="showCode('../../displayCode.html', 'examples/Chmod.java'); return false;"><code><code>Chmod</code></code></a> 示例以类似于 <code>chmod</code> 实用程序的方式递归更改文件的权限。</p>
 <h2><a name="lookup" id="lookup">设置文件或组所有者</a></h2>
-<p>要将名称转换为可以存储为文件所有者或组所有者的对象，可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/attribute/UserPrincipalLookupService.html"><code>UserPrincipalLookupService</code></a> 服务。此服务将名称或组名称查找为字符串，并返回表示该字符串的 <code>UserPrincipal</code> 对象。您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getUserPrincipalLookupService--"><code>FileSystem.getUserPrincipalLookupService</code></a> 方法获取默认文件系统的用户主体查找服务。</p>
+<p>要将名称转换为可以存储为文件所有者或组所有者的对象，可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/attribute/UserPrincipalLookupService.html"><code>UserPrincipalLookupService</code></a> 服务。此服务将名称或组名称查找为字符串，并返回表示该字符串的 <code>UserPrincipal</code> 对象。你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getUserPrincipalLookupService--"><code>FileSystem.getUserPrincipalLookupService</code></a> 方法获取默认文件系统的用户主体查找服务。</p>
 <p>以下代码段显示了如何使用 <code>setOwner</code> 方法设置文件所有者：</p>
 <div class="codeblock"><pre>
 Path file = ...;
@@ -736,7 +736,7 @@ Files.getFileAttributeView(file, PosixFileAttributeView.class)
      .setGroup(group);
 </pre></div>
 <h2><a name="user" id="user">用户定义的文件属性</a></h2>
-<p>如果文件系统实现支持的文件属性不足以满足您的需要，则可以使用 <code>UserDefinedAttributeView</code> 创建和跟踪自己的文件属性。</p>
+<p>如果文件系统实现支持的文件属性不足以满足你的需要，则可以使用 <code>UserDefinedAttributeView</code> 创建和跟踪自己的文件属性。</p>
 <p>一些实现将此概念映射到 NTFS 备用数据流等功能以及文件系统（如 ext3 和 ZFS）上的继承属性。大多数实现都对值的大小施加了限制，例如，ext3 将大小限制为 4 千字节。</p>
 <p>通过使用以下代码片段，可以将文件的 MIME 类型存储为用户定义的属性：</p>
 <div class="codeblock"><pre>
@@ -746,7 +746,7 @@ UserDefinedFileAttributeView view = Files
 view.write("user.mimetype",
            Charset.defaultCharset().encode("text/html");
 </pre></div>
-<p>要阅读 MIME 类型属性，您可以使用以下代码段：</p>
+<p>要阅读 MIME 类型属性，你可以使用以下代码段：</p>
 <div class="codeblock"><pre>
 Path file = ...;
 UserDefinedFileAttributeView view = Files
@@ -758,14 +758,14 @@ buf.flip();
 String value = Charset.defaultCharset().decode(buf).toString();
 </pre></div>
 <p><a class="SourceLink" target="_blank" href="examples/Xdd.java" onclick="showCode('../../displayCode.html', 'examples/Xdd.java'); return false;"><code><code>Xdd</code></code></a> 示例显示了如何获取，设置和删除用户定义的属性。</p>
-<div class="note"><hr /><strong>注意:</strong>&nbsp;在 Linux 中，您可能必须启用继承属性才能使用户定义的属性起作用。如果在尝试访问用户定义的属性视图时收到 <code>UnsupportedOperationException</code>，则需要重新装入文件系统。以下命令使用 ext3 文件系统的继承属性重新安装根分区。如果此命令不适合您的 Linux 风格，请参阅文档。
+<div class="note"><hr /><strong>注意:</strong>&nbsp;在 Linux 中，你可能必须启用继承属性才能使用户定义的属性起作用。如果在尝试访问用户定义的属性视图时收到 <code>UnsupportedOperationException</code>，则需要重新装入文件系统。以下命令使用 ext3 文件系统的继承属性重新安装根分区。如果此命令不适合你的 Linux 风格，请参阅文档。
 <div class="codeblock"><pre>
 $ sudo mount -o remount,user_xattr /
 </pre></div>
 <p>如果要使更改成为永久更改，请在 <code>/etc/fstab</code> 中添加一个条目。</p>
 <hr /></div>
 <h2><a name="store" id="store">文件存储属性</a></h2>
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileStore.html"><code>FileStore</code></a> 类来了解有关文件存储的信息，例如可用空间大小。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#getFileStore-java.nio.file.Path-"><code>getFileStore(Path)</code></a> 方法获取指定文件的文件存储。</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileStore.html"><code>FileStore</code></a> 类来了解有关文件存储的信息，例如可用空间大小。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#getFileStore-java.nio.file.Path-"><code>getFileStore(Path)</code></a> 方法获取指定文件的文件存储。</p>
 <p>以下代码段打印特定文件所在的文件存储的空间使用情况：</p>
 <div class="codeblock"><pre>
 Path file = ...;

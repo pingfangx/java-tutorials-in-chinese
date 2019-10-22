@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">泛型</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="intro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="subtype.html">Next&nbsp;»</a>
+                <a target="_top" href="intro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="subtype.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>定义简单泛型</h1></div>
@@ -513,10 +513,10 @@
     <b>boolean</b> hasNext();
 }
 </pre></div>
-<p>这个代码应该都很熟悉，除了尖括号中的东西。这些是接口 <code>List</code> 和 <code>Iterator</code> 的 <i>formal type parameters (形式类型参数)</i> 的声明。</p>
-<p>类型参数可以在整个泛型声明中使用，几乎可以使用普通类型(尽管有一些重要的限制；请参阅 <a class="TutorialLink" target="_top" href="fineprint.html">The Fine Print</a> 部分。</p>
-<p>在简介中，我们看到了泛型类型声明 <code>List</code> 的 <i>调用</i>，例如 <code>List&lt;Integer&gt;</code>。在调用中(通常称为 <i>parameterized type (参数化类型)</i>)，所有匹配项的形式类型参数(在本例中为 <code>E</code>)都被 <i>actual type argument (实际类型参数替换)</i>(在这种情况下，<code>Integer</code>)。</p>
-<p>您可以想象 <code>List&lt;Integer&gt;</code> 代表 <code>List</code> 的版本，其中 <code>E</code> 已被 <code>Integer</code> 统一替换：</p>
+<p>这个代码应该都很熟悉，除了尖括号中的东西。这些是接口 <code>List</code> 和 <code>Iterator</code> 的 <i>formal type parameters (形式类型形参)</i> 的声明。</p>
+<p>类型形参可以在整个泛型声明中使用，几乎可以使用普通类型(尽管有一些重要的限制；请参阅 <a class="TutorialLink" target="_top" href="fineprint.html">The Fine Print</a> 部分。</p>
+<p>在简介中，我们看到了泛型类型声明 <code>List</code> 的 <i>invocations (调用)</i>，例如 <code>List&lt;Integer&gt;</code>。在调用中(通常称为 <i>parameterized type (参数化类型)</i>)，所有匹配项的形式类型形参(在本例中为 <code>E</code>)都被 <i>actual type argument (实际类型实参替换)</i>(在这种情况下，<code>Integer</code>)。</p>
+<p>你可以想象 <code>List&lt;Integer&gt;</code> 代表 <code>List</code> 的版本，其中 <code>E</code> 已被 <code>Integer</code> 统一替换：</p>
 <div class="codeblock"><pre>
 <b>public interface</b> IntegerList {
     <b>void</b> add(Integer x);
@@ -525,10 +525,10 @@
 </pre></div>
 <p>这种直觉可能会有所帮助，但也会产生误导。</p>
 <p>这很有用，因为参数化类型 <code>List&lt;Integer&gt;</code> 确实具有看起来像这个扩展的方法。</p>
-<p>这是误导性的，因为泛型的声明从未以这种方式实际扩展。没有多个代码副本 - 在源代码，二进制代码，磁盘和内存都没有。如果您是 C++ 程序员，您会明白这与 C++ 模板非常不同。</p>
+<p>这是误导性的，因为泛型的声明从未以这种方式实际扩展。没有多个代码副本 - 在源代码，二进制代码，磁盘和内存都没有。如果你是 C++ 程序员，你会明白这与 C++ 模板非常不同。</p>
 <p>泛型类型声明一次性编译，并转换为单个类文件，就像普通的类或接口声明一样。</p>
-<p>类型参数类似于方法或构造函数中使用的普通参数。与方法具有 <i>formal value parameters (形式值参数)</i> 描述其操作的值的类型非常相似，泛型声明具有形式类型参数。调用方法时，<i>actual arguments (实际参数)</i> 将替换形式参数，并计算方法体。调用泛型声明时，实际类型参数将替换形式类型参数。</p>
-<p>注意命名约定。我们建议您使用简洁(单个字符，如果可能)但能引起共鸣的的名称作为形式类型参数。最好避免使用这些名称中的小写字符，这样可以很容易地将形式类型参数与普通类和接口区分开来。许多容器类型使用 <code>E</code> 作为元素，如上例所示。我们将在后面的示例中看到一些其他约定。</p>
+<p>类型形参类似于方法或构造函数中使用的普通参数。与方法具有 <i>formal value parameters (形式值参数)</i> 描述其操作的值的类型非常相似，泛型声明具有形式类型形参。调用方法时，<i>actual arguments (实际参数)</i> 将替换形式参数，并计算方法体。调用泛型声明时，实际类型实参将替换形式类型形参。</p>
+<p>注意命名规范。我们建议你使用简洁(单个字符，如果可能)但能引起共鸣的的名称作为形式类型形参。最好避免使用这些名称中的小写字符，这样可以很容易地将形式类型形参与普通类和接口区分开来。许多容器类型使用 <code>E</code> 作为元素，如上例所示。我们将在后面的示例中看到一些其他规范。</p>
 
 
         </div>

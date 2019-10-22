@@ -474,7 +474,7 @@
             <div class="linkLESSON"><a href="index.html">使用文本</a></div>
 <div class="linkAHEAD"><a href="charintro.html">检查字符属性</a></div>
 <div class="linkAHEAD"><a href="collationintro.html">比较字符串</a></div>
-<div class="linkBHEAD"><a href="locale.html">执行与区域设置无关的比较</a></div>
+<div class="linkBHEAD"><a href="locale.html">执行与语言环境无关的比较</a></div>
 <div class="linkBHEAD"><a href="rule.html">自定义排序规则</a></div>
 <div class="linkBHEAD"><a href="perform.html">提高排序性能</a></div>
 <div class="linkAHEAD"><a href="unicode.html">Unicode</a></div>
@@ -508,24 +508,24 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">使用文本</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="string.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="normalizerapi.html">Next&nbsp;»</a>
+                <a target="_top" href="string.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="normalizerapi.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>字符和字节流</h1></div>
             <div id="PageContent">
 
-<p><code>java.io</code> 包提供了允许您在 Unicode 字符流和非 Unicode 文本字节流之间进行转换的类。使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStreamReader.html"><code>InputStreamReader</code></a> 类，可以将字节流转换为字符流。使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStreamWriter.html"><code>OutputStreamWriter</code></a> 类将字符流转换为字节流。下图说明了转换过程：</p>
+<p><code>java.io</code> 包提供了允许你在 Unicode 字符流和非 Unicode 文本字节流之间进行转换的类。使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStreamReader.html"><code>InputStreamReader</code></a> 类，可以将字节流转换为字符流。使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStreamWriter.html"><code>OutputStreamWriter</code></a> 类将字符流转换为字节流。下图说明了转换过程：</p>
 <center><img src="../../figures/i18n/i18n-6.gif" width="419" height="89" align="bottom" alt="该图表示转换过程" /></center><p>创建 <code>InputStreamReader</code> 和 <code>OutputStreamWriter</code> 对象时，指定要转换的字节编码。例如，要将 UTF-8 编码的文本文件转换为 Unicode，请按如下方式创建 <code>InputStreamReader</code>：</p>
 <div class="codeblock"><pre>
 FileInputStream fis = new FileInputStream("test.txt");
 InputStreamReader isr = new InputStreamReader(fis, "UTF8");
 </pre></div>
-<p>如果省略编码标识符，则 <code>InputStreamReader</code> 和 <code>OutputStreamWriter</code> 依赖于默认编码。您可以通过调用 <code>getEncoding</code> 方法来确定 <code>InputStreamReader</code> 或 <code>OutputStreamWriter</code> 使用的编码，如下所示：</p>
+<p>如果省略编码标识符，则 <code>InputStreamReader</code> 和 <code>OutputStreamWriter</code> 依赖于默认编码。你可以通过调用 <code>getEncoding</code> 方法来确定 <code>InputStreamReader</code> 或 <code>OutputStreamWriter</code> 使用的编码，如下所示：</p>
 <div class="codeblock"><pre>
 InputStreamReader defaultReader = new InputStreamReader(fis);
 String defaultEncoding = defaultReader.getEncoding();
 </pre></div>
-<p>下面的示例演示如何使用 <code>InputStreamReader</code> 和 <code>OutputStreamWriter</code> 类执行字符集转换。此示例的完整源代码位于 <a class="SourceLink" target="_blank" href="examples/StreamConverter.java" onclick="showCode('../../displayCode.html', 'examples/StreamConverter.java'); return false;"><code>StreamConverter.java</code></a> 中。该程序显示日文字符。在尝试之前，请验证系统上是否安装了相应的字体。如果您使用的是与 1.1 版兼容的 JDK 软件，请复制 <code>font.properties</code> 文件，然后将其替换为 <code>font.properties.ja</code> 文件。</p>
+<p>下面的示例演示如何使用 <code>InputStreamReader</code> 和 <code>OutputStreamWriter</code> 类执行字符集转换。此示例的完整源代码位于 <a class="SourceLink" target="_blank" href="examples/StreamConverter.java" onclick="showCode('../../displayCode.html', 'examples/StreamConverter.java'); return false;"><code>StreamConverter.java</code></a> 中。该程序显示日文字符。在尝试之前，请验证系统上是否安装了相应的字体。如果你使用的是与 1.1 版兼容的 JDK 软件，请复制 <code>font.properties</code> 文件，然后将其替换为 <code>font.properties.ja</code> 文件。</p>
 <p><code>StreamConverter</code> 程序将 <code>String</code> 对象中的 Unicode 字符序列转换为以 UTF-8 编码的字节的 <code>FileOutputStream</code>。执行转换的方法称为 <code>writeOutput</code>：</p>
 <div class="codeblock"><pre>
 static void writeOutput(String str) {

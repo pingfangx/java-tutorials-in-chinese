@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -506,14 +506,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="erasure.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="genMethods.html">Next&nbsp;»</a>
+                <a target="_top" href="erasure.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="genMethods.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>删除泛型类型</h1></div>
             <div id="PageContent">
 
 <p>
-在类型擦除过程中，Java 编译器将擦除所有类型参数，并在类型参数有界时将其替换为第一个边界，如果类型参数无界，则替换为 <tt>Object</tt>。</p>
+在类型擦除过程中，Java 编译器将擦除所有类型形参，并在类型形参有界时将其替换为第一个边界，如果类型形参无界，则替换为 <tt>Object</tt>。</p>
 <p>
 考虑以下表示单链表中节点的泛型类：</p>
 <div class="codeblock"><pre>
@@ -533,7 +533,7 @@ public class Node&lt;T&gt; {
 </pre></div>
 
 <p>
-由于类型参数 <tt>T</tt> 是无界的，因此 Java 编译器将其替换为 <tt>Object</tt>：</p>
+由于类型形参 <tt>T</tt> 是无界的，因此 Java 编译器将其替换为 <tt>Object</tt>：</p>
 <div class="codeblock"><pre>
 public class Node {
 
@@ -550,7 +550,7 @@ public class Node {
 }
 </pre></div>
 <p>
-在以下示例中，泛型 <tt>Node</tt> 类使用有界类型参数：</p>
+在以下示例中，泛型 <tt>Node</tt> 类使用有界类型形参：</p>
 <div class="codeblock"><pre>
 public class Node&lt;T extends Comparable&lt;T&gt;&gt; {
 
@@ -567,7 +567,7 @@ public class Node&lt;T extends Comparable&lt;T&gt;&gt; {
 }
 </pre></div>
 <p>
-Java 编译器用第一个边界类 <tt>Comparable</tt> 替换有界类型参数 <tt>T</tt>：</p>
+Java 编译器用第一个边界类 <tt>Comparable</tt> 替换有界类型形参 <tt>T</tt>：</p>
 <div class="codeblock"><pre>
 public class Node {
 

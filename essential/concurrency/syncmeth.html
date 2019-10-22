@@ -515,13 +515,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="memconsist.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="locksync.html">Next&nbsp;»</a>
+                <a target="_top" href="memconsist.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="locksync.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>同步方法</h1></div>
             <div id="PageContent">
 
-<p>Java 编程语言提供两种基本的同步习惯用法：<i>synchronized methods ( synchronized 方法)</i> 和 <i>synchronized statements ( synchronized 语句)</i>。同步语句在两者中更复杂，将在下一节描述。本节介绍同步方法。</p>
+<p>Java 编程语言提供两种基本的同步习惯用法：<i>synchronized methods (同步方法)</i> 和 <i>synchronized statements (同步语句)</i>。同步语句在两者中更复杂，将在下一节描述。本节介绍同步方法。</p>
 <p>要使方法同步，只需将 <code>synchronized</code> 关键字添加到其声明中：</p>
 <div class="codeblock"><pre>
 public class SynchronizedCounter {
@@ -546,7 +546,7 @@ public class SynchronizedCounter {
 <li>其次，当同步方法退出时，它会自动与同一对象的同步方法的 <i>any subsequent invocation (任何后续调用)</i> 建立 happens-before 关系。这就确保了对该对象的修改对其他线程是可见的。</li>
 </ul>
 <p>注意，构造函数不能同步  将 <code>synchronized</code> 关键字与构造函数一起使用是一种语法错误。同步构造函数没有意义，因为只有创建对象的线程在构造时才能访问它。</p>
-<div class="note"><hr /><strong>Warning:</strong> 构造将在线程之间共享的对象时，要非常小心，对该对象的引用不能过早“泄漏”。例如，假设您要维护一个名为 <code>instances</code> 的 <code>List</code>，其中包含每个类的实例。您可能想要将以下行添加到构造函数中：
+<div class="note"><hr /><strong>警告:</strong>&nbsp;构造将在线程之间共享的对象时，要非常小心，对该对象的引用不能过早“泄漏”。例如，假设你要维护一个名为 <code>instances</code> 的 <code>List</code>，其中包含每个类的实例。你可能想要将以下行添加到构造函数中：
 <div class="codeblock"><pre>
 instances.add(this);
 </pre></div>

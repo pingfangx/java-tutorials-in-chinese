@@ -484,7 +484,7 @@
 <div class="nolinkAHEAD">如何抛出异常</div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="creating.html">创建异常类</a></div>
-<div class="linkAHEAD"><a href="runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="summary.html">总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -499,16 +499,16 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="declaring.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="chained.html">Next&nbsp;»</a>
+                <a target="_top" href="declaring.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="chained.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>如何抛出异常</h1></div>
             <div id="PageContent">
 
-<p>在捕获异常之前，某些代码必须抛出一个异常。任何代码都可以抛出异常：您的代码，来自其他人编写的包中的代码，例如 Java 平台附带的包或 Java 运行时环境。无论什么抛出异常，它总是使用 <code>throw</code> 语句抛出。</p>
-<p>您可能已经注意到，Java 平台提供了许多异常类。所有类都是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html"><code>Throwable</code></a> 类的后代，并且所有类都允许程序区分在程序执行期间可能发生的各种异常的类型。</p>
-<p>您还可以创建自己的异常类来表示您编写的类中可能出现的问题。实际上，如果您是程序包开发人员，则可能必须创建自己的一组异常类，以允许用户将程序包中可能发生的错误与 Java 平台或其他程序包中发生的错误区分开来。</p>
-<p>您还可以创建 <em>链式（chained）</em> 异常。有关更多信息，请参见 <a class="TutorialLink" target="_top" href="../../essential/exceptions/chained.html">Chained Exceptions</a> 部分。</p>
+<p>在捕获异常之前，某些代码必须抛出一个异常。任何代码都可以抛出异常：你的代码，来自其他人编写的包中的代码，例如 Java 平台附带的包或 Java 运行时环境。无论什么抛出异常，它总是使用 <code>throw</code> 语句抛出。</p>
+<p>你可能已经注意到，Java 平台提供了许多异常类。所有类都是 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html"><code>Throwable</code></a> 类的后代，并且所有类都允许程序区分在程序执行期间可能发生的各种异常的类型。</p>
+<p>你还可以创建自己的异常类来表示你编写的类中可能出现的问题。实际上，如果你是程序包开发人员，则可能必须创建自己的一组异常类，以允许用户将程序包中可能发生的错误与 Java 平台或其他程序包中发生的错误区分开来。</p>
+<p>你还可以创建 <em>chained (链式)</em> 异常。有关更多信息，请参见 <a class="TutorialLink" target="_top" href="../../essential/exceptions/chained.html">Chained Exceptions</a> 部分。</p>
 <h2>throw 语句</h2>
 <p>所有方法都使用 <code>throw</code> 语句来抛出异常。<code>throw</code> 语句需要一个参数：一个 throwable 对象。可抛出的对象是 <code>Throwable</code> 类的任何子类的实例。这是一个 <code>throw</code> 语句的示例。</p>
 <div class="codeblock"><pre>
@@ -529,14 +529,14 @@ public Object pop() {
     return obj;
 }
 </pre></div> 
-<p><code>pop</code> 方法检查堆栈上是否有任何元素。如果堆栈为空(其大小等于 <code>0</code>)，则 <code>pop</code> 实例化一个新的 <code>EmptyStackException</code> 对象(<code>java.util</code> 的成员)并抛出它。本章中的 <a class="TutorialLink" target="_top" href="../../essential/exceptions/creating.html">Creating Exception Classes</a> 部分介绍了如何创建自己的异常类。现在，您需要记住的是，您只能抛出从 <code>java.lang.Throwable</code> 类继承的对象。</p>
+<p><code>pop</code> 方法检查堆栈上是否有任何元素。如果堆栈为空(其大小等于 <code>0</code>)，则 <code>pop</code> 实例化一个新的 <code>EmptyStackException</code> 对象(<code>java.util</code> 的成员)并抛出它。本章中的 <a class="TutorialLink" target="_top" href="../../essential/exceptions/creating.html">Creating Exception Classes</a> 部分介绍了如何创建自己的异常类。现在，你需要记住的是，你只能抛出从 <code>java.lang.Throwable</code> 类继承的对象。</p>
 <p>请注意，<code>pop</code> 方法的声明不包含 <code>throws</code> 子句。<code>EmptyStackException</code> 不是检查型异常，因此不需要 <code>pop</code> 来声明它可能发生。</p>
 <h2>Throwable 类及其子类</h2>
-<p>从 <code>Throwable</code> 类继承的对象包括直接后代（直接从 <code>Throwable</code> 类继承的对象）和间接后代（从 <code>Throwable</code> 的子类或孙子类继承的对象）。<span id="figure:exceptions-throwable.gif">下图</span>说明了 <code>Throwable</code> 类的类层次结构及其最重要的子类。如您所见，<code>Throwable</code> 有两个直接后代：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Error.html"><code>Error</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html"><code>Exception</code></a>。</p>
+<p>从 <code>Throwable</code> 类继承的对象包括直接后代（直接从 <code>Throwable</code> 类继承的对象）和间接后代（从 <code>Throwable</code> 的子类或孙子类继承的对象）。<span id="figure:exceptions-throwable.gif">下图</span>说明了 <code>Throwable</code> 类的类层次结构及其最重要的子类。如你所见，<code>Throwable</code> 有两个直接后代：<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Error.html"><code>Error</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html"><code>Exception</code></a>。</p>
 <center><img src="../../figures/essential/exceptions-throwable.gif" width="346" height="243" align="bottom" alt="Throwable 类及其最重要的子类。" /></p><p class="FigureCaption">Throwable 类。</p></center><h2>Error 类</h2>
 <p>当发生 Java 虚拟机中的动态链接故障或其他硬故障时，虚拟机将引发 <code>Error</code>。简单程序通常 <em>不</em> 捕获或抛出 <code>Error</code>。</p>
 <h2>Exception 类</h2>
-<p>大多数程序抛出和捕获从 <code>Exception</code> 类派生的对象。<code>Exception</code> 表示发生了问题，但这不是一个严重的系统问题。您编写的大多数程序将抛出和捕获 <code>Exception</code>，而不是 <code>Error</code>。</p>
+<p>大多数程序抛出和捕获从 <code>Exception</code> 类派生的对象。<code>Exception</code> 表示发生了问题，但这不是一个严重的系统问题。你编写的大多数程序将抛出和捕获 <code>Exception</code>，而不是 <code>Error</code>。</p>
 <p>Java 平台定义了 <code>Exception</code> 类的许多后代。这些后代表示可能发生的各种异常的类型。例如，<code>IllegalAccessException</code> 表示无法找到特定方法，<code>NegativeArraySizeException</code> 表示程序试图创建负大小的数组。</p>
 <p>一个 <code>Exception</code> 子类 <code>RuntimeException</code> 保留用于指示不正确使用 API​​ 的异常。运行时异常的一个示例是 <code>NullPointerException</code>，当方法尝试通过 <code>null</code> 引用访问对象的成员时发生。部分 <a class="TutorialLink" target="_top" href="runtime.html">Unchecked Exceptions  The Controversy</a> 讨论了为什么大多数应用程序不应抛出运行时异常 <code>RuntimeException</code> 或其子类 。</p>
 

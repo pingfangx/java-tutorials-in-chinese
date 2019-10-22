@@ -506,23 +506,23 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="signing.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="apiindex.html">Next&nbsp;»</a>
+                <a target="_top" href="signing.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="apiindex.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>验证签名的 JAR 文件</h1></div>
             <div id="PageContent">
 
-<p>通常，签名 JAR 文件的验证将由 Java™ 运行时环境负责。您的浏览器将验证它下载的签名 applets。使用解释器的 <tt>-jar</tt> 选项调用的签名应用程序将由运行时环境验证。</p>
-<p>但是，您可以使用 <code>jarsigner</code> 工具自行验证签名的 JAR 文件。您可能希望这样做，例如，测试您已准备好的已签名 JAR 文件。</p>
+<p>通常，签名 JAR 文件的验证将由 Java™ 运行时环境负责。你的浏览器将验证它下载的签名 applets。使用解释器的 <tt>-jar</tt> 选项调用的签名应用程序将由运行时环境验证。</p>
+<p>但是，你可以使用 <code>jarsigner</code> 工具自行验证签名的 JAR 文件。你可能希望这样做，例如，测试你已准备好的已签名 JAR 文件。</p>
 <p>用于验证签名 JAR 文件的基本命令是：</p>
 <div class="codeblock"><pre>
 jarsigner -verify <i>jar-file</i>
 </pre></div>
-<p>此命令将验证 JAR 文件的签名，并确保存档中的文件自签名后未发生更改。如果验证成功，您将看到以下消息：</p>
+<p>此命令将验证 JAR 文件的签名，并确保存档中的文件自签名后未发生更改。如果验证成功，你将看到以下消息：</p>
 <div class="codeblock"><pre>
 jar verified.
 </pre></div>
-<p>如果您尝试验证未签名的 JAR 文件，则会出现以下消息：</p>
+<p>如果你尝试验证未签名的 JAR 文件，则会出现以下消息：</p>
 <div class="codeblock"><pre>
 jar is unsigned. (signatures missing or not parsable)
 </pre></div> 

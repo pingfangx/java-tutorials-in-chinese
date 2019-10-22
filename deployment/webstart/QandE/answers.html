@@ -401,48 +401,48 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p><strong>Question:</strong> In a link that is to run a Java Web Start application, which file is specified as the <code>a</code> tag's <code>href</code> attribute?</p>
-<p><strong>Answer:</strong> You use the application's <code>JNLP</code> file name as the value of the <code>href</code> attribute. When a user clicks the link to the <code>JNLP</code> file, Java Web Start loads the application specified by that <code>JNLP</code> file.</p>
+<p><strong>问题:</strong>In a link that is to run a Java Web Start application, which file is specified as the <code>a</code> tag's <code>href</code> attribute?</p>
+<p><strong>答案:</strong>You use the application's <code>JNLP</code> file name as the value of the <code>href</code> attribute. When a user clicks the link to the <code>JNLP</code> file, Java Web Start loads the application specified by that <code>JNLP</code> file.</p>
 </li>
 <li>
-<p><strong>Question:</strong> Which MIME type must a Web server recognize in order for it to host Java Web Start applications?</p>
-<p><strong>Answer:</strong> You must configure the Web server so that files with the .jnlp extension are set to the <code>application/x-java-jnlp-file</code> MIME type.</p>
+<p><strong>问题:</strong>Which MIME type must a Web server recognize in order for it to host Java Web Start applications?</p>
+<p><strong>答案:</strong>You must configure the Web server so that files with the .jnlp extension are set to the <code>application/x-java-jnlp-file</code> MIME type.</p>
 </li>
 <li>
-<p><strong>Question:</strong> In an application's <code>JNLP</code> file, which two elements must be specified within the <code>resources</code> element?</p>
-<p><strong>Answer:</strong> The <code>resources</code> element must contain:</p>
+<p><strong>问题:</strong>In an application's <code>JNLP</code> file, which two elements must be specified within the <code>resources</code> element?</p>
+<p><strong>答案:</strong>The <code>resources</code> element must contain:</p>
 <ul>
 <li>The <code>j2se</code> element, which specifies the Java platform on which to run the application.</li>
 <li>The <code>jar</code> element, which specifies the JAR file for the application.</li>
 </ul>
 </li>
 <li>
-<p><strong>Question:</strong> Which interface provides the ability to an application to control how its own resources are cached?</p>
+<p><strong>问题:</strong>Which interface provides the ability to an application to control how its own resources are cached?</p>
 <ol type="a">
 <li><code>BasicService</code></li>
 <li><code>DownloadService</code></li>
 <li><code>PersistenceService</code></li>
 <li><code>ExtendedService</code></li>
 </ol>
-<p><strong>Answer:</strong> B. The <code>DownloadService</code> interface provides the ability to an application to control how its own resources are cached.</p>
+<p><strong>答案:</strong>B. The <code>DownloadService</code> interface provides the ability to an application to control how its own resources are cached.</p>
 </li>
 <li>
-<p><strong>Question:</strong> True or False: Java Web Start applications run in a secure <em>sandbox</em> by default.</p>
-<p><strong>Answer:</strong> <strong>True</strong>.</p>
+<p><strong>问题:</strong>对或错:Java Web Start applications run in a secure <em>sandbox</em> by default.</p>
+<p><strong>答案:</strong><strong>True</strong>.</p>
 </li>
 <li>
-<p><strong>Question:</strong> True or False: If a Java Web Start application is running in a secure sandbox, JAR files for the application can reside on different servers.</p>
-<p><strong>Answer:</strong> <strong>False</strong>. All JAR files for the application must reside on the same server.</p>
+<p><strong>问题:</strong>对或错:If a Java Web Start application is running in a secure sandbox, JAR files for the application can reside on different servers.</p>
+<p><strong>答案:</strong><strong>False</strong>. All JAR files for the application must reside on the same server.</p>
 </li>
 <li>
-<p><strong>Question:</strong> For a Java Web Start application to support operations outside of the secure sandbox, what must you do?</p>
-<p><strong>Answer:</strong> You must include the <code>security</code> element in your .jnlp file and specify <code>all-permissions</code> to enable your application to work outside of the sandbox.</p>
+<p><strong>问题:</strong>For a Java Web Start application to support operations outside of the secure sandbox, what must you do?</p>
+<p><strong>答案:</strong>You must include the <code>security</code> element in your .jnlp file and specify <code>all-permissions</code> to enable your application to work outside of the sandbox.</p>
 </li>
 </ol>
 <h2>练习</h2>
 <ol>
 <li>
-<p><strong>Exercise:</strong> Write the XML code you would add to a <code>JNLP</code> file in order to request that the application have complete access to the client system.</p>
+<p><strong>练习:</strong>Write the XML code you would add to a <code>JNLP</code> file in order to request that the application have complete access to the client system.</p>
 <p><strong>答案：</strong></p>
 <div class="codeblock"><pre>
 &lt;security&gt;
@@ -451,7 +451,7 @@
 </pre></div>
 </li>
 <li>
-<p><strong>Exercise:</strong> For a Java Web Start application, you have two icons, <code>one.gif</code> and <code>two.gif</code>, in the <code>images</code> directory in a JAR file. Write the application code you would use to access these images.</p>
+<p><strong>练习:</strong>For a Java Web Start application, you have two icons, <code>one.gif</code> and <code>two.gif</code>, in the <code>images</code> directory in a JAR file. Write the application code you would use to access these images.</p>
 <p><strong>答案：</strong></p>
 <div class="codeblock"><pre>
 // Get current classloader

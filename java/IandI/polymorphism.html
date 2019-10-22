@@ -503,15 +503,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">接口和继承</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="override.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="hidevariables.html">Next&nbsp;»</a>
+                <a target="_top" href="override.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="hidevariables.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>多态</h1></div>
             <div id="PageContent"><!-- Polymorphism -->
 
 
-<p><em>polymorphism</em> 的字典定义是指生物学中的原理，其中生物或物种可以具有许多不同的形式或阶段。这个原则也可以应用于面向对象的编程像 Java 语言之类的语言。类的子类可以定义它们自己的唯一行为，但仍然共享父类的一些相同函数式。</p>
-<p>可以通过对 <code>Bicycle</code> 类的微小修改来演示多态性。例如，可以将 <code>printDescription</code> 方法添加到显示当前存储在实例中的所有数据的类中。</p>
+<p><em>polymorphism (多态)</em> 的字典定义是指生物学中的原理，表示生物或物种可以具有许多不同的形式或阶段。这个原则也可以应用于面向对象的编程像 Java 语言之类的语言。类的子类可以定义它们自己的唯一行为，但仍然共享父类的一些相同功能。</p>
+<p>可以通过对 <code>Bicycle</code> 类的微小修改来演示多态性。例如，可以将 <code>printDescription</code> 方法添加到类中，以显示当前存储在实例中的所有数据。</p>
 <div class="codeblock"><pre>
 public void printDescription(){
     System.out.println("\nBike is " + "in gear " + this.gear
@@ -519,8 +519,8 @@ public void printDescription(){
         " and travelling at a speed of " + this.speed + ". ");
 }
 </pre></div>
-<p>要演示 Java 语言中的多态特性，请使用 <code>MountainBike</code> 和 <code>RoadBike</code> 类继承 <code>Bicycle</code> 类。对于 <code>MountainBike</code>，为 <code>suspension</code> 添加一个字段，这是 <code>String</code> 值，表示自行车是否有前减震器，<code>Front</code>。或者，自行车有前后减震器，<code>Dual</code>。</p>
-<p>这是更新的类：</p>
+<p>要演示 Java 语言中的多态特性，请使用 <code>MountainBike</code> 和 <code>RoadBike</code> 类继承 <code>Bicycle</code> 类。对于 <code>MountainBike</code> 类，为 <code>suspension</code> 添加一个字段，这是 <code>String</code> 值，表示自行车是否有前减震器，<code>Front</code>。或者，自行车有前后减震器，<code>Dual</code>。</p>
+<p>这是更新后的：</p>
 <div class="codeblock"><pre>
 public class MountainBike extends Bicycle {
     private String suspension;
@@ -611,7 +611,7 @@ The MountainBike has a Dual suspension.
 Bike is in gear 8 with a cadence of 40 and travelling at a speed of 20. 
 The RoadBike has 23 MM tires.
 </pre></div>
-<p>Java 虚拟机(JVM)为每个变量中引用的对象调用适当的方法。它不会调用由变量类型定义的方法。此行为称为 <em>虚拟方法调用（virtual method invocation）</em>，并演示了 Java 语言中重要多态性功能的一个方面。</p>
+<p>Java 虚拟机(JVM)为每个变量中引用的对象调用适当的方法。它不会调用由变量类型定义的方法。此行为称为 <em>virtual method invocation (虚拟方法调用)</em>，并演示了 Java 语言中重要多态性功能的一个方面。</p>
 
         </div>
         <div class="NavBit">

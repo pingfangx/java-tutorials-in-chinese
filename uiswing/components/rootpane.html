@@ -526,7 +526,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">使用 Swing 组件</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="progress.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="scrollpane.html">Next&nbsp;»</a>
+                <a target="_top" href="progress.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="scrollpane.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>如何使用根窗格</h1></div>
@@ -549,7 +549,7 @@
 <h2><a name="glasspane" id="glasspane">The Glass Pane</a></h2>
 <p>The glass pane is useful when you want to be able to catch events or paint over an area that already contains one or more components. For example, you can deactivate mouse events for a multi-component region by having the glass pane intercept the events. Or you can display an image over multiple components using the glass pane.</p>
 <p>Here's a picture of an application that demonstrates glass pane features. It contains a check box that lets you set whether the glass pane is "visible"  whether it can get events and paint itself onscreen. When the glass pane is visible, it blocks all input events from reaching the components in the content pane. It also paints a red dot in the place where it last detected a mouse-pressed event.</p>
-<center><img src="../../figures/uiswing/components/GlassPaneDemo.png" width="321" height="93" align="bottom" alt="A snapshot of GlassPaneDemo" /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<center><img src="../../figures/uiswing/components/GlassPaneDemo.png" width="321" height="93" align="bottom" alt="A snapshot of GlassPaneDemo" /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run GlassPaneDemo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#GlassPaneDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/GlassPaneDemoProject/GlassPaneDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the GlassPaneDemo example" /></a><br /></li>
 <li>Click Button 1.<br />
@@ -695,7 +695,7 @@ protected void paintComponent(Graphics g) {
 </tr>
 </table>
 <p><a name="examplemods" id="examplemods">Here is a picture of RootLayeredPaneDemo, which is a version of</a><a href="../examples/components/index.html#LayeredPaneDemo">LayeredPaneDemo</a> that uses the root pane's layered pane, rather than creating a new layered pane.</p>
-<center><img src="../../figures/uiswing/components/RootLayeredPaneDemo.png" width="300" height="350" align="bottom" alt="LayeredPaneDemo modified to use the root pane's layered pane" /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<center><img src="../../figures/uiswing/components/RootLayeredPaneDemo.png" width="300" height="350" align="bottom" alt="LayeredPaneDemo modified to use the root pane's layered pane" /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run RootLayeredPaneDemo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#RootLayeredPaneDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/RootLayeredPaneDemoProject/RootLayeredPaneDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the RootLayeredPaneDemo" /></a><br /></li>
 <li>Move the cursor around in the window, so that Duke moves on top of other components.<br />

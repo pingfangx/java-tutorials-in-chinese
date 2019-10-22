@@ -494,14 +494,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">格式化</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="messageFormat.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../text/index.html">Next&nbsp;»</a>
+                <a target="_top" href="messageFormat.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../text/index.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>处理复数</h1></div>
             <div id="PageContent">
 
-<p>如果复数和单数形式都可能，则消息中的单词可能会有所不同。使用 <code>ChoiceFormat</code> 类，您可以将数字映射到单词或短语，从而允许您构造语法正确的消息。</p>
-<p>在英语中，单词的复数和单数形式通常是不同的。当您构建引用数量的消息时，这可能会出现问题。例如，如果您的消息报告磁盘上的文件数，则可能存在以下变化：</p>
+<p>如果复数和单数形式都可能，则消息中的单词可能会有所不同。使用 <code>ChoiceFormat</code> 类，你可以将数字映射到单词或短语，从而允许你构造语法正确的消息。</p>
+<p>在英语中，单词的复数和单数形式通常是不同的。当你构建引用数量的消息时，这可能会出现问题。例如，如果你的消息报告磁盘上的文件数，则可能存在以下变化：</p>
 <div class="codeblock"><pre>
 There are no files on XDisk.
 There is one file on XDisk.
@@ -515,18 +515,18 @@ There are {0,number} file(s) on {1}.
 <div class="codeblock"><pre>
 There are 1 file(s) on XDisk.
 </pre></div>
-<p>如果使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/ChoiceFormat.html"><code>ChoiceFormat</code></a> 类，则可以做得更好。在本节中，您将通过逐步演示名为 <a class="SourceLink" target="_blank" href="examples/ChoiceFormatDemo.java" onclick="showCode('../../displayCode.html', 'examples/ChoiceFormatDemo.java'); return false;"><code>ChoiceFormatDemo</code></a> 的示例程序来学习处理消息中的复数形式。此程序还使用 <code>MessageFormat</code> 类，该类在上一节中讨论，<a href="messageFormat.html">Dealing with Compound Messages</a>。 <a name="step1" id="step1"></a></p>
+<p>如果使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/ChoiceFormat.html"><code>ChoiceFormat</code></a> 类，则可以做得更好。在本节中，你将通过逐步演示名为 <a class="SourceLink" target="_blank" href="examples/ChoiceFormatDemo.java" onclick="showCode('../../displayCode.html', 'examples/ChoiceFormatDemo.java'); return false;"><code>ChoiceFormatDemo</code></a> 的示例程序来学习处理消息中的复数形式。此程序还使用 <code>MessageFormat</code> 类，该类在上一节中讨论，<a href="messageFormat.html">Dealing with Compound Messages</a>。 <a name="step1" id="step1"></a></p>
 <h2><a name="step1__1" id="step1__1">1. 定义消息模式</a></h2>
 <p>首先，确定消息中的变量：</p>
 <center><img src="../../figures/i18n/i18n-3.gif" width="227" height="114" align="bottom" alt="三行文本，每行中的变量都高亮。" /></center><p>接下来，使用参数替换消息中的变量，创建可应用于 <code>MessageFormat</code> 对象的模式：</p>
 <div class="codeblock"><pre>
 There {0} on {1}.
 </pre></div>
-<p>磁盘名称的参数(由 <code>{1}</code> 表示)很容易处理。您只需将其视为 <code>MessageFormat</code> 模式中的任何其他 <code>String</code> 变量。此参数与参数值数组中索引 1 处的元素匹配。(见 <a href="#step7">step 7</a>)。</p>
+<p>磁盘名称的参数(由 <code>{1}</code> 表示)很容易处理。你只需将其视为 <code>MessageFormat</code> 模式中的任何其他 <code>String</code> 变量。此参数与参数值数组中索引 1 处的元素匹配。(见 <a href="#step7">step 7</a>)。</p>
 <p>处理参数 <code>{0}</code> 更复杂，原因如下：</p>
 <ul>
-<li>此参数替换的短语因文件数而异。要在运行时构造此短语，您需要将文件数映射到特定的 <code>String</code>。例如，数字 1 将映射到包含短语 <code>is one file</code> 的 <code>String</code>。<code>ChoiceFormat</code> 类允许您执行必要的映射。</li>
-<li>如果磁盘包含多个文件，则该短语包含整数。<code>MessageFormat</code> 类允许您在短语中插入数字。</li>
+<li>此参数替换的短语因文件数而异。要在运行时构造此短语，你需要将文件数映射到特定的 <code>String</code>。例如，数字 1 将映射到包含短语 <code>is one file</code> 的 <code>String</code>。<code>ChoiceFormat</code> 类允许你执行必要的映射。</li>
+<li>如果磁盘包含多个文件，则该短语包含整数。<code>MessageFormat</code> 类允许你在短语中插入数字。</li>
 </ul>
 <h2>2. 创建一个 ResourceBundle</h2>
 <p>因为必须翻译消息文本，所以将其隔离在 <code>ResourceBundle</code> 中：</p>
@@ -550,13 +550,13 @@ oneFile = y a un fichier
 multipleFiles = y a {2} fichiers
 </pre></div>
 <h2>3. 创建消息格式化程序</h2>
-<p>在此步骤中，您将实例化 <code>MessageFormat</code> 并设置其 <code>Locale</code>：</p>
+<p>在此步骤中，你将实例化 <code>MessageFormat</code> 并设置其 <code>Locale</code>：</p>
 <div class="codeblock"><pre>
 MessageFormat messageForm = new MessageFormat(&quot;&quot;);
 messageForm.setLocale(currentLocale);
 </pre></div>
 <h2>4. 创建一个选择格式化程序</h2>
-<p><code>ChoiceFormat</code> 对象允许您根据 <code>double</code> 编号选择特定的 <code>String</code>。<code>double</code> 数字的范围以及它们映射到的 <code>String</code> 对象在数组中指定：</p>
+<p><code>ChoiceFormat</code> 对象允许你根据 <code>double</code> 编号选择特定的 <code>String</code>。<code>double</code> 数字的范围以及它们映射到的 <code>String</code> 对象在数组中指定：</p>
 <div class="codeblock"><pre>
 double[] fileLimits = {0,1,2};
 String [] fileStrings = {
@@ -571,7 +571,7 @@ String [] fileStrings = {
 ChoiceFormat choiceForm = new ChoiceFormat(fileLimits, fileStrings);
 </pre></div>
 <h2>5. 应用模式</h2>
-<p>还记得您在第 1 步中构建的模式吗？是时候从 <code>ResourceBundle</code> 中获取模式并将其应用到 <code>MessageFormat</code> 对象：</p>
+<p>还记得你在第 1 步中构建的模式吗？是时候从 <code>ResourceBundle</code> 中获取模式并将其应用到 <code>MessageFormat</code> 对象：</p>
 <div class="codeblock"><pre>
 String pattern = bundle.getString(&quot;pattern&quot;);
 messageForm.applyPattern(pattern);

@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">泛型</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="legacy.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="literals.html">Next&nbsp;»</a>
+                <a target="_top" href="legacy.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="literals.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>附属细则</h1></div>
@@ -508,9 +508,9 @@ List &lt;String&gt; l1 = new ArrayList&lt;String&gt;();
 List&lt;Integer&gt; l2 = new ArrayList&lt;Integer&gt;();
 System.out.println(l1.getClass() == l2.getClass());
 </pre></div>
-<p>您可能想说 <code>false</code>，但您错了。它打印 <code>true</code>，因为泛型类的所有实例都具有相同的运行时类，不论它们的实际类型参数是什么。</p>
-<p>实际上，使类具有泛型性的原因在于它对所有可能的类型参数具有相同的行为；可以将同一类视为具有许多不同类型。</p>
-<p>因此，类的静态变量和方法也在所有实例之间共享。这就是为什么在静态方法或初始化程序中，或在静态变量的声明或初始化程序中引用类型声明的类型参数是非法的。</p>
+<p>你可能想说 <code>false</code>，但你错了。它打印 <code>true</code>，因为泛型类的所有实例都具有相同的运行时类，不论它们的实际类型形参(这里应该是实参)是什么。</p>
+<p>实际上，使类具有泛型性的原因在于它对所有可能的类型形参具有相同的行为；可以将同一类视为具有许多不同类型。</p>
+<p>因此，类的静态变量和静态方法也在所有实例之间共享。这就是为什么在静态方法或初始化程序中，或在静态变量的声明或初始化程序中引用类型声明的类型形参是非法的。</p>
 <h2>强制转换和 InstanceOf</h2>
 <p>泛型类在其所有实例之间共享这一事实的另一个含义是，询问实例是否是泛型类型的特定调用的实例通常是没有意义的：</p>
 <div class="codeblock"><pre>
@@ -531,9 +531,9 @@ Collection&lt;String&gt; cstr = (Collection&lt;String&gt;) cs;
     <b>return</b> (T) o;
 }
 </pre></div>
-<p>运行时不存在类型变量。这意味着它们在时间和空间上都不会产生性能开销，这很好。不幸的是，这也意味着您无法在强制转换中可靠地使用它们。</p>
+<p>运行时不存在类型变量。这意味着它们在时间和空间上都不会产生性能开销，这很好。不幸的是，这也意味着你无法在强制转换中可靠地使用它们。</p>
 <h2>数组</h2>
-<p>数组对象的组件类型不能是类型变量或参数化类型，除非它是(无界)通配符类型。您可以声明数组 <i>类型</i> 其元素类型为类型变量或参数化类型，但不能创建数组 <i>对象</i> 其元素类型为类型变量或参数化类型。（译注：这里的用语主要区分对象和类型）</p>
+<p>数组对象的组件类型不能是类型变量或参数化类型，除非它是(无界)通配符类型。你可以声明数组 <i>类型</i> 其元素类型为类型变量或参数化类型，但不能创建数组 <i>对象</i> 其元素类型为类型变量或参数化类型。（译注：这里的用语主要区分对象和类型）</p>
 <p>这很烦人，可以肯定。这种限制是必要的，以避免以下情况：</p>
 <div class="codeblock"><pre>
 // <i>Not really allowed.</i>
@@ -549,7 +549,7 @@ oa[1] = li;
 String s = lsa[1].get(0);
 </pre></div>
 <p>如果允许参数化类型的数组，则前一个示例将在没有任何未经检查的警告的情况下进行编译，但在运行时仍然失败。我们将类型安全作为泛型的主要设计目标。特别是，则该语言旨在保证 <b>如果使用 <tt>javac -source 1.5</tt> 编译整个应用程序而没有未经检查的警告，则它是类型安全的</b>。</p>
-<p>但是，您仍然可以使用通配符数组。前面代码的以下变体放弃了使用数组对象和元素类型参数化的数组类型。结果，我们必须显式地转换以从数组中获取 <code>String</code>。</p>
+<p>但是，你仍然可以使用通配符数组。前面代码的以下变体放弃了使用数组对象和元素类型是参数化的数组类型。结果，我们必须显式地转换以从数组中获取 <code>String</code>。</p>
 <div class="codeblock"><pre>
 // <i>OK, array of unbounded wildcard type.</i>
 List&lt;?&gt;[] lsa = new List&lt;?&gt;[10];
@@ -562,7 +562,7 @@ oa[1] = li;
 // <i>Run time error, but cast is explicit.</i>
 String s = (String) lsa[1].get(0);
 </pre></div>
-<p>在下一个变体中会导致编译时错误，我们避免创建其元素类型参数化的数组对象，但仍使用具有参数化元素类型的数组类型。</p>
+<p>在下一个变体中会导致编译时错误，我们避免创建其元素类型是参数化的数组对象，但仍使用具有参数化元素类型的数组类型。</p>
 <div class="codeblock"><pre>
 // <i>Error.</i>
 List&lt;String&gt;[] lsa = new List&lt;?&gt;[10];

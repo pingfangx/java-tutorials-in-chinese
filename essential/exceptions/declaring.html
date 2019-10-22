@@ -484,7 +484,7 @@
 <div class="linkAHEAD"><a href="throwing.html">如何抛出异常</a></div>
 <div class="linkBHEAD"><a href="chained.html">链式异常</a></div>
 <div class="linkBHEAD"><a href="creating.html">创建异常类</a></div>
-<div class="linkAHEAD"><a href="runtime.html">非检查型异常争议</a></div>
+<div class="linkAHEAD"><a href="runtime.html">非检查型异常  争议</a></div>
 <div class="linkAHEAD"><a href="advantages.html">异常的优点</a></div>
 <div class="linkAHEAD"><a href="summary.html">总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/questions.html">问题和练习</a></div>
@@ -499,14 +499,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">异常</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="putItTogether.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="throwing.html">Next&nbsp;»</a>
+                <a target="_top" href="putItTogether.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="throwing.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>指定方法抛出的异常</h1></div>
             <div id="PageContent">
 
-<p>上一节介绍了如何为 <code>ListOfNumbers</code> 类中的 <code>writeList</code> 方法编写异常处理程序。有时，代码捕获可能在其中发生的异常是合适的。但是，在其他情况下，最好让调用堆栈中的方法进一步处理异常。例如，如果您将 <code>ListOfNumbers</code> 类作为类包的一部分提供，则可能无法预测包的所有用户的需求。在这种情况下，最好 <em>不要</em> 捕获异常并允许进一步向上调用堆栈的方法来处理它。</p>
-<p>如果 <code>writeList</code> 方法没有捕获可能在其中发生的检查型异常，则 <code>writeList</code> 方法必须指定它可以抛出这些异常。让我们修改原始的 <code>writeList</code> 方法来指定它可以抛出的异常而不是捕获它们。提醒您，这是 <code>writeList</code> 方法的原始版本，无法编译。</p>
+<p>上一节介绍了如何为 <code>ListOfNumbers</code> 类中的 <code>writeList</code> 方法编写异常处理程序。有时，代码捕获可能在其中发生的异常是合适的。但是，在其他情况下，最好让调用堆栈中的方法进一步处理异常。例如，如果你将 <code>ListOfNumbers</code> 类作为类包的一部分提供，则可能无法预测包的所有用户的需求。在这种情况下，最好 <em>不要</em> 捕获异常并允许进一步向上调用堆栈的方法来处理它。</p>
+<p>如果 <code>writeList</code> 方法没有捕获可能在其中发生的检查型异常，则 <code>writeList</code> 方法必须指定它可以抛出这些异常。让我们修改原始的 <code>writeList</code> 方法来指定它可以抛出的异常而不是捕获它们。提醒你，这是 <code>writeList</code> 方法的原始版本，无法编译。</p>
 <div class="codeblock"><pre>
 public void writeList() {
     PrintWriter out = new PrintWriter(new FileWriter("OutFile.txt"));

@@ -494,20 +494,20 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">格式化</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="numberintro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="decimalFormat.html">Next&nbsp;»</a>
+                <a target="_top" href="numberintro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="decimalFormat.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用预定义格式</h1></div>
             <div id="PageContent">
 
-<p>通过调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html"><code>NumberFormat</code></a> 类提供的方法，您可以根据 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html"><code>Locale</code></a> 格式化数字，货币和百分比。下面的材料演示了一个名为 <a class="SourceLink" target="_blank" href="examples/NumberFormatDemo.java" onclick="showCode('../../displayCode.html', 'examples/NumberFormatDemo.java'); return false;"><code>NumberFormatDemo.java</code></a> 的示例程序的格式化技术。</p><!-- *********************************************************** -->
+<p>通过调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html"><code>NumberFormat</code></a> 类提供的方法，你可以根据 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html"><code>Locale</code></a> 格式化数字，货币和百分比。下面的材料演示了一个名为 <a class="SourceLink" target="_blank" href="examples/NumberFormatDemo.java" onclick="showCode('../../displayCode.html', 'examples/NumberFormatDemo.java'); return false;"><code>NumberFormatDemo.java</code></a> 的示例程序的格式化技术。</p><!-- *********************************************************** -->
 
 
 
 
 <h2><a name="numbers">数字</a></h2>
 
-<p>您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html"><code>NumberFormat</code></a> 方法来格式化基本类型数字，例如 <code>double</code>，以及它们相应的包装器对象，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html"><code>Double</code></a>。</p>
+<p>你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html"><code>NumberFormat</code></a> 方法来格式化基本类型数字，例如 <code>double</code>，以及它们相应的包装器对象，例如 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html"><code>Double</code></a>。</p>
 <p>以下代码示例根据 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html"><code>Locale</code></a> 格式化 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html"><code>Double</code></a>。调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html#getNumberInstance-java.util.Locale-"><code>getNumberInstance</code></a> 方法返回特定于语言环境的 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html"><code>NumberFormat</code></a> 的实例。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/Format.html#format-java.lang.Object-"><code>format</code></a> 方法接受 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html"><code>Double</code></a> 作为参数，并在 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code>String</code></a> 中返回格式化的数字。</p>
 <div class="codeblock"><pre>
 static public void displayNumber(Locale currentLocale) {
@@ -537,15 +537,15 @@ static public void displayNumber(Locale currentLocale) {
 
 <h3>使用阿拉伯数字以外的数字形状</h3>
 
-<p>默认情况下，当文本包含数字值时，将使用阿拉伯数字显示这些值。如果首选其他 Unicode 数字形状，请使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.html"><code>java.awt.font.NumericShaper</code></a> 类。<code>NumericShaper</code> API 使您可以显示数值，其在内部表示为任何 Unicode 数字形状的 ASCII 值。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../text/shapedDigits.html">Converting Latin Digits to Other Unicode Digits</a>。</p>
+<p>默认情况下，当文本包含数字值时，将使用阿拉伯数字显示这些值。如果首选其他 Unicode 数字形状，请使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/NumericShaper.html"><code>java.awt.font.NumericShaper</code></a> 类。<code>NumericShaper</code> API 使你可以显示数值，其在内部表示为任何 Unicode 数字形状的 ASCII 值。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../text/shapedDigits.html">Converting Latin Digits to Other Unicode Digits</a>。</p>
 
-<p>此外，某些区域设置具有变体代码，这些代码指定使用 Unicode 数字形状代替阿拉伯数字，例如泰语的区域设置。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../locale/create.html">Creating a Locale</a> 中的 <a class="TutorialLink" target="_top" href="../locale/create.html#variant-code">Variant Code</a> 部分。</p><!-- ****************************************************************** -->
+<p>此外，某些语言环境具有变体代码，这些代码指定使用 Unicode 数字形状代替阿拉伯数字，例如泰语的语言环境。有关详细信息，请参阅 <a class="TutorialLink" target="_top" href="../locale/create.html">Creating a Locale</a> 中的 <a class="TutorialLink" target="_top" href="../locale/create.html#variant-code">Variant Code</a> 部分。</p><!-- ****************************************************************** -->
 
 
 
 <h2>货币</h2>
 
-<p>如果您正在编写商业应用程序，则可能需要格式化和显示货币。您可以使用与数字相同的方式格式化货币，除了您调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html#getCurrencyInstance-java.util.Locale-"><code>getCurrencyInstance</code></a> 来创建格式化程序。当您调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html#format-double-"><code>format</code></a> 方法时，它会返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code>String</code></a>，其中包含格式化的数字和相应的货币符号。</p>
+<p>如果你正在编写商业应用程序，则可能需要格式化和显示货币。你可以使用与数字相同的方式格式化货币，除了你调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html#getCurrencyInstance-java.util.Locale-"><code>getCurrencyInstance</code></a> 来创建格式化程序。当你调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html#format-double-"><code>format</code></a> 方法时，它会返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code>String</code></a>，其中包含格式化的数字和相应的货币符号。</p>
 
 <p>此代码示例演示如何以特定于语言环境的方式格式化货币：</p>
 
@@ -574,14 +574,14 @@ English (United States), US Dollar: &#36;9,876,543.21
 
 <p>乍一看，这个输出可能看起来不对，因为数值都是一样的。当然，9 876 543,21 € 不等于 $9,876,543.21。但是，请记住 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html"><code>NumberFormat</code></a> 类不知道汇率。属于 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html"><code>NumberFormat</code></a> 类的方法会对货币进行格式化，但不会转换它们。</p>
 
-<p>请注意，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html"><code>Currency</code></a> 类的设计使得任何给定货币永远不会有多个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html"><code>Currency</code></a> 实例。因此，没有公共构造函数。如前面的代码示例所示，您使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html#getInstance-java.util.Locale-"><code>getInstance</code></a> 方法获取 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html"><code>Currency</code></a> 实例。</p>
+<p>请注意，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html"><code>Currency</code></a> 类的设计使得任何给定货币永远不会有多个 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html"><code>Currency</code></a> 实例。因此，没有公共构造函数。如前面的代码示例所示，你使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html#getInstance-java.util.Locale-"><code>getInstance</code></a> 方法获取 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html"><code>Currency</code></a> 实例。</p>
 
 <p>示例 <a class="SourceLink" target="_blank" href="examples/InternationalizedMortgageCalculator.java" onclick="showCode('../../displayCode.html', 'examples/InternationalizedMortgageCalculator.java'); return false;"><code>InternationalizedMortgageCalculator.java</code></a> 还演示了如何使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html"><code>Currency</code></a> 类。(请注意，此示例不转换货币值。)以下使用 en-US 语言环境：</p>
 
-<center><img src="../../figures/i18n/format/mortgage-calculator-en-us.jpg" width="372" height="202" align="bottom" alt="按揭计算器，en-US 区域设置" /></center>
+<center><img src="../../figures/i18n/format/mortgage-calculator-en-us.jpg" width="372" height="202" align="bottom" alt="按揭计算器，en-US 语言环境" /></center>
 <p>以下使用 en-UK 语言环境：</p>
 
-<center><img src="../../figures/i18n/format/mortgage-calculator-en-uk.jpg" width="504" height="202" align="bottom" alt="按揭计算器，en-UK 区域设置" /></center>
+<center><img src="../../figures/i18n/format/mortgage-calculator-en-uk.jpg" width="504" height="202" align="bottom" alt="按揭计算器，en-UK 语言环境" /></center>
 <p>示例 <a class="SourceLink" target="_blank" href="examples/InternationalizedMortgageCalculator.java" onclick="showCode('../../displayCode.html', 'examples/InternationalizedMortgageCalculator.java'); return false;"><code>InternationalizedMortgageCalculator.java</code></a> 需要以下资源文件：</p>
 
 <ul>
@@ -603,7 +603,7 @@ English (United States), US Dollar: &#36;9,876,543.21
   <li><p>
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html#getCurrencyCode--"><code>getCurrencyCode</code></a>:返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html"><code>Currency</code></a> 实例的 ISO 4217 数字代码</p></li>
   <li><p>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html#getSymbol--"><code>getSymbol</code></a>:返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html"><code>Currency</code></a> 实例的符号。您可以选择将 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html"><code>Locale</code></a> 对象指定为参数。请考虑以下片段：</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html#getSymbol--"><code>getSymbol</code></a>:返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html"><code>Currency</code></a> 实例的符号。你可以选择将 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html"><code>Locale</code></a> 对象指定为参数。请考虑以下片段：</p>
  
 <div class="codeblock"><pre>
 Locale enGBLocale = 
@@ -630,11 +630,11 @@ Symbol for US Dollar, en-US locale: $
 Symbol for US Dollar, en-UK locale: USD
 </pre></div>
 
-    <p>此片段表明货币符号可能因区域设置而异。</p>
+    <p>此片段表明货币符号可能因语言环境而异。</p>
 
   </li>
   <li><p>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html#getDisplayName--"><code>getDisplayName</code></a>:返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html"><code>Currency</code></a> 实例的显示名称。与 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html#getSymbol--"><code>getSymbol</code></a> 方法类似，您可以选择指定 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html"><code>Locale</code></a> 对象。</p></li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html#getDisplayName--"><code>getDisplayName</code></a>:返回 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html"><code>Currency</code></a> 实例的显示名称。与 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html#getSymbol--"><code>getSymbol</code></a> 方法类似，你可以选择指定 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html"><code>Locale</code></a> 对象。</p></li>
 </ul><!-- *********************************************************** -->
 
 
@@ -659,7 +659,7 @@ CA=CAD,124,2
 
 
 <h2>百分比</h2>
-<p>您还可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html"><code>NumberFormat</code></a> 类的方法来设置百分比格式。要获取特定于语言环境的格式化程序，请调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html#getPercentInstance-java.util.Locale-"><code>getPercentInstance</code></a> 方法。使用此格式化程序，小数部分(例如 0.75)显示为 75％。</p>
+<p>你还可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html"><code>NumberFormat</code></a> 类的方法来设置百分比格式。要获取特定于语言环境的格式化程序，请调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html#getPercentInstance-java.util.Locale-"><code>getPercentInstance</code></a> 方法。使用此格式化程序，小数部分(例如 0.75)显示为 75％。</p>
 <p>以下代码示例显示如何格式化百分比。</p>
 <div class="codeblock"><pre>
 static public void displayPercent(Locale currentLocale) {

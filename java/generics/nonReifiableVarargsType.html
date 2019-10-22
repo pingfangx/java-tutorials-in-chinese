@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -506,7 +506,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="bridgeMethods.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="restrictions.html">Next&nbsp;»</a>
+                <a target="_top" href="bridgeMethods.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="restrictions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>不可具体化的类型</h1></div>
@@ -524,14 +524,14 @@
 
 <h2><a name="non-reifiable-types" id="non-reifiable-types">不可具体化的类型</a></h2>
 <p>
-<em>可具体化的（reifiable）</em> 类型是类型信息在运行时完全可用的类型。这包括基本类型，非泛型类型，原始类型和无界通配符的调用。</p>
+<em>reifiable (可具体化的)</em> 类型是类型信息在运行时完全可用的类型。这包括基本类型，非泛型类型，原始类型和无界通配符的调用。</p>
 <p>
-<em>不可具体化的类型（Non-reifiable types）</em> 是在编译时通过类型擦除移除信息的类型 - 未定义为无界通配符的泛型类型的调用。不可具体化的类型在运行时没有提供所有信息。不可具体化的类型的示例是 <tt>List&lt;String&gt;</tt> 和 <tt>List&lt;Number&gt;</tt>; JVM 无法在运行时区分这些类型。如 <a class="TutorialLink" target="_top" href="restrictions.html">Restrictions on Generics</a> 所示，在某些情况下，不能使用不可具体化类型：例如，在 <tt>instanceof</tt> 表达式中，或作为数组中的元素。</p>
+<em>Non-reifiable types (不可具体化的类型)</em> 是在编译时通过类型擦除移除信息的类型 - 未定义为无界通配符的泛型类型的调用。不可具体化的类型在运行时没有提供所有信息。不可具体化的类型的示例是 <tt>List&lt;String&gt;</tt> 和 <tt>List&lt;Number&gt;</tt>; JVM 无法在运行时区分这些类型。如 <a class="TutorialLink" target="_top" href="restrictions.html">Restrictions on Generics</a> 所示，在某些情况下，不能使用不可具体化类型：例如，在 <tt>instanceof</tt> 表达式中，或作为数组中的元素。</p>
 
 <h2><a name="heap_pollution" id="heap_pollution">堆污染</a></h2>
-<p><em>堆污染（Heap pollution）</em>发生于参数化类型的变量引用的是不属于该参数化类型的对象时。如果程序执行某些操作，在编译时产生未经检查的警告，则会出现这种情况。如果在编译时(在编译时类型检查规则的限制内)或在运行时，涉及参数化类型的操作（例如，类型转换或方法调用）的正确性无法验证时，则会生成 <em>未经检查的警告（unchecked warning）</em>。例如，在混合原始类型和参数化类型时，或者在执行未经检查的强制转换时，会发生堆污染。</p>
+<p><em>Heap pollution (堆污染)</em>发生于参数化类型的变量引用的是不属于该参数化类型的对象时。如果程序执行某些操作，在编译时产生未经检查的警告，则会出现这种情况。如果在编译时(在编译时类型检查规则的限制内)或在运行时，涉及参数化类型的操作（例如，类型转换或方法调用）的正确性无法验证时，则会生成 <em>unchecked warning (未经检查的警告)</em>。例如，在混合原始类型和参数化类型时，或者在执行未经检查的强制转换时，会发生堆污染。</p>
 <p>
-在正常情况下，当所有代码同时编译时，编译器会生成未经检查的警告，以引起您对潜在堆污染的注意。如果单独编译代码的各个部分，则很难检测到堆污染的潜在风险。如果确保代码在没有警告的情况下编译，则不会发生堆污染。</p><!-- **************************************** -->
+在正常情况下，当所有代码同时编译时，编译器会生成未经检查的警告，以引起你对潜在堆污染的注意。如果单独编译代码的各个部分，则很难检测到堆污染的潜在风险。如果确保代码在没有警告的情况下编译，则不会发生堆污染。</p><!-- **************************************** -->
 
 <h2><a name="vulnerabilities" id="vulnerabilities">具有不可具体化的形式参数的 Varargs 方法的潜在漏洞</a></h2>
 <p>包含 vararg 输入参数的泛型方法可能会导致堆污染。</p>
@@ -592,7 +592,7 @@ Object[] objectArray = l;
 objectArray[0] = Arrays.asList(42);
 </pre></div>
 <p>此语句将 <code>List</code> 对象分配给 <code>objectArray</code> 数组的第一个数组组件，该对象包含一个类型为 <code>Integer</code> 的对象。</p>
-<p>假设您使用以下语句调用 <code>ArrayBuilder.faultyMethod</code>：</p>
+<p>假设你使用以下语句调用 <code>ArrayBuilder.faultyMethod</code>：</p>
 <div class="codeblock"><pre>
 ArrayBuilder.faultyMethod(Arrays.asList("Hello!"), Arrays.asList("World!"));
 </pre></div>
@@ -604,7 +604,7 @@ String s = l[0].get(0);
 <p>存储在变量 <code>l</code> 的第一个数组组件中的对象类型为 <code>List&lt;Integer&gt;</code>，但此语句需要类型为 <code>List&lt;String&gt;</code>。</p><!-- **************************************** -->
 
 <h2><a name="suppressing" id="suppressing">使用不可具体化的形式参数时避免 Varargs 方法的警告</a></h2>
-<p>如果声明一个包含参数化类型参数的 varargs 方法，并确保方法体不会因 varargs 形式参数处理不当而抛出 <code>ClassCastException</code> 或其他类似异常，那么通过向静态和非构造方法声明添加以下注解，可以避免编译器为这些类型的 varargs 方法生成警告：</p>
+<p>如果声明一个包含参数化类型的参数的 varargs 方法，并确保方法体不会因 varargs 形式参数处理不当而抛出 <code>ClassCastException</code> 或其他类似异常，那么通过向静态和非构造方法声明添加以下注解，可以避免编译器为这些类型的 varargs 方法生成警告：</p>
 <div class="codeblock"><pre>
 @SafeVarargs
 </pre></div>
@@ -614,7 +614,7 @@ String s = l[0].get(0);
 <div class="codeblock"><pre>
 @SuppressWarnings({"unchecked", "varargs"})
 </pre></div>
-<p>但是，此方法不会抑制从方法的调用处生成的警告。如果您不熟悉 <code>@SuppressWarnings</code> 语法，请参阅 <a class="TutorialLink" target="_top" href="../../java/annotations/index.html">Annotations</a>。</p>
+<p>但是，此方法不会抑制从方法的调用处生成的警告。如果你不熟悉 <code>@SuppressWarnings</code> 语法，请参阅 <a class="TutorialLink" target="_top" href="../../java/annotations/index.html">Annotations</a>。</p>
 
         </div>
         <div class="NavBit">

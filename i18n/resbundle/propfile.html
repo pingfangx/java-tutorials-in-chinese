@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>使用属性文件支持 ResourceBundle(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;隔离特定于区域设置的数据)
+        <title>使用属性文件支持 ResourceBundle(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;隔离特定于语言环境的数据)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
@@ -471,7 +471,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">隔离特定于区域设置的数据</a></div>
+            <div class="linkLESSON"><a href="index.html">隔离特定于语言环境的数据</a></div>
 <div class="linkAHEAD"><a href="concept.html">关于 ResourceBundle 类</a></div>
 <div class="linkAHEAD"><a href="prepare.html">准备使用 ResourceBundle</a></div>
 <div class="nolinkAHEAD">使用属性文件支持 ResourceBundle</div>
@@ -485,10 +485,10 @@
         <br /><b>Lesson:</b> Isolating Locale-Specific Data
     </div>
             <div id="BreadCrumbs">
-                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">隔离特定于区域设置的数据</a>
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">隔离特定于语言环境的数据</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="prepare.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="list.html">Next&nbsp;»</a>
+                <a target="_top" href="prepare.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="list.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>使用属性文件支持 ResourceBundle</h1></div>
@@ -496,8 +496,8 @@
 
 <p>本节逐步介绍名为 <a class="SourceLink" target="_blank" href="examples/PropertiesDemo.java" onclick="showCode('../../displayCode.html', 'examples/PropertiesDemo.java'); return false;"><code><code>PropertiesDemo</code></code></a> 的示例程序。</p>
 <h2>1. 创建默认属性文件</h2>
-<p>属性文件是一个简单的文本文件。您可以使用几乎任何文本编辑器创建和维护属性文件。</p>
-<p>您应该始终创建默认属性文件。此文件的名称以 <code>ResourceBundle</code> 的基本名称开头，以 <code>.properties</code> 后缀结尾。在 <code>PropertiesDemo</code> 程序中，基本名称为 <code>LabelsBundle</code>。因此，默认属性文件名为 <code>LabelsBundle.properties</code>。该文件包含以下行：</p>
+<p>属性文件是一个简单的文本文件。你可以使用几乎任何文本编辑器创建和维护属性文件。</p>
+<p>你应该始终创建默认属性文件。此文件的名称以 <code>ResourceBundle</code> 的基本名称开头，以 <code>.properties</code> 后缀结尾。在 <code>PropertiesDemo</code> 程序中，基本名称为 <code>LabelsBundle</code>。因此，默认属性文件名为 <code>LabelsBundle.properties</code>。该文件包含以下行：</p>
 <div class="codeblock"><pre>
 # This is the default LabelsBundle.properties file
 s1 = computer
@@ -507,7 +507,7 @@ s4 = keyboard
 </pre></div>
 <p>请注意，在前面的文件中，注释行以井号(#)开头。其他行包含键值对。键位于等号的左侧，值位于右侧。例如，<code>s2</code> 是与值 <code>disk</code> 对应的键。键是任意的。我们可以把 <code>s2</code> 叫做别的，比如 <code>msg5</code> 或 <code>diskID</code>。但是，一旦定义，键就不应该更改，因为它在源代码中被引用。值可能会更改。实际上，当本地化程序创建新属性文件以容纳其他语言时，它们会将值翻译为各种语言。</p>
 <h2>2. 根据需要创建其他属性文件</h2>
-<p>要支持其他 <code>Locale</code>，您的本地化人员将创建一个包含已翻译值的新属性文件。不需要更改源代码，因为您的程序引用了键而不是值。</p>
+<p>要支持其他 <code>Locale</code>，你的本地化人员将创建一个包含已翻译值的新属性文件。不需要更改源代码，因为你的程序引用了键而不是值。</p>
 <p>例如，要添加对德语的支持，本地化人员将翻译 <code>LabelsBundle.properties</code> 中的值，并将它们放在名为 <code>LabelsBundle_de.properties</code> 的文件中。请注意，此文件的名称(如默认文件的名称)以基本名称 <code>LabelsBundle</code> 开头，以 <code>.properties</code> 后缀结尾。但是，由于此文件适用于特定的 <code>Locale</code>，因此基本名称后跟语言代码(<code>de</code>)。<code>LabelsBundle_de.properties</code> 的内容如下：</p>
 <div class="codeblock"><pre>
 # This is the LabelsBundle_de.properties file
@@ -522,7 +522,7 @@ LabelsBundle.properties
 LabelsBundle_de.properties
 LabelsBundle_fr.properties
 </pre></div>
-<h2>3. 指定区域设置</h2>
+<h2>3. 指定语言环境</h2>
 <p><code>PropertiesDemo</code> 程序创建 <code>Locale</code> 对象，如下所示：</p>
 <div class="codeblock"><pre>
 Locale[] supportedLocales = {
@@ -545,7 +545,7 @@ String value = labels.getString(key);
 </pre></div>
 <p><code>getString</code> 返回的 <code>String</code> 对应于指定的键。<code>String</code> 使用正确的语言，前提是指定的 <code>Locale</code> 存在属性文件。</p>
 <h2>6. 迭代所有键</h2>
-<p>此步骤是可选的。调试程序时，您可能希望获取 <code>ResourceBundle</code> 中所有键的值。<code>getKeys</code> 方法返回 <code>ResourceBundle</code> 中所有键的 <code>Enumeration</code>。您可以遍历 <code>Enumeration</code> 并使用 <code>getString</code> 方法获取每个值。以下代码行来自 <code>PropertiesDemo</code> 程序，显示了如何完成此操作：</p>
+<p>此步骤是可选的。调试程序时，你可能希望获取 <code>ResourceBundle</code> 中所有键的值。<code>getKeys</code> 方法返回 <code>ResourceBundle</code> 中所有键的 <code>Enumeration</code>。你可以遍历 <code>Enumeration</code> 并使用 <code>getString</code> 方法获取每个值。以下代码行来自 <code>PropertiesDemo</code> 程序，显示了如何完成此操作：</p>
 <div class="codeblock"><pre>
 ResourceBundle labels = ResourceBundle.getBundle("LabelsBundle", currentLocale);
 Enumeration bundleKeys = labels.getKeys();

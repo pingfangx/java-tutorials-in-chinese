@@ -476,7 +476,7 @@
 <div class="linkBHEAD"><a href="classdecl.html">声明类</a></div>
 <div class="linkBHEAD"><a href="variables.html">声明成员变量</a></div>
 <div class="linkBHEAD"><a href="methods.html">定义方法</a></div>
-<div class="linkBHEAD"><a href="constructors.html">为您的类提供构造函数</a></div>
+<div class="linkBHEAD"><a href="constructors.html">为你的类提供构造函数</a></div>
 <div class="linkBHEAD"><a href="arguments.html">将信息传递给方法或构造函数</a></div>
 <div class="linkAHEAD"><a href="objects.html">对象</a></div>
 <div class="linkBHEAD"><a href="objectcreation.html">创建对象</a></div>
@@ -512,31 +512,31 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">类和对象</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="methodreferences.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/nested-questions.html">Next&nbsp;»</a>
+                <a target="_top" href="methodreferences.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/nested-questions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>何时使用嵌套类，本地类，匿名类和 Lambda 表达式 </h1></div>
             <div id="PageContent">
 
 
-<p>如 <a class="TutorialLink" target="_top" href="nested.html">Nested Classes</a> 一节所述，嵌套类使您能够对仅在一个地方使用的类进行逻辑分组，增加封装的使用，并创建更易读和可维护的代码。局部类，匿名类和 lambda 表达式也具有这些优点;但是，它们旨在用于更具体的情况：</p>
+<p>如 <a class="TutorialLink" target="_top" href="nested.html">Nested Classes</a> 一节所述，嵌套类使你能够对仅在一个地方使用的类进行逻辑分组，增加封装的使用，并创建更易读和可维护的代码。局部类，匿名类和 lambda 表达式也具有这些优点;但是，它们旨在用于更具体的情况：</p>
 
 
 
 <ul>
   <li><p>
-<a class="TutorialLink" target="_top" href="localclasses.html">局部类</a>:如果您需要创建多个类的实例，访问其构造函数或引入新的命名类型(例如，因为您需要稍后调用其他方法)，请使用它。</p></li>
+<a class="TutorialLink" target="_top" href="localclasses.html">局部类</a>:如果你需要创建多个类的实例，访问其构造函数或引入新的命名类型(例如，因为你需要稍后调用其他方法)，请使用它。</p></li>
   <li><p>
 <a class="TutorialLink" target="_top" href="anonymousclasses.html">匿名类</a>:如果需要声明字段或其他方法，请使用它。</p></li>
   <li><p>
 <a class="TutorialLink" target="_top" href="lambdaexpressions.html">Lambda 表达式</a>:</p>
     <ul>
-      <li><p>如果要封装要传递给其他代码的单个行为单元，请使用它。例如，如果要在集合的每个元素上，在进程完成时，或者在进程遇到错误时执行某个操作，您将使用 lambda 表达式。</p></li>
-      <li><p>如果您需要函数式接口的简单实例并且不应用前述条件(例如，您不需要构造函数，命名类型，字段或其他方法)，请使用它。</p></li>
+      <li><p>如果要封装要传递给其他代码的单个行为单元，请使用它。例如，如果要在集合的每个元素上，在进程完成时，或者在进程遇到错误时执行某个操作，你将使用 lambda 表达式。</p></li>
+      <li><p>如果你需要函数式接口的简单实例并且不应用前述条件(例如，你不需要构造函数，命名类型，字段或其他方法)，请使用它。</p></li>
     </ul>
   </li>
   <li><p>
-<a class="TutorialLink" target="_top" href="nested.html">嵌套类</a>:如果您的要求与局部类的要求类似，则要使用它，您希望更广泛地使用该类型，并且不需要访问局部变量或方法参数。</p>
+<a class="TutorialLink" target="_top" href="nested.html">嵌套类</a>:如果你的要求与局部类的要求类似，你希望更广泛地使用该类型，并且不需要访问局部变量或方法参数，则使用它。</p>
     <ul>
       <li><p>如果需要访问封闭实例的非公共字段和方法，请使用非静态嵌套类(或内部类)。如果不需要此访问权限，请使用静态嵌套类。</p></li>
     </ul>

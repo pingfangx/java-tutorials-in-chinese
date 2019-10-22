@@ -515,7 +515,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">基本 I/O</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="notification.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="legacy.html">Next&nbsp;»</a>
+                <a target="_top" href="notification.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="legacy.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>其他有用的方法</h1></div>
@@ -530,7 +530,7 @@
 <li><a href="#stores">文件系统的文件存储</a></li>
 </ul>
 <h2><a name="mime" id="mime">确定 MIME 类型</a></h2>
-<p>要确定文件的 MIME 类型，您可能会发现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#probeContentType-java.nio.file.Path-"><code>probeContentType(Path)</code></a> 方法很有用。例如：</p>
+<p>要确定文件的 MIME 类型，你可能会发现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#probeContentType-java.nio.file.Path-"><code>probeContentType(Path)</code></a> 方法很有用。例如：</p>
 <div class="codeblock"><pre>
 try {
     String type = Files.probeContentType(filename);
@@ -546,7 +546,7 @@ try {
 </pre></div>
 <p>请注意，如果无法确定内容类型，<code>probeContentType</code> 将返回 null。</p>
 <p>此方法的实现具有高度平台特定性，并非绝对可靠。内容类型由平台的默认文件类型检测器确定。例如，如果检测器根据 <code>.class</code> 扩展名将文件的内容类型确定为 <code>application/x-java</code>，则可能会被欺骗。</p>
-<p>如果默认值不足以满足您的需要，您可以提供自定义 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/spi/FileTypeDetector.html"><code>FileTypeDetector</code></a>。</p>
+<p>如果默认值不足以满足你的需要，你可以提供自定义 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/spi/FileTypeDetector.html"><code>FileTypeDetector</code></a>。</p>
 <p><a class="SourceLink" target="_blank" href="examples/Email.java" onclick="showCode('../../displayCode.html', 'examples/Email.java'); return false;"><code><code>Email</code></code></a> 示例使用 <code>probeContentType</code> 方法。</p>
 <h2><a name="default" id="default">默认文件系统</a></h2>
 <p>要获取默认文件系统，请使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystems.html#getDefault--"><code>getDefault</code></a> 方法。通常，这个 <code>FileSystems</code> 方法(注意复数)被链接到 <code>FileSystem</code> 方法之一(注意单数)，如下所示：</p>
@@ -562,8 +562,8 @@ String separator = FileSystems.getDefault().getSeparator();
 </pre></div>
 <p><a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getSeparator--"><code>getSeparator</code></a> 方法还用于获取任何可用文件系统的路径分隔符。</p>
 <h2><a name="stores" id="stores">文件系统的文件存储</a></h2>
-<p>文件系统具有一个或多个文件存储来保存其文件和目录。<em>file store</em> 表示底层存储设备。在 UNIX 操作系统中，每个安装的文件系统都由文件存储表示。在 Microsoft Windows 中，每个卷都由文件存储表示：<code>C:</code>，<code>D:</code>，依此类推。</p>
-<p>要获取文件系统的所有文件存储列表，可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getFileStores--"><code>getFileStores</code></a> 方法。此方法返回 <code>Iterable</code>，它允许您使用 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/for.html">enhanced for</a> 语句迭代所有根目录。</p>
+<p>文件系统具有一个或多个文件存储来保存其文件和目录。<em>file store (文件存储)</em> 表示底层存储设备。在 UNIX 操作系统中，每个安装的文件系统都由文件存储表示。在 Microsoft Windows 中，每个卷都由文件存储表示：<code>C:</code>，<code>D:</code>，依此类推。</p>
+<p>要获取文件系统的所有文件存储列表，可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getFileStores--"><code>getFileStores</code></a> 方法。此方法返回 <code>Iterable</code>，它允许你使用 <a class="TutorialLink" target="_top" href="../../java/nutsandbolts/for.html">enhanced for</a> 语句迭代所有根目录。</p>
 <div class="codeblock"><pre>
 for (FileStore store: FileSystems.getDefault().getFileStores()) {
    ...

@@ -515,15 +515,15 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">并发</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="syncrgb.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="highlevel.html">Next&nbsp;»</a>
+                <a target="_top" href="syncrgb.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="highlevel.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>定义不可变对象的策略</h1></div>
             <div id="PageContent">
 
-<p>以下规则定义了用于创建不可变对象的简单策略。并非所有记录为“不可变”的类都遵循这些规则。这并不一定意味着这些类的创造者是草率的他们可能有充分的理由相信他们类的实例在构造后永远不会更改。但是，这种策略需要复杂的分析，不适合初学者。</p>
+<p>以下规则定义了用于创建不可变对象的简单策略。并非所有记录为“不可变”的类都遵循这些规则。这并不一定意味着这些类的创造者是草率的  他们可能有充分的理由相信他们类的实例在构造后永远不会更改。但是，这种策略需要复杂的分析，不适合初学者。</p>
 <ol>
-<li>不提供“setter”方法修改字段引用的字段或对象的方法。</li>
+<li>不提供“setter”方法  修改字段引用的字段或对象的方法。</li>
 <li>使所有字段 <code>final</code> 和 <code>private</code>。</li>
 <li>不允许子类覆盖方法。最简单的方法是将类声明为 <code>final</code>。更复杂的方法是使构造函数 <code>private</code> 并在工厂方法中构造实例。</li>
 <li>如果实例字段包含对可变对象的引用，则不允许更改这些对象：

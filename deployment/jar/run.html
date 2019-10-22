@@ -506,23 +506,23 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="update.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="manifestindex.html">Next&nbsp;»</a>
+                <a target="_top" href="update.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="manifestindex.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>运行 JAR 打包的软件</h1></div>
             <div id="PageContent">
 
-<p>既然您已经学会了如何创建 JAR 文件，那么如何实际运行您打包的代码？考虑以下情况：</p>
+<p>既然你已经学会了如何创建 JAR 文件，那么如何实际运行你打包的代码？考虑以下情况：</p>
 <ul>
 <li>JAR 文件包含要在浏览器中运行的 applet。</li>
-<li>您的 JAR 文件包含要从命令行启动的应用程序。</li>
-<li>您的 JAR 文件包含要用作扩展的代码。</li>
+<li>你的 JAR 文件包含要从命令行启动的应用程序。</li>
+<li>你的 JAR 文件包含要用作扩展的代码。</li>
 </ul>
 
 <p>本节将介绍前两种情况。关于 <a class="TutorialLink" target="_top" href="../../ext/index.html">扩展机制</a> 的教程中的单独路径涵盖了使用 JAR 文件作为扩展。</p>
  
 <h2>在 JAR 文件中打包的 Applets</h2>
-<p>要从 HTML 文件启动任何 applet 以在浏览器中运行，请使用 <tt>applet</tt> 标记。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../applet/index.html">Java Applets</a> 课程。如果将 applet 捆绑为 JAR 文件，则唯一需要做的就是使用 <em>archive</em> 参数指定 JAR 文件的相对路径。</p>
+<p>要从 HTML 文件启动任何 applet 以在浏览器中运行，请使用 <tt>applet</tt> 标记。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../applet/index.html">Java Applets</a> 课程。如果将 applet 打包为 JAR 文件，则唯一需要做的就是使用 <em>archive</em> 参数指定 JAR 文件的相对路径。</p>
 <p>例如，使用 TicTacToe 演示小程序。HTML 文件中显示 applet 的 <tt>applet</tt> 标记可以标记为：</p>
 <div class="codeblock"><pre>
 &lt;applet code=TicTacToe.class 
@@ -544,11 +544,11 @@
 &lt;/applet&gt;
 </pre></div>
 <h2>JAR 文件作为应用程序</h2>
-<p>您可以使用 Java 启动程序(<tt>java</tt> 命令)运行 JAR 打包的应用程序。基本命令是：</p>
+<p>你可以使用 Java 启动程序(<tt>java</tt> 命令)运行 JAR 打包的应用程序。基本命令是：</p>
 <div class="codeblock"><pre>
 java -jar <i>jar-file</i>
 </pre></div>
-<p><tt>-jar</tt> 标志告诉启动程序应用程序是以 JAR 文件格式打包的。您只能指定一个 JAR 文件，该文件必须包含所有特定于应用程序的代码。</p>
+<p><tt>-jar</tt> 标志告诉启动程序应用程序是以 JAR 文件格式打包的。你只能指定一个 JAR 文件，该文件必须包含所有特定于应用程序的代码。</p>
 <p>在执行此命令之前，请确保运行时环境具有有关 JAR 文件中哪个类是应用程序入口点的信息。</p>
 <p>要指示哪个类是应用程序的入口点，必须将 <tt>Main-Class</tt> 头添加到 JAR 文件的清单中。头采用以下形式：</p>
 <div class="codeblock"><pre>

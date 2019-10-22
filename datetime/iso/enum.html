@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>&gt;<a href="index.html" target="_top">标准日历</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="overview.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="date.html">Next&nbsp;»</a>
+                <a target="_top" href="overview.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="date.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>DayOfWeek 和 Month 枚举</h1></div>
@@ -511,7 +511,7 @@ Date-Time API 提供用于指定一周中的周几和一年中的几月的枚举
 
 <h2>DayOfWeek</h2>
 <p>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/DayOfWeek.html"><tt>DayOfWeek</tt></a> 枚举由七个常数组成，用于描述星期几：<tt>MONDAY</tt> 到 <tt>SUNDAY</tt>。<tt>DayOfWeek</tt> 常量的整数值范围从 1(星期一)到 7(星期日)。使用定义的常量(<tt>DayOfWeek.FRIDAY</tt>)使您的代码更具可读性。</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/DayOfWeek.html"><tt>DayOfWeek</tt></a> 枚举由七个常数组成，用于描述星期几：<tt>MONDAY</tt> 到 <tt>SUNDAY</tt>。<tt>DayOfWeek</tt> 常量的整数值范围从 1(星期一)到 7(星期日)。使用定义的常量(<tt>DayOfWeek.FRIDAY</tt>)使你的代码更具可读性。</p>
 <p>
 此枚举还提供了许多方法，类似于基于时间的类提供的方法。例如，以下代码将“Monday”添加 3 天并打印结果。输出是“THURSDAY”：</p>
 <div class="codeblock"><pre>
@@ -519,7 +519,7 @@ System.out.printf("%s%n", DayOfWeek.MONDAY.plus(3));
 </pre></div>
 
 <p>
-通过使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/DayOfWeek.html#getDisplayName-java.time.format.TextStyle-java.util.Locale-"><tt>getDisplayName(TextStyle, Locale)</tt></a> 方法，您可以获取字符串以标识用户区域设置中的星期几。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/format/TextStyle.html"><tt>TextStyle</tt></a> 枚举使您可以指定要显示的字符串类型：<tt>FULL</tt>，<tt>NARROW</tt>(通常为单个字母)，或 <tt>SHORT</tt>(缩写)。<tt>STANDALONE</tt> <tt>TextStyle</tt> 常量用于某些语言中，当用作日期的一部分时，输出不同于单独使用时的输出。以下示例为打印“Monday” 用 <tt>TextStyle</tt> 的三种主要形式：</p>
+通过使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/DayOfWeek.html#getDisplayName-java.time.format.TextStyle-java.util.Locale-"><tt>getDisplayName(TextStyle, Locale)</tt></a> 方法，你可以获取字符串以标识用户语言环境中的星期几。<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/format/TextStyle.html"><tt>TextStyle</tt></a> 枚举使你可以指定要显示的字符串类型：<tt>FULL</tt>，<tt>NARROW</tt>(通常为单个字母)，或 <tt>SHORT</tt>(缩写)。<tt>STANDALONE</tt> <tt>TextStyle</tt> 常量用于某些语言中，当用作日期的一部分时，输出不同于单独使用时的输出。以下示例为打印“Monday” 用 <tt>TextStyle</tt> 的三种主要形式：</p>
 <div class="codeblock"><pre>
 DayOfWeek dow = DayOfWeek.MONDAY;
 Locale locale = Locale.getDefault();
@@ -537,7 +537,7 @@ Mon
 
 <h2>Month</h2>
 <p>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html"><tt>Month</tt></a> 枚举包括 12 个月的常量，<tt>JANUARY</tt> 到 <tt>DECEMBER</tt>。与 <tt>DayOfWeek</tt> 枚举一样，<tt>Month</tt> 枚举是强类型的，每个常量的整数值对应于从 1(1 月)到 12(12 月)的 ISO 范围。使用定义的常量(<tt>Month.SEPTEMBER</tt>)使您的代码更具可读性。</p>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html"><tt>Month</tt></a> 枚举包括 12 个月的常量，<tt>JANUARY</tt> 到 <tt>DECEMBER</tt>。与 <tt>DayOfWeek</tt> 枚举一样，<tt>Month</tt> 枚举是强类型的，每个常量的整数值对应于从 1(1 月)到 12(12 月)的 ISO 范围。使用定义的常量(<tt>Month.SEPTEMBER</tt>)使你的代码更具可读性。</p>
 
 <p>
 <tt>Month</tt> 枚举还包括许多方法。以下代码行使用 <tt>maxLength</tt> 方法打印 2 月份的最大可能天数。输出为“29”：</p>
@@ -546,7 +546,7 @@ System.out.printf("%d%n", Month.FEBRUARY.maxLength());
 </pre></div>
 
 <p>
-<tt>Month</tt> 枚举还实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#getDisplayName-java.time.format.TextStyle-java.util.Locale-"><tt>getDisplayName(TextStyle, Locale)</tt></a> 方法，以使用指定的 <tt>TextStyle</tt> 获取字符串以标识用户区域设置中的月份。如果未定义特定的 <tt>TextStyle</tt>，则返回表示常量的数值的字符串。以下代码使用三种主要文本样式打印 August：</p> 
+<tt>Month</tt> 枚举还实现 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#getDisplayName-java.time.format.TextStyle-java.util.Locale-"><tt>getDisplayName(TextStyle, Locale)</tt></a> 方法，以使用指定的 <tt>TextStyle</tt> 获取字符串以标识用户语言环境中的月份。如果未定义特定的 <tt>TextStyle</tt>，则返回表示常量的数值的字符串。以下代码使用三种主要文本样式打印 August：</p> 
 <div class="codeblock"><pre>
 Month month = Month.AUGUST;
 Locale locale = Locale.getDefault();

@@ -493,13 +493,13 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">格式化</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="dateFormatSymbols.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="messageFormat.html">Next&nbsp;»</a>
+                <a target="_top" href="dateFormatSymbols.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="messageFormat.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>消息</h1></div>
             <div id="PageContent">
 
-<p>我们都喜欢使用程序让我们知道发生了什么。通知我们的程序通常通过显示状态和错误消息来实现。当然，这些消息需要翻译，以便世界各地的终端用户能够理解这些消息。<a class="TutorialLink" target="_top" href="../resbundle/index.html">Isolating Locale-Specific Data</a> 部分讨论了可翻译的文本消息。通常，在将消息 <code>String</code> 移动到 <code>ResourceBundle</code> 之后，您就完成了。但是，如果您在消息中嵌入了可变数据，则必须采取一些额外步骤来准备翻译。</p>
+<p>我们都喜欢使用程序让我们知道发生了什么。通知我们的程序通常通过显示状态和错误消息来实现。当然，这些消息需要翻译，以便世界各地的终端用户能够理解这些消息。<a class="TutorialLink" target="_top" href="../resbundle/index.html">Isolating Locale-Specific Data</a> 部分讨论了可翻译的文本消息。通常，在将消息 <code>String</code> 移动到 <code>ResourceBundle</code> 之后，你就完成了。但是，如果你在消息中嵌入了可变数据，则必须采取一些额外步骤来准备翻译。</p>
 <p><em>compound message (复合消息)</em> 包含可变数据。在以下复合消息列表中，变量数据带有下划线：</p>
 <div class="codeblock"><pre>
 The disk named <u>MyDisk</u> contains <u>300</u> files.
@@ -507,7 +507,7 @@ The current balance of account <u>#34-09-222</u> is <u>&#36;2,745.72</u>.
 <u>405,390</u> people have visited your website since <u>January 1, 2009</u>.
 Delete all files older than <u>120</u> days.
 </pre></div>
-<p>您可能想通过连接短语和变量来构造前面列表中的最后一条消息，如下所示：</p>
+<p>你可能想通过连接短语和变量来构造前面列表中的最后一条消息，如下所示：</p>
 <div class="codeblock"><pre>
 double numDays;
 ResourceBundle msgBundle;
@@ -517,14 +517,14 @@ String message = msgBundle.getString(
                      numDays.toString() +
                      msgBundle.getString(&quot;days&quot;));
 </pre></div>
-<p>这种方法在英语中运行良好，但它不适用于句子末尾出现动词的语言。由于此消息的单词顺序是硬编码的，因此您的本地化程序将无法为所有语言创建语法正确的翻译。</p>
-<p>如果需要使用复合消息，如何使程序可以本地化？您可以使用 <code>MessageFormat</code> 类来完成此操作，正是本节的主题。</p>
-<div class="note"><hr /><strong>小心：</strong>&nbsp;<p>复合消息很难翻译，因为消息文本是分段的。如果您使用复合消息，则本地化将花费更长时间并且成本更高。因此，您应该仅在必要时使用复合消息。</p>
+<p>这种方法在英语中运行良好，但它不适用于句子末尾出现动词的语言。由于此消息的单词顺序是硬编码的，因此你的本地化程序将无法为所有语言创建语法正确的翻译。</p>
+<p>如果需要使用复合消息，如何使程序可以本地化？你可以使用 <code>MessageFormat</code> 类来完成此操作，正是本节的主题。</p>
+<div class="note"><hr /><strong>警告:</strong>&nbsp;<p>复合消息很难翻译，因为消息文本是分段的。如果你使用复合消息，则本地化将花费更长时间并且成本更高。因此，你应该仅在必要时使用复合消息。</p>
 <hr /></div>
 <h2><a href="messageFormat.html">处理复合消息</a></h2>
 <p>复合消息可能包含多种变量：日期，时间，字符串，数字，货币和百分比。若要以与语言环境无关的方式格式化复合消息，请构造应用于 <code>MessageFormat</code> 对象的模式。</p>
 <h2><a href="choiceFormat.html">处理复数</a></h2>
-<p>如果复数和单数单词形式都可能，则消息中的单词通常会有所不同。使用 <code>ChoiceFormat</code> 类，您可以将数字映射到单词或短语，从而允许您构造语法正确的消息。</p>
+<p>如果复数和单数单词形式都可能，则消息中的单词通常会有所不同。使用 <code>ChoiceFormat</code> 类，你可以将数字映射到单词或短语，从而允许你构造语法正确的消息。</p>
 
 
         </div>

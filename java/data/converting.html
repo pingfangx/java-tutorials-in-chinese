@@ -475,13 +475,13 @@
 <div class="linkAHEAD"><a href="numbers.html">数字</a></div>
 <div class="linkBHEAD"><a href="numberclasses.html">数字类</a></div>
 <div class="linkBHEAD"><a href="numberformat.html">格式化数字打印输出</a></div>
-<div class="linkBHEAD"><a href="beyondmath.html">基础算法之外的补充</a></div>
+<div class="linkBHEAD"><a href="beyondmath.html">基础算术之外的补充</a></div>
 <div class="linkBHEAD"><a href="numbersummary.html">数字总结</a></div>
 <div class="linkQUESTIONS"><a href="QandE/numbers-questions.html">问题和练习</a></div>
-<div class="linkAHEAD"><a href="characters.html">Characters</a></div>
-<div class="linkAHEAD"><a href="strings.html">Strings</a></div>
+<div class="linkAHEAD"><a href="characters.html">字符</a></div>
+<div class="linkAHEAD"><a href="strings.html">字符串</a></div>
 <div class="nolinkBHEAD">在数字和字符串之间转换</div>
-<div class="linkBHEAD"><a href="manipstrings.html">操纵字符串中的字符</a></div>
+<div class="linkBHEAD"><a href="manipstrings.html">操作字符串中的字符</a></div>
 <div class="linkBHEAD"><a href="comparestrings.html">比较字符串和字符串的部分</a></div>
 <div class="linkBHEAD"><a href="buffers.html">StringBuilder 类</a></div>
 <div class="linkBHEAD"><a href="stringsummary.html">字符和字符串总结</a></div>
@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">数字和字符串</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="strings.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="manipstrings.html">Next&nbsp;»</a>
+                <a target="_top" href="strings.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="manipstrings.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>在数字和字符串之间转换</h1></div>
@@ -507,7 +507,7 @@
 
 
 <h2>将字符串转换为数字</h2>
-<p>通常，程序以字符串对象中的数字数据结束，例如，用户输入的值。</p>
+<p>通常，程序以字符串对象中的数字数据结束（或者译为程序终端通常处理字符串表示的数字？），例如，用户输入的值。</p>
 <p>包含基本数字类型的 <code>Number</code> 子类(<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Byte.html"><code>Byte</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html"><code>Integer</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html"><code>Double</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Float.html"><code>Float</code></a>，<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html"><code>Long</code></a> 和 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html"><code>Short</code></a>)每个都提供一个名为 <code>valueOf</code> 的类方法，该方法将字符串转换为该类型的对象。下面是一个示例 <a class="SourceLink" target="_blank" href="examples/ValueOfDemo.java" onclick="showCode('../../displayCode.html', 'examples/ValueOfDemo.java'); return false;"><code>ValueOfDemo</code></a>，它从命令行获取两个字符串，将它们转换为数字，并对值执行算术运算：</p>
 <div class="codeblock"><pre>
 
@@ -539,7 +539,7 @@ public class ValueOfDemo {
     }
 }
 </pre></div>
-<p>当您使用 <code>4.5</code> 和 <code>87.2</code> 作为命令行参数时，以下是程序的输出：</p>
+<p>当你使用 <code>4.5</code> 和 <code>87.2</code> 作为命令行参数时，以下是程序的输出：</p>
 <div class="codeblock"><pre>
 a + b = 91.7
 a - b = -82.7
@@ -554,7 +554,7 @@ float b = Float.parseFloat(args[1]);
 </pre></div>
 <hr /></div>
 <h2>将数字转换为字符串</h2>
-<p>有时您需要将数字转换为字符串，因为您需要对其字符串形式的值进行操作。有几种简单的方法可以将数字转换为字符串：</p>
+<p>有时你需要将数字转换为字符串，因为你需要对其字符串形式的值进行操作。有几种简单的方法可以将数字转换为字符串：</p>
 <div class="codeblock"><pre>
 int i;
 // Concatenate "i" with an empty string; conversion is handled for you.

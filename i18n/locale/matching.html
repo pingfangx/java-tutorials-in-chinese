@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>语言标签过滤和查找(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置区域设置)
+        <title>语言标签过滤和查找(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置语言环境)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
@@ -471,12 +471,12 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">设置区域设置</a></div>
-<div class="linkAHEAD"><a href="create.html">创建区域设置</a></div>
+            <div class="linkLESSON"><a href="index.html">设置语言环境</a></div>
+<div class="linkAHEAD"><a href="create.html">创建语言环境</a></div>
 <div class="linkAHEAD"><a href="extensions.html">BCP 47 扩展</a></div>
-<div class="linkAHEAD"><a href="identify.html">识别可用的区域设置</a></div>
+<div class="linkAHEAD"><a href="identify.html">识别可用的语言环境</a></div>
 <div class="nolinkAHEAD">语言标签过滤和查找</div>
-<div class="linkAHEAD"><a href="scope.html">区域设置的范围</a></div>
+<div class="linkAHEAD"><a href="scope.html">语言环境的范围</a></div>
 <div class="linkAHEAD"><a href="services.html">区域敏感服务 SPI</a></div>
 </div>
     </div>
@@ -486,10 +486,10 @@
         <br /><b>Lesson:</b> Setting the Locale
     </div>
             <div id="BreadCrumbs">
-                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置区域设置</a>
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置语言环境</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="identify.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="scope.html">Next&nbsp;»</a>
+                <a target="_top" href="identify.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="scope.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>语言标签过滤和查找</h1></div>
@@ -509,7 +509,7 @@ Java 编程语言包含对语言标签，语言标签过滤和语言标签查找
 语言标签是特殊格式的字符串，提供有关特定语言的信息。语言标签可能是简单的(例如英语中的“en”)，复杂的(例如“zh-cmn-Hans-CN”表示中文中使用的普通话，简体中文)，或介于两者之间的东西(例如“sr-Latn”，塞尔维亚语用拉丁文写成)。语言标签由连字符分隔的“子标签”组成；在整个 API 文档中使用此术语。
 </p>
 <p>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html"><code>java.util.Locale</code></a> 类提供对语言标签的支持。<code>Locale</code> 包含几个不同的字段：语言(例如英语的“en”或日语的“ja”)，脚本(例如拉丁语的“Latn”或西里尔语的“Cyrl”)，国家/地区(例如美国的“US”或法国的“FR”)，变体(表示某个语言环境的变体)和扩展(它提供单个字符键到 <code>String</code> 值的映射，指示除语言识别之外的扩展)。要从语言标签 <code>String</code> 创建 <code>Locale</code> 对象，请调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-"><code>Locale.forLanguageTag(String)</code></a>，传入语言标签作为唯一的参数。这样做会创建并返回一个新的 <code>Locale</code> 对象，以便在您的应用程序中使用。
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html"><code>java.util.Locale</code></a> 类提供对语言标签的支持。<code>Locale</code> 包含几个不同的字段：语言(例如英语的“en”或日语的“ja”)，脚本(例如拉丁语的“Latn”或西里尔语的“Cyrl”)，国家/地区(例如美国的“US”或法国的“FR”)，变体(表示某个语言环境的变体)和扩展(它提供单个字符键到 <code>String</code> 值的映射，指示除语言识别之外的扩展)。要从语言标签 <code>String</code> 创建 <code>Locale</code> 对象，请调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-"><code>Locale.forLanguageTag(String)</code></a>，传入语言标签作为唯一的参数。这样做会创建并返回一个新的 <code>Locale</code> 对象，以便在你的应用程序中使用。
 </p>
 <p>
 例子1:
@@ -527,7 +527,7 @@ public class LanguageTagDemo {
 </pre></div>
 
 <p>
-请注意，Locale API 仅要求您的语言标签在语法上格式良好。它不执行任何额外验证(例如检查标签是否在 IANA 语言子标签注册表中注册)。
+请注意，Locale API 仅要求你的语言标签在语法上格式良好。它不执行任何额外验证(例如检查标签是否在 IANA 语言子标签注册表中注册)。
 </p>
 
 <h2><a name="what-ranges" id="what-ranges">什么是语言范围？</a></h2>
@@ -595,7 +595,7 @@ public class LanguageTagDemo {
 <h2><a name="creating-lpl" id="creating-lpl">创建语言优先级列表</a></h2>
 
 <p>
-您可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.LanguageRange.html#parse-java.lang.String-"><code>LanguageRange.parse(String)</code></a> 方法从语言范围列表中创建语言优先级列表。此方法接受逗号分隔语言范围列表，对给定范围内的每个语言范围执行语法检查，然后返回新创建的语言优先级列表。
+你可以使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.LanguageRange.html#parse-java.lang.String-"><code>LanguageRange.parse(String)</code></a> 方法从语言范围列表中创建语言优先级列表。此方法接受逗号分隔语言范围列表，对给定范围内的每个语言范围执行语法检查，然后返回新创建的语言优先级列表。
 </p>
 
 <p>

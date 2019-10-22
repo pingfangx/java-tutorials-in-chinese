@@ -507,7 +507,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">拖放和数据传输</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="dropmodes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="dropaction.html">Next&nbsp;»</a>
+                <a target="_top" href="dropmodes.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="dropaction.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>演示 -  DropDemo</h1></div>
@@ -516,7 +516,7 @@
 
 <p>Now we will look at a demo that uses a custom transfer handler to implement drop for a list component. Although the default transfer handler for list implements export, because we are creating a custom transfer handler to implement import, we have to re-implement export as well.</p>
 <p>As you see from the screen shot, <code>DropDemo</code> contains an editable text area, a list, and a combo box that allows you to select the drop mode for the list.</p>
-<center><img src="../../figures/uiswing/dnd/DropDemo.png" width="418" height="356" align="bottom" alt="DropDemo screen shot" /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<center><img src="../../figures/uiswing/dnd/DropDemo.png" width="418" height="356" align="bottom" alt="DropDemo screen shot" /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run <code>DropDemo</code> using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/dnd/index.html#DropDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/DropDemoProject/DropDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" height="23" align="bottom" alt="Launches the DropDemo example" /></a><br /></li>
 <li>Select some text in the text area and drop onto the list. The selected list entry is replaced and that item becomes the current selection. This is how <code>USE_SELECTION</code> works and is provided for backwards compatibility but is otherwise not recommended.</li>

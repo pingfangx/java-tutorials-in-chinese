@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>准备使用 ResourceBundle(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;隔离特定于区域设置的数据)
+        <title>准备使用 ResourceBundle(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;隔离特定于语言环境的数据)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
@@ -471,7 +471,7 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">隔离特定于区域设置的数据</a></div>
+            <div class="linkLESSON"><a href="index.html">隔离特定于语言环境的数据</a></div>
 <div class="linkAHEAD"><a href="concept.html">关于 ResourceBundle 类</a></div>
 <div class="nolinkAHEAD">准备使用 ResourceBundle</div>
 <div class="linkAHEAD"><a href="propfile.html">使用属性文件支持 ResourceBundle</a></div>
@@ -485,33 +485,33 @@
         <br /><b>Lesson:</b> Isolating Locale-Specific Data
     </div>
             <div id="BreadCrumbs">
-                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">隔离特定于区域设置的数据</a>
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">隔离特定于语言环境的数据</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="concept.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="propfile.html">Next&nbsp;»</a>
+                <a target="_top" href="concept.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="propfile.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>准备使用 ResourceBundle</h1></div>
             <div id="PageContent">
 
 <h2>识别特定于语言环境的对象</h2>
-<p>如果您的应用程序具有用户界面，则它包含许多特定于语言环境的对象。首先，您应该查看源代码并查找随 <code>Locale</code> 而变化的对象。您的列表可能包含从以下类实例化的对象：</p>
+<p>如果你的应用程序具有用户界面，则它包含许多特定于语言环境的对象。首先，你应该查看源代码并查找随 <code>Locale</code> 而变化的对象。你的列表可能包含从以下类实例化的对象：</p>
 <ul>
 <li><code>String</code></li>
 <li><code>Image</code></li>
 <li><code>Color</code></li>
 <li><code>AudioClip</code></li>
 </ul>
-<p>您会注意到此列表不包含表示数字，日期，时间或货币的对象。这些对象的显示格式因 <code>Locale</code> 而异，但对象本身则不然。例如，根据 <code>Locale</code> 格式化 <code>Date</code>，但无论 <code>Locale</code> 如何，都使用相同的 <code>Date</code> 对象。不是在 <code>ResourceBundle</code> 中隔离这些对象，而是使用特殊的区域设置敏感格式化类格式化它们。您将在 <a class="TutorialLink" target="_top" href="../format/index.html">Formatting</a> 课程的 <a class="TutorialLink" target="_top" href="../format/dateintro.html">Dates and Times</a> 部分中学习如何执行此操作。</p>
-<p>通常，存储在 <code>ResourceBundle</code> 中的对象是预定义的，随产品一起提供。程序运行时不会修改这些对象。例如，您应该在 <code>ResourceBundle</code> 中存储 <code>Menu</code> 标签，因为它是特定于语言环境的，并且在程序会话期间不会更改。但是，您不应该把终端用户在 <code>TextField</code> 中输入的 <code>String</code> 在 <code>ResourceBundle</code> 对象中进行隔离。像这种 <code>String</code> 数据每天都可能有所不同。它特定于程序会话，而不是程序运行的 <code>Locale</code>。</p>
-<p>通常，您需要在 <code>ResourceBundle</code> 中隔离的大多数对象都是 <code>String</code> 对象。但是，并非所有 <code>String</code> 对象都是特定于语言环境的。例如，如果 <code>String</code> 是进程间通信使用的协议元素，则不需要进行本地化，因为终端用户永远不会看到它。</p>
-<p>是否本地化某些 <code>String</code> 对象的决定并不总是很清楚。日志文件就是一个很好的例子。如果日志文件由一个程序写入并由另一个程序读取，则两个程序都使用日志文件作为通信缓冲区。假设终端用户偶尔检查此日志文件的内容。日志文件不应该本地化吗？另一方面，如果终端用户很少检查日志文件，则翻译成本可能不值得。您决定本地化此日志文件取决于许多因素：程序设计，易用性，翻译成本和可支持性。</p>
+<p>你会注意到此列表不包含表示数字，日期，时间或货币的对象。这些对象的显示格式因 <code>Locale</code> 而异，但对象本身则不然。例如，根据 <code>Locale</code> 格式化 <code>Date</code>，但无论 <code>Locale</code> 如何，都使用相同的 <code>Date</code> 对象。不是在 <code>ResourceBundle</code> 中隔离这些对象，而是使用特殊的语言环境敏感格式化类格式化它们。你将在 <a class="TutorialLink" target="_top" href="../format/index.html">Formatting</a> 课程的 <a class="TutorialLink" target="_top" href="../format/dateintro.html">Dates and Times</a> 部分中学习如何执行此操作。</p>
+<p>通常，存储在 <code>ResourceBundle</code> 中的对象是预定义的，随产品一起提供。程序运行时不会修改这些对象。例如，你应该在 <code>ResourceBundle</code> 中存储 <code>Menu</code> 标签，因为它是特定于语言环境的，并且在程序会话期间不会更改。但是，你不应该把终端用户在 <code>TextField</code> 中输入的 <code>String</code> 在 <code>ResourceBundle</code> 对象中进行隔离。像这种 <code>String</code> 数据每天都可能有所不同。它特定于程序会话，而不是程序运行的 <code>Locale</code>。</p>
+<p>通常，你需要在 <code>ResourceBundle</code> 中隔离的大多数对象都是 <code>String</code> 对象。但是，并非所有 <code>String</code> 对象都是特定于语言环境的。例如，如果 <code>String</code> 是进程间通信使用的协议元素，则不需要进行本地化，因为终端用户永远不会看到它。</p>
+<p>是否本地化某些 <code>String</code> 对象的决定并不总是很清楚。日志文件就是一个很好的例子。如果日志文件由一个程序写入并由另一个程序读取，则两个程序都使用日志文件作为通信缓冲区。假设终端用户偶尔检查此日志文件的内容。日志文件不应该本地化吗？另一方面，如果终端用户很少检查日志文件，则翻译成本可能不值得。你决定本地化此日志文件取决于许多因素：程序设计，易用性，翻译成本和可支持性。</p>
 <h2>组织 ResourceBundle 对象</h2>
-<p>您可以根据它们包含的对象类别组织 <code>ResourceBundle</code> 对象。例如，您可能希望将订单输入窗口的所有 GUI 标签加载到名为 <code>OrderLabelsBundle</code> 的 <code>ResourceBundle</code> 中。使用多个 <code>ResourceBundle</code> 对象具有以下几个优点：</p>
+<p>你可以根据它们包含的对象类别组织 <code>ResourceBundle</code> 对象。例如，你可能希望将订单输入窗口的所有 GUI 标签加载到名为 <code>OrderLabelsBundle</code> 的 <code>ResourceBundle</code> 中。使用多个 <code>ResourceBundle</code> 对象具有以下几个优点：</p>
 <ul>
-<li>您的代码更易于阅读和维护。</li>
-<li>您将避免使用巨大的 <code>ResourceBundle</code> 对象，它可能需要很长时间才能加载到内存中。</li>
-<li>您可以通过仅在需要时加载每个 <code>ResourceBundle</code> 来减少内存使用量。</li>
+<li>你的代码更易于阅读和维护。</li>
+<li>你将避免使用巨大的 <code>ResourceBundle</code> 对象，它可能需要很长时间才能加载到内存中。</li>
+<li>你可以通过仅在需要时加载每个 <code>ResourceBundle</code> 来减少内存使用量。</li>
 </ul>
 
 

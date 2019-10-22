@@ -497,7 +497,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">使用 JFC/Swing 创建 GUI</a>&gt;<a href="index.html" target="_top">使用其他 Swing 功能</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="access.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="keybinding.html">Next&nbsp;»</a>
+                <a target="_top" href="access.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="keybinding.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>如何使用焦点子系统</h1></div>
@@ -556,7 +556,7 @@ frame.addWindowFocusListener(new WindowAdapter() {
 <li>A custom component is not getting the focus. To fix this issue, you need to make sure that it satisfies all the requirements outlined in <a href="#focusable">Making a Custom Component Focusable</a>.</li>
 </ul>
 <p>The <code>FocusConceptsDemo</code> example illustrates a few concepts.</p>
-<center><img src="../../figures/uiswing/misc/FocusConceptsDemo.png" width="488" height="360" align="bottom" alt="The FocusConceptsDemo example" /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<center><img src="../../figures/uiswing/misc/FocusConceptsDemo.png" width="488" height="360" align="bottom" alt="The FocusConceptsDemo example" /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run FocusConceptsDemo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/misc/index.html#FocusConceptsDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/FocusConceptsDemoProject/FocusConceptsDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" align="bottom" alt="Launches the FocusConceptsDemo application" /></a><br /></li>
 <li>If necessary, click the window to give it the focus.</li>
@@ -597,7 +597,7 @@ setFocusTraversalKeys(KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS,
 <a class="SourceLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/javax/swing/InputVerifier.html" onclick="showCode('../../displayCode.html', 'https://docs.oracle.com/javase/8/docs/api/javax/swing/InputVerifier.html'); return false;"><code><code>InputVerifier</code></code></a>, create an instance of your subclass, and set the instance as the input verifier for one or more components.</p>
 <p>A component's input verifier is consulted whenever the component is about to lose the focus. If the component's value is not acceptable, the input verifier can take appropriate action, such as refusing to yield the focus on the component or replacing the user's input with the last valid value and then allowing the focus to transfer to the next component. However, <code>InputVerifier</code> is not called when the focus is transferred to another toplevel component.</p>
 <p>The following two examples show mortgage calculators. One uses formatted text fields and the other uses input verification with standard text fields.</p>
-<center><img src="../../figures/uiswing/misc/InputVerificationDemo.png" width="623" height="155" align="bottom" alt="The InputVerificationDemo and example, which demonstrates" /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<center><img src="../../figures/uiswing/misc/InputVerificationDemo.png" width="623" height="155" align="bottom" alt="The InputVerificationDemo and example, which demonstrates" /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run the FormattedTextFieldDemo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/components/index.html#FormattedTextFieldDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/FormattedTextFieldDemoProject/FormattedTextFieldDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" align="bottom" alt="Launches the FormattedTextFieldDemo application" /></a><br /></li>
 <li>Click the Launch button to run the InputVerificationDemo using 
@@ -781,7 +781,7 @@ public void mouseClicked(MouseEvent e) {
 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/Container.html#setFocusTraversalPolicyProvider-boolean-"><code>setFocusTraversalPolicyProvider()</code></a> method to set a container for providing focus traversal policy.</p>
 <p>The <code>FocusTraversalDemo</code> example demonstrates how to customize focus behavior.</p>
 <center><img src="../../figures/uiswing/misc/FocusTraversalDemo.png" width="449" height="234" align="bottom" alt="The Focus Traversal Demo, which demonstrates a custom FocusTraversalPolicy." /></center><p><a name="focustraversaldemo" id="focustraversaldemo"></a></p>
-<div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run FocusTraversalDemo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/misc/index.html#FocusTraversalDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/FocusTraversalDemoProject/FocusTraversalDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" align="bottom" alt="Launches the FocusTraversalDemo application" /></a><br /></li>
 <li>Click the window, if necessary, to give it the focus.</li>
@@ -871,7 +871,7 @@ public FocusTraversalDemo() {
 <a class="TutorialLink" target="_top" href="../events/focuslistener.html">focus event listener</a>.</p>
 <p>If a focus listener is not appropriate, you can instead register a <code>PropertyChangeListener</code> on the <code>KeyboardFocusManager</code>. The property change listener is notified of every change involving the focus, including changes to the focus owner, the focused window, and the default focus traversal policy. See the <a href="#properties">KeyboardFocusManager Properties</a> table for a complete list.</p>
 <p><a name="trackfocusdemo" id="trackfocusdemo">The</a>following example demonstrates tracking the focus owner by installing a property change listener on the keyboard focus manager.</p>
-<center><img src="../../figures/uiswing/misc/TrackFocusDemo.png" width="458" height="384" align="bottom" alt="The TrackFocusDemo example, which demonstrates tracking the focus owner." /></center><div class="note"><hr /><strong>Try this:</strong>&nbsp;<ol>
+<center><img src="../../figures/uiswing/misc/TrackFocusDemo.png" width="458" height="384" align="bottom" alt="The TrackFocusDemo example, which demonstrates tracking the focus owner." /></center><div class="note"><hr /><strong>试试这个:</strong>&nbsp;<ol>
 <li>Click the Launch button to run TrackFocusDemo using 
 <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/javawebstart/index.html">Java™ Web Start</a> (<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7 or later</a>). Alternatively, to compile and run the example yourself, consult the <a href="../examples/misc/index.html#TrackFocusDemo">example index</a>.<a href="https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TrackFocusDemoProject/TrackFocusDemo.jnlp"><img src="../../images/jws-launch-button.png" width="88" align="bottom" alt="Launches the TrackFocusDemo application" /></a><br /></li>
 <li>If necessary, click the window to give it the focus.</li>

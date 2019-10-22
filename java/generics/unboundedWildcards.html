@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -506,17 +506,17 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="upperBounded.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="lowerBounded.html">Next&nbsp;»</a>
+                <a target="_top" href="upperBounded.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="lowerBounded.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>无界通配符</h1></div>
             <div id="PageContent">
 
 <p>
-无界通配符类型是使用通配符(<tt>?</tt>)指定的，例如 <tt>List&lt;?&gt;</tt>。这称为 <em>未知类型的列表（list of unknown type）</em>。有两种情况，无界通配符是一种有用的方法：</p> 
+无界通配符类型是使用通配符(<tt>?</tt>)指定的，例如 <tt>List&lt;?&gt;</tt>。这称为 <em>list of unknown type (未知类型的列表)</em>。有两种情况，无界通配符是一种有用的方法：</p> 
 <ul>
-<li>如果您正在编写可以使用 <tt>Object</tt> 类中提供的功能来实现的方法。</li>
-<li>当代码使用泛型类中不依赖于类型参数的方法时。例如，<tt>List.size</tt> 或 <tt>List.clear</tt>。实际上，<tt>Class&lt;?&gt;</tt> 经常被使用，因为 <tt>Class&lt;T&gt;</tt> 中的大多数方法都不依赖于 <tt>T</tt>。</li>
+<li>如果你正在编写可以使用 <tt>Object</tt> 类中提供的功能来实现的方法。</li>
+<li>当代码使用泛型类中不依赖于类型形参的方法时。例如，<tt>List.size</tt> 或 <tt>List.clear</tt>。实际上，<tt>Class&lt;?&gt;</tt> 经常被使用，因为 <tt>Class&lt;T&gt;</tt> 中的大多数方法都不依赖于 <tt>T</tt>。</li>
 </ul>
 <p>
 考虑以下方法，<tt>printList</tt>：</p>
@@ -537,7 +537,7 @@ public static void printList(List&lt;?&gt; list) {
 }
 </pre></div>
 <p>
-因为对于任何具体类型 <tt>A</tt>，<tt>List&lt;A&gt;</tt> 是 <tt>List&lt;?&gt;</tt> 的子类型，您可以使用 <tt>printList</tt> 打印任何类型的列表：</p>
+因为对于任何具体类型 <tt>A</tt>，<tt>List&lt;A&gt;</tt> 是 <tt>List&lt;?&gt;</tt> 的子类型，你可以使用 <tt>printList</tt> 打印任何类型的列表：</p>
 <div class="codeblock"><pre>
 List&lt;Integer&gt; li = Arrays.asList(1, 2, 3);
 List&lt;String&gt;  ls = Arrays.asList("one", "two", "three");
@@ -547,7 +547,7 @@ printList(ls);
 <div class="note"><hr /><strong>注意:</strong>&nbsp;本课程的示例中使用了 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#asList-T...-"><tt>Arrays.asList</tt></a> 方法。此静态工厂方法转换指定的数组并返回固定大小的列表。
 <hr /></div>
 <p>
-重要的是要注意 <tt>List&lt;Object&gt;</tt> 和 <tt>List&lt;?&gt;</tt> 是不一样的。您可以将 <tt>Object</tt> 或 <tt>Object</tt> 的任何子类型插入 <tt>List&lt;Object&gt;</tt>。但是你只能将 <tt>null</tt> 插入 <tt>List&lt;?&gt;</tt>。<a class="TutorialLink" target="_top" href="wildcardGuidelines.html">Guidelines for Wildcard Use</a> 部分提供了有关如何确定在给定情况下应使用哪种通配符（如果有）的更多信息。</p>
+重要的是要注意 <tt>List&lt;Object&gt;</tt> 和 <tt>List&lt;?&gt;</tt> 是不一样的。你可以将 <tt>Object</tt> 或 <tt>Object</tt> 的任何子类型插入 <tt>List&lt;Object&gt;</tt>。但是你只能将 <tt>null</tt> 插入 <tt>List&lt;?&gt;</tt>。<a class="TutorialLink" target="_top" href="wildcardGuidelines.html">Guidelines for Wildcard Use</a> 部分提供了有关如何确定在给定情况下应使用哪种通配符（如果有）的更多信息。</p>
 
         </div>
         <div class="NavBit">

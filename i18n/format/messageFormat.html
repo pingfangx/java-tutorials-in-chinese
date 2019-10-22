@@ -494,7 +494,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">格式化</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="messageintro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="choiceFormat.html">Next&nbsp;»</a>
+                <a target="_top" href="messageintro.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="choiceFormat.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>处理复合消息</h1></div>
@@ -503,7 +503,7 @@
 <p>复合消息可能包含多种变量：日期，时间，字符串，数字，货币和百分比。若要以与语言环境无关的方式格式化复合消息，请构造应用于 <code>MessageFormat</code> 对象的模式，并将此模式存储在 <code>ResourceBundle</code> 中。</p>
 <p>通过逐步演示示例程序，本节演示了如何国际化复合消息。示例程序使用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/text/MessageFormat.html"><code>MessageFormat</code></a> 类。该程序的完整源代码位于名为 <a class="SourceLink" target="_blank" href="examples/MessageFormatDemo.java" onclick="showCode('../../displayCode.html', 'examples/MessageFormatDemo.java'); return false;"><code>MessageFormatDemo.java</code></a> 的文件中。德语语言环境属性位于名为 <a class="SourceLink" target="_blank" href="examples/MessageBundle_de_DE.properties" onclick="showCode('../../displayCode.html', 'examples/MessageBundle_de_DE.properties'); return false;"><code>MessageBundle_de_DE.properties</code></a> 的文件中。</p>
 <h2>1. 识别消息中的变量</h2>
-<p>假设您要国际化以下消息：</p>
+<p>假设你要国际化以下消息：</p>
 <center><img src="../../figures/i18n/i18n-2.gif" width="574" height="66" align="bottom" alt="以下文字：At 1:15 on April 13, 1998, we detected 7 spaceships on the planet Mars.  可变数据(1:15, April 13,1998, 7, and Mars)已加下划线。" /></center><p>请注意，我们已经为变量数据加下划线，并确定了哪种对象将代表这些数据。</p>
 <h2>2. 隔离 ResourceBundle 中的消息模式</h2>
 <p>将消息存储在名为 <code>MessageBundle</code> 的 <code>ResourceBundle</code> 中，如下所示：</p>
@@ -518,7 +518,7 @@ template = At {2,time,short} on {2,date,long}, \
     the planet {0}.
 planet = Mars
 </pre></div>
-<p>属性文件的第一行包含消息模式。如果将此模式与步骤 1 中显示的消息文本进行比较，您将看到括在大括号中的参数替换消息文本中的每个变量。每个参数都以一个名为参数编号的数字开头，该数字与 <code>Object</code> 数组中保存参数值的元素的索引相匹配。请注意，在模式中，参数编号不是任何特定顺序。您可以将参数放在模式中的任何位置。唯一的要求是参数号在参数值数组中具有匹配元素。</p>
+<p>属性文件的第一行包含消息模式。如果将此模式与步骤 1 中显示的消息文本进行比较，你将看到括在大括号中的参数替换消息文本中的每个变量。每个参数都以一个名为参数编号的数字开头，该数字与 <code>Object</code> 数组中保存参数值的元素的索引相匹配。请注意，在模式中，参数编号不是任何特定顺序。你可以将参数放在模式中的任何位置。唯一的要求是参数号在参数值数组中具有匹配元素。</p>
 <p>下一步讨论参数值数组，但首先让我们看一下模式中的每个参数。下表提供了有关参数的一些详细信息：</p>
 <table summary="MessageBundle_en_US.properties 中模板的参数" border="1">
 <caption><code>MessageBundle_en_US.properties</code> 中 <code>template</code> 的参数</caption>
@@ -554,7 +554,7 @@ Object[] messageArguments = {
 };
 </pre></div>
 <h2>4. 创建格式化程序</h2>
-<p>接下来，创建一个 <code>MessageFormat</code> 对象。您设置 <code>Locale</code>，因为该消息包含 <code>Date</code> 和 <code>Number</code> 对象，这些对象应以区域设置敏感的方式进行格式化。</p>
+<p>接下来，创建一个 <code>MessageFormat</code> 对象。你设置 <code>Locale</code>，因为该消息包含 <code>Date</code> 和 <code>Number</code> 对象，这些对象应以语言环境敏感的方式进行格式化。</p>
 <div class="codeblock"><pre>
 MessageFormat formatter = new MessageFormat(&quot;&quot;);
 formatter.setLocale(currentLocale);

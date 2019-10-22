@@ -5,7 +5,7 @@
 
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>识别可用的区域设置(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置区域设置)
+        <title>识别可用的语言环境(Java™ 教程-Java Tutorials 中文版&gt;国际化&gt;设置语言环境)
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="description" content="This internationalization Java tutorial describes setting locale, isolating locale-specific data, formatting data, internationalized domain name and resource identifier" />
@@ -471,12 +471,12 @@
 
     <div id="LeftBar" class="LeftBar_shown">
         <div id="Contents">
-            <div class="linkLESSON"><a href="index.html">设置区域设置</a></div>
-<div class="linkAHEAD"><a href="create.html">创建区域设置</a></div>
+            <div class="linkLESSON"><a href="index.html">设置语言环境</a></div>
+<div class="linkAHEAD"><a href="create.html">创建语言环境</a></div>
 <div class="linkAHEAD"><a href="extensions.html">BCP 47 扩展</a></div>
-<div class="nolinkAHEAD">识别可用的区域设置</div>
+<div class="nolinkAHEAD">识别可用的语言环境</div>
 <div class="linkAHEAD"><a href="matching.html">语言标签过滤和查找</a></div>
-<div class="linkAHEAD"><a href="scope.html">区域设置的范围</a></div>
+<div class="linkAHEAD"><a href="scope.html">语言环境的范围</a></div>
 <div class="linkAHEAD"><a href="services.html">区域敏感服务 SPI</a></div>
 </div>
     </div>
@@ -486,17 +486,17 @@
         <br /><b>Lesson:</b> Setting the Locale
     </div>
             <div id="BreadCrumbs">
-                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置区域设置</a>
+                <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">国际化</a>&gt;<a href="index.html" target="_top">设置语言环境</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="extensions.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="matching.html">Next&nbsp;»</a>
+                <a target="_top" href="extensions.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="matching.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
-            <div id="PageTitle"><h1>识别可用的区域设置</h1></div>
+            <div id="PageTitle"><h1>识别可用的语言环境</h1></div>
             <div id="PageContent">
 
-<p>您可以使用有效语言和国家/地区代码的任意组合创建 <code>Locale</code>，但这并不意味着您可以使用它。请记住，<code>Locale</code> 对象只是一个标识符。您将 <code>Locale</code> 对象传递给其他对象，然后执行实际工作。这些其他对象，我们称之为区域设置敏感，不知道如何处理所有可能的 <code>Locale</code> 定义。</p>
-<p>要找出区域设置敏感类可识别的 <code>Locale</code> 定义的类型，请调用 <code>getAvailableLocales</code> 方法。例如，要找出 <code>DateFormat</code> 类支持哪些 <code>Locale</code> 定义，您可以编写如下例程：</p>
+<p>你可以使用有效语言和国家/地区代码的任意组合创建 <code>Locale</code>，但这并不意味着你可以使用它。请记住，<code>Locale</code> 对象只是一个标识符。你将 <code>Locale</code> 对象传递给其他对象，然后执行实际工作。这些其他对象，我们称之为语言环境敏感，不知道如何处理所有可能的 <code>Locale</code> 定义。</p>
+<p>要找出语言环境敏感类可识别的 <code>Locale</code> 定义的类型，请调用 <code>getAvailableLocales</code> 方法。例如，要找出 <code>DateFormat</code> 类支持哪些 <code>Locale</code> 定义，你可以编写如下例程：</p>
 <div class="codeblock"><pre>
 import java.util.*;
 import java.text.*;
@@ -521,7 +521,7 @@ da_DK
 de_DE
 ...
 </pre></div>
-<p>如果要向终端用户显示 <code>Locale</code> 名称列表，您应该向他们展示比 <code>toString</code> 返回的语言和国家/地区代码更容易理解的内容。相反，您可以调用 <code>Locale.getDisplayName</code> 方法，该方法获取 <code>Locale</code> 对象的本地化 <code>String</code>。例如，当前面的代码中的 <code>toString</code> 被 <code>getDisplayName</code> 替换时，程序将打印以下行：</p>
+<p>如果要向终端用户显示 <code>Locale</code> 名称列表，你应该向他们展示比 <code>toString</code> 返回的语言和国家/地区代码更容易理解的内容。相反，你可以调用 <code>Locale.getDisplayName</code> 方法，该方法获取 <code>Locale</code> 对象的本地化 <code>String</code>。例如，当前面的代码中的 <code>toString</code> 被 <code>getDisplayName</code> 替换时，程序将打印以下行：</p>
 <div class="codeblock"><pre>
 Arabic (Egypt)
 Belarussian (Belarus)
@@ -532,7 +532,7 @@ Danish (Denmark)
 German (Germany)
 ...
 </pre></div>
-<p>您可能会看到不同的区域设置列表，具体取决于 Java 平台实现。</p>
+<p>你可能会看到不同的语言环境列表，具体取决于 Java 平台实现。</p>
 
 
         </div>

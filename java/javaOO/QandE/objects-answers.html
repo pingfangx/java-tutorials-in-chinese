@@ -401,7 +401,7 @@
 <h2>问题</h2>
 <ol>
 <li>
-<p><strong>Question</strong>：以下程序有什么问题？</p>
+<p><strong>问题</strong>:以下程序有什么问题？</p>
 <div class="codeblock"><pre>
 public class SomethingIsWrong {
     public static void main(String[] args) {
@@ -412,10 +412,10 @@ public class SomethingIsWrong {
     }
 }
 </pre></div>
-<p><strong>Answer</strong>：代码永远不会创建 <a class="SourceLink" target="_blank" href="Rectangle.java" onclick="showCode('../../../displayCode.html', 'Rectangle.java'); return false;"><code>Rectangle</code></a> 对象。使用这个简单的程序，编译器会生成错误。但是，在更现实的情况下，<code>myRect</code> 可能会在一个位置初始化为 <code>null</code>，比如在构造函数中，并在以后使用。在这种情况下，程序将编译得很好，但会在运行时生成 <code>NullPointerException</code>。</p>
+<p><strong>答案</strong>:代码永远不会创建 <a class="SourceLink" target="_blank" href="Rectangle.java" onclick="showCode('../../../displayCode.html', 'Rectangle.java'); return false;"><code>Rectangle</code></a> 对象。使用这个简单的程序，编译器会生成错误。但是，在更现实的情况下，<code>myRect</code> 可能会在一个位置初始化为 <code>null</code>，比如在构造函数中，并在以后使用。在这种情况下，程序将编译得很好，但会在运行时生成 <code>NullPointerException</code>。</p>
 </li>
 <li>
-<p><strong>Question</strong>：以下代码创建一个数组和一个字符串对象。代码执行后，对这些对象有多少引用？这两个对象是否有资格进行垃圾回收</p>
+<p><strong>问题</strong>:以下代码创建一个数组和一个字符串对象。代码执行后，对这些对象有多少引用？这两个对象是否有资格进行垃圾回收</p>
 <div class="codeblock"><pre>
 ...
 String[] students = new String[10];
@@ -424,18 +424,18 @@ students[0] = studentName;
 studentName = null;
 ...
 </pre></div>
-<p><strong>Answer</strong>：有一个对 <code>students</code> 数组的引用，该数组有一个对字符串 <code>Peter Smith</code> 的引用。这两个对象都没有资格进行垃圾回收。数组 <code>students</code> 不符合垃圾回收的条件，因为它有一个对象 <code>studentName</code> 的引用，即使该对象已被赋值 <code>null</code>。对象 <code>studentName</code> 不符合条件，因为 <code>students[0]</code> 仍然引用它。</p>
+<p><strong>答案</strong>:有一个对 <code>students</code> 数组的引用，该数组有一个对字符串 <code>Peter Smith</code> 的引用。这两个对象都没有资格进行垃圾回收。数组 <code>students</code> 不符合垃圾回收的条件，因为它有一个对象 <code>studentName</code> 的引用，即使该对象已被赋值 <code>null</code>。对象 <code>studentName</code> 不符合条件，因为 <code>students[0]</code> 仍然引用它。</p>
 </li>
 <li>
-<p><strong>Question</strong>：程序如何销毁它创建的对象？</p>
-<p><strong>Answer</strong>：程序不会显式销毁对象。程序可以将对象的所有引用设置为 <code>null</code>，以使其符合垃圾回收的条件。但该程序实际上并没有销毁对象。</p>
+<p><strong>问题</strong>:程序如何销毁它创建的对象？</p>
+<p><strong>答案</strong>:程序不会显式销毁对象。程序可以将对象的所有引用设置为 <code>null</code>，以使其符合垃圾回收的条件。但该程序实际上并没有销毁对象。</p>
 </li>
 </ol>
 <h2>练习</h2>
 <ol>
 <li>
 <p><strong>Exercise</strong>：修复问题 1 中所示的名为 <code>SomethingIsWrong</code> 的程序。</p>
-<p><strong>Answer</strong>：参见 <a class="SourceLink" target="_blank" href="SomethingIsRight.java" onclick="showCode('../../../displayCode.html', 'SomethingIsRight.java'); return false;"><code>SomethingIsRight</code></a>：</p>
+<p><strong>答案</strong>:参见 <a class="SourceLink" target="_blank" href="SomethingIsRight.java" onclick="showCode('../../../displayCode.html', 'SomethingIsRight.java'); return false;"><code>SomethingIsRight</code></a>：</p>
 <div class="codeblock"><pre>
 
 public class SomethingIsRight {
@@ -457,7 +457,7 @@ public class NumberHolder {
     public float aFloat;
 }
 </pre></div>
-<p><strong>Answer</strong>：参见 <a class="SourceLink" target="_blank" href="NumberHolderDisplay.java" onclick="showCode('../../../displayCode.html', 'NumberHolderDisplay.java'); return false;"><code>NumberHolderDisplay</code></a>：</p>
+<p><strong>答案</strong>:参见 <a class="SourceLink" target="_blank" href="NumberHolderDisplay.java" onclick="showCode('../../../displayCode.html', 'NumberHolderDisplay.java'); return false;"><code>NumberHolderDisplay</code></a>：</p>
 <div class="codeblock"><pre>
 
 public class NumberHolderDisplay {

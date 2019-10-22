@@ -404,36 +404,36 @@
 <p>使用 API 文档查找以下问题的答案：</p>
 <ol type="a">
 <li>
-<p><strong>Question:</strong> 您可以使用什么 <code>Integer</code> 方法将 <code>int</code> 转换为表示十六进制数字的字符串？例如，什么方法将整数 65 转换为字符串 "41"？</p>
-<p><strong>Answer:</strong> <code>toHexString</code></p>
+<p><strong>问题:</strong>你可以使用什么 <code>Integer</code> 方法将 <code>int</code> 转换为表示十六进制数字的字符串？例如，什么方法将整数 65 转换为字符串 "41"？</p>
+<p><strong>答案:</strong><code>toHexString</code></p>
 </li>
 <li>
-<p><strong>Question:</strong> 您将使用什么 <code>Integer</code> 方法将基数为 5 的字符串转换为等效的 <code>int</code>？例如，如何将字符串 "230" 转换为整数值 65？显示您将用于完成此任务的代码。</p>
-<p><strong>Answer:</strong> <code>valueOf</code>. 这是如何做：</p>
+<p><strong>问题:</strong>你将使用什么 <code>Integer</code> 方法将基数为 5 的字符串转换为等效的 <code>int</code>？例如，如何将字符串 "230" 转换为整数值 65？显示你将用于完成此任务的代码。</p>
+<p><strong>答案:</strong><code>valueOf</code>. 这是如何做：</p>
 <div class="codeblock"><pre>
 String base5String = "230";
 int result = Integer.valueOf(base5String, 5);
 </pre></div>
 </li>
 <li>
-<p><strong>Question:</strong> 您可以使用什么 Double 方法来检测浮点数是否具有特殊值 Not a Number(<code>NaN</code>)？</p>
-<p><strong>Answer:</strong> <code>isNaN</code></p>
+<p><strong>问题:</strong>你可以使用什么 Double 方法来检测浮点数是否具有特殊值 Not a Number(<code>NaN</code>)？</p>
+<p><strong>答案:</strong><code>isNaN</code></p>
 </li>
 </ol>
 </li>
 <li>
-<p><strong>Question:</strong> 以下表达式的值是什么，为什么？</p>
+<p><strong>问题:</strong>以下表达式的值是什么，为什么？</p>
 <div class="codeblock"><pre>
 Integer.valueOf(1).equals(Long.valueOf(1))
 </pre></div>
-<p><strong>Answer:</strong> False. 两个对象(<code>Integer</code> 和 <code>Long</code>)具有不同的类型。</p>
+<p><strong>答案:</strong>错。两个对象(<code>Integer</code> 和 <code>Long</code>)具有不同的类型。</p>
 </li>
 </ol>
 <h2>练习</h2>
 <ol>
 <li>
-<p><strong>Exercise:</strong> 更改 <a class="SourceLink" target="_blank" href="MaxVariablesDemo.java" onclick="showCode('../../../displayCode.html', 'MaxVariablesDemo.java'); return false;"><code>MaxVariablesDemo</code></a> 以显示最小值而不是最大值。您可以删除与变量 <code>aChar</code> 和 <code>aBoolean</code> 相关的所有代码。输出是什么？</p>
-<p><strong>Answer:</strong> 参见 <a class="SourceLink" target="_blank" href="MinVariablesDemo.java" onclick="showCode('../../../displayCode.html', 'MinVariablesDemo.java'); return false;"><code>MinVariablesDemo</code></a>。这是输出：</p>
+<p><strong>练习:</strong>更改 <a class="SourceLink" target="_blank" href="MaxVariablesDemo.java" onclick="showCode('../../../displayCode.html', 'MaxVariablesDemo.java'); return false;"><code>MaxVariablesDemo</code></a> 以显示最小值而不是最大值。你可以删除与变量 <code>aChar</code> 和 <code>aBoolean</code> 相关的所有代码。输出是什么？</p>
+<p><strong>答案:</strong>参见 <a class="SourceLink" target="_blank" href="MinVariablesDemo.java" onclick="showCode('../../../displayCode.html', 'MinVariablesDemo.java'); return false;"><code>MinVariablesDemo</code></a>。这是输出：</p>
 <div class="codeblock"><pre>
 The smallest byte value is -128
 The smallest short value is -32768
@@ -444,25 +444,25 @@ The smallest double value is 4.9E-324
 </pre></div>
 </li>
 <li>
-<p><strong>Exercise:</strong> 创建一个程序，从命令行读取未指定数量的整数参数，并将它们一起添加。例如，假设您输入以下内容：</p>
+<p><strong>练习:</strong>创建一个程序，从命令行读取未指定数量的整数参数，并将它们一起添加。例如，假设你输入以下内容：</p>
 <div class="codeblock"><pre>
        java Adder 1 3 2 10
 </pre></div>
-<p>程序应显示 <code>16</code> 然后退出。如果用户只输入一个参数，程序应显示错误消息。您可以将程序基于 <a class="SourceLink" target="_blank" href="../../data/examples/ValueOfDemo.java" onclick="showCode('../../../displayCode.html', '../../data/examples/ValueOfDemo.java'); return false;"><code>ValueOfDemo</code></a>。</p>
-<p><strong>Answer:</strong> 参见 <a class="SourceLink" target="_blank" href="Adder.java" onclick="showCode('../../../displayCode.html', 'Adder.java'); return false;"><code>Adder</code></a>。</p>
+<p>程序应显示 <code>16</code> 然后退出。如果用户只输入一个参数，程序应显示错误消息。你可以将程序基于 <a class="SourceLink" target="_blank" href="../../data/examples/ValueOfDemo.java" onclick="showCode('../../../displayCode.html', '../../data/examples/ValueOfDemo.java'); return false;"><code>ValueOfDemo</code></a>。</p>
+<p><strong>答案:</strong>参见 <a class="SourceLink" target="_blank" href="Adder.java" onclick="showCode('../../../displayCode.html', 'Adder.java'); return false;"><code>Adder</code></a>。</p>
 </li>
 <li>
-<p><strong>Exercise:</strong> 创建一个与前一个类似但有以下区别的程序：</p>
+<p><strong>练习:</strong>创建一个与前一个类似的程序，但有以下区别：</p>
 <ul>
 <li>它不是读取整数参数，而是读取浮点参数。</li>
 <li>它保留两位小数显示参数的总和。</li>
 </ul>
-<p>例如，假设您输入以下内容：</p>
+<p>例如，假设你输入以下内容：</p>
 <div class="codeblock"><pre>
 java FPAdder 1 1e2 3.0 4.754
 </pre></div>
-<p>程序将显示 <code>108.75</code>。根据您的语言环境，小数点可能是逗号(<code>,</code>)而不是句点(<code>.</code>)。</p>
-<p><strong>Answer:</strong> 参见 <a class="SourceLink" target="_blank" href="FPAdder.java" onclick="showCode('../../../displayCode.html', 'FPAdder.java'); return false;"><code>FPAdder</code></a>。</p>
+<p>程序将显示 <code>108.75</code>。根据你的语言环境，小数点可能是逗号(<code>,</code>)而不是句点(<code>.</code>)。</p>
+<p><strong>答案:</strong>参见 <a class="SourceLink" target="_blank" href="FPAdder.java" onclick="showCode('../../../displayCode.html', 'FPAdder.java'); return false;"><code>FPAdder</code></a>。</p>
 </li>
 </ol>
 

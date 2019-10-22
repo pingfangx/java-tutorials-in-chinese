@@ -492,18 +492,18 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">Java Web Start</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="security.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">Next&nbsp;»</a>
+                <a target="_top" href="security.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>常见的 Java Web Start 问题</h1></div>
             <div id="PageContent">
 
 <p>This section covers some common problems that you might encounter when developing and deploying Java Web Start applications. After each problem is a list of possible reasons and solutions.</p>
-<p><strong>Problem:</strong> My browser shows the Java Network Launch Protocol (JNLP) file for my application as plain text.</p>
+<p><strong>Problem:</strong>My browser shows the Java Network Launch Protocol (JNLP) file for my application as plain text.</p>
 <p>Most likely, your web server is not aware of the proper MIME type for JNLP files. See the 
 <a class="TutorialLink" target="_top" href="settingUpWebServerMimeType.html">Setting up the web server</a> section for more information.</p>
 <p>Furthermore, if you are using a proxy server, ensure that the update versions of the files are returned, by updating the time stamp of the resources on the web server such that the proxies will update their caches.</p>
-<p><strong>Problem:</strong> When I try to launch my JNLP file, I get the following error:</p>
+<p><strong>Problem:</strong>When I try to launch my JNLP file, I get the following error:</p>
 <div class="codeblock"><pre>
 MissingFieldException[ The following required field is missing from the launch
   file: (&lt;application-desc&gt;|&lt;applet-desc&gt;|&lt;installer-desc&gt;|&lt;component-desc&gt;)]

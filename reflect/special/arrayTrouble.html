@@ -493,7 +493,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">反射 API</a>&gt;<a href="index.html" target="_top">数组和枚举类型</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="arraySetGet.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="enum.html">Next&nbsp;»</a>
+                <a target="_top" href="arraySetGet.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="enum.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>故障排除</h1></div>
@@ -501,7 +501,7 @@
 
 <p>以下示例显示了在数组上操作时可能出现的典型错误。</p>
 <h2>由于不可转换类型导致的 IllegalArgumentException</h2>
-<p><a class="SourceLink" target="_blank" href="example/ArrayTroubleAgain.java" onclick="showCode('../../displayCode.html', 'example/ArrayTroubleAgain.java'); return false;"><code><code>ArrayTroubleAgain</code></code></a> 示例将生成 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html"><code>IllegalArgumentException</code></a>。调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Array.html#setInt-java.lang.Object-int-int-"><code>Array.setInt()</code></a> 以设置引用类型 <code>Integer</code> 的组件，其值为基本类型 <code>int</code>。在非反射等价物 <code>ary[0] = 1</code> 中，编译器会将值转换(<em>装箱</em>)为引用类型 <code>1</code> <code>new Integer(1)</code>，因此类型检查将接受该语句。使用反射时，类型检查仅在运行时进行，因此无法对值进行装箱。</p>
+<p><a class="SourceLink" target="_blank" href="example/ArrayTroubleAgain.java" onclick="showCode('../../displayCode.html', 'example/ArrayTroubleAgain.java'); return false;"><code><code>ArrayTroubleAgain</code></code></a> 示例将生成 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html"><code>IllegalArgumentException</code></a>。调用 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Array.html#setInt-java.lang.Object-int-int-"><code>Array.setInt()</code></a> 以设置引用类型 <code>Integer</code> 的组件，其值为基本类型 <code>int</code>。在非反射等价物 <code>ary[0] = 1</code> 中，编译器会将值转换(<em>装箱</em>)为引用类型 <code>1</code> <code>new Integer(1)</code>，因此类型检查将接受该语句。使用反射时，类型检查仅在运行时发生，因此无法对值进行装箱。</p>
 <div class="codeblock"><pre>
 
 import java.lang.reflect.Array;
@@ -588,7 +588,7 @@ Exception in thread "main" java.lang.IllegalArgumentException: argument type
         at java.lang.reflect.Array.setLong(Native Method)
         at ArrayTroubleToo.main(ArrayTroubleToo.java:9)
 </pre></div>
-<div class="note"><hr /><strong>提示:</strong>&nbsp;<code>Array.set*()</code> 和 <code>Array.get*()</code> 方法将执行自动扩大转换，但会抛出 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html"><code>IllegalArgumentException</code></a> 如果尝试缩小转换。有关扩大和缩小转换的完整讨论，请参阅 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/index.html"><em>The Java Language Specification, Java SE 7 Edition</em></a>，分别 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html#jls-5.1.2">Widening Primitive Conversion</a> 和 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html#jls-5.1.3">Narrowing Primitive Conversion</a> 部分。
+<div class="note"><hr /><strong>提示:</strong>&nbsp;<code>Array.set*()</code> 和 <code>Array.get*()</code> 方法将执行自动扩大转换，但如果尝试缩小转换会抛出 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html"><code>IllegalArgumentException</code></a>。有关扩大和缩小转换的完整讨论，请分别参阅 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/index.html"><em>The Java Language Specification, Java SE 7 Edition</em></a>，<a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html#jls-5.1.2">Widening Primitive Conversion</a> 和 <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html#jls-5.1.3">Narrowing Primitive Conversion</a> 部分。
 <hr /></div>
 
         </div>

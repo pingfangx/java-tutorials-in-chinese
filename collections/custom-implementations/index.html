@@ -395,26 +395,26 @@
             <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>
         </div>
         <div class="NavBit">
-                <a target="_top" href="../algorithms/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../interoperability/index.html">Next&nbsp;»</a>
+                <a target="_top" href="../algorithms/index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="../interoperability/index.html">下一页&nbsp;»</a>
         </div>
         <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
         <div id="PageTitle"><h1>课程：自定义集合实现</h1></div>
         <div id="PageContent">
 
-<p>许多程序员永远不需要实现自己的 <code>Collection</code> 类。您可以使用本章前面部分中描述的实现进行相当远的操作。但是，有一天您可能想编写自己的实现。借助 Java 平台提供的抽象实现，这很容易做到这一点。在我们讨论 <em>如何</em> 编写实现之前，让我们讨论一下为什么要编写一个实现。</p>
+<p>许多程序员永远不需要实现自己的 <code>Collection</code> 类。你可以使用本章前面部分中描述的实现进行相当久的操作。但是，有一天你可能想编写自己的实现。借助 Java 平台提供的抽象实现，这很容易做到这一点。在我们讨论 <em>如何</em> 编写实现之前，让我们讨论一下为什么要编写一个实现。</p>
 <h2>编写实现的原因</h2>
-<p>以下列表说明了您可能希望实现的自定义 <code>Collection</code> 的类型。它并非详尽无遗：</p>
+<p>以下列表说明了你可能希望实现的自定义 <code>Collection</code> 的类型。它并非详尽无遗：</p>
 <ul>
-<li><b>Persistent</b>：所有内置的 <code>Collection</code> 实现都驻留在主内存中，并在程序退出时消失。如果您希望下次程序启动时仍然存在的集合，您可以通过在外部数据库上构建胶合代码来实现它。这样的集合可以由多个程序同时访问。</li>
-<li><b>特定于应用程序</b>：这是一个非常广泛的类别。一个例子是包含实时遥测数据的不可修改的 <code>Map</code>。键可以表示位置，并且可以响应于 <code>get</code> 操作从这些位置处的传感器读取值。</li>
+<li><b>持久</b>：所有内置的 <code>Collection</code> 实现都驻留在主内存中，并在程序退出时消失。如果你希望下次程序启动时仍然存在的集合，你可以通过在外部数据库上构建胶合代码来实现它。这样的集合可以由多个程序同时访问。</li>
+<li><b>特定于应用程序</b>：这是一个非常广泛的类别。一个例子是包含实时遥测数据的不可修改的 <code>Map</code>。键可以表示位置，并且可以响应 <code>get</code> 操作从这些位置处的传感器读取值。</li>
 <li><b>高性能，专用</b>：许多数据结构利用受限制的使用来提供比通用实现更好的性能。例如，考虑一个包含长的连续相同元素的 <code>List</code>。这种在文本处理中经常出现的列表可以是 <em>run-length encoded (游程编码)</em>。run 可以表示为包含重复元素和连续重复次数的单个对象。这个例子很有意思，因为它会影响性能的两个方面：它比 <code>ArrayList</code> 需要更少的空间但更多的时间。</li>
-<li><b>高性能，通用</b>：Java Collections Framework 的设计人员试图为每个接口提供最佳的通用实现，但是可以使用许多很多数据结构，并且每天都发明新的数据结构。也许您能想出更快的算法！</li>
-<li><b>增强功能</b>：假设您需要一个高效的包实现(也称为 <em>multiset</em>)：即一个 <code>Collection</code> 在允许重复元素的同时提供包含检查的常量时间。在 <code>HashMap</code> 上实现这样的集合是相当简单的。</li>
-<li><b>增强功能</b>：您可能希望获得除 Java 平台提供的便利之外的其他实现。例如，您可能经常需要 <code>List</code> 实例来表示连续范围的 <code>Integer</code>。</li>
-<li><b>适配器</b>：假设您使用的是具有自己的 ad hoc 集合 API 的旧 API。您可以编写一个适配器实现，允许这些集合在 Java Collections Framework 中运行。<em>adapter implementation (适配器实现)</em> 是一个精简单板，它包装一种类型的对象，并通过将后一种类型的操作转换为前者的操作，使它们的行为类似于另一种类型的对象。</li>
+<li><b>高性能，通用</b>：Java 集合框架的设计人员试图为每个接口提供最佳的通用实现，但是可以使用很多很多数据结构，并且每天都发明新的数据结构。也许你能想出更快的算法！</li>
+<li><b>增强功能</b>：假设你需要一个高效的包实现(也称为 <em>multiset</em>)：即一个 <code>Collection</code> 在允许重复元素的同时提供包含检查的常量时间。在 <code>HashMap</code> 上实现这样的集合是相当简单的。</li>
+<li><b>便利</b>：你可能希望获得除 Java 平台提供的便利之外的其他实现。例如，你可能经常需要 <code>List</code> 实例来表示连续范围的 <code>Integer</code>。</li>
+<li><b>适配器</b>：假设你使用的是具有自己的专用的集合 API 的旧 API。你可以编写一个适配器实现，允许这些集合在 Java 集合框架中运行。<em>adapter implementation (适配器实现)</em> 是一个精简单板，它包装一种类型的对象，并通过将后一种类型的操作转换为前者的操作，使它们的行为类似于另一种类型的对象。</li>
 </ul>
 <h2>如何编写自定义实现</h2>
-<p>编写自定义实现非常简单。Java Collections Framework 提供了明确设计的抽象实现，以方便自定义实现。我们将从以下 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#asList-T...-"><code>Arrays.asList</code></a> 的实现示例开始。</p>
+<p>编写自定义实现非常简单。Java 集合框架提供了明确设计的抽象实现，以方便自定义实现。我们将从以下 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#asList-T...-"><code>Arrays.asList</code></a> 的实现示例开始。</p>
 <div class="codeblock"><pre>
 public static &lt;T&gt; List&lt;T&gt; asList(T[] a) {
     return new MyArrayList&lt;T&gt;(a);
@@ -443,35 +443,35 @@ private static class MyArrayList&lt;T&gt; extends AbstractList&lt;T&gt; {
     }
 }
 </pre></div>
-<p>信不信由您，这非常接近 <code>java.util.Arrays</code> 中包含的实现。就这么简单！您提供构造函数和 <code>get</code>，<code>set</code> 和 <code>size</code> 方法，<code>AbstractList</code> 完成其余所有操作。您可以免费获得 <code>ListIterator</code>，批量操作，搜索操作，哈希码计算，比较和字符串表示。</p>
-<p>假设您希望实现更快一点。抽象实现的 API 文档精确描述了每个方法的实现方式，因此您将知道要覆盖哪些方法以获得所需的性能。前面的实现的性能很好，但可以稍微改进一下。特别是，<code>toArray</code> 方法遍历 <code>List</code>，一次复制一个元素。鉴于内部表示，克隆数组的速度更快，更明智。</p>
+<p>信不信由你，这非常接近 <code>java.util.Arrays</code> 中包含的实现。就这么简单！你提供构造函数和 <code>get</code>，<code>set</code> 和 <code>size</code> 方法，<code>AbstractList</code> 完成其余所有操作。你可以免费获得 <code>ListIterator</code>，批量操作，搜索操作，哈希码计算，比较和字符串表示。</p>
+<p>假设你希望实现更快一点。抽象实现的 API 文档精确描述了每个方法的实现方式，因此你将知道要覆盖哪些方法以获得所需的性能。前面的实现的性能很好，但可以稍微改进一下。特别是，<code>toArray</code> 方法遍历 <code>List</code>，一次复制一个元素。鉴于内部表示，克隆数组的速度更快，更明智。</p>
 <div class="codeblock"><pre>
 public Object[] toArray() {
     return (Object[]) a.clone();
 }
 </pre></div>
-<p>通过添加此覆盖以及更多类似覆盖，此实现正是 <code>java.util.Arrays</code> 中的实现。为了完全公开，使用其他抽象实现有点困难，因为您必须编写自己的迭代器，但它仍然不是那么困难。</p>
+<p>通过添加此覆盖以及更多类似覆盖，此实现正是 <code>java.util.Arrays</code> 中的实现。为了完全公开，使用其他抽象实现有点困难，因为你必须编写自己的迭代器，但它仍然不是那么困难。</p>
 <p>以下列表总结了抽象实现：</p>
 <ul>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractCollection.html"><code>AbstractCollection</code></a><code>Collection</code> 既不是 <code>Set</code> 也不是 <code>List</code>。至少，您必须提供 <code>iterator</code> 和 <code>size</code> 方法。</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractCollection.html"><code>AbstractCollection</code></a>  <code>Collection</code> 既不是 <code>Set</code> 也不是 <code>List</code>。至少，你必须提供 <code>iterator</code> 和 <code>size</code> 方法。</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractSet.html"><code>AbstractSet</code></a><code>Set</code>; 使用与 <code>AbstractCollection</code> 相同。</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractSet.html"><code>AbstractSet</code></a>  <code>Set</code>; 使用与 <code>AbstractCollection</code> 相同。</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractList.html"><code>AbstractList</code></a><code>List</code> 由随机访问数据存储(例如数组)支持。至少，您必须提供 <code>位置访问</code> 方法(<code>get</code>，并且，可选地，<code>set</code>，<code>remove</code>，以及 <code>add</code>)和 <code>size</code> 方法。抽象类负责 <code>listIterator</code>(和 <code>iterator</code>)。</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractList.html"><code>AbstractList</code></a>  <code>List</code> 由随机访问数据存储(例如数组)支持。至少，你必须提供 <code>位置访问</code> 方法(<code>get</code>，并且，可选地，<code>set</code>，<code>remove</code>，以及 <code>add</code>)和 <code>size</code> 方法。抽象类负责 <code>listIterator</code>(和 <code>iterator</code>)。</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractSequentialList.html"><code>AbstractSequentialList</code></a><code>List</code>，由顺序访问数据存储(例如链表)支持。您必须至少提供 <code>listIterator</code> 和 <code>size</code> 方法。抽象类负责位置访问方法。(这与 <code>AbstractList</code> 相反。)</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractSequentialList.html"><code>AbstractSequentialList</code></a>  <code>List</code>，由顺序访问数据存储(例如链表)支持。你必须至少提供 <code>listIterator</code> 和 <code>size</code> 方法。抽象类负责位置访问方法。(这与 <code>AbstractList</code> 相反。)</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractQueue.html"><code>AbstractQueue</code></a>至少，您必须提供 <code>offer</code>，<code>peek</code>，<code>poll</code> 和 <code>size</code> 方法以及 <code>iterator</code> 支持 <code>remove</code>。</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractQueue.html"><code>AbstractQueue</code></a>  至少，你必须提供 <code>offer</code>，<code>peek</code>，<code>poll</code> 和 <code>size</code> 方法以及 <code>iterator</code> 支持 <code>remove</code>。</li>
 <li>
-<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractMap.html"><code>AbstractMap</code></a><code>Map</code>。您至少必须提供 <code>entrySet</code> 视图。这通常使用 <code>AbstractSet</code> 类实现。如果 <code>Map</code> 是可修改的，则还必须提供 <code>put</code> 方法。</li>
+<a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/AbstractMap.html"><code>AbstractMap</code></a>  <code>Map</code>。你至少必须提供 <code>entrySet</code> 视图。这通常使用 <code>AbstractSet</code> 类实现。如果 <code>Map</code> 是可修改的，则还必须提供 <code>put</code> 方法。</li>
 </ul>
 <p>编写自定义实现的过程如下：</p>
 <ol>
 <li>从前面的列表中选择适当的抽象实现类。</li>
-<li>为类的所有抽象方法提供实现。如果您的自定义集合是可修改的，则还必须覆盖一个或多个具体方法。抽象实现类的 API 文档将告诉您要覆盖哪些方法。</li>
-<li>测试并在必要时调试实现。您现在有一个可用的自定义集合实现。</li>
-<li>如果您担心性能，请阅读您继承其实现的所有方法的抽象实现类的 API 文档。如果有任何看起来太慢，请覆盖它们。如果覆盖任何方法，请确保在覆盖之前和之后测量方法的性能。您在调整性能方面付出的努力应该取决于实现将获得多少使用以及对其使用性能的关键程度。(通常最好省略此步骤。)</li>
+<li>为类的所有抽象方法提供实现。如果你的自定义集合是可修改的，则还必须覆盖一个或多个具体方法。抽象实现类的 API 文档将告诉你要覆盖哪些方法。</li>
+<li>测试并在必要时调试实现。你现在有一个可用的自定义集合实现。</li>
+<li>如果你担心性能，请阅读你继承其实现的所有方法的抽象实现类的 API 文档。如果有任何看起来太慢，请覆盖它们。如果覆盖任何方法，请确保在覆盖之前和之后测量方法的性能。你在调整性能方面付出的努力应该取决于实现将获得多少使用以及对其使用性能的关键程度。(通常最好省略此步骤。)</li>
 </ol>
 
 

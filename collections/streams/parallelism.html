@@ -486,18 +486,18 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">集合</a>&gt;<a href="index.html" target="_top">聚合操作</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="reduction.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">Next&nbsp;»</a>
+                <a target="_top" href="reduction.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>并行</h1></div>
             <div id="PageContent">
 
 
-<p>并行计算涉及将问题划分为子问题，同时解决这些问题(并行地，每个子问题在单独的线程中运行)，然后组合子问题解决方案的结果。Java SE 提供 <a class="TutorialLink" target="_top" href="../../essential/concurrency/forkjoin.html">fork/join framework</a>，使您可以更轻松地在应用程序中实现并行计算。但是，使用此框架，您必须指定如何细分(分区)问题。通过聚合操作，Java 运行时为您执行此分区和组合解决方案。</p>
+<p>并行计算涉及将问题划分为子问题，同时解决这些问题(并行地，每个子问题在单独的线程中运行)，然后组合子问题解决方案的结果。Java SE 提供 <a class="TutorialLink" target="_top" href="../../essential/concurrency/forkjoin.html">fork/join framework</a>，使你可以更轻松地在应用程序中实现并行计算。但是，使用此框架，你必须指定如何细分(分区)问题。通过聚合操作，Java 运行时为你执行此分区和组合解决方案。</p>
 
-<p>在使用集合的应用程序中实现并行性的一个难点是集合不是线程安全的，这意味着多个线程无法在不引入 <a class="TutorialLink" target="_top" href="../../essential/concurrency/interfere.html">线程干扰</a> 或 <a class="TutorialLink" target="_top" href="../../essential/concurrency/memconsist.html">线程干扰</a>的情况下操作集合。Collections Framework 提供了 <a class="TutorialLink" target="_top" href="../../collections/implementations/wrapper.html">线程干扰</a>，它将自动同步添加到任意集合，使其成为线程安全的。但是，同步会引入 <a class="TutorialLink" target="_top" href="../../essential/concurrency/sync.html#thread_contention">线程干扰</a>。您希望避免线程争用，因为它会阻止线程并行运行。通过聚合操作和并行流，您可以使用非线程安全集合实现并行性，前提是在操作集合时不要修改集合。</p>
+<p>在使用集合的应用程序中实现并行性的一个难点是集合不是线程安全的，这意味着多个线程无法在不引入 <a class="TutorialLink" target="_top" href="../../essential/concurrency/interfere.html">线程干扰</a> 或 <a class="TutorialLink" target="_top" href="../../essential/concurrency/memconsist.html">内存一致性错误</a>的情况下操作集合。集合框架提供了 <a class="TutorialLink" target="_top" href="../../collections/implementations/wrapper.html">同步包装器</a>，它将自动同步添加到任意集合，使其成为线程安全的。但是，同步会引入 <a class="TutorialLink" target="_top" href="../../essential/concurrency/sync.html#thread_contention">线程争用</a>。你希望避免线程争用，因为它会阻止线程并行运行。通过聚合操作和并行流，你可以使用非线程安全集合实现并行性，前提是在操作集合时不要修改集合。</p>
 
-<p>请注意，并行不会自动地比串行执行操作更快，尽管如果您有足够的数据和处理器核心，并行可能会更快。虽然聚合操作使您能够更轻松地实现并行性，但您仍有责任确定您的应用程序是否适合并行性。</p> 
+<p>请注意，并行不会自动地比串行执行操作更快，尽管如果你有足够的数据和处理器核心，并行可能会更快。虽然聚合操作使你能够更轻松地实现并行性，但你仍有责任确定你的应用程序是否适合并行性。</p> 
 
 <p>本节包括以下主题：</p>
 
@@ -514,13 +514,13 @@
   </li>
 </ul>
   
-<p>您可以在示例 <a class="SourceLink" target="_blank" href="examples/ParallelismExamples.java" onclick="showCode('../../displayCode.html', 'examples/ParallelismExamples.java'); return false;"><code>ParallelismExamples</code></a> 中找到本节中描述的代码片段。</p><!-- *********************************************************************** -->
+<p>你可以在示例 <a class="SourceLink" target="_blank" href="examples/ParallelismExamples.java" onclick="showCode('../../displayCode.html', 'examples/ParallelismExamples.java'); return false;"><code>ParallelismExamples</code></a> 中找到本节中描述的代码片段。</p><!-- *********************************************************************** -->
 
 
 
 <h2><a name="executing_streams_in_parallel">并行执行流</a></h2>
 
-<p>您可以串行或并行执行流。当流并行执行时，Java 运行时将流分区为多个子流。聚合操作迭代并并行处理这些子流，然后组合结果。</p>
+<p>你可以串行或并行执行流。当流并行执行时，Java 运行时将流分区为多个子流。聚合操作迭代并并行处理这些子流，然后组合结果。</p>
 
 <p>创建流时，除非另行指定，否则它始终是串行流。要创建并行流，请调用操作 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#parallelStream--"><code>Collection.parallelStream</code></a>。或者，调用操作 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/BaseStream.html#parallel--"><code>BaseStream.parallel</code></a>。例如，以下语句并行计算所有男性成员的平均年龄：</p>
 
@@ -629,16 +629,16 @@ With forEachOrdered:
   
   <li>第二个管道在按方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#sort-java.util.List-"><code>Collections.sort</code></a> 排序后打印 <code>listOfIntegers</code> 的元素。</li>
   
-  <li>第三和第四个管道以明显随机的顺序打印列表的元素。请记住，流处理在处理流的元素时使用内部迭代。因此，当您并行执行流时，Java 编译器和运行时确定处理流元素的顺序，以最大化并行计算的优势，除非流操作另有指定。</li>
+  <li>第三和第四个管道以明显随机的顺序打印列表的元素。请记住，流处理在处理流的元素时使用内部迭代。因此，当你并行执行流时，Java 编译器和运行时确定处理流元素的顺序，以最大化并行计算的优势，除非流操作另有指定。</li>
   
-  <li>第五个管道使用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#forEachOrdered-java.util.function.Consumer-"><code>forEachOrdered</code></a>，它按照源指定的顺序处理流的元素，无论您是以串行还是并行方式执行流。请注意，如果对并行流使用 <code>forEachOrdered</code> 等操作，则可能会失去并行性的好处。</li>
+  <li>第五个管道使用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#forEachOrdered-java.util.function.Consumer-"><code>forEachOrdered</code></a>，它按照源指定的顺序处理流的元素，无论你是以串行还是并行方式执行流。请注意，如果对并行流使用 <code>forEachOrdered</code> 等操作，则可能会失去并行性的好处。</li>
 </ul><!-- *********************************************************************** -->
 
 
 
 <h2><a name="side_effects">副作用</a></h2>
 
-<p>如果方法或表达式除了返回或产生值之外还修改计算机的状态，则该方法或表达式具有副作用。示例包括可变缩减(使用 <code>collect</code> 操作的操作；有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/streams/reduction.html">Reduction</a> 部分)以及调用 <code>System.out.println</code> 调试方法。JDK 很好地处理了管道中的某些副作用。特别地，<code>collect</code> 方法被设计为以并行安全的方式执行具有副作用的最常见的流操作。<code>forEach</code> 和 <code>peek</code> 等操作是针对副作用而设计的；返回 void 的 lambda 表达式，例如调用 <code>System.out.println</code> 的表达式，只能产生副作用。即便如此，您应该谨慎使用 <code>forEach</code> 和 <code>peek</code> 操作；如果您对并行流使用其中一个操作，那么 Java 运行时可以从多个线程同时调用您指定为其参数的 lambda 表达式。此外，永远不要传递作为参数的 lambda 表达式，这些表达式在 <code>filter</code> 和 <code>map</code> 等操作中具有副作用。以下部分讨论 <a href="#interference">interference</a> 和 <a href="#stateful_lambda_expressions">stateful lambda expressions</a>，这两者都可能是副作用的来源，并且可能返回不一致或不可预测的结果，尤其是在并行流中。然而，首先讨论 <a href="#laziness">laziness</a> 的概念，因为它对干扰有直接影响。</p><!-- *********************************************************************** -->
+<p>如果方法或表达式除了返回或产生值之外还修改计算机的状态，则该方法或表达式具有副作用。示例包括可变缩减(使用 <code>collect</code> 操作的操作；有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="../../collections/streams/reduction.html">Reduction</a> 部分)以及调用 <code>System.out.println</code> 调试方法。JDK 很好地处理了管道中的某些副作用。特别地，<code>collect</code> 方法被设计为以并行安全的方式执行具有副作用的最常见的流操作。<code>forEach</code> 和 <code>peek</code> 等操作是针对副作用而设计的；返回 void 的 lambda 表达式，例如调用 <code>System.out.println</code> 的表达式，只能产生副作用。即便如此，你应该谨慎使用 <code>forEach</code> 和 <code>peek</code> 操作；如果你对并行流使用其中一个操作，那么 Java 运行时可以从多个线程同时调用你指定为其参数的 lambda 表达式。此外，永远不要传递作为参数的 lambda 表达式，这些表达式在 <code>filter</code> 和 <code>map</code> 等操作中具有副作用。以下部分讨论 <a href="#interference">interference</a> 和 <a href="#stateful_lambda_expressions">stateful lambda expressions</a>，这两者都可能是副作用的来源，并且可能返回不一致或不可预测的结果，尤其是在并行流中。然而，首先讨论 <a href="#laziness">laziness</a> 的概念，因为它对干扰有直接影响。</p><!-- *********************************************************************** -->
 
 
 
@@ -728,7 +728,7 @@ Parallel stream:
 
 <p>无论流是以串行还是并行方式执行，操作 <code>forEachOrdered</code> 都按流指定的顺序处理元素。但是，当并行执行流时，<code>map</code> 操作会处理由 Java 运行时和编译器指定的流的元素。因此，lambda 表达式 <code>e -&gt; { parallelStorage.add(e); return e; }</code> 将元素添加到 <code>List</code> <code>parallelStorage</code> 的顺序，每次运行代码时都会有所不同。对于确定性和可预测的结果，请确保流操作中的 lambda 表达式参数不具有状态。</p>
 
-<p><strong>注意</strong>:此示例调用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#synchronizedList-java.util.List-"><code>synchronizedList</code></a>，以便 <code>List</code> <code>parallelStorage</code> 是线程安全的。请记住，集合不是线程安全的。这意味着多个线程不应同时访问特定集合。假设您在创建 <code>parallelStorage</code> 时未调用方法 <code>synchronizedList</code>：</p> 
+<p><strong>注意</strong>:此示例调用方法 <a class="APILink" target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#synchronizedList-java.util.List-"><code>synchronizedList</code></a>，以便 <code>List</code> <code>parallelStorage</code> 是线程安全的。请记住，集合不是线程安全的。这意味着多个线程不应同时访问特定集合。假设你在创建 <code>parallelStorage</code> 时未调用方法 <code>synchronizedList</code>：</p> 
 
 <pre class="codeblock">List&lt;Integer&gt; parallelStorage = new ArrayList&lt;&gt;();</pre>
 

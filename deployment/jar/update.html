@@ -506,26 +506,26 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">部署</a>&gt;<a href="index.html" target="_top">JAR 文件中的打包程序</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="unpack.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="run.html">Next&nbsp;»</a>
+                <a target="_top" href="unpack.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="run.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>更新 JAR 文件</h1></div>
             <div id="PageContent">
 
-<p>Jar 工具提供了一个 <tt>u</tt> 选项，您可以通过修改其清单或添加文件来更新现有 JAR 文件的内容。</p>
+<p>Jar 工具提供了一个 <tt>u</tt> 选项，你可以通过修改其清单或添加文件来更新现有 JAR 文件的内容。</p>
 <p>添加文件的基本命令具有以下格式：</p>
 <div class="codeblock"><pre>
 jar uf <i>jar-file input-file(s)</i>
 </pre></div>
 <p>在此命令中：</p>
 <ul>
-<li><tt>u</tt> 选项表示您要 <em>update (更新)</em> 现有 JAR 文件。</li>
+<li><tt>u</tt> 选项表示你要 <em>update (更新)</em> 现有 JAR 文件。</li>
 <li><tt>f</tt> 选项表示要在命令行上指定要更新的 JAR 文件。</li>
 <li><tt>jar-file</tt> 是要更新的现有 JAR 文件。</li>
 <li><tt>input-file(s)</tt> 是一个以空格分隔的列表，其中包含要添加到 JAR 文件的一个或多个文件。</li>
 </ul>
 <p>归档中已存在的文件与添加的文件具有相同的路径名将被覆盖。</p>
-<p>创建新的 JAR 文件时，您可以选择使用 <tt>-C</tt> 选项来指示目录的更改。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="build.html">Creating a JAR File</a> 部分。</p>
+<p>创建新的 JAR 文件时，你可以选择使用 <tt>-C</tt> 选项来指示目录的更改。有关更多信息，请参阅 <a class="TutorialLink" target="_top" href="build.html">Creating a JAR File</a> 部分。</p>
 <h2>例子</h2>
 <p>回想一下 <tt>TicTacToe.jar</tt> 有以下内容：</p>
 <div class="codeblock"><pre>
@@ -544,7 +544,7 @@ images/
 images/cross.gif
 images/not.gif
 </pre></div>
-<p>假设您要将文件 <tt>images/new.gif</tt> 添加到 JAR 文件中。您可以通过从 <tt>images</tt> 目录的父目录发出此命令来完成此操作：</p>
+<p>假设你要将文件 <tt>images/new.gif</tt> 添加到 JAR 文件中。你可以通过从 <tt>images</tt> 目录的父目录发出此命令来完成此操作：</p>
 <div class="codeblock"><pre>
 jar uf TicTacToe.jar images/new.gif
 </pre></div>

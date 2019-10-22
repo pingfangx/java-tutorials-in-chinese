@@ -495,7 +495,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">必要类</a>&gt;<a href="index.html" target="_top">平台环境</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="sysmisc.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">Next&nbsp;»</a>
+                <a target="_top" href="sysmisc.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="QandE/questions.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>PATH 和 CLASSPATH</h1></div>
@@ -510,9 +510,9 @@
 
 <h2>更新 PATH 环境变量(Microsoft Windows)</h2>
 
-<p>您可以在不设置 <code>PATH</code> 环境变量的情况下正常运行 Java 应用程序。或者，您可以选择为了方便将其设置。</p>
+<p>你可以在不设置 <code>PATH</code> 环境变量的情况下正常运行 Java 应用程序。或者，你可以选择为了方便将其设置。</p>
 
-<p>设置 <code>PATH</code> 环境变量，可以使您能够方便地运行可执行文件(<code>javac.exe</code>，<code>java.exe</code>，<code>javadoc.exe</code> 等)，而无需键入命令的完整路径。如果未设置 <code>PATH</code> 变量，则需要在每次运行时指定可执行文件的完整路径，例如：</p>
+<p>设置 <code>PATH</code> 环境变量，可以使你能够方便地运行可执行文件(<code>javac.exe</code>，<code>java.exe</code>，<code>javadoc.exe</code> 等)，而无需键入命令的完整路径。如果未设置 <code>PATH</code> 变量，则需要在每次运行时指定可执行文件的完整路径，例如：</p>
 
 <div class="codeblock"><pre>
 C:\Java\jdk1.7.0\bin\javac MyClass.java
@@ -561,7 +561,7 @@ C:\Java\jdk1.7.0\bin;C:\Windows\System32\;C:\Windows\;C:\Windows\System32\Wbem
   <li>在 <strong>Edit System Variable</strong>(或 <strong>New System Variable</strong>)窗口中，指定 <code>PATH</code> 环境变量的值。单击 <strong>OK</strong>。单击 <strong>OK</strong> 关闭所有剩余窗口。</li>
 </ol>
 
-<div class="note"><hr /><strong>注意:</strong>&nbsp;从控制面板编辑时，您可能会看到类似于以下内容的 <code>PATH</code> 环境变量：
+<div class="note"><hr /><strong>注意:</strong>&nbsp;从控制面板编辑时，你可能会看到类似于以下内容的 <code>PATH</code> 环境变量：
 <div class="codeblock"><pre>
 %JAVA_HOME%\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem
 </pre></div>
@@ -573,7 +573,7 @@ echo %SystemRoot%
 
 <h2>更新 PATH 变量(Solaris 和 Linux)</h2>
 
-<p>您可以在不设置 <code>PATH</code> 变量的情况下运行 JDK，也可以选择为了方便将其设置。但是，如果您希望能够从任何目录运行可执行文件(<code>javac</code>，<code>java</code>，<code>javadoc</code> 等)而无需键入命令的完整路径，则应设置路径变量。如果未设置 <code>PATH</code> 变量，则需要在每次运行时指定可执行文件的完整路径，例如：</p>
+<p>你可以在不设置 <code>PATH</code> 变量的情况下运行 JDK，也可以选择为了方便将其设置。但是，如果你希望能够从任何目录运行可执行文件(<code>javac</code>，<code>java</code>，<code>javadoc</code> 等)而无需键入命令的完整路径，则应设置路径变量。如果未设置 <code>PATH</code> 变量，则需要在每次运行时指定可执行文件的完整路径，例如：</p>
 
 <div class="codeblock"><pre>
 % /usr/local/jdk1.7.0/bin/javac MyClass.java
@@ -582,7 +582,7 @@ echo %SystemRoot%
 <div class="codeblock"><pre>
 % java -version
 </pre></div>
-<p>这将打印 <code>java</code> 工具的版本，如果它可以找到它。如果版本较旧或者您收到错误 <b>java: Command not found</b>，则路径未正确设置。</p>
+<p>这将打印 <code>java</code> 工具的版本，如果它可以找到它。如果版本较旧或者你收到错误 <b>java: Command not found</b>，则路径未正确设置。</p>
 <p>要永久设置路径，请在启动文件中设置路径。</p>
 <p>对于 C shell(<code>csh</code>)，编辑启动文件 <code>(~/.cshrc</code>)：</p>
 <div class="codeblock"><pre>
@@ -628,7 +628,7 @@ C:&gt; echo %CLASSPATH%
 </pre></div>
 <p>如果未设置 <code>CLASSPATH</code>，则会出现 <b>CLASSPATH: Undefined variable</b> 错误(Solaris 或 Linux)或只是 <b>%CLASSPATH%</b>(Microsoft Windows NT/2000/XP)。</p>
 <p>要修改 <code>CLASSPATH</code>，请使用与 <code>PATH</code> 变量相同的过程。</p>
-<p>类路径通配符允许您在类路径中包含 <code>.jar</code> 文件的整个目录，而无需单独指定它们。有关更多信息(包括类路径通配符的说明)以及有关如何清除 <code>CLASSPATH</code> 环境变量的详细说明，请参阅 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/classpath.html">Setting the Class Path</a> 技术说明。</p>
+<p>类路径通配符允许你在类路径中包含 <code>.jar</code> 文件的整个目录，而无需单独指定它们。有关更多信息(包括类路径通配符的说明)以及有关如何清除 <code>CLASSPATH</code> 环境变量的详细说明，请参阅 <a class="OutsideLink" target="_blank" href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/classpath.html">Setting the Class Path</a> 技术说明。</p>
 
         </div>
         <div class="NavBit">

@@ -499,7 +499,7 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">日期时间</a>&gt;<a href="index.html" target="_top">标准日历</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="enum.html">Next&nbsp;»</a>
+                <a target="_top" href="index.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="enum.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>概述</h1></div>
@@ -508,11 +508,11 @@
 <p>
 表示时间有两种基本方法。一种方式表示人类时间，称为 <em>human time (人类时间)</em>，例如年，月，日，小时，分钟和秒。另一种方式，<em>machine time (机器时间)</em>，沿着来自原点，称为 <em>epoch (时期)</em>，的时间线连续测量时间，以纳秒为分辨率。Date-Time 包提供了丰富的类数组，用于表示日期和时间。Date-Time API 中的某些类用于表示机器时间，而其他类更适合表示人类时间。</p>
 <p>
-首先确定您需要的日期和时间的哪些方面，然后选择满足这些需求的一个或多个类。在选择基于时间的类时，首先要决定是需要表示人类时间还是机器时间。然后，您可以确定需要表示的时间方面。您需要一个时区吗？日期 <em>和</em> 时间？仅限日期？如果您需要日期，您需要月，日，<em>和</em> 年，还是需要一个子集？</p>
-<div class="note"><hr /><strong>术语：</strong> Date-Time API 中用于捕获和处理日期或时间值的类，例如 <tt>Instant</tt>，<tt>LocalDateTime</tt> 和 <tt>ZonedDateTime</tt>，在本教程中称为 <em>temporal-based (基于时间的)</em> 类(或类型)。支持类型(例如 <tt>TemporalAdjuster</tt> 接口或 <tt>DayOfWeek</tt> 枚举)不包含在此定义中。
+首先确定你需要的日期和时间的哪些方面，然后选择满足这些需求的一个或多个类。在选择基于时间的类时，首先要决定是需要表示人类时间还是机器时间。然后，你可以确定需要表示的时间方面。你需要一个时区吗？日期 <em>和</em> 时间？仅限日期？如果你需要日期，你需要月，日，<em>和</em> 年，还是需要一个子集？</p>
+<div class="note"><hr /><strong>术语:</strong>&nbsp;<strong>术语：</strong> Date-Time API 中用于捕获和处理日期或时间值的类，例如 <tt>Instant</tt>，<tt>LocalDateTime</tt> 和 <tt>ZonedDateTime</tt>，在本教程中称为 <em>temporal-based (基于时间的)</em> 类(或类型)。支持类型(例如 <tt>TemporalAdjuster</tt> 接口或 <tt>DayOfWeek</tt> 枚举)不包含在此定义中。
 <hr /></div>
 <p>
-例如，您可以使用 <tt>LocalDate</tt> 对象来表示出生日期，因为大多数人在同一天观察他们的生日，无论他们是在出生城市还是在国际日期行的另一侧的全球各地。如果您正在跟踪占星时间，那么您可能希望使用 <tt>LocalDateTime</tt> 对象来表示出生日期和时间，或者使用 <tt>ZonedDateTime</tt>，其中还包括时区。如果您正在创建时间戳，那么您很可能希望使用 <tt>Instant</tt>，它允许您将时间线上的一个瞬时点与另一个瞬时点进行比较。</p>
+例如，你可以使用 <tt>LocalDate</tt> 对象来表示出生日期，因为大多数人在同一天观察他们的生日，无论他们是在出生城市还是在国际日期行的另一侧的全球各地。如果你正在跟踪占星时间，那么你可能希望使用 <tt>LocalDateTime</tt> 对象来表示出生日期和时间，或者使用 <tt>ZonedDateTime</tt>，其中还包括时区。如果你正在创建时间戳，那么你很可能希望使用 <tt>Instant</tt>，它允许你将时间线上的一个瞬时点与另一个瞬时点进行比较。</p>
 
 
 <p>

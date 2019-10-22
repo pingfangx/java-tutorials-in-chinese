@@ -476,8 +476,8 @@
 <div class="linkAHEAD"><a href="types.html">泛型类型</a></div>
 <div class="linkBHEAD"><a href="rawTypes.html">原始类型</a></div>
 <div class="linkAHEAD"><a href="methods.html">泛型方法</a></div>
-<div class="linkAHEAD"><a href="bounded.html">有界类型参数</a></div>
-<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型参数</a></div>
+<div class="linkAHEAD"><a href="bounded.html">有界类型形参</a></div>
+<div class="linkBHEAD"><a href="boundedTypeParams.html">泛型方法和有界类型形参</a></div>
 <div class="linkAHEAD"><a href="inheritance.html">泛型，继承和子类型</a></div>
 <div class="linkAHEAD"><a href="genTypeInference.html">类型推断</a></div>
 <div class="linkAHEAD"><a href="wildcards.html">通配符</a></div>
@@ -506,14 +506,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">学习 Java 语言</a>&gt;<a href="index.html" target="_top">泛型(更新)</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="genMethods.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="nonReifiableVarargsType.html">Next&nbsp;»</a>
+                <a target="_top" href="genMethods.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="nonReifiableVarargsType.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>类型擦除和桥接方法的影响</h1></div>
             <div id="PageContent">
 
 <p>
-有时类型擦除会导致您可能没有预料到的情况。以下示例显示了如何发生这种情况。该示例(在 <a class="TutorialLink" target="_top" href="#bridgeMethods">Bridge Methods</a> 中描述)显示了编译器有时如何创建一个称为桥接方法的合成方法，作为类型擦除过程的一部分。</p>
+有时类型擦除会导致你可能没有预料到的情况。以下示例显示了如何发生这种情况。该示例(在 <a class="TutorialLink" target="_top" href="#bridgeMethods">Bridge Methods</a> 中描述)显示了编译器有时如何创建一个称为桥接方法(bridge method)的合成方法(synthetic method)，作为类型擦除过程的一部分。</p>
 
 <p>
 给出以下两个类：</p>
@@ -566,7 +566,7 @@ Integer x = (String)mn.data; // Causes a ClassCastException to be thrown.
 </ul>
 <h2><a name="bridgeMethods" id="bridgeMethods">桥接方法</a></h2>
 <p>
-在编译继承参数化类或实现参数化接口的类或接口时，编译器可能需要创建一个合成方法，称为 <em>桥接方法（bridge method）</em>，作为类型擦除过程的一部分。您通常不需要担心桥接方法，但如果出现在堆栈跟踪中，您可能会感到困惑。</p>
+在编译继承参数化类或实现参数化接口的类或接口时，编译器可能需要创建一个合成方法，称为 <em>bridge method (桥接方法)</em>，作为类型擦除过程的一部分。你通常不需要担心桥接方法，但如果出现在堆栈跟踪中，你可能会感到困惑。</p>
 <p>
 在类型擦除之后，<tt>Node</tt> 和 <tt>MyNode</tt> 类变为：</p>
 <div class="codeblock"><pre>
@@ -595,7 +595,7 @@ public class MyNode extends Node {
 <p>
 在类型擦除之后，方法签名不匹配。<tt>Node</tt> 方法变为 <tt>setData(Object)</tt>，<tt>MyNode</tt> 方法变为 <tt>setData(Integer)</tt>。因此，<tt>MyNode</tt> <tt>setData</tt> 方法不会覆盖 <tt>Node</tt> <tt>setData</tt> 方法。</p>
 <p>
-为解决此问题并在类型擦除后保留泛型类型的 <a class="TutorialLink" target="_top" href="../IandI/polymorphism.html">多态性（polymorphism）</a>，Java 编译器会生成一个桥接方法，以确保子类型按预期工作。对于 <tt>MyNode</tt> 类，编译器为 <tt>setData</tt> 生成以下桥接方法：</p>
+为解决此问题并在类型擦除后保留泛型类型的 <a class="TutorialLink" target="_top" href="../IandI/polymorphism.html">polymorphism (多态性)</a>，Java 编译器会生成一个桥接方法，以确保子类型按预期工作。对于 <tt>MyNode</tt> 类，编译器为 <tt>setData</tt> 生成以下桥接方法：</p>
 <div class="codeblock"><pre>
 class MyNode extends Node {
 
@@ -614,7 +614,7 @@ class MyNode extends Node {
 }
 </pre></div>
 <p>
-正如您所看到的，在类型擦除之后，具有与 <tt>Node</tt> 类的 <tt>setData</tt> 方法相同的方法签名的桥接方法委托给原始的 <tt>setData</tt> 方法。</p>
+正如你所看到的，在类型擦除之后，具有与 <tt>Node</tt> 类的 <tt>setData</tt> 方法相同的方法签名的桥接方法委托给原始的 <tt>setData</tt> 方法。</p>
 
         </div>
         <div class="NavBit">

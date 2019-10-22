@@ -494,14 +494,14 @@
                 <a href="../../index.html" target="_top">主页</a>&gt;<a href="../index.html" target="_top">Bonus</a>&gt;<a href="index.html" target="_top">泛型</a>
             </div>
             <div class="NavBit">
-                <a target="_top" href="simple.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="wildcards.html">Next&nbsp;»</a>
+                <a target="_top" href="simple.html">«&nbsp;上一页</a>&nbsp;•&nbsp;<a target="_top" href="../TOC.html">路径</a>&nbsp;•&nbsp;<a target="_top" href="wildcards.html">下一页&nbsp;»</a>
             </div>
             <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">Java 教程是为 JDK 8 编写的。本页中描述的示例和实践未利用在后续版本中引入的改进。</p></div>
             <div id="PageTitle"><h1>泛型与子类型</h1></div>
             <div id="PageContent"><!--Generics and Subtyping-->
 
 
-<p>让我们测试一下您对泛型的理解。以下代码段是否合法？</p>
+<p>让我们测试一下你对泛型的理解。以下代码段是否合法？</p>
 <div class="codeblock"><pre>
 List&lt;String&gt; ls = new ArrayList&lt;String&gt;(); // 1
 List&lt;Object&gt; lo = ls; // 2 
@@ -514,7 +514,7 @@ String s = ls.get(0); // 4: Attempts to assign an Object to a String!
 </pre></div>
 <p>这里我们记为别名 <code>ls</code> 和 <code>lo</code>。通过别名 <code>lo</code> 访问 <code>String</code> 列表的 <code>ls</code>，我们可以在其中插入任意对象。结果 <code>ls</code> 不再只持有 <code>String</code> 了，当我们尝试从中得到一些东西时，我们得到了一个粗鲁的惊喜。</p>
 <p>Java 编译器当然会阻止这种情况发生。第 2 行将导致编译时错误。</p>
-<p>通常，如果 <code>Foo</code> 是 <code>Bar</code> 的子类型(子类或子接口)，并且 <code>G</code> 是一些泛型类型声明，则 <code>G&lt;Foo&gt;</code> <b>不是</b> <code>G&lt;Bar&gt;</code> 的子类型。这可能是您需要了解泛型最困难的事情，因为它违背了我们深刻的直觉。</p>
+<p>通常，如果 <code>Foo</code> 是 <code>Bar</code> 的子类型(子类或子接口)，并且 <code>G</code> 是一些泛型类型声明，则 <code>G&lt;Foo&gt;</code> <b>不是</b> <code>G&lt;Bar&gt;</code> 的子类型。这可能是你需要了解泛型最困难的事情，因为它违背了我们深刻的直觉。</p>
 <p>我们不应该假设集合不会更改。我们的直觉可能会让我们认为这些事情是不可改变的。</p>
 <p>例如，如果汽车部门向人口普查局提供司机清单，这似乎是合理的。我们认为 <code>List&lt;Driver&gt;</code> 是 <code>List&lt;Person&gt;</code>，假设 <code>Driver</code> 是 <code>Person</code> 的子类型。事实上，传递的是注册司机的 <b>副本</b>。否则，人口普查局可能会将不是司机的新人加入名单，破坏 DMV 的记录。</p>
 <p>为了应对这种情况，考虑更灵活的泛型类型是有用的。到目前为止我们看到的规则是相当严格的。</p>
