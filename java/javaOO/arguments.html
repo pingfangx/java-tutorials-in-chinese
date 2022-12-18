@@ -622,7 +622,7 @@ public class PassPrimitiveByValue {
 After invoking passMethod, x = 3
 </pre></div>
 <h2>传递引用数据类型实参</h2>
-<p>引用数据的类型形参（如对象）也 <i>通过值</i> 传递到方法中。这意味着当方法返回时，传入的引用仍然引用与之前相同的对象。<i>然而</i>，如果对象的字段的值具有适当的访问级别，则 <i>可以</i> 在该方法中更改该字段。</p>
+<p>引用数据类型参数（如对象）也 <i>通过值</i> 传递到方法中（译者注：结合上下文，此处应为实参 arguments，但原文为形参 parameters，姑且译为参数）。这意味着当方法返回时，传入的引用仍然引用与之前相同的对象。<i>然而</i>，如果对象的字段的值具有适当的访问级别，则 <i>可以</i> 在该方法中更改该字段。</p>
 <p>例如，考虑任意类中的移动 <code>Circle</code> 对象的方法：</p>
 <div class="codeblock"><pre>
 public void moveCircle(Circle circle, int deltaX, int deltaY) {
